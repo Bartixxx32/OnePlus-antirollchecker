@@ -38,7 +38,8 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y aria2 unzip curl
+          sudo apt-get install -y aria2 unzip curl python3-pip
+          pip3 install requests beautifulsoup4 --break-system-packages || pip3 install requests beautifulsoup4
 
       - name: Setup Tools
         run: |
@@ -66,16 +67,15 @@ jobs:
           DEVICE="${{ matrix.device }}"
           REGION="${{ matrix.variant }}"
           
-          # Use oosdownloader for GLO/EU/IN, INI for CN
+          # Use oosdownloader for GLO/EU/IN, fetch_firmware.py for CN
           if [ "$REGION" != "CN" ]; then
             # Primary API: oosdownloader
             DOWNLOAD_URL=$(curl -s "https://oosdownloader-gui.fly.dev/api/oneplus/${DEVICE}/${REGION}/full")
             VERSION=$(curl -s "https://oosdownloader-gui.fly.dev/api/oneplus/${DEVICE}/${REGION}/full/version")
           else
-            # CN: Parse from INI
-            LATEST=$(python3 parse_ini.py firmware_history.ini "${{ matrix.device_short }}" "CN" | head -n 1)
-            VERSION=$(echo "$LATEST" | cut -d'|' -f1)
-            DOWNLOAD_URL=$(echo "$LATEST" | cut -d'|' -f2)
+            # CN: Use robust scraper
+            VERSION=$(python3 parse_ini.py firmware_history.ini "${{ matrix.device_short }}" "CN" | head -n 1 | cut -d'|' -f1)
+            DOWNLOAD_URL=$(python3 fetch_firmware.py "${{ matrix.device }}" "CN" "$VERSION")
           fi
           
           echo "Device: ${{ matrix.device_name }}"
@@ -186,12 +186,21 @@ jobs:
             fi
             
             echo "Processing historical version: $VERSION"
-            echo "URL: $URL"
+            
+            # Retrieve signed URL for this specific version
+            SIGNED_URL=$(python3 fetch_firmware.py "${{ matrix.device }}" "${{ matrix.variant }}" "$VERSION")
+            
+            if [ -z "$SIGNED_URL" ]; then
+              echo "Failed to retrieve signed URL for $VERSION, skipping..."
+              continue
+            fi
+
+            echo "URL: $SIGNED_URL"
             
             # Download and extract
             (
               mkdir -p "hist_ext_${VERSION}"
-              aria2c -x16 -s16 -k1M -o "hist_${VERSION}.zip" "$URL"
+              aria2c -x16 -s16 -k1M -o "hist_${VERSION}.zip" "$SIGNED_URL"
               ./tools/payload-dumper -p xbl_config -o "hist_ext_${VERSION}" "hist_${VERSION}.zip"
               
               IMG_FILE=$(find "hist_ext_${VERSION}" -name "*xbl_config*.img" | head -n 1)
