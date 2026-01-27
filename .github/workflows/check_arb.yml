@@ -33,7 +33,7 @@ jobs:
 
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install dependencies
         run: |
@@ -73,10 +73,9 @@ jobs:
             VERSION=$(curl -s "https://oosdownloader-gui.fly.dev/api/oneplus/${DEVICE}/${REGION}/full/version")
           else
             # CN: Parse from INI
-            # For now, get the first (latest) version from INI
-            # TODO: Implement proper INI parsing in subsequent step
-            VERSION="CN_FROM_INI"
-            DOWNLOAD_URL="FROM_INI"
+            LATEST=$(python3 parse_ini.py firmware_history.ini "${{ matrix.device_short }}" "CN" | head -n 1)
+            VERSION=$(echo "$LATEST" | cut -d'|' -f1)
+            DOWNLOAD_URL=$(echo "$LATEST" | cut -d'|' -f2)
           fi
           
           echo "Device: ${{ matrix.device_name }}"
@@ -139,11 +138,82 @@ jobs:
           
           cat result.json
 
+      - name: Update JSON History (Current Version)
+        run: |
+          python3 update_history.py \
+            "${{ steps.get_details.outputs.device_short }}" \
+            "${{ matrix.variant }}" \
+            "${{ steps.get_details.outputs.version }}" \
+            "$(cat result.json | grep arb_index | cut -d'"' -f4)" \
+            "$(cat result.json | grep '\"major\"' | cut -d'"' -f4)" \
+            "$(cat result.json | grep '\"minor\"' | cut -d'"' -f4)"
+
+      - name: Process Historical Versions
+        run: |
+          # Get top 4 versions from INI
+          VERSIONS_LIST=$(python3 parse_ini.py firmware_history.ini "${{ steps.get_details.outputs.device_short }}" "${{ matrix.variant }}")
+          
+          echo "Historical versions data (version|url):"
+          echo "$VERSIONS_LIST"
+          
+          VERSION_CURRENT="${{ steps.get_details.outputs.version }}"
+          HISTORY_FILE="data/history/${{ steps.get_details.outputs.device_short }}_${{ matrix.variant }}.json"
+          
+          echo "$VERSIONS_LIST" | while IFS='|' read -r VERSION URL; do
+            if [ -z "$VERSION" ] || [ -z "$URL" ]; then continue; fi
+            
+            if [ "$VERSION" == "$VERSION_CURRENT" ]; then
+              echo "Skipping current version: $VERSION"
+              continue
+            fi
+            
+            # Check if already in history
+            if [ -f "$HISTORY_FILE" ] && grep -q "$VERSION" "$HISTORY_FILE"; then
+              echo "Version already tracked in history: $VERSION"
+              continue
+            fi
+            
+            echo "Processing historical version: $VERSION"
+            echo "URL: $URL"
+            
+            # Download and extract
+            mkdir -p "hist_ext_${VERSION}"
+            aria2c -x16 -s16 -k1M -o "hist_${VERSION}.zip" "$URL"
+            ./tools/payload-dumper -p xbl_config -o "hist_ext_${VERSION}" "hist_${VERSION}.zip"
+            
+            IMG_FILE=$(find "hist_ext_${VERSION}" -name "*xbl_config*.img" | head -n 1)
+            if [ -n "$IMG_FILE" ]; then
+              OUTPUT=$(./tools/arbextract "$IMG_FILE")
+              ARB_INDEX=$(echo "$OUTPUT" | grep "ARB (Anti-Rollback)" | awk -F': ' '{print $2}')
+              MAJOR_VERSION=$(echo "$OUTPUT" | grep "Major Version" | awk -F': ' '{print $2}')
+              MINOR_VERSION=$(echo "$OUTPUT" | grep "Minor Version" | awk -F': ' '{print $2}')
+              
+              python3 update_history.py --historical \
+                "${{ steps.get_details.outputs.device_short }}" \
+                "${{ matrix.variant }}" \
+                "$VERSION" \
+                "$ARB_INDEX" \
+                "$MAJOR_VERSION" \
+                "$MINOR_VERSION"
+            else
+              echo "Failed to extract xbl_config for $VERSION"
+            fi
+            
+            # Cleanup for next historical version
+            rm -rf "hist_${VERSION}.zip" "hist_ext_${VERSION}"
+          done
+
       - name: Upload Result
         uses: actions/upload-artifact@v4
         with:
           name: result-${{ matrix.device }}-${{ matrix.variant }}
           path: result.json
+      
+      - name: Upload JSON History
+        uses: actions/upload-artifact@v4
+        with:
+          name: history-${{ matrix.device }}-${{ matrix.variant }}
+          path: data/history/${{ steps.get_details.outputs.device_short }}_${{ matrix.variant }}.json
 
       - name: Cleanup
         if: always()
@@ -156,74 +226,37 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v4
 
-      - name: Download Artifacts
+      - name: Download All Artifacts
         uses: actions/download-artifact@v4
         with:
           path: artifacts
-          merge-multiple: false # Keep folder structure result-VARIANT/result.json
+          merge-multiple: false
 
-      - name: Update README
+      - name: Restore JSON History Files
         run: |
-          ls -R artifacts/
+          mkdir -p data/history
           
-          cat << EOF > update_readme.py
-          import os
-          import json
-          import datetime
-
-          readme_path = 'README.md'
-          today = datetime.date.today().strftime('%Y-%m-%d')
+          # Download all history artifacts
+          find artifacts -name 'history-*' -type d | while read dir; do
+            JSON_FILE=$(find "$dir" -name '*.json' | head -n 1)
+            if [ -f "$JSON_FILE" ]; then
+              cp "$JSON_FILE" data/history/
+            fi
+          done
           
-          with open(readme_path, 'r') as f:
-              content = f.read()
-
-          def replace_block(text, start_marker, end_marker, new_content):
-              start_idx = text.find(start_marker)
-              end_idx = text.find(end_marker)
-              if start_idx != -1 and end_idx != -1:
-                  return text[:start_idx + len(start_marker)] + new_content + text[end_idx:]
-              return text
-
-          # Process all result files
-          # Artifacts download structure: artifacts/result-oneplus_15-GLO/result.json
-          base_dir = 'artifacts'
-          for item in os.listdir(base_dir):
-              variant_dir = os.path.join(base_dir, item)
-              if os.path.isdir(variant_dir) and item.startswith('result-'):
-                  result_file = os.path.join(variant_dir, 'result.json')
-                  if os.path.exists(result_file):
-                      with open(result_file, 'r') as f:
-                          data = json.load(f)
-                      
-                      device_short = data.get('device_short') # e.g., 15, 15R, 13, 12
-                      variant = data.get('variant') # e.g., GLO
-                      version = data.get('version')
-                      arb_index = data.get('arb_index', '-').strip()
-                      major = data.get('major', '-').strip()
-                      minor = data.get('minor', '-').strip()
-                      
-                      status_icon = '✅' if arb_index == '0' else '❌'
-                      
-                      # Replace placeholders with device_variant suffix
-                      # e.g. VERSION_START_15_GLO
-                      placeholder_suffix = f'{device_short}_{variant}'
-                      content = replace_block(content, f'<!-- VERSION_START_{placeholder_suffix} -->', f'<!-- VERSION_END_{placeholder_suffix} -->', version)
-                      content = replace_block(content, f'<!-- ARB_START_{placeholder_suffix} -->', f'<!-- ARB_END_{placeholder_suffix} -->', arb_index)
-                      content = replace_block(content, f'<!-- MAJOR_START_{placeholder_suffix} -->', f'<!-- MAJOR_END_{placeholder_suffix} -->', major)
-                      content = replace_block(content, f'<!-- MINOR_START_{placeholder_suffix} -->', f'<!-- MINOR_END_{placeholder_suffix} -->', minor)
-                      content = replace_block(content, f'<!-- DATE_START_{placeholder_suffix} -->', f'<!-- DATE_END_{placeholder_suffix} -->', today)
-                      content = replace_block(content, f'<!-- STATUS_START_{placeholder_suffix} -->', f'<!-- STATUS_END_{placeholder_suffix} -->', status_icon)
-
-          with open(readme_path, 'w') as f:
-              f.write(content)
-          EOF
-
-          python3 update_readme.py
+          ls -lh data/history/
+      
+      - name: Generate README
+        run: |
+          python3 generate_readme.py
+          
+          echo "Generated README.md from JSON history"
+          head -n 50 README.md
 
       - name: Commit and Push
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add README.md
-          git commit -m "Update ARB status for all variants" || echo "No changes to commit"
+          git add data/history/*.json README.md
+          git commit -m "Update ARB history and README" || echo "No changes to commit"
           git push

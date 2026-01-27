@@ -30,18 +30,25 @@ def save_history(history_file: Path, data: Dict):
     with open(history_file, 'w') as f:
         json.dump(data, f, indent=2)
 
-def update_history_entry(history: Dict, version: str, arb: int, major: int, minor: int) -> bool:
+def update_history_entry(history: Dict, version: str, arb: int, major: int, minor: int, is_historical: bool = False) -> bool:
     """
     Update or add a version to history.
-    Returns True if this is a new current version.
     """
     today = datetime.now().strftime("%Y-%m-%d")
     
     # Check if version already exists
     for entry in history['history']:
         if entry['version'] == version:
-            # Update last_checked
             entry['last_checked'] = today
+            if not is_historical and entry['status'] == 'archived':
+                # Promote to current
+                for e in history['history']:
+                    e['status'] = 'archived'
+                entry['status'] = 'current'
+                # Move to top
+                history['history'].remove(entry)
+                history['history'].insert(0, entry)
+                return True
             return False
     
     # New version - add it
@@ -52,37 +59,44 @@ def update_history_entry(history: Dict, version: str, arb: int, major: int, mino
         "minor": minor,
         "first_seen": today,
         "last_checked": today,
-        "status": "current"
+        "status": "archived" if is_historical else "current"
     }
     
-    # Mark all existing as archived
-    for entry in history['history']:
-        entry['status'] = 'archived'
-    
-    # Insert new at beginning
-    history['history'].insert(0, new_entry)
-    
-    return True
+    if not is_historical:
+        # Mark all existing as archived
+        for entry in history['history']:
+            entry['status'] = 'archived'
+        # Insert new at beginning
+        history['history'].insert(0, new_entry)
+        return True
+    else:
+        # Just append historical to the end (or keep sorted by version)
+        history['history'].append(new_entry)
+        # Optional: Sort history by some logic (e.g. version string)
+        return False
 
 def main():
-    if len(sys.argv) < 6:
-        print("Usage: update_history.py <device_short> <variant> <version> <arb> <major> <minor>")
+    args = sys.argv[1:]
+    is_historical = False
+    if "--historical" in args:
+        is_historical = True
+        args.remove("--historical")
+
+    if len(args) < 6:
+        print("Usage: update_history.py [--historical] <device_short> <variant> <version> <arb> <major> <minor>")
         sys.exit(1)
     
-    device_short = sys.argv[1]
-    variant = sys.argv[2]
-    version = sys.argv[3]
-    arb = int(sys.argv[4])
-    major = int(sys.argv[5])
-    minor = int(sys.argv[6])
+    device_short = args[0]
+    variant = args[1]
+    version = args[2]
+    arb = int(args[3])
+    major = int(args[4])
+    minor = int(args[5])
     
-    # Determine history file path
+    # ... rest of the logic ...
     history_file = Path(f"data/history/{device_short}_{variant}.json")
-    
-    # Load history
     history = load_history(history_file)
     
-    # Initialize metadata if new file
     if not history.get('device'):
         metadata = DEVICE_METADATA.get(device_short, {})
         history['device'] = metadata.get('name', f'OnePlus {device_short}')
@@ -90,10 +104,7 @@ def main():
         history['region'] = variant
         history['model'] = metadata.get('models', {}).get(variant, 'Unknown')
     
-    # Update history
-    is_new = update_history_entry(history, version, arb, major, minor)
-    
-    # Save
+    is_new = update_history_entry(history, version, arb, major, minor, is_historical)
     save_history(history_file, history)
     
     if is_new:
