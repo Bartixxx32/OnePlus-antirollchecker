@@ -6,17 +6,11 @@ Parse firmware history from INI file and extract top N versions for each device/
 import sys
 import re
 from typing import List, Dict
+from config import DEVICE_SHORT_TO_NAME
 
 def get_section_name(device_short: str, variant: str) -> str:
     """Map device + variant to INI component name."""
-    device_map = {
-        '15': 'OP 15',
-        '15R': 'OP 15R',
-        '13': 'OP 13',
-        '12': 'OP 12'
-    }
-    
-    device_name = device_map.get(device_short, device_short)
+    device_name = DEVICE_SHORT_TO_NAME.get(device_short, device_short)
     return f"{device_name} {variant}"
 
 def parse_ini_section(ini_content: str, section_name: str, max_versions: int = 4) -> List[Dict[str, str]]:

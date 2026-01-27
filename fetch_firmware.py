@@ -5,14 +5,7 @@ import html
 import sys
 import re
 from bs4 import BeautifulSoup
-
-# Mapping internal names to website display names
-DEVICE_MAP = {
-    "oneplus_15": "OP 15",
-    "oneplus_15r": "OP 15R",
-    "oneplus_13": "OP 13",
-    "oneplus_12": "OP 12"
-}
+from config import DEVICE_ID_TO_NAME
 
 def get_signed_url(device_id, region, target_version=None):
     """
@@ -26,7 +19,7 @@ def get_signed_url(device_id, region, target_version=None):
     
     session = requests.Session()
     
-    device_name = DEVICE_MAP.get(device_id, device_id.replace("_", " ").upper())
+    device_name = DEVICE_ID_TO_NAME.get(device_id, device_id.replace("_", " ").upper())
     
     # print(f"[*] Fetching mapping for {device_name} ({region})...", file=sys.stderr)
     try:

@@ -8,6 +8,7 @@ import json
 import sys
 from pathlib import Path
 from typing import Dict, List
+from config import REGIONS, DEVICE_ORDER_LIST
 
 def load_all_history(history_dir: Path) -> Dict[str, Dict]:
     """Load all JSON history files."""
@@ -27,13 +28,7 @@ def load_all_history(history_dir: Path) -> Dict[str, Dict]:
 
 def get_region_name(variant: str) -> str:
     """Map variant code to display name for the table."""
-    names = {
-        'GLO': 'Global',
-        'EU': 'Europe',
-        'IN': 'India',
-        'CN': 'China'
-    }
-    return names.get(variant, variant)
+    return REGIONS.get(variant, variant)
 
 def generate_device_section(device_id: str, device_name: str, history_data: Dict) -> List[str]:
     """Generate a single table for one device across all regions."""
@@ -41,7 +36,7 @@ def generate_device_section(device_id: str, device_name: str, history_data: Dict
     
     # Check if we have any data for this device
     active_regions = []
-    for variant in ['GLO', 'EU', 'IN', 'CN']:
+    for variant in REGIONS:
         key = f'{device_id}_{variant}'
         if key in history_data:
             active_regions.append(variant)
@@ -52,7 +47,7 @@ def generate_device_section(device_id: str, device_name: str, history_data: Dict
     lines.append('| Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |')
     lines.append('|--------|-------|------------------|-----------|-------------|--------------|------|')
     
-    for variant in ['GLO', 'EU', 'IN', 'CN']:
+    for variant in REGIONS:
         key = f'{device_id}_{variant}'
         if key not in history_data:
             continue
@@ -101,19 +96,11 @@ def generate_readme(history_data: Dict) -> str:
         ''
     ]
     
-    # Device order and display names
-    devices = [
-        ('15', 'OnePlus 15'),
-        ('15R', 'OnePlus 15R'),
-        ('13', 'OnePlus 13'),
-        ('12', 'OnePlus 12')
-    ]
-    
-    for i, (device_id, device_name) in enumerate(devices):
+    for i, (device_id, device_name) in enumerate(DEVICE_ORDER_LIST):
         device_lines = generate_device_section(device_id, device_name, history_data)
         if device_lines:
             lines.extend(device_lines)
-            if i < len(devices) - 1:
+            if i < len(DEVICE_ORDER_LIST) - 1:
                 lines.append('---')
                 lines.append('')
     
