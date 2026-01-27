@@ -13,7 +13,10 @@ jobs:
       fail-fast: false
       matrix:
         device: [oneplus_15, oneplus_15r, oneplus_13, oneplus_12]
-        variant: [GLO, EU, IN]
+        variant: [GLO, EU, IN, CN]
+        exclude:
+          - device: oneplus_15r
+            variant: CN
         include:
           - device: oneplus_15
             device_short: "15"
@@ -51,14 +54,30 @@ jobs:
           find tools -name "payload-dumper-go" -type f -exec mv {} tools/payload-dumper \;
           chmod +x tools/payload-dumper
 
+      - name: Download Firmware History (INI)
+        run: |
+          curl -A "Mozilla/5.0" \
+            "https://roms.danielspringer.at/download.php?file=Files%2Fota_config.ini&download=true" \
+            -o firmware_history.ini
+
       - name: Get Firmware Details
         id: get_details
         run: |
-          # Fetch URL and Version dynamically based on device and region
           DEVICE="${{ matrix.device }}"
           REGION="${{ matrix.variant }}"
-          DOWNLOAD_URL=$(curl -s "https://oosdownloader-gui.fly.dev/api/oneplus/${DEVICE}/${REGION}/full")
-          VERSION=$(curl -s "https://oosdownloader-gui.fly.dev/api/oneplus/${DEVICE}/${REGION}/full/version")
+          
+          # Use oosdownloader for GLO/EU/IN, INI for CN
+          if [ "$REGION" != "CN" ]; then
+            # Primary API: oosdownloader
+            DOWNLOAD_URL=$(curl -s "https://oosdownloader-gui.fly.dev/api/oneplus/${DEVICE}/${REGION}/full")
+            VERSION=$(curl -s "https://oosdownloader-gui.fly.dev/api/oneplus/${DEVICE}/${REGION}/full/version")
+          else
+            # CN: Parse from INI
+            # For now, get the first (latest) version from INI
+            # TODO: Implement proper INI parsing in subsequent step
+            VERSION="CN_FROM_INI"
+            DOWNLOAD_URL="FROM_INI"
+          fi
           
           echo "Device: ${{ matrix.device_name }}"
           echo "Variant: ${{ matrix.variant }}"
