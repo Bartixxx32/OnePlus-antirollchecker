@@ -10,12 +10,9 @@ from datetime import datetime
 from pathlib import Path
 from typing import Dict, List
 
-DEVICE_METADATA = {
-    "15": {"name": "OnePlus 15", "models": {"GLO": "CPH2747", "EU": "CPH2747", "IN": "CPH2745", "CN": "PLK110"}},
-    "15R": {"name": "OnePlus 15R", "models": {"GLO": "CPH2741", "EU": "CPH2741", "IN": "CPH2741"}},
-    "13": {"name": "OnePlus 13", "models": {"GLO": "CPH2649", "EU": "CPH2649", "IN": "CPH2649", "CN": "PJZ110"}},
-    "12": {"name": "OnePlus 12", "models": {"GLO": "CPH2573", "EU": "CPH2573", "IN": "CPH2573", "CN": "PJD110"}}
-}
+from config import get_device_metadata
+
+DEVICE_METADATA = get_device_metadata()
 
 def load_history(history_file: Path) -> Dict:
     """Load existing history JSON or create new structure."""

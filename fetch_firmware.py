@@ -6,13 +6,10 @@ import sys
 import re
 from bs4 import BeautifulSoup
 
+from config import get_device_map_for_fetch
+
 # Mapping internal names to website display names
-DEVICE_MAP = {
-    "oneplus_15": "OP 15",
-    "oneplus_15r": "OP 15R",
-    "oneplus_13": "OP 13",
-    "oneplus_12": "OP 12"
-}
+DEVICE_MAP = get_device_map_for_fetch()
 
 def get_signed_url(device_id, region, target_version=None):
     """

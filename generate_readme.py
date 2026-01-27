@@ -75,12 +75,12 @@ def generate_readme(history_data: Dict) -> str:
         ''
     ]
     
+    from config import DEVICE_ORDER, DEVICE_CONFIG
+
     # Device order and names
     devices = [
-        ('15', 'OnePlus 15'),
-        ('15R', 'OnePlus 15R'),
-        ('13', 'OnePlus 13'),
-        ('12', 'OnePlus 12')
+        (device_id, DEVICE_CONFIG[device_id]['name'])
+        for device_id in DEVICE_ORDER
     ]
     
     for i, (device_id, device_name) in enumerate(devices):
