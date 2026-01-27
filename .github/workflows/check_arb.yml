@@ -1,0 +1,199 @@
+name: Check ARB
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *' # Run daily
+
+jobs:
+  check-variant:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    strategy:
+      fail-fast: false
+      matrix:
+        variant: [GLO, EU, NA, IN]
+        include:
+          - variant: GLO
+            region_code: GLO
+          - variant: EU
+            region_code: EU
+          - variant: NA
+            region_code: NA
+          - variant: IN
+            region_code: IN
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y aria2 unzip curl
+
+      - name: Setup Tools
+        run: |
+          mkdir -p tools
+          
+          # Setup arbextract
+          curl -L -o tools/arbextract https://github.com/koaaN/arbextract/releases/download/1.0/arbextract-x86_64-linux
+          chmod +x tools/arbextract
+          
+          # Setup payload-dumper-go
+          curl -L -o payload-dumper.tar.gz https://github.com/ssut/payload-dumper-go/releases/download/1.3.0/payload-dumper-go_1.3.0_linux_amd64.tar.gz
+          tar -xzvf payload-dumper.tar.gz -C tools
+          find tools -name "payload-dumper-go" -type f -exec mv {} tools/payload-dumper \;
+          chmod +x tools/payload-dumper
+
+      - name: Get Firmware Details
+        id: get_details
+        run: |
+          # Fetch URL and Version dynamically based on region code
+          REGION="${{ matrix.region_code }}"
+          DOWNLOAD_URL=$(curl -s "https://oosdownloader-gui.fly.dev/api/oneplus/oneplus_15/${REGION}/full")
+          VERSION=$(curl -s "https://oosdownloader-gui.fly.dev/api/oneplus/oneplus_15/${REGION}/full/version")
+          
+          echo "Variant: ${{ matrix.variant }}"
+          echo "Latest Firmware URL: $DOWNLOAD_URL"
+          echo "Latest Firmware Version: $VERSION"
+          
+          echo "url=$DOWNLOAD_URL" >> $GITHUB_OUTPUT
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Cache ARB Check
+        id: cache-arb
+        uses: actions/cache@v4
+        with:
+          path: |
+            arb_check_done.txt
+            extracted/
+          # Cache key includes variant to be separate
+          key: arb-check-v5-${{ matrix.variant }}-${{ steps.get_details.outputs.version }}
+
+      - name: Download Firmware
+        if: steps.cache-arb.outputs.cache-hit != 'true'
+        run: |
+          aria2c -x16 -s16 -k1M -o firmware.zip "${{ steps.get_details.outputs.url }}"
+
+      - name: Extract xbl_config.img
+        if: steps.cache-arb.outputs.cache-hit != 'true'
+        run: |
+          mkdir -p extracted
+          ./tools/payload-dumper -p xbl_config -o extracted firmware.zip
+          ls -lh extracted/
+
+      - name: Check ARB
+        id: check_arb
+        run: |
+          IMG_FILE=$(find extracted -name "*xbl_config*.img" | head -n 1)
+          if [ -z "$IMG_FILE" ]; then
+            echo "Error: xbl_config image not found!"
+            exit 1
+          fi
+          
+          OUTPUT=$(./tools/arbextract "$IMG_FILE")
+          ARB_INDEX=$(echo "$OUTPUT" | grep "ARB (Anti-Rollback)" | awk -F': ' '{print $2}')
+          MAJOR_VERSION=$(echo "$OUTPUT" | grep "Major Version" | awk -F': ' '{print $2}')
+          MINOR_VERSION=$(echo "$OUTPUT" | grep "Minor Version" | awk -F': ' '{print $2}')
+          
+          echo "ARB Index: $ARB_INDEX"
+          
+          # Prepare result for artifact
+          # We write a simple JSON or key-value file
+          echo "{" > result.json
+          echo "\"variant\": \"${{ matrix.variant }}\"," >> result.json
+          echo "\"version\": \"${{ steps.get_details.outputs.version }}\"," >> result.json
+          echo "\"arb_index\": \"$ARB_INDEX\"," >> result.json
+          echo "\"major\": \"$MAJOR_VERSION\"," >> result.json
+          echo "\"minor\": \"$MINOR_VERSION\"" >> result.json
+          echo "}" >> result.json
+          
+          cat result.json
+
+      - name: Upload Result
+        uses: actions/upload-artifact@v4
+        with:
+          name: result-${{ matrix.variant }}
+          path: result.json
+
+      - name: Cleanup
+        if: always()
+        run: rm -f firmware.zip
+
+  update-readme:
+    needs: check-variant
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Download Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+          merge-multiple: false # Keep folder structure result-VARIANT/result.json
+
+      - name: Update README
+        run: |
+          ls -R artifacts/
+          
+          cat << EOF > update_readme.py
+          import os
+          import json
+          import datetime
+
+          readme_path = 'README.md'
+          today = datetime.date.today().strftime('%Y-%m-%d')
+          
+          with open(readme_path, 'r') as f:
+              content = f.read()
+
+          def replace_block(text, start_marker, end_marker, new_content):
+              start_idx = text.find(start_marker)
+              end_idx = text.find(end_marker)
+              if start_idx != -1 and end_idx != -1:
+                  return text[:start_idx + len(start_marker)] + new_content + text[end_idx:]
+              return text
+
+          # Process all result files
+          # Artifacts download structure: artifacts/result-GLO/result.json
+          base_dir = 'artifacts'
+          for item in os.listdir(base_dir):
+              variant_dir = os.path.join(base_dir, item)
+              if os.path.isdir(variant_dir) and item.startswith('result-'):
+                  result_file = os.path.join(variant_dir, 'result.json')
+                  if os.path.exists(result_file):
+                      with open(result_file, 'r') as f:
+                          data = json.load(f)
+                      
+                      variant = data.get('variant') # e.g., GLO
+                      version = data.get('version')
+                      arb_index = data.get('arb_index', '-').strip()
+                      major = data.get('major', '-').strip()
+                      minor = data.get('minor', '-').strip()
+                      
+                      status_icon = '✅' if arb_index == '0' else '❌'
+                      
+                      # Replace placeholders with variant suffix
+                      # e.g. VERSION_START_GLO
+                      content = replace_block(content, f'<!-- VERSION_START_{variant} -->', f'<!-- VERSION_END_{variant} -->', version)
+                      content = replace_block(content, f'<!-- ARB_START_{variant} -->', f'<!-- ARB_END_{variant} -->', arb_index)
+                      content = replace_block(content, f'<!-- MAJOR_START_{variant} -->', f'<!-- MAJOR_END_{variant} -->', major)
+                      content = replace_block(content, f'<!-- MINOR_START_{variant} -->', f'<!-- MINOR_END_{variant} -->', minor)
+                      content = replace_block(content, f'<!-- DATE_START_{variant} -->', f'<!-- DATE_END_{variant} -->', today)
+                      content = replace_block(content, f'<!-- STATUS_START_{variant} -->', f'<!-- STATUS_END_{variant} -->', status_icon)
+
+          with open(readme_path, 'w') as f:
+              f.write(content)
+          EOF
+
+          python3 update_readme.py
+
+      - name: Commit and Push
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add README.md
+          git commit -m "Update ARB status for all variants" || echo "No changes to commit"
+          git push
