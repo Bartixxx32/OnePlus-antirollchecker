@@ -13,6 +13,18 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
 
 ---
 
+### OnePlus 15R - Global (CPH2741)
+
+| Version | ARB Index | OEM Version | First Seen | Last Checked | Status | Safe |
+|---------|-----------|-------------|------------|--------------|--------|------|
+| CPH2769_16.0.2.401(EX01) | **0** | Major: **3**, Minor: **0** | 2026-01-27 | 2026-01-27 | 🟢 Current | ✅ |
+
+### OnePlus 15R - Europe (CPH2741)
+
+| Version | ARB Index | OEM Version | First Seen | Last Checked | Status | Safe |
+|---------|-----------|-------------|------------|--------------|--------|------|
+| CPH2769_16.0.2.401(EX01) | **0** | Major: **3**, Minor: **0** | 2026-01-27 | 2026-01-27 | 🟢 Current | ✅ |
+
 ---
 
 ---
