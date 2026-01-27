@@ -4,12 +4,23 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
 
 ## 📊 Current Status & History
 
-### OnePlus 15 - China (PLK110)
+### OnePlus 15 - Global (CPH2747)
 
 | Version | ARB Index | OEM Version | First Seen | Last Checked | Status | Safe |
 |---------|-----------|-------------|------------|--------------|--------|------|
-| PLK110_16.0.3.504(CN01) | **1** | Major: **3**, Minor: **0** | 2026-01-27 | 2026-01-27 | 🟢 Current | ❌ |
-| PLK110_16.0.3.503(CN01) | **0** | Major: **3**, Minor: **0** | 2026-01-27 | 2026-01-27 | ⚫ Archived | ✅ |
+| CPH2747_16.0.3.501(EX01) | **0** | Major: **3**, Minor: **0** | 2026-01-27 | 2026-01-27 | 🟢 Current | ✅ |
+
+### OnePlus 15 - Europe (CPH2747)
+
+| Version | ARB Index | OEM Version | First Seen | Last Checked | Status | Safe |
+|---------|-----------|-------------|------------|--------------|--------|------|
+| CPH2747_16.0.3.501(EX01) | **0** | Major: **3**, Minor: **0** | 2026-01-27 | 2026-01-27 | 🟢 Current | ✅ |
+
+### OnePlus 15 - India (CPH2745)
+
+| Version | ARB Index | OEM Version | First Seen | Last Checked | Status | Safe |
+|---------|-----------|-------------|------------|--------------|--------|------|
+| CPH2745_16.0.3.501(EX01) | **0** | Major: **3**, Minor: **0** | 2026-01-27 | 2026-01-27 | 🟢 Current | ✅ |
 
 ---
 
@@ -25,9 +36,57 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
 |---------|-----------|-------------|------------|--------------|--------|------|
 | CPH2769_16.0.2.401(EX01) | **0** | Major: **3**, Minor: **0** | 2026-01-27 | 2026-01-27 | 🟢 Current | ✅ |
 
----
+### OnePlus 15R - India (CPH2741)
+
+| Version | ARB Index | OEM Version | First Seen | Last Checked | Status | Safe |
+|---------|-----------|-------------|------------|--------------|--------|------|
+| CPH2767_16.0.3.501(EX01) | **0** | Major: **3**, Minor: **0** | 2026-01-27 | 2026-01-27 | 🟢 Current | ✅ |
 
 ---
+
+### OnePlus 13 - Global (CPH2649)
+
+| Version | ARB Index | OEM Version | First Seen | Last Checked | Status | Safe |
+|---------|-----------|-------------|------------|--------------|--------|------|
+| CPH2653_16.0.3.501(EX01) | **1** | Major: **3**, Minor: **0** | 2026-01-27 | 2026-01-27 | 🟢 Current | ❌ |
+
+### OnePlus 13 - Europe (CPH2649)
+
+| Version | ARB Index | OEM Version | First Seen | Last Checked | Status | Safe |
+|---------|-----------|-------------|------------|--------------|--------|------|
+| CPH2653_16.0.3.501(EX01) | **1** | Major: **3**, Minor: **0** | 2026-01-27 | 2026-01-27 | 🟢 Current | ❌ |
+
+### OnePlus 13 - India (CPH2649)
+
+| Version | ARB Index | OEM Version | First Seen | Last Checked | Status | Safe |
+|---------|-----------|-------------|------------|--------------|--------|------|
+| CPH2649_16.0.3.501(EX01) | **1** | Major: **3**, Minor: **0** | 2026-01-27 | 2026-01-27 | 🟢 Current | ❌ |
+
+---
+
+### OnePlus 12 - Global (CPH2573)
+
+| Version | ARB Index | OEM Version | First Seen | Last Checked | Status | Safe |
+|---------|-----------|-------------|------------|--------------|--------|------|
+| CPH2581_16.0.3.500(EX01) | **1** | Major: **3**, Minor: **0** | 2026-01-27 | 2026-01-27 | 🟢 Current | ❌ |
+
+### OnePlus 12 - Europe (CPH2573)
+
+| Version | ARB Index | OEM Version | First Seen | Last Checked | Status | Safe |
+|---------|-----------|-------------|------------|--------------|--------|------|
+| CPH2581_16.0.3.500(EX01) | **1** | Major: **3**, Minor: **0** | 2026-01-27 | 2026-01-27 | 🟢 Current | ❌ |
+
+### OnePlus 12 - India (CPH2573)
+
+| Version | ARB Index | OEM Version | First Seen | Last Checked | Status | Safe |
+|---------|-----------|-------------|------------|--------------|--------|------|
+| CPH2573_16.0.3.500(EX01) | **1** | Major: **3**, Minor: **0** | 2026-01-27 | 2026-01-27 | 🟢 Current | ❌ |
+
+### OnePlus 12 - China (PJD110)
+
+| Version | ARB Index | OEM Version | First Seen | Last Checked | Status | Safe |
+|---------|-----------|-------------|------------|--------------|--------|------|
+|  | **0** | Major: **3**, Minor: **0** | 2026-01-27 | 2026-01-27 | 🟢 Current | ✅ |
 
 ---
 
