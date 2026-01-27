@@ -95,7 +95,7 @@ jobs:
             arb_check_done.txt
             extracted/
           # Cache key includes device and variant to be separate
-          key: arb-check-v5-${{ matrix.device }}-${{ matrix.variant }}-${{ steps.get_details.outputs.version }}
+          key: arb-check-v6-${{ matrix.device }}-${{ matrix.variant }}-${{ steps.get_details.outputs.version }}
 
       - name: Download Firmware
         if: steps.cache-arb.outputs.cache-hit != 'true'
@@ -154,77 +154,6 @@ jobs:
             "$(cat result.json | grep '\"major\"' | cut -d'"' -f4)" \
             "$(cat result.json | grep '\"minor\"' | cut -d'"' -f4)"
 
-      - name: Process Historical Versions
-        run: |
-          # Get top 4 versions from INI
-          VERSIONS_LIST=$(python3 parse_ini.py firmware_history.ini "${{ steps.get_details.outputs.device_short }}" "${{ matrix.variant }}")
-          
-          echo "Historical versions data (version|url):"
-          echo "$VERSIONS_LIST"
-          
-          VERSION_CURRENT="${{ steps.get_details.outputs.version }}"
-          HISTORY_FILE="data/history/${{ steps.get_details.outputs.device_short }}_${{ matrix.variant }}.json"
-          
-          echo "$VERSIONS_LIST" | while IFS='|' read -r VERSION URL; do
-            if [ -z "$VERSION" ] || [ -z "$URL" ]; then continue; fi
-            
-            if [ "$VERSION" == "$VERSION_CURRENT" ]; then
-              echo "Skipping current version: $VERSION"
-              continue
-            fi
-            
-            # Check if already in history
-            if [ -f "$HISTORY_FILE" ] && grep -q "$VERSION" "$HISTORY_FILE"; then
-              echo "Version already tracked in history: $VERSION"
-              continue
-            fi
-            
-            # Only process if it's a direct ZIP link
-            if [[ "$URL" != *".zip"* ]]; then
-              echo "Skipping non-direct historical link: $URL"
-              continue
-            fi
-            
-            echo "Processing historical version: $VERSION"
-            
-            # Retrieve signed URL for this specific version
-            SIGNED_URL=$(python3 fetch_firmware.py "${{ matrix.device }}" "${{ matrix.variant }}" "$VERSION")
-            
-            if [ -z "$SIGNED_URL" ]; then
-              echo "Failed to retrieve signed URL for $VERSION, skipping..."
-              continue
-            fi
-
-            echo "URL: $SIGNED_URL"
-            
-            # Download and extract
-            (
-              mkdir -p "hist_ext_${VERSION}"
-              aria2c -x16 -s16 -k1M -o "hist_${VERSION}.zip" "$SIGNED_URL"
-              ./tools/payload-dumper -p xbl_config -o "hist_ext_${VERSION}" "hist_${VERSION}.zip"
-              
-              IMG_FILE=$(find "hist_ext_${VERSION}" -name "*xbl_config*.img" | head -n 1)
-              if [ -n "$IMG_FILE" ]; then
-                OUTPUT=$(./tools/arbextract "$IMG_FILE")
-                ARB_INDEX=$(echo "$OUTPUT" | grep "ARB (Anti-Rollback)" | awk -F': ' '{print $2}')
-                MAJOR_VERSION=$(echo "$OUTPUT" | grep "Major Version" | awk -F': ' '{print $2}')
-                MINOR_VERSION=$(echo "$OUTPUT" | grep "Minor Version" | awk -F': ' '{print $2}')
-                
-                python3 update_history.py --historical \
-                  "${{ steps.get_details.outputs.device_short }}" \
-                  "${{ matrix.variant }}" \
-                  "$VERSION" \
-                  "$ARB_INDEX" \
-                  "$MAJOR_VERSION" \
-                  "$MINOR_VERSION"
-              else
-                echo "Failed to extract xbl_config for $VERSION"
-              fi
-            ) || echo "Error processing historical version $VERSION, skipping..."
-            
-            # Cleanup for next historical version
-            rm -rf "hist_${VERSION}.zip" "hist_ext_${VERSION}"
-          done
 
       - name: Upload Result
         uses: actions/upload-artifact@v4
