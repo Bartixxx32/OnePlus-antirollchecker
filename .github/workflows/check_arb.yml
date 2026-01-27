@@ -100,11 +100,40 @@ jobs:
       - name: Download Firmware
         if: steps.cache-arb.outputs.cache-hit != 'true'
         run: |
-          if [[ "${{ steps.get_details.outputs.url }}" == *".zip"* ]]; then
+          URL="${{ steps.get_details.outputs.url }}"
+          
+          if [[ "${{ matrix.variant }}" == "CN" ]]; then
+            echo "Downloading CN firmware with single connection & resume logic..."
+            # Try up to 10 times, re-fetching URL each time to handle expiration
+            for i in {1..10}; do
+              if [ $i -gt 1 ]; then
+                echo "Attempt $i: Link likely expired. Refreshing signed URL..."
+                URL=$(python3 fetch_firmware.py "${{ matrix.device }}" "CN" "${{ steps.get_details.outputs.version }}")
+              fi
+              
+              if [[ "$URL" == *".zip"* ]]; then
+                # Use -c to continue, -x1 -s1 for stability on CN servers
+                if aria2c -c -x1 -s1 -k1M -o firmware.zip "$URL"; then
+                  echo "Download complete!"
+                  SUCCESS=true
+                  break
+                fi
+              else
+                echo "Invalid URL: $URL"
+              fi
+              echo "Retrying in 20s..."
+              sleep 20
+            done
+            
+            if [ "$SUCCESS" != "true" ]; then
+              echo "Failed to download CN firmware after multiple retries."
+              touch skip_check.txt
+            fi
+          elif [[ "$URL" == *".zip"* ]]; then
             echo "Downloading ZIP firmware..."
-            aria2c -x16 -s16 -k1M -o firmware.zip "${{ steps.get_details.outputs.url }}"
+            aria2c -x16 -s16 -k1M -o firmware.zip "$URL"
           else
-            echo "Skipping non-direct download link: ${{ steps.get_details.outputs.url }}"
+            echo "Skipping non-direct download link: $URL"
             touch skip_check.txt
           fi
 
