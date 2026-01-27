@@ -100,17 +100,23 @@ jobs:
       - name: Download Firmware
         if: steps.cache-arb.outputs.cache-hit != 'true'
         run: |
-          aria2c -x16 -s16 -k1M -o firmware.zip "${{ steps.get_details.outputs.url }}"
+          if [[ "${{ steps.get_details.outputs.url }}" == *".zip"* ]]; then
+            echo "Downloading ZIP firmware..."
+            aria2c -x16 -s16 -k1M -o firmware.zip "${{ steps.get_details.outputs.url }}"
+          else
+            echo "Skipping non-direct download link: ${{ steps.get_details.outputs.url }}"
+            touch skip_check.txt
+          fi
 
       - name: Extract xbl_config.img
-        if: steps.cache-arb.outputs.cache-hit != 'true'
+        if: steps.cache-arb.outputs.cache-hit != 'true' && hashFiles('skip_check.txt') == ''
         run: |
           mkdir -p extracted
           ./tools/payload-dumper -p xbl_config -o extracted firmware.zip
           ls -lh extracted/
 
       - name: Check ARB
-        id: check_arb
+        if: steps.cache-arb.outputs.cache-hit != 'true' && hashFiles('skip_check.txt') == ''
         run: |
           IMG_FILE=$(find extracted -name "*xbl_config*.img" | head -n 1)
           if [ -z "$IMG_FILE" ]; then
@@ -126,7 +132,6 @@ jobs:
           echo "ARB Index: $ARB_INDEX"
           
           # Prepare result for artifact
-          # We write a simple JSON or key-value file
           echo "{" > result.json
           echo "\"device_short\": \"${{ steps.get_details.outputs.device_short }}\"," >> result.json
           echo "\"variant\": \"${{ matrix.variant }}\"," >> result.json
@@ -139,6 +144,7 @@ jobs:
           cat result.json
 
       - name: Update JSON History (Current Version)
+        if: hashFiles('result.json') != ''
         run: |
           python3 update_history.py \
             "${{ steps.get_details.outputs.device_short }}" \
@@ -173,31 +179,39 @@ jobs:
               continue
             fi
             
+            # Only process if it's a direct ZIP link
+            if [[ "$URL" != *".zip"* ]]; then
+              echo "Skipping non-direct historical link: $URL"
+              continue
+            fi
+            
             echo "Processing historical version: $VERSION"
             echo "URL: $URL"
             
             # Download and extract
-            mkdir -p "hist_ext_${VERSION}"
-            aria2c -x16 -s16 -k1M -o "hist_${VERSION}.zip" "$URL"
-            ./tools/payload-dumper -p xbl_config -o "hist_ext_${VERSION}" "hist_${VERSION}.zip"
-            
-            IMG_FILE=$(find "hist_ext_${VERSION}" -name "*xbl_config*.img" | head -n 1)
-            if [ -n "$IMG_FILE" ]; then
-              OUTPUT=$(./tools/arbextract "$IMG_FILE")
-              ARB_INDEX=$(echo "$OUTPUT" | grep "ARB (Anti-Rollback)" | awk -F': ' '{print $2}')
-              MAJOR_VERSION=$(echo "$OUTPUT" | grep "Major Version" | awk -F': ' '{print $2}')
-              MINOR_VERSION=$(echo "$OUTPUT" | grep "Minor Version" | awk -F': ' '{print $2}')
+            (
+              mkdir -p "hist_ext_${VERSION}"
+              aria2c -x16 -s16 -k1M -o "hist_${VERSION}.zip" "$URL"
+              ./tools/payload-dumper -p xbl_config -o "hist_ext_${VERSION}" "hist_${VERSION}.zip"
               
-              python3 update_history.py --historical \
-                "${{ steps.get_details.outputs.device_short }}" \
-                "${{ matrix.variant }}" \
-                "$VERSION" \
-                "$ARB_INDEX" \
-                "$MAJOR_VERSION" \
-                "$MINOR_VERSION"
-            else
-              echo "Failed to extract xbl_config for $VERSION"
-            fi
+              IMG_FILE=$(find "hist_ext_${VERSION}" -name "*xbl_config*.img" | head -n 1)
+              if [ -n "$IMG_FILE" ]; then
+                OUTPUT=$(./tools/arbextract "$IMG_FILE")
+                ARB_INDEX=$(echo "$OUTPUT" | grep "ARB (Anti-Rollback)" | awk -F': ' '{print $2}')
+                MAJOR_VERSION=$(echo "$OUTPUT" | grep "Major Version" | awk -F': ' '{print $2}')
+                MINOR_VERSION=$(echo "$OUTPUT" | grep "Minor Version" | awk -F': ' '{print $2}')
+                
+                python3 update_history.py --historical \
+                  "${{ steps.get_details.outputs.device_short }}" \
+                  "${{ matrix.variant }}" \
+                  "$VERSION" \
+                  "$ARB_INDEX" \
+                  "$MAJOR_VERSION" \
+                  "$MINOR_VERSION"
+              else
+                echo "Failed to extract xbl_config for $VERSION"
+              fi
+            ) || echo "Error processing historical version $VERSION, skipping..."
             
             # Cleanup for next historical version
             rm -rf "hist_${VERSION}.zip" "hist_ext_${VERSION}"
