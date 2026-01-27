@@ -1,13 +1,22 @@
 {
   "history": [
     {
+      "version": "1.0.1",
+      "arb": 0,
+      "major": 1,
+      "minor": 1,
+      "first_seen": "2026-01-27",
+      "last_checked": "2026-01-27",
+      "status": "current"
+    },
+    {
       "version": "PLK110_16.0.3.503(CN01)",
       "arb": 0,
       "major": 3,
       "minor": 0,
       "first_seen": "2026-01-27",
       "last_checked": "2026-01-27",
-      "status": "current"
+      "status": "archived"
     }
   ],
   "device": "OnePlus 15",
