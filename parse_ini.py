@@ -4,10 +4,11 @@ Parse firmware history from INI file and extract top N versions for each device/
 """
 
 import sys
+import re
 from typing import List, Dict
 
 def get_section_name(device_short: str, variant: str) -> str:
-    """Map device + variant to INI section name."""
+    """Map device + variant to INI component name."""
     device_map = {
         '15': 'OP 15',
         '15R': 'OP 15R',
@@ -15,49 +16,49 @@ def get_section_name(device_short: str, variant: str) -> str:
         '12': 'OP 12'
     }
     
-    device_name = device_map.get(device_short, '')
-    if not device_name:
-        return None
-    
-    return f'[{device_name} {variant}]'
+    device_name = device_map.get(device_short, device_short)
+    return f"{device_name} {variant}"
 
 def parse_ini_section(ini_content: str, section_name: str, max_versions: int = 4) -> List[Dict[str, str]]:
     """
-    Parse a section from INI and extract versions and URLs.
+    Parse a section from INI using regex for robustness.
     """
-    lines = ini_content.split('\n')
-    results = []
-    in_section = False
-    current_url = None
+    # Find the section index
+    # Sections are like [OP 15 CN]
+    section_regex = re.compile(rf'^\[{re.escape(section_name)}\]', re.IGNORECASE | re.MULTILINE)
+    match = section_regex.search(ini_content)
+    if not match:
+        return []
     
-    for line in lines:
-        line = line.strip()
+    # Get the content until the next section
+    start_pos = match.end()
+    next_section = re.search(r'^\[', ini_content[start_pos:], re.MULTILINE)
+    if next_section:
+        section_block = ini_content[start_pos:start_pos + next_section.start()]
+    else:
+        section_block = ini_content[start_pos:]
         
-        # Check if we're entering the target section
-        if line == section_name:
-            in_section = True
-            continue
-        
-        # Check if we've entered a different section
-        if line.startswith('[') and in_section:
-            break
-        
-        if not in_section:
-            continue
-        
-        # Parse URL and version lines
-        if line.startswith('url='):
-            current_url = line.split('=', 1)[1].strip()
-        elif line.startswith('version='):
-            version = line.split('=', 1)[1].strip()
+    results = []
+    # Extract url and version pairs. They appear in sequence.
+    # url=...
+    # version=...
+    # We find all keys and values first
+    kv_pairs = re.findall(r'^(\w+)=(.*)$', section_block, re.MULTILINE)
+    
+    current_url = None
+    for key, value in kv_pairs:
+        key = key.lower()
+        if key == 'url':
+            current_url = value.strip()
+        elif key == 'version':
+            version = value.strip()
             if version and current_url:
-                # Avoid duplicates
                 if not any(r['version'] == version for r in results):
                     results.append({'version': version, 'url': current_url})
-                current_url = None # Reset for next pair
+                current_url = None
                 if len(results) >= max_versions:
                     break
-    
+                    
     return results
 
 def main():
@@ -71,13 +72,12 @@ def main():
     
     section_name = get_section_name(device_short, variant)
     
-    if not section_name:
-        print(f"Unknown device: {device_short}", file=sys.stderr)
+    try:
+        with open(ini_file, 'r', encoding='utf-8', errors='ignore') as f:
+            ini_content = f.read()
+    except Exception as e:
+        print(f"Error reading file: {e}", file=sys.stderr)
         sys.exit(1)
-    
-    # Read INI file
-    with open(ini_file, 'r', encoding='utf-8', errors='ignore') as f:
-        ini_content = f.read()
     
     results = parse_ini_section(ini_content, section_name)
     
