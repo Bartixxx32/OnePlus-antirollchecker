@@ -56,8 +56,3 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
 
 ## 🤖 Workflow Status
 [![Check ARB](https://github.com/Bartixxx32/Oneplus-antirollchecker/actions/workflows/check_arb.yml/badge.svg)](https://github.com/Bartixxx32/Oneplus-antirollchecker/actions/workflows/check_arb.yml)
-
-## 🙏 Acknowledgements
-
-- [arbextract](https://github.com/koaaN/arbextract/) by koaaN
-- [payload-dumper-go](https://github.com/ssut/payload-dumper-go/) by ssut
