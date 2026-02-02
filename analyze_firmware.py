@@ -30,14 +30,16 @@ def analyze_firmware(zip_path, tools_dir, output_dir):
     tools_dir = Path(tools_dir).resolve()
     output_dir = Path(output_dir).resolve()
     
-    payload_dumper = tools_dir / "payload-dumper"
+    otaripper = tools_dir / "otaripper"
     arbextract = tools_dir / "arbextract"
     
     # 1. Extract xbl_config
     if not output_dir.exists():
         output_dir.mkdir(parents=True)
         
-    cmd_extract = [str(payload_dumper), "-p", "xbl_config", "-o", str(output_dir), str(zip_path)]
+    # otaripper <zip> -p <partitions> -o <output>
+    # Add -n to prevent opening folder
+    cmd_extract = [str(otaripper), str(zip_path), "-p", "xbl_config", "-o", str(output_dir), "-n"]
     if not run_command(cmd_extract):
         return None
         

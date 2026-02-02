@@ -121,11 +121,14 @@ jobs:
           curl -L -o tools/arbextract https://github.com/koaaN/arbextract/releases/download/1.0/arbextract-x86_64-linux
           chmod +x tools/arbextract
           
-          # Setup payload-dumper-go
-          curl -L -o payload-dumper.tar.gz https://github.com/ssut/payload-dumper-go/releases/download/1.3.0/payload-dumper-go_1.3.0_linux_amd64.tar.gz
-          tar -xzvf payload-dumper.tar.gz -C tools
-          find tools -name "payload-dumper-go" -type f -exec mv {} tools/payload-dumper \;
-          chmod +x tools/payload-dumper
+          # Setup otaripper
+          curl -L -o otaripper.tar.gz https://github.com/syedinsaf/otaripper/releases/download/v2.1.1/otaripper-2.1.1-linux-static-x86_64.tar.gz
+          tar -xzvf otaripper.tar.gz
+          # The tar likely contains the binary 'otaripper' directly or in a folder.
+          # Based on docs/standard behavior, let's assume binary is named 'otaripper'
+          # We move it to tools/
+          mv otaripper tools/otaripper || find . -name "otaripper" -type f -exec mv {} tools/otaripper \;
+          chmod +x tools/otaripper
           
       - name: Get Firmware Details
         id: get_details
