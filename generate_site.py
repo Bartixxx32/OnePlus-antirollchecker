@@ -93,18 +93,8 @@ def process_data(history_data):
 
     return devices_list
 
-def main():
-    parser = argparse.ArgumentParser(description="Generate static site from history.")
-    parser.add_argument("--history-dir", default="data/history", help="Directory containing history JSON files")
-    parser.add_argument("--output-dir", default="page", help="Output directory for the website")
-    parser.add_argument("--template-dir", default="templates", help="Directory containing templates")
-
-    args = parser.parse_args()
-
-    history_dir = Path(args.history_dir)
-    output_dir = Path(args.output_dir)
-    template_dir = Path(args.template_dir)
-
+def generate(history_dir: Path, output_dir: Path, template_dir: Path):
+    """Core logic to generate the site."""
     if not history_dir.exists():
         logger.warning(f"History directory not found: {history_dir}. Generating empty site.")
         history_data = {}
@@ -135,6 +125,20 @@ def main():
         logger.info(f"Site generated successfully at {output_dir}/index.html")
     except Exception as e:
         logger.error(f"Failed to write output: {e}")
+
+def main():
+    parser = argparse.ArgumentParser(description="Generate static site from history.")
+    parser.add_argument("--history-dir", default="data/history", help="Directory containing history JSON files")
+    parser.add_argument("--output-dir", default="page", help="Output directory for the website")
+    parser.add_argument("--template-dir", default="templates", help="Directory containing templates")
+
+    args = parser.parse_args()
+
+    generate(
+        Path(args.history_dir),
+        Path(args.output_dir),
+        Path(args.template_dir)
+    )
 
 if __name__ == '__main__':
     main()

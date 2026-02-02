@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 import json
 import shutil
-import subprocess
 import sys
 from pathlib import Path
 from config import DEVICE_METADATA
+from generate_site import generate
 
 def create_dummy_history(history_dir: Path):
     if history_dir.exists():
@@ -52,6 +52,7 @@ def create_dummy_history(history_dir: Path):
 def main():
     history_dir = Path("temp_history")
     output_dir = Path("page_preview")
+    template_dir = Path("templates")
 
     try:
         # 1. Create Data
@@ -59,12 +60,7 @@ def main():
 
         # 2. Run Generator
         print(f"Running generate_site.py -> {output_dir}...")
-        cmd = [
-            sys.executable, "generate_site.py",
-            "--history-dir", str(history_dir),
-            "--output-dir", str(output_dir)
-        ]
-        subprocess.check_call(cmd)
+        generate(history_dir, output_dir, template_dir)
 
         # 3. Verify
         index_file = output_dir / "index.html"
