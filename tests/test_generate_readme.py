@@ -431,7 +431,7 @@ class TestMain(unittest.TestCase):
 
         with patch('sys.argv', ['generate_readme.py', str(self.history_dir)]):
             with patch('builtins.open', mock_open()) as mock_file:
-                with patch('builtins.print') as mock_print:
+                with patch('builtins.print'):
                     main()
 
                     # Should write README.md

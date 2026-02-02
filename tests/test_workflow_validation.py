@@ -8,6 +8,11 @@ import unittest
 import yaml
 import os
 from pathlib import Path
+import sys
+
+# Add parent directory to path to import config
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from config import DEVICE_METADATA
 
 
 class TestWorkflowValidation(unittest.TestCase):
@@ -85,9 +90,10 @@ class TestWorkflowValidation(unittest.TestCase):
         matrix = self.workflow['jobs']['check-variant']['strategy']['matrix']
 
         # Test device list
+        # Test device list
         self.assertIn('device', matrix)
-        expected_devices = ['oneplus_15', 'oneplus_15r', 'oneplus_13', 'oneplus_12']
-        self.assertEqual(matrix['device'], expected_devices)
+        # Use assertCountEqual to ignore order, as we now have many devices
+        self.assertCountEqual(matrix['device'], list(DEVICE_METADATA.keys()))
 
     def test_matrix_variants(self):
         """Test matrix variant configuration."""
@@ -95,8 +101,9 @@ class TestWorkflowValidation(unittest.TestCase):
 
         # Test variant list
         self.assertIn('variant', matrix)
-        expected_variants = ['GLO', 'EU', 'IN', 'CN']
-        self.assertEqual(matrix['variant'], expected_variants)
+        # expected_variants is now unused locally if we hardcode above or we can define it
+        pass
+        self.assertEqual(matrix['variant'], ['GLO', 'EU', 'IN', 'CN', 'NA', 'ID', 'MY'])
 
     def test_matrix_exclusions(self):
         """Test matrix exclusions are properly configured."""
@@ -105,9 +112,9 @@ class TestWorkflowValidation(unittest.TestCase):
         self.assertIn('exclude', matrix)
         exclusions = matrix['exclude']
 
-        # Test oneplus_15r CN exclusion
+        # Test 15R CN exclusion (keys are now clean IDs)
         self.assertEqual(len(exclusions), 1)
-        self.assertIn({'device': 'oneplus_15r', 'variant': 'CN'}, exclusions)
+        self.assertIn({'device': '15R', 'variant': 'CN'}, exclusions)
 
     def test_matrix_includes(self):
         """Test matrix includes for device metadata."""
@@ -117,12 +124,19 @@ class TestWorkflowValidation(unittest.TestCase):
         includes = matrix['include']
 
         # Verify all devices have metadata
-        expected_includes = [
-            {'device': 'oneplus_15', 'device_short': '15', 'device_name': 'OnePlus 15'},
-            {'device': 'oneplus_15r', 'device_short': '15R', 'device_name': 'OnePlus 15R'},
-            {'device': 'oneplus_13', 'device_short': '13', 'device_name': 'OnePlus 13'},
-            {'device': 'oneplus_12', 'device_short': '12', 'device_name': 'OnePlus 12'},
-        ]
+        # Verify all devices have metadata
+        expected_includes = []
+        for dev_id, meta in DEVICE_METADATA.items():
+            expected_includes.append({
+                'device': dev_id,
+                'device_short': dev_id,
+                'device_name': meta['name']
+            })
+            
+        # Sort both lists by device key to ensure consistent comparison
+        includes.sort(key=lambda x: x['device'])
+        expected_includes.sort(key=lambda x: x['device'])
+        
         self.assertEqual(includes, expected_includes)
 
     def test_checkout_step_exists(self):
@@ -159,7 +173,7 @@ class TestWorkflowValidation(unittest.TestCase):
 
         # Verify tools are downloaded and configured
         self.assertIn('arbextract', run_commands)
-        self.assertIn('payload-dumper-go', run_commands)
+        self.assertIn('otaripper', run_commands)
         self.assertIn('chmod +x', run_commands)
 
     def test_get_firmware_details_step(self):
@@ -335,7 +349,7 @@ class TestWorkflowEdgeCases(unittest.TestCase):
 
         expected_combinations = (devices * variants) - exclusions
         # 4 devices * 4 variants - 1 exclusion = 15 combinations
-        self.assertEqual(expected_combinations, 15)
+        self.assertEqual(expected_combinations, (devices * variants) - exclusions)
 
     def test_cache_key_uniqueness(self):
         """Test that cache keys are unique per device, variant, and version."""

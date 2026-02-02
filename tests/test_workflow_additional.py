@@ -57,14 +57,14 @@ class TestWorkflowNegativeCases(unittest.TestCase):
         """Test that invalid combinations are properly excluded."""
         matrix = self.workflow['jobs']['check-variant']['strategy']['matrix']
 
-        # oneplus_15r CN should be excluded
+        # 15R CN should be excluded
         excluded = matrix.get('exclude', [])
         oneplus_15r_cn_excluded = any(
-            e.get('device') == 'oneplus_15r' and e.get('variant') == 'CN'
+            e.get('device') == '15R' and e.get('variant') == 'CN'
             for e in excluded
         )
         self.assertTrue(oneplus_15r_cn_excluded,
-                       "oneplus_15r CN combination should be excluded")
+                       "15R CN combination should be excluded")
 
     def test_no_empty_step_runs(self):
         """Test that no step has an empty run command."""
@@ -126,9 +126,9 @@ class TestWorkflowBoundaryConditions(unittest.TestCase):
 
         total_combinations = (devices * variants) - exclusions
 
-        # GitHub Actions free tier supports up to 20 parallel jobs
-        # Let's ensure we're within reasonable limits
-        self.assertLessEqual(total_combinations, 50,
+        # GitHub Actions supports up to 256 matrix jobs
+        # We have significantly expanded support so we expect simpler matrix ~175
+        self.assertLessEqual(total_combinations, 256,
                            "Matrix creates too many job combinations")
 
     def test_cron_schedule_not_too_frequent(self):
@@ -298,8 +298,9 @@ class TestWorkflowMaintainability(unittest.TestCase):
             self.assertIn('device_short', inc)
             self.assertIn('device_name', inc)
 
-            # device_name should be human-readable
-            self.assertIn('OnePlus', inc['device_name'])
+            # device_name should be human-readable (OnePlus or Oppo)
+            is_valid_brand = 'OnePlus' in inc['device_name'] or 'Oppo' in inc['device_name']
+            self.assertTrue(is_valid_brand, f"Device name {inc['device_name']} should contain brand")
 
     def test_cache_version_explicit_for_maintenance(self):
         """Test that cache version is explicit to allow cache busting."""
