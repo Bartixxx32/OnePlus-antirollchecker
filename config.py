@@ -6,7 +6,7 @@ from typing import Dict, TypedDict
 
 # Constants
 BASE_URL = "https://roms.danielspringer.at/index.php?view=ota"
-OOS_API_URL = "https://oosdownloader-gui.fly.dev/api/oneplus"
+OOS_API_URL = "https://oosdownloader-gui.fly.dev/api"
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 HISTORY_DIR = "data/history"
 
@@ -58,6 +58,156 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "IN": "CPH2573", 
             "CN": "PJD110"
         }
+    },
+    "12R": {
+        "name": "OnePlus 12R",
+        "models": {
+            "GLO": "CPH2585",
+            "EU": "CPH2609",
+            "IN": "CPH2585",
+            "IN": "CPH2585"
+        }
+    },
+    "11": {
+        "name": "OnePlus 11",
+        "models": {
+            "GLO": "CPH2449",
+            "EU": "CPH2449",
+            "IN": "CPH2447"
+        }
+    },
+    "11R": {
+        "name": "OnePlus 11R",
+        "models": {
+            "IN": "CPH2487"
+        }
+    },
+    "10 Pro": {
+        "name": "OnePlus 10 Pro",
+        "models": {
+            "GLO": "NE2215",
+            "EU": "NE2213",
+            "IN": "NE2211",
+            "CN": "NE2210"
+        }
+    },
+    "10T": {
+        "name": "OnePlus 10T",
+        "models": {
+            "GLO": "CPH2417",
+            "EU": "CPH2415",
+            "IN": "CPH2413"
+        }
+    },
+    "10R": {
+        "name": "OnePlus 10R",
+        "models": {
+            "IN": "CPH2423"
+        }
+    },
+    "9 Pro": {
+        "name": "OnePlus 9 Pro",
+        "models": {
+            "NA": "LE2125",
+            "EU": "LE2123",
+            "IN": "LE2121"
+        }
+    },
+    "9": {
+        "name": "OnePlus 9",
+        "models": {
+            "NA": "LE2115",
+            "EU": "LE2113",
+            "IN": "LE2111"
+        }
+    },
+    "9RT": {
+        "name": "OnePlus 9RT",
+        "models": {
+            "IN": "MT2111"
+        }
+    },
+    "9R": {
+        "name": "OnePlus 9R",
+        "models": {
+            "IN": "LE2101"
+        }
+    },
+    "Ace 6T": {
+        "name": "OnePlus Ace 6T",
+        "models": {
+            "CN": "PLR110"
+        }
+    },
+    "Ace 5": {
+        "name": "OnePlus Ace 5",
+        "models": {
+            "CN": "Unknown"
+        }
+    },
+    "Ace 5 Pro": {
+        "name": "OnePlus Ace 5 Pro",
+        "models": {
+            "CN": "Unknown"
+        }
+    },
+    "Ace 5 Ultimate": {
+        "name": "OnePlus Ace 5 Ultimate",
+        "models": {
+            "CN": "Unknown"
+        }
+    },
+    "Pad 2 Pro": {
+        "name": "OnePlus Pad 2 Pro",
+        "models": {
+            "CN": "Unknown"
+        }
+    },
+    "Pad 3": {
+        "name": "OnePlus Pad 3",
+        "models": {
+            "GLO": "Unknown",
+            "EU": "Unknown",
+            "IN": "Unknown"
+        }
+    },
+    "Pad 2": {
+        "name": "OnePlus Pad 2",
+        "models": {
+            "GLO": "Unknown",
+            "EU": "Unknown",
+            "IN": "Unknown"
+        }
+    },
+
+    "Find X8": {
+        "name": "Oppo Find X8",
+        "models": {
+            "CN": "Unknown",
+            "IN": "Unknown"
+        }
+    },
+    "Find X8 Pro": {
+        "name": "Oppo Find X8 Pro",
+        "models": {
+            "CN": "Unknown",
+            "EU": "Unknown",
+            "IN": "Unknown"
+        }
+    },
+    "Find X8 Ultra": {
+        "name": "Oppo Find X8 Ultra",
+        "models": {
+            "CN": "Unknown"
+        }
+    },
+    "Find N3": {
+        "name": "Oppo Find N3",
+        "models": {
+            "ID": "CPH2499",
+            "IN": "Unknown",
+            "MY": "Unknown"
+        }
     }
 }
 
@@ -65,9 +215,25 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
 SPRING_MAPPING = {
     "oneplus_15": "OP 15",
     "oneplus_15r": "OP 15R",
+    "oneplus_11": "OP 11",
+    "oneplus_11R": "OP 11R",
+    "oneplus_10 Pro": "OP 10 PRO",
     "oneplus_13": "OP 13",
-    "oneplus_12": "OP 12"
+    "oneplus_12": "OP 12",
+    "oneplus_12R": "OP ACE 3",
+    "oneplus_Ace 6T": "OP ACE 6T",
+    "oneplus_Ace 5": "OP ACE 5",
+    "oneplus_Ace 5 Pro": "OP ACE 5 PRO",
+    "oneplus_Ace 5 Ultimate": "OP ACE 5 ULTRA",
+    "oneplus_Pad 2 Pro": "OP PAD2 PRO",
+    "oneplus_Pad 3": "OP PAD3",
+    "oneplus_Pad 2": "OP PAD2",
+    "oneplus_Find X8": "OPPO FIND X8",
+    "oneplus_Find X8 Pro": "OPPO FIND X8 PRO",
+    "oneplus_Find X8 Ultra": "OPPO FIND X8 ULTRA"
 }
+
+
 
 # Mapping for OOS Downloader API (oosdownloader-gui.fly.dev)
 # It seems to use snake_case ids directly, but let's be explicit if needed.
@@ -77,8 +243,26 @@ OOS_MAPPING = {
     "15": "oneplus_15",
     "15R": "oneplus_15r",
     "13": "oneplus_13",
-    "12": "oneplus_12"
+    "12": "oneplus_12",
+    "12R": "oneplus_12r",
+    "11": "oneplus_11",
+    "11R": "oneplus_11r",
+    "10 Pro": "oneplus_10_pro",
+    "10T": "oneplus_10t",
+    "10R": "oneplus_10r_80w",
+    "9 Pro": "oneplus_9_pro",
+    "9": "oneplus_9",
+    "9RT": "oneplus_9rt",
+    "9R": "oneplus_9r",
+    "Pad 3": "oneplus_pad_3",
+    "Pad 3": "oneplus_pad_3",
+    "Pad 2": "oneplus_pad_2",
+    "Find X8": "oppo_find_x8",
+    "Find X8 Pro": "oppo_find_x8_pro",
+    "Find N3": "oppo_find_n3"
 }
+
+
 
 def get_display_name(device_id: str) -> str:
     """Get the human-readable display name for a device ID."""

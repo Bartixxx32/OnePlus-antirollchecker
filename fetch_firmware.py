@@ -19,9 +19,15 @@ def get_from_oos_api(device_id: str, region: str) -> dict:
     """
     mapped_id = OOS_MAPPING.get(device_id, f"oneplus_{device_id}")
     
+    # Determine brand
+    brand = "oneplus"
+    if mapped_id.startswith("oppo_") or mapped_id.startswith("find_"):
+         brand = "oppo"
+
     # API endpoints
-    url_endpoint = f"{OOS_API_URL}/{mapped_id}/{region}/full"
-    ver_endpoint = f"{OOS_API_URL}/{mapped_id}/{region}/full/version"
+    # OOS_API_URL is now .../api
+    url_endpoint = f"{OOS_API_URL}/{brand}/{mapped_id}/{region}/full"
+    ver_endpoint = f"{OOS_API_URL}/{brand}/{mapped_id}/{region}/full/version"
     
     logger.info(f"Checking OOS API: {url_endpoint}")
     
