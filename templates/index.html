@@ -76,12 +76,12 @@
         table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 0.9em;
+            font-size: 0.85em;
             white-space: nowrap;
         }
         th, td {
             text-align: left;
-            padding: 12px 15px;
+            padding: 10px 10px;
             border-bottom: 1px solid var(--border-color);
         }
         th {
@@ -172,7 +172,6 @@
                                 <th scope="col">Model</th>
                                 <th scope="col">Firmware Version</th>
                                 <th scope="col">ARB</th>
-                                <th scope="col">OEM Version</th>
                                 <th scope="col">Last Checked</th>
                                 <th scope="col">Safe</th>
                             </tr>
@@ -184,7 +183,6 @@
                                 <td>{{ variant.model }}</td>
                                 <td class="version-cell" title="{{ variant.version }}">{{ variant.version }}</td>
                                 <td><strong>{{ variant.arb }}</strong></td>
-                                <td>Major: <strong>{{ variant.major }}</strong>, Minor: <strong>{{ variant.minor }}</strong></td>
                                 <td>{{ variant.last_checked }}</td>
                                 <td>
                                     {% if variant.arb == 0 %}
@@ -198,7 +196,7 @@
                             </tr>
                             {% endfor %}
                             {% if not device.variants %}
-                            <tr><td colspan="7" style="text-align:center; padding: 20px;">No data available</td></tr>
+                            <tr><td colspan="6" style="text-align:center; padding: 20px;">No data available</td></tr>
                             {% endif %}
                         </tbody>
                     </table>

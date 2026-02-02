@@ -71,6 +71,11 @@ def process_data(history_data):
             if not current_entry:
                 continue
 
+            # Shorten last_checked to date only if possible
+            last_checked = current_entry.get('last_checked', 'Unknown')
+            if ' ' in last_checked:
+                last_checked = last_checked.split(' ')[0]
+
             variant_entry = {
                 'region_name': get_region_name(variant),
                 'model': data.get('model', 'Unknown'),
@@ -78,7 +83,7 @@ def process_data(history_data):
                 'arb': current_entry.get('arb', -1),
                 'major': current_entry.get('major', '?'),
                 'minor': current_entry.get('minor', '?'),
-                'last_checked': current_entry.get('last_checked', 'Unknown')
+                'last_checked': last_checked
             }
             # Add helper for status
             # ARB 0 means safe (downgrade possible), >0 means protected
