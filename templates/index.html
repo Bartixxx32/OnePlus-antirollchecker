@@ -172,6 +172,7 @@
                                 <th scope="col">Version</th>
                                 <th scope="col">ARB</th>
                                 <th scope="col">Status</th>
+                                <th scope="col">Last Checked</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -195,10 +196,11 @@
                                     <span class="badge badge-warning">Unknown</span>
                                     {% endif %}
                                 </td>
+                                <td>{{ variant.last_checked }}</td>
                             </tr>
                             {% endfor %}
                             {% if not device.variants %}
-                            <tr><td colspan="4" style="text-align:center; padding: 20px;">No data available</td></tr>
+                            <tr><td colspan="5" style="text-align:center; padding: 20px;">No data available</td></tr>
                             {% endif %}
                         </tbody>
                     </table>
