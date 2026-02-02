@@ -64,7 +64,6 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
         "models": {
             "GLO": "CPH2585",
             "EU": "CPH2609",
-            "IN": "CPH2585",
             "IN": "CPH2585"
         }
     },
@@ -258,6 +257,7 @@ OOS_MAPPING = {
     "Pad 2": "oneplus_pad_2",
     "Find X8": "oppo_find_x8",
     "Find X8 Pro": "oppo_find_x8_pro",
+    "Find X8 Ultra": "oppo_find_x8_ultra",
     "Find N3": "oppo_find_n3"
 }
 
