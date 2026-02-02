@@ -48,7 +48,8 @@ def analyze_firmware(zip_path, tools_dir, output_dir):
         
     # 2. Find extracted image
     # pattern: matches anything with xbl_config inside extracted folder
-    img_files = list(output_dir.glob("*xbl_config*.img"))
+    # Use rglob to search recursively because otaripper creates a subdirectory
+    img_files = list(output_dir.rglob("*xbl_config*.img"))
     if not img_files:
         logger.error("xbl_config image not found in extraction output")
         return None
