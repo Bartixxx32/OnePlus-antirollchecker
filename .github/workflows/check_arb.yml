@@ -240,8 +240,12 @@ jobs:
             fi
           done
           
+          # Install dependencies
+          pip3 install jinja2
+
           # Generate
           python3 generate_readme.py
+          python3 generate_site.py
           
       - name: Commit and Push
         run: |
@@ -250,3 +254,9 @@ jobs:
           git add data/history/*.json README.md
           git commit -m "Update ARB history and README" || echo "No changes to commit"
           git push
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./page
