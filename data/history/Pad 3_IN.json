@@ -1,0 +1,17 @@
+{
+  "history": [
+    {
+      "version": "OPD2415_16.0.3.500(EX01)",
+      "arb": 1,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-02-02",
+      "last_checked": "2026-02-02",
+      "status": "current"
+    }
+  ],
+  "device": "OnePlus Pad 3",
+  "device_id": "Pad 3",
+  "region": "IN",
+  "model": "Unknown"
+}

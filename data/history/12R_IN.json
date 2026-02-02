@@ -1,0 +1,17 @@
+{
+  "history": [
+    {
+      "version": "CPH2585_16.0.2.400(EX01)",
+      "arb": 0,
+      "major": 2,
+      "minor": 0,
+      "first_seen": "2026-02-02",
+      "last_checked": "2026-02-02",
+      "status": "current"
+    }
+  ],
+  "device": "OnePlus 12R",
+  "device_id": "12R",
+  "region": "IN",
+  "model": "CPH2585"
+}

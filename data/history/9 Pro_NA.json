@@ -1,0 +1,17 @@
+{
+  "history": [
+    {
+      "version": "LE2125_11_F.30",
+      "arb": 0,
+      "major": 0,
+      "minor": 120,
+      "first_seen": "2026-02-02",
+      "last_checked": "2026-02-02",
+      "status": "current"
+    }
+  ],
+  "device": "OnePlus 9 Pro",
+  "device_id": "9 Pro",
+  "region": "NA",
+  "model": "LE2125"
+}

@@ -1,0 +1,17 @@
+{
+  "history": [
+    {
+      "version": "OPD2403_16.0.3.501(EX01)",
+      "arb": 1,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-02-02",
+      "last_checked": "2026-02-02",
+      "status": "current"
+    }
+  ],
+  "device": "OnePlus Pad 2",
+  "device_id": "Pad 2",
+  "region": "EU",
+  "model": "Unknown"
+}

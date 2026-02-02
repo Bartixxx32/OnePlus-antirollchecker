@@ -1,0 +1,17 @@
+{
+  "history": [
+    {
+      "version": "CPH2499_16.0.3.500(EX01)",
+      "arb": 0,
+      "major": 2,
+      "minor": 0,
+      "first_seen": "2026-02-02",
+      "last_checked": "2026-02-02",
+      "status": "current"
+    }
+  ],
+  "device": "Oppo Find N3",
+  "device_id": "Find N3",
+  "region": "ID",
+  "model": "CPH2499"
+}

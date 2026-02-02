@@ -1,0 +1,17 @@
+{
+  "history": [
+    {
+      "version": "PKJ110_16.0.3.500(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-02-02",
+      "last_checked": "2026-02-02",
+      "status": "current"
+    }
+  ],
+  "device": "Oppo Find X8 Ultra",
+  "device_id": "Find X8 Ultra",
+  "region": "CN",
+  "model": "Unknown"
+}

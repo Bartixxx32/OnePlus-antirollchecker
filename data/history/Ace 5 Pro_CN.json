@@ -1,0 +1,17 @@
+{
+  "history": [
+    {
+      "version": "PKR110_16.0.3.500(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-02-02",
+      "last_checked": "2026-02-02",
+      "status": "current"
+    }
+  ],
+  "device": "OnePlus Ace 5 Pro",
+  "device_id": "Ace 5 Pro",
+  "region": "CN",
+  "model": "Unknown"
+}

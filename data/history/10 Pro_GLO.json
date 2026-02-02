@@ -1,0 +1,17 @@
+{
+  "history": [
+    {
+      "version": "NE2213_15.0.0.1302(EX01)",
+      "arb": 0,
+      "major": 2,
+      "minor": 0,
+      "first_seen": "2026-02-02",
+      "last_checked": "2026-02-02",
+      "status": "current"
+    }
+  ],
+  "device": "OnePlus 10 Pro",
+  "device_id": "10 Pro",
+  "region": "GLO",
+  "model": "NE2215"
+}
