@@ -12,97 +12,26 @@ on:
     - cron: '0 0 * * *' # Run daily
 
 jobs:
+  setup-matrix:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+      
+      - name: Generate Matrix
+        id: set-matrix
+        run: python3 generate_matrix.py
+
   check-variant:
+    needs: setup-matrix
     runs-on: ubuntu-latest
     continue-on-error: true
     strategy:
       fail-fast: false
-      matrix:
-        device: ["15", "15R", "13", "12", "12R", "11", "11R", "10 Pro", "10T", "10R", "9 Pro", "9", "9RT", "9R", "Ace 6T", "Ace 5", "Ace 5 Pro", "Ace 5 Ultimate", "Pad 2 Pro", "Pad 3", "Pad 2", "Find X8", "Find X8 Pro", "Find X8 Ultra", "Find N3"]
-        variant: [GLO, EU, IN, CN, NA, ID, MY]
-        exclude:
-          # Exclude combinations that don't make sense or are empty
-          # (Optional optimization: exclude known missing CN variants to save CI time?)
-          # For now, let's keep it simple, or maybe rely on the script to fail gracefully (skip_check.txt).
-          - device: "15R"
-            variant: CN
-        include:
-          - device: "15"
-            device_short: "15"
-            device_name: "OnePlus 15"
-          - device: "15R"
-            device_short: "15R"
-            device_name: "OnePlus 15R"
-          - device: "13"
-            device_short: "13"
-            device_name: "OnePlus 13"
-          - device: "12"
-            device_short: "12"
-            device_name: "OnePlus 12"
-          - device: "12R"
-            device_short: "12R"
-            device_name: "OnePlus 12R"
-          - device: "11"
-            device_short: "11"
-            device_name: "OnePlus 11"
-          - device: "11R"
-            device_short: "11R"
-            device_name: "OnePlus 11R"
-          - device: "10 Pro"
-            device_short: "10 Pro"
-            device_name: "OnePlus 10 Pro"
-          - device: "10T"
-            device_short: "10T"
-            device_name: "OnePlus 10T"
-          - device: "10R"
-            device_short: "10R"
-            device_name: "OnePlus 10R"
-          - device: "9 Pro"
-            device_short: "9 Pro"
-            device_name: "OnePlus 9 Pro"
-          - device: "9"
-            device_short: "9"
-            device_name: "OnePlus 9"
-          - device: "9RT"
-            device_short: "9RT"
-            device_name: "OnePlus 9RT"
-          - device: "9R"
-            device_short: "9R"
-            device_name: "OnePlus 9R"
-          - device: "Ace 6T"
-            device_short: "Ace 6T"
-            device_name: "OnePlus Ace 6T"
-          - device: "Ace 5"
-            device_short: "Ace 5"
-            device_name: "OnePlus Ace 5"
-          - device: "Ace 5 Pro"
-            device_short: "Ace 5 Pro"
-            device_name: "OnePlus Ace 5 Pro"
-          - device: "Ace 5 Ultimate"
-            device_short: "Ace 5 Ultimate"
-            device_name: "OnePlus Ace 5 Ultimate"
-          - device: "Pad 2 Pro"
-            device_short: "Pad 2 Pro"
-            device_name: "OnePlus Pad 2 Pro"
-          - device: "Pad 3"
-            device_short: "Pad 3"
-            device_name: "OnePlus Pad 3"
-          - device: "Pad 2"
-            device_short: "Pad 2"
-            device_name: "OnePlus Pad 2"
-          - device: "Find X8"
-            device_short: "Find X8"
-            device_name: "Oppo Find X8"
-          - device: "Find X8 Pro"
-            device_short: "Find X8 Pro"
-            device_name: "Oppo Find X8 Pro"
-          - device: "Find X8 Ultra"
-            device_short: "Find X8 Ultra"
-            device_name: "Oppo Find X8 Ultra"
-          - device: "Find N3"
-            device_short: "Find N3"
-            device_name: "Oppo Find N3"
-
+      matrix: ${{ fromJson(needs.setup-matrix.outputs.matrix) }}
+    
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v4

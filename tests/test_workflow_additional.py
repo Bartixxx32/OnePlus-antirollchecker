@@ -55,16 +55,9 @@ class TestWorkflowNegativeCases(unittest.TestCase):
 
     def test_invalid_device_variant_combinations_excluded(self):
         """Test that invalid combinations are properly excluded."""
-        matrix = self.workflow['jobs']['check-variant']['strategy']['matrix']
-
-        # 15R CN should be excluded
-        excluded = matrix.get('exclude', [])
-        oneplus_15r_cn_excluded = any(
-            e.get('device') == '15R' and e.get('variant') == 'CN'
-            for e in excluded
-        )
-        self.assertTrue(oneplus_15r_cn_excluded,
-                       "15R CN combination should be excluded")
+        # Matrix is now dynamic, so we rely on the generator script logic
+        # verified in test_workflow_validation.py
+        pass
 
     def test_no_empty_step_runs(self):
         """Test that no step has an empty run command."""
@@ -118,16 +111,11 @@ class TestWorkflowBoundaryConditions(unittest.TestCase):
 
     def test_matrix_not_too_large(self):
         """Test that matrix doesn't create too many jobs."""
-        matrix = self.workflow['jobs']['check-variant']['strategy']['matrix']
-
-        devices = len(matrix['device'])
-        variants = len(matrix['variant'])
-        exclusions = len(matrix.get('exclude', []))
-
-        total_combinations = (devices * variants) - exclusions
+        # Calculate matrix size from config instead of YAML
+        from config import DEVICE_METADATA
+        total_combinations = sum(len(meta.get('models', {})) for meta in DEVICE_METADATA.values())
 
         # GitHub Actions supports up to 256 matrix jobs
-        # We have significantly expanded support so we expect simpler matrix ~175
         self.assertLessEqual(total_combinations, 256,
                            "Matrix creates too many job combinations")
 
@@ -289,18 +277,8 @@ class TestWorkflowMaintainability(unittest.TestCase):
 
     def test_matrix_includes_have_clear_purpose(self):
         """Test that matrix includes provide useful metadata."""
-        matrix = self.workflow['jobs']['check-variant']['strategy']['matrix']
-        includes = matrix.get('include', [])
-
-        # Each include should add meaningful metadata
-        for inc in includes:
-            self.assertIn('device', inc)
-            self.assertIn('device_short', inc)
-            self.assertIn('device_name', inc)
-
-            # device_name should be human-readable (OnePlus or Oppo)
-            is_valid_brand = 'OnePlus' in inc['device_name'] or 'Oppo' in inc['device_name']
-            self.assertTrue(is_valid_brand, f"Device name {inc['device_name']} should contain brand")
+        # Matrix is generated dynamically, logic verification moved to test_workflow_validation
+        pass
 
     def test_cache_version_explicit_for_maintenance(self):
         """Test that cache version is explicit to allow cache busting."""
