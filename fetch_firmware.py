@@ -66,12 +66,15 @@ def get_signed_url_springer(device_id: str, region: str, target_version: str = N
     
     session = requests.Session()
     
-    # Map input device ID to website's expected name
-    mapped_name = SPRING_MAPPING.get(f"oneplus_{device_id}", f"OP {device_id}")
-    if not mapped_name.startswith("OP"):
-         mapped_name = SPRING_MAPPING.get(f"oneplus_{device_id}", f"OP {device_id}")
+    # Map input device ID to website's expected name via OOS_MAPPING (snake_case)
+    # This aligns Springer keys with OOS keys (e.g. oneplus_12r, oppo_find_x8)
+    key = OOS_MAPPING.get(device_id, f"oneplus_{device_id}")
+    
+    mapped_name = SPRING_MAPPING.get(key)
+    if not mapped_name:
+         # Fallback or logging if needed
+         mapped_name = f"OP {device_id}"
 
-    key = f"oneplus_{device_id}"
     if key in SPRING_MAPPING:
         mapped_name = SPRING_MAPPING[key]
     
