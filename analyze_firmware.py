@@ -5,8 +5,16 @@ Wraps payload-dumper-go and arbextract usage.
 """
 
 import shlex
+import sys
+import json
+import argparse
+import subprocess
+import logging
+from pathlib import Path
 
-# ... (imports)
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
+logger = logging.getLogger(__name__)
 
 def run_command(cmd, cwd=None):
     # Log valid shell-escaped command for reproducibility/safety
