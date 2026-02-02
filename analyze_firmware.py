@@ -4,22 +4,17 @@ Analyze firmware zip to extract ARB index.
 Wraps payload-dumper-go and arbextract usage.
 """
 
-import sys
-import os
-import subprocess
-import glob
-import json
-import argparse
-import logging
-from pathlib import Path
+import shlex
 
-# Configure logging
-logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
-logger = logging.getLogger(__name__)
+# ... (imports)
 
 def run_command(cmd, cwd=None):
-    logger.info(f"Running: {' '.join(cmd)}")
-    result = subprocess.run(cmd, cwd=cwd, capture_output=True, text=True)
+    # Log valid shell-escaped command for reproducibility/safety
+    safe_cmd_str = ' '.join(shlex.quote(str(arg)) for arg in cmd)
+    logger.info(f"Running: {safe_cmd_str}")
+    
+    # shell=False is default but explicit is better for audit
+    result = subprocess.run(cmd, cwd=cwd, capture_output=True, text=True, shell=False)
     if result.returncode != 0:
         logger.error(f"Command failed ({result.returncode}): {result.stderr}")
         return None
