@@ -1,7 +1,7 @@
-
 import sys
 import os
 import subprocess
+import shlex
 from config import DEVICE_METADATA
 
 def verify_all():
@@ -17,7 +17,8 @@ def verify_all():
             cmd = ["python", "fetch_firmware.py", device_id, region, "--url-only"]
             try:
                 # Capture output
-                proc = subprocess.run(cmd, capture_output=True, text=True, timeout=30)
+                # Security: shell=False is default but explicit is good practice
+                proc = subprocess.run(cmd, capture_output=True, text=True, timeout=30, shell=False)
                 if proc.returncode == 0:
                     url = proc.stdout.strip()
                     if url.startswith("http"):
