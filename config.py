@@ -255,7 +255,6 @@ OOS_MAPPING = {
     "9RT": "oneplus_9rt",
     "9R": "oneplus_9r",
     "Pad 3": "oneplus_pad_3",
-    "Pad 3": "oneplus_pad_3",
     "Pad 2": "oneplus_pad_2",
     "Find X8": "oppo_find_x8",
     "Find X8 Pro": "oppo_find_x8_pro",
