@@ -2,6 +2,12 @@ name: Check ARB
 
 on:
   workflow_dispatch:
+    inputs:
+      force_recheck:
+        description: 'Force recheck all firmwares even if already checked'
+        required: false
+        default: false
+        type: boolean
   schedule:
     - cron: '0 0 * * *' # Run daily
 
@@ -96,6 +102,7 @@ jobs:
 
       - name: Restore ARB Cache
         id: cache-arb
+        if: github.event.inputs.force_recheck != 'true'
         uses: actions/cache/restore@v4
         with:
           path: |
