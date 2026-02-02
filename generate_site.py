@@ -12,7 +12,17 @@ logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
 logger = logging.getLogger(__name__)
 
 def load_all_history(history_dir: Path):
-    """Load all JSON history files."""
+    """
+    Load all JSON history files from the given directory into a mapping keyed by each file's stem.
+    
+    If the directory does not exist, an empty dict is returned. Files that fail to be read or parsed are skipped with a warning.
+    
+    Parameters:
+        history_dir (Path): Directory containing JSON files.
+    
+    Returns:
+        dict: Mapping from filename stem (str) to parsed JSON content (typically a dict); empty if no files were loaded.
+    """
     history_data = {}
     if not history_dir.exists():
         return {}
@@ -28,6 +38,15 @@ def load_all_history(history_dir: Path):
     return history_data
 
 def get_region_name(variant: str) -> str:
+    """
+    Map a region variant code to a human-readable region name.
+    
+    Parameters:
+        variant (str): Region variant code (e.g., 'GLO', 'EU', 'IN', 'CN').
+    
+    Returns:
+        str: The mapped region name (e.g., 'Global', 'Europe', 'India', 'China'); if the code is not recognized, returns the original `variant` value unchanged.
+    """
     names = {
         'GLO': 'Global',
         'EU': 'Europe',
@@ -37,7 +56,28 @@ def get_region_name(variant: str) -> str:
     return names.get(variant, variant)
 
 def process_data(history_data):
-    """Process raw history data into a structure suitable for the template."""
+    """
+    Transform raw history mapping into a list of devices with region-specific variant entries for template rendering.
+    
+    Parameters:
+        history_data (dict): Mapping of keys "{device_id}_{variant}" to history blocks. Each block is expected to be a dict that may contain:
+            - "model" (str): device model string
+            - "history" (list): list of history entries where each entry may include "status", "version", "arb", "major", "minor", and "last_checked"
+    
+    Returns:
+        list: A list of device dictionaries in DEVICE_METADATA order. Each device dict contains:
+            - "name" (str): human-readable device name from DEVICE_METADATA
+            - "variants" (list): list of variant dictionaries for available regions, each with:
+                - "region_name" (str): human-readable region name
+                - "model" (str): model string (or "Unknown")
+                - "version" (str): version string (or "Unknown")
+                - "arb" (int): ARB value (or -1)
+                - "major" (str): major version component (or "?")
+                - "minor" (str): minor version component (or "?")
+                - "last_checked" (str): timestamp or "Unknown"
+                - "is_safe" (bool): True if `arb == 0`, False otherwise
+                - "short_version" (str): duplicate of "version"
+    """
     devices_list = []
 
     # Iterate over devices in the order defined in config
@@ -93,8 +133,23 @@ def process_data(history_data):
 
     return devices_list
 
-def generate(history_dir: Path, output_dir: Path, template_dir: Path):
-    """Core logic to generate the site."""
+def main():
+    """
+    Orchestrates generation of a static site from device history JSON files.
+    
+    Parses command-line arguments (--history-dir, --output-dir, --template-dir; defaults: "data/history", "page", "templates"), loads and processes history data, renders the 'index.html' Jinja2 template with the processed devices and a UTC timestamp, and writes the resulting HTML to <output-dir>/index.html. If the history directory is missing, an empty site is generated. Template loading or file write failures are logged and stop the generation.
+    """
+    parser = argparse.ArgumentParser(description="Generate static site from history.")
+    parser.add_argument("--history-dir", default="data/history", help="Directory containing history JSON files")
+    parser.add_argument("--output-dir", default="page", help="Output directory for the website")
+    parser.add_argument("--template-dir", default="templates", help="Directory containing templates")
+
+    args = parser.parse_args()
+
+    history_dir = Path(args.history_dir)
+    output_dir = Path(args.output_dir)
+    template_dir = Path(args.template_dir)
+
     if not history_dir.exists():
         logger.warning(f"History directory not found: {history_dir}. Generating empty site.")
         history_data = {}
@@ -125,20 +180,6 @@ def generate(history_dir: Path, output_dir: Path, template_dir: Path):
         logger.info(f"Site generated successfully at {output_dir}/index.html")
     except Exception as e:
         logger.error(f"Failed to write output: {e}")
-
-def main():
-    parser = argparse.ArgumentParser(description="Generate static site from history.")
-    parser.add_argument("--history-dir", default="data/history", help="Directory containing history JSON files")
-    parser.add_argument("--output-dir", default="page", help="Output directory for the website")
-    parser.add_argument("--template-dir", default="templates", help="Directory containing templates")
-
-    args = parser.parse_args()
-
-    generate(
-        Path(args.history_dir),
-        Path(args.output_dir),
-        Path(args.template_dir)
-    )
 
 if __name__ == '__main__':
     main()
