@@ -5,12 +5,32 @@ import html
 import sys
 import argparse
 import logging
+import time
 from bs4 import BeautifulSoup
 from config import BASE_URL, OOS_API_URL, USER_AGENT, SPRING_MAPPING, OOS_MAPPING
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
 logger = logging.getLogger(__name__)
+
+def requests_get_with_retry(url, retries=3, delay=5, timeout=10):
+    """
+    Helper to perform requests.get with retries.
+    """
+    last_exception = None
+    for i in range(retries):
+        try:
+            response = requests.get(url, headers={'User-Agent': USER_AGENT}, timeout=timeout)
+            response.raise_for_status()
+            return response
+        except Exception as e:
+            last_exception = e
+            if i < retries - 1:
+                logger.warning(f"Request failed: {e}. Retrying in {delay} seconds... ({i+1}/{retries})")
+                time.sleep(delay)
+
+    # If we get here, all retries failed
+    raise last_exception
 
 def get_from_oos_api(device_id: str, region: str) -> dict:
     """
@@ -33,8 +53,7 @@ def get_from_oos_api(device_id: str, region: str) -> dict:
     
     try:
         # Fetch URL
-        resp_url = requests.get(url_endpoint, headers={'User-Agent': USER_AGENT}, timeout=10)
-        resp_url.raise_for_status()
+        resp_url = requests_get_with_retry(url_endpoint)
         download_url = resp_url.text.strip()
         
         if not download_url or not download_url.startswith("http"):
@@ -42,8 +61,7 @@ def get_from_oos_api(device_id: str, region: str) -> dict:
             return None
             
         # Fetch Version
-        resp_ver = requests.get(ver_endpoint, headers={'User-Agent': USER_AGENT}, timeout=10)
-        resp_ver.raise_for_status()
+        resp_ver = requests_get_with_retry(ver_endpoint)
         version_str = resp_ver.text.strip()
         
         return {
