@@ -116,7 +116,7 @@ jobs:
           version = meta.get('version_name_show', meta.get('display-version', 'Unknown'))
           build = meta.get('post-build', 'Unknown')
           
-          print(f'### 🎯 Analysis Result')
+          print(f'### 👑 🎯 Analysis Result')
           print(f'- **ARB Index**: \`{arb}\`')
           print(f'- **Status**: {status}')
           print(f'\n#### 📱 Firmware Details')
