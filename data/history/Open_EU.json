@@ -1,17 +1,17 @@
 {
   "history": [
     {
-      "version": "NE2213_15.0.0.1302(EX01)",
+      "version": "CPH2551_16.0.2.400(EX01)",
       "arb": 0,
       "major": 2,
       "minor": 0,
-      "first_seen": "2026-02-02",
+      "first_seen": "2026-02-03",
       "last_checked": "2026-02-03",
       "status": "current"
     }
   ],
-  "device": "OnePlus 10 Pro",
-  "device_id": "10 Pro",
+  "device": "OnePlus Open",
+  "device_id": "Open",
   "region": "EU",
-  "model": "NE2213"
+  "model": "CPH2551"
 }
