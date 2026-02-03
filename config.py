@@ -188,8 +188,7 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
         "models": {
             "EU": "IN2013",
             "IN": "IN2011",
-            "NA": "IN2015",
-            "VISIBLE": "IN2019"
+            "NA": "IN2015"
         },
     },
 
