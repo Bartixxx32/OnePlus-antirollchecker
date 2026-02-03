@@ -96,7 +96,8 @@ jobs:
             exit 0
           fi
           
-          COMMENT=$(python3 -c "
+          # Create the comment using python and a temporary file to avoid shell escaping issues
+          python3 - <<EOF
           import json, os
           res = json.load(open('result.json'))
           arb = res.get('arb_index', 'Unknown')
@@ -110,18 +111,21 @@ jobs:
           build = meta.get('post-build', 'Unknown')
           user = os.environ.get('ISSUE_USER', 'user')
           
-          print(f'@{user}, here is your analysis!')
-          print(f'### 👑 🎯 Analysis Result')
-          print(f'- **ARB Index**: \`{arb}\`')
-          print(f'- **Status**: {status}')
-          print(f\'\n#### 📱 Firmware Details\')
-          print(f'- **Version**: \`{version}\`')
-          print(f'- **Product**: \`{product}\` (\`{device}\`)')
-          print(f'- **Security Patch**: \`{patch}\`')
-          print(f'- **Build ID**: \`{build}\`')
-          ")
+          output = f"@{user}, here is your analysis!\n"
+          output += f"### 👑 🎯 Analysis Result\n"
+          output += f"- **ARB Index**: \`{arb}\`\n"
+          output += f"- **Status**: {status}\n\n"
+          output += f"#### 📱 Firmware Details\n"
+          output += f"- **Version**: \`{version}\`\n"
+          output += f"- **Product**: \`{product}\` (\`{device}\`)\n"
+          output += f"- **Security Patch**: \`{patch}\`\n"
+          output += f"- **Build ID**: \`{build}\`"
           
-          gh api -X PATCH "/repos/${{ github.repository }}/issues/comments/${{ steps.init.outputs.comment_id }}" -f body="$COMMENT"
+          with open('comment_body.txt', 'w') as f:
+              f.write(output)
+          EOF
+          
+          gh api -X PATCH "/repos/${{ github.repository }}/issues/comments/${{ steps.init.outputs.comment_id }}" --field body="$(cat comment_body.txt)"
 
       - name: Wait before closing
         if: always()
