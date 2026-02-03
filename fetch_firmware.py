@@ -140,7 +140,7 @@ def get_springer_versions(device_id: str, region: str, session=None) -> list:
         logger.error(f"Region {region} not found for {device_name}")
         return None
         
-    return devices_data[device_name][region]
+    return devices_data[device_name][region], device_name
 
 def get_signed_url_springer(device_id: str, region: str, target_version: str = None) -> dict:
     """
@@ -153,9 +153,10 @@ def get_signed_url_springer(device_id: str, region: str, target_version: str = N
     
     session = requests.Session()
     
-    versions = get_springer_versions(device_id, region, session)
-    if not versions:
+    res = get_springer_versions(device_id, region, session)
+    if not res:
         return None
+    versions, device_name = res
         
     version_index = "0"
     

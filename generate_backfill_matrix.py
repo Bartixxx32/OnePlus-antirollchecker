@@ -18,10 +18,12 @@ def generate_backfill_matrix():
         
         for region in valid_regions:
             print(f"Checking versions for {device_id} {region}...")
-            versions = get_springer_versions(device_id, region, session)
+            res = get_springer_versions(device_id, region, session)
             
-            if not versions:
+            if not res:
                 continue
+            
+            versions, _ = res
             
             # Take top 3 versions (Springer usually lists newest first)
             target_versions = versions[:3]
