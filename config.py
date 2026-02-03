@@ -1,4 +1,4 @@
-""""
+"""
 Shared configuration and constants for OnePlus ARB Checker.
 """
 
@@ -302,4 +302,3 @@ def get_display_name(device_id: str) -> str:
 def get_model_number(device_id: str, region: str) -> str:
     """Get the model number for a specific device and region."""
     return DEVICE_METADATA.get(device_id, {}).get("models", {}).get(region, "Unknown")
-"
