@@ -178,6 +178,7 @@ def generate_readme(history_data: Dict) -> str:
         '',
         '## 🛠️ Credits',
         '- **Payload Extraction**: [otaripper](https://github.com/syedinsaf/otaripper) by [syedinsaf](https://github.com/syedinsaf) - for fast and reliable OTA extraction.',
+        '- **Payload Extraction (Fallback)**: [payload-dumper-go](https://github.com/ssut/payload-dumper-go) by [ssut](https://github.com/ssut) - used when otaripper fails.',
         '- **ARB Extraction**: [arbextract](https://github.com/koaaN/arbextract) by [koaaN](https://github.com/koaaN) - for parsing QC_IMAGE_VERSION_INFO.',
         '',
         '## 🤖 Workflow Status',

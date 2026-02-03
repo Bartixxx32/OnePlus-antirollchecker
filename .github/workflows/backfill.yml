@@ -58,6 +58,10 @@ jobs:
           tar -xzvf otaripper.tar.gz
           mv otaripper tools/otaripper || find . -name "otaripper" -type f -exec mv {} tools/otaripper \;
           chmod +x tools/otaripper
+          curl -L -o pdg.tar.gz https://github.com/ssut/payload-dumper-go/releases/download/1.2.2/payload-dumper-go_1.2.2_linux_amd64.tar.gz
+          tar -xzvf pdg.tar.gz
+          mv payload-dumper-go tools/payload-dumper-go || find . -name "payload-dumper-go" -type f -exec mv {} tools/payload-dumper-go \;
+          chmod +x tools/payload-dumper-go
           
       - name: Get Firmware URL
         id: get_details
