@@ -256,20 +256,7 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
 
 
 > [!IMPORTANT]
-> This- **Static Dashboard**: Real-time overview of current and historical ARB states.
-- **On-Demand Checker**: Check *any* firmware link by opening a GitHub Issue with `[CHECK]` in the title.
-
-## 🤖 On-Demand ARB Checker
-You can check the Anti-Rollback index for any official OnePlus/Oppo firmware link (even those not in the database).
-
-1. Open a [New Issue](https://github.com/Bartixxx32/OnePlus-antirollchecker/issues/new).
-2. Set the title to: `[CHECK] My Firmware Name`
-3. Paste the direct `.zip` download link in the body.
-4. An automated bot will download, analyze, and comment the result within minutes.
-
-## 📱 Supported Devices
-OnePlus and Oppo **Snapdragon-based** devices. MediaTek devices are currently not supported as they lack the `xbl_config` partition used for ARB tracking.
-status is updated automatically by GitHub Actions. Some device/region combinations may not be available and will show as "Waiting for scan...".
+> This status is updated automatically by GitHub Actions. Some device/region combinations may not be available and will show as "Waiting for scan...".
 
 ## 📈 Legend
 
