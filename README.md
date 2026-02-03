@@ -6,24 +6,6 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
 
 ## 📊 Current Status
 
-### OnePlus 15R
-
-| Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
-|--------|-------|------------------|-----------|-------------|--------------|------|
-| Global | CPH2741 | CPH2769_16.0.3.501(EX01) | **0** | Major: **3**,&nbsp;Minor: **0** | 2026-02-03 | ✅ |
-| Europe | CPH2741 | CPH2769_16.0.2.401(EX01) | **0** | Major: **3**,&nbsp;Minor: **0** | 2026-02-03 | ✅ |
-| India | CPH2741 | CPH2767_16.0.3.501(EX01) | **0** | Major: **3**,&nbsp;Minor: **0** | 2026-02-03 | ✅ |
-
----
-
-### OnePlus Ace 6T
-
-| Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
-|--------|-------|------------------|-----------|-------------|--------------|------|
-| China | PLR110 | PLR110_16.0.3.503(CN01) | **0** | Major: **3**,&nbsp;Minor: **0** | 2026-02-03 | ✅ |
-
----
-
 ### OnePlus 15
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
@@ -35,38 +17,13 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
 
 ---
 
-### OnePlus Pad 3
+### OnePlus 15R
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |--------|-------|------------------|-----------|-------------|--------------|------|
-| Global | OPD2415 | OPD2415_16.0.3.500(EX01) | **1** | Major: **3**,&nbsp;Minor: **0** | 2026-02-03 | ❌ |
-| Europe | OPD2415 | OPD2415_16.0.3.500(EX01) | **1** | Major: **3**,&nbsp;Minor: **0** | 2026-02-03 | ❌ |
-| India | OPD2415 | OPD2415_16.0.3.500(EX01) | **1** | Major: **3**,&nbsp;Minor: **0** | 2026-02-03 | ❌ |
-| NA | OPD2415 | OPD2415_15.0.1.500(EX01) | **0** | Major: **3**,&nbsp;Minor: **0** | 2026-02-03 | ✅ |
-
----
-
-### OnePlus Pad 2 Pro
-
-| Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
-|--------|-------|------------------|-----------|-------------|--------------|------|
-| China | OPD2413 | OPD2413_16.0.3.501(CN01) | **0** | Major: **3**,&nbsp;Minor: **0** | 2026-02-03 | ✅ |
-
----
-
-### OnePlus Ace 5 Pro
-
-| Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
-|--------|-------|------------------|-----------|-------------|--------------|------|
-| China | PKR110 | PKR110_16.0.3.500(CN01) | **0** | Major: **3**,&nbsp;Minor: **0** | 2026-02-03 | ✅ |
-
----
-
-### OnePlus Ace 5
-
-| Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
-|--------|-------|------------------|-----------|-------------|--------------|------|
-| China | PKG110 | PKG110_16.0.3.500(CN01) | **1** | Major: **3**,&nbsp;Minor: **0** | 2026-02-03 | ❌ |
+| Global | CPH2741 | CPH2769_16.0.3.501(EX01) | **0** | Major: **3**,&nbsp;Minor: **0** | 2026-02-03 | ✅ |
+| Europe | CPH2741 | CPH2769_16.0.2.401(EX01) | **0** | Major: **3**,&nbsp;Minor: **0** | 2026-02-03 | ✅ |
+| India | CPH2741 | CPH2767_16.0.3.501(EX01) | **0** | Major: **3**,&nbsp;Minor: **0** | 2026-02-03 | ✅ |
 
 ---
 
@@ -82,13 +39,13 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
 
 ---
 
-### OnePlus Pad 2
+### OnePlus Open
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |--------|-------|------------------|-----------|-------------|--------------|------|
-| Global | OPD2403 | OPD2403_16.0.3.501(EX01) | **1** | Major: **3**,&nbsp;Minor: **0** | 2026-02-03 | ❌ |
-| Europe | OPD2403 | OPD2403_16.0.3.501(EX01) | **1** | Major: **3**,&nbsp;Minor: **0** | 2026-02-03 | ❌ |
-| India | OPD2403 | OPD2403_16.0.3.501(EX01) | **1** | Major: **3**,&nbsp;Minor: **0** | 2026-02-03 | ❌ |
+| Europe | CPH2551 | CPH2551_16.0.2.400(EX01) | **0** | Major: **2**,&nbsp;Minor: **0** | 2026-02-03 | ✅ |
+| India | CPH2551 | CPH2551_16.0.2.400(EX01) | **0** | Major: **2**,&nbsp;Minor: **0** | 2026-02-03 | ✅ |
+| NA | CPH2551 | CPH2551_15.0.0.822(EX01) | **0** | Major: **2**,&nbsp;Minor: **0** | 2026-02-03 | ✅ |
 
 ---
 
@@ -112,16 +69,6 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
 | Europe | CPH2609 | CPH2609_16.0.2.401(EX01) | **0** | Major: **2**,&nbsp;Minor: **0** | 2026-02-03 | ✅ |
 | India | CPH2585 | CPH2585_16.0.3.500(EX01) | **0** | Major: **2**,&nbsp;Minor: **0** | 2026-02-03 | ✅ |
 | NA | CPH2611 | CPH2611_11_A.65 | **0** | Major: **2**,&nbsp;Minor: **0** | 2026-02-03 | ✅ |
-
----
-
-### OnePlus Open
-
-| Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
-|--------|-------|------------------|-----------|-------------|--------------|------|
-| Europe | CPH2551 | CPH2551_16.0.2.400(EX01) | **0** | Major: **2**,&nbsp;Minor: **0** | 2026-02-03 | ✅ |
-| India | CPH2551 | CPH2551_16.0.2.400(EX01) | **0** | Major: **2**,&nbsp;Minor: **0** | 2026-02-03 | ✅ |
-| NA | CPH2551 | CPH2551_15.0.0.822(EX01) | **0** | Major: **2**,&nbsp;Minor: **0** | 2026-02-03 | ✅ |
 
 ---
 
@@ -177,6 +124,16 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
 
 ---
 
+### OnePlus 9
+
+| Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
+|--------|-------|------------------|-----------|-------------|--------------|------|
+| Europe | LE2113 | LE2113_14.0.0.1902(EX01) | **0** | Major: **0**,&nbsp;Minor: **120** | 2026-02-03 | ✅ |
+| India | LE2111 | LE2111_14.0.0.1902(EX01) | **0** | Major: **0**,&nbsp;Minor: **120** | 2026-02-03 | ✅ |
+| NA | LE2115 | LE2115_11_F.30 | **0** | Major: **0**,&nbsp;Minor: **120** | 2026-02-03 | ✅ |
+
+---
+
 ### OnePlus 9RT
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
@@ -185,13 +142,76 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
 
 ---
 
-### OnePlus 9
+### OnePlus Nord 5
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |--------|-------|------------------|-----------|-------------|--------------|------|
-| Europe | LE2113 | LE2113_14.0.0.1902(EX01) | **0** | Major: **0**,&nbsp;Minor: **120** | 2026-02-03 | ✅ |
-| India | LE2111 | LE2111_14.0.0.1902(EX01) | **0** | Major: **0**,&nbsp;Minor: **120** | 2026-02-03 | ✅ |
-| NA | LE2115 | LE2115_11_F.30 | **0** | Major: **0**,&nbsp;Minor: **120** | 2026-02-03 | ✅ |
+| Global | CPH2709 | CPH2709_16.0.1.300(EX01) | **0** | Major: **3**,&nbsp;Minor: **0** | 2026-02-03 | ✅ |
+| Europe | CPH2709 | CPH2709_16.0.2.400(EX01) | **0** | Major: **3**,&nbsp;Minor: **0** | 2026-02-03 | ✅ |
+| India | CPH2709 | CPH2707_16.0.2.400(EX01) | **0** | Major: **3**,&nbsp;Minor: **0** | 2026-02-03 | ✅ |
+
+---
+
+### OnePlus Nord 4
+
+| Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
+|--------|-------|------------------|-----------|-------------|--------------|------|
+| Global | CPH2661 | CPH2663_16.0.2.401(EX01) | **0** | Major: **3**,&nbsp;Minor: **0** | 2026-02-03 | ✅ |
+| Europe | CPH2661 | CPH2663_16.0.2.401(EX01) | **0** | Major: **3**,&nbsp;Minor: **0** | 2026-02-03 | ✅ |
+| India | CPH2663 | CPH2661_16.0.2.401(EX01) | **0** | Major: **3**,&nbsp;Minor: **0** | 2026-02-03 | ✅ |
+
+---
+
+### OnePlus Ace 6T
+
+| Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
+|--------|-------|------------------|-----------|-------------|--------------|------|
+| China | PLR110 | PLR110_16.0.3.503(CN01) | **0** | Major: **3**,&nbsp;Minor: **0** | 2026-02-03 | ✅ |
+
+---
+
+### OnePlus Ace 5 Pro
+
+| Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
+|--------|-------|------------------|-----------|-------------|--------------|------|
+| China | PKR110 | PKR110_16.0.3.500(CN01) | **0** | Major: **3**,&nbsp;Minor: **0** | 2026-02-03 | ✅ |
+
+---
+
+### OnePlus Ace 5
+
+| Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
+|--------|-------|------------------|-----------|-------------|--------------|------|
+| China | PKG110 | PKG110_16.0.3.500(CN01) | **1** | Major: **3**,&nbsp;Minor: **0** | 2026-02-03 | ❌ |
+
+---
+
+### OnePlus Pad 3
+
+| Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
+|--------|-------|------------------|-----------|-------------|--------------|------|
+| Global | OPD2415 | OPD2415_16.0.3.500(EX01) | **1** | Major: **3**,&nbsp;Minor: **0** | 2026-02-03 | ❌ |
+| Europe | OPD2415 | OPD2415_16.0.3.500(EX01) | **1** | Major: **3**,&nbsp;Minor: **0** | 2026-02-03 | ❌ |
+| India | OPD2415 | OPD2415_16.0.3.500(EX01) | **1** | Major: **3**,&nbsp;Minor: **0** | 2026-02-03 | ❌ |
+| NA | OPD2415 | OPD2415_15.0.1.500(EX01) | **0** | Major: **3**,&nbsp;Minor: **0** | 2026-02-03 | ✅ |
+
+---
+
+### OnePlus Pad 2 Pro
+
+| Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
+|--------|-------|------------------|-----------|-------------|--------------|------|
+| China | OPD2413 | OPD2413_16.0.3.501(CN01) | **0** | Major: **3**,&nbsp;Minor: **0** | 2026-02-03 | ✅ |
+
+---
+
+### OnePlus Pad 2
+
+| Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
+|--------|-------|------------------|-----------|-------------|--------------|------|
+| Global | OPD2403 | OPD2403_16.0.3.501(EX01) | **1** | Major: **3**,&nbsp;Minor: **0** | 2026-02-03 | ❌ |
+| Europe | OPD2403 | OPD2403_16.0.3.501(EX01) | **1** | Major: **3**,&nbsp;Minor: **0** | 2026-02-03 | ❌ |
+| India | OPD2403 | OPD2403_16.0.3.501(EX01) | **1** | Major: **3**,&nbsp;Minor: **0** | 2026-02-03 | ❌ |
 
 ---
 
@@ -281,6 +301,7 @@ The bot will automatically:
 
 ## 🛠️ Credits
 - **Payload Extraction**: [otaripper](https://github.com/syedinsaf/otaripper) by [syedinsaf](https://github.com/syedinsaf) - for fast and reliable OTA extraction.
+- **Payload Extraction (Fallback)**: [payload-dumper-go](https://github.com/ssut/payload-dumper-go) by [ssut](https://github.com/ssut) - used when otaripper fails.
 - **ARB Extraction**: [arbextract](https://github.com/koaaN/arbextract) by [koaaN](https://github.com/koaaN) - for parsing QC_IMAGE_VERSION_INFO.
 
 ## 🤖 Workflow Status

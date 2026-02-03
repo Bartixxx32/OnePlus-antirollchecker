@@ -96,8 +96,19 @@ def analyze_firmware(zip_path, tools_dir, output_dir, final_dir=None):
             
         # otaripper <zip> -p <partitions> -o <output>
         cmd_extract = [str(otaripper), str(zip_path), "-p", "xbl_config", "-o", str(output_dir), "-n"]
+        logger.info("Attempting extraction with otaripper...")
+        
         if not run_command(cmd_extract):
-            return None
+            logger.warning("otaripper failed, attempting fallback with payload-dumper-go...")
+            
+            # Fallback to payload-dumper-go
+            # payload-dumper-go -p <partitions> -o <output> <zip>
+            pdg = tools_dir / "payload-dumper-go"
+            cmd_fallback = [str(pdg), "-p", "xbl_config", "-o", str(output_dir), str(zip_path)]
+            
+            if not run_command(cmd_fallback):
+                logger.error("Both otaripper and payload-dumper-go failed to extract firmware.")
+                return None
             
         # 3. Find extracted image recursively
         img_files = list(output_dir.rglob("*xbl_config*.img"))

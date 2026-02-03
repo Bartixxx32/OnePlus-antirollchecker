@@ -21,19 +21,42 @@ class DeviceMeta(TypedDict):
     name: str
     models: DeviceModels
 
-# Device order for README and Website (OnePlus newest first, then Oppo newest first)
+# Device order for README and Website (Flagships -> Open -> Nords -> Ace -> Pads -> Oppo)
 DEVICE_ORDER = [
-    # OnePlus
-    "15R", "Ace 6T", "15", "Pad 3", "Pad 2 Pro", 
-    "Ace 5 Pro", "Ace 5", "13", "Pad 2", "12", "12R", "Open", 
-    "11", "11R", "10 Pro", "10T", "9 Pro", "9RT", "9", "9R",
+    # Flagships (New)
+    "15", "15R", 
+    "13", 
+    "Open",
+    "12", "12R", 
+    "11", "11R", 
+    "10 Pro", "10T", 
+    "9 Pro", "9", "9RT", "9R",
+    
+    # Flagships (Legacy)
+    "8T", "8 Pro", "8",
+    "7T Pro", "7T", "7 Pro", "7",
+
+    # Nords
+    "Nord 5",
+    "Nord 4", 
+    "Nord 1", "Nord N200 5G",
+    
+    # China Exclusives (Ace)
+    "Ace 6T", 
+    "Ace 5 Pro", "Ace 5", 
+    "Ace 3 Pro", "Ace 3V", "Ace 3",
+
+    # Pads
+    "Pad 3", "Pad 2 Pro", "Pad 2", 
+    
     # Oppo
-    "Find X8 Ultra", "Find N5", "Find N3", "Find X5 Pro", "Find X5"
+    "Find X8 Ultra", "Find N5", "Find N3", "Find X5 Pro", "Find X5", "Find X3 Pro"
 ]
 
 # Device Metadata
 # Used for display names, model numbers, and mapping internal IDs to names
 DEVICE_METADATA: Dict[str, DeviceMeta] = {
+    # ... existing 15-9 ...
     "15": {
         "name": "OnePlus 15",
         "models": {
@@ -142,6 +165,104 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "IN": "LE2101"
         }
     },
+
+    # Legacy Series 8
+    "8T": {
+        "name": "OnePlus 8T",
+        "models": {
+            "NA": "KB2005",
+            "EU": "KB2003",
+            "IN": "KB2001",
+            "CN": "KB2000"
+        }
+    },
+    "8 Pro": {
+        "name": "OnePlus 8 Pro",
+        "models": {
+            "NA": "IN2025",
+            "EU": "IN2023",
+            "IN": "IN2021",
+            "CN": "IN2020"
+        }
+    },
+    "8": {
+        "name": "OnePlus 8",
+        "models": {
+            "NA": "IN2015",
+            "EU": "IN2013",
+            "IN": "IN2011",
+            "CN": "IN2010"
+        }
+    },
+
+    # Legacy Series 7
+    "7T Pro": {
+        "name": "OnePlus 7T Pro",
+        "models": {
+            "EU": "HD1913",
+            "IN": "HD1911",
+            "CN": "HD1910"
+        }
+    },
+    "7T": {
+        "name": "OnePlus 7T",
+        "models": {
+            "NA": "HD1905",
+            "EU": "HD1903",
+            "IN": "HD1901",
+            "CN": "HD1900"
+        }
+    },
+    "7 Pro": {
+        "name": "OnePlus 7 Pro",
+        "models": {
+            "NA": "GM1917",
+            "EU": "GM1913",
+            "IN": "GM1911",
+            "CN": "GM1910"
+        }
+    },
+    "7": {
+        "name": "OnePlus 7",
+        "models": {
+            "EU": "GM1903",
+            "IN": "GM1901",
+            "CN": "GM1900"
+        }
+    },
+
+    # Nords
+    "Nord 5": {
+        "name": "OnePlus Nord 5",
+        "models": {
+            "GLO": "CPH2709",
+            "EU": "CPH2709",
+            "IN": "CPH2709"
+        }
+    },
+    "Nord 4": {
+        "name": "OnePlus Nord 4",
+        "models": {
+            "GLO": "CPH2661",
+            "EU": "CPH2661",
+            "IN": "CPH2663"
+        }
+    },
+    "Nord 1": {
+        "name": "OnePlus Nord",
+        "models": {
+            "EU": "AC2003",
+            "IN": "AC2001"
+        }
+    },
+    "Nord N200 5G": {
+        "name": "OnePlus Nord N200 5G",
+        "models": {
+            "NA": "DE2117"
+        }
+    },
+
+    # China Exclusives (Ace)
     "Ace 6T": {
         "name": "OnePlus Ace 6T",
         "models": {
@@ -160,6 +281,27 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "CN": "PKR110"
         }
     },
+    "Ace 3 Pro": {
+        "name": "OnePlus Ace 3 Pro",
+        "models": {
+            "CN": "PJX110"
+        }
+    },
+    "Ace 3V": {
+        "name": "OnePlus Ace 3V",
+        "models": {
+            "CN": "PJF110"
+        }
+    },
+    "Ace 3": {
+        "name": "OnePlus Ace 3",
+        "models": {
+            "CN": "PJE110"
+        }
+    },
+
+
+
     "Pad 2 Pro": {
         "name": "OnePlus Pad 2 Pro",
         "models": {
@@ -248,11 +390,21 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "TW": "CPH2499",
             "VN": "CPH2499"
         }
+    },
+    "Find X3 Pro": {
+        "name": "Oppo Find X3 Pro",
+        "models": {
+            "EU": "CPH2173",
+            "SG": "CPH2173",
+            "TW": "CPH2173",
+            "CN": "PEEM00"
+        }
     }
 }
 
 # Mapping for fetching firmware (roms.danielspringer.at expects these names)
 SPRING_MAPPING = {
+    # Existing
     "oneplus_15": "OP 15",
     "oneplus_15r": "OP 15R",
     "oneplus_11": "OP 11",
@@ -268,18 +420,32 @@ SPRING_MAPPING = {
     "oneplus_pad_3": "OP PAD3",
     "oneplus_pad_2": "OP PAD2",
     "oneplus_open": "OP OPEN",
+    "oneplus_nord_5": "OP NORD 5",
+    "oneplus_nord_4": "OP NORD 4",
+    # Legacy
+    "oneplus_8t": "OP 8T",
+    "oneplus_8_pro": "OP 8 PRO",
+    "oneplus_8": "OP 8",
+    "oneplus_7t_pro": "OP 7T PRO",
+    "oneplus_7t": "OP 7T",
+    "oneplus_7_pro": "OP 7 PRO",
+    "oneplus_7": "OP 7",
+    "oneplus_nord_1": "OP NORD",
+    "oneplus_nord_n200_5g": "OP NORD N200 5G",
+    # Ace
+    "oneplus_ace_3_pro": "OP ACE 3 PRO",
+    "oneplus_ace_3v": "OP ACE 3V",
+    "oneplus_ace_3": "OP ACE 3",
+
+    # Oppo
     "oppo_find_x8_ultra": "OPPO FIND X8 ULTRA",
     "oppo_find_n5": "OPPO FIND N5",
     "oppo_find_x5_pro": "OPPO FIND X5 PRO",
-    "oppo_find_x5": "OPPO FIND X5"
+    "oppo_find_x5": "OPPO FIND X5",
+    "oppo_find_x3_pro": "OPPO FIND X3 PRO"
 }
 
-
-
 # Mapping for OOS Downloader API (oosdownloader-gui.fly.dev)
-# It seems to use snake_case ids directly, but let's be explicit if needed.
-# If keys match the input 'oneplus_XX', we might just pass them through.
-# But for consistency, let's keep them here.
 OOS_MAPPING = {
     "15": "oneplus_15",
     "15R": "oneplus_15r",
@@ -294,18 +460,38 @@ OOS_MAPPING = {
     "9": "oneplus_9",
     "9RT": "oneplus_9rt",
     "9R": "oneplus_9r",
-    "9R": "oneplus_9r",
+    # Legacy
+    "8T": "oneplus_8t",
+    "8 Pro": "oneplus_8_pro",
+    "8": "oneplus_8",
+    "7T Pro": "oneplus_7t_pro",
+    "7T": "oneplus_7t",
+    "7 Pro": "oneplus_7_pro",
+    "7": "oneplus_7",
+    "Nord 1": "oneplus_nord",
+    "Nord N200 5G": "oneplus_nord_n200_5g",
+    # Nords
+    "Nord 5": "oneplus_nord_5",
+    "Nord 4": "oneplus_nord_4",
+    # Ace
     "Ace 6T": "oneplus_ace_6t",
     "Ace 5": "oneplus_ace_5",
     "Ace 5 Pro": "oneplus_ace_5_pro", 
+    "Ace 3 Pro": "oneplus_ace_3_pro",
+    "Ace 3V": "oneplus_ace_3v",
+    "Ace 3": "oneplus_ace_3",
+
+    # Pads
     "Pad 2 Pro": "oneplus_pad2_pro",
     "Pad 3": "oneplus_pad_3",
     "Pad 2": "oneplus_pad_2",
+    # Oppo
     "Find X8 Ultra": "oppo_find_x8_ultra",
     "Find N5": "oppo_find_n5",
     "Find N3": "oppo_find_n3",
     "Find X5 Pro": "oppo_find_x5_pro",
     "Find X5": "oppo_find_x5",
+    "Find X3 Pro": "oppo_find_x3_pro",
     "Open": "oneplus_open"
 }
 

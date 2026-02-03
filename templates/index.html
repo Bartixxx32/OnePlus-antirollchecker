@@ -110,8 +110,8 @@
             letter-spacing: 0.5px;
         }
 
-        < !-- split for clarity in replace_file_content logic handling blocks -->< !-- Actually replace_file_content needs contiguous block. I will do 3 separate calls or 1 big call if contiguous? -->< !-- The file layout: style block is lines 8-152. table css is~76. th/td css~82. th css~87. -->< !-- header block is~164+. footer is~212. -->< !-- They are NOT contiguous. I must use separate calls or MultiReplace. -->< !-- I'll use MultiReplace. -->
- tr:last-child td {
+
+        tr:last-child td {
             border-bottom: none;
         }
 
@@ -254,6 +254,8 @@
             <div style="margin-bottom: 20px; font-size: 0.85em;">
                 <strong>Credits:</strong>
                 Payload Extraction by <a href="https://github.com/syedinsaf/otaripper">otaripper</a> (syedinsaf)
+                &bull;
+                Fallback by <a href="https://github.com/ssut/payload-dumper-go">payload-dumper-go</a> (ssut)
                 &bull;
                 ARB Extraction by <a href="https://github.com/koaaN/arbextract">arbextract</a> (koaaN)
             </div>
