@@ -39,7 +39,8 @@ def get_region_name(variant: str) -> str:
         'GLO': 'Global',
         'EU': 'Europe',
         'IN': 'India',
-        'CN': 'China'
+        'CN': 'China',
+        'NA': 'North America'
     }
     return names.get(variant, variant)
 
@@ -50,7 +51,8 @@ def generate_device_section(device_id: str, device_name: str, history_data: Dict
     # Check if we have any data for this device
     active_regions = []
     # Use standard regions order
-    regions = ['GLO', 'EU', 'IN', 'CN']
+    # Use standard regions order
+    regions = ['GLO', 'EU', 'IN', 'CN', 'NA']
     
     for variant in regions:
         key = f'{device_id}_{variant}'
