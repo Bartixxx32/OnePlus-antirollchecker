@@ -6,8 +6,6 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
 
 ## 📊 Current Status
 
-### OnePlus 15
-
 <table width="100%">
   <thead>
     <tr>
@@ -20,6 +18,9 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td colspan="6" align="left" bgcolor="#21262d"><br><b>OnePlus 15</b><br><br></td>
+    </tr>
     <tr>
       <td><b>Global</b></td>
       <td><code>CPH2747</code></td>
@@ -52,25 +53,9 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
       <td>✅ Safe</td>
       <td>2026-02-03</td>
     </tr>
-  </tbody>
-</table>
-
----
-
-### OnePlus 15R
-
-<table width="100%">
-  <thead>
     <tr>
-      <th align="left" width="15%">Region</th>
-      <th align="left" width="10%">Model</th>
-      <th align="left" width="40%">Version</th>
-      <th align="center" width="5%">ARB</th>
-      <th align="left" width="15%">Status</th>
-      <th align="left" width="15%">Last Checked</th>
+      <td colspan="6" align="left" bgcolor="#21262d"><br><b>OnePlus 15R</b><br><br></td>
     </tr>
-  </thead>
-  <tbody>
     <tr>
       <td><b>Global</b></td>
       <td><code>CPH2741</code></td>
@@ -95,25 +80,9 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
       <td>✅ Safe</td>
       <td>2026-02-03</td>
     </tr>
-  </tbody>
-</table>
-
----
-
-### OnePlus 13
-
-<table width="100%">
-  <thead>
     <tr>
-      <th align="left" width="15%">Region</th>
-      <th align="left" width="10%">Model</th>
-      <th align="left" width="40%">Version</th>
-      <th align="center" width="5%">ARB</th>
-      <th align="left" width="15%">Status</th>
-      <th align="left" width="15%">Last Checked</th>
+      <td colspan="6" align="left" bgcolor="#21262d"><br><b>OnePlus 13</b><br><br></td>
     </tr>
-  </thead>
-  <tbody>
     <tr>
       <td><b>Global</b></td>
       <td><code>CPH2649</code></td>
@@ -154,25 +123,9 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
       <td>⛔ Protected</td>
       <td>2026-02-03</td>
     </tr>
-  </tbody>
-</table>
-
----
-
-### OnePlus Open
-
-<table width="100%">
-  <thead>
     <tr>
-      <th align="left" width="15%">Region</th>
-      <th align="left" width="10%">Model</th>
-      <th align="left" width="40%">Version</th>
-      <th align="center" width="5%">ARB</th>
-      <th align="left" width="15%">Status</th>
-      <th align="left" width="15%">Last Checked</th>
+      <td colspan="6" align="left" bgcolor="#21262d"><br><b>OnePlus Open</b><br><br></td>
     </tr>
-  </thead>
-  <tbody>
     <tr>
       <td><b>Europe</b></td>
       <td><code>CPH2551</code></td>
@@ -197,25 +150,9 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
       <td>✅ Safe</td>
       <td>2026-02-03</td>
     </tr>
-  </tbody>
-</table>
-
----
-
-### OnePlus 12
-
-<table width="100%">
-  <thead>
     <tr>
-      <th align="left" width="15%">Region</th>
-      <th align="left" width="10%">Model</th>
-      <th align="left" width="40%">Version</th>
-      <th align="center" width="5%">ARB</th>
-      <th align="left" width="15%">Status</th>
-      <th align="left" width="15%">Last Checked</th>
+      <td colspan="6" align="left" bgcolor="#21262d"><br><b>OnePlus 12</b><br><br></td>
     </tr>
-  </thead>
-  <tbody>
     <tr>
       <td><b>Global</b></td>
       <td><code>CPH2573</code></td>
@@ -256,25 +193,9 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
       <td>⛔ Protected</td>
       <td>2026-02-03</td>
     </tr>
-  </tbody>
-</table>
-
----
-
-### OnePlus 12R
-
-<table width="100%">
-  <thead>
     <tr>
-      <th align="left" width="15%">Region</th>
-      <th align="left" width="10%">Model</th>
-      <th align="left" width="40%">Version</th>
-      <th align="center" width="5%">ARB</th>
-      <th align="left" width="15%">Status</th>
-      <th align="left" width="15%">Last Checked</th>
+      <td colspan="6" align="left" bgcolor="#21262d"><br><b>OnePlus 12R</b><br><br></td>
     </tr>
-  </thead>
-  <tbody>
     <tr>
       <td><b>Global</b></td>
       <td><code>CPH2585</code></td>
@@ -307,25 +228,9 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
       <td>✅ Safe</td>
       <td>2026-02-03</td>
     </tr>
-  </tbody>
-</table>
-
----
-
-### OnePlus 11
-
-<table width="100%">
-  <thead>
     <tr>
-      <th align="left" width="15%">Region</th>
-      <th align="left" width="10%">Model</th>
-      <th align="left" width="40%">Version</th>
-      <th align="center" width="5%">ARB</th>
-      <th align="left" width="15%">Status</th>
-      <th align="left" width="15%">Last Checked</th>
+      <td colspan="6" align="left" bgcolor="#21262d"><br><b>OnePlus 11</b><br><br></td>
     </tr>
-  </thead>
-  <tbody>
     <tr>
       <td><b>Global</b></td>
       <td><code>CPH2449</code></td>
@@ -358,25 +263,9 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
       <td>✅ Safe</td>
       <td>2026-02-03</td>
     </tr>
-  </tbody>
-</table>
-
----
-
-### OnePlus 11R
-
-<table width="100%">
-  <thead>
     <tr>
-      <th align="left" width="15%">Region</th>
-      <th align="left" width="10%">Model</th>
-      <th align="left" width="40%">Version</th>
-      <th align="center" width="5%">ARB</th>
-      <th align="left" width="15%">Status</th>
-      <th align="left" width="15%">Last Checked</th>
+      <td colspan="6" align="left" bgcolor="#21262d"><br><b>OnePlus 11R</b><br><br></td>
     </tr>
-  </thead>
-  <tbody>
     <tr>
       <td><b>India</b></td>
       <td><code>CPH2487</code></td>
@@ -385,25 +274,9 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
       <td>✅ Safe</td>
       <td>2026-02-03</td>
     </tr>
-  </tbody>
-</table>
-
----
-
-### OnePlus 10 Pro
-
-<table width="100%">
-  <thead>
     <tr>
-      <th align="left" width="15%">Region</th>
-      <th align="left" width="10%">Model</th>
-      <th align="left" width="40%">Version</th>
-      <th align="center" width="5%">ARB</th>
-      <th align="left" width="15%">Status</th>
-      <th align="left" width="15%">Last Checked</th>
+      <td colspan="6" align="left" bgcolor="#21262d"><br><b>OnePlus 10 Pro</b><br><br></td>
     </tr>
-  </thead>
-  <tbody>
     <tr>
       <td><b>Global</b></td>
       <td><code>NE2215</code></td>
@@ -444,25 +317,9 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
       <td>✅ Safe</td>
       <td>2026-02-03</td>
     </tr>
-  </tbody>
-</table>
-
----
-
-### OnePlus 10T
-
-<table width="100%">
-  <thead>
     <tr>
-      <th align="left" width="15%">Region</th>
-      <th align="left" width="10%">Model</th>
-      <th align="left" width="40%">Version</th>
-      <th align="center" width="5%">ARB</th>
-      <th align="left" width="15%">Status</th>
-      <th align="left" width="15%">Last Checked</th>
+      <td colspan="6" align="left" bgcolor="#21262d"><br><b>OnePlus 10T</b><br><br></td>
     </tr>
-  </thead>
-  <tbody>
     <tr>
       <td><b>Global</b></td>
       <td><code>CPH2417</code></td>
@@ -495,25 +352,9 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
       <td>✅ Safe</td>
       <td>2026-02-03</td>
     </tr>
-  </tbody>
-</table>
-
----
-
-### OnePlus 9 Pro
-
-<table width="100%">
-  <thead>
     <tr>
-      <th align="left" width="15%">Region</th>
-      <th align="left" width="10%">Model</th>
-      <th align="left" width="40%">Version</th>
-      <th align="center" width="5%">ARB</th>
-      <th align="left" width="15%">Status</th>
-      <th align="left" width="15%">Last Checked</th>
+      <td colspan="6" align="left" bgcolor="#21262d"><br><b>OnePlus 9 Pro</b><br><br></td>
     </tr>
-  </thead>
-  <tbody>
     <tr>
       <td><b>Europe</b></td>
       <td><code>LE2123</code></td>
@@ -538,25 +379,9 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
       <td>✅ Safe</td>
       <td>2026-02-03</td>
     </tr>
-  </tbody>
-</table>
-
----
-
-### OnePlus 9
-
-<table width="100%">
-  <thead>
     <tr>
-      <th align="left" width="15%">Region</th>
-      <th align="left" width="10%">Model</th>
-      <th align="left" width="40%">Version</th>
-      <th align="center" width="5%">ARB</th>
-      <th align="left" width="15%">Status</th>
-      <th align="left" width="15%">Last Checked</th>
+      <td colspan="6" align="left" bgcolor="#21262d"><br><b>OnePlus 9</b><br><br></td>
     </tr>
-  </thead>
-  <tbody>
     <tr>
       <td><b>Europe</b></td>
       <td><code>LE2113</code></td>
@@ -581,25 +406,9 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
       <td>✅ Safe</td>
       <td>2026-02-03</td>
     </tr>
-  </tbody>
-</table>
-
----
-
-### OnePlus 9RT
-
-<table width="100%">
-  <thead>
     <tr>
-      <th align="left" width="15%">Region</th>
-      <th align="left" width="10%">Model</th>
-      <th align="left" width="40%">Version</th>
-      <th align="center" width="5%">ARB</th>
-      <th align="left" width="15%">Status</th>
-      <th align="left" width="15%">Last Checked</th>
+      <td colspan="6" align="left" bgcolor="#21262d"><br><b>OnePlus 9RT</b><br><br></td>
     </tr>
-  </thead>
-  <tbody>
     <tr>
       <td><b>India</b></td>
       <td><code>MT2111</code></td>
@@ -608,25 +417,9 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
       <td>✅ Safe</td>
       <td>2026-02-03</td>
     </tr>
-  </tbody>
-</table>
-
----
-
-### OnePlus Nord 5
-
-<table width="100%">
-  <thead>
     <tr>
-      <th align="left" width="15%">Region</th>
-      <th align="left" width="10%">Model</th>
-      <th align="left" width="40%">Version</th>
-      <th align="center" width="5%">ARB</th>
-      <th align="left" width="15%">Status</th>
-      <th align="left" width="15%">Last Checked</th>
+      <td colspan="6" align="left" bgcolor="#21262d"><br><b>OnePlus Nord 5</b><br><br></td>
     </tr>
-  </thead>
-  <tbody>
     <tr>
       <td><b>Global</b></td>
       <td><code>CPH2709</code></td>
@@ -651,25 +444,9 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
       <td>✅ Safe</td>
       <td>2026-02-03</td>
     </tr>
-  </tbody>
-</table>
-
----
-
-### OnePlus Nord 4
-
-<table width="100%">
-  <thead>
     <tr>
-      <th align="left" width="15%">Region</th>
-      <th align="left" width="10%">Model</th>
-      <th align="left" width="40%">Version</th>
-      <th align="center" width="5%">ARB</th>
-      <th align="left" width="15%">Status</th>
-      <th align="left" width="15%">Last Checked</th>
+      <td colspan="6" align="left" bgcolor="#21262d"><br><b>OnePlus Nord 4</b><br><br></td>
     </tr>
-  </thead>
-  <tbody>
     <tr>
       <td><b>Global</b></td>
       <td><code>CPH2661</code></td>
@@ -694,25 +471,9 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
       <td>✅ Safe</td>
       <td>2026-02-03</td>
     </tr>
-  </tbody>
-</table>
-
----
-
-### OnePlus Ace 6T
-
-<table width="100%">
-  <thead>
     <tr>
-      <th align="left" width="15%">Region</th>
-      <th align="left" width="10%">Model</th>
-      <th align="left" width="40%">Version</th>
-      <th align="center" width="5%">ARB</th>
-      <th align="left" width="15%">Status</th>
-      <th align="left" width="15%">Last Checked</th>
+      <td colspan="6" align="left" bgcolor="#21262d"><br><b>OnePlus Ace 6T</b><br><br></td>
     </tr>
-  </thead>
-  <tbody>
     <tr>
       <td><b>China</b></td>
       <td><code>PLR110</code></td>
@@ -721,25 +482,9 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
       <td>✅ Safe</td>
       <td>2026-02-03</td>
     </tr>
-  </tbody>
-</table>
-
----
-
-### OnePlus Ace 5 Pro
-
-<table width="100%">
-  <thead>
     <tr>
-      <th align="left" width="15%">Region</th>
-      <th align="left" width="10%">Model</th>
-      <th align="left" width="40%">Version</th>
-      <th align="center" width="5%">ARB</th>
-      <th align="left" width="15%">Status</th>
-      <th align="left" width="15%">Last Checked</th>
+      <td colspan="6" align="left" bgcolor="#21262d"><br><b>OnePlus Ace 5 Pro</b><br><br></td>
     </tr>
-  </thead>
-  <tbody>
     <tr>
       <td><b>China</b></td>
       <td><code>PKR110</code></td>
@@ -748,25 +493,9 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
       <td>✅ Safe</td>
       <td>2026-02-03</td>
     </tr>
-  </tbody>
-</table>
-
----
-
-### OnePlus Ace 5
-
-<table width="100%">
-  <thead>
     <tr>
-      <th align="left" width="15%">Region</th>
-      <th align="left" width="10%">Model</th>
-      <th align="left" width="40%">Version</th>
-      <th align="center" width="5%">ARB</th>
-      <th align="left" width="15%">Status</th>
-      <th align="left" width="15%">Last Checked</th>
+      <td colspan="6" align="left" bgcolor="#21262d"><br><b>OnePlus Ace 5</b><br><br></td>
     </tr>
-  </thead>
-  <tbody>
     <tr>
       <td><b>China</b></td>
       <td><code>PKG110</code></td>
@@ -775,25 +504,9 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
       <td>⛔ Protected</td>
       <td>2026-02-03</td>
     </tr>
-  </tbody>
-</table>
-
----
-
-### OnePlus Pad 3
-
-<table width="100%">
-  <thead>
     <tr>
-      <th align="left" width="15%">Region</th>
-      <th align="left" width="10%">Model</th>
-      <th align="left" width="40%">Version</th>
-      <th align="center" width="5%">ARB</th>
-      <th align="left" width="15%">Status</th>
-      <th align="left" width="15%">Last Checked</th>
+      <td colspan="6" align="left" bgcolor="#21262d"><br><b>OnePlus Pad 3</b><br><br></td>
     </tr>
-  </thead>
-  <tbody>
     <tr>
       <td><b>Global</b></td>
       <td><code>OPD2415</code></td>
@@ -826,25 +539,9 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
       <td>✅ Safe</td>
       <td>2026-02-03</td>
     </tr>
-  </tbody>
-</table>
-
----
-
-### OnePlus Pad 2 Pro
-
-<table width="100%">
-  <thead>
     <tr>
-      <th align="left" width="15%">Region</th>
-      <th align="left" width="10%">Model</th>
-      <th align="left" width="40%">Version</th>
-      <th align="center" width="5%">ARB</th>
-      <th align="left" width="15%">Status</th>
-      <th align="left" width="15%">Last Checked</th>
+      <td colspan="6" align="left" bgcolor="#21262d"><br><b>OnePlus Pad 2 Pro</b><br><br></td>
     </tr>
-  </thead>
-  <tbody>
     <tr>
       <td><b>China</b></td>
       <td><code>OPD2413</code></td>
@@ -853,25 +550,9 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
       <td>✅ Safe</td>
       <td>2026-02-03</td>
     </tr>
-  </tbody>
-</table>
-
----
-
-### OnePlus Pad 2
-
-<table width="100%">
-  <thead>
     <tr>
-      <th align="left" width="15%">Region</th>
-      <th align="left" width="10%">Model</th>
-      <th align="left" width="40%">Version</th>
-      <th align="center" width="5%">ARB</th>
-      <th align="left" width="15%">Status</th>
-      <th align="left" width="15%">Last Checked</th>
+      <td colspan="6" align="left" bgcolor="#21262d"><br><b>OnePlus Pad 2</b><br><br></td>
     </tr>
-  </thead>
-  <tbody>
     <tr>
       <td><b>Global</b></td>
       <td><code>OPD2403</code></td>
@@ -896,25 +577,9 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
       <td>⛔ Protected</td>
       <td>2026-02-03</td>
     </tr>
-  </tbody>
-</table>
-
----
-
-### Oppo Find X8 Ultra
-
-<table width="100%">
-  <thead>
     <tr>
-      <th align="left" width="15%">Region</th>
-      <th align="left" width="10%">Model</th>
-      <th align="left" width="40%">Version</th>
-      <th align="center" width="5%">ARB</th>
-      <th align="left" width="15%">Status</th>
-      <th align="left" width="15%">Last Checked</th>
+      <td colspan="6" align="left" bgcolor="#21262d"><br><b>Oppo Find X8 Ultra</b><br><br></td>
     </tr>
-  </thead>
-  <tbody>
     <tr>
       <td><b>China</b></td>
       <td><code>PKJ110</code></td>
@@ -923,25 +588,9 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
       <td>✅ Safe</td>
       <td>2026-02-03</td>
     </tr>
-  </tbody>
-</table>
-
----
-
-### Oppo Find N5
-
-<table width="100%">
-  <thead>
     <tr>
-      <th align="left" width="15%">Region</th>
-      <th align="left" width="10%">Model</th>
-      <th align="left" width="40%">Version</th>
-      <th align="center" width="5%">ARB</th>
-      <th align="left" width="15%">Status</th>
-      <th align="left" width="15%">Last Checked</th>
+      <td colspan="6" align="left" bgcolor="#21262d"><br><b>Oppo Find N5</b><br><br></td>
     </tr>
-  </thead>
-  <tbody>
     <tr>
       <td><b>China</b></td>
       <td><code>PKV110</code></td>
@@ -951,7 +600,39 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
       <td>2026-02-03</td>
     </tr>
     <tr>
+      <td><b>TH</b></td>
+      <td><code>CPH2671</code></td>
+      <td><code>CPH2671_16.0.2.401(EX01)</code></td>
+      <td align="center">0</td>
+      <td>✅ Safe</td>
+      <td>2026-02-03</td>
+    </tr>
+    <tr>
+      <td><b>MX</b></td>
+      <td><code>CPH2671</code></td>
+      <td><code>CPH2671_16.0.1.302(EX01)</code></td>
+      <td align="center">0</td>
+      <td>✅ Safe</td>
+      <td>2026-02-03</td>
+    </tr>
+    <tr>
+      <td><b>APC</b></td>
+      <td><code>CPH2671</code></td>
+      <td><code>CPH2671_16.0.2.401(EX01)</code></td>
+      <td align="center">0</td>
+      <td>✅ Safe</td>
+      <td>2026-02-03</td>
+    </tr>
+    <tr>
       <td><b>MY</b></td>
+      <td><code>CPH2671</code></td>
+      <td><code>CPH2671_16.0.2.401(EX01)</code></td>
+      <td align="center">0</td>
+      <td>✅ Safe</td>
+      <td>2026-02-03</td>
+    </tr>
+    <tr>
+      <td><b>SG</b></td>
       <td><code>CPH2671</code></td>
       <td><code>CPH2671_16.0.2.401(EX01)</code></td>
       <td align="center">0</td>
@@ -967,82 +648,10 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
       <td>2026-02-03</td>
     </tr>
     <tr>
-      <td><b>MX</b></td>
-      <td><code>CPH2671</code></td>
-      <td><code>CPH2671_16.0.1.302(EX01)</code></td>
-      <td align="center">0</td>
-      <td>✅ Safe</td>
-      <td>2026-02-03</td>
+      <td colspan="6" align="left" bgcolor="#21262d"><br><b>Oppo Find N3</b><br><br></td>
     </tr>
     <tr>
       <td><b>TH</b></td>
-      <td><code>CPH2671</code></td>
-      <td><code>CPH2671_16.0.2.401(EX01)</code></td>
-      <td align="center">0</td>
-      <td>✅ Safe</td>
-      <td>2026-02-03</td>
-    </tr>
-    <tr>
-      <td><b>SG</b></td>
-      <td><code>CPH2671</code></td>
-      <td><code>CPH2671_16.0.2.401(EX01)</code></td>
-      <td align="center">0</td>
-      <td>✅ Safe</td>
-      <td>2026-02-03</td>
-    </tr>
-    <tr>
-      <td><b>APC</b></td>
-      <td><code>CPH2671</code></td>
-      <td><code>CPH2671_16.0.2.401(EX01)</code></td>
-      <td align="center">0</td>
-      <td>✅ Safe</td>
-      <td>2026-02-03</td>
-    </tr>
-  </tbody>
-</table>
-
----
-
-### Oppo Find N3
-
-<table width="100%">
-  <thead>
-    <tr>
-      <th align="left" width="15%">Region</th>
-      <th align="left" width="10%">Model</th>
-      <th align="left" width="40%">Version</th>
-      <th align="center" width="5%">ARB</th>
-      <th align="left" width="15%">Status</th>
-      <th align="left" width="15%">Last Checked</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><b>MY</b></td>
-      <td><code>CPH2499</code></td>
-      <td><code>CPH2499_16.0.3.500(EX01)</code></td>
-      <td align="center">0</td>
-      <td>✅ Safe</td>
-      <td>2026-02-03</td>
-    </tr>
-    <tr>
-      <td><b>ID</b></td>
-      <td><code>CPH2499</code></td>
-      <td><code>CPH2499_16.0.3.500(EX01)</code></td>
-      <td align="center">0</td>
-      <td>✅ Safe</td>
-      <td>2026-02-03</td>
-    </tr>
-    <tr>
-      <td><b>TH</b></td>
-      <td><code>CPH2499</code></td>
-      <td><code>CPH2499_16.0.3.500(EX01)</code></td>
-      <td align="center">0</td>
-      <td>✅ Safe</td>
-      <td>2026-02-03</td>
-    </tr>
-    <tr>
-      <td><b>SG</b></td>
       <td><code>CPH2499</code></td>
       <td><code>CPH2499_16.0.3.500(EX01)</code></td>
       <td align="center">0</td>
@@ -1058,6 +667,14 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
       <td>2026-02-03</td>
     </tr>
     <tr>
+      <td><b>VN</b></td>
+      <td><code>CPH2499</code></td>
+      <td><code>CPH2499_16.0.3.500(EX01)</code></td>
+      <td align="center">0</td>
+      <td>✅ Safe</td>
+      <td>2026-02-03</td>
+    </tr>
+    <tr>
       <td><b>OCA</b></td>
       <td><code>CPH2499</code></td>
       <td><code>CPH2499_16.0.0.203(EX01)</code></td>
@@ -1066,44 +683,36 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
       <td>2026-02-03</td>
     </tr>
     <tr>
-      <td><b>VN</b></td>
+      <td><b>MY</b></td>
       <td><code>CPH2499</code></td>
       <td><code>CPH2499_16.0.3.500(EX01)</code></td>
       <td align="center">0</td>
       <td>✅ Safe</td>
       <td>2026-02-03</td>
     </tr>
-  </tbody>
-</table>
-
----
-
-### Oppo Find X5 Pro
-
-<table width="100%">
-  <thead>
     <tr>
-      <th align="left" width="15%">Region</th>
-      <th align="left" width="10%">Model</th>
-      <th align="left" width="40%">Version</th>
-      <th align="center" width="5%">ARB</th>
-      <th align="left" width="15%">Status</th>
-      <th align="left" width="15%">Last Checked</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><b>Europe</b></td>
-      <td><code>CPH2305</code></td>
-      <td><code>CPH2305_15.0.0.1303(EX01)</code></td>
+      <td><b>SG</b></td>
+      <td><code>CPH2499</code></td>
+      <td><code>CPH2499_16.0.3.500(EX01)</code></td>
       <td align="center">0</td>
       <td>✅ Safe</td>
       <td>2026-02-03</td>
     </tr>
     <tr>
-      <td><b>SG</b></td>
+      <td><b>ID</b></td>
+      <td><code>CPH2499</code></td>
+      <td><code>CPH2499_16.0.3.500(EX01)</code></td>
+      <td align="center">0</td>
+      <td>✅ Safe</td>
+      <td>2026-02-03</td>
+    </tr>
+    <tr>
+      <td colspan="6" align="left" bgcolor="#21262d"><br><b>Oppo Find X5 Pro</b><br><br></td>
+    </tr>
+    <tr>
+      <td><b>Europe</b></td>
       <td><code>CPH2305</code></td>
-      <td><code>CPH2305_15.0.0.1301(EX01)</code></td>
+      <td><code>CPH2305_15.0.0.1303(EX01)</code></td>
       <td align="center">0</td>
       <td>✅ Safe</td>
       <td>2026-02-03</td>
@@ -1132,25 +741,17 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
       <td>✅ Safe</td>
       <td>2026-02-03</td>
     </tr>
-  </tbody>
-</table>
-
----
-
-### Oppo Find X5
-
-<table width="100%">
-  <thead>
     <tr>
-      <th align="left" width="15%">Region</th>
-      <th align="left" width="10%">Model</th>
-      <th align="left" width="40%">Version</th>
-      <th align="center" width="5%">ARB</th>
-      <th align="left" width="15%">Status</th>
-      <th align="left" width="15%">Last Checked</th>
+      <td><b>SG</b></td>
+      <td><code>CPH2305</code></td>
+      <td><code>CPH2305_15.0.0.1301(EX01)</code></td>
+      <td align="center">0</td>
+      <td>✅ Safe</td>
+      <td>2026-02-03</td>
     </tr>
-  </thead>
-  <tbody>
+    <tr>
+      <td colspan="6" align="left" bgcolor="#21262d"><br><b>Oppo Find X5</b><br><br></td>
+    </tr>
     <tr>
       <td><b>Global</b></td>
       <td><code>CPH2307</code></td>
@@ -1176,7 +777,7 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
       <td>2026-02-03</td>
     </tr>
     <tr>
-      <td><b>SA</b></td>
+      <td><b>EG</b></td>
       <td><code>CPH2307</code></td>
       <td><code>CPH2307_15.0.0.1302(EX01)</code></td>
       <td align="center">0</td>
@@ -1184,7 +785,7 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
       <td>2026-02-03</td>
     </tr>
     <tr>
-      <td><b>EG</b></td>
+      <td><b>SA</b></td>
       <td><code>CPH2307</code></td>
       <td><code>CPH2307_15.0.0.1302(EX01)</code></td>
       <td align="center">0</td>
@@ -1226,4 +827,4 @@ The bot will extract the payload, check the ARB index, and post the result as a 
 - **ARB Extraction**: [arbextract](https://github.com/koaaN/arbextract) by koaaN
 
 ---
-*Last updated: 2026-02-03 23:15 UTC*
+*Last updated: 2026-02-03 23:18 UTC*
