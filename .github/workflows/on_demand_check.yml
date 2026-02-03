@@ -104,7 +104,7 @@ jobs:
           fi
           
           COMMENT=$(python3 -c "
-          import json
+          import json, os
           res = json.load(open('result.json'))
           arb = res.get('arb_index', 'Unknown')
           status = '✅ **Safe to flash/roll back**' if arb == '0' else '⚠️ **Anti-Rollback Active!**'
@@ -115,8 +115,9 @@ jobs:
           patch = meta.get('post-security-patch-level', meta.get('security_patch', 'Unknown'))
           version = meta.get('version_name_show', meta.get('display-version', 'Unknown'))
           build = meta.get('post-build', 'Unknown')
+          user = os.environ.get('ISSUE_USER', 'user')
           
-          print(f"@{os.environ.get('ISSUE_USER', 'user')}, here is your analysis!")
+          print(f'@{user}, here is your analysis!')
           print(f'### 👑 🎯 Analysis Result')
           print(f'- **ARB Index**: \`{arb}\`')
           print(f'- **Status**: {status}')
