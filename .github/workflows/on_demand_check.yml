@@ -36,7 +36,8 @@ jobs:
           
           # 3. Fast Response (Before Tools)
           COMMENT_BODY="🤖 **Request Received!**\n\n- [ ] Setting up tools...\n- [ ] Downloading firmware...\n- [ ] Analyzing ARB index...\n\n**URL**: \`$URL\`"
-          COMMENT_ID=$(gh issue comment ${{ github.event.issue.number }} --body "$COMMENT_BODY" --json id --jq '.id')
+          # Use gh api to create comment and get its ID
+          COMMENT_ID=$(gh api -X POST /repos/${{ github.repository }}/issues/${{ github.event.issue.number }}/comments -f body="$COMMENT_BODY" --jq '.id')
           echo "comment_id=$COMMENT_ID" >> $GITHUB_OUTPUT
 
       - name: Update Progress (Setup)
