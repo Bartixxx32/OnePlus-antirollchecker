@@ -66,7 +66,7 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "IN": "CPH2745",
             "CN": "PLK110"
         },
-        "risk": "Critical"
+        "risk": "Medium"
     },
     "15R": {
         "name": "OnePlus 15R", 
@@ -75,7 +75,7 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "EU": "CPH2741",
             "IN": "CPH2741"
         },
-        "risk": "Critical"
+        "risk": "Medium"
     },
     "13": {
         "name": "OnePlus 13",
