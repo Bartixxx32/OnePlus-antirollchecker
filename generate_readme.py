@@ -19,7 +19,7 @@ def get_region_name(region_code: str) -> str:
         'EU': 'Europe',
         'IN': 'India',
         'CN': 'China',
-        'NA': 'North America'
+        'NA': 'NA'
     }
     return names.get(region_code, region_code)
 
@@ -27,18 +27,14 @@ def generate_device_section(device_id: str, device_name: str, history_data: Dict
     """Generate Markdown section for a specific device."""
     lines = []
     
-    # Get available variants for this device from history and config
+    # Get available variants
     variants = set()
-    # 1. From config (expected models)
     if device_id in DEVICE_METADATA:
         variants.update(DEVICE_METADATA[device_id]['models'].keys())
-    
-    # 2. From history files (actual data)
     for key in history_data:
         if key.startswith(f"{device_id}_"):
              variants.add(key.replace(f"{device_id}_", ""))
     
-    # Sort: Preferred order then alphabetical
     preferred_order = ['GLO', 'EU', 'IN', 'NA', 'CN']
     def sort_key(v):
         try:
@@ -49,8 +45,6 @@ def generate_device_section(device_id: str, device_name: str, history_data: Dict
     sorted_variants = sorted(list(variants), key=sort_key)
     
     has_data = False
-    
-    # Prepare table rows
     rows = []
     for variant in sorted_variants:
         key = f"{device_id}_{variant}"
@@ -59,14 +53,11 @@ def generate_device_section(device_id: str, device_name: str, history_data: Dict
             
         data = history_data[key]
         current_entry = None
-        
-        # Find current (latest) entry
         for entry in data.get('history', []):
             if entry.get('status') == 'current':
                 current_entry = entry
                 break
         
-        # Fallback to first if no current
         if not current_entry and data.get('history'):
             current_entry = data['history'][0]
             
@@ -75,24 +66,21 @@ def generate_device_section(device_id: str, device_name: str, history_data: Dict
             version = current_entry.get('version', 'Unknown')
             arb = current_entry.get('arb', -1)
             date = current_entry.get('last_checked', 'Unknown')
+            major = current_entry.get('major', '?')
+            minor = current_entry.get('minor', '?')
             region_name = get_region_name(variant)
             model = data.get('model', 'Unknown')
             
-            # Status badge
-            if arb == 0:
-                status = "✅ Safe"
-            elif arb > 0:
-                status = "⛔ Protected"
-            else:
-                status = "❓ Unknown"
+            # Status icon
+            safe_icon = "✅" if arb == 0 else "❌" if arb > 0 else "❓"
                 
-            rows.append(f"| {region_name} | {model} | {version} | {arb} | {status} | {date} |")
+            rows.append(f"| {region_name} | {model} | {version} | **{arb}** | Major: {major}, Minor: {minor} | {date} | {safe_icon} |")
 
     if has_data:
         lines.append(f"### {device_name}")
         lines.append("")
-        lines.append("| Region | Model | Version | ARB | Status | Last Checked |")
-        lines.append("|--------|-------|---------|-----|--------|--------------|")
+        lines.append("| Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |")
+        lines.append("|:---|:---|:---|:---|:---|:---|:---|")
         lines.extend(rows)
         lines.append("")
         
@@ -111,7 +99,6 @@ def generate_readme(history_data: Dict) -> str:
         ''
     ]
 
-    # Iterate over DEVICE_ORDER from config
     for device_id in DEVICE_ORDER:
         if device_id not in DEVICE_METADATA:
             continue
@@ -124,7 +111,6 @@ def generate_readme(history_data: Dict) -> str:
             lines.append('---')
             lines.append('')
             
-    # Add On-Demand Checker section
     lines.extend([
         '## 🤖 On-Demand ARB Checker',
         '',
@@ -158,18 +144,12 @@ def generate_readme(history_data: Dict) -> str:
 
 if __name__ == "__main__":
     history_dir = Path("data/history")
-    
     if not history_dir.exists():
         exit(0)
-        
-    # Load all history data
     all_history = {}
     for f in history_dir.glob("*.json"):
         all_history[f.stem] = load_history(f)
-        
     content = generate_readme(all_history)
-    
     with open("README.md", "w", encoding="utf-8") as f:
         f.write(content)
-        
     print("README.md generated successfully")
