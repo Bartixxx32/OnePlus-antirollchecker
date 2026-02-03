@@ -29,16 +29,13 @@ def generate_device_section(device_id: str, device_name: str, history_data: Dict
     
     # Get available variants for this device from history and config
     variants = set()
-    # 1. From config (expected models)
     if device_id in DEVICE_METADATA:
         variants.update(DEVICE_METADATA[device_id]['models'].keys())
     
-    # 2. From history files (actual data)
     for key in history_data:
         if key.startswith(f"{device_id}_"):
              variants.add(key.replace(f"{device_id}_", ""))
     
-    # Sort: Preferred order then alphabetical
     preferred_order = ['GLO', 'EU', 'IN', 'NA', 'CN']
     def sort_key(v):
         try:
@@ -48,10 +45,8 @@ def generate_device_section(device_id: str, device_name: str, history_data: Dict
             
     sorted_variants = sorted(list(variants), key=sort_key)
     
-    has_data = False
-    
-    # Prepare table rows
-    rows = []
+    # Gather variant rows first
+    variant_rows = []
     for variant in sorted_variants:
         key = f"{device_id}_{variant}"
         if key not in history_data:
@@ -59,41 +54,50 @@ def generate_device_section(device_id: str, device_name: str, history_data: Dict
             
         data = history_data[key]
         current_entry = None
-        
-        # Find current (latest) entry
         for entry in data.get('history', []):
             if entry.get('status') == 'current':
                 current_entry = entry
                 break
         
-        # Fallback to first if no current
         if not current_entry and data.get('history'):
             current_entry = data['history'][0]
             
         if current_entry:
-            has_data = True
             version = current_entry.get('version', 'Unknown')
             arb = current_entry.get('arb', -1)
             date = current_entry.get('last_checked', 'Unknown')
             region_name = get_region_name(variant)
             model = data.get('model', 'Unknown')
+            status = "✅ Safe" if arb == 0 else "⛔ Protected" if arb > 0 else "❓ Unknown"
             
-            # Status badge
-            if arb == 0:
-                status = "✅ Safe"
-            elif arb > 0:
-                status = "⛔ Protected"
-            else:
-                status = "❓ Unknown"
-                
-            rows.append(f"| {region_name} | {model} | {version} | {arb} | {status} | {date} |")
+            variant_rows.append('    <tr>')
+            variant_rows.append(f'      <td><b>{region_name}</b></td>')
+            variant_rows.append(f'      <td><code>{model}</code></td>')
+            variant_rows.append(f'      <td><code>{version}</code></td>')
+            variant_rows.append(f'      <td align="center">{arb}</td>')
+            variant_rows.append(f'      <td>{status}</td>')
+            variant_rows.append(f'      <td>{date}</td>')
+            variant_rows.append('    </tr>')
 
-    if has_data:
+    if variant_rows:
         lines.append(f"### {device_name}")
         lines.append("")
-        lines.append("| Region | Model | Version | ARB | Status | Last Checked |")
-        lines.append("|--------|-------|---------|-----|--------|--------------|")
-        lines.extend(rows)
+        # Use HTML table to enforce fixed widths across different device sections
+        lines.append('<table width="100%">')
+        lines.append('  <thead>')
+        lines.append('    <tr>')
+        lines.append('      <th align="left" width="15%">Region</th>')
+        lines.append('      <th align="left" width="10%">Model</th>')
+        lines.append('      <th align="left" width="40%">Version</th>')
+        lines.append('      <th align="center" width="5%">ARB</th>')
+        lines.append('      <th align="left" width="15%">Status</th>')
+        lines.append('      <th align="left" width="15%">Last Checked</th>')
+        lines.append('    </tr>')
+        lines.append('  </thead>')
+        lines.append('  <tbody>')
+        lines.extend(variant_rows)
+        lines.append('  </tbody>')
+        lines.append('</table>')
         lines.append("")
         
     return lines
@@ -111,7 +115,6 @@ def generate_readme(history_data: Dict) -> str:
         ''
     ]
 
-    # Iterate over DEVICE_ORDER from config
     for device_id in DEVICE_ORDER:
         if device_id not in DEVICE_METADATA:
             continue
@@ -124,7 +127,6 @@ def generate_readme(history_data: Dict) -> str:
             lines.append('---')
             lines.append('')
             
-    # Add On-Demand Checker section
     lines.extend([
         '## 🤖 On-Demand ARB Checker',
         '',
@@ -158,19 +160,12 @@ def generate_readme(history_data: Dict) -> str:
 
 if __name__ == "__main__":
     history_dir = Path("data/history")
-    
     if not history_dir.exists():
-        print(f"No history directory found at {history_dir}")
         exit(0)
-        
-    # Load all history data
     all_history = {}
     for f in history_dir.glob("*.json"):
         all_history[f.stem] = load_history(f)
-        
     content = generate_readme(all_history)
-    
     with open("README.md", "w", encoding="utf-8") as f:
         f.write(content)
-        
     print("README.md generated successfully")
