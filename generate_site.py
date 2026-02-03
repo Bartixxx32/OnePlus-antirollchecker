@@ -32,7 +32,8 @@ def get_region_name(variant: str) -> str:
         'GLO': 'Global',
         'EU': 'Europe',
         'IN': 'India',
-        'CN': 'China'
+        'CN': 'China',
+        'NA': 'North America'
     }
     return names.get(variant, variant)
 
@@ -48,7 +49,8 @@ def process_data(history_data):
         }
 
         # Standard regions order
-        regions = ['GLO', 'EU', 'IN', 'CN']
+        # Standard regions order
+        regions = ['GLO', 'EU', 'IN', 'CN', 'NA']
 
         for variant in regions:
             key = f'{device_id}_{variant}'

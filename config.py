@@ -47,7 +47,9 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "GLO": "CPH2649",
             "EU": "CPH2649",
             "IN": "CPH2649",
-            "CN": "PJZ110"
+            "IN": "CPH2649",
+            "CN": "PJZ110",
+            "NA": "CPH2655"
         }
     },
     "12": {
@@ -56,7 +58,9 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "GLO": "CPH2573", 
             "EU": "CPH2573", 
             "IN": "CPH2573", 
-            "CN": "PJD110"
+            "IN": "CPH2573", 
+            "CN": "PJD110",
+            "NA": "CPH2583"
         }
     },
     "12R": {
@@ -64,7 +68,8 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
         "models": {
             "GLO": "CPH2585",
             "EU": "CPH2609",
-            "IN": "CPH2585"
+            "IN": "CPH2585",
+            "NA": "CPH2611"
         }
     },
     "11": {
@@ -72,7 +77,8 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
         "models": {
             "GLO": "CPH2449",
             "EU": "CPH2449",
-            "IN": "CPH2447"
+            "IN": "CPH2447",
+            "NA": "CPH2451"
         }
     },
     "11R": {
@@ -87,7 +93,9 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "GLO": "NE2215",
             "EU": "NE2213",
             "IN": "NE2211",
-            "CN": "NE2210"
+            "IN": "NE2211",
+            "CN": "NE2210",
+            "NA": "NE2215"
         }
     },
     "10T": {
@@ -95,7 +103,8 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
         "models": {
             "GLO": "CPH2417",
             "EU": "CPH2415",
-            "IN": "CPH2413"
+            "IN": "CPH2413",
+            "NA": "CPH2417"
         }
     },
     "10R": {
@@ -203,7 +212,8 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
         "models": {
             "GLO": "OPD2415",
             "EU": "OPD2415",
-            "IN": "OPD2415"
+            "IN": "OPD2415",
+            "NA": "OPD2415"
         }
     },
     "Pad 2": {
