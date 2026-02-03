@@ -5,15 +5,15 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
 **Website:** [https://bartixxx32.github.io/OnePlus-antirollchecker/](https://bartixxx32.github.io/OnePlus-antirollchecker/)
 
 ## ⚠️ Risk Levels
-We classify devices based on the risk of unrecoverable bricking (availability of Firehose/MSM tools):
+We classify devices based on the probability of OnePlus increasing the ARB index:
 
-- 🔴 **Critical**: High risk. No public unbrick tool OR ARB already enforced.
-- 🟠 **Medium**: Moderate risk. Unbrick tools restricted/partial.
-- 🟢 **Low**: Low risk. Public unbrick tools available.
+- 🔴 **Critical**: Highest risk. ARB already enforced OR extremely likely to increase soon.
+- 🟠 **Medium**: Moderate risk. OnePlus frequently updates these; ARB might change.
+- 🟢 **Low**: Minimal risk. ARB change is very unlikely (Legacy/EoL devices).
 
 ## 📊 Current Status
 
-### OnePlus 15: 🟠 Medium Risk
+### OnePlus 15: 🔴 Critical Risk
 
 | Region | Model | Version | ARB | Status | Last Checked |
 |--------|-------|---------|-----|--------|--------------|
@@ -24,7 +24,7 @@ We classify devices based on the risk of unrecoverable bricking (availability of
 
 ---
 
-### OnePlus 15R: 🟠 Medium Risk
+### OnePlus 15R: 🔴 Critical Risk
 
 | Region | Model | Version | ARB | Status | Last Checked |
 |--------|-------|---------|-----|--------|--------------|
@@ -46,7 +46,7 @@ We classify devices based on the risk of unrecoverable bricking (availability of
 
 ---
 
-### OnePlus Open: 🟠 Medium Risk
+### OnePlus Open: 🔴 Critical Risk
 
 | Region | Model | Version | ARB | Status | Last Checked |
 |--------|-------|---------|-----|--------|--------------|
@@ -149,7 +149,7 @@ We classify devices based on the risk of unrecoverable bricking (availability of
 
 ---
 
-### OnePlus Nord 5: 🟠 Medium Risk
+### OnePlus Nord 5: 🔴 Critical Risk
 
 | Region | Model | Version | ARB | Status | Last Checked |
 |--------|-------|---------|-----|--------|--------------|
@@ -159,7 +159,7 @@ We classify devices based on the risk of unrecoverable bricking (availability of
 
 ---
 
-### OnePlus Nord 4: 🟠 Medium Risk
+### OnePlus Nord 4: 🔴 Critical Risk
 
 | Region | Model | Version | ARB | Status | Last Checked |
 |--------|-------|---------|-----|--------|--------------|
@@ -177,7 +177,7 @@ We classify devices based on the risk of unrecoverable bricking (availability of
 
 ---
 
-### OnePlus Ace 5 Pro: 🟠 Medium Risk
+### OnePlus Ace 5 Pro: 🔴 Critical Risk
 
 | Region | Model | Version | ARB | Status | Last Checked |
 |--------|-------|---------|-----|--------|--------------|
@@ -235,26 +235,26 @@ We classify devices based on the risk of unrecoverable bricking (availability of
 | Region | Model | Version | ARB | Status | Last Checked |
 |--------|-------|---------|-----|--------|--------------|
 | China | PKV110 | PKH110_16.0.3.500(CN01) | 0 | ✅ Safe | 2026-02-03 |
-| MX | CPH2671 | CPH2671_16.0.1.302(EX01) | 0 | ✅ Safe | 2026-02-03 |
+| TH | CPH2671 | CPH2671_16.0.2.401(EX01) | 0 | ✅ Safe | 2026-02-03 |
+| SG | CPH2671 | CPH2671_16.0.2.401(EX01) | 0 | ✅ Safe | 2026-02-03 |
+| APC | CPH2671 | CPH2671_16.0.2.401(EX01) | 0 | ✅ Safe | 2026-02-03 |
 | MY | CPH2671 | CPH2671_16.0.2.401(EX01) | 0 | ✅ Safe | 2026-02-03 |
 | ID | CPH2671 | CPH2671_16.0.3.500(EX01) | 0 | ✅ Safe | 2026-02-03 |
-| SG | CPH2671 | CPH2671_16.0.2.401(EX01) | 0 | ✅ Safe | 2026-02-03 |
-| TH | CPH2671 | CPH2671_16.0.2.401(EX01) | 0 | ✅ Safe | 2026-02-03 |
-| APC | CPH2671 | CPH2671_16.0.2.401(EX01) | 0 | ✅ Safe | 2026-02-03 |
+| MX | CPH2671 | CPH2671_16.0.1.302(EX01) | 0 | ✅ Safe | 2026-02-03 |
 
 ---
 
-### Oppo Find N3: 🟠 Medium Risk
+### Oppo Find N3: 🔴 Critical Risk
 
 | Region | Model | Version | ARB | Status | Last Checked |
 |--------|-------|---------|-----|--------|--------------|
+| TH | CPH2499 | CPH2499_16.0.3.500(EX01) | 0 | ✅ Safe | 2026-02-03 |
 | VN | CPH2499 | CPH2499_16.0.3.500(EX01) | 0 | ✅ Safe | 2026-02-03 |
 | MY | CPH2499 | CPH2499_16.0.3.500(EX01) | 0 | ✅ Safe | 2026-02-03 |
-| OCA | CPH2499 | CPH2499_16.0.0.203(EX01) | 0 | ✅ Safe | 2026-02-03 |
 | TW | CPH2499 | CPH2499_16.0.3.500(EX01) | 0 | ✅ Safe | 2026-02-03 |
-| ID | CPH2499 | CPH2499_16.0.3.500(EX01) | 0 | ✅ Safe | 2026-02-03 |
 | SG | CPH2499 | CPH2499_16.0.3.500(EX01) | 0 | ✅ Safe | 2026-02-03 |
-| TH | CPH2499 | CPH2499_16.0.3.500(EX01) | 0 | ✅ Safe | 2026-02-03 |
+| ID | CPH2499 | CPH2499_16.0.3.500(EX01) | 0 | ✅ Safe | 2026-02-03 |
+| OCA | CPH2499 | CPH2499_16.0.0.203(EX01) | 0 | ✅ Safe | 2026-02-03 |
 
 ---
 
@@ -264,9 +264,9 @@ We classify devices based on the risk of unrecoverable bricking (availability of
 |--------|-------|---------|-----|--------|--------------|
 | Europe | CPH2305 | CPH2305_15.0.0.1303(EX01) | 0 | ✅ Safe | 2026-02-03 |
 | EG | CPH2305 | CPH2305_11_A.19 | 0 | ✅ Safe | 2026-02-03 |
-| OCA | CPH2305 | CPH2305_11_A.22 | 0 | ✅ Safe | 2026-02-03 |
 | TW | CPH2305 | CPH2305_15.0.0.1301(EX01) | 0 | ✅ Safe | 2026-02-03 |
 | SG | CPH2305 | CPH2305_15.0.0.1301(EX01) | 0 | ✅ Safe | 2026-02-03 |
+| OCA | CPH2305 | CPH2305_11_A.22 | 0 | ✅ Safe | 2026-02-03 |
 
 ---
 
@@ -277,8 +277,8 @@ We classify devices based on the risk of unrecoverable bricking (availability of
 | Global | CPH2307 | CPH2307_15.0.0.1304(EX01) | 0 | ✅ Safe | 2026-02-03 |
 | Europe | CPH2307 | CPH2307_15.0.0.1304(EX01) | 0 | ✅ Safe | 2026-02-03 |
 | India | CPH2307 | CPH2307_15.0.0.1304(EX01) | 0 | ✅ Safe | 2026-02-03 |
-| SA | CPH2307 | CPH2307_15.0.0.1302(EX01) | 0 | ✅ Safe | 2026-02-03 |
 | EG | CPH2307 | CPH2307_15.0.0.1302(EX01) | 0 | ✅ Safe | 2026-02-03 |
+| SA | CPH2307 | CPH2307_15.0.0.1302(EX01) | 0 | ✅ Safe | 2026-02-03 |
 | OCA | CPH2307 | CPH2307_15.0.0.1302(EX01) | 0 | ✅ Safe | 2026-02-03 |
 
 ---
@@ -319,4 +319,4 @@ The bot will extract the payload, check the ARB index, and post the result as a 
 - **ARB Extraction**: [arbextract](https://github.com/koaaN/arbextract) by koaaN
 
 ---
-*Last updated: 2026-02-03 23:01 UTC*
+*Last updated: 2026-02-03 23:04 UTC*

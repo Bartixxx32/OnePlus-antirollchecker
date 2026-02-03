@@ -66,7 +66,7 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "IN": "CPH2745",
             "CN": "PLK110"
         },
-        "risk": "Medium"
+        "risk": "Critical"
     },
     "15R": {
         "name": "OnePlus 15R", 
@@ -75,7 +75,7 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "EU": "CPH2741",
             "IN": "CPH2741"
         },
-        "risk": "Medium"
+        "risk": "Critical"
     },
     "13": {
         "name": "OnePlus 13",
@@ -270,7 +270,7 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "EU": "CPH2709",
             "IN": "CPH2709"
         },
-        "risk": "Medium"
+        "risk": "Critical"
     },
     "Nord 4": {
         "name": "OnePlus Nord 4",
@@ -279,7 +279,7 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "EU": "CPH2661",
             "IN": "CPH2663"
         },
-        "risk": "Medium"
+        "risk": "Critical"
     },
     "Nord 1": {
         "name": "OnePlus Nord",
@@ -317,7 +317,7 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
         "models": {
             "CN": "PKR110"
         },
-        "risk": "Medium"
+        "risk": "Critical"
     },
     "Ace 3 Pro": {
         "name": "OnePlus Ace 3 Pro",
@@ -377,7 +377,7 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "IN": "CPH2551",
             "NA": "CPH2551"
         },
-        "risk": "Medium"
+        "risk": "Critical"
     },
 
     "Find X5 Pro": {
@@ -435,7 +435,7 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "TW": "CPH2499",
             "VN": "CPH2499"
         },
-        "risk": "Medium"
+        "risk": "Critical"
     },
     "Find X3 Pro": {
         "name": "Oppo Find X3 Pro",
