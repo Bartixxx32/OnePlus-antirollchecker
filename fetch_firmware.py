@@ -48,8 +48,8 @@ def get_from_oos_api(device_id: str, region: str) -> dict:
     if mapped_id.startswith("oppo_") or mapped_id.startswith("find_"):
          brand = "oppo"
 
-    # Map non-CN to EU for Oppo as OOS API often only has EU for these
-    if brand == "oppo" and region != "CN":
+    # Map GLO/IN to EU for Oppo as OOS API often only has EU for these standard global variants
+    if brand == "oppo" and region in ["GLO", "IN"]:
         region = "EU"
 
     # API endpoints
@@ -81,24 +81,22 @@ def get_from_oos_api(device_id: str, region: str) -> dict:
         logger.warning(f"OOS API check failed: {e}")
         return None
 
-def get_signed_url_springer(device_id: str, region: str, target_version: str = None) -> dict:
+def get_springer_versions(device_id: str, region: str, session=None) -> list:
     """
-    Fetches a signed download URL from roms.danielspringer.at
-    Returns dict with 'url' and 'version' (if known).
+    Fetches available versions for a device/region from roms.danielspringer.at
     """
     headers = {
         'User-Agent': USER_AGENT,
     }
     
-    session = requests.Session()
+    if not session:
+        session = requests.Session()
     
     # Map input device ID to website's expected name via OOS_MAPPING (snake_case)
-    # This aligns Springer keys with OOS keys (e.g. oneplus_12r, oppo_find_x8)
     key = OOS_MAPPING.get(device_id, f"oneplus_{device_id}")
     
     mapped_name = SPRING_MAPPING.get(key)
     if not mapped_name:
-         # Fallback or logging if needed
          mapped_name = f"OP {device_id}"
 
     if key in SPRING_MAPPING:
@@ -130,7 +128,6 @@ def get_signed_url_springer(device_id: str, region: str, target_version: str = N
         # Try stricter fuzzy match
         found = False
         for d in devices_data:
-            # Check if name is exact match (case insensitive) or if the identifier contains version suffix but starts with device_name
             if device_name.upper() == d.upper() or d.upper().startswith(device_name.upper() + " "):
                 device_name = d
                 found = True
@@ -143,7 +140,23 @@ def get_signed_url_springer(device_id: str, region: str, target_version: str = N
         logger.error(f"Region {region} not found for {device_name}")
         return None
         
-    versions = devices_data[device_name][region]
+    return devices_data[device_name][region]
+
+def get_signed_url_springer(device_id: str, region: str, target_version: str = None) -> dict:
+    """
+    Fetches a signed download URL from roms.danielspringer.at
+    Returns dict with 'url' and 'version' (if known).
+    """
+    headers = {
+        'User-Agent': USER_AGENT,
+    }
+    
+    session = requests.Session()
+    
+    versions = get_springer_versions(device_id, region, session)
+    if not versions:
+        return None
+        
     version_index = "0"
     
     if target_version:

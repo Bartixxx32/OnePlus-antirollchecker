@@ -1,0 +1,163 @@
+name: Historical Backfill
+run-name: Backfill for ${{ inputs.device || 'All' }} ${{ inputs.variant || '' }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      device:
+        description: 'Target Device (optional, e.g. 15)'
+        required: false
+      variant:
+        description: 'Target Variant (optional, e.g. CN)'
+        required: false
+
+jobs:
+  setup-matrix:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+      
+      - name: Generate Backfill Matrix
+        id: set-matrix
+        run: |
+          # Filter logic can be added to generate_backfill_matrix.py based on inputs if needed
+          python3 generate_backfill_matrix.py
+
+  backfill-variant:
+    needs: setup-matrix
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    strategy:
+      max-parallel: 5 # Avoid hitting rate limits too hard
+      fail-fast: false
+      matrix: ${{ fromJson(needs.setup-matrix.outputs.matrix) }}
+    
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y aria2 unzip curl python3-pip
+          pip3 install requests beautifulsoup4 --break-system-packages || pip3 install requests beautifulsoup4
+
+      - name: Setup Tools
+        run: |
+          mkdir -p tools
+          curl -L -o tools/arbextract https://github.com/koaaN/arbextract/releases/download/1.0/arbextract-x86_64-linux
+          chmod +x tools/arbextract
+          curl -L -o otaripper.tar.gz https://github.com/syedinsaf/otaripper/releases/download/v2.1.1/otaripper-2.1.1-linux-static-x86_64.tar.gz
+          tar -xzvf otaripper.tar.gz
+          mv otaripper tools/otaripper || find . -name "otaripper" -type f -exec mv {} tools/otaripper \;
+          chmod +x tools/otaripper
+          
+      - name: Get Firmware URL
+        id: get_details
+        run: |
+          python3 fetch_firmware.py "${{ matrix.device }}" "${{ matrix.variant }}" "${{ matrix.version }}" --output fw_info.json
+          URL=$(python3 -c "import sys, json; print(json.load(open('fw_info.json'))['url'])")
+          VERSION=$(python3 -c "import sys, json; print(json.load(open('fw_info.json'))['version'])")
+          echo "url=$URL" >> $GITHUB_OUTPUT
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Check Cache
+        id: cache-arb
+        uses: actions/cache/restore@v4
+        with:
+          path: firmware_data/
+          key: arb-check-v7-${{ matrix.device }}-${{ matrix.variant }}-${{ steps.get_details.outputs.version }}
+
+      - name: Download Firmware
+        if: steps.cache-arb.outputs.cache-hit != 'true'
+        run: |
+          URL="${{ steps.get_details.outputs.url }}"
+          aria2c -c -x16 -s16 -k1M -o firmware.zip "$URL" || echo "Download failed"
+
+      - name: Analyze Firmware
+        if: steps.cache-arb.outputs.cache-hit != 'true' && hashFiles('firmware.zip') != ''
+        run: |
+          python3 analyze_firmware.py firmware.zip --tools-dir tools --output-dir extracted --final-dir firmware_data --json > result.json
+          
+      - name: Update History (Historical)
+        if: hashFiles('result.json') != ''
+        run: |
+          python3 update_history.py \
+            "${{ matrix.device_short }}" \
+            "${{ matrix.variant }}" \
+            "${{ steps.get_details.outputs.version }}" \
+            --json-file result.json \
+            --historical
+
+      - name: Save Cache
+        if: steps.cache-arb.outputs.cache-hit != 'true' && hashFiles('firmware_data/xbl_config.img') != ''
+        uses: actions/cache/save@v4
+        with:
+          path: firmware_data/
+          key: arb-check-v7-${{ matrix.device }}-${{ matrix.variant }}-${{ steps.get_details.outputs.version }}
+
+      - name: Upload History
+        uses: actions/upload-artifact@v4
+        with:
+          name: history-${{ matrix.device }}-${{ matrix.variant }}-${{ strategy.job-index }}
+          path: data/history/${{ matrix.device_short }}_${{ matrix.variant }}.json
+
+  consolidate:
+    needs: backfill-variant
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Download All History
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+          merge-multiple: false
+      
+      - name: Merge History
+        shell: python
+        run: |
+          import os, json, glob
+          from pathlib import Path
+          
+          artifacts = glob.glob("artifacts/history-*/*.json")
+          merged = {}
+          for a in artifacts:
+              name = os.path.basename(a)
+              with open(a, "r") as f:
+                  data = json.load(f)
+              if name not in merged:
+                  merged[name] = data
+              else:
+                  # Merge history list, avoid duplicates
+                  existing_versions = {e["version"] for e in merged[name]["history"]}
+                  for entry in data["history"]:
+                      if entry["version"] not in existing_versions:
+                          merged[name]["history"].append(entry)
+                          existing_versions.add(entry["version"])
+
+          # Save merged results
+          os.makedirs("data/history", exist_ok=True)
+          for name, data in merged.items():
+              # Sort history by date/version if possible
+              data["history"].sort(key=lambda x: x.get("first_seen", ""), reverse=True)
+              with open(f"data/history/{name}", "w") as f:
+                  json.dump(data, f, indent=2)
+                  
+      - name: Generate Content
+        run: |
+          pip3 install jinja2
+          python3 generate_readme.py
+          python3 generate_site.py
+          
+      - name: Commit and Push
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data/history/*.json README.md
+          git commit -m "Backfill historical ARB data" || echo "No changes to commit"
+          git push

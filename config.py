@@ -249,7 +249,12 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
         "models": {
             "ID": "CPH2499",
             "IN": "CPH2519",
-            "MY": "CPH2499"
+            "MY": "CPH2499",
+            "OCA": "CPH2499",
+            "SG": "CPH2499",
+            "TH": "CPH2499",
+            "TW": "CPH2499",
+            "VN": "CPH2499"
         }
     }
 }
