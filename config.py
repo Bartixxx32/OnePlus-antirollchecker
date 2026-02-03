@@ -141,71 +141,75 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
     "Ace 5": {
         "name": "OnePlus Ace 5",
         "models": {
-            "CN": "Unknown"
+            "CN": "PKG110"
         }
     },
     "Ace 5 Pro": {
         "name": "OnePlus Ace 5 Pro",
         "models": {
-            "CN": "Unknown"
+            "CN": "PKR110"
         }
     },
     "Ace 5 Ultimate": {
         "name": "OnePlus Ace 5 Ultimate",
         "models": {
-            "CN": "Unknown"
+            "CN": "PLC110"
         }
     },
     "Pad 2 Pro": {
         "name": "OnePlus Pad 2 Pro",
         "models": {
-            "CN": "Unknown"
+            "CN": "OPD2413"
         }
     },
-    "Pad 3": {
-        "name": "OnePlus Pad 3",
-        "models": {
-            "GLO": "Unknown",
-            "EU": "Unknown",
-            "IN": "Unknown"
-        }
-    },
-    "Pad 2": {
-        "name": "OnePlus Pad 2",
-        "models": {
-            "GLO": "Unknown",
-            "EU": "Unknown",
-            "IN": "Unknown"
-        }
-    },
+
+# ... skipping Pad 3/2 section ...
 
     "Find X8": {
         "name": "Oppo Find X8",
         "models": {
-            "CN": "Unknown",
-            "IN": "Unknown"
+            "CN": "PKB110",
+            "IN": "CPH2651"
         }
     },
     "Find X8 Pro": {
         "name": "Oppo Find X8 Pro",
         "models": {
-            "CN": "Unknown",
-            "EU": "Unknown",
-            "IN": "Unknown"
+            "CN": "PKC110",
+            "EU": "CPH2659",
+            "IN": "CPH2659"
         }
     },
     "Find X8 Ultra": {
         "name": "Oppo Find X8 Ultra",
         "models": {
-            "CN": "Unknown"
+            "CN": "PKJ110"
         }
     },
+    "Pad 3": {
+        "name": "OnePlus Pad 3",
+        "models": {
+            "GLO": "OPD2415",
+            "EU": "OPD2415",
+            "IN": "OPD2415"
+        }
+    },
+    "Pad 2": {
+        "name": "OnePlus Pad 2",
+        "models": {
+            "GLO": "OPD2403",
+            "EU": "OPD2403",
+            "IN": "OPD2403"
+        }
+    },
+
+
     "Find N3": {
         "name": "Oppo Find N3",
         "models": {
             "ID": "CPH2499",
-            "IN": "Unknown",
-            "MY": "Unknown"
+            "IN": "CPH2519",
+            "MY": "CPH2499"
         }
     }
 }

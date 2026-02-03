@@ -125,7 +125,15 @@ def main():
         history['device'] = get_display_name(device_short)
         history['device_id'] = device_short
         history['region'] = variant
-        history['model'] = get_model_number(device_short, variant)
+        
+        model_num = get_model_number(device_short, variant)
+        if model_num == "Unknown" and version and "_" in version:
+            # Try to extract from version string (e.g., PKG110_16...)
+            extracted = version.split("_")[0]
+            if extracted.isalnum() and len(extracted) > 3:
+                model_num = extracted
+        
+        history['model'] = model_num
     
     is_new = update_history_entry(history, version, int(arb), int(major), int(minor), args.historical)
     save_history(history_file, history)
