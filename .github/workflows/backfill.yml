@@ -20,6 +20,10 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v4
       
+      - name: Install dependencies
+        run: |
+          pip3 install requests beautifulsoup4 --break-system-packages || pip3 install requests beautifulsoup4
+
       - name: Generate Backfill Matrix
         id: set-matrix
         run: |
