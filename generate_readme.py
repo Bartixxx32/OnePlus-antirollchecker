@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 from datetime import datetime, timezone
 from typing import Dict, List, Optional
-from config import DEVICE_ORDER, DEVICE_METADATA, UNTRACKED_RISKS
+from config import DEVICE_ORDER, DEVICE_METADATA
 
 def load_history(file_path: Path) -> Dict:
     """Load history from a JSON file."""
@@ -107,58 +107,23 @@ def generate_readme(history_data: Dict) -> str:
         '',
         '**Website:** [https://bartixxx32.github.io/OnePlus-antirollchecker/](https://bartixxx32.github.io/OnePlus-antirollchecker/)',
         '',
-        '## ⚠️ Risk Levels',
-        'We classify devices based on the probability of OnePlus increasing the ARB index (often triggered by firehose/unbrick tool leaks):',
-        '',
-        '- 🔴 **Critical**: Highest risk. ARB already enforced OR firehose tools leaked (making ARB update imminent).',
-        '- 🟠 **Medium**: Moderate risk. Newer devices where no unbrick tools have leaked yet (e.g., 15/15R).',
-        '- 🟢 **Low**: Minimal risk. ARB change is very unlikely (Legacy/EoL devices).',
-        '',
         '## 📊 Current Status',
         ''
     ]
 
-    risk_icons = {
-        "Critical": "🔴",
-        "Medium": "🟠",
-        "Low": "🟢"
-    }
-    
     # Iterate over DEVICE_ORDER from config
     for device_id in DEVICE_ORDER:
         if device_id not in DEVICE_METADATA:
             continue
         meta = DEVICE_METADATA[device_id]
         device_name = meta['name']
-        risk = meta.get('risk', 'Unknown')
-        icon = risk_icons.get(risk, "⚪")
         
-        # Add risk to title
-        display_name = f"{device_name}: {icon} {risk} Risk"
-        
-        device_lines = generate_device_section(device_id, display_name, history_data)
+        device_lines = generate_device_section(device_id, device_name, history_data)
         if device_lines:
             lines.extend(device_lines)
             lines.append('---')
             lines.append('')
             
-    # Add Untracked Devices Section
-    lines.extend([
-        '## Other Devices Risk',
-        'Devices without active firmware monitoring but with known risk levels.',
-        '',
-        '| Device | Risk |',
-        '|--------|------|'
-    ])
-    
-    untracked_sorted = sorted(UNTRACKED_RISKS.items(), key=lambda x: x[0])
-    for name, risk in untracked_sorted:
-         icon = risk_icons.get(risk, "⚪")
-         lines.append(f"| {name} | {icon} {risk} |")
-         
-    lines.extend(['', '---', ''])
-
-    
     # Add On-Demand Checker section
     lines.extend([
         '## 🤖 On-Demand ARB Checker',

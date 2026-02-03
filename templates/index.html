@@ -89,8 +89,8 @@
             width: 100%;
             border-collapse: collapse;
             font-size: 0.9em;
-            white-space: nowrap;
             table-layout: fixed;
+            /* Force fixed layout for consistency */
         }
 
         th,
@@ -98,6 +98,9 @@
             text-align: left;
             padding: 12px 15px;
             border-bottom: 1px solid var(--border-color);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
 
         th {
@@ -195,66 +198,21 @@
             <p class="subtitle">Real-time Anti-Rollback (ARB) index tracking for OnePlus devices</p>
         </header>
 
-        <!-- Risk Legend -->
-        <div class="card" style="margin-bottom: 30px;">
-            <div class="card-header">
-                <h2>⚠️ Risk Levels</h2>
-            </div>
-            <div class="card-body" style="padding: 20px;">
-                <p>We classify devices based on the probability of OnePlus increasing the ARB index (often triggered by
-                    firehose/unbrick tool leaks):</p>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;">
-                    <div style="display: flex; align-items: start; gap: 10px;">
-                        <span style="font-size: 1.5em;">🔴</span>
-                        <div>
-                            <strong>Critical Risk</strong>
-                            <div class="meta-info">ARB already enforced OR firehose tools leaked.</div>
-                        </div>
-                    </div>
-                    <div style="display: flex; align-items: start; gap: 10px;">
-                        <span style="font-size: 1.5em;">🟠</span>
-                        <div>
-                            <strong>Medium Risk</strong>
-                            <div class="meta-info">Moderate probability (e.g., 15/15R without leaks yet).</div>
-                        </div>
-                    </div>
-                    <div style="display: flex; align-items: start; gap: 10px;">
-                        <span style="font-size: 1.5em;">🟢</span>
-                        <div>
-                            <strong>Low Risk</strong>
-                            <div class="meta-info">Minimal risk (Legacy/EoL devices).</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div class="grid">
             {% for device in devices %}
             <div class="card">
-                <div class="card-header"
-                    style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-                    <h2 style="margin: 0;">{{ device.name }}</h2>
-                    {% if device.risk %}
-                    <span class="badge" style="
-                        background-color: {{ 'rgba(218, 54, 51, 0.15)' if device.risk == 'Critical' else 'rgba(210, 153, 34, 0.15)' if device.risk == 'Medium' else 'rgba(35, 134, 54, 0.15)' }};
-                        color: {{ '#f85149' if device.risk == 'Critical' else '#e3b341' if device.risk == 'Medium' else '#7ee787' }};
-                        border: 1px solid {{ 'rgba(218, 54, 51, 0.4)' if device.risk == 'Critical' else 'rgba(210, 153, 34, 0.4)' if device.risk == 'Medium' else 'rgba(35, 134, 54, 0.4)' }};
-                    ">
-                        {{ "🔴" if device.risk == 'Critical' else "🟠" if device.risk == 'Medium' else "🟢" }} {{
-                        device.risk }} Risk
-                    </span>
-                    {% endif %}
+                <div class="card-header">
+                    <h2>{{ device.name }}</h2>
                 </div>
                 <div class="card-body">
                     <table>
                         <thead>
                             <tr>
                                 <th scope="col" style="width: 15%;">Region</th>
-                                <th scope="col" style="width: 45%;">Version</th>
+                                <th scope="col" style="width: 40%;">Version</th>
                                 <th scope="col" style="width: 10%;">ARB</th>
                                 <th scope="col" style="width: 15%;">Status</th>
-                                <th scope="col" style="width: 15%;">Last Checked</th>
+                                <th scope="col" style="width: 20%;">Last Checked</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -292,42 +250,6 @@
                 </div>
             </div>
             {% endfor %}
-
-            <!-- Untracked Devices Card -->
-            {% if untracked_risks %}
-            <div class="card">
-                <div class="card-header">
-                    <h2>Other Devices Risk</h2>
-                </div>
-                <div class="card-body">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th scope="col">Device</th>
-                                <th scope="col">Risk Level</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {% for name, risk in untracked_risks.items()|sort %}
-                            <tr>
-                                <td><strong>{{ name }}</strong></td>
-                                <td>
-                                    <span class="badge" style="
-                                        background-color: {{ 'rgba(218, 54, 51, 0.15)' if risk == 'Critical' else 'rgba(210, 153, 34, 0.15)' if risk == 'Medium' else 'rgba(35, 134, 54, 0.15)' }};
-                                        color: {{ '#f85149' if risk == 'Critical' else '#e3b341' if risk == 'Medium' else '#7ee787' }};
-                                        border: 1px solid {{ 'rgba(218, 54, 51, 0.4)' if risk == 'Critical' else 'rgba(210, 153, 34, 0.4)' if risk == 'Medium' else 'rgba(35, 134, 54, 0.4)' }};
-                                    ">
-                                        {{ "🔴" if risk == 'Critical' else "🟠" if risk == 'Medium' else "🟢" }} {{
-                                        risk }}
-                                    </span>
-                                </td>
-                            </tr>
-                            {% endfor %}
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            {% endif %}
         </div>
 
         <div class="footer">

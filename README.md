@@ -4,16 +4,9 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
 
 **Website:** [https://bartixxx32.github.io/OnePlus-antirollchecker/](https://bartixxx32.github.io/OnePlus-antirollchecker/)
 
-## ⚠️ Risk Levels
-We classify devices based on the probability of OnePlus increasing the ARB index (often triggered by firehose/unbrick tool leaks):
-
-- 🔴 **Critical**: Highest risk. ARB already enforced OR firehose tools leaked (making ARB update imminent).
-- 🟠 **Medium**: Moderate risk. Newer devices where no unbrick tools have leaked yet (e.g., 15/15R).
-- 🟢 **Low**: Minimal risk. ARB change is very unlikely (Legacy/EoL devices).
-
 ## 📊 Current Status
 
-### OnePlus 15: 🟠 Medium Risk
+### OnePlus 15
 
 | Region | Model | Version | ARB | Status | Last Checked |
 |--------|-------|---------|-----|--------|--------------|
@@ -24,7 +17,7 @@ We classify devices based on the probability of OnePlus increasing the ARB index
 
 ---
 
-### OnePlus 15R: 🟠 Medium Risk
+### OnePlus 15R
 
 | Region | Model | Version | ARB | Status | Last Checked |
 |--------|-------|---------|-----|--------|--------------|
@@ -34,7 +27,7 @@ We classify devices based on the probability of OnePlus increasing the ARB index
 
 ---
 
-### OnePlus 13: 🔴 Critical Risk
+### OnePlus 13
 
 | Region | Model | Version | ARB | Status | Last Checked |
 |--------|-------|---------|-----|--------|--------------|
@@ -46,7 +39,7 @@ We classify devices based on the probability of OnePlus increasing the ARB index
 
 ---
 
-### OnePlus Open: 🔴 Critical Risk
+### OnePlus Open
 
 | Region | Model | Version | ARB | Status | Last Checked |
 |--------|-------|---------|-----|--------|--------------|
@@ -56,7 +49,7 @@ We classify devices based on the probability of OnePlus increasing the ARB index
 
 ---
 
-### OnePlus 12: 🔴 Critical Risk
+### OnePlus 12
 
 | Region | Model | Version | ARB | Status | Last Checked |
 |--------|-------|---------|-----|--------|--------------|
@@ -68,7 +61,7 @@ We classify devices based on the probability of OnePlus increasing the ARB index
 
 ---
 
-### OnePlus 12R: 🟠 Medium Risk
+### OnePlus 12R
 
 | Region | Model | Version | ARB | Status | Last Checked |
 |--------|-------|---------|-----|--------|--------------|
@@ -79,7 +72,7 @@ We classify devices based on the probability of OnePlus increasing the ARB index
 
 ---
 
-### OnePlus 11: 🟠 Medium Risk
+### OnePlus 11
 
 | Region | Model | Version | ARB | Status | Last Checked |
 |--------|-------|---------|-----|--------|--------------|
@@ -90,7 +83,7 @@ We classify devices based on the probability of OnePlus increasing the ARB index
 
 ---
 
-### OnePlus 11R: 🟠 Medium Risk
+### OnePlus 11R
 
 | Region | Model | Version | ARB | Status | Last Checked |
 |--------|-------|---------|-----|--------|--------------|
@@ -98,7 +91,7 @@ We classify devices based on the probability of OnePlus increasing the ARB index
 
 ---
 
-### OnePlus 10 Pro: 🟠 Medium Risk
+### OnePlus 10 Pro
 
 | Region | Model | Version | ARB | Status | Last Checked |
 |--------|-------|---------|-----|--------|--------------|
@@ -110,7 +103,7 @@ We classify devices based on the probability of OnePlus increasing the ARB index
 
 ---
 
-### OnePlus 10T: 🟠 Medium Risk
+### OnePlus 10T
 
 | Region | Model | Version | ARB | Status | Last Checked |
 |--------|-------|---------|-----|--------|--------------|
@@ -121,7 +114,7 @@ We classify devices based on the probability of OnePlus increasing the ARB index
 
 ---
 
-### OnePlus 9 Pro: ⚪ Unknown Risk
+### OnePlus 9 Pro
 
 | Region | Model | Version | ARB | Status | Last Checked |
 |--------|-------|---------|-----|--------|--------------|
@@ -131,7 +124,7 @@ We classify devices based on the probability of OnePlus increasing the ARB index
 
 ---
 
-### OnePlus 9: ⚪ Unknown Risk
+### OnePlus 9
 
 | Region | Model | Version | ARB | Status | Last Checked |
 |--------|-------|---------|-----|--------|--------------|
@@ -141,7 +134,7 @@ We classify devices based on the probability of OnePlus increasing the ARB index
 
 ---
 
-### OnePlus 9RT: ⚪ Unknown Risk
+### OnePlus 9RT
 
 | Region | Model | Version | ARB | Status | Last Checked |
 |--------|-------|---------|-----|--------|--------------|
@@ -149,7 +142,7 @@ We classify devices based on the probability of OnePlus increasing the ARB index
 
 ---
 
-### OnePlus Nord 5: 🔴 Critical Risk
+### OnePlus Nord 5
 
 | Region | Model | Version | ARB | Status | Last Checked |
 |--------|-------|---------|-----|--------|--------------|
@@ -159,7 +152,7 @@ We classify devices based on the probability of OnePlus increasing the ARB index
 
 ---
 
-### OnePlus Nord 4: 🔴 Critical Risk
+### OnePlus Nord 4
 
 | Region | Model | Version | ARB | Status | Last Checked |
 |--------|-------|---------|-----|--------|--------------|
@@ -169,7 +162,7 @@ We classify devices based on the probability of OnePlus increasing the ARB index
 
 ---
 
-### OnePlus Ace 6T: 🟠 Medium Risk
+### OnePlus Ace 6T
 
 | Region | Model | Version | ARB | Status | Last Checked |
 |--------|-------|---------|-----|--------|--------------|
@@ -177,7 +170,7 @@ We classify devices based on the probability of OnePlus increasing the ARB index
 
 ---
 
-### OnePlus Ace 5 Pro: 🔴 Critical Risk
+### OnePlus Ace 5 Pro
 
 | Region | Model | Version | ARB | Status | Last Checked |
 |--------|-------|---------|-----|--------|--------------|
@@ -185,7 +178,7 @@ We classify devices based on the probability of OnePlus increasing the ARB index
 
 ---
 
-### OnePlus Ace 5: 🔴 Critical Risk
+### OnePlus Ace 5
 
 | Region | Model | Version | ARB | Status | Last Checked |
 |--------|-------|---------|-----|--------|--------------|
@@ -193,7 +186,7 @@ We classify devices based on the probability of OnePlus increasing the ARB index
 
 ---
 
-### OnePlus Pad 3: 🔴 Critical Risk
+### OnePlus Pad 3
 
 | Region | Model | Version | ARB | Status | Last Checked |
 |--------|-------|---------|-----|--------|--------------|
@@ -204,7 +197,7 @@ We classify devices based on the probability of OnePlus increasing the ARB index
 
 ---
 
-### OnePlus Pad 2 Pro: 🔴 Critical Risk
+### OnePlus Pad 2 Pro
 
 | Region | Model | Version | ARB | Status | Last Checked |
 |--------|-------|---------|-----|--------|--------------|
@@ -212,7 +205,7 @@ We classify devices based on the probability of OnePlus increasing the ARB index
 
 ---
 
-### OnePlus Pad 2: 🔴 Critical Risk
+### OnePlus Pad 2
 
 | Region | Model | Version | ARB | Status | Last Checked |
 |--------|-------|---------|-----|--------|--------------|
@@ -222,7 +215,7 @@ We classify devices based on the probability of OnePlus increasing the ARB index
 
 ---
 
-### Oppo Find X8 Ultra: 🔴 Critical Risk
+### Oppo Find X8 Ultra
 
 | Region | Model | Version | ARB | Status | Last Checked |
 |--------|-------|---------|-----|--------|--------------|
@@ -230,70 +223,56 @@ We classify devices based on the probability of OnePlus increasing the ARB index
 
 ---
 
-### Oppo Find N5: 🔴 Critical Risk
+### Oppo Find N5
 
 | Region | Model | Version | ARB | Status | Last Checked |
 |--------|-------|---------|-----|--------|--------------|
 | China | PKV110 | PKH110_16.0.3.500(CN01) | 0 | ✅ Safe | 2026-02-03 |
 | SG | CPH2671 | CPH2671_16.0.2.401(EX01) | 0 | ✅ Safe | 2026-02-03 |
-| MY | CPH2671 | CPH2671_16.0.2.401(EX01) | 0 | ✅ Safe | 2026-02-03 |
-| TH | CPH2671 | CPH2671_16.0.2.401(EX01) | 0 | ✅ Safe | 2026-02-03 |
 | MX | CPH2671 | CPH2671_16.0.1.302(EX01) | 0 | ✅ Safe | 2026-02-03 |
+| TH | CPH2671 | CPH2671_16.0.2.401(EX01) | 0 | ✅ Safe | 2026-02-03 |
 | ID | CPH2671 | CPH2671_16.0.3.500(EX01) | 0 | ✅ Safe | 2026-02-03 |
 | APC | CPH2671 | CPH2671_16.0.2.401(EX01) | 0 | ✅ Safe | 2026-02-03 |
+| MY | CPH2671 | CPH2671_16.0.2.401(EX01) | 0 | ✅ Safe | 2026-02-03 |
 
 ---
 
-### Oppo Find N3: 🔴 Critical Risk
+### Oppo Find N3
 
 | Region | Model | Version | ARB | Status | Last Checked |
 |--------|-------|---------|-----|--------|--------------|
 | SG | CPH2499 | CPH2499_16.0.3.500(EX01) | 0 | ✅ Safe | 2026-02-03 |
+| TW | CPH2499 | CPH2499_16.0.3.500(EX01) | 0 | ✅ Safe | 2026-02-03 |
+| TH | CPH2499 | CPH2499_16.0.3.500(EX01) | 0 | ✅ Safe | 2026-02-03 |
+| ID | CPH2499 | CPH2499_16.0.3.500(EX01) | 0 | ✅ Safe | 2026-02-03 |
+| VN | CPH2499 | CPH2499_16.0.3.500(EX01) | 0 | ✅ Safe | 2026-02-03 |
 | MY | CPH2499 | CPH2499_16.0.3.500(EX01) | 0 | ✅ Safe | 2026-02-03 |
 | OCA | CPH2499 | CPH2499_16.0.0.203(EX01) | 0 | ✅ Safe | 2026-02-03 |
-| VN | CPH2499 | CPH2499_16.0.3.500(EX01) | 0 | ✅ Safe | 2026-02-03 |
-| TH | CPH2499 | CPH2499_16.0.3.500(EX01) | 0 | ✅ Safe | 2026-02-03 |
-| TW | CPH2499 | CPH2499_16.0.3.500(EX01) | 0 | ✅ Safe | 2026-02-03 |
-| ID | CPH2499 | CPH2499_16.0.3.500(EX01) | 0 | ✅ Safe | 2026-02-03 |
 
 ---
 
-### Oppo Find X5 Pro: 🟠 Medium Risk
+### Oppo Find X5 Pro
 
 | Region | Model | Version | ARB | Status | Last Checked |
 |--------|-------|---------|-----|--------|--------------|
 | Europe | CPH2305 | CPH2305_15.0.0.1303(EX01) | 0 | ✅ Safe | 2026-02-03 |
 | SG | CPH2305 | CPH2305_15.0.0.1301(EX01) | 0 | ✅ Safe | 2026-02-03 |
-| OCA | CPH2305 | CPH2305_11_A.22 | 0 | ✅ Safe | 2026-02-03 |
 | TW | CPH2305 | CPH2305_15.0.0.1301(EX01) | 0 | ✅ Safe | 2026-02-03 |
 | EG | CPH2305 | CPH2305_11_A.19 | 0 | ✅ Safe | 2026-02-03 |
+| OCA | CPH2305 | CPH2305_11_A.22 | 0 | ✅ Safe | 2026-02-03 |
 
 ---
 
-### Oppo Find X5: 🟠 Medium Risk
+### Oppo Find X5
 
 | Region | Model | Version | ARB | Status | Last Checked |
 |--------|-------|---------|-----|--------|--------------|
 | Global | CPH2307 | CPH2307_15.0.0.1304(EX01) | 0 | ✅ Safe | 2026-02-03 |
 | Europe | CPH2307 | CPH2307_15.0.0.1304(EX01) | 0 | ✅ Safe | 2026-02-03 |
 | India | CPH2307 | CPH2307_15.0.0.1304(EX01) | 0 | ✅ Safe | 2026-02-03 |
-| OCA | CPH2307 | CPH2307_15.0.0.1302(EX01) | 0 | ✅ Safe | 2026-02-03 |
-| SA | CPH2307 | CPH2307_15.0.0.1302(EX01) | 0 | ✅ Safe | 2026-02-03 |
 | EG | CPH2307 | CPH2307_15.0.0.1302(EX01) | 0 | ✅ Safe | 2026-02-03 |
-
----
-
-## Other Devices Risk
-Devices without active firmware monitoring but with known risk levels.
-
-| Device | Risk |
-|--------|------|
-| OnePlus 10R | 🔴 Critical |
-| OnePlus Nord CE 2 Lite 5G | 🟠 Medium |
-| OnePlus Nord CE 3 Lite 5G | 🟠 Medium |
-| OnePlus Nord CE 5G | 🟠 Medium |
-| OnePlus Nord N10 5G | 🟢 Low |
-| OnePlus Nord N100 | 🟢 Low |
+| SA | CPH2307 | CPH2307_15.0.0.1302(EX01) | 0 | ✅ Safe | 2026-02-03 |
+| OCA | CPH2307 | CPH2307_15.0.0.1302(EX01) | 0 | ✅ Safe | 2026-02-03 |
 
 ---
 
@@ -319,4 +298,4 @@ The bot will extract the payload, check the ARB index, and post the result as a 
 - **ARB Extraction**: [arbextract](https://github.com/koaaN/arbextract) by koaaN
 
 ---
-*Last updated: 2026-02-03 23:09 UTC*
+*Last updated: 2026-02-03 23:13 UTC*

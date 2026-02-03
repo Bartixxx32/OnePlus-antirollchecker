@@ -89,8 +89,8 @@
             width: 100%;
             border-collapse: collapse;
             font-size: 0.9em;
-            white-space: nowrap;
             table-layout: fixed;
+            /* Force fixed layout for consistency */
         }
 
         th,
@@ -98,6 +98,9 @@
             text-align: left;
             padding: 12px 15px;
             border-bottom: 1px solid var(--border-color);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
 
         th {
@@ -195,65 +198,21 @@
             <p class="subtitle">Real-time Anti-Rollback (ARB) index tracking for OnePlus devices</p>
         </header>
 
-        <!-- Risk Legend -->
-        <div class="card" style="margin-bottom: 30px;">
-            <div class="card-header">
-                <h2>⚠️ Risk Levels</h2>
-            </div>
-            <div class="card-body" style="padding: 20px;">
-                <p>We classify devices based on the probability of OnePlus increasing the ARB index (often triggered by
-                    firehose/unbrick tool leaks):</p>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;">
-                    <div style="display: flex; align-items: start; gap: 10px;">
-                        <span style="font-size: 1.5em;">🔴</span>
-                        <div>
-                            <strong>Critical Risk</strong>
-                            <div class="meta-info">ARB already enforced OR firehose tools leaked.</div>
-                        </div>
-                    </div>
-                    <div style="display: flex; align-items: start; gap: 10px;">
-                        <span style="font-size: 1.5em;">🟠</span>
-                        <div>
-                            <strong>Medium Risk</strong>
-                            <div class="meta-info">Moderate probability (e.g., 15/15R without leaks yet).</div>
-                        </div>
-                    </div>
-                    <div style="display: flex; align-items: start; gap: 10px;">
-                        <span style="font-size: 1.5em;">🟢</span>
-                        <div>
-                            <strong>Low Risk</strong>
-                            <div class="meta-info">Minimal risk (Legacy/EoL devices).</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div class="grid">
             
             <div class="card">
-                <div class="card-header"
-                    style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-                    <h2 style="margin: 0;">OnePlus 15</h2>
-                    
-                    <span class="badge" style="
-                        background-color: rgba(210, 153, 34, 0.15);
-                        color: #e3b341;
-                        border: 1px solid rgba(210, 153, 34, 0.4);
-                    ">
-                        🟠 Medium Risk
-                    </span>
-                    
+                <div class="card-header">
+                    <h2>OnePlus 15</h2>
                 </div>
                 <div class="card-body">
                     <table>
                         <thead>
                             <tr>
                                 <th scope="col" style="width: 15%;">Region</th>
-                                <th scope="col" style="width: 45%;">Version</th>
+                                <th scope="col" style="width: 40%;">Version</th>
                                 <th scope="col" style="width: 10%;">ARB</th>
                                 <th scope="col" style="width: 15%;">Status</th>
-                                <th scope="col" style="width: 15%;">Last Checked</th>
+                                <th scope="col" style="width: 20%;">Last Checked</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -337,28 +296,18 @@
             </div>
             
             <div class="card">
-                <div class="card-header"
-                    style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-                    <h2 style="margin: 0;">OnePlus 15R</h2>
-                    
-                    <span class="badge" style="
-                        background-color: rgba(210, 153, 34, 0.15);
-                        color: #e3b341;
-                        border: 1px solid rgba(210, 153, 34, 0.4);
-                    ">
-                        🟠 Medium Risk
-                    </span>
-                    
+                <div class="card-header">
+                    <h2>OnePlus 15R</h2>
                 </div>
                 <div class="card-body">
                     <table>
                         <thead>
                             <tr>
                                 <th scope="col" style="width: 15%;">Region</th>
-                                <th scope="col" style="width: 45%;">Version</th>
+                                <th scope="col" style="width: 40%;">Version</th>
                                 <th scope="col" style="width: 10%;">ARB</th>
                                 <th scope="col" style="width: 15%;">Status</th>
-                                <th scope="col" style="width: 15%;">Last Checked</th>
+                                <th scope="col" style="width: 20%;">Last Checked</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -424,28 +373,18 @@
             </div>
             
             <div class="card">
-                <div class="card-header"
-                    style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-                    <h2 style="margin: 0;">OnePlus 13</h2>
-                    
-                    <span class="badge" style="
-                        background-color: rgba(218, 54, 51, 0.15);
-                        color: #f85149;
-                        border: 1px solid rgba(218, 54, 51, 0.4);
-                    ">
-                        🔴 Critical Risk
-                    </span>
-                    
+                <div class="card-header">
+                    <h2>OnePlus 13</h2>
                 </div>
                 <div class="card-body">
                     <table>
                         <thead>
                             <tr>
                                 <th scope="col" style="width: 15%;">Region</th>
-                                <th scope="col" style="width: 45%;">Version</th>
+                                <th scope="col" style="width: 40%;">Version</th>
                                 <th scope="col" style="width: 10%;">ARB</th>
                                 <th scope="col" style="width: 15%;">Status</th>
-                                <th scope="col" style="width: 15%;">Last Checked</th>
+                                <th scope="col" style="width: 20%;">Last Checked</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -547,28 +486,18 @@
             </div>
             
             <div class="card">
-                <div class="card-header"
-                    style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-                    <h2 style="margin: 0;">OnePlus Open</h2>
-                    
-                    <span class="badge" style="
-                        background-color: rgba(218, 54, 51, 0.15);
-                        color: #f85149;
-                        border: 1px solid rgba(218, 54, 51, 0.4);
-                    ">
-                        🔴 Critical Risk
-                    </span>
-                    
+                <div class="card-header">
+                    <h2>OnePlus Open</h2>
                 </div>
                 <div class="card-body">
                     <table>
                         <thead>
                             <tr>
                                 <th scope="col" style="width: 15%;">Region</th>
-                                <th scope="col" style="width: 45%;">Version</th>
+                                <th scope="col" style="width: 40%;">Version</th>
                                 <th scope="col" style="width: 10%;">ARB</th>
                                 <th scope="col" style="width: 15%;">Status</th>
-                                <th scope="col" style="width: 15%;">Last Checked</th>
+                                <th scope="col" style="width: 20%;">Last Checked</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -634,28 +563,18 @@
             </div>
             
             <div class="card">
-                <div class="card-header"
-                    style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-                    <h2 style="margin: 0;">OnePlus 12</h2>
-                    
-                    <span class="badge" style="
-                        background-color: rgba(218, 54, 51, 0.15);
-                        color: #f85149;
-                        border: 1px solid rgba(218, 54, 51, 0.4);
-                    ">
-                        🔴 Critical Risk
-                    </span>
-                    
+                <div class="card-header">
+                    <h2>OnePlus 12</h2>
                 </div>
                 <div class="card-body">
                     <table>
                         <thead>
                             <tr>
                                 <th scope="col" style="width: 15%;">Region</th>
-                                <th scope="col" style="width: 45%;">Version</th>
+                                <th scope="col" style="width: 40%;">Version</th>
                                 <th scope="col" style="width: 10%;">ARB</th>
                                 <th scope="col" style="width: 15%;">Status</th>
-                                <th scope="col" style="width: 15%;">Last Checked</th>
+                                <th scope="col" style="width: 20%;">Last Checked</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -757,28 +676,18 @@
             </div>
             
             <div class="card">
-                <div class="card-header"
-                    style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-                    <h2 style="margin: 0;">OnePlus 12R</h2>
-                    
-                    <span class="badge" style="
-                        background-color: rgba(210, 153, 34, 0.15);
-                        color: #e3b341;
-                        border: 1px solid rgba(210, 153, 34, 0.4);
-                    ">
-                        🟠 Medium Risk
-                    </span>
-                    
+                <div class="card-header">
+                    <h2>OnePlus 12R</h2>
                 </div>
                 <div class="card-body">
                     <table>
                         <thead>
                             <tr>
                                 <th scope="col" style="width: 15%;">Region</th>
-                                <th scope="col" style="width: 45%;">Version</th>
+                                <th scope="col" style="width: 40%;">Version</th>
                                 <th scope="col" style="width: 10%;">ARB</th>
                                 <th scope="col" style="width: 15%;">Status</th>
-                                <th scope="col" style="width: 15%;">Last Checked</th>
+                                <th scope="col" style="width: 20%;">Last Checked</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -862,28 +771,18 @@
             </div>
             
             <div class="card">
-                <div class="card-header"
-                    style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-                    <h2 style="margin: 0;">OnePlus 11</h2>
-                    
-                    <span class="badge" style="
-                        background-color: rgba(210, 153, 34, 0.15);
-                        color: #e3b341;
-                        border: 1px solid rgba(210, 153, 34, 0.4);
-                    ">
-                        🟠 Medium Risk
-                    </span>
-                    
+                <div class="card-header">
+                    <h2>OnePlus 11</h2>
                 </div>
                 <div class="card-body">
                     <table>
                         <thead>
                             <tr>
                                 <th scope="col" style="width: 15%;">Region</th>
-                                <th scope="col" style="width: 45%;">Version</th>
+                                <th scope="col" style="width: 40%;">Version</th>
                                 <th scope="col" style="width: 10%;">ARB</th>
                                 <th scope="col" style="width: 15%;">Status</th>
-                                <th scope="col" style="width: 15%;">Last Checked</th>
+                                <th scope="col" style="width: 20%;">Last Checked</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -967,28 +866,18 @@
             </div>
             
             <div class="card">
-                <div class="card-header"
-                    style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-                    <h2 style="margin: 0;">OnePlus 11R</h2>
-                    
-                    <span class="badge" style="
-                        background-color: rgba(210, 153, 34, 0.15);
-                        color: #e3b341;
-                        border: 1px solid rgba(210, 153, 34, 0.4);
-                    ">
-                        🟠 Medium Risk
-                    </span>
-                    
+                <div class="card-header">
+                    <h2>OnePlus 11R</h2>
                 </div>
                 <div class="card-body">
                     <table>
                         <thead>
                             <tr>
                                 <th scope="col" style="width: 15%;">Region</th>
-                                <th scope="col" style="width: 45%;">Version</th>
+                                <th scope="col" style="width: 40%;">Version</th>
                                 <th scope="col" style="width: 10%;">ARB</th>
                                 <th scope="col" style="width: 15%;">Status</th>
-                                <th scope="col" style="width: 15%;">Last Checked</th>
+                                <th scope="col" style="width: 20%;">Last Checked</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -1018,28 +907,18 @@
             </div>
             
             <div class="card">
-                <div class="card-header"
-                    style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-                    <h2 style="margin: 0;">OnePlus 10 Pro</h2>
-                    
-                    <span class="badge" style="
-                        background-color: rgba(210, 153, 34, 0.15);
-                        color: #e3b341;
-                        border: 1px solid rgba(210, 153, 34, 0.4);
-                    ">
-                        🟠 Medium Risk
-                    </span>
-                    
+                <div class="card-header">
+                    <h2>OnePlus 10 Pro</h2>
                 </div>
                 <div class="card-body">
                     <table>
                         <thead>
                             <tr>
                                 <th scope="col" style="width: 15%;">Region</th>
-                                <th scope="col" style="width: 45%;">Version</th>
+                                <th scope="col" style="width: 40%;">Version</th>
                                 <th scope="col" style="width: 10%;">ARB</th>
                                 <th scope="col" style="width: 15%;">Status</th>
-                                <th scope="col" style="width: 15%;">Last Checked</th>
+                                <th scope="col" style="width: 20%;">Last Checked</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -1141,28 +1020,18 @@
             </div>
             
             <div class="card">
-                <div class="card-header"
-                    style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-                    <h2 style="margin: 0;">OnePlus 10T</h2>
-                    
-                    <span class="badge" style="
-                        background-color: rgba(210, 153, 34, 0.15);
-                        color: #e3b341;
-                        border: 1px solid rgba(210, 153, 34, 0.4);
-                    ">
-                        🟠 Medium Risk
-                    </span>
-                    
+                <div class="card-header">
+                    <h2>OnePlus 10T</h2>
                 </div>
                 <div class="card-body">
                     <table>
                         <thead>
                             <tr>
                                 <th scope="col" style="width: 15%;">Region</th>
-                                <th scope="col" style="width: 45%;">Version</th>
+                                <th scope="col" style="width: 40%;">Version</th>
                                 <th scope="col" style="width: 10%;">ARB</th>
                                 <th scope="col" style="width: 15%;">Status</th>
-                                <th scope="col" style="width: 15%;">Last Checked</th>
+                                <th scope="col" style="width: 20%;">Last Checked</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -1246,28 +1115,18 @@
             </div>
             
             <div class="card">
-                <div class="card-header"
-                    style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-                    <h2 style="margin: 0;">OnePlus 9 Pro</h2>
-                    
-                    <span class="badge" style="
-                        background-color: rgba(35, 134, 54, 0.15);
-                        color: #7ee787;
-                        border: 1px solid rgba(35, 134, 54, 0.4);
-                    ">
-                        🟢 Unknown Risk
-                    </span>
-                    
+                <div class="card-header">
+                    <h2>OnePlus 9 Pro</h2>
                 </div>
                 <div class="card-body">
                     <table>
                         <thead>
                             <tr>
                                 <th scope="col" style="width: 15%;">Region</th>
-                                <th scope="col" style="width: 45%;">Version</th>
+                                <th scope="col" style="width: 40%;">Version</th>
                                 <th scope="col" style="width: 10%;">ARB</th>
                                 <th scope="col" style="width: 15%;">Status</th>
-                                <th scope="col" style="width: 15%;">Last Checked</th>
+                                <th scope="col" style="width: 20%;">Last Checked</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -1333,28 +1192,18 @@
             </div>
             
             <div class="card">
-                <div class="card-header"
-                    style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-                    <h2 style="margin: 0;">OnePlus 9</h2>
-                    
-                    <span class="badge" style="
-                        background-color: rgba(35, 134, 54, 0.15);
-                        color: #7ee787;
-                        border: 1px solid rgba(35, 134, 54, 0.4);
-                    ">
-                        🟢 Unknown Risk
-                    </span>
-                    
+                <div class="card-header">
+                    <h2>OnePlus 9</h2>
                 </div>
                 <div class="card-body">
                     <table>
                         <thead>
                             <tr>
                                 <th scope="col" style="width: 15%;">Region</th>
-                                <th scope="col" style="width: 45%;">Version</th>
+                                <th scope="col" style="width: 40%;">Version</th>
                                 <th scope="col" style="width: 10%;">ARB</th>
                                 <th scope="col" style="width: 15%;">Status</th>
-                                <th scope="col" style="width: 15%;">Last Checked</th>
+                                <th scope="col" style="width: 20%;">Last Checked</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -1420,28 +1269,18 @@
             </div>
             
             <div class="card">
-                <div class="card-header"
-                    style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-                    <h2 style="margin: 0;">OnePlus 9RT</h2>
-                    
-                    <span class="badge" style="
-                        background-color: rgba(35, 134, 54, 0.15);
-                        color: #7ee787;
-                        border: 1px solid rgba(35, 134, 54, 0.4);
-                    ">
-                        🟢 Unknown Risk
-                    </span>
-                    
+                <div class="card-header">
+                    <h2>OnePlus 9RT</h2>
                 </div>
                 <div class="card-body">
                     <table>
                         <thead>
                             <tr>
                                 <th scope="col" style="width: 15%;">Region</th>
-                                <th scope="col" style="width: 45%;">Version</th>
+                                <th scope="col" style="width: 40%;">Version</th>
                                 <th scope="col" style="width: 10%;">ARB</th>
                                 <th scope="col" style="width: 15%;">Status</th>
-                                <th scope="col" style="width: 15%;">Last Checked</th>
+                                <th scope="col" style="width: 20%;">Last Checked</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -1471,28 +1310,18 @@
             </div>
             
             <div class="card">
-                <div class="card-header"
-                    style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-                    <h2 style="margin: 0;">OnePlus Nord 5</h2>
-                    
-                    <span class="badge" style="
-                        background-color: rgba(218, 54, 51, 0.15);
-                        color: #f85149;
-                        border: 1px solid rgba(218, 54, 51, 0.4);
-                    ">
-                        🔴 Critical Risk
-                    </span>
-                    
+                <div class="card-header">
+                    <h2>OnePlus Nord 5</h2>
                 </div>
                 <div class="card-body">
                     <table>
                         <thead>
                             <tr>
                                 <th scope="col" style="width: 15%;">Region</th>
-                                <th scope="col" style="width: 45%;">Version</th>
+                                <th scope="col" style="width: 40%;">Version</th>
                                 <th scope="col" style="width: 10%;">ARB</th>
                                 <th scope="col" style="width: 15%;">Status</th>
-                                <th scope="col" style="width: 15%;">Last Checked</th>
+                                <th scope="col" style="width: 20%;">Last Checked</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -1558,28 +1387,18 @@
             </div>
             
             <div class="card">
-                <div class="card-header"
-                    style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-                    <h2 style="margin: 0;">OnePlus Nord 4</h2>
-                    
-                    <span class="badge" style="
-                        background-color: rgba(218, 54, 51, 0.15);
-                        color: #f85149;
-                        border: 1px solid rgba(218, 54, 51, 0.4);
-                    ">
-                        🔴 Critical Risk
-                    </span>
-                    
+                <div class="card-header">
+                    <h2>OnePlus Nord 4</h2>
                 </div>
                 <div class="card-body">
                     <table>
                         <thead>
                             <tr>
                                 <th scope="col" style="width: 15%;">Region</th>
-                                <th scope="col" style="width: 45%;">Version</th>
+                                <th scope="col" style="width: 40%;">Version</th>
                                 <th scope="col" style="width: 10%;">ARB</th>
                                 <th scope="col" style="width: 15%;">Status</th>
-                                <th scope="col" style="width: 15%;">Last Checked</th>
+                                <th scope="col" style="width: 20%;">Last Checked</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -1645,28 +1464,18 @@
             </div>
             
             <div class="card">
-                <div class="card-header"
-                    style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-                    <h2 style="margin: 0;">OnePlus Ace 6T</h2>
-                    
-                    <span class="badge" style="
-                        background-color: rgba(210, 153, 34, 0.15);
-                        color: #e3b341;
-                        border: 1px solid rgba(210, 153, 34, 0.4);
-                    ">
-                        🟠 Medium Risk
-                    </span>
-                    
+                <div class="card-header">
+                    <h2>OnePlus Ace 6T</h2>
                 </div>
                 <div class="card-body">
                     <table>
                         <thead>
                             <tr>
                                 <th scope="col" style="width: 15%;">Region</th>
-                                <th scope="col" style="width: 45%;">Version</th>
+                                <th scope="col" style="width: 40%;">Version</th>
                                 <th scope="col" style="width: 10%;">ARB</th>
                                 <th scope="col" style="width: 15%;">Status</th>
-                                <th scope="col" style="width: 15%;">Last Checked</th>
+                                <th scope="col" style="width: 20%;">Last Checked</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -1696,28 +1505,18 @@
             </div>
             
             <div class="card">
-                <div class="card-header"
-                    style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-                    <h2 style="margin: 0;">OnePlus Ace 5 Pro</h2>
-                    
-                    <span class="badge" style="
-                        background-color: rgba(218, 54, 51, 0.15);
-                        color: #f85149;
-                        border: 1px solid rgba(218, 54, 51, 0.4);
-                    ">
-                        🔴 Critical Risk
-                    </span>
-                    
+                <div class="card-header">
+                    <h2>OnePlus Ace 5 Pro</h2>
                 </div>
                 <div class="card-body">
                     <table>
                         <thead>
                             <tr>
                                 <th scope="col" style="width: 15%;">Region</th>
-                                <th scope="col" style="width: 45%;">Version</th>
+                                <th scope="col" style="width: 40%;">Version</th>
                                 <th scope="col" style="width: 10%;">ARB</th>
                                 <th scope="col" style="width: 15%;">Status</th>
-                                <th scope="col" style="width: 15%;">Last Checked</th>
+                                <th scope="col" style="width: 20%;">Last Checked</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -1747,28 +1546,18 @@
             </div>
             
             <div class="card">
-                <div class="card-header"
-                    style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-                    <h2 style="margin: 0;">OnePlus Ace 5</h2>
-                    
-                    <span class="badge" style="
-                        background-color: rgba(218, 54, 51, 0.15);
-                        color: #f85149;
-                        border: 1px solid rgba(218, 54, 51, 0.4);
-                    ">
-                        🔴 Critical Risk
-                    </span>
-                    
+                <div class="card-header">
+                    <h2>OnePlus Ace 5</h2>
                 </div>
                 <div class="card-body">
                     <table>
                         <thead>
                             <tr>
                                 <th scope="col" style="width: 15%;">Region</th>
-                                <th scope="col" style="width: 45%;">Version</th>
+                                <th scope="col" style="width: 40%;">Version</th>
                                 <th scope="col" style="width: 10%;">ARB</th>
                                 <th scope="col" style="width: 15%;">Status</th>
-                                <th scope="col" style="width: 15%;">Last Checked</th>
+                                <th scope="col" style="width: 20%;">Last Checked</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -1798,28 +1587,18 @@
             </div>
             
             <div class="card">
-                <div class="card-header"
-                    style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-                    <h2 style="margin: 0;">OnePlus Pad 3</h2>
-                    
-                    <span class="badge" style="
-                        background-color: rgba(218, 54, 51, 0.15);
-                        color: #f85149;
-                        border: 1px solid rgba(218, 54, 51, 0.4);
-                    ">
-                        🔴 Critical Risk
-                    </span>
-                    
+                <div class="card-header">
+                    <h2>OnePlus Pad 3</h2>
                 </div>
                 <div class="card-body">
                     <table>
                         <thead>
                             <tr>
                                 <th scope="col" style="width: 15%;">Region</th>
-                                <th scope="col" style="width: 45%;">Version</th>
+                                <th scope="col" style="width: 40%;">Version</th>
                                 <th scope="col" style="width: 10%;">ARB</th>
                                 <th scope="col" style="width: 15%;">Status</th>
-                                <th scope="col" style="width: 15%;">Last Checked</th>
+                                <th scope="col" style="width: 20%;">Last Checked</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -1903,28 +1682,18 @@
             </div>
             
             <div class="card">
-                <div class="card-header"
-                    style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-                    <h2 style="margin: 0;">OnePlus Pad 2 Pro</h2>
-                    
-                    <span class="badge" style="
-                        background-color: rgba(218, 54, 51, 0.15);
-                        color: #f85149;
-                        border: 1px solid rgba(218, 54, 51, 0.4);
-                    ">
-                        🔴 Critical Risk
-                    </span>
-                    
+                <div class="card-header">
+                    <h2>OnePlus Pad 2 Pro</h2>
                 </div>
                 <div class="card-body">
                     <table>
                         <thead>
                             <tr>
                                 <th scope="col" style="width: 15%;">Region</th>
-                                <th scope="col" style="width: 45%;">Version</th>
+                                <th scope="col" style="width: 40%;">Version</th>
                                 <th scope="col" style="width: 10%;">ARB</th>
                                 <th scope="col" style="width: 15%;">Status</th>
-                                <th scope="col" style="width: 15%;">Last Checked</th>
+                                <th scope="col" style="width: 20%;">Last Checked</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -1954,28 +1723,18 @@
             </div>
             
             <div class="card">
-                <div class="card-header"
-                    style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-                    <h2 style="margin: 0;">OnePlus Pad 2</h2>
-                    
-                    <span class="badge" style="
-                        background-color: rgba(218, 54, 51, 0.15);
-                        color: #f85149;
-                        border: 1px solid rgba(218, 54, 51, 0.4);
-                    ">
-                        🔴 Critical Risk
-                    </span>
-                    
+                <div class="card-header">
+                    <h2>OnePlus Pad 2</h2>
                 </div>
                 <div class="card-body">
                     <table>
                         <thead>
                             <tr>
                                 <th scope="col" style="width: 15%;">Region</th>
-                                <th scope="col" style="width: 45%;">Version</th>
+                                <th scope="col" style="width: 40%;">Version</th>
                                 <th scope="col" style="width: 10%;">ARB</th>
                                 <th scope="col" style="width: 15%;">Status</th>
-                                <th scope="col" style="width: 15%;">Last Checked</th>
+                                <th scope="col" style="width: 20%;">Last Checked</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -2041,28 +1800,18 @@
             </div>
             
             <div class="card">
-                <div class="card-header"
-                    style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-                    <h2 style="margin: 0;">Oppo Find X8 Ultra</h2>
-                    
-                    <span class="badge" style="
-                        background-color: rgba(218, 54, 51, 0.15);
-                        color: #f85149;
-                        border: 1px solid rgba(218, 54, 51, 0.4);
-                    ">
-                        🔴 Critical Risk
-                    </span>
-                    
+                <div class="card-header">
+                    <h2>Oppo Find X8 Ultra</h2>
                 </div>
                 <div class="card-body">
                     <table>
                         <thead>
                             <tr>
                                 <th scope="col" style="width: 15%;">Region</th>
-                                <th scope="col" style="width: 45%;">Version</th>
+                                <th scope="col" style="width: 40%;">Version</th>
                                 <th scope="col" style="width: 10%;">ARB</th>
                                 <th scope="col" style="width: 15%;">Status</th>
-                                <th scope="col" style="width: 15%;">Last Checked</th>
+                                <th scope="col" style="width: 20%;">Last Checked</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -2092,28 +1841,18 @@
             </div>
             
             <div class="card">
-                <div class="card-header"
-                    style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-                    <h2 style="margin: 0;">Oppo Find N5</h2>
-                    
-                    <span class="badge" style="
-                        background-color: rgba(218, 54, 51, 0.15);
-                        color: #f85149;
-                        border: 1px solid rgba(218, 54, 51, 0.4);
-                    ">
-                        🔴 Critical Risk
-                    </span>
-                    
+                <div class="card-header">
+                    <h2>Oppo Find N5</h2>
                 </div>
                 <div class="card-body">
                     <table>
                         <thead>
                             <tr>
                                 <th scope="col" style="width: 15%;">Region</th>
-                                <th scope="col" style="width: 45%;">Version</th>
+                                <th scope="col" style="width: 40%;">Version</th>
                                 <th scope="col" style="width: 10%;">ARB</th>
                                 <th scope="col" style="width: 15%;">Status</th>
-                                <th scope="col" style="width: 15%;">Last Checked</th>
+                                <th scope="col" style="width: 20%;">Last Checked</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -2138,43 +1877,7 @@
                             
                             <tr>
                                 <td>
-                                    <strong>MX</strong>
-                                    <span class="meta-info">CPH2671</span>
-                                </td>
-                                <td class="version-cell" title="CPH2671_16.0.1.302(EX01)">
-                                    CPH2671_16.0.1.302(EX01)
-                                    <span class="meta-info">Major: 3,&nbsp;Minor: 0</span>
-                                </td>
-                                <td><strong>0</strong></td>
-                                <td>
-                                    
-                                    <span class="badge badge-safe">Safe</span>
-                                    
-                                </td>
-                                <td>2026-02-03</td>
-                            </tr>
-                            
-                            <tr>
-                                <td>
-                                    <strong>SG</strong>
-                                    <span class="meta-info">CPH2671</span>
-                                </td>
-                                <td class="version-cell" title="CPH2671_16.0.2.401(EX01)">
-                                    CPH2671_16.0.2.401(EX01)
-                                    <span class="meta-info">Major: 3,&nbsp;Minor: 0</span>
-                                </td>
-                                <td><strong>0</strong></td>
-                                <td>
-                                    
-                                    <span class="badge badge-safe">Safe</span>
-                                    
-                                </td>
-                                <td>2026-02-03</td>
-                            </tr>
-                            
-                            <tr>
-                                <td>
-                                    <strong>TH</strong>
+                                    <strong>APC</strong>
                                     <span class="meta-info">CPH2671</span>
                                 </td>
                                 <td class="version-cell" title="CPH2671_16.0.2.401(EX01)">
@@ -2228,7 +1931,43 @@
                             
                             <tr>
                                 <td>
-                                    <strong>APC</strong>
+                                    <strong>SG</strong>
+                                    <span class="meta-info">CPH2671</span>
+                                </td>
+                                <td class="version-cell" title="CPH2671_16.0.2.401(EX01)">
+                                    CPH2671_16.0.2.401(EX01)
+                                    <span class="meta-info">Major: 3,&nbsp;Minor: 0</span>
+                                </td>
+                                <td><strong>0</strong></td>
+                                <td>
+                                    
+                                    <span class="badge badge-safe">Safe</span>
+                                    
+                                </td>
+                                <td>2026-02-03</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <strong>MX</strong>
+                                    <span class="meta-info">CPH2671</span>
+                                </td>
+                                <td class="version-cell" title="CPH2671_16.0.1.302(EX01)">
+                                    CPH2671_16.0.1.302(EX01)
+                                    <span class="meta-info">Major: 3,&nbsp;Minor: 0</span>
+                                </td>
+                                <td><strong>0</strong></td>
+                                <td>
+                                    
+                                    <span class="badge badge-safe">Safe</span>
+                                    
+                                </td>
+                                <td>2026-02-03</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <strong>TH</strong>
                                     <span class="meta-info">CPH2671</span>
                                 </td>
                                 <td class="version-cell" title="CPH2671_16.0.2.401(EX01)">
@@ -2251,31 +1990,75 @@
             </div>
             
             <div class="card">
-                <div class="card-header"
-                    style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-                    <h2 style="margin: 0;">Oppo Find N3</h2>
-                    
-                    <span class="badge" style="
-                        background-color: rgba(218, 54, 51, 0.15);
-                        color: #f85149;
-                        border: 1px solid rgba(218, 54, 51, 0.4);
-                    ">
-                        🔴 Critical Risk
-                    </span>
-                    
+                <div class="card-header">
+                    <h2>Oppo Find N3</h2>
                 </div>
                 <div class="card-body">
                     <table>
                         <thead>
                             <tr>
                                 <th scope="col" style="width: 15%;">Region</th>
-                                <th scope="col" style="width: 45%;">Version</th>
+                                <th scope="col" style="width: 40%;">Version</th>
                                 <th scope="col" style="width: 10%;">ARB</th>
                                 <th scope="col" style="width: 15%;">Status</th>
-                                <th scope="col" style="width: 15%;">Last Checked</th>
+                                <th scope="col" style="width: 20%;">Last Checked</th>
                             </tr>
                         </thead>
                         <tbody>
+                            
+                            <tr>
+                                <td>
+                                    <strong>OCA</strong>
+                                    <span class="meta-info">CPH2499</span>
+                                </td>
+                                <td class="version-cell" title="CPH2499_16.0.0.203(EX01)">
+                                    CPH2499_16.0.0.203(EX01)
+                                    <span class="meta-info">Major: 2,&nbsp;Minor: 0</span>
+                                </td>
+                                <td><strong>0</strong></td>
+                                <td>
+                                    
+                                    <span class="badge badge-safe">Safe</span>
+                                    
+                                </td>
+                                <td>2026-02-03</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <strong>MY</strong>
+                                    <span class="meta-info">CPH2499</span>
+                                </td>
+                                <td class="version-cell" title="CPH2499_16.0.3.500(EX01)">
+                                    CPH2499_16.0.3.500(EX01)
+                                    <span class="meta-info">Major: 2,&nbsp;Minor: 0</span>
+                                </td>
+                                <td><strong>0</strong></td>
+                                <td>
+                                    
+                                    <span class="badge badge-safe">Safe</span>
+                                    
+                                </td>
+                                <td>2026-02-03</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <strong>ID</strong>
+                                    <span class="meta-info">CPH2499</span>
+                                </td>
+                                <td class="version-cell" title="CPH2499_16.0.3.500(EX01)">
+                                    CPH2499_16.0.3.500(EX01)
+                                    <span class="meta-info">Major: 2,&nbsp;Minor: 0</span>
+                                </td>
+                                <td><strong>0</strong></td>
+                                <td>
+                                    
+                                    <span class="badge badge-safe">Safe</span>
+                                    
+                                </td>
+                                <td>2026-02-03</td>
+                            </tr>
                             
                             <tr>
                                 <td>
@@ -2315,29 +2098,11 @@
                             
                             <tr>
                                 <td>
-                                    <strong>MY</strong>
+                                    <strong>VN</strong>
                                     <span class="meta-info">CPH2499</span>
                                 </td>
                                 <td class="version-cell" title="CPH2499_16.0.3.500(EX01)">
                                     CPH2499_16.0.3.500(EX01)
-                                    <span class="meta-info">Major: 2,&nbsp;Minor: 0</span>
-                                </td>
-                                <td><strong>0</strong></td>
-                                <td>
-                                    
-                                    <span class="badge badge-safe">Safe</span>
-                                    
-                                </td>
-                                <td>2026-02-03</td>
-                            </tr>
-                            
-                            <tr>
-                                <td>
-                                    <strong>OCA</strong>
-                                    <span class="meta-info">CPH2499</span>
-                                </td>
-                                <td class="version-cell" title="CPH2499_16.0.0.203(EX01)">
-                                    CPH2499_16.0.0.203(EX01)
                                     <span class="meta-info">Major: 2,&nbsp;Minor: 0</span>
                                 </td>
                                 <td><strong>0</strong></td>
@@ -2367,42 +2132,6 @@
                                 <td>2026-02-03</td>
                             </tr>
                             
-                            <tr>
-                                <td>
-                                    <strong>ID</strong>
-                                    <span class="meta-info">CPH2499</span>
-                                </td>
-                                <td class="version-cell" title="CPH2499_16.0.3.500(EX01)">
-                                    CPH2499_16.0.3.500(EX01)
-                                    <span class="meta-info">Major: 2,&nbsp;Minor: 0</span>
-                                </td>
-                                <td><strong>0</strong></td>
-                                <td>
-                                    
-                                    <span class="badge badge-safe">Safe</span>
-                                    
-                                </td>
-                                <td>2026-02-03</td>
-                            </tr>
-                            
-                            <tr>
-                                <td>
-                                    <strong>VN</strong>
-                                    <span class="meta-info">CPH2499</span>
-                                </td>
-                                <td class="version-cell" title="CPH2499_16.0.3.500(EX01)">
-                                    CPH2499_16.0.3.500(EX01)
-                                    <span class="meta-info">Major: 2,&nbsp;Minor: 0</span>
-                                </td>
-                                <td><strong>0</strong></td>
-                                <td>
-                                    
-                                    <span class="badge badge-safe">Safe</span>
-                                    
-                                </td>
-                                <td>2026-02-03</td>
-                            </tr>
-                            
                             
                         </tbody>
                     </table>
@@ -2410,28 +2139,18 @@
             </div>
             
             <div class="card">
-                <div class="card-header"
-                    style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-                    <h2 style="margin: 0;">Oppo Find X5 Pro</h2>
-                    
-                    <span class="badge" style="
-                        background-color: rgba(210, 153, 34, 0.15);
-                        color: #e3b341;
-                        border: 1px solid rgba(210, 153, 34, 0.4);
-                    ">
-                        🟠 Medium Risk
-                    </span>
-                    
+                <div class="card-header">
+                    <h2>Oppo Find X5 Pro</h2>
                 </div>
                 <div class="card-body">
                     <table>
                         <thead>
                             <tr>
                                 <th scope="col" style="width: 15%;">Region</th>
-                                <th scope="col" style="width: 45%;">Version</th>
+                                <th scope="col" style="width: 40%;">Version</th>
                                 <th scope="col" style="width: 10%;">ARB</th>
                                 <th scope="col" style="width: 15%;">Status</th>
-                                <th scope="col" style="width: 15%;">Last Checked</th>
+                                <th scope="col" style="width: 20%;">Last Checked</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -2456,7 +2175,43 @@
                             
                             <tr>
                                 <td>
+                                    <strong>OCA</strong>
+                                    <span class="meta-info">CPH2305</span>
+                                </td>
+                                <td class="version-cell" title="CPH2305_11_A.22">
+                                    CPH2305_11_A.22
+                                    <span class="meta-info">Major: 2,&nbsp;Minor: 0</span>
+                                </td>
+                                <td><strong>0</strong></td>
+                                <td>
+                                    
+                                    <span class="badge badge-safe">Safe</span>
+                                    
+                                </td>
+                                <td>2026-02-03</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
                                     <strong>SG</strong>
+                                    <span class="meta-info">CPH2305</span>
+                                </td>
+                                <td class="version-cell" title="CPH2305_15.0.0.1301(EX01)">
+                                    CPH2305_15.0.0.1301(EX01)
+                                    <span class="meta-info">Major: 2,&nbsp;Minor: 0</span>
+                                </td>
+                                <td><strong>0</strong></td>
+                                <td>
+                                    
+                                    <span class="badge badge-safe">Safe</span>
+                                    
+                                </td>
+                                <td>2026-02-03</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <strong>TW</strong>
                                     <span class="meta-info">CPH2305</span>
                                 </td>
                                 <td class="version-cell" title="CPH2305_15.0.0.1301(EX01)">
@@ -2490,42 +2245,6 @@
                                 <td>2026-02-03</td>
                             </tr>
                             
-                            <tr>
-                                <td>
-                                    <strong>OCA</strong>
-                                    <span class="meta-info">CPH2305</span>
-                                </td>
-                                <td class="version-cell" title="CPH2305_11_A.22">
-                                    CPH2305_11_A.22
-                                    <span class="meta-info">Major: 2,&nbsp;Minor: 0</span>
-                                </td>
-                                <td><strong>0</strong></td>
-                                <td>
-                                    
-                                    <span class="badge badge-safe">Safe</span>
-                                    
-                                </td>
-                                <td>2026-02-03</td>
-                            </tr>
-                            
-                            <tr>
-                                <td>
-                                    <strong>TW</strong>
-                                    <span class="meta-info">CPH2305</span>
-                                </td>
-                                <td class="version-cell" title="CPH2305_15.0.0.1301(EX01)">
-                                    CPH2305_15.0.0.1301(EX01)
-                                    <span class="meta-info">Major: 2,&nbsp;Minor: 0</span>
-                                </td>
-                                <td><strong>0</strong></td>
-                                <td>
-                                    
-                                    <span class="badge badge-safe">Safe</span>
-                                    
-                                </td>
-                                <td>2026-02-03</td>
-                            </tr>
-                            
                             
                         </tbody>
                     </table>
@@ -2533,28 +2252,18 @@
             </div>
             
             <div class="card">
-                <div class="card-header"
-                    style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-                    <h2 style="margin: 0;">Oppo Find X5</h2>
-                    
-                    <span class="badge" style="
-                        background-color: rgba(210, 153, 34, 0.15);
-                        color: #e3b341;
-                        border: 1px solid rgba(210, 153, 34, 0.4);
-                    ">
-                        🟠 Medium Risk
-                    </span>
-                    
+                <div class="card-header">
+                    <h2>Oppo Find X5</h2>
                 </div>
                 <div class="card-body">
                     <table>
                         <thead>
                             <tr>
                                 <th scope="col" style="width: 15%;">Region</th>
-                                <th scope="col" style="width: 45%;">Version</th>
+                                <th scope="col" style="width: 40%;">Version</th>
                                 <th scope="col" style="width: 10%;">ARB</th>
                                 <th scope="col" style="width: 15%;">Status</th>
-                                <th scope="col" style="width: 15%;">Last Checked</th>
+                                <th scope="col" style="width: 20%;">Last Checked</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -2615,24 +2324,6 @@
                             
                             <tr>
                                 <td>
-                                    <strong>EG</strong>
-                                    <span class="meta-info">CPH2307</span>
-                                </td>
-                                <td class="version-cell" title="CPH2307_15.0.0.1302(EX01)">
-                                    CPH2307_15.0.0.1302(EX01)
-                                    <span class="meta-info">Major: 0,&nbsp;Minor: 120</span>
-                                </td>
-                                <td><strong>0</strong></td>
-                                <td>
-                                    
-                                    <span class="badge badge-safe">Safe</span>
-                                    
-                                </td>
-                                <td>2026-02-03</td>
-                            </tr>
-                            
-                            <tr>
-                                <td>
                                     <strong>OCA</strong>
                                     <span class="meta-info">CPH2307</span>
                                 </td>
@@ -2667,106 +2358,24 @@
                                 <td>2026-02-03</td>
                             </tr>
                             
-                            
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            
-
-            <!-- Untracked Devices Card -->
-            
-            <div class="card">
-                <div class="card-header">
-                    <h2>Other Devices Risk</h2>
-                </div>
-                <div class="card-body">
-                    <table>
-                        <thead>
                             <tr>
-                                <th scope="col">Device</th>
-                                <th scope="col">Risk Level</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            <tr>
-                                <td><strong>OnePlus 10R</strong></td>
                                 <td>
-                                    <span class="badge" style="
-                                        background-color: rgba(218, 54, 51, 0.15);
-                                        color: #f85149;
-                                        border: 1px solid rgba(218, 54, 51, 0.4);
-                                    ">
-                                        🔴 Critical
-                                    </span>
+                                    <strong>EG</strong>
+                                    <span class="meta-info">CPH2307</span>
                                 </td>
+                                <td class="version-cell" title="CPH2307_15.0.0.1302(EX01)">
+                                    CPH2307_15.0.0.1302(EX01)
+                                    <span class="meta-info">Major: 0,&nbsp;Minor: 120</span>
+                                </td>
+                                <td><strong>0</strong></td>
+                                <td>
+                                    
+                                    <span class="badge badge-safe">Safe</span>
+                                    
+                                </td>
+                                <td>2026-02-03</td>
                             </tr>
                             
-                            <tr>
-                                <td><strong>OnePlus Nord CE 2 Lite 5G</strong></td>
-                                <td>
-                                    <span class="badge" style="
-                                        background-color: rgba(210, 153, 34, 0.15);
-                                        color: #e3b341;
-                                        border: 1px solid rgba(210, 153, 34, 0.4);
-                                    ">
-                                        🟠 Medium
-                                    </span>
-                                </td>
-                            </tr>
-                            
-                            <tr>
-                                <td><strong>OnePlus Nord CE 3 Lite 5G</strong></td>
-                                <td>
-                                    <span class="badge" style="
-                                        background-color: rgba(210, 153, 34, 0.15);
-                                        color: #e3b341;
-                                        border: 1px solid rgba(210, 153, 34, 0.4);
-                                    ">
-                                        🟠 Medium
-                                    </span>
-                                </td>
-                            </tr>
-                            
-                            <tr>
-                                <td><strong>OnePlus Nord CE 5G</strong></td>
-                                <td>
-                                    <span class="badge" style="
-                                        background-color: rgba(210, 153, 34, 0.15);
-                                        color: #e3b341;
-                                        border: 1px solid rgba(210, 153, 34, 0.4);
-                                    ">
-                                        🟠 Medium
-                                    </span>
-                                </td>
-                            </tr>
-                            
-                            <tr>
-                                <td><strong>OnePlus Nord N10 5G</strong></td>
-                                <td>
-                                    <span class="badge" style="
-                                        background-color: rgba(35, 134, 54, 0.15);
-                                        color: #7ee787;
-                                        border: 1px solid rgba(35, 134, 54, 0.4);
-                                    ">
-                                        🟢 Low
-                                    </span>
-                                </td>
-                            </tr>
-                            
-                            <tr>
-                                <td><strong>OnePlus Nord N100</strong></td>
-                                <td>
-                                    <span class="badge" style="
-                                        background-color: rgba(35, 134, 54, 0.15);
-                                        color: #7ee787;
-                                        border: 1px solid rgba(35, 134, 54, 0.4);
-                                    ">
-                                        🟢 Low
-                                    </span>
-                                </td>
-                            </tr>
                             
                         </tbody>
                     </table>
@@ -2784,7 +2393,7 @@
                 &bull;
                 ARB Extraction by <a href="https://github.com/koaaN/arbextract">arbextract</a> (koaaN)
             </div>
-            <p>Last scan: 2026-02-03 23:09 UTC</p>
+            <p>Last scan: 2026-02-03 23:13 UTC</p>
             <p>
                 <a href="https://github.com/Bartixxx32/Oneplus-antirollchecker">View Source on GitHub</a>
                 &bull;

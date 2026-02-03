@@ -3,7 +3,7 @@ from pathlib import Path
 from jinja2 import Environment, FileSystemLoader
 from datetime import datetime, timezone
 import logging
-from config import DEVICE_ORDER, DEVICE_METADATA, UNTRACKED_RISKS
+from config import DEVICE_ORDER, DEVICE_METADATA
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -42,11 +42,9 @@ def process_data(history_data):
         if device_id not in DEVICE_METADATA:
             continue
         meta = DEVICE_METADATA[device_id]
-        risk = meta.get('risk', 'Unknown')
         
         device_entry = {
             'name': meta['name'],
-            'risk': risk,
             'variants': []
         }
 
@@ -134,7 +132,6 @@ def generate(history_dir: Path, output_dir: Path, template_dir: Path):
     # Render
     output_html = template.render(
         devices=devices,
-        untracked_risks=UNTRACKED_RISKS,
         generated_at=datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')
     )
 
