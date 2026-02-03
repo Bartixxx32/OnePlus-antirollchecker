@@ -145,6 +145,26 @@ def generate_readme(history_data: Dict) -> str:
         lines.pop()
         lines.pop()
     
+    # Add On-Demand Checker section
+    lines.extend([
+        '',
+        '## 🤖 On-Demand ARB Checker',
+        '',
+        'Want to check a specific firmware instantly? Our automated bot can help!',
+        '',
+        '1. **[Click here to open a new Issue](https://github.com/Bartixxx32/OnePlus-antirollchecker/issues/new)**',
+        '2. Set the title to `[CHECK] Your Title Here`',
+        '3. Paste a direct link to the firmware `.zip` in the description',
+        '4. Submit!',
+        '',
+        'The bot will automatically:',
+        '- 📥 Download the firmware',
+        '- 🔍 Extract metadata (Version, Model, Patch Level)',
+        '- 🎯 Calculate the ARB index',
+        '- 💬 Reply with a detailed report in 3-5 minutes',
+        '',
+    ])
+
     # Add footer
     lines.extend([
         '',
