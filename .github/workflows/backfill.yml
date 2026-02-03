@@ -35,7 +35,6 @@ jobs:
     runs-on: ubuntu-latest
     continue-on-error: true
     strategy:
-      max-parallel: 20 # Increased for faster backfill, watch out for rate limits
       fail-fast: false
       matrix: ${{ fromJson(needs.setup-matrix.outputs.matrix) }}
     
@@ -79,7 +78,40 @@ jobs:
         if: steps.cache-arb.outputs.cache-hit != 'true'
         run: |
           URL="${{ steps.get_details.outputs.url }}"
-          aria2c -c -x16 -s16 -k1M -o firmware.zip "$URL" || echo "Download failed"
+          VERSION="${{ steps.get_details.outputs.version }}"
+          
+          MAX_RETRIES=5
+          RETRY_COUNT=0
+          SUCCESS=0
+          
+          while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
+            echo "Attempting download (Try $((RETRY_COUNT+1))/$MAX_RETRIES)..."
+            if aria2c -c -x16 -s16 -k1M -o firmware.zip "$URL"; then
+              echo "Download successful!"
+              SUCCESS=1
+              break
+            fi
+            
+            echo "Download failed. Refreshing URL..."
+            RETRY_COUNT=$((RETRY_COUNT+1))
+            if [ $RETRY_COUNT -eq $MAX_RETRIES ]; then break; fi
+            
+            # Refresh URL
+            python3 fetch_firmware.py "${{ matrix.device }}" "${{ matrix.variant }}" "$VERSION" --output fw_refresh.json
+            if [ -f fw_refresh.json ]; then
+               NEW_URL=$(python3 -c "import sys, json; print(json.load(open('fw_refresh.json'))['url'])")
+               if [[ "$NEW_URL" != "" && "$NEW_URL" != "null" ]]; then
+                  URL="$NEW_URL"
+                  echo "Refreshed URL successfully."
+               fi
+            fi
+            sleep 5
+          done
+          
+          if [ $SUCCESS -eq 0 ]; then
+             echo "Download failed after all attempts."
+             exit 1 # In backfill we might want to fail the job
+          fi
 
       - name: Analyze Firmware
         if: hashFiles('firmware.zip') != '' || steps.cache-arb.outputs.cache-hit == 'true'
