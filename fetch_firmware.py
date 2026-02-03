@@ -13,7 +13,7 @@ from config import BASE_URL, OOS_API_URL, USER_AGENT, SPRING_MAPPING, OOS_MAPPIN
 logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
 logger = logging.getLogger(__name__)
 
-def requests_get_with_retry(url, retries=3, delay=5, timeout=10):
+def requests_get_with_retry(url, retries=5, delay=10, timeout=10):
     """
     Helper to perform requests.get with retries.
     """
