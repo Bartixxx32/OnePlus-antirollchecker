@@ -26,7 +26,7 @@ DEVICE_ORDER = [
     # OnePlus
     "15R", "Ace 6T", "15", "Pad 3", "Pad 2 Pro", 
     "Ace 5 Pro", "Ace 5", "13", "Pad 2", "12", "12R", "Open", 
-    "11", "11R", "10 Pro", "10T", "10R", "9 Pro", "9RT", "9", "9R",
+    "11", "11R", "10 Pro", "10T", "9 Pro", "9RT", "9", "9R",
     # Oppo
     "Find X8 Ultra", "Find N5", "Find N3", "Find X5 Pro", "Find X5"
 ]
@@ -112,12 +112,6 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "EU": "CPH2415",
             "IN": "CPH2413",
             "NA": "CPH2417"
-        }
-    },
-    "10R": {
-        "name": "OnePlus 10R",
-        "models": {
-            "IN": "CPH2423"
         }
     },
     "9 Pro": {
@@ -270,7 +264,6 @@ SPRING_MAPPING = {
     "oneplus_ace_6t": "OP ACE 6T",
     "oneplus_ace_5": "OP ACE 5",
     "oneplus_ace_5_pro": "OP ACE 5 PRO",
-    "oneplus_ace_5_ultimate": "OP ACE 5 ULTRA",
     "oneplus_pad2_pro": "OP PAD2 PRO",
     "oneplus_pad_3": "OP PAD3",
     "oneplus_pad_2": "OP PAD2",
@@ -297,7 +290,6 @@ OOS_MAPPING = {
     "11R": "oneplus_11r",
     "10 Pro": "oneplus_10_pro",
     "10T": "oneplus_10t",
-    "10R": "oneplus_10r_80w",
     "9 Pro": "oneplus_9_pro",
     "9": "oneplus_9",
     "9RT": "oneplus_9rt",
@@ -306,7 +298,6 @@ OOS_MAPPING = {
     "Ace 6T": "oneplus_ace_6t",
     "Ace 5": "oneplus_ace_5",
     "Ace 5 Pro": "oneplus_ace_5_pro", 
-    "Ace 5 Ultimate": "oneplus_ace_5_ultimate",
     "Pad 2 Pro": "oneplus_pad2_pro",
     "Pad 3": "oneplus_pad_3",
     "Pad 2": "oneplus_pad_2",
