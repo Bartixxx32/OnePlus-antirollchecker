@@ -3,15 +3,20 @@ name: On-Demand ARB Checker
 on:
   issues:
     types: [opened, edited]
+  workflow_dispatch:
+    inputs:
+      firmware_url:
+        description: 'Direct URL to Firmware .zip'
+        required: true
 
 concurrency:
-  group: check-arb-${{ github.event.issue.number }}
+  group: check-arb-${{ github.event.issue.number || github.run_id }}
   cancel-in-progress: true
 
 jobs:
   check-firmware:
-    # Trigger if title starts with [CHECK] and body has a .zip link
-    if: (startsWith(github.event.issue.title, '[CHECK]') || contains(github.event.issue.labels.*.name, 'checker')) && contains(github.event.issue.body, '.zip')
+    # Trigger if (manual) OR (issue title starts with [CHECK] and body has a .zip link)
+    if: github.event_name == 'workflow_dispatch' || ((startsWith(github.event.issue.title, '[CHECK]') || contains(github.event.issue.labels.*.name, 'checker')) && contains(github.event.issue.body, '.zip'))
     runs-on: ubuntu-latest
     permissions:
       issues: write
@@ -20,36 +25,47 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v4
 
-      - name: Initial Setup & Label
-        id: init
+      - name: Determine URL & Mode
+        id: setup
+        run: |
+          if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+            echo "mode=manual" >> $GITHUB_OUTPUT
+            echo "url=${{ inputs.firmware_url }}" >> $GITHUB_OUTPUT
+            echo "URL from Manual Input: ${{ inputs.firmware_url }}"
+          else
+            echo "mode=issue" >> $GITHUB_OUTPUT
+            # Extract URL from Issue Body
+            URL=$(python3 -c "
+            import re, os
+            body = '''${{ github.event.issue.body }}'''
+            links = re.findall(r'(https?://[^\s]+\.zip(?:[^\s\"\'\(\)\[\]]*)?)', body)
+            if links:
+                print(links[0])
+            ")
+            echo "url=$URL" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Initialize Issue (Label & Comment)
+        id: init_issue
+        if: steps.setup.outputs.mode == 'issue'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # 1. Add Label
           gh issue edit ${{ github.event.issue.number }} --add-label "checker"
           
-          # 2. Extract URL
-          URL=$(python3 -c "
-          import re, os
-          body = '''${{ github.event.issue.body }}'''
-          links = re.findall(r'(https?://[^\s]+\.zip(?:[^\s\"\'\(\)\[\]]*)?)', body)
-          if links:
-              print(links[0])
-          ")
-          echo "url=$URL" >> $GITHUB_OUTPUT
-          
-          # 3. Fast Response (Before Tools)
-          COMMENT_BODY="🤖 **Request Received!**\n\n- [ ] Setting up tools...\n- [ ] Downloading firmware...\n- [ ] Analyzing ARB index...\n\n**URL**: \`$URL\`"
+          # 2. Fast Response (Before Tools)
+          COMMENT_BODY="🤖 **Request Received!**\n\n- [ ] Setting up tools...\n- [ ] Downloading firmware...\n- [ ] Analyzing ARB index...\n\n**URL**: \`${{ steps.setup.outputs.url }}\`"
           # Use gh api to create comment and get its ID
           COMMENT_ID=$(gh api -X POST /repos/${{ github.repository }}/issues/${{ github.event.issue.number }}/comments -f body="$COMMENT_BODY" --jq '.id')
           echo "comment_id=$COMMENT_ID" >> $GITHUB_OUTPUT
 
       - name: Update Progress (Setup)
-        if: success()
+        if: steps.setup.outputs.mode == 'issue' && success()
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh api -X PATCH "/repos/${{ github.repository }}/issues/comments/${{ steps.init.outputs.comment_id }}" -f body=$'🤖 **Processing...**\n\n- [x] Setting up tools...\n- [/] Downloading firmware...\n- [ ] Analyzing ARB index...\n\n**URL**: `${{ steps.init.outputs.url }}`'
+          gh api -X PATCH "/repos/${{ github.repository }}/issues/comments/${{ steps.init_issue.outputs.comment_id }}" -f body=$'🤖 **Processing...**\n\n- [x] Setting up tools...\n- [/] Downloading firmware...\n- [ ] Analyzing ARB index...\n\n**URL**: `${{ steps.setup.outputs.url }}`'
 
       - name: Install dependencies & Setup Tools
         run: |
@@ -66,19 +82,20 @@ jobs:
 
       - name: Download Firmware
         run: |
-          aria2c -x16 -s16 -k1M -o firmware.zip "${{ steps.init.outputs.url }}"
+          aria2c -x16 -s16 -k1M -o firmware.zip "${{ steps.setup.outputs.url }}"
 
       - name: Update Progress (Analysing)
-        if: success()
+        if: steps.setup.outputs.mode == 'issue' && success()
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh api -X PATCH "/repos/${{ github.repository }}/issues/comments/${{ steps.init.outputs.comment_id }}" -f body=$'🤖 **Processing...**\n\n- [x] Setting up tools...\n- [x] Downloading firmware...\n- [/] Analyzing ARB index...\n\n**URL**: `${{ steps.init.outputs.url }}`'
+          gh api -X PATCH "/repos/${{ github.repository }}/issues/comments/${{ steps.init_issue.outputs.comment_id }}" -f body=$'🤖 **Processing...**\n\n- [x] Setting up tools...\n- [x] Downloading firmware...\n- [/] Analyzing ARB index...\n\n**URL**: `${{ steps.setup.outputs.url }}`'
 
       - name: Analyze Firmware
         id: analyze
         if: hashFiles('firmware.zip') != ''
         run: |
+          # This outputs result.json and also prints logs to stdout (visible in workflow logs)
           python3 analyze_firmware.py firmware.zip \
             --tools-dir tools \
             --output-dir extracted \
@@ -90,6 +107,7 @@ jobs:
         shell: python
         env:
           ISSUE_USER: ${{ github.event.issue.user.login }}
+          EVENT_NAME: ${{ github.event_name }}
         run: |
           import json, os
           
@@ -110,8 +128,12 @@ jobs:
                   patch = meta.get('post-security-patch-level', meta.get('security_patch', 'Unknown'))
                   version = meta.get('version_name_show', meta.get('display-version', 'Unknown'))
                   build = meta.get('post-build', 'Unknown')
-                  user = os.environ.get('ISSUE_USER', 'user')
                   
+                  # Get user handle or default for manual
+                  user = os.environ.get('ISSUE_USER')
+                  if not user or user == 'null': 
+                      user = "Manual Trigger"
+
                   output = f"@{user}, here is your analysis!\n"
                   output += f"### 👑 🎯 Analysis Result\n"
                   output += f"- **ARB Index**: `{arb}`\n"
@@ -121,29 +143,40 @@ jobs:
                   output += f"- **Product**: `{product}` (`{device}`)\n"
                   output += f"- **Security Patch**: `{patch}`\n"
                   output += f"- **Build ID**: `{build}`"
+                  
+                  # For manual runs, print nicely to stdout
+                  print("-" * 40)
+                  print("MANUAL ANALYSIS RESULT")
+                  print("-" * 40)
+                  print(f"ARB Index: {arb}")
+                  print(f"Status: {status}")
+                  print(f"Device: {product} ({device})")
+                  print(f"Version: {version}")
+                  print("-" * 40)
+
               except Exception as e:
                   print(f"Error parsing result: {e}")
           
-          # Save as JSON payload for gh api
+          # Save as JSON payload for gh api (used if issue mode)
           payload = {"body": output}
           with open('payload.json', 'w') as f:
               json.dump(payload, f)
 
-      - name: Post Final Result
-        if: always()
+      - name: Post Final Result (Issue)
+        if: steps.setup.outputs.mode == 'issue' && always()
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           if [ -f payload.json ]; then
-            gh api -X PATCH "/repos/${{ github.repository }}/issues/comments/${{ steps.init.outputs.comment_id }}" --input payload.json
+            gh api -X PATCH "/repos/${{ github.repository }}/issues/comments/${{ steps.init_issue.outputs.comment_id }}" --input payload.json
           fi
 
       - name: Wait before closing
-        if: always()
+        if: steps.setup.outputs.mode == 'issue' && always()
         run: sleep 180
 
       - name: Close Issue
-        if: always()
+        if: steps.setup.outputs.mode == 'issue' && always()
         run: |
           gh issue close ${{ github.event.issue.number }} --reason "completed"
         env:
