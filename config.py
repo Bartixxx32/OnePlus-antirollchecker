@@ -254,7 +254,6 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
     "Nord N200 5G": {
         "name": "OnePlus Nord N200 5G",
         "models": {
-            "NA": "DE2117"
         },
     },
 
@@ -338,8 +337,7 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "EG": "CPH2305",
             "OCA": "CPH2305",
             "SG": "CPH2305",
-            "TW": "CPH2305",
-            "CN": "PFEM10"
+            "TW": "CPH2305"
         },
     },
     "Find X5": {
@@ -348,8 +346,7 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "EU": "CPH2307",
             "EG": "CPH2307",
             "OCA": "CPH2307",
-            "SA": "CPH2307",
-            "CN": "PFFM10"
+            "SA": "CPH2307"
         },
     },
 
