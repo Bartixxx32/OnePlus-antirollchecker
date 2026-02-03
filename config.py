@@ -29,7 +29,7 @@ DEVICE_ORDER = [
     "Open",
     "12", "12R", 
     "11", "11R", 
-    "10 Pro", "10T", "10R (150W)", "10R (80W)",
+    "10 Pro", "10T",
     "9 Pro", "9", "9RT", "9R",
     
     # Flagships (Legacy)
@@ -137,18 +137,6 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "NA": "CPH2417"
         },
     },
-    "10R (150W)": {
-        "name": "OnePlus 10R (150W)",
-        "models": {
-            "IN": "CPH2423"
-        },
-    },
-    "10R (80W)": {
-        "name": "OnePlus 10R (80W)",
-        "models": {
-            "IN": "CPH2411"
-        },
-    },
     "9 Pro": {
         "name": "OnePlus 9 Pro",
         "models": {
@@ -184,8 +172,7 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
         "models": {
             "NA": "KB2005",
             "EU": "KB2003",
-            "IN": "KB2001",
-            "CN": "KB2000"
+            "IN": "KB2001"
         },
     },
     "8 Pro": {
@@ -193,8 +180,7 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
         "models": {
             "NA": "IN2025",
             "EU": "IN2023",
-            "IN": "IN2021",
-            "CN": "IN2020"
+            "IN": "IN2021"
         },
     },
     "8": {
@@ -202,8 +188,7 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
         "models": {
             "NA": "IN2015",
             "EU": "IN2013",
-            "IN": "IN2011",
-            "CN": "IN2010"
+            "IN": "IN2011"
         },
     },
 
@@ -212,34 +197,28 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
         "name": "OnePlus 7T Pro",
         "models": {
             "EU": "HD1913",
-            "IN": "HD1911",
-            "CN": "HD1910"
+            "IN": "HD1911"
         },
     },
     "7T": {
         "name": "OnePlus 7T",
         "models": {
-            "NA": "HD1905",
             "EU": "HD1903",
-            "IN": "HD1901",
-            "CN": "HD1900"
+            "IN": "HD1901"
         },
     },
     "7 Pro": {
         "name": "OnePlus 7 Pro",
         "models": {
-            "NA": "GM1917",
             "EU": "GM1913",
-            "IN": "GM1911",
-            "CN": "GM1910"
+            "IN": "GM1911"
         },
     },
     "7": {
         "name": "OnePlus 7",
         "models": {
             "EU": "GM1903",
-            "IN": "GM1901",
-            "CN": "GM1900"
+            "IN": "GM1901"
         },
     },
 
@@ -270,7 +249,6 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
     "Nord N200 5G": {
         "name": "OnePlus Nord N200 5G",
         "models": {
-            "NA": "DE2117"
         },
     },
 
@@ -404,8 +382,7 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
         "models": {
             "EU": "CPH2173",
             "SG": "CPH2173",
-            "TW": "CPH2173",
-            "CN": "PEEM00"
+            "TW": "CPH2173"
         },
     }
 }
@@ -430,8 +407,6 @@ SPRING_MAPPING = {
     "oneplus_open": "OP OPEN",
     "oneplus_nord_5": "OP NORD 5",
     "oneplus_nord_4": "OP NORD 4",
-    "oneplus_10r_80w": "OP 10R 80W",
-    "oneplus_10r_150w": "OP 10R 150W",
     # Legacy
     "oneplus_8t": "OP 8T",
     "oneplus_8_pro": "OP 8 PRO",
@@ -483,8 +458,6 @@ OOS_MAPPING = {
     # Nords
     "Nord 5": "oneplus_nord_5",
     "Nord 4": "oneplus_nord_4",
-    "10R (80W)": "oneplus_10r_80w",
-    "10R (150W)": "oneplus_10r_150w",
     # Ace
     "Ace 6T": "oneplus_ace_6t",
     "Ace 5": "oneplus_ace_5",
@@ -505,8 +478,6 @@ OOS_MAPPING = {
     "Find X5": "oppo_find_x5",
     "Find X3 Pro": "oppo_find_x3_pro",
     "Open": "oneplus_open",
-    "10R (80W)": "oneplus_10r_80w",
-    "10R (150W)": "oneplus_10r_150w"
 }
 
 
