@@ -20,6 +20,7 @@ class DeviceModels(TypedDict, total=False):
 class DeviceMeta(TypedDict):
     name: str
     models: DeviceModels
+    risk: str # "Low", "Medium", "Critical"
 
 # Device order for README and Website (Flagships -> Open -> Nords -> Ace -> Pads -> Oppo)
 DEVICE_ORDER = [
@@ -29,7 +30,7 @@ DEVICE_ORDER = [
     "Open",
     "12", "12R", 
     "11", "11R", 
-    "10 Pro", "10T", 
+    "10 Pro", "10T", "10R (150W)", "10R (80W)",
     "9 Pro", "9", "9RT", "9R",
     
     # Flagships (Legacy)
@@ -64,7 +65,8 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "EU": "CPH2747",
             "IN": "CPH2745",
             "CN": "PLK110"
-        }
+        },
+        "risk": "Medium"
     },
     "15R": {
         "name": "OnePlus 15R", 
@@ -72,7 +74,8 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "GLO": "CPH2741",
             "EU": "CPH2741",
             "IN": "CPH2741"
-        }
+        },
+        "risk": "Medium"
     },
     "13": {
         "name": "OnePlus 13",
@@ -82,7 +85,8 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "IN": "CPH2649",
             "NA": "CPH2655",
             "CN": "PJZ110"
-        }
+        },
+        "risk": "Critical"
     },
     "12": {
         "name": "OnePlus 12",
@@ -92,7 +96,8 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "IN": "CPH2573", 
             "NA": "CPH2583",
             "CN": "PJD110"
-        }
+        },
+        "risk": "Critical"
     },
     "12R": {
         "name": "OnePlus 12R",
@@ -101,7 +106,8 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "EU": "CPH2609",
             "IN": "CPH2585",
             "NA": "CPH2611"
-        }
+        },
+        "risk": "Medium"
     },
     "11": {
         "name": "OnePlus 11",
@@ -110,13 +116,15 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "EU": "CPH2449",
             "IN": "CPH2447",
             "NA": "CPH2451"
-        }
+        },
+        "risk": "Medium"
     },
     "11R": {
         "name": "OnePlus 11R",
         "models": {
             "IN": "CPH2487"
-        }
+        },
+        "risk": "Medium"
     },
     "10 Pro": {
         "name": "OnePlus 10 Pro",
@@ -126,7 +134,8 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "IN": "NE2211",
             "NA": "NE2215",
             "CN": "NE2210"
-        }
+        },
+        "risk": "Medium"
     },
     "10T": {
         "name": "OnePlus 10T",
@@ -135,7 +144,22 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "EU": "CPH2415",
             "IN": "CPH2413",
             "NA": "CPH2417"
-        }
+        },
+        "risk": "Medium"
+    },
+    "10R (150W)": {
+        "name": "OnePlus 10R (150W)",
+        "models": {
+            "IN": "CPH2423"
+        },
+        "risk": "Critical"
+    },
+    "10R (80W)": {
+        "name": "OnePlus 10R (80W)",
+        "models": {
+            "IN": "CPH2411"
+        },
+        "risk": "Critical"
     },
     "9 Pro": {
         "name": "OnePlus 9 Pro",
@@ -174,7 +198,8 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "EU": "KB2003",
             "IN": "KB2001",
             "CN": "KB2000"
-        }
+        },
+        "risk": "Low"
     },
     "8 Pro": {
         "name": "OnePlus 8 Pro",
@@ -183,7 +208,8 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "EU": "IN2023",
             "IN": "IN2021",
             "CN": "IN2020"
-        }
+        },
+        "risk": "Low"
     },
     "8": {
         "name": "OnePlus 8",
@@ -192,7 +218,8 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "EU": "IN2013",
             "IN": "IN2011",
             "CN": "IN2010"
-        }
+        },
+        "risk": "Low"
     },
 
     # Legacy Series 7
@@ -202,7 +229,8 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "EU": "HD1913",
             "IN": "HD1911",
             "CN": "HD1910"
-        }
+        },
+        "risk": "Low"
     },
     "7T": {
         "name": "OnePlus 7T",
@@ -211,7 +239,8 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "EU": "HD1903",
             "IN": "HD1901",
             "CN": "HD1900"
-        }
+        },
+        "risk": "Low"
     },
     "7 Pro": {
         "name": "OnePlus 7 Pro",
@@ -220,7 +249,8 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "EU": "GM1913",
             "IN": "GM1911",
             "CN": "GM1910"
-        }
+        },
+        "risk": "Low"
     },
     "7": {
         "name": "OnePlus 7",
@@ -228,7 +258,8 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "EU": "GM1903",
             "IN": "GM1901",
             "CN": "GM1900"
-        }
+        },
+        "risk": "Low"
     },
 
     # Nords
@@ -238,7 +269,8 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "GLO": "CPH2709",
             "EU": "CPH2709",
             "IN": "CPH2709"
-        }
+        },
+        "risk": "Medium"
     },
     "Nord 4": {
         "name": "OnePlus Nord 4",
@@ -246,20 +278,23 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "GLO": "CPH2661",
             "EU": "CPH2661",
             "IN": "CPH2663"
-        }
+        },
+        "risk": "Medium"
     },
     "Nord 1": {
         "name": "OnePlus Nord",
         "models": {
             "EU": "AC2003",
             "IN": "AC2001"
-        }
+        },
+        "risk": "Low"
     },
     "Nord N200 5G": {
         "name": "OnePlus Nord N200 5G",
         "models": {
             "NA": "DE2117"
-        }
+        },
+        "risk": "Low"
     },
 
     # China Exclusives (Ace)
@@ -267,49 +302,73 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
         "name": "OnePlus Ace 6T",
         "models": {
             "CN": "PLR110"
-        }
+        },
+        "risk": "Medium"
     },
     "Ace 5": {
         "name": "OnePlus Ace 5",
         "models": {
             "CN": "PKG110"
-        }
+        },
+        "risk": "Critical"
     },
     "Ace 5 Pro": {
         "name": "OnePlus Ace 5 Pro",
         "models": {
             "CN": "PKR110"
-        }
+        },
+        "risk": "Medium"
     },
     "Ace 3 Pro": {
         "name": "OnePlus Ace 3 Pro",
         "models": {
             "CN": "PJX110"
-        }
+        },
+        "risk": "Medium"
     },
     "Ace 3V": {
         "name": "OnePlus Ace 3V",
         "models": {
             "CN": "PJF110"
-        }
+        },
+        "risk": "Medium"
     },
     "Ace 3": {
         "name": "OnePlus Ace 3",
         "models": {
             "CN": "PJE110"
-        }
+        },
+        "risk": "Medium"
     },
 
 
 
+    "Pad 3": {
+        "name": "OnePlus Pad 3",
+        "models": {
+            "GLO": "OPD2415",
+            "EU": "OPD2415",
+            "IN": "OPD2415",
+            "NA": "OPD2415"
+        },
+        "risk": "Critical"
+    },
+    "Pad 2": {
+        "name": "OnePlus Pad 2",
+        "models": {
+            "GLO": "OPD2403",
+            "EU": "OPD2403",
+            "IN": "OPD2403"
+        },
+        "risk": "Critical"
+    },
     "Pad 2 Pro": {
         "name": "OnePlus Pad 2 Pro",
         "models": {
             "CN": "OPD2413"
-        }
+        },
+        "risk": "Critical"
     },
-
-# ... skipping Pad 3/2 section ...
 
     "Open": {
         "name": "OnePlus Open",
@@ -317,7 +376,8 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "EU": "CPH2551",
             "IN": "CPH2551",
             "NA": "CPH2551"
-        }
+        },
+        "risk": "Medium"
     },
 
     "Find X5 Pro": {
@@ -329,7 +389,8 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "SG": "CPH2305",
             "TW": "CPH2305",
             "CN": "PFEM10"
-        }
+        },
+        "risk": "Medium"
     },
     "Find X5": {
         "name": "Oppo Find X5",
@@ -339,14 +400,16 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "OCA": "CPH2307",
             "SA": "CPH2307",
             "CN": "PFFM10"
-        }
+        },
+        "risk": "Medium"
     },
 
     "Find X8 Ultra": {
         "name": "Oppo Find X8 Ultra",
         "models": {
             "CN": "PKJ110"
-        }
+        },
+        "risk": "Critical"
     },
     "Find N5": {
         "name": "Oppo Find N5",
@@ -358,27 +421,9 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "MX": "CPH2671",
             "TH": "CPH2671",
             "CN": "PKV110"
-        }
+        },
+        "risk": "Critical"
     },
-    "Pad 3": {
-        "name": "OnePlus Pad 3",
-        "models": {
-            "GLO": "OPD2415",
-            "EU": "OPD2415",
-            "IN": "OPD2415",
-            "NA": "OPD2415"
-        }
-    },
-    "Pad 2": {
-        "name": "OnePlus Pad 2",
-        "models": {
-            "GLO": "OPD2403",
-            "EU": "OPD2403",
-            "IN": "OPD2403"
-        }
-    },
-
-
     "Find N3": {
         "name": "Oppo Find N3",
         "models": {
@@ -389,7 +434,8 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "TH": "CPH2499",
             "TW": "CPH2499",
             "VN": "CPH2499"
-        }
+        },
+        "risk": "Medium"
     },
     "Find X3 Pro": {
         "name": "Oppo Find X3 Pro",
@@ -398,7 +444,8 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "SG": "CPH2173",
             "TW": "CPH2173",
             "CN": "PEEM00"
-        }
+        },
+        "risk": "Medium"
     }
 }
 
@@ -422,6 +469,8 @@ SPRING_MAPPING = {
     "oneplus_open": "OP OPEN",
     "oneplus_nord_5": "OP NORD 5",
     "oneplus_nord_4": "OP NORD 4",
+    "oneplus_10r_80w": "OP 10R 80W",
+    "oneplus_10r_150w": "OP 10R 150W",
     # Legacy
     "oneplus_8t": "OP 8T",
     "oneplus_8_pro": "OP 8 PRO",
@@ -473,6 +522,8 @@ OOS_MAPPING = {
     # Nords
     "Nord 5": "oneplus_nord_5",
     "Nord 4": "oneplus_nord_4",
+    "10R (80W)": "oneplus_10r_80w",
+    "10R (150W)": "oneplus_10r_150w",
     # Ace
     "Ace 6T": "oneplus_ace_6t",
     "Ace 5": "oneplus_ace_5",
@@ -492,7 +543,20 @@ OOS_MAPPING = {
     "Find X5 Pro": "oppo_find_x5_pro",
     "Find X5": "oppo_find_x5",
     "Find X3 Pro": "oppo_find_x3_pro",
-    "Open": "oneplus_open"
+    "Open": "oneplus_open",
+    "10R (80W)": "oneplus_10r_80w",
+    "10R (150W)": "oneplus_10r_150w"
+}
+
+
+# Untracked devices provided by user to include in Risk Section
+UNTRACKED_RISKS = {
+    "OnePlus Nord N10 5G": "Low",
+    "OnePlus Nord N100": "Low",
+    "OnePlus Nord CE 5G": "Medium",
+    "OnePlus Nord CE 2 Lite 5G": "Medium",
+    "OnePlus Nord CE 3 Lite 5G": "Medium",
+    "OnePlus 10R": "Critical",
 }
 
 

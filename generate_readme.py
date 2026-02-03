@@ -1,115 +1,101 @@
-#!/usr/bin/env python3
-"""
-Generate README.md from JSON history files.
-Matches the requested layout from main branch with all regions in one table per device.
-"""
-
 import json
-import sys
-import argparse
-import logging
 from pathlib import Path
-from typing import Dict, List
-from config import DEVICE_METADATA, DeviceModels, DEVICE_ORDER, HISTORY_DIR
+from datetime import datetime, timezone
+from typing import Dict, List, Optional
+from config import DEVICE_ORDER, DEVICE_METADATA, UNTRACKED_RISKS
 
-# Configure logging
-logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
-logger = logging.getLogger(__name__)
+def load_history(file_path: Path) -> Dict:
+    """Load history from a JSON file."""
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return {}
 
-def load_all_history(history_dir: Path) -> Dict[str, Dict]:
-    """Load all JSON history files."""
-    history_data = {}
-    
-    for json_file in history_dir.glob('*.json'):
-        # Parse filename: e.g., "12_CN.json"
-        name = json_file.stem
-        
-        try:
-            with open(json_file, 'r') as f:
-                history_data[name] = json.load(f)
-        except Exception as e:
-            logger.warning(f"Failed to load {json_file}: {e}")
-            continue
-    
-    return history_data
-
-def get_region_name(variant: str) -> str:
-    """Map variant code to display name for the table."""
+def get_region_name(region_code: str) -> str:
+    """Convert region code to human readable name."""
     names = {
         'GLO': 'Global',
         'EU': 'Europe',
         'IN': 'India',
         'CN': 'China',
-        'NA': 'NA'
+        'NA': 'North America'
     }
-    return names.get(variant, variant)
+    return names.get(region_code, region_code)
 
 def generate_device_section(device_id: str, device_name: str, history_data: Dict) -> List[str]:
-    """Generate a single table for one device across all regions."""
-    lines = [f'### {device_name}', '']
-    # Check if we have any data for this device
-    active_regions = []
-    # Determine available regions for this device
-    preferred_regions = ['GLO', 'EU', 'IN', 'NA', 'CN']
-    available_regions = set(DEVICE_METADATA.get(device_id, {}).get('models', {}).keys())
+    """Generate Markdown section for a specific device."""
+    lines = []
     
-    # Also check if there are history files for regions not in config
+    # Get available variants for this device from history and config
+    variants = set()
+    # 1. From config (expected models)
+    if device_id in DEVICE_METADATA:
+        variants.update(DEVICE_METADATA[device_id]['models'].keys())
+    
+    # 2. From history files (actual data)
     for key in history_data:
         if key.startswith(f"{device_id}_"):
-            available_regions.add(key.replace(f"{device_id}_", ""))
-            
-    # Order: preferred first, then others sorted
-    regions = [r for r in preferred_regions if r in available_regions]
-    others = sorted([r for r in available_regions if r not in preferred_regions])
-    regions.extend(others)
+             variants.add(key.replace(f"{device_id}_", ""))
     
-    for variant in regions:
-        key = f'{device_id}_{variant}'
-        if key in history_data:
-            active_regions.append(variant)
+    # Sort: Preferred order then alphabetical
+    preferred_order = ['GLO', 'EU', 'IN', 'NA', 'CN']
+    def sort_key(v):
+        try:
+            return preferred_order.index(v)
+        except ValueError:
+            return len(preferred_order)
             
-    if not active_regions:
-        return []
-
-    lines.append('| Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |')
-    lines.append('|--------|-------|------------------|-----------|-------------|--------------|------|')
+    sorted_variants = sorted(list(variants), key=sort_key)
     
-    for variant in regions:
-        key = f'{device_id}_{variant}'
+    has_data = False
+    
+    # Prepare table rows
+    rows = []
+    for variant in sorted_variants:
+        key = f"{device_id}_{variant}"
         if key not in history_data:
             continue
             
         data = history_data[key]
-        region_name = get_region_name(variant)
-        model = data.get('model', 'Unknown')
-        
-        # Get only the current version for the main table
         current_entry = None
+        
+        # Find current (latest) entry
         for entry in data.get('history', []):
-            if entry['status'] == 'current':
+            if entry.get('status') == 'current':
                 current_entry = entry
                 break
         
-        if not current_entry:
-            # Fallback if no current is explicitly marked
-            if data.get('history'):
-                current_entry = data['history'][0]
-            else:
-                lines.append(f'| {region_name} | {model} | *Waiting for scan...* | - | - | - | - |')
-                continue
-
-        safe_icon = "✅" if current_entry['arb'] == 0 else "❌"
-        ver = current_entry.get('version', '')
-        if not ver:
-            ver = "*Unknown*"
+        # Fallback to first if no current
+        if not current_entry and data.get('history'):
+            current_entry = data['history'][0]
             
-        lines.append(
-            f"| {region_name} | {model} | {ver} | **{current_entry['arb']}** | "
-            f"Major: **{current_entry['major']}**,&nbsp;Minor: **{current_entry['minor']}** | "
-            f"{current_entry['last_checked']} | {safe_icon} |"
-        )
-    
-    lines.append('')
+        if current_entry:
+            has_data = True
+            version = current_entry.get('version', 'Unknown')
+            arb = current_entry.get('arb', -1)
+            date = current_entry.get('last_checked', 'Unknown')
+            region_name = get_region_name(variant)
+            model = data.get('model', 'Unknown')
+            
+            # Status badge
+            if arb == 0:
+                status = "✅ Safe"
+            elif arb > 0:
+                status = "⛔ Protected"
+            else:
+                status = "❓ Unknown"
+                
+            rows.append(f"| {region_name} | {model} | {version} | {arb} | {status} | {date} |")
+
+    if has_data:
+        lines.append(f"### {device_name}")
+        lines.append("")
+        lines.append("| Region | Model | Version | ARB | Status | Last Checked |")
+        lines.append("|--------|-------|---------|-----|--------|--------------|")
+        lines.extend(rows)
+        lines.append("")
+        
     return lines
 
 def generate_readme(history_data: Dict) -> str:
@@ -121,94 +107,105 @@ def generate_readme(history_data: Dict) -> str:
         '',
         '**Website:** [https://bartixxx32.github.io/OnePlus-antirollchecker/](https://bartixxx32.github.io/OnePlus-antirollchecker/)',
         '',
+        '## ⚠️ Risk Levels',
+        'We classify devices based on the risk of unrecoverable bricking (availability of Firehose/MSM tools):',
+        '',
+        '- 🔴 **Critical**: High risk. No public unbrick tool OR ARB already enforced.',
+        '- 🟠 **Medium**: Moderate risk. Unbrick tools restricted/partial.',
+        '- 🟢 **Low**: Low risk. Public unbrick tools available.',
+        '',
         '## 📊 Current Status',
         ''
     ]
+
+    risk_icons = {
+        "Critical": "🔴",
+        "Medium": "🟠",
+        "Low": "🟢"
+    }
     
-    # improved: Iterate over DEVICE_ORDER from config
+    # Iterate over DEVICE_ORDER from config
     for device_id in DEVICE_ORDER:
         if device_id not in DEVICE_METADATA:
             continue
         meta = DEVICE_METADATA[device_id]
         device_name = meta['name']
-        device_lines = generate_device_section(device_id, device_name, history_data)
+        risk = meta.get('risk', 'Unknown')
+        icon = risk_icons.get(risk, "⚪")
+        
+        # Add risk to title
+        display_name = f"{device_name}: {icon} {risk} Risk"
+        
+        device_lines = generate_device_section(device_id, display_name, history_data)
         if device_lines:
             lines.extend(device_lines)
-            # Add separator if it's not the last one (simple heuristic: always add, strip last later if needed, 
-            # but here we can't easily peek ahead. Adding --- after each section is fine as long as there is one.
-            # actually logic below attempts to do it only between items.
             lines.append('---')
             lines.append('')
             
-    # Remove trailing separator if it exists
-    if lines[-1] == '' and lines[-2] == '---':
-        lines.pop()
-        lines.pop()
+    # Add Untracked Devices Section
+    lines.extend([
+        '## Other Devices Risk',
+        'Devices without active firmware monitoring but with known risk levels.',
+        '',
+        '| Device | Risk |',
+        '|--------|------|'
+    ])
+    
+    untracked_sorted = sorted(UNTRACKED_RISKS.items(), key=lambda x: x[0])
+    for name, risk in untracked_sorted:
+         icon = risk_icons.get(risk, "⚪")
+         lines.append(f"| {name} | {icon} {risk} |")
+         
+    lines.extend(['', '---', ''])
+
     
     # Add On-Demand Checker section
     lines.extend([
-        '',
         '## 🤖 On-Demand ARB Checker',
         '',
-        'Want to check a specific firmware instantly? Our automated bot can help!',
+        'You can check the ARB index of any OnePlus Ozip/Zip URL manually using our automated workflow.',
         '',
-        '1. **[Click here to open a new Issue](https://github.com/Bartixxx32/OnePlus-antirollchecker/issues/new)**',
-        '2. Set the title to `[CHECK] Your Title Here`',
-        '3. Paste a direct link to the firmware `.zip` in the description',
-        '4. Submit!',
+        '### How to use:',
+        '1. Go to the [Actions Tab](https://github.com/Bartixxx32/OnePlus-antirollchecker/actions).',
+        '2. Select **"Manual ARB Check"** from the sidebar.',
+        '3. Click **"Run workflow"**.',
+        '4. Paste the **Firmware Download URL** (direct link preferred, e.g., from Oxygen Updater).',
+        '5. Click **Run workflow**.',
         '',
-        'The bot will automatically:',
-        '- 📥 Download the firmware',
-        '- 🔍 Extract metadata (Version, Model, Patch Level)',
-        '- 🎯 Calculate the ARB index',
-        '- 💬 Reply with a detailed report in 3-5 minutes',
+        'The bot will extract the payload, check the ARB index, and post the result as a comment on the workflow run summary (or you can view the logs).',
         '',
+        '---',
+        ''
     ])
 
-    # Add footer
     lines.extend([
+        '## Credits',
         '',
-        '> [!IMPORTANT]',
-        '> This status is updated automatically by GitHub Actions. Some device/region combinations may not be available and will show as "Waiting for scan...".',
+        '- **Payload Extraction**: [otaripper](https://github.com/syedinsaf/otaripper) by syedinsaf',
+        '- **Fallback Extraction**: [payload-dumper-go](https://github.com/ssut/payload-dumper-go) by ssut',
+        '- **ARB Extraction**: [arbextract](https://github.com/koaaN/arbextract) by koaaN',
         '',
-        '## 📈 Legend',
-        '',
-        '- ✅ **Safe**: ARB = 0 (downgrade possible)',
-        '- ❌ **Protected**: ARB > 0 (anti-rollback active)',
-        '',
-        '## 🛠️ Credits',
-        '- **Payload Extraction**: [otaripper](https://github.com/syedinsaf/otaripper) by [syedinsaf](https://github.com/syedinsaf) - for fast and reliable OTA extraction.',
-        '- **Payload Extraction (Fallback)**: [payload-dumper-go](https://github.com/ssut/payload-dumper-go) by [ssut](https://github.com/ssut) - used when otaripper fails.',
-        '- **ARB Extraction**: [arbextract](https://github.com/koaaN/arbextract) by [koaaN](https://github.com/koaaN) - for parsing QC_IMAGE_VERSION_INFO.',
-        '',
-        '## 🤖 Workflow Status',
-        '[![Check ARB](https://github.com/Bartixxx32/Oneplus-antirollchecker/actions/workflows/check_arb.yml/badge.svg)](https://github.com/Bartixxx32/Oneplus-antirollchecker/actions/workflows/check_arb.yml)'
+        '---',
+        f'*Last updated: {datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")}*'
     ])
     
-    return '\n'.join(lines) + '\n'
+    return "\n".join(lines)
 
-def main():
-    parser = argparse.ArgumentParser(description="Generate README.md from history.")
-    parser.add_argument("history_dir", nargs="?", default="data/history", help="Directory containing history JSON files")
-    
-    args = parser.parse_args()
-    
-    history_dir = Path(args.history_dir)
+if __name__ == "__main__":
+    history_dir = Path("data/history")
     
     if not history_dir.exists():
-        logger.error(f"History directory not found: {history_dir}")
-        sys.exit(1)
+        print(f"No history directory found at {history_dir}")
+        exit(0)
+        
+    # Load all history data
+    all_history = {}
+    for f in history_dir.glob("*.json"):
+        all_history[f.stem] = load_history(f)
+        
+    content = generate_readme(all_history)
     
-    history_data = load_all_history(history_dir)
-    readme_content = generate_readme(history_data)
-    
-    try:
-        with open('README.md', 'w', encoding='utf-8') as f:
-            f.write(readme_content)
-        print("README.md generated successfully")
-    except Exception as e:
-        logger.error(f"Failed to write README.md: {e}")
-        sys.exit(1)
-
-if __name__ == '__main__':
-    main()
+    with open("README.md", "w", encoding="utf-8") as f:
+        f.write(content)
+        
+    print("README.md generated successfully")
