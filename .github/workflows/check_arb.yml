@@ -195,7 +195,7 @@ jobs:
           path: result.json
       
       - name: Save ARB Cache
-        if: steps.cache-arb.outputs.cache-hit != 'true' && hashFiles('extracted/xbl_config.img') != ''
+        if: steps.cache-arb.outputs.cache-hit != 'true' && hashFiles('extracted/xbl_config*') != ''
         uses: actions/cache/save@v4
         with:
           path: |
