@@ -30,7 +30,7 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
 |--------|-------|------------------|-----------|-------------|--------------|------|
 | Global | CPH2747 | CPH2747_16.0.3.501(EX01) | **0** | Major: **3**,&nbsp;Minor: **0** | 2026-02-03 | ✅ |
 | Europe | CPH2747 | CPH2747_16.0.3.501(EX01) | **0** | Major: **3**,&nbsp;Minor: **0** | 2026-02-03 | ✅ |
-| India | CPH2745 | CPH2745_16.0.3.501(EX01) | **0** | Major: **3**,&nbsp;Minor: **0** | 2026-02-03 | ✅ |
+| India | CPH2745 | CPH2745_16.0.3.503(EX01) | **0** | Major: **3**,&nbsp;Minor: **0** | 2026-02-03 | ✅ |
 | China | PLK110 | PLK110_16.0.3.503(CN01) | **0** | Major: **3**,&nbsp;Minor: **0** | 2026-02-03 | ✅ |
 
 ---
@@ -281,6 +281,7 @@ The bot will automatically:
 
 ## 🛠️ Credits
 - **Payload Extraction**: [otaripper](https://github.com/syedinsaf/otaripper) by [syedinsaf](https://github.com/syedinsaf) - for fast and reliable OTA extraction.
+- **ARB Extraction**: [arbextract](https://github.com/koaaN/arbextract) by [koaaN](https://github.com/koaaN) - for parsing QC_IMAGE_VERSION_INFO.
 
 ## 🤖 Workflow Status
 [![Check ARB](https://github.com/Bartixxx32/Oneplus-antirollchecker/actions/workflows/check_arb.yml/badge.svg)](https://github.com/Bartixxx32/Oneplus-antirollchecker/actions/workflows/check_arb.yml)
