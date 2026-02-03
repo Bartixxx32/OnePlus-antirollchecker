@@ -170,25 +170,25 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
     "8T": {
         "name": "OnePlus 8T",
         "models": {
-            "NA": "KB2005",
             "EU": "KB2003",
-            "IN": "KB2001"
+            "IN": "KB2001",
+            "NA": "KB2005"
         },
     },
     "8 Pro": {
         "name": "OnePlus 8 Pro",
         "models": {
-            "NA": "IN2025",
             "EU": "IN2023",
-            "IN": "IN2021"
+            "IN": "IN2021",
+            "NA": "IN2015"
         },
     },
     "8": {
         "name": "OnePlus 8",
         "models": {
-            "NA": "IN2015",
             "EU": "IN2013",
-            "IN": "IN2011"
+            "IN": "IN2011",
+            "NA": "IN2015"
         },
     },
 
@@ -196,6 +196,7 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
     "7T Pro": {
         "name": "OnePlus 7T Pro",
         "models": {
+            "GLO": "HD1913",
             "EU": "HD1913",
             "IN": "HD1911"
         },
@@ -203,6 +204,7 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
     "7T": {
         "name": "OnePlus 7T",
         "models": {
+            "GLO": "HD1903",
             "EU": "HD1903",
             "IN": "HD1901"
         },
@@ -210,6 +212,7 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
     "7 Pro": {
         "name": "OnePlus 7 Pro",
         "models": {
+            "GLO": "GM1917",
             "EU": "GM1913",
             "IN": "GM1911"
         },
@@ -217,6 +220,7 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
     "7": {
         "name": "OnePlus 7",
         "models": {
+            "GLO": "GM1905",
             "EU": "GM1903",
             "IN": "GM1901"
         },
@@ -249,6 +253,7 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
     "Nord N200 5G": {
         "name": "OnePlus Nord N200 5G",
         "models": {
+            "NA": "DE2117"
         },
     },
 
