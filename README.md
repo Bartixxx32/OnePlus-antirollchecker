@@ -228,12 +228,12 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
 | China | PKV110 | PKH110_16.0.3.500(CN01) | **0** | Major: 3, Minor: 0 | 2026-02-03 | ✅ |
-| MX | CPH2671 | CPH2671_16.0.1.302(EX01) | **0** | Major: 3, Minor: 0 | 2026-02-03 | ✅ |
-| ID | CPH2671 | CPH2671_16.0.3.500(EX01) | **0** | Major: 3, Minor: 0 | 2026-02-03 | ✅ |
-| TH | CPH2671 | CPH2671_16.0.2.401(EX01) | **0** | Major: 3, Minor: 0 | 2026-02-03 | ✅ |
 | APC | CPH2671 | CPH2671_16.0.2.401(EX01) | **0** | Major: 3, Minor: 0 | 2026-02-03 | ✅ |
-| SG | CPH2671 | CPH2671_16.0.2.401(EX01) | **0** | Major: 3, Minor: 0 | 2026-02-03 | ✅ |
+| MX | CPH2671 | CPH2671_16.0.1.302(EX01) | **0** | Major: 3, Minor: 0 | 2026-02-03 | ✅ |
+| TH | CPH2671 | CPH2671_16.0.2.401(EX01) | **0** | Major: 3, Minor: 0 | 2026-02-03 | ✅ |
 | MY | CPH2671 | CPH2671_16.0.2.401(EX01) | **0** | Major: 3, Minor: 0 | 2026-02-03 | ✅ |
+| SG | CPH2671 | CPH2671_16.0.2.401(EX01) | **0** | Major: 3, Minor: 0 | 2026-02-03 | ✅ |
+| ID | CPH2671 | CPH2671_16.0.3.500(EX01) | **0** | Major: 3, Minor: 0 | 2026-02-03 | ✅ |
 
 ---
 
@@ -241,13 +241,13 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
+| TW | CPH2499 | CPH2499_16.0.3.500(EX01) | **0** | Major: 2, Minor: 0 | 2026-02-03 | ✅ |
+| TH | CPH2499 | CPH2499_16.0.3.500(EX01) | **0** | Major: 2, Minor: 0 | 2026-02-03 | ✅ |
 | MY | CPH2499 | CPH2499_16.0.3.500(EX01) | **0** | Major: 2, Minor: 0 | 2026-02-03 | ✅ |
+| OCA | CPH2499 | CPH2499_16.0.0.203(EX01) | **0** | Major: 2, Minor: 0 | 2026-02-03 | ✅ |
+| SG | CPH2499 | CPH2499_16.0.3.500(EX01) | **0** | Major: 2, Minor: 0 | 2026-02-03 | ✅ |
 | VN | CPH2499 | CPH2499_16.0.3.500(EX01) | **0** | Major: 2, Minor: 0 | 2026-02-03 | ✅ |
 | ID | CPH2499 | CPH2499_16.0.3.500(EX01) | **0** | Major: 2, Minor: 0 | 2026-02-03 | ✅ |
-| TH | CPH2499 | CPH2499_16.0.3.500(EX01) | **0** | Major: 2, Minor: 0 | 2026-02-03 | ✅ |
-| TW | CPH2499 | CPH2499_16.0.3.500(EX01) | **0** | Major: 2, Minor: 0 | 2026-02-03 | ✅ |
-| SG | CPH2499 | CPH2499_16.0.3.500(EX01) | **0** | Major: 2, Minor: 0 | 2026-02-03 | ✅ |
-| OCA | CPH2499 | CPH2499_16.0.0.203(EX01) | **0** | Major: 2, Minor: 0 | 2026-02-03 | ✅ |
 
 ---
 
@@ -256,10 +256,10 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
 | Europe | CPH2305 | CPH2305_15.0.0.1303(EX01) | **0** | Major: 2, Minor: 0 | 2026-02-03 | ✅ |
-| EG | CPH2305 | CPH2305_11_A.19 | **0** | Major: 2, Minor: 0 | 2026-02-03 | ✅ |
+| TW | CPH2305 | CPH2305_15.0.0.1301(EX01) | **0** | Major: 2, Minor: 0 | 2026-02-03 | ✅ |
 | OCA | CPH2305 | CPH2305_11_A.22 | **0** | Major: 2, Minor: 0 | 2026-02-03 | ✅ |
 | SG | CPH2305 | CPH2305_15.0.0.1301(EX01) | **0** | Major: 2, Minor: 0 | 2026-02-03 | ✅ |
-| TW | CPH2305 | CPH2305_15.0.0.1301(EX01) | **0** | Major: 2, Minor: 0 | 2026-02-03 | ✅ |
+| EG | CPH2305 | CPH2305_11_A.19 | **0** | Major: 2, Minor: 0 | 2026-02-03 | ✅ |
 
 ---
 
@@ -270,9 +270,9 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
 | Global | CPH2307 | CPH2307_15.0.0.1304(EX01) | **0** | Major: 0, Minor: 120 | 2026-02-03 | ✅ |
 | Europe | CPH2307 | CPH2307_15.0.0.1304(EX01) | **0** | Major: 0, Minor: 120 | 2026-02-03 | ✅ |
 | India | CPH2307 | CPH2307_15.0.0.1304(EX01) | **0** | Major: 0, Minor: 120 | 2026-02-03 | ✅ |
-| EG | CPH2307 | CPH2307_15.0.0.1302(EX01) | **0** | Major: 0, Minor: 120 | 2026-02-03 | ✅ |
-| SA | CPH2307 | CPH2307_15.0.0.1302(EX01) | **0** | Major: 0, Minor: 120 | 2026-02-03 | ✅ |
 | OCA | CPH2307 | CPH2307_15.0.0.1302(EX01) | **0** | Major: 0, Minor: 120 | 2026-02-03 | ✅ |
+| SA | CPH2307 | CPH2307_15.0.0.1302(EX01) | **0** | Major: 0, Minor: 120 | 2026-02-03 | ✅ |
+| EG | CPH2307 | CPH2307_15.0.0.1302(EX01) | **0** | Major: 0, Minor: 120 | 2026-02-03 | ✅ |
 
 ---
 
@@ -298,4 +298,4 @@ The bot will extract the payload, check the ARB index, and post the result as a 
 - **ARB Extraction**: [arbextract](https://github.com/koaaN/arbextract) by koaaN
 
 ---
-*Last updated: 2026-02-03 23:38 UTC*
+*Last updated: 2026-02-03 23:39 UTC*

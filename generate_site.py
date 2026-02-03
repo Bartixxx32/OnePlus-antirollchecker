@@ -29,7 +29,8 @@ def get_region_name(region_code: str) -> str:
         'EU': 'Europe',
         'IN': 'India',
         'CN': 'China',
-        'NA': 'North America'
+        'NA': 'North America',
+        'VISIBLE': 'Visible USA'
     }
     return names.get(region_code, region_code)
 
@@ -57,7 +58,7 @@ def process_data(history_data):
                 available_regions.add(key.replace(f"{device_id}_", ""))
                 
         # Order: preferred first, then others sorted
-        preferred_order = ['GLO', 'EU', 'IN', 'NA', 'CN']
+        preferred_order = ['GLO', 'EU', 'IN', 'NA', 'VISIBLE', 'CN']
         
         # Sort regions based on preferred_order, then alphabetically for others
         def region_sort_key(r):

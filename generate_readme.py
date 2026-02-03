@@ -19,7 +19,8 @@ def get_region_name(region_code: str) -> str:
         'EU': 'Europe',
         'IN': 'India',
         'CN': 'China',
-        'NA': 'NA'
+        'NA': 'NA',
+        'VISIBLE': 'Visible USA'
     }
     return names.get(region_code, region_code)
 
@@ -35,7 +36,7 @@ def generate_device_section(device_id: str, device_name: str, history_data: Dict
         if key.startswith(f"{device_id}_"):
              variants.add(key.replace(f"{device_id}_", ""))
     
-    preferred_order = ['GLO', 'EU', 'IN', 'NA', 'CN']
+    preferred_order = ['GLO', 'EU', 'IN', 'NA', 'VISIBLE', 'CN']
     def sort_key(v):
         try:
             return preferred_order.index(v)
