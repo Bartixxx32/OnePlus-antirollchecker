@@ -23,6 +23,83 @@ def get_region_name(region_code: str) -> str:
     }
     return names.get(region_code, region_code)
 
+def generate_device_section(device_id: str, device_name: str, history_data: Dict) -> List[str]:
+    """Generate Markdown section for a specific device."""
+    lines = []
+    
+    # Get available variants
+    variants = set()
+    if device_id in DEVICE_METADATA:
+        variants.update(DEVICE_METADATA[device_id]['models'].keys())
+    for key in history_data:
+        if key.startswith(f"{device_id}_"):
+             variants.add(key.replace(f"{device_id}_", ""))
+    
+    preferred_order = ['GLO', 'EU', 'IN', 'NA', 'CN']
+    def sort_key(v):
+        try:
+            return preferred_order.index(v)
+        except ValueError:
+            return len(preferred_order)
+            
+    sorted_variants = sorted(list(variants), key=sort_key)
+    
+    variant_rows = []
+    for variant in sorted_variants:
+        key = f"{device_id}_{variant}"
+        if key not in history_data:
+            continue
+            
+        data = history_data[key]
+        current_entry = None
+        for entry in data.get('history', []):
+            if entry.get('status') == 'current':
+                current_entry = entry
+                break
+        
+        if not current_entry and data.get('history'):
+            current_entry = data['history'][0]
+            
+        if current_entry:
+            version = current_entry.get('version', 'Unknown')
+            arb = current_entry.get('arb', -1)
+            date = current_entry.get('last_checked', 'Unknown')
+            region_name = get_region_name(variant)
+            model = data.get('model', 'Unknown')
+            status = "✅ Safe" if arb == 0 else "⛔ Protected" if arb > 0 else "❓ Unknown"
+            
+            variant_rows.append('    <tr>')
+            variant_rows.append(f'      <td><b>{region_name}</b></td>')
+            variant_rows.append(f'      <td><code>{model}</code></td>')
+            variant_rows.append(f'      <td><code>{version}</code></td>')
+            variant_rows.append(f'      <td align="center">{arb}</td>')
+            variant_rows.append(f'      <td align="center">{status}</td>')
+            variant_rows.append(f'      <td align="right">{date}</td>')
+            variant_rows.append('    </tr>')
+
+    if variant_rows:
+        lines.append(f"### {device_name}")
+        lines.append("")
+        # Use HTML table with specific widths for alignment across sections
+        lines.append('<table width="100%">')
+        lines.append('  <thead>')
+        lines.append('    <tr>')
+        lines.append('      <th align="left" width="15%">Region</th>')
+        lines.append('      <th align="left" width="12%">Model</th>')
+        lines.append('      <th align="left" width="38%">Version</th>')
+        lines.append('      <th align="center" width="5%">ARB</th>')
+        lines.append('      <th align="center" width="15%">Status</th>')
+        lines.append('      <th align="right" width="15%">Last Checked</th>')
+        lines.append('    </tr>')
+        lines.append('  </thead>')
+        lines.append('  <tbody>')
+        lines.extend(variant_rows)
+        lines.append('  </tbody>')
+        lines.append('</table>')
+        lines.append("")
+        
+    return lines
+
 def generate_readme(history_data: Dict) -> str:
     """Generate complete README content."""
     lines = [
@@ -33,94 +110,22 @@ def generate_readme(history_data: Dict) -> str:
         '**Website:** [https://bartixxx32.github.io/OnePlus-antirollchecker/](https://bartixxx32.github.io/OnePlus-antirollchecker/)',
         '',
         '## 📊 Current Status',
-        '',
-        '<table width="100%">',
-        '  <thead>',
-        '    <tr>',
-        '      <th align="left" width="15%">Region</th>',
-        '      <th align="left" width="10%">Model</th>',
-        '      <th align="left" width="40%">Version</th>',
-        '      <th align="center" width="5%">ARB</th>',
-        '      <th align="left" width="15%">Status</th>',
-        '      <th align="left" width="15%">Last Checked</th>',
-        '    </tr>',
-        '  </thead>',
-        '  <tbody>'
+        ''
     ]
 
-    preferred_order = ['GLO', 'EU', 'IN', 'NA', 'CN']
-    def sort_key(v):
-        try:
-            return preferred_order.index(v)
-        except ValueError:
-            return len(preferred_order)
-
-    # Iterate over DEVICE_ORDER from config
     for device_id in DEVICE_ORDER:
         if device_id not in DEVICE_METADATA:
             continue
         meta = DEVICE_METADATA[device_id]
         device_name = meta['name']
         
-        # Get available variants
-        variants = set()
-        variants.update(meta['models'].keys())
-        for key in history_data:
-            if key.startswith(f"{device_id}_"):
-                 variants.add(key.replace(f"{device_id}_", ""))
-        
-        sorted_variants = sorted(list(variants), key=sort_key)
-        
-        # Collect rows for this device
-        device_rows = []
-        for variant in sorted_variants:
-            key = f"{device_id}_{variant}"
-            if key not in history_data:
-                continue
+        device_lines = generate_device_section(device_id, device_name, history_data)
+        if device_lines:
+            lines.extend(device_lines)
+            lines.append('---')
+            lines.append('')
             
-            data = history_data[key]
-            current_entry = None
-            for entry in data.get('history', []):
-                if entry.get('status') == 'current':
-                    current_entry = entry
-                    break
-            
-            if not current_entry and data.get('history'):
-                current_entry = data['history'][0]
-                
-            if current_entry:
-                version = current_entry.get('version', 'Unknown')
-                arb = current_entry.get('arb', -1)
-                date = current_entry.get('last_checked', 'Unknown')
-                region_name = get_region_name(variant)
-                model = data.get('model', 'Unknown')
-                status = "✅ Safe" if arb == 0 else "⛔ Protected" if arb > 0 else "❓ Unknown"
-                
-                device_rows.append('    <tr>')
-                device_rows.append(f'      <td><b>{region_name}</b></td>')
-                device_rows.append(f'      <td><code>{model}</code></td>')
-                device_rows.append(f'      <td><code>{version}</code></td>')
-                device_rows.append(f'      <td align="center">{arb}</td>')
-                device_rows.append(f'      <td>{status}</td>')
-                device_rows.append(f'      <td>{date}</td>')
-                device_rows.append('    </tr>')
-
-        # Add to main lines if device has data
-        if device_rows:
-            # Add a separator/header row for the device
-            lines.append('    <tr>')
-            lines.append(f'      <td colspan="6" align="left" bgcolor="#21262d"><br><b>{device_name}</b><br><br></td>')
-            lines.append('    </tr>')
-            lines.extend(device_rows)
-
-    lines.append('  </tbody>')
-    lines.append('</table>')
-    lines.append('')
-    
-    # Add On-Demand Checker section
     lines.extend([
-        '---',
-        '',
         '## 🤖 On-Demand ARB Checker',
         '',
         'You can check the ARB index of any OnePlus Ozip/Zip URL manually using our automated workflow.',
