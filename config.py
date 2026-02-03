@@ -24,7 +24,7 @@ class DeviceMeta(TypedDict):
 # Device order for README and Website (OnePlus newest first, then Oppo newest first)
 DEVICE_ORDER = [
     # OnePlus
-    "15R", "Ace 6T", "15", "Pad 3", "Pad 2 Pro", "Ace 5 Ultimate", 
+    "15R", "Ace 6T", "15", "Pad 3", "Pad 2 Pro", 
     "Ace 5 Pro", "Ace 5", "13", "Pad 2", "12", "12R", "Open", 
     "11", "11R", "10 Pro", "10T", "10R", "9 Pro", "9RT", "9", "9R",
     # Oppo
@@ -164,12 +164,6 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
         "name": "OnePlus Ace 5 Pro",
         "models": {
             "CN": "PKR110"
-        }
-    },
-    "Ace 5 Ultimate": {
-        "name": "OnePlus Ace 5 Ultimate",
-        "models": {
-            "CN": "PLC110"
         }
     },
     "Pad 2 Pro": {

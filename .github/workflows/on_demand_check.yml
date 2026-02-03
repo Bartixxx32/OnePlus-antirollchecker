@@ -1,0 +1,114 @@
+name: On-Demand ARB Checker
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  check-firmware:
+    # Standard: Only trigger if title contains [CHECK] and body has a .zip link
+    if: startsWith(github.event.issue.title, '[CHECK]') && contains(github.event.issue.body, '.zip')
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Add Label
+        run: |
+          gh issue edit ${{ github.event.issue.number }} --add-label "checker"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y aria2 unzip curl python3-pip
+          pip3 install requests beautifulsoup4 --break-system-packages || pip3 install requests beautifulsoup4
+
+      - name: Setup Tools
+        run: |
+          mkdir -p tools
+          curl -L -o tools/arbextract https://github.com/koaaN/arbextract/releases/download/1.0/arbextract-x86_64-linux
+          chmod +x tools/arbextract
+          curl -L -o otaripper.tar.gz https://github.com/syedinsaf/otaripper/releases/download/v2.1.1/otaripper-2.1.1-linux-static-x86_64.tar.gz
+          tar -xzvf otaripper.tar.gz
+          mv otaripper tools/otaripper || find . -name "otaripper" -type f -exec mv {} tools/otaripper \;
+          chmod +x tools/otaripper
+
+      - name: Extract URL from Issue
+        id: extract_url
+        run: |
+          URL=$(python3 -c "
+          import re, sys
+          body = '''${{ github.event.issue.body }}'''
+          links = re.findall(r'(https?://[^\s]+\.zip[^\s]*)', body)
+          if links:
+              print(links[0].strip('()[]\"\''))
+          ")
+          
+          if [ -z "$URL" ]; then
+            echo "No valid .zip link found."
+            exit 1
+          fi
+          
+          DOMAIN_REGEX="^(https?://.*(oneplus|myoppo|coloros|oppo|realme)\.(com|cn|net)/.*)"
+          if [[ ! $URL =~ $DOMAIN_REGEX ]]; then
+             if [[ ! $URL == *"roms.danielspringer.at"* ]]; then
+                echo "is_untrusted=true" >> $GITHUB_OUTPUT
+             fi
+          fi
+          
+          echo "url=$URL" >> $GITHUB_OUTPUT
+
+      - name: Add 'Working' Comment
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            🤖 **ARB Analysis Started!**
+            I've identified this as an automated request. Processing the firmware now...
+            
+            **URL**: `${{ steps.extract_url.outputs.url }}`
+            ${{ steps.extract_url.outputs.is_untrusted == 'true' && '> [!WARNING]\n> This link is NOT from an official domain.' || '' }}
+
+      - name: Download Firmware
+        if: steps.extract_url.outputs.url != ''
+        run: |
+          aria2c -x16 -s16 -k1M -o firmware.zip "${{ steps.extract_url.outputs.url }}"
+
+      - name: Analyze Firmware
+        id: analyze
+        if: hashFiles('firmware.zip') != ''
+        run: |
+          python3 analyze_firmware.py firmware.zip \
+            --tools-dir tools \
+            --output-dir extracted \
+            --final-dir firmware_data \
+            --json > result.json
+          
+          ARB=$(python3 -c "import json; print(json.load(open('result.json'))['arb_index'])")
+          echo "arb=$ARB" >> $GITHUB_OUTPUT
+
+      - name: Post Final Result
+        if: always()
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            ${{ steps.analyze.outputs.arb != '' && format('### 🎯 Analysis Result
+            - **ARB Index**: `{0}`
+            - **Status**: {1}', steps.analyze.outputs.arb, (steps.analyze.outputs.arb == '0' && '✅ **Safe to flash/roll back**' || '⚠️ **Anti-Rollback Active!**')) || '❌ **Analysis Failed**' }}
+
+      - name: Close Issue
+        if: always()
+        run: |
+          gh issue close ${{ github.event.issue.number }} --reason "completed"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Cleanup
+        if: always()
+        run: rm -f firmware.zip result.json
