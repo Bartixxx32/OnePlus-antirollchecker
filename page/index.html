@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnePlus ARB Checker</title>
+    <meta name="description" content="OnePlus Anti-Rollback (ARB) index tracker.">
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --text-color: #c9d1d9;
+            --text-muted: #8b949e;
+            --border-color: #30363d;
+            --accent-color: #58a6ff;
+            --success-color: #238636;
+            --danger-color: #da3633;
+            --table-header-bg: #21262d;
+            --hover-bg: #21262d;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        h1 {
+            margin: 0;
+            color: var(--text-color);
+        }
+
+        p.subtitle {
+            color: var(--text-muted);
+            margin-top: 10px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 0;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-header {
+            background-color: var(--table-header-bg);
+            padding: 15px 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .card h2 {
+            margin: 0;
+            font-size: 1.25rem;
+            color: var(--accent-color);
+        }
+
+        .card-body {
+            padding: 0;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9em;
+            table-layout: fixed;
+            /* Force fixed layout for consistency */
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--border-color);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        th {
+            background-color: var(--table-header-bg);
+            color: var(--text-muted);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.5px;
+        }
+
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover {
+            background-color: var(--hover-bg);
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .badge-safe {
+            background-color: rgba(35, 134, 54, 0.15);
+            border: 1px solid rgba(35, 134, 54, 0.4);
+            color: #7ee787;
+        }
+
+        .badge-danger {
+            background-color: rgba(218, 54, 51, 0.15);
+            border: 1px solid rgba(218, 54, 51, 0.4);
+            color: #f85149;
+        }
+
+        .badge-warning {
+            background-color: rgba(210, 153, 34, 0.15);
+            border: 1px solid rgba(210, 153, 34, 0.4);
+            color: #e3b341;
+        }
+
+        .version-cell {
+            max-width: 200px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .meta-info {
+            font-size: 0.8em;
+            color: var(--text-muted);
+            display: block;
+        }
+
+        .footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            font-size: 0.9em;
+            color: var(--text-muted);
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .card-body {
+                overflow-x: auto;
+            }
+        }
+
+        /* History styles */
+        .history-row {
+            display: none;
+            background-color: #0d1117;
+        }
+
+        .history-row.active {
+            display: table-row;
+        }
+
+        .history-container {
+            padding: 15px 25px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .history-table {
+            width: 100%;
+            font-size: 0.85rem;
+            margin: 10px 0;
+            border: 1px solid var(--border-color);
+            background-color: var(--bg-color);
+        }
+
+        .history-table th {
+            font-size: 0.7rem;
+            padding: 8px 12px;
+        }
+
+        .history-table td {
+            padding: 8px 12px;
+            color: var(--text-muted);
+        }
+
+        .toggle-history {
+            cursor: pointer;
+            color: var(--accent-color);
+            background: none;
+            border: 1px solid var(--accent-color);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            transition: all 0.2s;
+        }
+
+        .toggle-history:hover {
+            background-color: rgba(88, 166, 255, 0.1);
+        }
+
+        .toggle-history.active {
+            background-color: var(--accent-color);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>OnePlus ARB Checker</h1>
+            <p class="subtitle">Real-time Anti-Rollback (ARB) index tracking for OnePlus devices</p>
+        </header>
+
+        <div class="grid">
+            
+            <div class="card">
+                <div class="card-header">
+                    <h2>OnePlus 8T</h2>
+                </div>
+                <div class="card-body">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col" style="width: 15%;">Region</th>
+                                <th scope="col" style="width: 35%;">Version</th>
+                                <th scope="col" style="width: 10%;">ARB</th>
+                                <th scope="col" style="width: 15%;">Status</th>
+                                <th scope="col" style="width: 15%;">Last Checked</th>
+                                <th scope="col" style="width: 10%;">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td>
+                                    <strong>Europe</strong>
+                                    <span class="meta-info">KB2003</span>
+                                </td>
+                                <td class="version-cell" title="KB2003_14.0.0.1311(EX01)">
+                                    KB2003_14.0.0.1311(EX01)
+                                    <span class="meta-info">Major: 0,&nbsp;Minor: 120</span>
+                                </td>
+                                <td><strong>0</strong></td>
+                                <td>
+                                    
+                                    <span class="badge badge-safe">Safe</span>
+                                    
+                                </td>
+                                <td>2026-02-04</td>
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                            
+                            
+                            <tr>
+                                <td>
+                                    <strong>India</strong>
+                                    <span class="meta-info">KB2001</span>
+                                </td>
+                                <td class="version-cell" title="KB2001_14.0.0.1311(EX01)">
+                                    KB2001_14.0.0.1311(EX01)
+                                    <span class="meta-info">Major: 0,&nbsp;Minor: 120</span>
+                                </td>
+                                <td><strong>0</strong></td>
+                                <td>
+                                    
+                                    <span class="badge badge-safe">Safe</span>
+                                    
+                                </td>
+                                <td>2026-02-04</td>
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                            
+                            
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h2>OnePlus 8 Pro</h2>
+                </div>
+                <div class="card-body">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col" style="width: 15%;">Region</th>
+                                <th scope="col" style="width: 35%;">Version</th>
+                                <th scope="col" style="width: 10%;">ARB</th>
+                                <th scope="col" style="width: 15%;">Status</th>
+                                <th scope="col" style="width: 15%;">Last Checked</th>
+                                <th scope="col" style="width: 10%;">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td>
+                                    <strong>Europe</strong>
+                                    <span class="meta-info">IN2023</span>
+                                </td>
+                                <td class="version-cell" title="IN2023_13.1.0.590(EX01)">
+                                    IN2023_13.1.0.590(EX01)
+                                    <span class="meta-info">Major: 0,&nbsp;Minor: 120</span>
+                                </td>
+                                <td><strong>0</strong></td>
+                                <td>
+                                    
+                                    <span class="badge badge-safe">Safe</span>
+                                    
+                                </td>
+                                <td>2026-02-04</td>
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                            
+                            
+                            <tr>
+                                <td>
+                                    <strong>India</strong>
+                                    <span class="meta-info">IN2021</span>
+                                </td>
+                                <td class="version-cell" title="IN2021_13.1.0.590(EX01)">
+                                    IN2021_13.1.0.590(EX01)
+                                    <span class="meta-info">Major: 0,&nbsp;Minor: 120</span>
+                                </td>
+                                <td><strong>0</strong></td>
+                                <td>
+                                    
+                                    <span class="badge badge-safe">Safe</span>
+                                    
+                                </td>
+                                <td>2026-02-04</td>
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                            
+                            
+                            <tr>
+                                <td>
+                                    <strong>North America</strong>
+                                    <span class="meta-info">IN2025</span>
+                                </td>
+                                <td class="version-cell" title="IN2025_11_F.67">
+                                    IN2025_11_F.67
+                                    <span class="meta-info">Major: 0,&nbsp;Minor: 120</span>
+                                </td>
+                                <td><strong>0</strong></td>
+                                <td>
+                                    
+                                    <span class="badge badge-safe">Safe</span>
+                                    
+                                </td>
+                                <td>2026-02-04</td>
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                            
+                            
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h2>OnePlus 8</h2>
+                </div>
+                <div class="card-body">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col" style="width: 15%;">Region</th>
+                                <th scope="col" style="width: 35%;">Version</th>
+                                <th scope="col" style="width: 10%;">ARB</th>
+                                <th scope="col" style="width: 15%;">Status</th>
+                                <th scope="col" style="width: 15%;">Last Checked</th>
+                                <th scope="col" style="width: 10%;">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td>
+                                    <strong>Europe</strong>
+                                    <span class="meta-info">IN2013</span>
+                                </td>
+                                <td class="version-cell" title="IN2013_13.1.0.593(EX01)">
+                                    IN2013_13.1.0.593(EX01)
+                                    <span class="meta-info">Major: 0,&nbsp;Minor: 120</span>
+                                </td>
+                                <td><strong>0</strong></td>
+                                <td>
+                                    
+                                    <span class="badge badge-safe">Safe</span>
+                                    
+                                </td>
+                                <td>2026-02-04</td>
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                            
+                            
+                            <tr>
+                                <td>
+                                    <strong>India</strong>
+                                    <span class="meta-info">IN2011</span>
+                                </td>
+                                <td class="version-cell" title="IN2011_13.1.0.590(EX01)">
+                                    IN2011_13.1.0.590(EX01)
+                                    <span class="meta-info">Major: 0,&nbsp;Minor: 120</span>
+                                </td>
+                                <td><strong>0</strong></td>
+                                <td>
+                                    
+                                    <span class="badge badge-safe">Safe</span>
+                                    
+                                </td>
+                                <td>2026-02-04</td>
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                            
+                            
+                            <tr>
+                                <td>
+                                    <strong>North America</strong>
+                                    <span class="meta-info">IN2015</span>
+                                </td>
+                                <td class="version-cell" title="IN2015_11_F.67">
+                                    IN2015_11_F.67
+                                    <span class="meta-info">Major: 0,&nbsp;Minor: 120</span>
+                                </td>
+                                <td><strong>0</strong></td>
+                                <td>
+                                    
+                                    <span class="badge badge-safe">Safe</span>
+                                    
+                                </td>
+                                <td>2026-02-04</td>
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                            
+                            
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h2>OnePlus 7T Pro</h2>
+                </div>
+                <div class="card-body">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col" style="width: 15%;">Region</th>
+                                <th scope="col" style="width: 35%;">Version</th>
+                                <th scope="col" style="width: 10%;">ARB</th>
+                                <th scope="col" style="width: 15%;">Status</th>
+                                <th scope="col" style="width: 15%;">Last Checked</th>
+                                <th scope="col" style="width: 10%;">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td>
+                                    <strong>Europe</strong>
+                                    <span class="meta-info">HD1913</span>
+                                </td>
+                                <td class="version-cell" title="HD1913_11_F.22">
+                                    HD1913_11_F.22
+                                    <span class="meta-info">Major: 0,&nbsp;Minor: 120</span>
+                                </td>
+                                <td><strong>0</strong></td>
+                                <td>
+                                    
+                                    <span class="badge badge-safe">Safe</span>
+                                    
+                                </td>
+                                <td>2026-02-04</td>
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                            
+                            
+                            <tr>
+                                <td>
+                                    <strong>India</strong>
+                                    <span class="meta-info">HD1911</span>
+                                </td>
+                                <td class="version-cell" title="HD1911_11_F.22">
+                                    HD1911_11_F.22
+                                    <span class="meta-info">Major: 0,&nbsp;Minor: 120</span>
+                                </td>
+                                <td><strong>0</strong></td>
+                                <td>
+                                    
+                                    <span class="badge badge-safe">Safe</span>
+                                    
+                                </td>
+                                <td>2026-02-04</td>
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                            
+                            
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h2>OnePlus 7T</h2>
+                </div>
+                <div class="card-body">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col" style="width: 15%;">Region</th>
+                                <th scope="col" style="width: 35%;">Version</th>
+                                <th scope="col" style="width: 10%;">ARB</th>
+                                <th scope="col" style="width: 15%;">Status</th>
+                                <th scope="col" style="width: 15%;">Last Checked</th>
+                                <th scope="col" style="width: 10%;">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td>
+                                    <strong>Europe</strong>
+                                    <span class="meta-info">HD1903</span>
+                                </td>
+                                <td class="version-cell" title="HD1903_11_F.22">
+                                    HD1903_11_F.22
+                                    <span class="meta-info">Major: 0,&nbsp;Minor: 120</span>
+                                </td>
+                                <td><strong>0</strong></td>
+                                <td>
+                                    
+                                    <span class="badge badge-safe">Safe</span>
+                                    
+                                </td>
+                                <td>2026-02-04</td>
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                            
+                            
+                            <tr>
+                                <td>
+                                    <strong>India</strong>
+                                    <span class="meta-info">HD1901</span>
+                                </td>
+                                <td class="version-cell" title="HD1901_11_F.22">
+                                    HD1901_11_F.22
+                                    <span class="meta-info">Major: 0,&nbsp;Minor: 120</span>
+                                </td>
+                                <td><strong>0</strong></td>
+                                <td>
+                                    
+                                    <span class="badge badge-safe">Safe</span>
+                                    
+                                </td>
+                                <td>2026-02-04</td>
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                            
+                            
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h2>OnePlus 7 Pro</h2>
+                </div>
+                <div class="card-body">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col" style="width: 15%;">Region</th>
+                                <th scope="col" style="width: 35%;">Version</th>
+                                <th scope="col" style="width: 10%;">ARB</th>
+                                <th scope="col" style="width: 15%;">Status</th>
+                                <th scope="col" style="width: 15%;">Last Checked</th>
+                                <th scope="col" style="width: 10%;">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td>
+                                    <strong>Europe</strong>
+                                    <span class="meta-info">GM1913</span>
+                                </td>
+                                <td class="version-cell" title="GM1913_11_H.40">
+                                    GM1913_11_H.40
+                                    <span class="meta-info">Major: 0,&nbsp;Minor: 120</span>
+                                </td>
+                                <td><strong>0</strong></td>
+                                <td>
+                                    
+                                    <span class="badge badge-safe">Safe</span>
+                                    
+                                </td>
+                                <td>2026-02-04</td>
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                            
+                            
+                            <tr>
+                                <td>
+                                    <strong>India</strong>
+                                    <span class="meta-info">GM1911</span>
+                                </td>
+                                <td class="version-cell" title="GM1911_11_H.40">
+                                    GM1911_11_H.40
+                                    <span class="meta-info">Major: 0,&nbsp;Minor: 120</span>
+                                </td>
+                                <td><strong>0</strong></td>
+                                <td>
+                                    
+                                    <span class="badge badge-safe">Safe</span>
+                                    
+                                </td>
+                                <td>2026-02-04</td>
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                            
+                            
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h2>OnePlus 7</h2>
+                </div>
+                <div class="card-body">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col" style="width: 15%;">Region</th>
+                                <th scope="col" style="width: 35%;">Version</th>
+                                <th scope="col" style="width: 10%;">ARB</th>
+                                <th scope="col" style="width: 15%;">Status</th>
+                                <th scope="col" style="width: 15%;">Last Checked</th>
+                                <th scope="col" style="width: 10%;">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td>
+                                    <strong>Europe</strong>
+                                    <span class="meta-info">GM1903</span>
+                                </td>
+                                <td class="version-cell" title="GM1903_11_H.40">
+                                    GM1903_11_H.40
+                                    <span class="meta-info">Major: 0,&nbsp;Minor: 120</span>
+                                </td>
+                                <td><strong>0</strong></td>
+                                <td>
+                                    
+                                    <span class="badge badge-safe">Safe</span>
+                                    
+                                </td>
+                                <td>2026-02-04</td>
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                            
+                            
+                            <tr>
+                                <td>
+                                    <strong>India</strong>
+                                    <span class="meta-info">GM1901</span>
+                                </td>
+                                <td class="version-cell" title="GM1901_11_H.40">
+                                    GM1901_11_H.40
+                                    <span class="meta-info">Major: 0,&nbsp;Minor: 120</span>
+                                </td>
+                                <td><strong>0</strong></td>
+                                <td>
+                                    
+                                    <span class="badge badge-safe">Safe</span>
+                                    
+                                </td>
+                                <td>2026-02-04</td>
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                            
+                            
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h2>OnePlus Nord</h2>
+                </div>
+                <div class="card-body">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col" style="width: 15%;">Region</th>
+                                <th scope="col" style="width: 35%;">Version</th>
+                                <th scope="col" style="width: 10%;">ARB</th>
+                                <th scope="col" style="width: 15%;">Status</th>
+                                <th scope="col" style="width: 15%;">Last Checked</th>
+                                <th scope="col" style="width: 10%;">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td>
+                                    <strong>Europe</strong>
+                                    <span class="meta-info">AC2003</span>
+                                </td>
+                                <td class="version-cell" title="AC2003_11_F.24">
+                                    AC2003_11_F.24
+                                    <span class="meta-info">Major: 0,&nbsp;Minor: 120</span>
+                                </td>
+                                <td><strong>0</strong></td>
+                                <td>
+                                    
+                                    <span class="badge badge-safe">Safe</span>
+                                    
+                                </td>
+                                <td>2026-02-04</td>
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                            
+                            
+                            <tr>
+                                <td>
+                                    <strong>India</strong>
+                                    <span class="meta-info">AC2001</span>
+                                </td>
+                                <td class="version-cell" title="AC2001_11_F.24">
+                                    AC2001_11_F.24
+                                    <span class="meta-info">Major: 0,&nbsp;Minor: 120</span>
+                                </td>
+                                <td><strong>0</strong></td>
+                                <td>
+                                    
+                                    <span class="badge badge-safe">Safe</span>
+                                    
+                                </td>
+                                <td>2026-02-04</td>
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                            
+                            
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h2>OnePlus Ace 3 Pro</h2>
+                </div>
+                <div class="card-body">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col" style="width: 15%;">Region</th>
+                                <th scope="col" style="width: 35%;">Version</th>
+                                <th scope="col" style="width: 10%;">ARB</th>
+                                <th scope="col" style="width: 15%;">Status</th>
+                                <th scope="col" style="width: 15%;">Last Checked</th>
+                                <th scope="col" style="width: 10%;">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td>
+                                    <strong>China</strong>
+                                    <span class="meta-info">PJX110</span>
+                                </td>
+                                <td class="version-cell" title="PJX110_16.0.1.301(CN01)">
+                                    PJX110_16.0.1.301(CN01)
+                                    <span class="meta-info">Major: 3,&nbsp;Minor: 0</span>
+                                </td>
+                                <td><strong>0</strong></td>
+                                <td>
+                                    
+                                    <span class="badge badge-safe">Safe</span>
+                                    
+                                </td>
+                                <td>2026-02-04</td>
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                            
+                            
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h2>OnePlus Ace 3V</h2>
+                </div>
+                <div class="card-body">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col" style="width: 15%;">Region</th>
+                                <th scope="col" style="width: 35%;">Version</th>
+                                <th scope="col" style="width: 10%;">ARB</th>
+                                <th scope="col" style="width: 15%;">Status</th>
+                                <th scope="col" style="width: 15%;">Last Checked</th>
+                                <th scope="col" style="width: 10%;">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td>
+                                    <strong>China</strong>
+                                    <span class="meta-info">PJF110</span>
+                                </td>
+                                <td class="version-cell" title="PJF110_16.0.1.301(CN01)">
+                                    PJF110_16.0.1.301(CN01)
+                                    <span class="meta-info">Major: 3,&nbsp;Minor: 0</span>
+                                </td>
+                                <td><strong>0</strong></td>
+                                <td>
+                                    
+                                    <span class="badge badge-safe">Safe</span>
+                                    
+                                </td>
+                                <td>2026-02-04</td>
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                            
+                            
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h2>OnePlus Ace 3</h2>
+                </div>
+                <div class="card-body">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col" style="width: 15%;">Region</th>
+                                <th scope="col" style="width: 35%;">Version</th>
+                                <th scope="col" style="width: 10%;">ARB</th>
+                                <th scope="col" style="width: 15%;">Status</th>
+                                <th scope="col" style="width: 15%;">Last Checked</th>
+                                <th scope="col" style="width: 10%;">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td>
+                                    <strong>China</strong>
+                                    <span class="meta-info">PJE110</span>
+                                </td>
+                                <td class="version-cell" title="PJE110_16.0.1.300(CN01)">
+                                    PJE110_16.0.1.300(CN01)
+                                    <span class="meta-info">Major: 2,&nbsp;Minor: 0</span>
+                                </td>
+                                <td><strong>0</strong></td>
+                                <td>
+                                    
+                                    <span class="badge badge-safe">Safe</span>
+                                    
+                                </td>
+                                <td>2026-02-04</td>
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                            
+                            
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h2>Oppo Find X3 Pro</h2>
+                </div>
+                <div class="card-body">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col" style="width: 15%;">Region</th>
+                                <th scope="col" style="width: 35%;">Version</th>
+                                <th scope="col" style="width: 10%;">ARB</th>
+                                <th scope="col" style="width: 15%;">Status</th>
+                                <th scope="col" style="width: 15%;">Last Checked</th>
+                                <th scope="col" style="width: 10%;">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td>
+                                    <strong>Europe</strong>
+                                    <span class="meta-info">CPH2173</span>
+                                </td>
+                                <td class="version-cell" title="CPH2173_14.0.0.2102(EX01)">
+                                    CPH2173_14.0.0.2102(EX01)
+                                    <span class="meta-info">Major: 0,&nbsp;Minor: 120</span>
+                                </td>
+                                <td><strong>0</strong></td>
+                                <td>
+                                    
+                                    <span class="badge badge-safe">Safe</span>
+                                    
+                                </td>
+                                <td>2026-02-04</td>
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                            
+                            
+                            <tr>
+                                <td>
+                                    <strong>SG</strong>
+                                    <span class="meta-info">CPH2173</span>
+                                </td>
+                                <td class="version-cell" title="CPH2173_14.0.0.2102(EX01)">
+                                    CPH2173_14.0.0.2102(EX01)
+                                    <span class="meta-info">Major: 0,&nbsp;Minor: 120</span>
+                                </td>
+                                <td><strong>0</strong></td>
+                                <td>
+                                    
+                                    <span class="badge badge-safe">Safe</span>
+                                    
+                                </td>
+                                <td>2026-02-04</td>
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                            
+                            
+                            <tr>
+                                <td>
+                                    <strong>TW</strong>
+                                    <span class="meta-info">CPH2173</span>
+                                </td>
+                                <td class="version-cell" title="CPH2173_14.0.0.2102(EX01)">
+                                    CPH2173_14.0.0.2102(EX01)
+                                    <span class="meta-info">Major: 0,&nbsp;Minor: 120</span>
+                                </td>
+                                <td><strong>0</strong></td>
+                                <td>
+                                    
+                                    <span class="badge badge-safe">Safe</span>
+                                    
+                                </td>
+                                <td>2026-02-04</td>
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                            
+                            
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="footer">
+            <div style="margin-bottom: 20px; font-size: 0.85em;">
+                <strong>Credits:</strong>
+                Payload Extraction by <a href="https://github.com/syedinsaf/otaripper">otaripper</a> (syedinsaf)
+                &bull;
+                Fallback by <a href="https://github.com/ssut/payload-dumper-go">payload-dumper-go</a> (ssut)
+                &bull;
+                ARB Extraction by <a href="https://github.com/koaaN/arbextract">arbextract</a> (koaaN)
+            </div>
+            <p>Last scan: 2026-02-04 01:30 UTC</p>
+            <p>
+                <a href="https://github.com/Bartixxx32/Oneplus-antirollchecker">View Source on GitHub</a>
+                &bull;
+                <a href="https://github.com/Bartixxx32/Oneplus-antirollchecker/actions">Workflow Status</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function toggleHistory(id, btn) {
+            const row = document.getElementById('history-' + id);
+            if (row.classList.contains('active')) {
+                row.classList.remove('active');
+                btn.classList.remove('active');
+                btn.textContent = 'History';
+            } else {
+                row.classList.add('active');
+                btn.classList.add('active');
+                btn.textContent = 'Close';
+            }
+        }
+    </script>
+</body>
+
+</html>
