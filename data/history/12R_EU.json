@@ -1,0 +1,17 @@
+{
+  "history": [
+    {
+      "version": "CPH2609_16.0.2.401(EX01)",
+      "arb": 0,
+      "major": 2,
+      "minor": 0,
+      "first_seen": "2026-02-04",
+      "last_checked": "2026-02-04",
+      "status": "current"
+    }
+  ],
+  "device": "OnePlus 12R",
+  "device_id": "12R",
+  "region": "EU",
+  "model": "CPH2609"
+}

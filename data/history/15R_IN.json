@@ -1,0 +1,17 @@
+{
+  "history": [
+    {
+      "version": "CPH2767_16.0.3.501(EX01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-02-04",
+      "last_checked": "2026-02-04",
+      "status": "current"
+    }
+  ],
+  "device": "OnePlus 15R",
+  "device_id": "15R",
+  "region": "IN",
+  "model": "CPH2741"
+}

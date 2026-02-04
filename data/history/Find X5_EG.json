@@ -1,0 +1,17 @@
+{
+  "history": [
+    {
+      "version": "CPH2307_15.0.0.1302(EX01)",
+      "arb": 0,
+      "major": 0,
+      "minor": 120,
+      "first_seen": "2026-02-04",
+      "last_checked": "2026-02-04",
+      "status": "current"
+    }
+  ],
+  "device": "Oppo Find X5",
+  "device_id": "Find X5",
+  "region": "EG",
+  "model": "CPH2307"
+}
