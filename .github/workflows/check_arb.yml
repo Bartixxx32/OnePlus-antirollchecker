@@ -170,6 +170,13 @@ jobs:
           
           cat result.json
 
+      - name: Extract ARB from Cached Image
+        if: steps.cache-arb.outputs.cache-hit == 'true' && hashFiles('firmware_data/xbl_config.img') != ''
+        run: |
+          echo "Cache hit! Extracting ARB from cached xbl_config.img..."
+          tools/arbextract firmware_data/xbl_config.img --json > result.json
+          cat result.json
+
       - name: Update JSON History (Current Version)
         if: hashFiles('result.json') != ''
         run: |
