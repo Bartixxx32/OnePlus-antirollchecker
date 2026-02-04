@@ -45,6 +45,7 @@ def process_data(history_data):
         meta = DEVICE_METADATA[device_id]
         
         device_entry = {
+            'id': device_id,
             'name': meta['name'],
             'variants': []
         }
@@ -97,8 +98,11 @@ def process_data(history_data):
                 'arb': current_entry.get('arb', -1),
                 'major': current_entry.get('major', '?'),
                 'minor': current_entry.get('minor', '?'),
-                'last_checked': current_entry.get('last_checked', 'Unknown')
+                'last_checked': current_entry.get('last_checked', 'Unknown'),
+                'history': [e for e in data.get('history', []) if e.get('status') != 'current']
             }
+            # Sort history by date descending
+            variant_entry['history'].sort(key=lambda x: (x.get('last_checked', ''), x.get('version', '')), reverse=True)
             # Add helper for status
             # ARB 0 means safe (downgrade possible), >0 means protected
             variant_entry['is_safe'] = (variant_entry['arb'] == 0)
