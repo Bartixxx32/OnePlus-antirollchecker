@@ -1,0 +1,35 @@
+{
+  "history": [
+    {
+      "version": "CPH2551_16.0.2.400(EX01)",
+      "arb": 0,
+      "major": 2,
+      "minor": 0,
+      "first_seen": "2026-02-03",
+      "last_checked": "2026-02-03",
+      "status": "current"
+    },
+    {
+      "version": "CPH2551_16.0.1.300(EX01)",
+      "arb": 0,
+      "major": 2,
+      "minor": 0,
+      "first_seen": "2026-02-03",
+      "last_checked": "2026-02-03",
+      "status": "archived"
+    },
+    {
+      "version": "CPH2551_16.0.0.201(EX01)",
+      "arb": 0,
+      "major": 2,
+      "minor": 0,
+      "first_seen": "2026-02-03",
+      "last_checked": "2026-02-03",
+      "status": "archived"
+    }
+  ],
+  "device": "OnePlus Open",
+  "device_id": "Open",
+  "region": "IN",
+  "model": "CPH2551"
+}

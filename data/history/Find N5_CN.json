@@ -1,0 +1,35 @@
+{
+  "history": [
+    {
+      "version": "PKH110_16.0.3.500(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-02-03",
+      "last_checked": "2026-02-03",
+      "status": "current"
+    },
+    {
+      "version": "PKH110_16.0.2.401(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-02-03",
+      "last_checked": "2026-02-03",
+      "status": "archived"
+    },
+    {
+      "version": "PKH110_16.0.1.302(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-02-03",
+      "last_checked": "2026-02-03",
+      "status": "archived"
+    }
+  ],
+  "device": "Oppo Find N5",
+  "device_id": "Find N5",
+  "region": "CN",
+  "model": "PKV110"
+}

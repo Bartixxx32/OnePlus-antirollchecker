@@ -1,0 +1,35 @@
+{
+  "history": [
+    {
+      "version": "CPH2581_16.0.0.201(EX01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-02-03",
+      "last_checked": "2026-02-03",
+      "status": "archived"
+    },
+    {
+      "version": "CPH2581_15.0.0.863(EX01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-02-03",
+      "last_checked": "2026-02-03",
+      "status": "archived"
+    },
+    {
+      "version": "CPH2581_16.0.3.500(EX01)",
+      "arb": 1,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-01-27",
+      "last_checked": "2026-02-03",
+      "status": "current"
+    }
+  ],
+  "device": "OnePlus 12",
+  "device_id": "12",
+  "region": "GLO",
+  "model": "CPH2573"
+}

@@ -1,0 +1,35 @@
+{
+  "history": [
+    {
+      "version": "PKG110_16.0.2.400(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-02-03",
+      "last_checked": "2026-02-03",
+      "status": "archived"
+    },
+    {
+      "version": "PKG110_16.0.1.302(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-02-03",
+      "last_checked": "2026-02-03",
+      "status": "archived"
+    },
+    {
+      "version": "PKG110_16.0.3.500(CN01)",
+      "arb": 1,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-02-02",
+      "last_checked": "2026-02-03",
+      "status": "current"
+    }
+  ],
+  "device": "OnePlus Ace 5",
+  "device_id": "Ace 5",
+  "region": "CN",
+  "model": "PKG110"
+}

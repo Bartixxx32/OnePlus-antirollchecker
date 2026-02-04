@@ -1,0 +1,17 @@
+{
+  "history": [
+    {
+      "version": "CPH2671_16.0.2.401(EX01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-02-03",
+      "last_checked": "2026-02-03",
+      "status": "current"
+    }
+  ],
+  "device": "Oppo Find N5",
+  "device_id": "Find N5",
+  "region": "SG",
+  "model": "CPH2671"
+}
