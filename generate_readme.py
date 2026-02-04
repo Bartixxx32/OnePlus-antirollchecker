@@ -85,44 +85,6 @@ def generate_device_section(device_id: str, device_name: str, history_data: Dict
         lines.extend(rows)
         lines.append("")
         
-        # Add History Section
-        history_lines = []
-        for variant in sorted_variants:
-            key = f"{device_id}_{variant}"
-            if key not in history_data:
-                continue
-            
-            data = history_data[key]
-            # Filter out current version from history
-            history_entries = [e for e in data.get('history', []) if e.get('status') != 'current']
-            
-            # Sort history by date descending
-            history_entries.sort(key=lambda x: (x.get('last_checked', ''), x.get('version', '')), reverse=True)
-            
-            if history_entries:
-                region_name = get_region_name(variant)
-                history_lines.append(f"<details>")
-                history_lines.append(f"<summary>📜 <b>{region_name} History</b> (click to expand)</summary>")
-                history_lines.append("")
-                history_lines.append("| Firmware Version | ARB | OEM Version | Last Seen | Safe |")
-                history_lines.append("|:---|:---|:---|:---|:---|")
-                for entry in history_entries:
-                    v = entry.get('version', 'Unknown')
-                    a = entry.get('arb', -1)
-                    maj = entry.get('major', '?')
-                    min_ = entry.get('minor', '?')
-                    ls = entry.get('last_checked', 'Unknown')
-                    s_icon = "✅" if a == 0 else "❌" if a > 0 else "❓"
-                    
-                    history_lines.append(f"| {v} | {a} | Major: {maj}, Minor: {min_} | {ls} | {s_icon} |")
-                history_lines.append("")
-                history_lines.append("</details>")
-                history_lines.append("")
-
-        if history_lines:
-            lines.extend(history_lines)
-            lines.append("")
-        
     return lines
 
 def generate_readme(history_data: Dict) -> str:

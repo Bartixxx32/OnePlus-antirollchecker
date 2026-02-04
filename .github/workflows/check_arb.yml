@@ -150,7 +150,7 @@ jobs:
           fi
 
       - name: Analyze Firmware (Check ARB)
-        if: hashFiles('skip_check.txt') == ''
+        if: steps.cache-arb.outputs.cache-hit != 'true' && hashFiles('skip_check.txt') == ''
         run: |
           # Use the new standalone script
           # It extracts to 'extracted' (temp) and moves final file to 'firmware_data/xbl_config.img'
@@ -240,7 +240,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add data/history/ README.md
+          git add data/history/*.json README.md
           git commit -m "Update ARB history and README" || echo "No changes to commit"
           git push
 
