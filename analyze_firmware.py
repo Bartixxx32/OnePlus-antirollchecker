@@ -71,10 +71,12 @@ def analyze_firmware(zip_path, tools_dir, output_dir, final_dir=None):
     
     final_img = final_dir / "xbl_config.img"
     
-    # 0. Extract basic metadata (always try even if cache hit)
+    # 0. Extract basic metadata (always try if zip is available)
     metadata = {}
     if zip_path and Path(zip_path).exists():
         metadata = extract_ota_metadata(zip_path)
+    elif zip_path:
+        logger.warning(f"Zip path provided but does not exist: {zip_path}")
     
     # 1. Skip extraction if image already exists (cache hit optimization)
     if final_img.exists():
@@ -158,7 +160,7 @@ def analyze_firmware(zip_path, tools_dir, output_dir, final_dir=None):
 
 def main():
     parser = argparse.ArgumentParser(description="Analyze firmware ARB index.")
-    parser.add_argument("zip_path", help="Path to firmware.zip")
+    parser.add_argument("zip_path", nargs="?", help="Path to firmware.zip (optional if image already exists in final-dir)")
     parser.add_argument("--tools-dir", default="tools", help="Directory containing payload-dumper and arbextract")
     parser.add_argument("--output-dir", default="extracted", help="Directory for extraction")
     parser.add_argument("--final-dir", default="firmware_data", help="Directory for final xbl_config.img")

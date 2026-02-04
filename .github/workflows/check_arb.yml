@@ -150,7 +150,7 @@ jobs:
           fi
 
       - name: Analyze Firmware (Check ARB)
-        if: steps.cache-arb.outputs.cache-hit != 'true' && hashFiles('skip_check.txt') == ''
+        if: hashFiles('skip_check.txt') == ''
         run: |
           # Use the new standalone script
           # It extracts to 'extracted' (temp) and moves final file to 'firmware_data/xbl_config.img'
