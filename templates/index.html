@@ -89,9 +89,8 @@
             width: 100%;
             border-collapse: collapse;
             font-size: 0.9em;
-            white-space: nowrap;
             table-layout: fixed;
-            table-layout: fixed;
+            /* Force fixed layout for consistency */
         }
 
         th,
@@ -99,6 +98,9 @@
             text-align: left;
             padding: 12px 15px;
             border-bottom: 1px solid var(--border-color);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
 
         th {
@@ -186,6 +188,59 @@
                 overflow-x: auto;
             }
         }
+
+        /* History styles */
+        .history-row {
+            display: none;
+            background-color: #0d1117;
+        }
+
+        .history-row.active {
+            display: table-row;
+        }
+
+        .history-container {
+            padding: 15px 25px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .history-table {
+            width: 100%;
+            font-size: 0.85rem;
+            margin: 10px 0;
+            border: 1px solid var(--border-color);
+            background-color: var(--bg-color);
+        }
+
+        .history-table th {
+            font-size: 0.7rem;
+            padding: 8px 12px;
+        }
+
+        .history-table td {
+            padding: 8px 12px;
+            color: var(--text-muted);
+        }
+
+        .toggle-history {
+            cursor: pointer;
+            color: var(--accent-color);
+            background: none;
+            border: 1px solid var(--accent-color);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            transition: all 0.2s;
+        }
+
+        .toggle-history:hover {
+            background-color: rgba(88, 166, 255, 0.1);
+        }
+
+        .toggle-history.active {
+            background-color: var(--accent-color);
+            color: white;
+        }
     </style>
 </head>
 
@@ -207,10 +262,11 @@
                         <thead>
                             <tr>
                                 <th scope="col" style="width: 15%;">Region</th>
-                                <th scope="col" style="width: 45%;">Version</th>
+                                <th scope="col" style="width: 35%;">Version</th>
                                 <th scope="col" style="width: 10%;">ARB</th>
                                 <th scope="col" style="width: 15%;">Status</th>
                                 <th scope="col" style="width: 15%;">Last Checked</th>
+                                <th scope="col" style="width: 10%;">Actions</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -236,7 +292,56 @@
                                     {% endif %}
                                 </td>
                                 <td>{{ variant.last_checked }}</td>
+                                <td>
+                                    {% if variant.history|length > 0 %}
+                                    <button class="toggle-history"
+                                        onclick="toggleHistory('{{ device.id|replace(' ', '-') }}-{{ variant.region_name|replace(' ', '-') }}', this)">
+                                        History
+                                    </button>
+                                    {% endif %}
+                                </td>
                             </tr>
+                            {% if variant.history|length > 0 %}
+                            <tr id="history-{{ device.id|replace(' ', '-') }}-{{ variant.region_name|replace(' ', '-') }}"
+                                class="history-row">
+                                <td colspan="6">
+                                    <div class="history-container">
+                                        <h4 style="margin: 0 0 10px 0; font-size: 0.9rem;">📜 Version History - {{
+                                            variant.region_name }}</h4>
+                                        <table class="history-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Firmware Version</th>
+                                                    <th>ARB</th>
+                                                    <th>Status</th>
+                                                    <th>OEM Version</th>
+                                                    <th>Last Seen</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {% for entry in variant.history %}
+                                                <tr>
+                                                    <td>{{ entry.version }}</td>
+                                                    <td>{{ entry.arb }}</td>
+                                                    <td>
+                                                        {% if entry.arb == 0 %}
+                                                        <span class="badge badge-safe">Safe</span>
+                                                        {% elif entry.arb > 0 %}
+                                                        <span class="badge badge-danger">Protected</span>
+                                                        {% else %}
+                                                        <span class="badge badge-warning">Unknown</span>
+                                                        {% endif %}
+                                                    </td>
+                                                    <td>Major: {{ entry.major }}, Minor: {{ entry.minor }}</td>
+                                                    <td>{{ entry.last_checked }}</td>
+                                                </tr>
+                                                {% endfor %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                            {% endif %}
                             {% endfor %}
                             {% if not device.variants %}
                             <tr>
@@ -267,6 +372,21 @@
             </p>
         </div>
     </div>
+
+    <script>
+        function toggleHistory(id, btn) {
+            const row = document.getElementById('history-' + id);
+            if (row.classList.contains('active')) {
+                row.classList.remove('active');
+                btn.classList.remove('active');
+                btn.textContent = 'History';
+            } else {
+                row.classList.add('active');
+                btn.classList.add('active');
+                btn.textContent = 'Close';
+            }
+        }
+    </script>
 </body>
 
 </html>

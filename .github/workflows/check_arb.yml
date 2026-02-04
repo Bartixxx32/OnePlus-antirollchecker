@@ -170,6 +170,31 @@ jobs:
           
           cat result.json
 
+      - name: Extract ARB from Cached Image
+        if: steps.cache-arb.outputs.cache-hit == 'true' && hashFiles('firmware_data/xbl_config.img') != ''
+        run: |
+          echo "Cache hit! Extracting ARB from cached xbl_config.img..."
+          
+          # Run arbextract and capture output
+          ARB_OUTPUT=$(tools/arbextract firmware_data/xbl_config.img)
+          echo "$ARB_OUTPUT"
+          
+          # Parse the output and create JSON
+          ARB_INDEX=$(echo "$ARB_OUTPUT" | grep "ARB (Anti-Rollback)" | awk -F':' '{print $2}' | tr -d ' ')
+          MAJOR=$(echo "$ARB_OUTPUT" | grep "Major Version" | awk -F':' '{print $2}' | tr -d ' ')
+          MINOR=$(echo "$ARB_OUTPUT" | grep "Minor Version" | awk -F':' '{print $2}' | tr -d ' ')
+          
+          # Create result.json
+          cat > result.json << EOF
+          {
+            "arb_index": "$ARB_INDEX",
+            "major": "$MAJOR",
+            "minor": "$MINOR"
+          }
+          EOF
+          
+          cat result.json
+
       - name: Update JSON History (Current Version)
         if: hashFiles('result.json') != ''
         run: |

@@ -1,44 +1,41 @@
-#!/usr/bin/env python3
 import json
-import argparse
-import logging
 from pathlib import Path
-from datetime import datetime, timezone
 from jinja2 import Environment, FileSystemLoader
-from config import DEVICE_METADATA, DEVICE_ORDER
+from datetime import datetime, timezone
+import logging
+from config import DEVICE_ORDER, DEVICE_METADATA
 
 # Configure logging
-logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
+logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 def load_all_history(history_dir: Path):
     """Load all JSON history files."""
-    history_data = {}
-    if not history_dir.exists():
-        return {}
-
-    for json_file in history_dir.glob('*.json'):
-        name = json_file.stem
+    data = {}
+    for file_path in history_dir.glob('*.json'):
         try:
-            with open(json_file, 'r') as f:
-                history_data[name] = json.load(f)
+            with open(file_path, 'r', encoding='utf-8') as f:
+                content = json.load(f)
+                # Store by filename stem (e.g. "12_EU")
+                data[file_path.stem] = content
         except Exception as e:
-            logger.warning(f"Failed to load {json_file}: {e}")
-            continue
-    return history_data
+            logger.error(f"Failed to load {file_path}: {e}")
+    return data
 
-def get_region_name(variant: str) -> str:
+def get_region_name(region_code: str) -> str:
+    """Convert region code to human readable name."""
     names = {
         'GLO': 'Global',
         'EU': 'Europe',
         'IN': 'India',
         'CN': 'China',
-        'NA': 'NA'
+        'NA': 'North America',
+        'VISIBLE': 'Visible USA'
     }
-    return names.get(variant, variant)
+    return names.get(region_code, region_code)
 
 def process_data(history_data):
-    """Process raw history data into a structure suitable for the template."""
+    """Process raw history data."""
     devices_list = []
 
     # Iterate over devices in the order defined in config
@@ -46,7 +43,9 @@ def process_data(history_data):
         if device_id not in DEVICE_METADATA:
             continue
         meta = DEVICE_METADATA[device_id]
+        
         device_entry = {
+            'id': device_id,
             'name': meta['name'],
             'variants': []
         }
@@ -60,7 +59,7 @@ def process_data(history_data):
                 available_regions.add(key.replace(f"{device_id}_", ""))
                 
         # Order: preferred first, then others sorted
-        preferred_order = ['GLO', 'EU', 'IN', 'NA', 'CN']
+        preferred_order = ['GLO', 'EU', 'IN', 'NA', 'VISIBLE', 'CN']
         
         # Sort regions based on preferred_order, then alphabetically for others
         def region_sort_key(r):
@@ -70,7 +69,7 @@ def process_data(history_data):
                 return len(preferred_order) # Put non-preferred at the end
 
         regions = sorted(list(available_regions), key=region_sort_key)
-
+        
         for variant in regions:
             key = f'{device_id}_{variant}'
             if key not in history_data:
@@ -99,8 +98,11 @@ def process_data(history_data):
                 'arb': current_entry.get('arb', -1),
                 'major': current_entry.get('major', '?'),
                 'minor': current_entry.get('minor', '?'),
-                'last_checked': current_entry.get('last_checked', 'Unknown')
+                'last_checked': current_entry.get('last_checked', 'Unknown'),
+                'history': [e for e in data.get('history', []) if e.get('status') != 'current']
             }
+            # Sort history by date descending
+            variant_entry['history'].sort(key=lambda x: (x.get('last_checked', ''), x.get('version', '')), reverse=True)
             # Add helper for status
             # ARB 0 means safe (downgrade possible), >0 means protected
             variant_entry['is_safe'] = (variant_entry['arb'] == 0)
@@ -147,19 +149,12 @@ def generate(history_dir: Path, output_dir: Path, template_dir: Path):
     except Exception as e:
         logger.error(f"Failed to write output: {e}")
 
-def main():
-    parser = argparse.ArgumentParser(description="Generate static site from history.")
-    parser.add_argument("--history-dir", default="data/history", help="Directory containing history JSON files")
-    parser.add_argument("--output-dir", default="page", help="Output directory for the website")
-    parser.add_argument("--template-dir", default="templates", help="Directory containing templates")
-
+if __name__ == "__main__":
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--history", type=Path, default="data/history")
+    parser.add_argument("--output", type=Path, default="page")
+    parser.add_argument("--template", type=Path, default="templates")
     args = parser.parse_args()
-
-    generate(
-        Path(args.history_dir),
-        Path(args.output_dir),
-        Path(args.template_dir)
-    )
-
-if __name__ == '__main__':
-    main()
+    
+    generate(args.history, args.output, args.template)
