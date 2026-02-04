@@ -119,7 +119,8 @@ jobs:
           fi
 
       - name: Analyze Firmware
-        if: hashFiles('firmware.zip') != '' || steps.cache-arb.outputs.cache-hit == 'true'
+        # Run even if cache hit (analyze-always)
+        if: always() && steps.get_details.outputs.url != ''
         run: |
           # Pass 'firmware.zip' even if missing, analyze_firmware will skip it if cache hit
           python3 analyze_firmware.py firmware.zip --tools-dir tools --output-dir extracted --final-dir firmware_data --json > result.json
@@ -200,6 +201,6 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add data/history/*.json README.md
+          git add data/history/ README.md
           git commit -m "Backfill historical ARB data" || echo "No changes to commit"
           git push
