@@ -240,7 +240,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add data/history/*.json README.md
+          git add data/history/ README.md
           git commit -m "Update ARB history and README" || echo "No changes to commit"
           git push
 
