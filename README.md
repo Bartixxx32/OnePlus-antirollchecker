@@ -503,11 +503,11 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
 </details>
 
 <details>
-<summary>📜 <b> India History</b> (click to expand)</summary>
+<summary>📜 <b>India History</b> (click to expand)</summary>
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
-| CPH2707_16.0.1.300(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-06 | ✅ |
+| CPH2707_16.0.1.300(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ |
 
 </details>
 
