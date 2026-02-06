@@ -12,7 +12,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from config import (
-    BASE_URL, OOS_API_URL, USER_AGENT, HISTORY_DIR,
+    SPRINGER_API_URL, OOS_API_URL, USER_AGENT, HISTORY_DIR,
     DEVICE_METADATA, SPRING_MAPPING, OOS_MAPPING,
     get_display_name, get_model_number
 )
@@ -21,11 +21,11 @@ from config import (
 class TestConfigConstants(unittest.TestCase):
     """Test suite for configuration constants."""
 
-    def test_base_url_defined(self):
-        """Test that BASE_URL is properly defined."""
-        self.assertIsNotNone(BASE_URL)
-        self.assertIsInstance(BASE_URL, str)
-        self.assertTrue(BASE_URL.startswith('http'))
+    def test_springer_api_url_defined(self):
+        """Test that SPRINGER_API_URL is properly defined."""
+        self.assertIsNotNone(SPRINGER_API_URL)
+        self.assertIsInstance(SPRINGER_API_URL, str)
+        self.assertTrue(SPRINGER_API_URL.startswith('http'))
 
     def test_oos_api_url_defined(self):
         """Test that OOS_API_URL is properly defined."""
@@ -436,7 +436,7 @@ class TestEdgeCases(unittest.TestCase):
 
     def test_constants_not_none(self):
         """Test that all major constants are not None."""
-        self.assertIsNotNone(BASE_URL)
+        self.assertIsNotNone(SPRINGER_API_URL)
         self.assertIsNotNone(OOS_API_URL)
         self.assertIsNotNone(USER_AGENT)
         self.assertIsNotNone(HISTORY_DIR)
