@@ -69,16 +69,16 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
     "15R": {
         "name": "OnePlus 15R", 
         "models": {
-            "GLO": "CPH2741",
-            "EU": "CPH2741",
-            "IN": "CPH2741"
+            "GLO": "CPH2769",
+            "EU": "CPH2769",
+            "IN": "CPH2767"
         },
     },
     "13": {
         "name": "OnePlus 13",
         "models": {
-            "GLO": "CPH2649",
-            "EU": "CPH2649",
+            "GLO": "CPH2653",
+            "EU": "CPH2653",
             "IN": "CPH2649",
             "NA": "CPH2655",
             "CN": "PJZ110"
@@ -87,8 +87,8 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
     "12": {
         "name": "OnePlus 12",
         "models": {
-            "GLO": "CPH2573", 
-            "EU": "CPH2573", 
+            "GLO": "CPH2581", 
+            "EU": "CPH2581", 
             "IN": "CPH2573", 
             "NA": "CPH2583",
             "CN": "PJD110"
@@ -97,7 +97,7 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
     "12R": {
         "name": "OnePlus 12R",
         "models": {
-            "GLO": "CPH2585",
+            "GLO": "CPH2609",
             "EU": "CPH2609",
             "IN": "CPH2585",
             "NA": "CPH2611"
@@ -121,7 +121,7 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
     "10 Pro": {
         "name": "OnePlus 10 Pro",
         "models": {
-            "GLO": "NE2215",
+            "GLO": "NE2213",
             "EU": "NE2213",
             "IN": "NE2211",
             "NA": "NE2215",
@@ -131,7 +131,7 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
     "10T": {
         "name": "OnePlus 10T",
         "models": {
-            "GLO": "CPH2417",
+            "GLO": "CPH2415",
             "EU": "CPH2415",
             "IN": "CPH2413",
             "NA": "CPH2417"
@@ -180,7 +180,7 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
         "models": {
             "EU": "IN2023",
             "IN": "IN2021",
-            "NA": "IN2015"
+            "NA": "IN2025"
         },
     },
     "8": {
@@ -232,15 +232,15 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
         "models": {
             "GLO": "CPH2709",
             "EU": "CPH2709",
-            "IN": "CPH2709"
+            "IN": "CPH2707"
         },
     },
     "Nord 4": {
         "name": "OnePlus Nord 4",
         "models": {
-            "GLO": "CPH2661",
-            "EU": "CPH2661",
-            "IN": "CPH2663"
+            "GLO": "CPH2663",
+            "EU": "CPH2663",
+            "IN": "CPH2661"
         },
     },
     "Nord 1": {
