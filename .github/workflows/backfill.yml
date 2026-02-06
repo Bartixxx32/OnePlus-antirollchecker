@@ -148,7 +148,8 @@ jobs:
             "${{ matrix.variant }}" \
             "${{ steps.get_details.outputs.version }}" \
             --json-file result.json \
-            --historical
+            --historical \
+            --md5 "${{ steps.get_details.outputs.md5 }}"
 
       - name: Save Cache
         if: steps.cache-arb.outputs.cache-hit != 'true' && hashFiles('firmware_data/xbl_config.img') != ''

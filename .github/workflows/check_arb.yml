@@ -222,7 +222,8 @@ jobs:
             "${{ steps.get_details.outputs.device_short }}" \
             "${{ matrix.variant }}" \
             "${{ steps.get_details.outputs.version }}" \
-            --json-file result.json
+            --json-file result.json \
+            --md5 "${{ steps.get_details.outputs.md5 }}"
 
       - name: Upload Result
         uses: actions/upload-artifact@v4
