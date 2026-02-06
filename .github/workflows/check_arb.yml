@@ -96,15 +96,12 @@ jobs:
           echo "md5=$MD5" >> $GITHUB_OUTPUT
           echo "device_short=${{ matrix.device_short }}" >> $GITHUB_OUTPUT
 
-      - name: Restore ARB Cache
+      - name: Cache ARB Data
         id: cache-arb
         if: github.event.inputs.force_recheck != 'true'
-        uses: actions/cache/restore@v4
+        uses: actions/cache@v4
         with:
-          path: |
-            arb_check_done.txt
-            firmware_data/
-          # Cache key includes device and variant to be separate
+          path: firmware_data/
           key: arb-check-v7-${{ matrix.device }}-${{ matrix.variant }}-${{ steps.get_details.outputs.version }}
 
       - name: Download Firmware
@@ -231,14 +228,7 @@ jobs:
           name: result-${{ matrix.device }}-${{ matrix.variant }}
           path: result.json
       
-      - name: Save ARB Cache
-        if: steps.cache-arb.outputs.cache-hit != 'true' && hashFiles('firmware_data/xbl_config.img') != ''
-        uses: actions/cache/save@v4
-        with:
-          path: |
-            arb_check_done.txt
-            firmware_data/
-          key: arb-check-v7-${{ matrix.device }}-${{ matrix.variant }}-${{ steps.get_details.outputs.version }}
+
 
       - name: Upload JSON History
         uses: actions/upload-artifact@v4
