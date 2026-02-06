@@ -5,7 +5,8 @@ Shared configuration and constants for OnePlus ARB Checker.
 from typing import Dict, TypedDict
 
 # Constants
-BASE_URL = "https://roms.danielspringer.at/index.php?view=ota"
+SPRINGER_API_URL = "https://roms.danielspringer.at/index.php?view=ota"
+
 OOS_API_URL = "https://oosdownloader-gui.fly.dev/api"
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 HISTORY_DIR = "data/history"

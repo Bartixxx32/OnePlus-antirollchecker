@@ -8,6 +8,9 @@ on:
       firmware_url:
         description: 'Direct URL to Firmware .zip'
         required: true
+      md5_checksum:
+        description: 'Expected MD5 Checksum (Optional)'
+        required: false
 
 concurrency:
   group: check-arb-${{ github.event.issue.number || github.run_id }}
@@ -31,6 +34,7 @@ jobs:
           if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
             echo "mode=manual" >> $GITHUB_OUTPUT
             echo "url=${{ inputs.firmware_url }}" >> $GITHUB_OUTPUT
+            echo "md5=${{ inputs.md5_checksum }}" >> $GITHUB_OUTPUT
             echo "URL from Manual Input: ${{ inputs.firmware_url }}"
           else
             echo "mode=issue" >> $GITHUB_OUTPUT
@@ -46,6 +50,9 @@ jobs:
             URL=$(ISSUE_BODY="${{ github.event.issue.body }}" python3 extract_url.py)
             rm extract_url.py
             echo "url=$URL" >> $GITHUB_OUTPUT
+            # Extract MD5 if present? (Regex for 32 hex chars? might be risky/ambiguous)
+            # For now, default to empty for issues.
+            echo "md5=" >> $GITHUB_OUTPUT
           fi
 
       - name: Handle Missing URL (Issue)
@@ -60,7 +67,7 @@ jobs:
           
           *Closing this request.*"
           
-          gh issue close ${{ github.event.issue.number }} --reason "not_planned"
+          gh issue close ${{ github.event.issue.number }} --reason "not planned"
 
       - name: Initialize Issue (Label & Comment)
         id: init_issue
@@ -105,7 +112,18 @@ jobs:
       - name: Download Firmware
         if: steps.setup.outputs.url != ''
         run: |
-          aria2c -x16 -s16 -k1M -o firmware.zip "${{ steps.setup.outputs.url }}"
+          URL="${{ steps.setup.outputs.url }}"
+          MD5="${{ steps.setup.outputs.md5 }}"
+          
+          echo "Downloading $URL..."
+          
+          ARIA_CMD="aria2c -x16 -s16 -k1M -o firmware.zip"
+          if [[ "$MD5" != "" ]]; then
+             echo "Verifying MD5: $MD5"
+             ARIA_CMD="$ARIA_CMD --checksum=md5=$MD5"
+          fi
+          
+          $ARIA_CMD "$URL"
 
       - name: Update Progress (Analysing)
         if: steps.setup.outputs.mode == 'issue' && steps.setup.outputs.url != '' && success()

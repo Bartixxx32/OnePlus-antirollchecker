@@ -83,14 +83,17 @@ jobs:
           
           URL=$(python3 -c "import sys, json; print(json.load(open('fw_info.json'))['url'])")
           VERSION=$(python3 -c "import sys, json; print(json.load(open('fw_info.json'))['version'])")
+          MD5=$(python3 -c "import sys, json; data=json.load(open('fw_info.json')); print(data.get('md5') or '')")
           
           echo "Device: ${{ matrix.device_name }}"
           echo "Variant: ${{ matrix.variant }}"
           echo "Latest Firmware URL: $URL"
           echo "Latest Firmware Version: $VERSION"
+          echo "MD5 Checksum: $MD5"
           
           echo "url=$URL" >> $GITHUB_OUTPUT
           echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "md5=$MD5" >> $GITHUB_OUTPUT
           echo "device_short=${{ matrix.device_short }}" >> $GITHUB_OUTPUT
 
       - name: Restore ARB Cache
@@ -109,6 +112,7 @@ jobs:
         run: |
           URL="${{ steps.get_details.outputs.url }}"
           VERSION="${{ steps.get_details.outputs.version }}"
+          MD5="${{ steps.get_details.outputs.md5 }}"
           
           if [[ "$URL" != *".zip"* && "${{ matrix.variant }}" != "CN" ]]; then
             echo "Skipping non-direct download link: $URL"
@@ -123,13 +127,29 @@ jobs:
           
           while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
             echo "Attempting download (Try $((RETRY_COUNT+1))/$MAX_RETRIES)..."
-            if aria2c -c -x16 -s16 -k1M -o firmware.zip "$URL"; then
+            
+            # Construct aria2c command with optional checksum
+            ARIA_CMD="aria2c -c -x16 -s16 -k1M -o firmware.zip"
+            if [[ "$MD5" != "" && "$MD5" != "None" ]]; then
+                echo "Enforcing MD5 checksum: $MD5"
+                ARIA_CMD="$ARIA_CMD --checksum=md5=$MD5"
+            else
+                echo "No MD5 checksum available for verification."
+            fi
+            
+            if $ARIA_CMD "$URL"; then
               echo "Download successful!"
               SUCCESS=1
               break
             fi
             
-            echo "Download failed. Refreshing URL..."
+            echo "Download failed or checksum mismatch."
+            
+            # If checksum failed, aria2c returns non-zero.
+            # We should remove the file to ensure fresh retry?
+            rm -f firmware.zip
+
+            echo "Refreshing URL..."
             RETRY_COUNT=$((RETRY_COUNT+1))
             if [ $RETRY_COUNT -eq $MAX_RETRIES ]; then break; fi
             
