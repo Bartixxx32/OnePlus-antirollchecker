@@ -1,13 +1,23 @@
 {
   "history": [
     {
+      "version": "NE2213_16.0.3.500(EX01)",
+      "arb": 0,
+      "major": 2,
+      "minor": 0,
+      "first_seen": "2026-02-06",
+      "last_checked": "2026-02-06",
+      "status": "current",
+      "md5": "442a1ffc6ab53fdcafb05e4b555a7c31"
+    },
+    {
       "version": "NE2213_15.0.0.1302(EX01)",
       "arb": 0,
       "major": 2,
       "minor": 0,
       "first_seen": "2026-02-04",
       "last_checked": "2026-02-06",
-      "status": "current"
+      "status": "archived"
     },
     {
       "version": "NE2213_14.0.0.940(EX01)",
