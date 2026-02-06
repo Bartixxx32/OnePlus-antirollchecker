@@ -24,7 +24,7 @@ def save_history(history_file: Path, data: Dict):
     with open(history_file, 'w') as f:
         json.dump(data, f, indent=2)
 
-def update_history_entry(history: Dict, version: str, arb: int, major: int, minor: int, is_historical: bool = False) -> bool:
+def update_history_entry(history: Dict, version: str, arb: int, major: int, minor: int, is_historical: bool = False, md5: str = None) -> bool:
     """
     Update or add a version to history.
     """
@@ -42,7 +42,13 @@ def update_history_entry(history: Dict, version: str, arb: int, major: int, mino
                 # Move to top
                 history['history'].remove(entry)
                 history['history'].insert(0, entry)
+                # Update MD5 if new one is provided and old one is missing/different
+                if md5:
+                     entry['md5'] = md5
                 return True
+            # Update MD5 if provided
+            if md5:
+                 entry['md5'] = md5
             return False
     
     # New version - add it
@@ -55,6 +61,9 @@ def update_history_entry(history: Dict, version: str, arb: int, major: int, mino
         "last_checked": today,
         "status": "archived" if is_historical else "current"
     }
+    
+    if md5:
+        new_entry["md5"] = md5
     
     if not is_historical:
         # Mark all existing as archived
@@ -78,6 +87,8 @@ def main():
     parser.add_argument("arb", nargs='?', type=int, help="ARB index")
     parser.add_argument("major", nargs='?', type=int, help="Keymaster major version")
     parser.add_argument("minor", nargs='?', type=int, help="Keymaster minor version")
+    
+    parser.add_argument("--md5", help="MD5 checksum of the firmware", default=None)
     
     # Mode 2: JSON Input
     parser.add_argument("--json-file", help="Path to result.json containing the data")
@@ -135,7 +146,7 @@ def main():
         
         history['model'] = model_num
     
-    is_new = update_history_entry(history, version, int(arb), int(major), int(minor), args.historical)
+    is_new = update_history_entry(history, version, int(arb), int(major), int(minor), args.historical, md5=args.md5)
     save_history(history_file, history)
     
     if is_new:
