@@ -30,7 +30,7 @@ jobs:
             echo ">>> Processing workflow: $wf"
             
             # Get list of run IDs to delete (keeping only the most recent $KEEP)
-            RUN_IDS=$(gh run list --workflow "$wf" --limit 1000 --json databaseId --jq ".[$KEEP:].databaseId")
+            RUN_IDS=$(gh run list --workflow "$wf" --limit 1000 --json databaseId --jq ".[$KEEP:] | .[].databaseId")
             
             if [ -z "$RUN_IDS" ] || [ "$RUN_IDS" == "null" ]; then
               echo "No old runs to delete for '$wf'"
