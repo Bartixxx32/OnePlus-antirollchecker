@@ -75,7 +75,13 @@ def generate_device_section(device_id: str, device_name: str, history_data: Dict
             # Status icon
             safe_icon = "✅" if arb == 0 else "❌" if arb > 0 else "❓"
                 
-            rows.append(f"| {region_name} | {model} | {version} | **{arb}** | Major: {major}, Minor: {minor} | {date} | {safe_icon} |")
+            # MD5 formating
+            md5 = current_entry.get('md5')
+            md5_str = ""
+            if md5:
+                md5_str = f"<br><details><summary>MD5</summary><code>{md5}</code></details>"
+
+            rows.append(f"| {region_name} | {model} | {version}{md5_str} | **{arb}** | Major: {major}, Minor: {minor} | {date} | {safe_icon} |")
 
     if has_data:
         lines.append(f"### {device_name}")
@@ -113,7 +119,15 @@ def generate_device_section(device_id: str, device_name: str, history_data: Dict
                     min_ = entry.get('minor', '?')
                     ls = entry.get('last_checked', 'Unknown')
                     s_icon = "✅" if a == 0 else "❌" if a > 0 else "❓"
-                    history_lines.append(f"| {v} | {a} | Major: {maj}, Minor: {min_} | {ls} | {s_icon} |")
+                    ls = entry.get('last_checked', 'Unknown')
+                    s_icon = "✅" if a == 0 else "❌" if a > 0 else "❓"
+                    
+                    md5_hist = entry.get('md5')
+                    md5_hist_str = ""
+                    if md5_hist:
+                        md5_hist_str = f"<br><details><summary>MD5</summary><code>{md5_hist}</code></details>"
+                        
+                    history_lines.append(f"| {v}{md5_hist_str} | {a} | Major: {maj}, Minor: {min_} | {ls} | {s_icon} |")
                 history_lines.append("")
                 history_lines.append("</details>")
                 history_lines.append("")

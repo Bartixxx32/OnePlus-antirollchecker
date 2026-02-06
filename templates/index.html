@@ -280,6 +280,14 @@
                                     {{ variant.version }}
                                     <span class="meta-info">Major: {{ variant.major }},&nbsp;Minor: {{ variant.minor
                                         }}</span>
+                                    {% if variant.md5 %}
+                                    <details style="margin-top:4px;">
+                                        <summary style="cursor:pointer; font-size:0.75rem; color:var(--accent-color);">
+                                            Show MD5</summary>
+                                        <code
+                                            style="display:block; font-size:0.7rem; background:#222; padding:4px; border-radius:4px; margin-top:2px; word-break: break-all;">{{ variant.md5 }}</code>
+                                    </details>
+                                    {% endif %}
                                 </td>
                                 <td><strong>{{ variant.arb }}</strong></td>
                                 <td>
