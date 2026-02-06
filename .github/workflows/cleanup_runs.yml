@@ -1,0 +1,44 @@
+name: Cleanup Old Workflow Runs
+
+on:
+  schedule:
+    - cron: '0 0 * * 0' # Weekly on Sundays at midnight
+  workflow_dispatch:
+    inputs:
+      keep:
+        description: 'Number of recent runs to keep'
+        required: true
+        default: '10'
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      - name: Cleanup Old Runs
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          KEEP=${{ github.event.inputs.keep || 10 }}
+          WORKFLOWS=("Check ARB" "Historical Backfill")
+          
+          for wf in "${WORKFLOWS[@]}"; do
+            echo ">>> Processing workflow: $wf"
+            
+            # Get list of run IDs to delete (keeping only the most recent $KEEP)
+            RUN_IDS=$(gh run list --workflow "$wf" --limit 1000 --json databaseId --jq ".[$KEEP:].databaseId")
+            
+            if [ -z "$RUN_IDS" ] || [ "$RUN_IDS" == "null" ]; then
+              echo "No old runs to delete for '$wf'"
+              continue
+            fi
+            
+            echo "Found runs to delete for '$wf':"
+            echo "$RUN_IDS"
+            
+            for id in $RUN_IDS; do
+              echo "Deleting run ID: $id"
+              gh run delete "$id"
+            done
+          done
