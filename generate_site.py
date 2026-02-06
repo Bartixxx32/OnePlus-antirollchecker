@@ -99,6 +99,7 @@ def process_data(history_data):
                 'major': current_entry.get('major', '?'),
                 'minor': current_entry.get('minor', '?'),
                 'last_checked': current_entry.get('last_checked', 'Unknown'),
+                'md5': current_entry.get('md5'),
                 'history': [e for e in data.get('history', []) if e.get('status') != 'current']
             }
             # Sort history by date descending

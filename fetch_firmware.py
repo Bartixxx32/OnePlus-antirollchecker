@@ -7,7 +7,7 @@ import argparse
 import logging
 import time
 from bs4 import BeautifulSoup
-from config import BASE_URL, OOS_API_URL, USER_AGENT, SPRING_MAPPING, OOS_MAPPING
+from config import SPRINGER_API_URL, OOS_API_URL, USER_AGENT, SPRING_MAPPING, OOS_MAPPING
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
@@ -34,12 +34,12 @@ def requests_get_with_retry(url, retries=3, delay=10, timeout=10):
 
 def get_from_oos_api(device_id: str, region: str) -> dict:
     """
-    Fetch latest firmware URL and version from oosdownloader-gui.fly.dev API.
-    Returns dict with 'url' and 'version' keys, or None if failed.
+    Fetch latest firmware URL, version and MD5 from oosdownloader service.
+    Uses /info endpoint to get full metadata.
     """
     mapped_id = OOS_MAPPING.get(device_id, f"oneplus_{device_id}")
     
-    # Skip OOS API for CN region as per user request
+    # Skip CN for OOS API (usually not supported or tricky)
     if region == "CN":
         return None
         
@@ -48,38 +48,30 @@ def get_from_oos_api(device_id: str, region: str) -> dict:
     if mapped_id.startswith("oppo_") or mapped_id.startswith("find_"):
          brand = "oppo"
 
-    # Map GLO/IN to EU for Oppo as OOS API often only has EU for these standard global variants
-    if brand == "oppo" and region in ["GLO", "IN"]:
-        region = "EU"
-
-    # API endpoints
-    # OOS_API_URL is now .../api
-    url_endpoint = f"{OOS_API_URL}/{brand}/{mapped_id}/{region}/full"
-    ver_endpoint = f"{OOS_API_URL}/{brand}/{mapped_id}/{region}/full/version"
+    logger.info(f"Checking OOS API for {mapped_id} ({region})...")
     
-    logger.info(f"Checking OOS API: {url_endpoint}")
+    # Endpoint: /api/<brand>/<device_name>/<region>/<type>/info
+    # Type is usually "full"
+    url_endpoint = f"{OOS_API_URL}/{brand}/{mapped_id}/{region}/full/info"
     
     try:
-        # Fetch URL
-        resp_url = requests_get_with_retry(url_endpoint)
-        download_url = resp_url.text.strip()
+        resp = requests_get_with_retry(url_endpoint)
+        data = resp.json()
         
-        if not download_url or not download_url.startswith("http"):
-            logger.warning(f"OOS API returned invalid URL: {download_url}")
-            return None
-            
-        # Fetch Version
-        resp_ver = requests_get_with_retry(ver_endpoint)
-        version_str = resp_ver.text.strip()
-        
-        return {
-            "url": download_url,
-            "version": version_str
-        }
-            
+        if "download_url" in data and data["download_url"]:
+             return {
+                "url": data["download_url"],
+                "version": data.get("version_number", "Unknown"),
+                "md5": data.get("md5sum")
+            }
+        else:
+             logger.warning(f"OOS API returned no URL: {data}")
+             return None
+             
     except Exception as e:
-        logger.warning(f"OOS API check failed: {e}")
+        logger.warning(f"OOS API failed or not found: {e}")
         return None
+
 
 def get_springer_versions(device_id: str, region: str, session=None) -> list:
     """
@@ -103,7 +95,7 @@ def get_springer_versions(device_id: str, region: str, session=None) -> list:
         mapped_name = SPRING_MAPPING[key]
     
     try:
-        response = session.get(BASE_URL, headers=headers, timeout=15)
+        response = session.get(SPRINGER_API_URL, headers=headers, timeout=15)
         response.raise_for_status()
     except Exception as e:
         logger.error(f"Error fetching page: {e}")
@@ -184,11 +176,11 @@ def get_signed_url_springer(device_id: str, region: str, target_version: str = N
     post_headers = headers.copy()
     post_headers.update({
         'Content-Type': 'application/x-www-form-urlencoded',
-        'Referer': BASE_URL,
+        'Referer': SPRINGER_API_URL,
     })
     
     try:
-        response = session.post(BASE_URL, data=form_data, headers=post_headers, timeout=15)
+        response = session.post(SPRINGER_API_URL, data=form_data, headers=post_headers, timeout=15)
         response.raise_for_status()
     except Exception as e:
         logger.error(f"Form submission failed: {e}")
@@ -201,7 +193,8 @@ def get_signed_url_springer(device_id: str, region: str, target_version: str = N
         download_url = html.unescape(result_div.get('data-url'))
         return {
             "url": download_url,
-            "version": found_version_name
+            "version": found_version_name,
+            "md5": None # Springer doesn't easily provide MD5 currently
         }
     else:
         logger.error("No download URL found in the response")
