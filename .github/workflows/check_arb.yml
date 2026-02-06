@@ -102,7 +102,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: firmware_data/
-          key: arb-check-v7-${{ matrix.device }}-${{ matrix.variant }}-${{ steps.get_details.outputs.version }}
+          key: arb-v8-${{ matrix.device }}-${{ matrix.variant }}-${{ steps.get_details.outputs.version }}-${{ steps.get_details.outputs.md5 }}
 
       - name: Download Firmware
         if: steps.cache-arb.outputs.cache-hit != 'true'
