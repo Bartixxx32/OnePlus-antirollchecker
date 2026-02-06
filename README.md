@@ -481,7 +481,7 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
 |:---|:---|:---|:---|:---|:---|:---|
 | Global | CPH2709 | CPH2709_16.0.1.300(EX01) | **0** | Major: 3, Minor: 0 | 2026-02-05 | ✅ |
 | Europe | CPH2709 | CPH2709_16.0.2.400(EX01) | **0** | Major: 3, Minor: 0 | 2026-02-05 | ✅ |
-| India | CPH2709 | CPH2707_16.0.2.400(EX01) | **0** | Major: 3, Minor: 0 | 2026-02-05 | ✅ |
+| India | CPH2707 | CPH2707_16.0.2.400(EX01) | **0** | Major: 3, Minor: 0 | 2026-02-05 | ✅ |
 
 <details>
 <summary>📜 <b>Global History</b> (click to expand)</summary>
@@ -499,6 +499,15 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
 |:---|:---|:---|:---|:---|
 | CPH2709_16.0.1.300(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ |
 | CPH2709_15.0.2.604(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ |
+
+</details>
+
+<details>
+<summary>📜 <b> India History</b> (click to expand)</summary>
+
+| Firmware Version | ARB | OEM Version | Last Seen | Safe |
+|:---|:---|:---|:---|:---|
+| CPH2707_16.0.1.300(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-06 | ✅ |
 
 </details>
 
