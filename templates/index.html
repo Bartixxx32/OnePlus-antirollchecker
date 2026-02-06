@@ -6,6 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OnePlus ARB Checker</title>
     <meta name="description" content="OnePlus Anti-Rollback (ARB) index tracker.">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bartixxx32.github.io/OnePlus-antirollchecker/">
+    <meta property="og:title" content="OnePlus ARB Checker">
+    <meta property="og:description"
+        content="Real-time Anti-Rollback (ARB) index tracking for OnePlus devices. Monitor firmware updates and protect your device.">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://bartixxx32.github.io/OnePlus-antirollchecker/">
+    <meta property="twitter:title" content="OnePlus ARB Checker">
+    <meta property="twitter:description"
+        content="Real-time Anti-Rollback (ARB) index tracking for OnePlus devices. Monitor firmware updates and protect your device.">
+
+    <!-- Favicon (SVG Data URI) -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23da3633'/><text x='50' y='70' font-family='Arial' font-size='60' font-weight='bold' fill='white' text-anchor='middle'>1+</text></svg>">
     <style>
         :root {
             --bg-color: #0d1117;
@@ -241,6 +257,29 @@
             background-color: var(--accent-color);
             color: white;
         }
+
+        .search-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #search-input {
+            width: 100%;
+            max-width: 400px;
+            padding: 10px 15px;
+            border: 1px solid var(--border-color);
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+
+        #search-input:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.2);
+        }
     </style>
 </head>
 
@@ -249,6 +288,10 @@
         <header>
             <h1>OnePlus ARB Checker</h1>
             <p class="subtitle">Real-time Anti-Rollback (ARB) index tracking for OnePlus devices</p>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="🔍 Search devices (e.g. OnePlus 12, Nord)..."
+                    onkeyup="filterDevices()">
+            </div>
         </header>
 
         <div class="grid">
@@ -392,6 +435,25 @@
                 row.classList.add('active');
                 btn.classList.add('active');
                 btn.textContent = 'Close';
+            }
+        }
+
+        function filterDevices() {
+            var input, filter, grid, cards, h2, i, txtValue;
+            input = document.getElementById('search-input');
+            filter = input.value.toUpperCase();
+            cards = document.getElementsByClassName('card');
+
+            for (i = 0; i < cards.length; i++) {
+                h2 = cards[i].getElementsByTagName("h2")[0];
+                if (h2) {
+                    txtValue = h2.textContent || h2.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        cards[i].style.display = "";
+                    } else {
+                        cards[i].style.display = "none";
+                    }
+                }
             }
         }
     </script>
