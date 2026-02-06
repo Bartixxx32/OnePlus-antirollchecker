@@ -36,7 +36,14 @@ def generate_device_section(device_id: str, device_name: str, history_data: Dict
         if key.startswith(f"{device_id}_"):
              variants.add(key.replace(f"{device_id}_", ""))
     
-    preferred_order = ['GLO', 'EU', 'IN', 'NA', 'VISIBLE', 'CN']
+    # Determine region order based on device type
+    if device_name.startswith("Oppo"):
+        # Oppo devices use different regional codes
+        preferred_order = ['EU', 'SG', 'TW', 'MY', 'ID', 'TH', 'VN', 'APC', 'OCA', 'EG', 'SA', 'MX', 'CN']
+    else:
+        # OnePlus devices use standard regions
+        preferred_order = ['GLO', 'EU', 'IN', 'NA', 'VISIBLE', 'CN']
+    
     def sort_key(v):
         try:
             return preferred_order.index(v)

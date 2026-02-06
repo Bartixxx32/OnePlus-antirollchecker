@@ -58,8 +58,13 @@ def process_data(history_data):
             if key.startswith(f"{device_id}_"):
                 available_regions.add(key.replace(f"{device_id}_", ""))
                 
-        # Order: preferred first, then others sorted
-        preferred_order = ['GLO', 'EU', 'IN', 'NA', 'VISIBLE', 'CN']
+        # Determine region order based on device type
+        if meta['name'].startswith("Oppo"):
+            # Oppo devices use different regional codes
+            preferred_order = ['EU', 'SG', 'TW', 'MY', 'ID', 'TH', 'VN', 'APC', 'OCA', 'EG', 'SA', 'MX', 'CN']
+        else:
+            # OnePlus devices use standard regions
+            preferred_order = ['GLO', 'EU', 'IN', 'NA', 'VISIBLE', 'CN']
         
         # Sort regions based on preferred_order, then alphabetically for others
         def region_sort_key(r):
