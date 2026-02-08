@@ -896,4 +896,4 @@ This API helps you get direct, signed download URLs for OnePlus OTA firmware fil
 - **ARB Extraction**: [arbextract](https://github.com/koaaN/arbextract) by koaaN
 
 ---
-*Last updated: 2026-02-08 03:17 UTC*
+*Last updated: 2026-02-08 04:55 UTC*
