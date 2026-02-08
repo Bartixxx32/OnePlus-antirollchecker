@@ -271,12 +271,14 @@ jobs:
           # Generate
           python3 generate_readme.py
           python3 generate_site.py
+          python3 generate_database.py
+          cp data/database.json page/
           
       - name: Commit and Push
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add data/history/*.json README.md
+          git add data/history/*.json README.md data/database.json
           git commit -m "Update ARB history and README" || echo "No changes to commit"
           git push
 

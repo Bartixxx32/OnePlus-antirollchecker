@@ -1,0 +1,2050 @@
+{
+  "AC2001": {
+    "device_name": "OnePlus Nord",
+    "versions": {
+      "AC2001_11_F.24": {
+        "arb": 0,
+        "major": 0,
+        "md5": "fa6ff6d1f91c0549371c28932f7b37cc",
+        "minor": 120,
+        "regions": [
+          "IN"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "AC2003": {
+    "device_name": "OnePlus Nord",
+    "versions": {
+      "AC2003_11_F.24": {
+        "arb": 0,
+        "major": 0,
+        "md5": "c704f8b99a545a5a53b3bbe141bfb0ec",
+        "minor": 120,
+        "regions": [
+          "EU"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2173": {
+    "device_name": "Oppo Find X3 Pro",
+    "versions": {
+      "CPH2173_14.0.0.2102(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "md5": "81bc0356f4e9dee62a305db9be52c3a8",
+        "minor": 120,
+        "regions": [
+          "EU",
+          "SG",
+          "TW"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2305": {
+    "device_name": "Oppo Find X5 Pro",
+    "versions": {
+      "CPH2305_11_A.19": {
+        "arb": 0,
+        "major": 2,
+        "md5": "f61010fa1d6349cc6e8000f62c70b670",
+        "minor": 0,
+        "regions": [
+          "EG"
+        ],
+        "status": "current"
+      },
+      "CPH2305_11_A.22": {
+        "arb": 0,
+        "major": 2,
+        "md5": "d47d75e64707954fece8083ddb3c5437",
+        "minor": 0,
+        "regions": [
+          "OCA"
+        ],
+        "status": "current"
+      },
+      "CPH2305_15.0.0.1301(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": "81aa48b49783dffec339e362edeb230b",
+        "minor": 0,
+        "regions": [
+          "SG",
+          "TW"
+        ],
+        "status": "current"
+      },
+      "CPH2305_15.0.0.1303(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": "e242b3d05c10cdfeeda73d70656b8ef5",
+        "minor": 0,
+        "regions": [
+          "EU"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2307": {
+    "device_name": "Oppo Find X5",
+    "versions": {
+      "CPH2307_15.0.0.1302(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "md5": "9ca6d58709b963d43df51a90a08e2128",
+        "minor": 120,
+        "regions": [
+          "EG",
+          "OCA",
+          "SA"
+        ],
+        "status": "current"
+      },
+      "CPH2307_15.0.0.1304(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "md5": "49b35b780091e214da73b2ba51034c8c",
+        "minor": 120,
+        "regions": [
+          "EU"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2413": {
+    "device_name": "OnePlus 10T",
+    "versions": {
+      "CPH2413_15.0.0.1601(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "IN"
+        ],
+        "status": "archived"
+      },
+      "CPH2413_15.0.0.1603(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": "f2f49f81fdec15884d9b6df3f8018d4b",
+        "minor": 0,
+        "regions": [
+          "IN"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2415": {
+    "device_name": "OnePlus 10T",
+    "versions": {
+      "CPH2415_15.0.0.1601(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": "ae910e6219c0b40dfe8127768b1c9cdb",
+        "minor": 0,
+        "regions": [
+          "EU",
+          "GLO"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2417": {
+    "device_name": "OnePlus 10T",
+    "versions": {
+      "CPH2417_11_C.46": {
+        "arb": 0,
+        "major": 2,
+        "md5": "c0fe595ca50e4db92c009f49273c5c9a",
+        "minor": 0,
+        "regions": [
+          "NA"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2447": {
+    "device_name": "OnePlus 11",
+    "versions": {
+      "CPH2447_15.0.0.600(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "IN"
+        ],
+        "status": "archived"
+      },
+      "CPH2447_15.0.0.862(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "IN"
+        ],
+        "status": "archived"
+      },
+      "CPH2447_16.0.1.300(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "IN"
+        ],
+        "status": "archived"
+      },
+      "CPH2447_16.0.2.400(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "IN"
+        ],
+        "status": "archived"
+      },
+      "CPH2447_16.0.3.500(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": "f98c5382db9a4486355e5fa4e7979abd",
+        "minor": 0,
+        "regions": [
+          "IN"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2449": {
+    "device_name": "OnePlus 11",
+    "versions": {
+      "CPH2449_15.0.0.600(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "EU",
+          "GLO"
+        ],
+        "status": "archived"
+      },
+      "CPH2449_15.0.0.862(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "EU",
+          "GLO"
+        ],
+        "status": "archived"
+      },
+      "CPH2449_16.0.2.400(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "EU",
+          "GLO"
+        ],
+        "status": "archived"
+      },
+      "CPH2449_16.0.2.401(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": "7f3b8a402aaba42654f4b23aa3065120",
+        "minor": 0,
+        "regions": [
+          "EU"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2451": {
+    "device_name": "OnePlus 11",
+    "versions": {
+      "CPH2451_15.0.0.800(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": "6cf186b46c64e0e0f81ce44f9df02689",
+        "minor": 0,
+        "regions": [
+          "NA"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2487": {
+    "device_name": "OnePlus 11R",
+    "versions": {
+      "CPH2487_14.0.0.810(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "IN"
+        ],
+        "status": "archived"
+      },
+      "CPH2487_15.0.0.601(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "IN"
+        ],
+        "status": "archived"
+      },
+      "CPH2487_15.0.0.870(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "IN"
+        ],
+        "status": "archived"
+      },
+      "CPH2487_16.0.2.400(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": "d81040f0f7c1ce65b89094847abbec6a",
+        "minor": 0,
+        "regions": [
+          "IN"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2499": {
+    "device_name": "Oppo Find N3",
+    "versions": {
+      "CPH2499_16.0.0.203(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": "1c4c4bcffbef770d54aff9d8f569ffb1",
+        "minor": 0,
+        "regions": [
+          "OCA"
+        ],
+        "status": "current"
+      },
+      "CPH2499_16.0.3.500(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": "fe33546e7733610b7b0e39a49d0f923f",
+        "minor": 0,
+        "regions": [
+          "ID",
+          "MY",
+          "SG",
+          "TH",
+          "TW",
+          "VN"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2551": {
+    "device_name": "OnePlus Open",
+    "versions": {
+      "CPH2551_15.0.0.822(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": "9ee66cf78b25acaee3681d138f04c04f",
+        "minor": 0,
+        "regions": [
+          "NA"
+        ],
+        "status": "current"
+      },
+      "CPH2551_15.0.0.863(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "EU"
+        ],
+        "status": "archived"
+      },
+      "CPH2551_16.0.0.201(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "EU",
+          "IN"
+        ],
+        "status": "archived"
+      },
+      "CPH2551_16.0.1.300(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "EU",
+          "IN"
+        ],
+        "status": "archived"
+      },
+      "CPH2551_16.0.2.400(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "EU",
+          "IN"
+        ],
+        "status": "archived"
+      },
+      "CPH2551_16.0.3.500(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": "c6e40fec39894a2f17684fc5d826dbce",
+        "minor": 0,
+        "regions": [
+          "EU",
+          "IN"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2573": {
+    "device_name": "OnePlus 12",
+    "versions": {
+      "CPH2573_16.0.1.300(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "IN"
+        ],
+        "status": "archived"
+      },
+      "CPH2573_16.0.2.400(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "IN"
+        ],
+        "status": "archived"
+      },
+      "CPH2573_16.0.3.500(EX01)": {
+        "arb": 1,
+        "major": 3,
+        "md5": "54fd9ec64be6d91bb7b68b9c14864033",
+        "minor": 0,
+        "regions": [
+          "IN"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2581": {
+    "device_name": "OnePlus 12",
+    "versions": {
+      "CPH2581_15.0.0.863(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "EU",
+          "GLO"
+        ],
+        "status": "archived"
+      },
+      "CPH2581_16.0.0.201(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "EU",
+          "GLO"
+        ],
+        "status": "archived"
+      },
+      "CPH2581_16.0.3.500(EX01)": {
+        "arb": 1,
+        "major": 3,
+        "md5": "3770e5ac2f6e8750d8172ca2788bd36b",
+        "minor": 0,
+        "regions": [
+          "EU",
+          "GLO"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2583": {
+    "device_name": "OnePlus 12",
+    "versions": {
+      "CPH2583_11_C.61": {
+        "arb": 0,
+        "major": 3,
+        "md5": "0930cc879bd35c5c17c3f0e4eb0b014b",
+        "minor": 0,
+        "regions": [
+          "NA"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2585": {
+    "device_name": "OnePlus 12R",
+    "versions": {
+      "CPH2585_16.0.3.500(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": "febde3a798251dc6ce1c3d29d6f6cb9e",
+        "minor": 0,
+        "regions": [
+          "IN"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2609": {
+    "device_name": "OnePlus 12R",
+    "versions": {
+      "CPH2609_16.0.1.300(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": "27066da992805a67c321ab81caf83ff7",
+        "minor": 0,
+        "regions": [
+          "GLO"
+        ],
+        "status": "current"
+      },
+      "CPH2609_16.0.2.401(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": "6ad8b8c67ad8500b573df241254fcdd6",
+        "minor": 0,
+        "regions": [
+          "EU"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2611": {
+    "device_name": "OnePlus 12R",
+    "versions": {
+      "CPH2611_11_A.65": {
+        "arb": 0,
+        "major": 2,
+        "md5": "a16a2f0dbbd5eeaff10041299f4d1508",
+        "minor": 0,
+        "regions": [
+          "NA"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2649": {
+    "device_name": "OnePlus 13",
+    "versions": {
+      "CPH2649_16.0.1.304(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "IN"
+        ],
+        "status": "archived"
+      },
+      "CPH2649_16.0.2.402(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "IN"
+        ],
+        "status": "archived"
+      },
+      "CPH2649_16.0.3.501(EX01)": {
+        "arb": 1,
+        "major": 3,
+        "md5": "c5987fd6c9052e39b5dce573883b2f97",
+        "minor": 0,
+        "regions": [
+          "IN"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2653": {
+    "device_name": "OnePlus 13",
+    "versions": {
+      "CPH2653_16.0.1.304(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "EU",
+          "GLO"
+        ],
+        "status": "archived"
+      },
+      "CPH2653_16.0.2.402(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "EU",
+          "GLO"
+        ],
+        "status": "archived"
+      },
+      "CPH2653_16.0.3.501(EX01)": {
+        "arb": 1,
+        "major": 3,
+        "md5": "4a5640ac2917ad8baeb334b286572b46",
+        "minor": 0,
+        "regions": [
+          "EU",
+          "GLO"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2655": {
+    "device_name": "OnePlus 13",
+    "versions": {
+      "CPH2655_15.0.0.405(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "NA"
+        ],
+        "status": "archived"
+      },
+      "CPH2655_15.0.0.832(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": "7d0ce94be24263393454ae140889a523",
+        "minor": 0,
+        "regions": [
+          "NA"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2661": {
+    "device_name": "OnePlus Nord 4",
+    "versions": {
+      "CPH2661_15.0.0.401(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "IN"
+        ],
+        "status": "archived"
+      },
+      "CPH2661_16.0.1.301(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "IN"
+        ],
+        "status": "archived"
+      },
+      "CPH2661_16.0.2.401(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": "99f21627efd3fddd4b4ba184030f4319",
+        "minor": 0,
+        "regions": [
+          "IN"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2663": {
+    "device_name": "OnePlus Nord 4",
+    "versions": {
+      "CPH2663_15.0.0.1301(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "EU"
+        ],
+        "status": "archived"
+      },
+      "CPH2663_15.0.0.401(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "GLO"
+        ],
+        "status": "archived"
+      },
+      "CPH2663_16.0.1.301(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "EU",
+          "GLO"
+        ],
+        "status": "archived"
+      },
+      "CPH2663_16.0.2.401(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": "0fabc357b219c3f26b48c8a688f5f2eb",
+        "minor": 0,
+        "regions": [
+          "EU",
+          "GLO"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2671": {
+    "device_name": "Oppo Find N5",
+    "versions": {
+      "CPH2671_16.0.1.302(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": "18d2e0aadec512467ad8f7b38c40d115",
+        "minor": 0,
+        "regions": [
+          "MX"
+        ],
+        "status": "current"
+      },
+      "CPH2671_16.0.2.401(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": "8092cdb0dcf5a44e27ff8b863bbcde89",
+        "minor": 0,
+        "regions": [
+          "APC",
+          "MY",
+          "SG",
+          "TH"
+        ],
+        "status": "current"
+      },
+      "CPH2671_16.0.3.500(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": "18f07a08f16946cd095decd8945ced7f",
+        "minor": 0,
+        "regions": [
+          "ID"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2707": {
+    "device_name": "OnePlus Nord 5",
+    "versions": {
+      "CPH2707_16.0.2.400(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": "3dcfeee921d76d936ed403304bd8179c",
+        "minor": 0,
+        "regions": [
+          "IN"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2709": {
+    "device_name": "OnePlus Nord 5",
+    "versions": {
+      "CPH2709_15.0.2.604(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "EU",
+          "GLO"
+        ],
+        "status": "archived"
+      },
+      "CPH2709_16.0.1.300(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "EU",
+          "GLO"
+        ],
+        "status": "archived"
+      },
+      "CPH2709_16.0.2.400(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": "7988a8ec49273c093ed02b906deb20a1",
+        "minor": 0,
+        "regions": [
+          "EU"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2745": {
+    "device_name": "OnePlus 15",
+    "versions": {
+      "CPH2745_16.0.2.401(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "IN"
+        ],
+        "status": "archived"
+      },
+      "CPH2745_16.0.3.501(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "IN"
+        ],
+        "status": "archived"
+      },
+      "CPH2745_16.0.3.503(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": "e9e6a68cc908913ac7a03578dc41366d",
+        "minor": 0,
+        "regions": [
+          "IN"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2747": {
+    "device_name": "OnePlus 15",
+    "versions": {
+      "CPH2747_16.0.1.303(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "EU",
+          "GLO"
+        ],
+        "status": "archived"
+      },
+      "CPH2747_16.0.2.401(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "EU",
+          "GLO"
+        ],
+        "status": "archived"
+      },
+      "CPH2747_16.0.3.501(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": "fbaeb7dc54da345cf94aeeced0af502c",
+        "minor": 0,
+        "regions": [
+          "EU",
+          "GLO"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2767": {
+    "device_name": "OnePlus 15R",
+    "versions": {
+      "CPH2767_16.0.1.305(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "IN"
+        ],
+        "status": "archived"
+      },
+      "CPH2767_16.0.2.401(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "IN"
+        ],
+        "status": "archived"
+      },
+      "CPH2767_16.0.3.501(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": "b66486ede893305d3c4b297cef45d3f2",
+        "minor": 0,
+        "regions": [
+          "IN"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2769": {
+    "device_name": "OnePlus 15R",
+    "versions": {
+      "CPH2769_16.0.2.401(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": "77e4748592f464726b8d72f6614d2875",
+        "minor": 0,
+        "regions": [
+          "EU",
+          "GLO"
+        ],
+        "status": "current"
+      },
+      "CPH2769_16.0.3.501(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": "cb319baa6d71168d9743f4b0492859f5",
+        "minor": 0,
+        "regions": [
+          "GLO"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "GM1901": {
+    "device_name": "OnePlus 7",
+    "versions": {
+      "GM1901_11_H.40": {
+        "arb": 0,
+        "major": 0,
+        "md5": "ab3c412e906853535f21f2823d2358d7",
+        "minor": 120,
+        "regions": [
+          "IN"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "GM1903": {
+    "device_name": "OnePlus 7",
+    "versions": {
+      "GM1903_11_H.40": {
+        "arb": 0,
+        "major": 0,
+        "md5": "6bb15c264956576babcd5ded2eae55d0",
+        "minor": 120,
+        "regions": [
+          "EU"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "GM1905": {
+    "device_name": "OnePlus 7",
+    "versions": {
+      "GM1905_11_H.41": {
+        "arb": 0,
+        "major": 0,
+        "md5": "49eb65dde1179f77ad92c5035a51c4ae",
+        "minor": 120,
+        "regions": [
+          "GLO"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "GM1911": {
+    "device_name": "OnePlus 7 Pro",
+    "versions": {
+      "GM1911_11_H.40": {
+        "arb": 0,
+        "major": 0,
+        "md5": "33dac37728530166116a3e354d16fda6",
+        "minor": 120,
+        "regions": [
+          "IN"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "GM1913": {
+    "device_name": "OnePlus 7 Pro",
+    "versions": {
+      "GM1913_11_H.40": {
+        "arb": 0,
+        "major": 0,
+        "md5": "96591b6e18ef733a63f631077928f384",
+        "minor": 120,
+        "regions": [
+          "EU"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "GM1917": {
+    "device_name": "OnePlus 7 Pro",
+    "versions": {
+      "GM1917_11_H.41": {
+        "arb": 0,
+        "major": 0,
+        "md5": "1ccb5dc4196b7979673ef1cf8338dd76",
+        "minor": 120,
+        "regions": [
+          "GLO"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "HD1901": {
+    "device_name": "OnePlus 7T",
+    "versions": {
+      "HD1901_11_F.22": {
+        "arb": 0,
+        "major": 0,
+        "md5": "b4e4a35d93399eca1543acb4fa126a36",
+        "minor": 120,
+        "regions": [
+          "IN"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "HD1903": {
+    "device_name": "OnePlus 7T",
+    "versions": {
+      "HD1903_11_F.22": {
+        "arb": 0,
+        "major": 0,
+        "md5": "03f0b0432ad0b1420fecdcbc5de9a6ed",
+        "minor": 120,
+        "regions": [
+          "EU"
+        ],
+        "status": "current"
+      },
+      "HD1905_11_F.22": {
+        "arb": 0,
+        "major": 0,
+        "md5": "87a2d003e867c131ff0d0b5829f9d91a",
+        "minor": 120,
+        "regions": [
+          "GLO"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "HD1911": {
+    "device_name": "OnePlus 7T Pro",
+    "versions": {
+      "HD1911_11_F.22": {
+        "arb": 0,
+        "major": 0,
+        "md5": "4eb9c8bf005ad8b76ed0fc23ddc6f6e4",
+        "minor": 120,
+        "regions": [
+          "IN"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "HD1913": {
+    "device_name": "OnePlus 7T Pro",
+    "versions": {
+      "HD1913_11_F.22": {
+        "arb": 0,
+        "major": 0,
+        "md5": "e6681e6d8c0e0e903c514bd5f29b8c7a",
+        "minor": 120,
+        "regions": [
+          "EU"
+        ],
+        "status": "current"
+      },
+      "HD1917_11_F.22": {
+        "arb": 0,
+        "major": 0,
+        "md5": "3d15c9a772241e92cfb0c74acac2d739",
+        "minor": 120,
+        "regions": [
+          "GLO"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "IN2011": {
+    "device_name": "OnePlus 8",
+    "versions": {
+      "IN2011_13.1.0.590(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "md5": "b9701ec83f0df32427606f56d14275ca",
+        "minor": 120,
+        "regions": [
+          "IN"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "IN2013": {
+    "device_name": "OnePlus 8",
+    "versions": {
+      "IN2013_13.1.0.593(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "md5": "918bda26536c88621a0210b64f887074",
+        "minor": 120,
+        "regions": [
+          "EU"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "IN2015": {
+    "device_name": "OnePlus 8",
+    "versions": {
+      "IN2015_11_F.67": {
+        "arb": 0,
+        "major": 0,
+        "md5": "38f9e3ee0be3b595e5b3f4ccf244aca0",
+        "minor": 120,
+        "regions": [
+          "NA"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "IN2021": {
+    "device_name": "OnePlus 8 Pro",
+    "versions": {
+      "IN2021_13.1.0.590(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "md5": "309ff476170e0e5233214d3b271a2436",
+        "minor": 120,
+        "regions": [
+          "IN"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "IN2023": {
+    "device_name": "OnePlus 8 Pro",
+    "versions": {
+      "IN2023_13.1.0.590(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "md5": "2c929877e9643a9f37d548ad7debe4b3",
+        "minor": 120,
+        "regions": [
+          "EU"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "IN2025": {
+    "device_name": "OnePlus 8 Pro",
+    "versions": {
+      "IN2025_11_F.67": {
+        "arb": 0,
+        "major": 0,
+        "md5": "9262c4d8d4591ac891d13bf2e3bc9c04",
+        "minor": 120,
+        "regions": [
+          "NA"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "KB2001": {
+    "device_name": "OnePlus 8T",
+    "versions": {
+      "KB2001_14.0.0.1311(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "md5": "0fb14a28fe6ac6d91b52a66a9d6e76e7",
+        "minor": 120,
+        "regions": [
+          "IN"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "KB2003": {
+    "device_name": "OnePlus 8T",
+    "versions": {
+      "KB2003_14.0.0.1311(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "md5": "1c53e270fe049b1cdbd361f6a29900d0",
+        "minor": 120,
+        "regions": [
+          "EU"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "KB2005": {
+    "device_name": "OnePlus 8T",
+    "versions": {
+      "KB2005_11_F.67": {
+        "arb": 0,
+        "major": 0,
+        "md5": "68134307caa39d9f0f07cbb107619dee",
+        "minor": 120,
+        "regions": [
+          "NA"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "LE2111": {
+    "device_name": "OnePlus 9",
+    "versions": {
+      "LE2111_14.0.0.1902(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "md5": "25b0c8e1c6c1c3a9630644f08c02bf81",
+        "minor": 120,
+        "regions": [
+          "IN"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "LE2113": {
+    "device_name": "OnePlus 9",
+    "versions": {
+      "LE2113_14.0.0.1902(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "md5": "ef5915d51a38a0213a15a31102ad904a",
+        "minor": 120,
+        "regions": [
+          "EU"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "LE2115": {
+    "device_name": "OnePlus 9",
+    "versions": {
+      "LE2115_11_F.30": {
+        "arb": 0,
+        "major": 0,
+        "md5": "7f497eba018cba18d4a57c720a2120eb",
+        "minor": 120,
+        "regions": [
+          "NA"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "LE2121": {
+    "device_name": "OnePlus 9 Pro",
+    "versions": {
+      "LE2121_14.0.0.1902(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "md5": "5353f56dfa6db49482d1801ede7b4ca0",
+        "minor": 120,
+        "regions": [
+          "IN"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "LE2123": {
+    "device_name": "OnePlus 9 Pro",
+    "versions": {
+      "LE2123_14.0.0.1902(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "md5": "95f48596dd863486130da6b32b823036",
+        "minor": 120,
+        "regions": [
+          "EU"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "LE2125": {
+    "device_name": "OnePlus 9 Pro",
+    "versions": {
+      "LE2125_11_F.30": {
+        "arb": 0,
+        "major": 0,
+        "md5": "b08d06b5f340ccb6c2a5e58c3cd51218",
+        "minor": 120,
+        "regions": [
+          "NA"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "MT2111": {
+    "device_name": "OnePlus 9RT",
+    "versions": {
+      "MT2111_14.0.0.2702(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "md5": "ce87f568d2c236229f628f95bb82a08a",
+        "minor": 120,
+        "regions": [
+          "IN"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "NE2210": {
+    "device_name": "OnePlus 10 Pro",
+    "versions": {
+      "NE2210_15.0.0.1202(CN01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "archived"
+      },
+      "NE2210_15.0.0.1301(CN01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "current"
+      },
+      "NE2210_15.0.0.700(CN01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "archived"
+      }
+    }
+  },
+  "NE2211": {
+    "device_name": "OnePlus 10 Pro",
+    "versions": {
+      "NE2211_15.0.0.1302(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "IN"
+        ],
+        "status": "archived"
+      },
+      "NE2211_15.0.0.700(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "IN"
+        ],
+        "status": "archived"
+      },
+      "NE2211_16.0.3.500(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": "c55ab503dde1551ecd950c06b01dae79",
+        "minor": 0,
+        "regions": [
+          "IN"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "NE2213": {
+    "device_name": "OnePlus 10 Pro",
+    "versions": {
+      "NE2213_14.0.0.940(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "EU",
+          "GLO"
+        ],
+        "status": "archived"
+      },
+      "NE2213_15.0.0.1302(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "EU",
+          "GLO"
+        ],
+        "status": "archived"
+      },
+      "NE2213_15.0.0.700(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "EU",
+          "GLO"
+        ],
+        "status": "archived"
+      },
+      "NE2213_16.0.3.500(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": "0602a2e727fc048cf73ad53577013a9a",
+        "minor": 0,
+        "regions": [
+          "EU",
+          "GLO"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "NE2215": {
+    "device_name": "OnePlus 10 Pro",
+    "versions": {
+      "NE2215_15.0.0.401(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": "203d379328732fae89f3134e3b808304",
+        "minor": 0,
+        "regions": [
+          "NA"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "OPD2403": {
+    "device_name": "OnePlus Pad 2",
+    "versions": {
+      "OPD2403_16.0.0.202(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "EU",
+          "IN"
+        ],
+        "status": "archived"
+      },
+      "OPD2403_16.0.1.301(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "IN"
+        ],
+        "status": "archived"
+      },
+      "OPD2403_16.0.3.501(EX01)": {
+        "arb": 1,
+        "major": 3,
+        "md5": "8440c19505c47de99a60f66a9daa8d17",
+        "minor": 0,
+        "regions": [
+          "EU",
+          "GLO",
+          "IN"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "OPD2413": {
+    "device_name": "OnePlus Pad 2 Pro",
+    "versions": {
+      "OPD2413_16.0.1.301(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "archived"
+      },
+      "OPD2413_16.0.2.400(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "archived"
+      },
+      "OPD2413_16.0.3.501(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "OPD2415": {
+    "device_name": "OnePlus Pad 3",
+    "versions": {
+      "OPD2415_15.0.1.500(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": "4a431268abcc614778a06fa408aa1064",
+        "minor": 0,
+        "regions": [
+          "NA"
+        ],
+        "status": "current"
+      },
+      "OPD2415_16.0.0.211(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "EU",
+          "GLO",
+          "IN"
+        ],
+        "status": "archived"
+      },
+      "OPD2415_16.0.1.302(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "EU",
+          "GLO",
+          "IN"
+        ],
+        "status": "archived"
+      },
+      "OPD2415_16.0.3.500(EX01)": {
+        "arb": 1,
+        "major": 3,
+        "md5": "2a9096260fd856ede66700ddf207b49b",
+        "minor": 0,
+        "regions": [
+          "EU",
+          "GLO",
+          "IN"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "PJD110": {
+    "device_name": "OnePlus 12",
+    "versions": {
+      "PJD110_16.0.0.201(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "archived"
+      },
+      "PJD110_16.0.1.300(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "archived"
+      },
+      "PJD110_16.0.3.500(CN01)": {
+        "arb": 1,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "PJE110": {
+    "device_name": "OnePlus Ace 3",
+    "versions": {
+      "PJE110_15.0.0.600(CN01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "archived"
+      },
+      "PJE110_15.0.0.870(CN01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "archived"
+      },
+      "PJE110_16.0.1.300(CN01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "PJF110": {
+    "device_name": "OnePlus Ace 3V",
+    "versions": {
+      "PJF110_14.0.1.720(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "archived"
+      },
+      "PJF110_15.0.0.500(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "archived"
+      },
+      "PJF110_16.0.1.301(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "PJX110": {
+    "device_name": "OnePlus Ace 3 Pro",
+    "versions": {
+      "PJX110_15.0.0.500(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "archived"
+      },
+      "PJX110_15.0.0.861(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "archived"
+      },
+      "PJX110_16.0.1.301(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "PJZ110": {
+    "device_name": "OnePlus 13",
+    "versions": {
+      "PJZ110_16.0.1.303(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "archived"
+      },
+      "PJZ110_16.0.2.403(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "archived"
+      },
+      "PJZ110_16.0.3.501(CN01)": {
+        "arb": 1,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "archived"
+      },
+      "PJZ110_16.0.3.502(CN01)": {
+        "arb": 1,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "PKG110": {
+    "device_name": "OnePlus Ace 5",
+    "versions": {
+      "PKG110_16.0.1.302(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "archived"
+      },
+      "PKG110_16.0.2.400(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "archived"
+      },
+      "PKG110_16.0.3.500(CN01)": {
+        "arb": 1,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "PKJ110": {
+    "device_name": "Oppo Find X8 Ultra",
+    "versions": {
+      "PKJ110_16.0.1.301(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "archived"
+      },
+      "PKJ110_16.0.2.400(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "archived"
+      },
+      "PKJ110_16.0.3.500(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "PKR110": {
+    "device_name": "OnePlus Ace 5 Pro",
+    "versions": {
+      "PKR110_16.0.1.300(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "archived"
+      },
+      "PKR110_16.0.2.400(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "archived"
+      },
+      "PKR110_16.0.3.500(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "PKV110": {
+    "device_name": "Oppo Find N5",
+    "versions": {
+      "PKH110_16.0.1.302(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "archived"
+      },
+      "PKH110_16.0.2.401(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "archived"
+      },
+      "PKH110_16.0.3.500(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "PLK110": {
+    "device_name": "OnePlus 15",
+    "versions": {
+      "PLK110_16.0.2.402(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "archived"
+      },
+      "PLK110_16.0.3.502(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "archived"
+      },
+      "PLK110_16.0.3.503(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "PLR110": {
+    "device_name": "OnePlus Ace 6T",
+    "versions": {
+      "PLR110_16.0.2.403(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "archived"
+      },
+      "PLR110_16.0.3.501(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "archived"
+      },
+      "PLR110_16.0.3.503(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "current"
+      }
+    }
+  }
+}
