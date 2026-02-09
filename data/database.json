@@ -954,6 +954,16 @@
         "regions": [
           "IN"
         ],
+        "status": "archived"
+      },
+      "CPH2767_16.0.3.503(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": "2c9829fafdd4921812f293a4e3ed2d26",
+        "minor": 0,
+        "regions": [
+          "IN"
+        ],
         "status": "current"
       }
     }
@@ -980,6 +990,16 @@
         "regions": [
           "GLO",
           "EU"
+        ],
+        "status": "archived"
+      },
+      "CPH2769_16.0.3.503(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": "bbf8456ba035fd52691af46cf4d87222",
+        "minor": 0,
+        "regions": [
+          "GLO"
         ],
         "status": "current"
       }
