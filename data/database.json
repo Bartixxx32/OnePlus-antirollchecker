@@ -157,6 +157,16 @@
           "GLO"
         ],
         "status": "current"
+      },
+      "CPH2415_15.0.0.1603(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": "f13eab2d1a00aa9179e0e5e1e04b7d4c",
+        "minor": 0,
+        "regions": [
+          "GLO"
+        ],
+        "status": "current"
       }
     }
   },
