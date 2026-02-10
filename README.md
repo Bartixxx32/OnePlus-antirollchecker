@@ -10,8 +10,8 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
-| Global | CPH2747 | CPH2747_16.0.3.501(EX01)<br><details><summary>MD5</summary><code>4c9d70c8dbe2b867a7e497aa063acb71</code></details> | **0** | Major: 3, Minor: 0 | 2026-02-10 | ✅ |
-| Europe | CPH2747 | CPH2747_16.0.3.501(EX01)<br><details><summary>MD5</summary><code>fbaeb7dc54da345cf94aeeced0af502c</code></details> | **0** | Major: 3, Minor: 0 | 2026-02-10 | ✅ |
+| Global | CPH2747 | CPH2747_16.0.3.503(EX01)<br><details><summary>MD5</summary><code>1f617649e2d5d76a5863776bb65100c0</code></details> | **0** | Major: 3, Minor: 0 | 2026-02-10 | ✅ |
+| Europe | CPH2747 | CPH2747_16.0.3.503(EX01)<br><details><summary>MD5</summary><code>aead3e10aadb3ff506ae0673a110f8c6</code></details> | **0** | Major: 3, Minor: 0 | 2026-02-10 | ✅ |
 | India | CPH2745 | CPH2745_16.0.3.503(EX01)<br><details><summary>MD5</summary><code>e9e6a68cc908913ac7a03578dc41366d</code></details> | **0** | Major: 3, Minor: 0 | 2026-02-10 | ✅ |
 | China | PLK110 | PLK110_16.0.3.503(CN01) | **0** | Major: 3, Minor: 0 | 2026-02-10 | ✅ |
 
@@ -20,6 +20,7 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| CPH2747_16.0.3.501(EX01)<br><details><summary>MD5</summary><code>4c9d70c8dbe2b867a7e497aa063acb71</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-10 | ✅ |
 | CPH2747_16.0.1.303(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-06 | ✅ |
 | CPH2747_16.0.2.401(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ |
 
@@ -30,6 +31,7 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| CPH2747_16.0.3.501(EX01)<br><details><summary>MD5</summary><code>fbaeb7dc54da345cf94aeeced0af502c</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-10 | ✅ |
 | CPH2747_16.0.1.303(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-06 | ✅ |
 | CPH2747_16.0.2.401(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ |
 
@@ -385,7 +387,7 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
 | Global | CPH2415 | CPH2415_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>f13eab2d1a00aa9179e0e5e1e04b7d4c</code></details> | **0** | Major: 2, Minor: 0 | 2026-02-10 | ✅ |
-| Europe | CPH2415 | CPH2415_15.0.0.1601(EX01)<br><details><summary>MD5</summary><code>ae910e6219c0b40dfe8127768b1c9cdb</code></details> | **0** | Major: 2, Minor: 0 | 2026-02-10 | ✅ |
+| Europe | CPH2415 | CPH2415_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>7789c263157952e4b85a1dc505771a5a</code></details> | **0** | Major: 2, Minor: 0 | 2026-02-10 | ✅ |
 | India | CPH2413 | CPH2413_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>f2f49f81fdec15884d9b6df3f8018d4b</code></details> | **0** | Major: 2, Minor: 0 | 2026-02-10 | ✅ |
 | NA | CPH2417 | CPH2417_11_C.46<br><details><summary>MD5</summary><code>c0fe595ca50e4db92c009f49273c5c9a</code></details> | **0** | Major: 2, Minor: 0 | 2026-02-10 | ✅ |
 
@@ -395,6 +397,15 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
 | CPH2415_15.0.0.1601(EX01)<br><details><summary>MD5</summary><code>98462c7099333250b1ec2f168af822ce</code></details> | 0 | Major: 2, Minor: 0 | 2026-02-09 | ✅ |
+
+</details>
+
+<details>
+<summary>📜 <b>Europe History</b> (click to expand)</summary>
+
+| Firmware Version | ARB | OEM Version | Last Seen | Safe |
+|:---|:---|:---|:---|:---|
+| CPH2415_15.0.0.1601(EX01)<br><details><summary>MD5</summary><code>ae910e6219c0b40dfe8127768b1c9cdb</code></details> | 0 | Major: 2, Minor: 0 | 2026-02-10 | ✅ |
 
 </details>
 
@@ -916,4 +927,4 @@ This API helps you get direct, signed download URLs for OnePlus OTA firmware fil
 - **ARB Extraction**: [arbextract](https://github.com/koaaN/arbextract) by koaaN
 
 ---
-*Last updated: 2026-02-10 02:55 UTC*
+*Last updated: 2026-02-10 17:25 UTC*
