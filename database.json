@@ -156,14 +156,15 @@
           "EU",
           "GLO"
         ],
-        "status": "current"
+        "status": "archived"
       },
       "CPH2415_15.0.0.1603(EX01)": {
         "arb": 0,
         "major": 2,
-        "md5": "f13eab2d1a00aa9179e0e5e1e04b7d4c",
+        "md5": "7789c263157952e4b85a1dc505771a5a",
         "minor": 0,
         "regions": [
+          "EU",
           "GLO"
         ],
         "status": "current"
@@ -924,6 +925,17 @@
         "arb": 0,
         "major": 3,
         "md5": "fbaeb7dc54da345cf94aeeced0af502c",
+        "minor": 0,
+        "regions": [
+          "EU",
+          "GLO"
+        ],
+        "status": "archived"
+      },
+      "CPH2747_16.0.3.503(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": "aead3e10aadb3ff506ae0673a110f8c6",
         "minor": 0,
         "regions": [
           "EU",
