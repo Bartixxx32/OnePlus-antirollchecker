@@ -602,6 +602,22 @@
       }
     }
   },
+  "CPH2645": {
+    "device_name": "OnePlus 13R",
+    "versions": {
+      "CPH2645_16.0.3.500(EX01)": {
+        "arb": 1,
+        "major": 3,
+        "md5": "9fd992eaf16b4c0b2212d8675d2f57a7",
+        "minor": 0,
+        "regions": [
+          "GLO",
+          "EU"
+        ],
+        "status": "current"
+      }
+    }
+  },
   "CPH2649": {
     "device_name": "OnePlus 13",
     "versions": {
@@ -815,6 +831,21 @@
         "minor": 0,
         "regions": [
           "ID"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2691": {
+    "device_name": "OnePlus 13R",
+    "versions": {
+      "CPH2691_16.0.3.500(EX01)": {
+        "arb": 1,
+        "major": 3,
+        "md5": "7052fdc3ef6ba695876c463e220b0666",
+        "minor": 0,
+        "regions": [
+          "IN"
         ],
         "status": "current"
       }
