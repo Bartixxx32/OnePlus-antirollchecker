@@ -360,14 +360,15 @@
         "regions": [
           "OCA"
         ],
-        "status": "current"
+        "status": "archived"
       },
       "CPH2499_16.0.3.500(EX01)": {
         "arb": 0,
         "major": 2,
-        "md5": "b7cfb500593a0367872fbf860d1d31f5",
+        "md5": "c5977aa2232a230e43012cc872dd9109",
         "minor": 0,
         "regions": [
+          "OCA",
           "TH",
           "TW",
           "MY",
@@ -568,6 +569,16 @@
         "arb": 0,
         "major": 2,
         "md5": "6ad8b8c67ad8500b573df241254fcdd6",
+        "minor": 0,
+        "regions": [
+          "EU"
+        ],
+        "status": "archived"
+      },
+      "CPH2609_16.0.3.500(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": "3bf4f77014c7ecc56da8c34b8e2da4a8",
         "minor": 0,
         "regions": [
           "EU"
@@ -1499,6 +1510,16 @@
         "arb": 0,
         "major": 2,
         "md5": "c55ab503dde1551ecd950c06b01dae79",
+        "minor": 0,
+        "regions": [
+          "IN"
+        ],
+        "status": "archived"
+      },
+      "NE2211_16.0.3.510(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "md5": "6789b9fa5b12cea96885ed118c29cf7b",
         "minor": 0,
         "regions": [
           "IN"
