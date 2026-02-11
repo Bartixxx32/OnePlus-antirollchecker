@@ -9,6 +9,24 @@
       "last_checked": "2026-02-11",
       "status": "current",
       "md5": "7052fdc3ef6ba695876c463e220b0666"
+    },
+    {
+      "version": "CPH2691_16.0.2.400(EX01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-02-11",
+      "last_checked": "2026-02-11",
+      "status": "archived"
+    },
+    {
+      "version": "CPH2691_16.0.1.302(EX01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-02-11",
+      "last_checked": "2026-02-11",
+      "status": "archived"
     }
   ],
   "device": "OnePlus 13R",

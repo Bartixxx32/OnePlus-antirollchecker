@@ -40,9 +40,9 @@ Join our Telegram group for support, discussion, and to use the bot.
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| CPH2747_16.0.2.401(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-11 | ✅ |
 | CPH2747_16.0.3.501(EX01)<br><details><summary>MD5</summary><code>4c9d70c8dbe2b867a7e497aa063acb71</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-08 | ✅ |
 | CPH2747_16.0.1.303(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-06 | ✅ |
-| CPH2747_16.0.2.401(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ |
 
 </details>
 
@@ -51,9 +51,9 @@ Join our Telegram group for support, discussion, and to use the bot.
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| CPH2747_16.0.2.401(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-11 | ✅ |
 | CPH2747_16.0.3.501(EX01)<br><details><summary>MD5</summary><code>fbaeb7dc54da345cf94aeeced0af502c</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-08 | ✅ |
 | CPH2747_16.0.1.303(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-06 | ✅ |
-| CPH2747_16.0.2.401(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ |
 
 </details>
 
@@ -62,7 +62,7 @@ Join our Telegram group for support, discussion, and to use the bot.
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
-| CPH2745_16.0.2.401(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-06 | ✅ |
+| CPH2745_16.0.2.401(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-11 | ✅ |
 | CPH2745_16.0.3.501(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ |
 
 </details>
@@ -93,7 +93,7 @@ Join our Telegram group for support, discussion, and to use the bot.
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
-| CPH2769_16.0.3.501(EX01)<br><details><summary>MD5</summary><code>cb319baa6d71168d9743f4b0492859f5</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-08 | ✅ |
+| CPH2769_16.0.3.501(EX01)<br><details><summary>MD5</summary><code>cb319baa6d71168d9743f4b0492859f5</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-11 | ✅ |
 | CPH2769_16.0.2.401(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-06 | ✅ |
 
 </details>
@@ -103,7 +103,7 @@ Join our Telegram group for support, discussion, and to use the bot.
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
-| CPH2769_16.0.2.401(EX01)<br><details><summary>MD5</summary><code>77e4748592f464726b8d72f6614d2875</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-08 | ✅ |
+| CPH2769_16.0.2.401(EX01)<br><details><summary>MD5</summary><code>77e4748592f464726b8d72f6614d2875</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-11 | ✅ |
 
 </details>
 
@@ -112,7 +112,7 @@ Join our Telegram group for support, discussion, and to use the bot.
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
-| CPH2767_16.0.3.501(EX01)<br><details><summary>MD5</summary><code>b66486ede893305d3c4b297cef45d3f2</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-08 | ✅ |
+| CPH2767_16.0.3.501(EX01)<br><details><summary>MD5</summary><code>b66486ede893305d3c4b297cef45d3f2</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-11 | ✅ |
 | CPH2767_16.0.2.401(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ |
 | CPH2767_16.0.1.305(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ |
 
@@ -136,8 +136,8 @@ Join our Telegram group for support, discussion, and to use the bot.
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| CPH2653_16.0.2.402(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-11 | ✅ |
 | CPH2653_16.0.1.304(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-06 | ✅ |
-| CPH2653_16.0.2.402(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ |
 
 </details>
 
@@ -146,7 +146,7 @@ Join our Telegram group for support, discussion, and to use the bot.
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
-| CPH2653_16.0.2.402(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ |
+| CPH2653_16.0.2.402(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-11 | ✅ |
 | CPH2653_16.0.1.304(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ |
 
 </details>
@@ -156,7 +156,7 @@ Join our Telegram group for support, discussion, and to use the bot.
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
-| CPH2649_16.0.2.402(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ |
+| CPH2649_16.0.2.402(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-11 | ✅ |
 | CPH2649_16.0.1.304(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ |
 
 </details>
@@ -166,7 +166,7 @@ Join our Telegram group for support, discussion, and to use the bot.
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
-| CPH2655_15.0.0.405(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ |
+| CPH2655_15.0.0.405(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-11 | ✅ |
 
 </details>
 
@@ -175,8 +175,8 @@ Join our Telegram group for support, discussion, and to use the bot.
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| PJZ110_16.0.2.403(CN01) | 0 | Major: 3, Minor: 0 | 2026-02-11 | ✅ |
 | PJZ110_16.0.3.501(CN01) | 1 | Major: 3, Minor: 0 | 2026-02-04 | ❌ |
-| PJZ110_16.0.2.403(CN01) | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ |
 | PJZ110_16.0.1.303(CN01) | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ |
 
 </details>
@@ -191,6 +191,37 @@ Join our Telegram group for support, discussion, and to use the bot.
 | Global | CPH2645 | CPH2645_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>9fd992eaf16b4c0b2212d8675d2f57a7</code></details> | **1** | Major: 3, Minor: 0 | 2026-02-11 | ❌ |
 | Europe | CPH2645 | CPH2645_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>fc83d78ebf942ee641d6a70bea3c2646</code></details> | **1** | Major: 3, Minor: 0 | 2026-02-11 | ❌ |
 | India | CPH2691 | CPH2691_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>7052fdc3ef6ba695876c463e220b0666</code></details> | **1** | Major: 3, Minor: 0 | 2026-02-11 | ❌ |
+
+<details>
+<summary>📜 <b>Global History</b> (click to expand)</summary>
+
+| Firmware Version | ARB | OEM Version | Last Seen | Safe |
+|:---|:---|:---|:---|:---|
+| CPH2645_16.0.0.205(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-11 | ✅ |
+| CPH2645_15.0.0.871(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-11 | ✅ |
+
+</details>
+
+<details>
+<summary>📜 <b>Europe History</b> (click to expand)</summary>
+
+| Firmware Version | ARB | OEM Version | Last Seen | Safe |
+|:---|:---|:---|:---|:---|
+| CPH2645_16.0.0.205(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-11 | ✅ |
+| CPH2645_15.0.0.860(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-11 | ✅ |
+
+</details>
+
+<details>
+<summary>📜 <b>India History</b> (click to expand)</summary>
+
+| Firmware Version | ARB | OEM Version | Last Seen | Safe |
+|:---|:---|:---|:---|:---|
+| CPH2691_16.0.2.400(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-11 | ✅ |
+| CPH2691_16.0.1.302(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-11 | ✅ |
+
+</details>
+
 
 ---
 
@@ -207,8 +238,8 @@ Join our Telegram group for support, discussion, and to use the bot.
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| CPH2551_15.0.0.863(EX01) | 0 | Major: 2, Minor: 0 | 2026-02-11 | ✅ |
 | CPH2551_16.0.2.400(EX01) | 0 | Major: 2, Minor: 0 | 2026-02-06 | ✅ |
-| CPH2551_15.0.0.863(EX01) | 0 | Major: 2, Minor: 0 | 2026-02-06 | ✅ |
 | CPH2551_16.0.1.300(EX01) | 0 | Major: 2, Minor: 0 | 2026-02-04 | ✅ |
 | CPH2551_16.0.0.201(EX01) | 0 | Major: 2, Minor: 0 | 2026-02-04 | ✅ |
 
@@ -219,7 +250,7 @@ Join our Telegram group for support, discussion, and to use the bot.
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
-| CPH2551_16.0.1.300(EX01) | 0 | Major: 2, Minor: 0 | 2026-02-06 | ✅ |
+| CPH2551_16.0.1.300(EX01) | 0 | Major: 2, Minor: 0 | 2026-02-11 | ✅ |
 | CPH2551_16.0.2.400(EX01) | 0 | Major: 2, Minor: 0 | 2026-02-04 | ✅ |
 | CPH2551_16.0.0.201(EX01) | 0 | Major: 2, Minor: 0 | 2026-02-04 | ✅ |
 
@@ -243,8 +274,8 @@ Join our Telegram group for support, discussion, and to use the bot.
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| CPH2581_15.0.0.863(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-11 | ✅ |
 | CPH2581_16.0.0.201(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-06 | ✅ |
-| CPH2581_15.0.0.863(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ |
 
 </details>
 
@@ -253,7 +284,7 @@ Join our Telegram group for support, discussion, and to use the bot.
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
-| CPH2581_16.0.0.201(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ |
+| CPH2581_16.0.0.201(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-11 | ✅ |
 | CPH2581_15.0.0.863(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ |
 
 </details>
@@ -263,8 +294,8 @@ Join our Telegram group for support, discussion, and to use the bot.
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| CPH2573_16.0.1.300(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-11 | ✅ |
 | CPH2573_16.0.2.400(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ |
-| CPH2573_16.0.1.300(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ |
 
 </details>
 
@@ -273,7 +304,7 @@ Join our Telegram group for support, discussion, and to use the bot.
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
-| PJD110_16.0.1.300(CN01) | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ |
+| PJD110_16.0.1.300(CN01) | 0 | Major: 3, Minor: 0 | 2026-02-11 | ✅ |
 | PJD110_16.0.0.201(CN01) | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ |
 
 </details>
@@ -316,7 +347,7 @@ Join our Telegram group for support, discussion, and to use the bot.
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
-| CPH2449_15.0.0.862(EX01) | 0 | Major: 2, Minor: 0 | 2026-02-06 | ✅ |
+| CPH2449_15.0.0.862(EX01) | 0 | Major: 2, Minor: 0 | 2026-02-11 | ✅ |
 | CPH2449_15.0.0.600(EX01) | 0 | Major: 2, Minor: 0 | 2026-02-04 | ✅ |
 
 </details>
@@ -326,7 +357,7 @@ Join our Telegram group for support, discussion, and to use the bot.
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
-| CPH2449_15.0.0.600(EX01) | 0 | Major: 2, Minor: 0 | 2026-02-06 | ✅ |
+| CPH2449_15.0.0.600(EX01) | 0 | Major: 2, Minor: 0 | 2026-02-11 | ✅ |
 | CPH2449_16.0.2.400(EX01) | 0 | Major: 2, Minor: 0 | 2026-02-04 | ✅ |
 | CPH2449_15.0.0.862(EX01) | 0 | Major: 2, Minor: 0 | 2026-02-04 | ✅ |
 
@@ -337,10 +368,10 @@ Join our Telegram group for support, discussion, and to use the bot.
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| CPH2447_15.0.0.600(EX01) | 0 | Major: 2, Minor: 0 | 2026-02-11 | ✅ |
 | CPH2447_16.0.1.300(EX01) | 0 | Major: 2, Minor: 0 | 2026-02-06 | ✅ |
 | CPH2447_16.0.2.400(EX01) | 0 | Major: 2, Minor: 0 | 2026-02-04 | ✅ |
 | CPH2447_15.0.0.862(EX01) | 0 | Major: 2, Minor: 0 | 2026-02-04 | ✅ |
-| CPH2447_15.0.0.600(EX01) | 0 | Major: 2, Minor: 0 | 2026-02-04 | ✅ |
 
 </details>
 
@@ -358,7 +389,7 @@ Join our Telegram group for support, discussion, and to use the bot.
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
-| CPH2487_15.0.0.870(EX01) | 0 | Major: 2, Minor: 0 | 2026-02-06 | ✅ |
+| CPH2487_15.0.0.870(EX01) | 0 | Major: 2, Minor: 0 | 2026-02-11 | ✅ |
 | CPH2487_15.0.0.601(EX01) | 0 | Major: 2, Minor: 0 | 2026-02-04 | ✅ |
 | CPH2487_14.0.0.810(EX01) | 0 | Major: 2, Minor: 0 | 2026-02-04 | ✅ |
 
@@ -382,9 +413,9 @@ Join our Telegram group for support, discussion, and to use the bot.
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| NE2213_15.0.0.700(EX01) | 0 | Major: 2, Minor: 0 | 2026-02-11 | ✅ |
 | NE2213_15.0.0.1302(EX01) | 0 | Major: 2, Minor: 0 | 2026-02-06 | ✅ |
 | NE2213_14.0.0.940(EX01) | 0 | Major: 2, Minor: 0 | 2026-02-06 | ✅ |
-| NE2213_15.0.0.700(EX01) | 0 | Major: 2, Minor: 0 | 2026-02-04 | ✅ |
 
 </details>
 
@@ -393,9 +424,9 @@ Join our Telegram group for support, discussion, and to use the bot.
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| NE2213_14.0.0.940(EX01) | 0 | Major: 2, Minor: 0 | 2026-02-11 | ✅ |
 | NE2213_15.0.0.1302(EX01) | 0 | Major: 2, Minor: 0 | 2026-02-06 | ✅ |
 | NE2213_15.0.0.700(EX01) | 0 | Major: 2, Minor: 0 | 2026-02-04 | ✅ |
-| NE2213_14.0.0.940(EX01) | 0 | Major: 2, Minor: 0 | 2026-02-04 | ✅ |
 
 </details>
 
@@ -405,7 +436,7 @@ Join our Telegram group for support, discussion, and to use the bot.
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
 | NE2211_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>c55ab503dde1551ecd950c06b01dae79</code></details> | 0 | Major: 2, Minor: 0 | 2026-02-11 | ✅ |
-| NE2211_15.0.0.700(EX01) | 0 | Major: 2, Minor: 0 | 2026-02-04 | ✅ |
+| NE2211_15.0.0.700(EX01) | 0 | Major: 2, Minor: 0 | 2026-02-11 | ✅ |
 | NE2211_15.0.0.1302(EX01) | 0 | Major: 2, Minor: 0 | 2026-02-04 | ✅ |
 
 </details>
@@ -415,7 +446,7 @@ Join our Telegram group for support, discussion, and to use the bot.
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
-| NE2210_15.0.0.700(CN01) | 0 | Major: 2, Minor: 0 | 2026-02-04 | ✅ |
+| NE2210_15.0.0.700(CN01) | 0 | Major: 2, Minor: 0 | 2026-02-11 | ✅ |
 | NE2210_15.0.0.1202(CN01) | 0 | Major: 2, Minor: 0 | 2026-02-04 | ✅ |
 
 </details>
@@ -573,7 +604,7 @@ Join our Telegram group for support, discussion, and to use the bot.
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
-| CPH2709_15.0.2.604(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-06 | ✅ |
+| CPH2709_15.0.2.604(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-11 | ✅ |
 
 </details>
 
@@ -582,7 +613,7 @@ Join our Telegram group for support, discussion, and to use the bot.
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
-| CPH2709_16.0.1.300(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-06 | ✅ |
+| CPH2709_16.0.1.300(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-11 | ✅ |
 | CPH2709_15.0.2.604(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ |
 
 </details>
@@ -603,8 +634,8 @@ Join our Telegram group for support, discussion, and to use the bot.
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| CPH2663_15.0.0.401(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-11 | ✅ |
 | CPH2663_16.0.1.301(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-06 | ✅ |
-| CPH2663_15.0.0.401(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ |
 
 </details>
 
@@ -670,8 +701,8 @@ Join our Telegram group for support, discussion, and to use the bot.
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| PKR110_16.0.1.300(CN01) | 0 | Major: 3, Minor: 0 | 2026-02-11 | ✅ |
 | PKR110_16.0.2.400(CN01) | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ |
-| PKR110_16.0.1.300(CN01) | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ |
 
 </details>
 
@@ -689,8 +720,8 @@ Join our Telegram group for support, discussion, and to use the bot.
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| PKG110_16.0.2.400(CN01) | 0 | Major: 3, Minor: 0 | 2026-02-11 | ✅ |
 | PKG110_16.0.1.302(CN01) | 0 | Major: 3, Minor: 0 | 2026-02-06 | ✅ |
-| PKG110_16.0.2.400(CN01) | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ |
 
 </details>
 
@@ -746,8 +777,8 @@ Join our Telegram group for support, discussion, and to use the bot.
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| PJE110_15.0.0.600(CN01) | 0 | Major: 2, Minor: 0 | 2026-02-11 | ✅ |
 | PJE110_15.0.0.870(CN01) | 0 | Major: 2, Minor: 0 | 2026-02-04 | ✅ |
-| PJE110_15.0.0.600(CN01) | 0 | Major: 2, Minor: 0 | 2026-02-04 | ✅ |
 
 </details>
 
@@ -768,8 +799,8 @@ Join our Telegram group for support, discussion, and to use the bot.
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| OPD2415_16.0.0.211(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-11 | ✅ |
 | OPD2415_16.0.1.302(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-06 | ✅ |
-| OPD2415_16.0.0.211(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ |
 
 </details>
 
@@ -778,7 +809,7 @@ Join our Telegram group for support, discussion, and to use the bot.
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
-| OPD2415_16.0.1.302(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-06 | ✅ |
+| OPD2415_16.0.1.302(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-11 | ✅ |
 | OPD2415_16.0.0.211(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ |
 
 </details>
@@ -788,7 +819,7 @@ Join our Telegram group for support, discussion, and to use the bot.
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
-| OPD2415_16.0.1.302(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-06 | ✅ |
+| OPD2415_16.0.1.302(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-11 | ✅ |
 | OPD2415_16.0.0.211(EX01) | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ |
 
 </details>
@@ -856,8 +887,8 @@ Join our Telegram group for support, discussion, and to use the bot.
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| PKJ110_16.0.1.301(CN01) | 0 | Major: 3, Minor: 0 | 2026-02-11 | ✅ |
 | PKJ110_16.0.2.400(CN01) | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ |
-| PKJ110_16.0.1.301(CN01) | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ |
 
 </details>
 
@@ -978,4 +1009,4 @@ This API helps you get direct, signed download URLs for OnePlus OTA firmware fil
 - **ARB Extraction**: [arbextract](https://github.com/koaaN/arbextract) by koaaN
 
 ---
-*Last updated: 2026-02-11 18:20 UTC*
+*Last updated: 2026-02-11 18:25 UTC*
