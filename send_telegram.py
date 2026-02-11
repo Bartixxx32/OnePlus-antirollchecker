@@ -37,6 +37,17 @@ def delete_telegram_message(token, chat_id, message_id):
         print(f"Failed to delete Telegram message: {e}")
         # Do not exit with error, as deletion is secondary
 
+def escape_markdown(text):
+    """Helper to escape Markdown special characters."""
+    if not text:
+        return text
+    # Escape characters that have special meaning in Markdown
+    # We are using "Markdown" (V1) mode, which is less strict than V2 but still sensitive to _, *, `
+    escape_chars = ['_', '*', '`', '[', ']']
+    for char in escape_chars:
+        text = text.replace(char, f"\\{char}")
+    return text
+
 def main():
     parser = argparse.ArgumentParser(description="Send Telegram notification for new firmware.")
     parser.add_argument("--token", required=True, help="Telegram Bot Token")
@@ -67,9 +78,6 @@ def main():
     chat_id = args.chat_id
     message_thread_id = None
     if "_" in chat_id:
-        # Assuming format CHATID_THREADID. Note: Chat ID can be negative. 
-        # So we should split by the LAST underscore if possible, or handle negative sign carefuly.
-        # But usually formatted as "-100123123_12"
         try:
             parts = chat_id.rsplit("_", 1)
             if len(parts) == 2:
@@ -80,13 +88,19 @@ def main():
 
     # Construct the message
     message = ""
+    # Mention is usually a username/link, we don't escape it strictly or we break it?
+    # User mention @username works in Markdown. If user name has underscores... usually handled by Telegram?
+    # Let's escape user mention just in case if it's not a link.
+    # Actually @username is safe. content like "Hello @user_name" works.
+    
     if args.user_mention:
         message += f"Hello {args.user_mention}, "
     
     if args.error:
-        message += f"an error occurred during the check:\n\n{args.error}"
+        # Error message usually plain text, but let's escape just in case
+        safe_error = escape_markdown(args.error)
+        message += f"an error occurred during the check:\n\n{safe_error}"
         send_telegram_message(args.token, chat_id, message, args.reply_to, message_thread_id)
-        # Verify if we should delete the status message even on error (probably yes)
         if args.delete_message_id:
             delete_telegram_message(args.token, chat_id, args.delete_message_id)
         return
@@ -94,32 +108,44 @@ def main():
     if args.user_mention:
         message += "here is your result:\n\n"
 
+    # Escape all variable content
+    safe_device = escape_markdown(args.device)
+    safe_product = escape_markdown(args.product) if args.product else None
+    safe_variant = escape_markdown(args.variant) if args.variant else None
+    safe_version = escape_markdown(args.version)
+    safe_patch = escape_markdown(args.security_patch) if args.security_patch else None
+    # Build ID is used in code block, no need to escape inside code block usually, but backticks inside?
+    safe_build = args.build_id.replace("`", "\\`") if args.build_id else None
+    safe_arb = escape_markdown(args.arb)
+    safe_md5 = args.md5 # Used in code block
+    
     message += (
         f"✨ *Firmware Analysis Result* ✨\n\n"
-        f"📱 *Device:* {args.device}\n"
+        f"📱 *Device:* {safe_device}\n"
     )
 
-    if args.product:
-         message += f"📦 *Product:* {args.product}\n"
+    if safe_product:
+         message += f"📦 *Product:* {safe_product}\n"
 
-    if args.variant:
-        message += f"🌍 *Variant:* {args.variant}\n"
+    if safe_variant:
+        message += f"🌍 *Variant:* {safe_variant}\n"
 
-    message += f"🚀 *Version:* {args.version}\n"
+    message += f"🚀 *Version:* {safe_version}\n"
 
-    if args.security_patch:
-        message += f"🔒 *Security Patch:* {args.security_patch}\n"
+    if safe_patch:
+        message += f"🔒 *Security Patch:* {safe_patch}\n"
     
-    if args.build_id:
-        # Format build ID as mono-space because it's long
-        message += f"🏗️ *Build ID:* `{args.build_id}`\n"
+    if safe_build:
+        message += f"🏗️ *Build ID:* `{safe_build}`\n"
 
-    message += f"🛡️ *ARB Index:* {args.arb}\n"
+    message += f"🛡️ *ARB Index:* {safe_arb}\n"
 
-    if args.md5:
-        message += f"🔑 *MD5:* `{args.md5}`\n"
+    if safe_md5:
+        message += f"🔑 *MD5:* `{safe_md5}`\n"
     
     if args.url:
+        # URL needs to be safe? Standard Markdown link [text](url).
+        # We don't escape URL itself usually.
         message += f"\n⬇️ [Download Link]({args.url})"
 
     send_telegram_message(args.token, chat_id, message, args.reply_to, message_thread_id)
