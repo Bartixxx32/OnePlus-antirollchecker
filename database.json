@@ -605,6 +605,37 @@
   "CPH2645": {
     "device_name": "OnePlus 13R",
     "versions": {
+      "CPH2645_15.0.0.860(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "EU"
+        ],
+        "status": "archived"
+      },
+      "CPH2645_15.0.0.871(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "GLO"
+        ],
+        "status": "archived"
+      },
+      "CPH2645_16.0.0.205(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "GLO",
+          "EU"
+        ],
+        "status": "archived"
+      },
       "CPH2645_16.0.3.500(EX01)": {
         "arb": 1,
         "major": 3,
@@ -839,6 +870,26 @@
   "CPH2691": {
     "device_name": "OnePlus 13R",
     "versions": {
+      "CPH2691_16.0.1.302(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "IN"
+        ],
+        "status": "archived"
+      },
+      "CPH2691_16.0.2.400(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "IN"
+        ],
+        "status": "archived"
+      },
       "CPH2691_16.0.3.500(EX01)": {
         "arb": 1,
         "major": 3,
