@@ -27,7 +27,19 @@ on:
 jobs:
   check-firmware:
     runs-on: ubuntu-latest
+    env:
+      TELEGRAM_BOT_TOKEN: ${{ secrets.BOTTOKEN }}
+      STATUS_CHAT_ID: ${{ github.event.inputs.request_chat_id }}
+      STATUS_MSG_ID: ${{ github.event.inputs.request_status_message_id }}
     steps:
+      - name: Parse Chat ID
+        id: parse_chat
+        run: |
+          FULL_CHAT_ID="${{ github.event.inputs.request_chat_id }}"
+          # Extract raw chat_id (before underscore, if present)
+          RAW_CHAT_ID=$(echo "$FULL_CHAT_ID" | cut -d'_' -f1)
+          echo "raw_chat_id=$RAW_CHAT_ID" >> $GITHUB_OUTPUT
+
       - name: Checkout Repo
         uses: actions/checkout@v4
 
@@ -57,6 +69,13 @@ jobs:
           mv payload-dumper-go tools/payload-dumper-go || find . -name "payload-dumper-go" -type f -exec mv {} tools/payload-dumper-go \;
           chmod +x tools/payload-dumper-go
 
+      - name: Update Status - Downloading
+        run: |
+          curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/editMessageText" \
+            -d "chat_id=${{ steps.parse_chat.outputs.raw_chat_id }}" \
+            -d "message_id=${STATUS_MSG_ID}" \
+            -d "text=⏳ Downloading firmware..." || true
+
       - name: Download Firmware
         id: download
         continue-on-error: true
@@ -73,6 +92,14 @@ jobs:
              exit 1
           fi
 
+      - name: Update Status - Analyzing
+        if: steps.download.outcome == 'success'
+        run: |
+          curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/editMessageText" \
+            -d "chat_id=${{ steps.parse_chat.outputs.raw_chat_id }}" \
+            -d "message_id=${STATUS_MSG_ID}" \
+            -d "text=🔬 Analyzing firmware..." || true
+
       - name: Analyze Firmware
         id: analyze
         continue-on-error: true
@@ -85,10 +112,16 @@ jobs:
           
           cat result.json
 
+      - name: Update Status - Preparing Results
+        if: always()
+        run: |
+          curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/editMessageText" \
+            -d "chat_id=${{ steps.parse_chat.outputs.raw_chat_id }}" \
+            -d "message_id=${STATUS_MSG_ID}" \
+            -d "text=📤 Preparing results..." || true
+
       - name: Send Telegram Reply
         if: always()
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.BOTTOKEN }}
         run: |
           ERROR_MSG=""
           

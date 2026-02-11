@@ -157,10 +157,10 @@ def main():
     if safe_md5:
         message += f"🔑 *MD5:* `{safe_md5}`\n"
     
-    if args.url:
-        # URL needs to be safe? Standard Markdown link [text](url).
-        # We don't escape URL itself usually.
-        message += f"\n⬇️ [Download Link]({args.url})"
+    # Download link removed per user request
+    # if args.url:
+    #     message += f"\n⬇️ [Download Link]({args.url})"
+
 
     send_telegram_message(args.token, chat_id, message, args.reply_to, message_thread_id)
 

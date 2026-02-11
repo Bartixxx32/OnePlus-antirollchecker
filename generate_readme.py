@@ -154,6 +154,8 @@ def generate_readme(history_data: Dict) -> str:
         '',
         '**🌐 Live Tracker:** [oneplusantiroll.netlify.app](https://oneplusantiroll.netlify.app/)',
         '',
+        '**💬 Telegram Bot:** [@oparbcheckerbot](https://t.me/oparbcheckerbot) · **Group:** [@oneplusarbchecker](https://t.me/oneplusarbchecker)',
+        '',
         '## 📊 Current Status',
         ''
     ]
@@ -185,11 +187,11 @@ def generate_readme(history_data: Dict) -> str:
         'The bot will automatically pick up the request, analyze the firmware, and post the results as a comment on your issue.',
         '',
         '---',
-        ''
+        '',
     ])
 
     lines.extend([
-        '## 🔗 OOS Downloader API',
+        '##  OOS Downloader API',
         '',
         'Need direct download URLs for OnePlus firmware? Use our **OOS Downloader API**!',
         '',

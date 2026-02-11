@@ -17,3 +17,7 @@ oplasertool/
 result.json
 fw_info.json
 fw_refresh.json
+
+# Secrets
+.env
+stats.json
