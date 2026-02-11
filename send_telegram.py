@@ -138,7 +138,21 @@ def main():
     if safe_build:
         message += f"🏗️ *Build ID:* `{safe_build}`\n"
 
-    message += f"🛡️ *ARB Index:* {safe_arb}\n"
+    arb_emoji = ""
+    try:
+        # standard ARB is typically integer string "0" or "1"
+        arb_val = int(args.arb.strip())
+        if arb_val > 0:
+            arb_emoji = "❌" # Should probably be warning/error
+        else:
+            arb_emoji = "✅"
+    except:
+        # If it's "Error" or "Unknown", maybe no emoji or warning
+        if "error" in args.arb.lower():
+             arb_emoji = "⚠️"
+        pass
+
+    message += f"🛡️ *ARB Index:* {safe_arb} {arb_emoji}\n"
 
     if safe_md5:
         message += f"🔑 *MD5:* `{safe_md5}`\n"
