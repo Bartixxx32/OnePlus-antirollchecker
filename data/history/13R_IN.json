@@ -1,0 +1,18 @@
+{
+  "history": [
+    {
+      "version": "CPH2691_16.0.3.500(EX01)",
+      "arb": 1,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-02-11",
+      "last_checked": "2026-02-11",
+      "status": "current",
+      "md5": "7052fdc3ef6ba695876c463e220b0666"
+    }
+  ],
+  "device": "OnePlus 13R",
+  "device_id": "13R",
+  "region": "IN",
+  "model": "CPH2691"
+}

@@ -184,6 +184,16 @@ Join our Telegram group for support, discussion, and to use the bot.
 
 ---
 
+### OnePlus 13R
+
+| Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
+|:---|:---|:---|:---|:---|:---|:---|
+| Global | CPH2645 | CPH2645_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>9fd992eaf16b4c0b2212d8675d2f57a7</code></details> | **1** | Major: 3, Minor: 0 | 2026-02-11 | ❌ |
+| Europe | CPH2645 | CPH2645_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>fc83d78ebf942ee641d6a70bea3c2646</code></details> | **1** | Major: 3, Minor: 0 | 2026-02-11 | ❌ |
+| India | CPH2691 | CPH2691_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>7052fdc3ef6ba695876c463e220b0666</code></details> | **1** | Major: 3, Minor: 0 | 2026-02-11 | ❌ |
+
+---
+
 ### OnePlus Open
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
@@ -968,4 +978,4 @@ This API helps you get direct, signed download URLs for OnePlus OTA firmware fil
 - **ARB Extraction**: [arbextract](https://github.com/koaaN/arbextract) by koaaN
 
 ---
-*Last updated: 2026-02-11 17:38 UTC*
+*Last updated: 2026-02-11 18:11 UTC*
