@@ -1,0 +1,103 @@
+name: Telegram On-Demand Check
+
+on:
+  workflow_dispatch:
+    inputs:
+      firmware_url:
+        description: 'Direct Firmware URL to check'
+        required: true
+        type: string
+      request_chat_id:
+        description: 'Telegram Chat ID for reply'
+        required: true
+        type: string
+      request_message_id:
+        description: 'Telegram Message ID to reply to'
+        required: true
+        type: string
+      request_user_name:
+        description: 'User name to mention'
+        required: false
+        type: string
+
+jobs:
+  check-firmware:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y aria2 unzip curl python3-pip
+          pip3 install requests beautifulsoup4 --break-system-packages || pip3 install requests beautifulsoup4
+
+      - name: Setup Tools
+        run: |
+          mkdir -p tools
+          
+          # Setup arbextract
+          curl -L -o tools/arbextract https://github.com/koaaN/arbextract/releases/download/1.0/arbextract-x86_64-linux
+          chmod +x tools/arbextract
+          
+          # Setup otaripper
+          curl -L -o otaripper.tar.gz https://github.com/syedinsaf/otaripper/releases/download/v2.1.1/otaripper-2.1.1-linux-static-x86_64.tar.gz
+          tar -xzvf otaripper.tar.gz
+          mv otaripper tools/otaripper || find . -name "otaripper" -type f -exec mv {} tools/otaripper \;
+          chmod +x tools/otaripper
+          
+          # Setup payload-dumper-go (Fallback)
+          curl -L -o pdg.tar.gz https://github.com/ssut/payload-dumper-go/releases/download/1.2.2/payload-dumper-go_1.2.2_linux_amd64.tar.gz
+          tar -xzvf pdg.tar.gz
+          mv payload-dumper-go tools/payload-dumper-go || find . -name "payload-dumper-go" -type f -exec mv {} tools/payload-dumper-go \;
+          chmod +x tools/payload-dumper-go
+
+      - name: Download Firmware
+        run: |
+          URL="${{ github.event.inputs.firmware_url }}"
+          echo "Downloading firmware from $URL..."
+          
+          ARIA_CMD="aria2c -c -x16 -s16 -k1M -o firmware.zip"
+          
+          if $ARIA_CMD "$URL"; then
+             echo "Download successful!"
+          else
+             echo "Download failed!"
+             exit 1
+          fi
+
+      - name: Analyze Firmware
+        run: |
+          python3 analyze_firmware.py firmware.zip \
+            --tools-dir tools \
+            --output-dir extracted \
+            --final-dir firmware_data \
+            --json > result.json
+          
+          cat result.json
+
+      - name: Send Telegram Reply
+        if: always()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        run: |
+          if [ -f result.json ]; then
+             ARB=$(python3 -c "import sys, json; print(json.load(open('result.json')).get('arb_index', 'Unknown'))")
+             VERSION="Manual Check"
+             # Try to get version from filename if possible or just explicit "Manual"
+          else
+             ARB="Error"
+             VERSION="Check Failed"
+          fi
+
+          python3 send_telegram.py \
+            --token "$TELEGRAM_BOT_TOKEN" \
+            --chat-id "${{ github.event.inputs.request_chat_id }}" \
+            --device "Custom Check" \
+            --variant "Custom" \
+            --version "$VERSION" \
+            --arb "$ARB" \
+            --url "${{ github.event.inputs.firmware_url }}" \
+            --reply-to "${{ github.event.inputs.request_message_id }}" \
+            --user-mention "${{ github.event.inputs.request_user_name }}"
