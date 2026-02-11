@@ -4,6 +4,8 @@ Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository
 
 **🌐 Live Tracker:** [oneplusantiroll.netlify.app](https://oneplusantiroll.netlify.app/)
 
+**💬 Telegram Bot:** [@oparbcheckerbot](https://t.me/oparbcheckerbot) · **Group:** [@oneplusarbchecker](https://t.me/oneplusarbchecker)
+
 ## 📊 Current Status
 
 ### OnePlus 15
@@ -910,7 +912,7 @@ The bot will automatically pick up the request, analyze the firmware, and post t
 
 ---
 
-## 🔗 OOS Downloader API
+##  OOS Downloader API
 
 Need direct download URLs for OnePlus firmware? Use our **OOS Downloader API**!
 
@@ -927,4 +929,4 @@ This API helps you get direct, signed download URLs for OnePlus OTA firmware fil
 - **ARB Extraction**: [arbextract](https://github.com/koaaN/arbextract) by koaaN
 
 ---
-*Last updated: 2026-02-11 04:48 UTC*
+*Last updated: 2026-02-11 05:43 UTC*
