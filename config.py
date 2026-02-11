@@ -89,8 +89,7 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
         "models": {
             "GLO": "CPH2645",
             "EU": "CPH2645",
-            "IN": "CPH2691",
-            "NA": "CPH2647"
+            "IN": "CPH2691"
         },
     },
     "12": {
