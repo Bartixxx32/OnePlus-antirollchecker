@@ -1,8 +1,8 @@
 import logging
 import os
 import json
-import requests
 import time
+import aiohttp
 from collections import defaultdict
 from datetime import datetime, timezone
 from telegram import Update
@@ -258,7 +258,7 @@ async def check(update: Update, context: ContextTypes.DEFAULT_TYPE):
     status_msg = await update.message.reply_text(f"🚀 Initiating check...", reply_to_message_id=message_id)
 
     # Trigger GitHub Action
-    success = trigger_github_workflow(firmware_url, request_chat_id, message_id, user_mention, status_msg.message_id)
+    success = await trigger_github_workflow(firmware_url, request_chat_id, message_id, user_mention, status_msg.message_id)
 
     if success:
         await context.bot.edit_message_text(
@@ -274,7 +274,7 @@ async def check(update: Update, context: ContextTypes.DEFAULT_TYPE):
             text=f"❌ Failed to trigger GitHub Action. Check logs/credentials."
         )
 
-def trigger_github_workflow(url, chat_id, message_id, user_mention, status_message_id):
+async def trigger_github_workflow(url, chat_id, message_id, user_mention, status_message_id):
     headers = {
         "Accept": "application/vnd.github.v3+json",
         "Authorization": f"token {GITHUB_TOKEN}",
@@ -291,22 +291,23 @@ def trigger_github_workflow(url, chat_id, message_id, user_mention, status_messa
     }
     
     try:
-        response = requests.post(
-            f"https://api.github.com/repos/{GITHUB_REPO}/actions/workflows/{WORKFLOW_ID}/dispatches",
-            headers=headers,
-            json=data,
-            timeout=10
-        )
-        response.raise_for_status()
-        
-        if response.status_code == 204:
-            logging.info("Workflow triggered successfully.")
-            return True
-        else:
-            logging.error(f"Failed to trigger workflow: {response.status_code} {response.text}")
-            return False
+        async with aiohttp.ClientSession() as session:
+            async with session.post(
+                f"https://api.github.com/repos/{GITHUB_REPO}/actions/workflows/{WORKFLOW_ID}/dispatches",
+                headers=headers,
+                json=data,
+                timeout=30
+            ) as response:
+                
+                if response.status == 204:
+                    logging.info("Workflow triggered successfully.")
+                    return True
+                else:
+                    text = await response.text()
+                    logging.error(f"Failed to trigger workflow: {response.status} {text}")
+                    return False
             
-    except requests.exceptions.RequestException as e:
+    except Exception as e:
         logging.error(f"Network error triggering workflow: {e}")
         return False
 
