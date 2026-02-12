@@ -39,8 +39,8 @@
         "minor": 120,
         "regions": [
           "EU",
-          "TW",
-          "SG"
+          "SG",
+          "TW"
         ],
         "status": "current"
       }
@@ -72,11 +72,11 @@
       "CPH2305_15.0.0.1301(EX01)": {
         "arb": 0,
         "major": 2,
-        "md5": "f872fdd23787fec04579586d7a34ac20",
+        "md5": "81aa48b49783dffec339e362edeb230b",
         "minor": 0,
         "regions": [
-          "TW",
-          "SG"
+          "SG",
+          "TW"
         ],
         "status": "current"
       },
@@ -98,12 +98,12 @@
       "CPH2307_15.0.0.1302(EX01)": {
         "arb": 0,
         "major": 0,
-        "md5": "9ca6d58709b963d43df51a90a08e2128",
+        "md5": "fbf19255ade70753b33e310b1dbd35c3",
         "minor": 120,
         "regions": [
+          "OCA",
           "EG",
-          "SA",
-          "OCA"
+          "SA"
         ],
         "status": "current"
       },
@@ -150,22 +150,22 @@
       "CPH2415_15.0.0.1601(EX01)": {
         "arb": 0,
         "major": 2,
-        "md5": "ae910e6219c0b40dfe8127768b1c9cdb",
+        "md5": "98462c7099333250b1ec2f168af822ce",
         "minor": 0,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "status": "archived"
       },
       "CPH2415_15.0.0.1603(EX01)": {
         "arb": 0,
         "major": 2,
-        "md5": "7789c263157952e4b85a1dc505771a5a",
+        "md5": "f13eab2d1a00aa9179e0e5e1e04b7d4c",
         "minor": 0,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "status": "current"
       }
@@ -250,8 +250,8 @@
         "md5": null,
         "minor": 0,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "status": "archived"
       },
@@ -261,21 +261,21 @@
         "md5": null,
         "minor": 0,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "status": "archived"
       },
       "CPH2449_16.0.2.400(EX01)": {
         "arb": 0,
         "major": 2,
-        "md5": null,
+        "md5": "b5745266807941dfbd1740eb4d81b26c",
         "minor": 0,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
-        "status": "archived"
+        "status": "current"
       },
       "CPH2449_16.0.2.401(EX01)": {
         "arb": 0,
@@ -369,12 +369,12 @@
         "minor": 0,
         "regions": [
           "OCA",
-          "TH",
           "TW",
-          "MY",
           "ID",
-          "VN",
-          "SG"
+          "TH",
+          "MY",
+          "SG",
+          "VN"
         ],
         "status": "current"
       }
@@ -493,8 +493,8 @@
         "md5": null,
         "minor": 0,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "status": "archived"
       },
@@ -504,19 +504,19 @@
         "md5": null,
         "minor": 0,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "status": "archived"
       },
       "CPH2581_16.0.3.500(EX01)": {
         "arb": 1,
         "major": 3,
-        "md5": "3770e5ac2f6e8750d8172ca2788bd36b",
+        "md5": "3386a9f7548f18e9cda8558ca851a059",
         "minor": 0,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "status": "current"
       }
@@ -631,19 +631,19 @@
         "md5": null,
         "minor": 0,
         "regions": [
-          "GLO",
-          "EU"
+          "EU",
+          "GLO"
         ],
         "status": "archived"
       },
       "CPH2645_16.0.3.500(EX01)": {
         "arb": 1,
         "major": 3,
-        "md5": "9fd992eaf16b4c0b2212d8675d2f57a7",
+        "md5": "fc83d78ebf942ee641d6a70bea3c2646",
         "minor": 0,
         "regions": [
-          "GLO",
-          "EU"
+          "EU",
+          "GLO"
         ],
         "status": "current"
       }
@@ -693,8 +693,8 @@
         "md5": null,
         "minor": 0,
         "regions": [
-          "GLO",
-          "EU"
+          "EU",
+          "GLO"
         ],
         "status": "archived"
       },
@@ -704,19 +704,19 @@
         "md5": null,
         "minor": 0,
         "regions": [
-          "GLO",
-          "EU"
+          "EU",
+          "GLO"
         ],
         "status": "archived"
       },
       "CPH2653_16.0.3.501(EX01)": {
         "arb": 1,
         "major": 3,
-        "md5": "55382e1f872388d09a539d64ce09d65e",
+        "md5": "4a5640ac2917ad8baeb334b286572b46",
         "minor": 0,
         "regions": [
-          "GLO",
-          "EU"
+          "EU",
+          "GLO"
         ],
         "status": "current"
       }
@@ -845,13 +845,13 @@
       "CPH2671_16.0.2.401(EX01)": {
         "arb": 0,
         "major": 3,
-        "md5": "d7aa0bf5f0f86e68711f68f2ff8bc7c1",
+        "md5": "8092cdb0dcf5a44e27ff8b863bbcde89",
         "minor": 0,
         "regions": [
-          "TH",
           "APC",
-          "MY",
-          "SG"
+          "SG",
+          "TH",
+          "MY"
         ],
         "status": "current"
       },
@@ -1619,8 +1619,8 @@
         "md5": null,
         "minor": 0,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "status": "archived"
       },
@@ -1630,8 +1630,8 @@
         "md5": null,
         "minor": 0,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "status": "archived"
       },
@@ -1641,19 +1641,19 @@
         "md5": null,
         "minor": 0,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "status": "archived"
       },
       "NE2213_16.0.3.500(EX01)": {
         "arb": 0,
         "major": 2,
-        "md5": "0602a2e727fc048cf73ad53577013a9a",
+        "md5": "442a1ffc6ab53fdcafb05e4b555a7c31",
         "minor": 0,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "status": "current"
       }
@@ -1766,9 +1766,9 @@
         "md5": null,
         "minor": 0,
         "regions": [
-          "IN",
           "GLO",
-          "EU"
+          "EU",
+          "IN"
         ],
         "status": "archived"
       },
@@ -1778,21 +1778,21 @@
         "md5": null,
         "minor": 0,
         "regions": [
-          "IN",
           "GLO",
-          "EU"
+          "EU",
+          "IN"
         ],
         "status": "archived"
       },
       "OPD2415_16.0.3.500(EX01)": {
         "arb": 1,
         "major": 3,
-        "md5": "f04541e8fba46fe4b066b7f7deaa0334",
+        "md5": "64101499d86baf3ef11eb91384f782fe",
         "minor": 0,
         "regions": [
-          "IN",
           "GLO",
-          "EU"
+          "EU",
+          "IN"
         ],
         "status": "current"
       }
