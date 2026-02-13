@@ -16,8 +16,9 @@
       "major": 3,
       "minor": 0,
       "first_seen": "2026-02-04",
-      "last_checked": "2026-02-11",
-      "status": "archived"
+      "last_checked": "2026-02-13",
+      "status": "archived",
+      "md5": "9dbeb1decd4e820a95dd6c8ecf68b87e"
     },
     {
       "version": "OPD2415_16.0.0.211(EX01)",

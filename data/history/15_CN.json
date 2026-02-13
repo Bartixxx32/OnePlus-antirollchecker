@@ -1,6 +1,26 @@
 {
   "history": [
     {
+      "version": "PLK110_16.0.1.301(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-02-13",
+      "last_checked": "2026-02-13",
+      "status": "archived",
+      "md5": "18f1654b5f21e2af8c19190042a3c612"
+    },
+    {
+      "version": "PLK110_16.0.2.401(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-02-13",
+      "last_checked": "2026-02-13",
+      "status": "archived",
+      "md5": "6866e32183304023149907b7899c1963"
+    },
+    {
       "version": "PLK110_16.0.3.503(CN01)",
       "arb": 0,
       "major": 3,
