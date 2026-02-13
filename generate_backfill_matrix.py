@@ -25,8 +25,8 @@ def generate_backfill_matrix():
             
             versions, _ = res
             
-            # Take top 3 versions (Springer usually lists newest first)
-            target_versions = versions[:3]
+            # Take top 5 versions (Springer usually lists newest first)
+            target_versions = versions[:5]
             
             for version in target_versions:
                 # We need to extract the version string carefully 
