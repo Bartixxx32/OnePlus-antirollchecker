@@ -36,8 +36,9 @@
       "major": 3,
       "minor": 0,
       "first_seen": "2026-02-04",
-      "last_checked": "2026-02-04",
-      "status": "archived"
+      "last_checked": "2026-02-13",
+      "status": "archived",
+      "md5": "6e5ecbdbd9f49e6e5d054340f52b9641"
     },
     {
       "version": "PLK110_16.0.3.502(CN01)",

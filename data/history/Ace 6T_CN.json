@@ -11,6 +11,16 @@
       "md5": "6849eca4f011cbfc58b340dff6f6a434"
     },
     {
+      "version": "PLR110_16.0.2.402(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-02-13",
+      "last_checked": "2026-02-13",
+      "status": "archived",
+      "md5": "273266741cdbcad2217c4c3d256a1853"
+    },
+    {
       "version": "PLR110_16.0.3.503(CN01)",
       "arb": 0,
       "major": 3,
@@ -26,8 +36,9 @@
       "major": 3,
       "minor": 0,
       "first_seen": "2026-02-04",
-      "last_checked": "2026-02-06",
-      "status": "archived"
+      "last_checked": "2026-02-13",
+      "status": "archived",
+      "md5": "adc7d4b44fd3c7dcb0bea4a13c78e098"
     },
     {
       "version": "PLR110_16.0.2.403(CN01)",

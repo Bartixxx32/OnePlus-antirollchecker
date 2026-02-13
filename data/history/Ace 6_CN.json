@@ -39,6 +39,16 @@
       "last_checked": "2026-02-13",
       "status": "archived",
       "md5": "22b21e9abf8974ea27e0714b21cefefc"
+    },
+    {
+      "version": "PLQ110_16.0.2.403(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-02-13",
+      "last_checked": "2026-02-13",
+      "status": "archived",
+      "md5": "c70cfbbbd421bc0122163269b4429661"
     }
   ],
   "device": "OnePlus Ace 6",

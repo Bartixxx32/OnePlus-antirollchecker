@@ -75,10 +75,10 @@ Join our Telegram group for support, discussion, and to use the bot.
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| PLK110_16.0.2.402(CN01)<br><details><summary>MD5</summary><code>6e5ecbdbd9f49e6e5d054340f52b9641</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-13 | ✅ |
 | PLK110_16.0.2.401(CN01)<br><details><summary>MD5</summary><code>6866e32183304023149907b7899c1963</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-13 | ✅ |
 | PLK110_16.0.1.301(CN01)<br><details><summary>MD5</summary><code>18f1654b5f21e2af8c19190042a3c612</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-13 | ✅ |
 | PLK110_16.0.3.502(CN01) | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ |
-| PLK110_16.0.2.402(CN01) | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ |
 
 </details>
 
@@ -730,8 +730,9 @@ Join our Telegram group for support, discussion, and to use the bot.
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| PLR110_16.0.3.501(CN01)<br><details><summary>MD5</summary><code>adc7d4b44fd3c7dcb0bea4a13c78e098</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-13 | ✅ |
+| PLR110_16.0.2.402(CN01)<br><details><summary>MD5</summary><code>273266741cdbcad2217c4c3d256a1853</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-13 | ✅ |
 | PLR110_16.0.1.308(CN01)<br><details><summary>MD5</summary><code>6849eca4f011cbfc58b340dff6f6a434</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-13 | ✅ |
-| PLR110_16.0.3.501(CN01) | 0 | Major: 3, Minor: 0 | 2026-02-06 | ✅ |
 | PLR110_16.0.2.403(CN01) | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ |
 
 </details>
@@ -750,6 +751,7 @@ Join our Telegram group for support, discussion, and to use the bot.
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| PLQ110_16.0.2.403(CN01)<br><details><summary>MD5</summary><code>c70cfbbbd421bc0122163269b4429661</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-13 | ✅ |
 | PLQ110_16.0.2.402(CN01)<br><details><summary>MD5</summary><code>0b170c8300f4f7f77e52c4853bcef5bc</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-13 | ✅ |
 | PLQ110_16.0.1.302(CN01)<br><details><summary>MD5</summary><code>22b21e9abf8974ea27e0714b21cefefc</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-13 | ✅ |
 | PLQ110_16.0.0.207(CN01)<br><details><summary>MD5</summary><code>8204d55061bfa575e58c18a0de3622aa</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-13 | ✅ |
@@ -1089,4 +1091,4 @@ This API helps you get direct, signed download URLs for OnePlus OTA firmware fil
 - **ARB Extraction**: [arbextract](https://github.com/koaaN/arbextract) by koaaN
 
 ---
-*Last updated: 2026-02-13 17:41 UTC*
+*Last updated: 2026-02-13 17:48 UTC*
