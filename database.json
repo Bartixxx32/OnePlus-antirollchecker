@@ -2158,6 +2158,21 @@
       }
     }
   },
+  "PLQ110": {
+    "device_name": "OnePlus Ace 6",
+    "versions": {
+      "PLQ110_16.0.3.502(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": null,
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "current"
+      }
+    }
+  },
   "PLR110": {
     "device_name": "OnePlus Ace 6T",
     "versions": {
