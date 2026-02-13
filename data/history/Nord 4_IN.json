@@ -1,6 +1,16 @@
 {
   "history": [
     {
+      "version": "CPH2661_14.1.0.603(EX01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-02-13",
+      "last_checked": "2026-02-13",
+      "status": "archived",
+      "md5": "c951f7927e020df08932ba8aaf1db309"
+    },
+    {
       "version": "CPH2661_16.0.2.401(EX01)",
       "arb": 0,
       "major": 3,

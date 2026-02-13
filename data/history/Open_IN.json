@@ -16,8 +16,9 @@
       "major": 2,
       "minor": 0,
       "first_seen": "2026-02-04",
-      "last_checked": "2026-02-11",
-      "status": "archived"
+      "last_checked": "2026-02-13",
+      "status": "archived",
+      "md5": "d131d0fcd87a0aa53cf5cf2549d239a2"
     },
     {
       "version": "CPH2551_16.0.0.201(EX01)",

@@ -1,6 +1,26 @@
 {
   "history": [
     {
+      "version": "NE2213_14.0.0.202(EX01)",
+      "arb": 0,
+      "major": 2,
+      "minor": 0,
+      "first_seen": "2026-02-13",
+      "last_checked": "2026-02-13",
+      "status": "archived",
+      "md5": "4054362ce373912e3c815bd0203504f0"
+    },
+    {
+      "version": "NE2213_13.1.0.597(EX01)",
+      "arb": 0,
+      "major": 2,
+      "minor": 0,
+      "first_seen": "2026-02-13",
+      "last_checked": "2026-02-13",
+      "status": "archived",
+      "md5": "48c7cc94e62946762e71b32f7f264f26"
+    },
+    {
       "version": "NE2213_16.0.3.500(EX01)",
       "arb": 0,
       "major": 2,
@@ -16,8 +36,9 @@
       "major": 2,
       "minor": 0,
       "first_seen": "2026-02-04",
-      "last_checked": "2026-02-06",
-      "status": "archived"
+      "last_checked": "2026-02-13",
+      "status": "archived",
+      "md5": "5daffaee08f4eeb3062b09b887aaa8c9"
     },
     {
       "version": "NE2213_14.0.0.940(EX01)",

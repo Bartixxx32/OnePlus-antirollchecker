@@ -9,6 +9,36 @@
       "last_checked": "2026-02-13",
       "status": "current",
       "md5": "8a8ea78fe60581d9401cfdf93950fd8a"
+    },
+    {
+      "version": "PLQ110_16.0.0.207(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-02-13",
+      "last_checked": "2026-02-13",
+      "status": "archived",
+      "md5": "8204d55061bfa575e58c18a0de3622aa"
+    },
+    {
+      "version": "PLQ110_16.0.2.402(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-02-13",
+      "last_checked": "2026-02-13",
+      "status": "archived",
+      "md5": "0b170c8300f4f7f77e52c4853bcef5bc"
+    },
+    {
+      "version": "PLQ110_16.0.1.302(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-02-13",
+      "last_checked": "2026-02-13",
+      "status": "archived",
+      "md5": "22b21e9abf8974ea27e0714b21cefefc"
     }
   ],
   "device": "OnePlus Ace 6",
