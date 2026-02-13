@@ -2601,7 +2601,7 @@
       "PLK110_16.0.2.402(CN01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "6e5ecbdbd9f49e6e5d054340f52b9641",
         "minor": 0,
         "regions": [
           "CN"
@@ -2663,6 +2663,16 @@
         ],
         "status": "archived"
       },
+      "PLQ110_16.0.2.403(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": "c70cfbbbd421bc0122163269b4429661",
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "archived"
+      },
       "PLQ110_16.0.3.502(CN01)": {
         "arb": 0,
         "major": 3,
@@ -2688,6 +2698,16 @@
         ],
         "status": "archived"
       },
+      "PLR110_16.0.2.402(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "md5": "273266741cdbcad2217c4c3d256a1853",
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "archived"
+      },
       "PLR110_16.0.2.403(CN01)": {
         "arb": 0,
         "major": 3,
@@ -2701,7 +2721,7 @@
       "PLR110_16.0.3.501(CN01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "adc7d4b44fd3c7dcb0bea4a13c78e098",
         "minor": 0,
         "regions": [
           "CN"
