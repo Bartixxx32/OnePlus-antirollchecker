@@ -1546,7 +1546,7 @@
       "NE2210_15.0.0.1301(CN01)": {
         "arb": 0,
         "major": 2,
-        "md5": null,
+        "md5": "d1b71c63550e15270a3580cf7220e927",
         "minor": 0,
         "regions": [
           "CN"
@@ -1738,7 +1738,7 @@
       "OPD2413_16.0.3.501(CN01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "7af2eda10018ec1b4c0d66b1df258e55",
         "minor": 0,
         "regions": [
           "CN"
@@ -1824,7 +1824,7 @@
       "PJD110_16.0.3.500(CN01)": {
         "arb": 1,
         "major": 3,
-        "md5": null,
+        "md5": "50eb6ea86f6d7b2b9936b477920151aa",
         "minor": 0,
         "regions": [
           "CN"
@@ -1859,7 +1859,7 @@
       "PJE110_16.0.1.300(CN01)": {
         "arb": 0,
         "major": 2,
-        "md5": null,
+        "md5": "2133450d657b8accda00dcd97101de80",
         "minor": 0,
         "regions": [
           "CN"
@@ -1894,7 +1894,7 @@
       "PJF110_16.0.1.301(CN01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "856a520469ed78dce30155893f413617",
         "minor": 0,
         "regions": [
           "CN"
@@ -1929,7 +1929,7 @@
       "PJX110_16.0.1.301(CN01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "171c22c558cc25e3624419a11a80a420",
         "minor": 0,
         "regions": [
           "CN"
@@ -2009,7 +2009,7 @@
       "PKG110_16.0.3.500(CN01)": {
         "arb": 1,
         "major": 3,
-        "md5": null,
+        "md5": "d216133625b3690b7e66df13d17fc659",
         "minor": 0,
         "regions": [
           "CN"
@@ -2044,7 +2044,7 @@
       "PKJ110_16.0.3.500(CN01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "0f2a5043def5b99ae0903db69d932bff",
         "minor": 0,
         "regions": [
           "CN"
@@ -2079,7 +2079,7 @@
       "PKR110_16.0.3.500(CN01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "a29150f57f67b99083f6a4081c468171",
         "minor": 0,
         "regions": [
           "CN"
@@ -2114,7 +2114,7 @@
       "PKH110_16.0.3.500(CN01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "0f0d5e5ca45e64af32b99f7401d65a12",
         "minor": 0,
         "regions": [
           "CN"
@@ -2149,7 +2149,7 @@
       "PLK110_16.0.3.503(CN01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "0912b44f2bcc36beec783941e1016c47",
         "minor": 0,
         "regions": [
           "CN"
@@ -2164,7 +2164,7 @@
       "PLQ110_16.0.3.502(CN01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "8a8ea78fe60581d9401cfdf93950fd8a",
         "minor": 0,
         "regions": [
           "CN"
@@ -2199,7 +2199,7 @@
       "PLR110_16.0.3.503(CN01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "44b826a364824bfc10d0720402b8822f",
         "minor": 0,
         "regions": [
           "CN"
