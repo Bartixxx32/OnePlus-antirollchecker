@@ -134,7 +134,7 @@ Join our Telegram group for support, discussion, and to use the bot.
 | Europe | CPH2653 | CPH2653_16.0.3.501(EX01)<br><details><summary>MD5</summary><code>4a5640ac2917ad8baeb334b286572b46</code></details> | **1** | Major: 3, Minor: 0 | 2026-02-13 | ❌ |
 | India | CPH2649 | CPH2649_16.0.3.501(EX01)<br><details><summary>MD5</summary><code>c5987fd6c9052e39b5dce573883b2f97</code></details> | **1** | Major: 3, Minor: 0 | 2026-02-13 | ❌ |
 | NA | CPH2655 | CPH2655_15.0.0.832(EX01)<br><details><summary>MD5</summary><code>7d0ce94be24263393454ae140889a523</code></details> | **0** | Major: 3, Minor: 0 | 2026-02-13 | ✅ |
-| China | PJZ110 | PJZ110_16.0.3.502(CN01) | **1** | Major: 3, Minor: 0 | 2026-02-13 | ❌ |
+| China | PJZ110 | PJZ110_16.0.3.502(CN01)<br><details><summary>MD5</summary><code>adbce2f7f46d081e68a87bb75b524fd0</code></details> | **1** | Major: 3, Minor: 0 | 2026-02-13 | ❌ |
 
 <details>
 <summary>📜 <b>Global History</b> (click to expand)</summary>
@@ -1089,4 +1089,4 @@ This API helps you get direct, signed download URLs for OnePlus OTA firmware fil
 - **ARB Extraction**: [arbextract](https://github.com/koaaN/arbextract) by koaaN
 
 ---
-*Last updated: 2026-02-13 12:15 UTC*
+*Last updated: 2026-02-13 17:41 UTC*
