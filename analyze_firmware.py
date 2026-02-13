@@ -10,6 +10,7 @@ import json
 import argparse
 import subprocess
 import logging
+import hashlib
 from pathlib import Path
 
 # Configure logging
@@ -27,6 +28,14 @@ def run_command(cmd, cwd=None):
         logger.error(f"Command failed ({result.returncode}): {result.stderr}")
         return None
     return result.stdout
+
+def calculate_md5(file_path):
+    """Calculate MD5 checksum of a file."""
+    hash_md5 = hashlib.md5()
+    with open(file_path, "rb") as f:
+        for chunk in iter(lambda: f.read(4096), b""):
+            hash_md5.update(chunk)
+    return hash_md5.hexdigest()
 
 import shutil
 import zipfile
@@ -75,6 +84,10 @@ def analyze_firmware(zip_path, tools_dir, output_dir, final_dir=None):
     metadata = {}
     if zip_path and Path(zip_path).exists():
         metadata = extract_ota_metadata(zip_path)
+        # Calculate MD5 for the zip
+        logger.info("Calculating MD5 checksum...")
+        md5_sum = calculate_md5(zip_path)
+    
     
     # 1. Skip extraction if image already exists (cache hit optimization)
     if final_img.exists():
@@ -153,6 +166,9 @@ def analyze_firmware(zip_path, tools_dir, output_dir, final_dir=None):
     # Append metadata
     if metadata:
         result['ota_metadata'] = metadata
+        
+    if 'md5_sum' in locals():
+        result['md5'] = md5_sum
 
     return result
 

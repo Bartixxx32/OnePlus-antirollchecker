@@ -240,6 +240,14 @@ jobs:
         run: |
           # Extract ARB from result.json (it is always created by previous steps if we are here)
           ARB=$(python3 -c "import sys, json; print(json.load(open('result.json')).get('arb_index', 'Unknown'))")
+          # Extract MD5 from result.json (it might be calculated or passed through)
+          CALC_MD5=$(python3 -c "import sys, json; print(json.load(open('result.json')).get('md5', ''))")
+          
+          # Prefer calculated MD5, fallback to API one
+          FINAL_MD5="${{ steps.get_details.outputs.md5 }}"
+          if [[ "$CALC_MD5" != "" && "$CALC_MD5" != "null" ]]; then
+              FINAL_MD5="$CALC_MD5"
+          fi
           
           python3 send_telegram.py \
             --token "$TELEGRAM_BOT_TOKEN" \
@@ -248,7 +256,7 @@ jobs:
             --variant "${{ matrix.variant }}" \
             --version "${{ steps.get_details.outputs.version }}" \
             --arb "$ARB" \
-            --md5 "${{ steps.get_details.outputs.md5 }}" \
+            --md5 "$FINAL_MD5" \
             --url "${{ steps.get_details.outputs.url }}"
 
       - name: Upload JSON History

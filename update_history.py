@@ -116,7 +116,11 @@ def main():
             version = data.get('version') or version
             arb = int(data.get('arb_index') if data.get('arb_index') is not None else data.get('arb'))
             major = int(data.get('major', 0))
+            arb = int(data.get('arb_index') if data.get('arb_index') is not None else data.get('arb'))
+            major = int(data.get('major', 0))
             minor = int(data.get('minor', 0))
+            if not args.md5 and data.get('md5'):
+                args.md5 = data.get('md5')
             
             if not all([device_short, variant, version, arb is not None]):
                 print("Error: Missing required fields in JSON file")
