@@ -687,7 +687,7 @@
         "regions": [
           "GLO"
         ],
-        "status": "current"
+        "status": "archived"
       },
       "CPH2609_16.0.2.401(EX01)": {
         "arb": 0,
@@ -705,7 +705,8 @@
         "md5": "3bf4f77014c7ecc56da8c34b8e2da4a8",
         "minor": 0,
         "regions": [
-          "EU"
+          "EU",
+          "GLO"
         ],
         "status": "current"
       }
@@ -1178,7 +1179,8 @@
         "md5": "7988a8ec49273c093ed02b906deb20a1",
         "minor": 0,
         "regions": [
-          "EU"
+          "EU",
+          "GLO"
         ],
         "status": "current"
       }
