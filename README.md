@@ -78,7 +78,7 @@ Join our Telegram group for support, discussion, and to use the bot.
 | PLK110_16.0.2.402(CN01)<br><details><summary>MD5</summary><code>6e5ecbdbd9f49e6e5d054340f52b9641</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-13 | ✅ |
 | PLK110_16.0.2.401(CN01)<br><details><summary>MD5</summary><code>6866e32183304023149907b7899c1963</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-13 | ✅ |
 | PLK110_16.0.1.301(CN01)<br><details><summary>MD5</summary><code>18f1654b5f21e2af8c19190042a3c612</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-13 | ✅ |
-| PLK110_16.0.3.502(CN01) | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ |
+| PLK110_16.0.3.502(CN01)<br><details><summary>MD5</summary><code>2620712413a1f04dfae81b64ec32eb6e</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ |
 
 </details>
 
@@ -1111,4 +1111,4 @@ This API helps you get direct, signed download URLs for OnePlus OTA firmware fil
 - **ARB Extraction**: [arbextract](https://github.com/koaaN/arbextract) by koaaN
 
 ---
-*Last updated: 2026-02-25 19:54 UTC*
+*Last updated: 2026-02-25 19:58 UTC*
