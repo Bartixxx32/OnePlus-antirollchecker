@@ -6,7 +6,7 @@
       "major": 3,
       "minor": 0,
       "first_seen": "2026-02-13",
-      "last_checked": "2026-02-22",
+      "last_checked": "2026-02-25",
       "status": "archived",
       "md5": "7a4ecdcdb8ec576fc3960ee4c4af26e2"
     },
@@ -26,7 +26,7 @@
       "major": 3,
       "minor": 0,
       "first_seen": "2026-02-11",
-      "last_checked": "2026-02-24",
+      "last_checked": "2026-02-25",
       "status": "current",
       "md5": "9fd992eaf16b4c0b2212d8675d2f57a7"
     },
@@ -47,7 +47,8 @@
       "minor": 0,
       "first_seen": "2026-02-11",
       "last_checked": "2026-02-11",
-      "status": "archived"
+      "status": "archived",
+      "md5": "72c1aa34316c7ee6ba23b39be0edb5ea"
     }
   ],
   "device": "OnePlus 13R",

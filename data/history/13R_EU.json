@@ -26,7 +26,7 @@
       "major": 3,
       "minor": 0,
       "first_seen": "2026-02-11",
-      "last_checked": "2026-02-24",
+      "last_checked": "2026-02-25",
       "status": "current",
       "md5": "fc83d78ebf942ee641d6a70bea3c2646"
     },
@@ -36,8 +36,9 @@
       "major": 3,
       "minor": 0,
       "first_seen": "2026-02-11",
-      "last_checked": "2026-02-22",
-      "status": "archived"
+      "last_checked": "2026-02-25",
+      "status": "archived",
+      "md5": "901792cb15c4e43d6e5a1eeabe3ba91d"
     },
     {
       "version": "CPH2645_16.0.0.205(EX01)",
@@ -46,7 +47,8 @@
       "minor": 0,
       "first_seen": "2026-02-11",
       "last_checked": "2026-02-11",
-      "status": "archived"
+      "status": "archived",
+      "md5": "2af9f3eea8081a1d027d97cb62a4c686"
     }
   ],
   "device": "OnePlus 13R",

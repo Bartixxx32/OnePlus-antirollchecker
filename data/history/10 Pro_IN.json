@@ -26,7 +26,7 @@
       "major": 2,
       "minor": 0,
       "first_seen": "2026-02-11",
-      "last_checked": "2026-02-24",
+      "last_checked": "2026-02-25",
       "status": "current",
       "md5": "6789b9fa5b12cea96885ed118c29cf7b"
     },
@@ -47,7 +47,8 @@
       "minor": 0,
       "first_seen": "2026-02-04",
       "last_checked": "2026-02-11",
-      "status": "archived"
+      "status": "archived",
+      "md5": "2b63361c7ace205d733e9d7d1847b79e"
     },
     {
       "version": "NE2211_15.0.0.1302(EX01)",
@@ -55,8 +56,9 @@
       "major": 2,
       "minor": 0,
       "first_seen": "2026-02-04",
-      "last_checked": "2026-02-22",
-      "status": "archived"
+      "last_checked": "2026-02-25",
+      "status": "archived",
+      "md5": "7ff5b88637be13d09bae0b4fa1c7cf99"
     }
   ],
   "device": "OnePlus 10 Pro",

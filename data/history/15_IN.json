@@ -26,7 +26,7 @@
       "major": 3,
       "minor": 0,
       "first_seen": "2026-02-04",
-      "last_checked": "2026-02-24",
+      "last_checked": "2026-02-25",
       "status": "current",
       "md5": "e9e6a68cc908913ac7a03578dc41366d"
     },
@@ -37,7 +37,8 @@
       "minor": 0,
       "first_seen": "2026-02-04",
       "last_checked": "2026-02-11",
-      "status": "archived"
+      "status": "archived",
+      "md5": "45404f2227169e79b328fde3c008aef6"
     },
     {
       "version": "CPH2745_16.0.3.501(EX01)",
@@ -45,7 +46,7 @@
       "major": 3,
       "minor": 0,
       "first_seen": "2026-02-04",
-      "last_checked": "2026-02-22",
+      "last_checked": "2026-02-25",
       "status": "archived",
       "md5": "3b72808a5cd0d8133fb7311e53f5f7e3"
     }

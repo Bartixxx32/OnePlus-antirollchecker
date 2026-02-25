@@ -16,7 +16,7 @@
       "major": 2,
       "minor": 0,
       "first_seen": "2026-02-13",
-      "last_checked": "2026-02-22",
+      "last_checked": "2026-02-25",
       "status": "archived",
       "md5": "99aac9f56000f0da0f232fa3ccff4529"
     },
@@ -26,7 +26,7 @@
       "major": 2,
       "minor": 0,
       "first_seen": "2026-02-06",
-      "last_checked": "2026-02-24",
+      "last_checked": "2026-02-25",
       "status": "current",
       "md5": "c6e40fec39894a2f17684fc5d826dbce"
     },
@@ -46,7 +46,8 @@
       "minor": 0,
       "first_seen": "2026-02-04",
       "last_checked": "2026-02-11",
-      "status": "archived"
+      "status": "archived",
+      "md5": "4f1b8c4f45cfb394c05e1ef5728b13a2"
     },
     {
       "version": "CPH2551_16.0.1.300(EX01)",
@@ -65,7 +66,8 @@
       "minor": 0,
       "first_seen": "2026-02-04",
       "last_checked": "2026-02-04",
-      "status": "archived"
+      "status": "archived",
+      "md5": "142855cdadd173b2b515e24663b89ae9"
     }
   ],
   "device": "OnePlus Open",

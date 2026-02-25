@@ -6,7 +6,7 @@
       "major": 3,
       "minor": 0,
       "first_seen": "2026-02-13",
-      "last_checked": "2026-02-22",
+      "last_checked": "2026-02-25",
       "status": "archived",
       "md5": "51f474db6c5d3e1e426dd293248f2402"
     },
@@ -26,7 +26,7 @@
       "major": 3,
       "minor": 0,
       "first_seen": "2026-02-04",
-      "last_checked": "2026-02-24",
+      "last_checked": "2026-02-25",
       "status": "current",
       "md5": "3770e5ac2f6e8750d8172ca2788bd36b"
     },
@@ -47,7 +47,8 @@
       "minor": 0,
       "first_seen": "2026-02-04",
       "last_checked": "2026-02-04",
-      "status": "archived"
+      "status": "archived",
+      "md5": "ab9462ac5766c96daff20b425ef1df78"
     }
   ],
   "device": "OnePlus 12",

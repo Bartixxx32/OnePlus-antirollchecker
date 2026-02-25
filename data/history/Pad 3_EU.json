@@ -6,7 +6,7 @@
       "major": 3,
       "minor": 0,
       "first_seen": "2026-02-04",
-      "last_checked": "2026-02-24",
+      "last_checked": "2026-02-25",
       "status": "current",
       "md5": "2a9096260fd856ede66700ddf207b49b"
     },
@@ -16,7 +16,7 @@
       "major": 3,
       "minor": 0,
       "first_seen": "2026-02-04",
-      "last_checked": "2026-02-22",
+      "last_checked": "2026-02-25",
       "status": "archived",
       "md5": "9dbeb1decd4e820a95dd6c8ecf68b87e"
     },
@@ -27,7 +27,8 @@
       "minor": 0,
       "first_seen": "2026-02-04",
       "last_checked": "2026-02-04",
-      "status": "archived"
+      "status": "archived",
+      "md5": "6070fbd5daf4d3ea7ae7e5e5af4d67cc"
     }
   ],
   "device": "OnePlus Pad 3",

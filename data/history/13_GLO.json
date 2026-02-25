@@ -6,7 +6,7 @@
       "major": 3,
       "minor": 0,
       "first_seen": "2026-02-13",
-      "last_checked": "2026-02-22",
+      "last_checked": "2026-02-25",
       "status": "archived",
       "md5": "2dfc7934f7610af104e094e1a8f43cb1"
     },
@@ -26,7 +26,7 @@
       "major": 3,
       "minor": 0,
       "first_seen": "2026-02-04",
-      "last_checked": "2026-02-24",
+      "last_checked": "2026-02-25",
       "status": "current",
       "md5": "55382e1f872388d09a539d64ce09d65e"
     },
@@ -37,7 +37,8 @@
       "minor": 0,
       "first_seen": "2026-02-04",
       "last_checked": "2026-02-06",
-      "status": "archived"
+      "status": "archived",
+      "md5": "e854bde9b2f472d1cfb499c886b1cbe9"
     },
     {
       "version": "CPH2653_16.0.2.402(EX01)",
@@ -46,7 +47,8 @@
       "minor": 0,
       "first_seen": "2026-02-04",
       "last_checked": "2026-02-11",
-      "status": "archived"
+      "status": "archived",
+      "md5": "515f5110ca780fda710ef1ff1ad9f100"
     }
   ],
   "device": "OnePlus 13",

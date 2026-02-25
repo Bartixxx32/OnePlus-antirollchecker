@@ -16,7 +16,7 @@
       "major": 3,
       "minor": 0,
       "first_seen": "2026-02-04",
-      "last_checked": "2026-02-24",
+      "last_checked": "2026-02-25",
       "status": "current",
       "md5": "99f21627efd3fddd4b4ba184030f4319"
     },
@@ -27,7 +27,8 @@
       "minor": 0,
       "first_seen": "2026-02-04",
       "last_checked": "2026-02-06",
-      "status": "archived"
+      "status": "archived",
+      "md5": "5974618c636bad07afbaf4cbbabe3646"
     },
     {
       "version": "CPH2661_16.0.1.301(EX01)",
@@ -35,8 +36,9 @@
       "major": 3,
       "minor": 0,
       "first_seen": "2026-02-04",
-      "last_checked": "2026-02-22",
-      "status": "archived"
+      "last_checked": "2026-02-25",
+      "status": "archived",
+      "md5": "187c8af4dc17c391be140f384b52044e"
     }
   ],
   "device": "OnePlus Nord 4",
