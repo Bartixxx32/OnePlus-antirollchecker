@@ -26,7 +26,7 @@
       "major": 3,
       "minor": 0,
       "first_seen": "2026-02-04",
-      "last_checked": "2026-02-24",
+      "last_checked": "2026-02-25",
       "status": "current",
       "md5": "0f2a5043def5b99ae0903db69d932bff"
     },
@@ -37,7 +37,8 @@
       "minor": 0,
       "first_seen": "2026-02-04",
       "last_checked": "2026-02-11",
-      "status": "archived"
+      "status": "archived",
+      "md5": "41e50bbe474aab4c7cfaf60eef6d218e"
     },
     {
       "version": "PKJ110_16.0.2.400(CN01)",
@@ -46,7 +47,8 @@
       "minor": 0,
       "first_seen": "2026-02-04",
       "last_checked": "2026-02-04",
-      "status": "archived"
+      "status": "archived",
+      "md5": "d6133146502d44b3a9795d2686f0b06c"
     }
   ],
   "device": "Oppo Find X8 Ultra",

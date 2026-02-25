@@ -16,7 +16,7 @@
       "major": 3,
       "minor": 0,
       "first_seen": "2026-02-04",
-      "last_checked": "2026-02-24",
+      "last_checked": "2026-02-25",
       "status": "current",
       "md5": "94c3d509d75d2cf2ef7ff546a19d12d2"
     },
@@ -27,7 +27,8 @@
       "minor": 0,
       "first_seen": "2026-02-04",
       "last_checked": "2026-02-06",
-      "status": "archived"
+      "status": "archived",
+      "md5": "48c0cb97cbfe448d50b8f730236c8019"
     },
     {
       "version": "CPH2663_15.0.0.401(EX01)",

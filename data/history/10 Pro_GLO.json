@@ -26,7 +26,7 @@
       "major": 2,
       "minor": 0,
       "first_seen": "2026-02-06",
-      "last_checked": "2026-02-24",
+      "last_checked": "2026-02-25",
       "status": "current",
       "md5": "442a1ffc6ab53fdcafb05e4b555a7c31"
     },
@@ -37,7 +37,8 @@
       "minor": 0,
       "first_seen": "2026-02-04",
       "last_checked": "2026-02-06",
-      "status": "archived"
+      "status": "archived",
+      "md5": "4f4678dc3a6898a2c76745886fa79313"
     },
     {
       "version": "NE2213_14.0.0.940(EX01)",
@@ -46,7 +47,8 @@
       "minor": 0,
       "first_seen": "2026-02-04",
       "last_checked": "2026-02-06",
-      "status": "archived"
+      "status": "archived",
+      "md5": "6fd2cf03a80a55fe4337a754f76d16a8"
     },
     {
       "version": "NE2213_15.0.0.700(EX01)",
@@ -54,8 +56,9 @@
       "major": 2,
       "minor": 0,
       "first_seen": "2026-02-04",
-      "last_checked": "2026-02-22",
-      "status": "archived"
+      "last_checked": "2026-02-25",
+      "status": "archived",
+      "md5": "9544be7ad28064a120da7c8ccd6290be"
     }
   ],
   "device": "OnePlus 10 Pro",

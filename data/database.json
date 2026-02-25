@@ -105,7 +105,7 @@
           "SA",
           "OCA"
         ],
-        "status": "current"
+        "status": "archived"
       },
       "CPH2307_15.0.0.1304(EX01)": {
         "arb": 0,
@@ -114,6 +114,16 @@
         "minor": 120,
         "regions": [
           "EU"
+        ],
+        "status": "current"
+      },
+      "CPH2307_15.0.0.1600(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "md5": "fe06415c8aa4aad526cb40e776ba9b36",
+        "minor": 120,
+        "regions": [
+          "EG"
         ],
         "status": "current"
       }
@@ -212,7 +222,7 @@
       "CPH2447_15.0.0.600(EX01)": {
         "arb": 0,
         "major": 2,
-        "md5": null,
+        "md5": "4cc0d301bd86dd3ff0713e5fade8eaf7",
         "minor": 0,
         "regions": [
           "IN"
@@ -222,7 +232,7 @@
       "CPH2447_15.0.0.862(EX01)": {
         "arb": 0,
         "major": 2,
-        "md5": null,
+        "md5": "c0debf3a37dea71b0155a97781de08b4",
         "minor": 0,
         "regions": [
           "IN"
@@ -232,7 +242,7 @@
       "CPH2447_16.0.1.300(EX01)": {
         "arb": 0,
         "major": 2,
-        "md5": null,
+        "md5": "642d05f8e9f90941d039053fb2ef9a20",
         "minor": 0,
         "regions": [
           "IN"
@@ -300,7 +310,7 @@
       "CPH2449_15.0.0.862(EX01)": {
         "arb": 0,
         "major": 2,
-        "md5": null,
+        "md5": "005720cd3a7ed022c504ea46aa08b108",
         "minor": 0,
         "regions": [
           "EU",
@@ -311,7 +321,7 @@
       "CPH2449_16.0.2.400(EX01)": {
         "arb": 0,
         "major": 2,
-        "md5": null,
+        "md5": "3a0e1f9b1288270b6a9339d36e91012b",
         "minor": 0,
         "regions": [
           "EU",
@@ -372,7 +382,7 @@
       "CPH2487_14.0.0.810(EX01)": {
         "arb": 0,
         "major": 2,
-        "md5": null,
+        "md5": "41257dd6ab4cd746d7855c6b320c2285",
         "minor": 0,
         "regions": [
           "IN"
@@ -382,7 +392,7 @@
       "CPH2487_15.0.0.601(EX01)": {
         "arb": 0,
         "major": 2,
-        "md5": null,
+        "md5": "ca359a0253ba4d590b38bbc44dd55607",
         "minor": 0,
         "regions": [
           "IN"
@@ -392,7 +402,7 @@
       "CPH2487_15.0.0.870(EX01)": {
         "arb": 0,
         "major": 2,
-        "md5": null,
+        "md5": "ab372586fbb439bad1e8cfa19dfee40f",
         "minor": 0,
         "regions": [
           "IN"
@@ -478,7 +488,7 @@
       "CPH2551_15.0.0.863(EX01)": {
         "arb": 0,
         "major": 2,
-        "md5": null,
+        "md5": "4f1b8c4f45cfb394c05e1ef5728b13a2",
         "minor": 0,
         "regions": [
           "EU"
@@ -488,7 +498,7 @@
       "CPH2551_16.0.0.201(EX01)": {
         "arb": 0,
         "major": 2,
-        "md5": null,
+        "md5": "0969618dfdfaaf6ca8867ac16f3dc32e",
         "minor": 0,
         "regions": [
           "IN",
@@ -510,7 +520,7 @@
       "CPH2551_16.0.2.400(EX01)": {
         "arb": 0,
         "major": 2,
-        "md5": null,
+        "md5": "dc72dd05d476d8ecb198014177572cbf",
         "minor": 0,
         "regions": [
           "IN",
@@ -567,7 +577,7 @@
       "CPH2573_16.0.2.400(EX01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "669ed996a75edf5f511988953ffc002a",
         "minor": 0,
         "regions": [
           "IN"
@@ -614,7 +624,7 @@
       "CPH2581_15.0.0.863(EX01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "ab9462ac5766c96daff20b425ef1df78",
         "minor": 0,
         "regions": [
           "EU",
@@ -766,7 +776,7 @@
       "CPH2645_16.0.0.205(EX01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "72c1aa34316c7ee6ba23b39be0edb5ea",
         "minor": 0,
         "regions": [
           "GLO",
@@ -813,7 +823,7 @@
       "CPH2649_16.0.1.304(EX01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "d9b18f26264785200dfcdf42e625338c",
         "minor": 0,
         "regions": [
           "IN"
@@ -823,7 +833,7 @@
       "CPH2649_16.0.2.402(EX01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "b8bb28a60b49b828a5e5fb93a9a76c55",
         "minor": 0,
         "regions": [
           "IN"
@@ -879,7 +889,7 @@
       "CPH2653_16.0.1.304(EX01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "e854bde9b2f472d1cfb499c886b1cbe9",
         "minor": 0,
         "regions": [
           "GLO",
@@ -890,7 +900,7 @@
       "CPH2653_16.0.2.402(EX01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "515f5110ca780fda710ef1ff1ad9f100",
         "minor": 0,
         "regions": [
           "GLO",
@@ -952,7 +962,7 @@
       "CPH2661_15.0.0.401(EX01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "5974618c636bad07afbaf4cbbabe3646",
         "minor": 0,
         "regions": [
           "IN"
@@ -962,7 +972,7 @@
       "CPH2661_16.0.1.301(EX01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "187c8af4dc17c391be140f384b52044e",
         "minor": 0,
         "regions": [
           "IN"
@@ -998,7 +1008,7 @@
       "CPH2663_15.0.0.1301(EX01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "fac4c9f584f53d2e05315a980ee2eded",
         "minor": 0,
         "regions": [
           "EU"
@@ -1019,7 +1029,7 @@
       "CPH2663_16.0.1.301(EX01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "48c0cb97cbfe448d50b8f730236c8019",
         "minor": 0,
         "regions": [
           "GLO",
@@ -1104,7 +1114,7 @@
       "CPH2691_16.0.1.302(EX01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "bea10f391a69cffabf770457a1c65953",
         "minor": 0,
         "regions": [
           "IN"
@@ -1114,7 +1124,7 @@
       "CPH2691_16.0.2.400(EX01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "a4af2544839c988d898b2f7d22e9d2e5",
         "minor": 0,
         "regions": [
           "IN"
@@ -1154,7 +1164,7 @@
       "CPH2709_15.0.2.604(EX01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "07641d9d8bf4466472600f8ea8a083a0",
         "minor": 0,
         "regions": [
           "EU",
@@ -1212,7 +1222,7 @@
       "CPH2745_16.0.2.401(EX01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "45404f2227169e79b328fde3c008aef6",
         "minor": 0,
         "regions": [
           "IN"
@@ -1247,7 +1257,7 @@
       "CPH2747_16.0.1.303(EX01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "2ff1781d46561bf44a0eb40c128390a4",
         "minor": 0,
         "regions": [
           "EU",
@@ -1296,7 +1306,7 @@
       "CPH2767_16.0.1.305(EX01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "40f81334dddadd8e1917148c57cbc713",
         "minor": 0,
         "regions": [
           "IN"
@@ -1341,7 +1351,7 @@
       "CPH2769_16.0.2.401(EX01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "557df71dadd39f65968ad8bbc0ce2293",
         "minor": 0,
         "regions": [
           "GLO",
@@ -1808,7 +1818,7 @@
       "NE2210_15.0.0.1202(CN01)": {
         "arb": 0,
         "major": 2,
-        "md5": null,
+        "md5": "851094bc9f6829aae556cb124ae35a55",
         "minor": 0,
         "regions": [
           "CN"
@@ -1828,7 +1838,7 @@
       "NE2210_15.0.0.700(CN01)": {
         "arb": 0,
         "major": 2,
-        "md5": null,
+        "md5": "83bfd50e3b49ebc8c73a3fa7f7ddae50",
         "minor": 0,
         "regions": [
           "CN"
@@ -1863,7 +1873,7 @@
       "NE2211_15.0.0.1302(EX01)": {
         "arb": 0,
         "major": 2,
-        "md5": null,
+        "md5": "7ff5b88637be13d09bae0b4fa1c7cf99",
         "minor": 0,
         "regions": [
           "IN"
@@ -1873,7 +1883,7 @@
       "NE2211_15.0.0.700(EX01)": {
         "arb": 0,
         "major": 2,
-        "md5": null,
+        "md5": "2b63361c7ace205d733e9d7d1847b79e",
         "minor": 0,
         "regions": [
           "IN"
@@ -1930,7 +1940,7 @@
       "NE2213_14.0.0.940(EX01)": {
         "arb": 0,
         "major": 2,
-        "md5": null,
+        "md5": "594bf98e18eafe719715a1441eece196",
         "minor": 0,
         "regions": [
           "EU",
@@ -1952,7 +1962,7 @@
       "NE2213_15.0.0.700(EX01)": {
         "arb": 0,
         "major": 2,
-        "md5": null,
+        "md5": "ee4d7ff2fde85bfff044267251a1e204",
         "minor": 0,
         "regions": [
           "EU",
@@ -2005,7 +2015,7 @@
       "OPD2403_16.0.1.301(EX01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "b45470fbeb6a785f32209d7711e37ffa",
         "minor": 0,
         "regions": [
           "IN"
@@ -2052,7 +2062,7 @@
       "OPD2413_16.0.2.400(CN01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "d91040afb739f2b5b119cc9cc585a7c9",
         "minor": 0,
         "regions": [
           "CN"
@@ -2087,7 +2097,7 @@
       "OPD2415_16.0.0.211(EX01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "31422d40cca779e619e20aec05910e61",
         "minor": 0,
         "regions": [
           "IN",
@@ -2099,7 +2109,7 @@
       "OPD2415_16.0.1.302(EX01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "ed72adfd06e1f9684e051be6fc797d02",
         "minor": 0,
         "regions": [
           "IN",
@@ -2148,7 +2158,7 @@
       "PJD110_16.0.0.201(CN01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "c79e0d5283b76ee44074f41ed2578378",
         "minor": 0,
         "regions": [
           "CN"
@@ -2193,7 +2203,7 @@
       "PJE110_15.0.0.600(CN01)": {
         "arb": 0,
         "major": 2,
-        "md5": null,
+        "md5": "aa6baa53941cb20c2cb430343c16bdba",
         "minor": 0,
         "regions": [
           "CN"
@@ -2203,7 +2213,7 @@
       "PJE110_15.0.0.870(CN01)": {
         "arb": 0,
         "major": 2,
-        "md5": null,
+        "md5": "41ecfd297b1aa4b2d71410e4dd817781",
         "minor": 0,
         "regions": [
           "CN"
@@ -2228,7 +2238,7 @@
       "PJF110_14.0.1.720(CN01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "a1331494ba071363e8b2fba9138258e1",
         "minor": 0,
         "regions": [
           "CN"
@@ -2238,7 +2248,7 @@
       "PJF110_15.0.0.500(CN01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "99f6ed36e6b64144836d9cf1531c96f7",
         "minor": 0,
         "regions": [
           "CN"
@@ -2273,7 +2283,7 @@
       "PJX110_15.0.0.500(CN01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "9d263a30644f553dcd0958a84c3894c3",
         "minor": 0,
         "regions": [
           "CN"
@@ -2328,7 +2338,7 @@
       "PJZ110_16.0.2.403(CN01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "e88c0d89f3feffed5dc9e8d5c4ce99fb",
         "minor": 0,
         "regions": [
           "CN"
@@ -2338,7 +2348,7 @@
       "PJZ110_16.0.3.501(CN01)": {
         "arb": 1,
         "major": 3,
-        "md5": null,
+        "md5": "084a427ff00012ce4b2dbeb683f1601d",
         "minor": 0,
         "regions": [
           "CN"
@@ -2383,7 +2393,7 @@
       "PKG110_16.0.1.302(CN01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "26661ccd5c07e13f010623e83abfdfc5",
         "minor": 0,
         "regions": [
           "CN"
@@ -2393,7 +2403,7 @@
       "PKG110_16.0.2.400(CN01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "687170822ca972c5575d5438c347ab1b",
         "minor": 0,
         "regions": [
           "CN"
@@ -2438,7 +2448,7 @@
       "PKJ110_16.0.1.301(CN01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "41e50bbe474aab4c7cfaf60eef6d218e",
         "minor": 0,
         "regions": [
           "CN"
@@ -2448,7 +2458,7 @@
       "PKJ110_16.0.2.400(CN01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "d6133146502d44b3a9795d2686f0b06c",
         "minor": 0,
         "regions": [
           "CN"
@@ -2503,7 +2513,7 @@
       "PKR110_16.0.2.400(CN01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "06baa976a14a8410a779a34fe1d73224",
         "minor": 0,
         "regions": [
           "CN"
@@ -2548,7 +2558,7 @@
       "PKH110_16.0.1.302(CN01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "8fb8fbb2d3f009fe0e5ecc9e211736e0",
         "minor": 0,
         "regions": [
           "CN"
@@ -2558,7 +2568,7 @@
       "PKH110_16.0.2.401(CN01)": {
         "arb": 0,
         "major": 3,
-        "md5": null,
+        "md5": "00b0dede5abeff5658076861f2ea8792",
         "minor": 0,
         "regions": [
           "CN"

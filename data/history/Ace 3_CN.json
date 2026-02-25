@@ -16,7 +16,7 @@
       "major": 2,
       "minor": 0,
       "first_seen": "2026-02-04",
-      "last_checked": "2026-02-24",
+      "last_checked": "2026-02-25",
       "status": "current",
       "md5": "2133450d657b8accda00dcd97101de80"
     },
@@ -26,8 +26,9 @@
       "major": 2,
       "minor": 0,
       "first_seen": "2026-02-04",
-      "last_checked": "2026-02-22",
-      "status": "archived"
+      "last_checked": "2026-02-25",
+      "status": "archived",
+      "md5": "aa6baa53941cb20c2cb430343c16bdba"
     },
     {
       "version": "PJE110_15.0.0.870(CN01)",
@@ -36,7 +37,8 @@
       "minor": 0,
       "first_seen": "2026-02-04",
       "last_checked": "2026-02-04",
-      "status": "archived"
+      "status": "archived",
+      "md5": "41ecfd297b1aa4b2d71410e4dd817781"
     }
   ],
   "device": "OnePlus Ace 3",

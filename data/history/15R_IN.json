@@ -6,7 +6,7 @@
       "major": 3,
       "minor": 0,
       "first_seen": "2026-02-11",
-      "last_checked": "2026-02-24",
+      "last_checked": "2026-02-25",
       "status": "current",
       "md5": "2c9829fafdd4921812f293a4e3ed2d26"
     },
@@ -26,8 +26,9 @@
       "major": 3,
       "minor": 0,
       "first_seen": "2026-02-04",
-      "last_checked": "2026-02-22",
-      "status": "archived"
+      "last_checked": "2026-02-25",
+      "status": "archived",
+      "md5": "40f81334dddadd8e1917148c57cbc713"
     },
     {
       "version": "CPH2767_16.0.2.401(EX01)",
