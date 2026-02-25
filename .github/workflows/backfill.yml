@@ -79,7 +79,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: firmware_data/
-          key: arb-v8-${{ matrix.device }}-${{ matrix.variant }}-${{ steps.get_details.outputs.version }}-${{ steps.get_details.outputs.md5 }}
+          key: arb-v9-${{ matrix.device }}-${{ matrix.variant }}-${{ steps.get_details.outputs.version }}-${{ steps.get_details.outputs.md5 }}
 
       - name: Download Firmware
         if: steps.cache-arb.outputs.cache-hit != 'true'
@@ -187,12 +187,16 @@ jobs:
               if name not in merged:
                   merged[name] = data
               else:
-                  # Merge history list, avoid duplicates
-                  existing_versions = {e["version"] for e in merged[name]["history"]}
+                  # Merge history list, avoid duplicates but update missing data
+                  existing_versions = {e["version"]: i for i, e in enumerate(merged[name]["history"])}
                   for entry in data["history"]:
                       if entry["version"] not in existing_versions:
                           merged[name]["history"].append(entry)
-                          existing_versions.add(entry["version"])
+                          existing_versions[entry["version"]] = len(merged[name]["history"]) - 1
+                      else:
+                          idx = existing_versions[entry["version"]]
+                          if "md5" in entry and "md5" not in merged[name]["history"][idx]:
+                              merged[name]["history"][idx]["md5"] = entry["md5"]
 
           # Save merged results
           os.makedirs("data/history", exist_ok=True)
