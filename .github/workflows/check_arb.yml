@@ -11,6 +11,10 @@ on:
   schedule:
     - cron: '0 0 * * *' # Run daily
 
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
 jobs:
   setup-matrix:
     runs-on: ubuntu-latest
@@ -42,7 +46,15 @@ jobs:
           sudo apt-get install -y aria2 unzip curl python3-pip
           pip3 install requests beautifulsoup4 --break-system-packages || pip3 install requests beautifulsoup4
 
+      - name: Cache Tools
+        id: cache-tools
+        uses: actions/cache@v4
+        with:
+          path: tools/
+          key: tools-v1
+
       - name: Setup Tools
+        if: steps.cache-tools.outputs.cache-hit != 'true'
         run: |
           mkdir -p tools
           
@@ -64,6 +76,9 @@ jobs:
           tar -xzvf pdg.tar.gz
           mv payload-dumper-go tools/payload-dumper-go || find . -name "payload-dumper-go" -type f -exec mv {} tools/payload-dumper-go \;
           chmod +x tools/payload-dumper-go
+
+      - name: Ensure Tools are Executable
+        run: chmod +x tools/* || true
           
       - name: Get Firmware Details
         id: get_details
@@ -279,20 +294,12 @@ jobs:
       - name: Download All Artifacts
         uses: actions/download-artifact@v4
         with:
-          path: artifacts
-          merge-multiple: false
+          pattern: history-*
+          path: data/history
+          merge-multiple: true
       
       - name: Restore History & Generate README
         run: |
-          mkdir -p data/history
-          
-          # Restore JSONs
-          find artifacts -name 'history-*' -type d | while read dir; do
-            JSON_FILE=$(find "$dir" -name '*.json' | head -n 1)
-            if [ -f "$JSON_FILE" ]; then
-              cp "$JSON_FILE" data/history/
-            fi
-          done
           
           # Install dependencies
           pip3 install jinja2

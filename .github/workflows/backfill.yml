@@ -11,6 +11,10 @@ on:
         description: 'Target Variant (optional, e.g. CN)'
         required: false
 
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
 jobs:
   setup-matrix:
     runs-on: ubuntu-latest
@@ -52,7 +56,15 @@ jobs:
           sudo apt-get install -y aria2 unzip curl python3-pip
           pip3 install requests beautifulsoup4 --break-system-packages || pip3 install requests beautifulsoup4
 
+      - name: Cache Tools
+        id: cache-tools
+        uses: actions/cache@v4
+        with:
+          path: tools/
+          key: tools-v1
+
       - name: Setup Tools
+        if: steps.cache-tools.outputs.cache-hit != 'true'
         run: |
           mkdir -p tools
           curl -L -o tools/arbextract https://github.com/koaaN/arbextract/releases/download/1.0/arbextract-x86_64-linux
@@ -65,7 +77,9 @@ jobs:
           tar -xzvf pdg.tar.gz
           mv payload-dumper-go tools/payload-dumper-go || find . -name "payload-dumper-go" -type f -exec mv {} tools/payload-dumper-go \;
           chmod +x tools/payload-dumper-go
-          
+
+      - name: Ensure Tools are Executable
+        run: chmod +x tools/* || true
       - name: Get Firmware URL
         id: get_details
         run: |
