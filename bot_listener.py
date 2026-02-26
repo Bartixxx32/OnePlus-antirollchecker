@@ -114,8 +114,11 @@ async def error_handler(update: object, context: ContextTypes.DEFAULT_TYPE) -> N
             if update.effective_chat:
                 chat_info = f"\n📍 Chat: `{update.effective_chat.id}`"
             if update.effective_user:
-                user_info = f"\n👤 User: {update.effective_user.first_name} (`{update.effective_user.id}`)"
-        
+                name = update.effective_user.first_name
+                if name:
+                    for c in ('_', '*', '[', ']', '`'): name = str(name).replace(c, '\\' + c)
+                else: name = "Unknown"
+                user_info = f"\n👤 User: {name} (`{update.effective_user.id}`)"
         admin_msg = (
             f"🚨 *Bot Error Alert*\n\n"
             f"⏰ {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')}\n"
@@ -187,8 +190,14 @@ async def stats(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
     # Top 5 users
     sorted_users = sorted(data.get("users", {}).items(), key=lambda x: x[1]["count"], reverse=True)[:5]
+    
+    def escape_md(t):
+        if not t: return ""
+        for c in ('_', '*', '[', ']', '`'): t = str(t).replace(c, '\\' + c)
+        return t
+
     top_users_text = "\n".join(
-        [f"  {i+1}. {u[1]['name']} — {u[1]['count']}" for i, u in enumerate(sorted_users)]
+        [f"  {i+1}. {escape_md(u[1]['name'])} — {u[1]['count']}" for i, u in enumerate(sorted_users)]
     ) or "  No data yet"
     
     msg = (
