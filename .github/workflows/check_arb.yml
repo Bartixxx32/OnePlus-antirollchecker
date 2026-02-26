@@ -28,8 +28,45 @@ jobs:
         id: set-matrix
         run: python3 generate_matrix.py
 
+  prepare-tools:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Cache APT Packages
+        uses: awalsh128/cache-apt-pkgs-action@latest
+        with:
+          packages: aria2 unzip curl
+          version: 1.0
+
+      - name: Cache Tools
+        id: cache-tools
+        uses: actions/cache@v4
+        with:
+          path: tools/
+          key: tools-v1
+
+      - name: Setup Tools
+        if: steps.cache-tools.outputs.cache-hit != 'true'
+        run: |
+          mkdir -p tools
+          curl -L -o tools/arbextract https://github.com/koaaN/arbextract/releases/download/1.0/arbextract-x86_64-linux
+          chmod +x tools/arbextract
+          curl -L -o otaripper.tar.gz https://github.com/syedinsaf/otaripper/releases/download/v2.1.1/otaripper-2.1.1-linux-static-x86_64.tar.gz
+          tar -xzvf otaripper.tar.gz
+          mv otaripper tools/otaripper || find . -name "otaripper" -type f -exec mv {} tools/otaripper \;
+          chmod +x tools/otaripper
+          curl -L -o pdg.tar.gz https://github.com/ssut/payload-dumper-go/releases/download/1.2.2/payload-dumper-go_1.2.2_linux_amd64.tar.gz
+          tar -xzvf pdg.tar.gz
+          mv payload-dumper-go tools/payload-dumper-go || find . -name "payload-dumper-go" -type f -exec mv {} tools/payload-dumper-go \;
+          chmod +x tools/payload-dumper-go
+
+      - name: Ensure Tools are Executable
+        run: chmod +x tools/* || true
+
   check-variant:
-    needs: setup-matrix
+    needs: [setup-matrix, prepare-tools]
     runs-on: ubuntu-latest
     continue-on-error: true
     strategy:
@@ -50,46 +87,18 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-          cache: 'pip' # caching pip dependencies
+          cache: 'pip'
 
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
 
-      - name: Cache Tools
-        id: cache-tools
-        # We restore from the exact key if it exists.
-        # If not, we restore from 'tools-v1-' prefix.
-        uses: actions/cache@v4
+      - name: Restore Tools Cache
+        uses: actions/cache/restore@v4
         with:
           path: tools/
-          key: tools-v1-${{ runner.os }}-${{ strategy.job-index }}-${{ github.run_id }}
-          restore-keys: |
-            tools-v1-${{ runner.os }}-
-
-      - name: Setup Tools
-        if: steps.cache-tools.outputs.cache-hit != 'true'
-        run: |
-          mkdir -p tools
-          
-          # Setup arbextract
-          curl -L -o tools/arbextract https://github.com/koaaN/arbextract/releases/download/1.0/arbextract-x86_64-linux
-          chmod +x tools/arbextract
-          
-          # Setup otaripper
-          curl -L -o otaripper.tar.gz https://github.com/syedinsaf/otaripper/releases/download/v2.1.1/otaripper-2.1.1-linux-static-x86_64.tar.gz
-          tar -xzvf otaripper.tar.gz
-          # The tar likely contains the binary 'otaripper' directly or in a folder.
-          # Based on docs/standard behavior, let's assume binary is named 'otaripper'
-          # We move it to tools/
-          mv otaripper tools/otaripper || find . -name "otaripper" -type f -exec mv {} tools/otaripper \;
-          chmod +x tools/otaripper
-          
-          # Setup payload-dumper-go (Fallback)
-          curl -L -o pdg.tar.gz https://github.com/ssut/payload-dumper-go/releases/download/1.2.2/payload-dumper-go_1.2.2_linux_amd64.tar.gz
-          tar -xzvf pdg.tar.gz
-          mv payload-dumper-go tools/payload-dumper-go || find . -name "payload-dumper-go" -type f -exec mv {} tools/payload-dumper-go \;
-          chmod +x tools/payload-dumper-go
+          key: tools-v1
+          fail-on-cache-miss: true
 
       - name: Ensure Tools are Executable
         run: chmod +x tools/* || true
