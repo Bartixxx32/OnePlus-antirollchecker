@@ -1064,10 +1064,19 @@ Join our Telegram group for support, discussion, and to use the bot.
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
-| Europe | CPH2307 | CPH2307_15.0.0.1304(EX01)<br><details><summary>MD5</summary><code>49b35b780091e214da73b2ba51034c8c</code></details> | **0** | Major: 0, Minor: 120 | 2026-02-26 | ✅ |
+| Europe | CPH2307 | CPH2307_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>2e4983e349bea6c8122a4cb7122fce2e</code></details> | **0** | Major: 0, Minor: 120 | 2026-02-26 | ✅ |
 | OCA | CPH2307 | CPH2307_15.0.0.1302(EX01)<br><details><summary>MD5</summary><code>fbf19255ade70753b33e310b1dbd35c3</code></details> | **0** | Major: 0, Minor: 120 | 2026-02-26 | ✅ |
 | EG | CPH2307 | CPH2307_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>fe06415c8aa4aad526cb40e776ba9b36</code></details> | **0** | Major: 0, Minor: 120 | 2026-02-26 | ✅ |
 | SA | CPH2307 | CPH2307_15.0.0.1302(EX01)<br><details><summary>MD5</summary><code>7b946f15e2b828d937db541b0586897b</code></details> | **0** | Major: 0, Minor: 120 | 2026-02-26 | ✅ |
+
+<details>
+<summary>📜 <b>Europe History</b> (click to expand)</summary>
+
+| Firmware Version | ARB | OEM Version | Last Seen | Safe |
+|:---|:---|:---|:---|:---|
+| CPH2307_15.0.0.1304(EX01)<br><details><summary>MD5</summary><code>49b35b780091e214da73b2ba51034c8c</code></details> | 0 | Major: 0, Minor: 120 | 2026-02-26 | ✅ |
+
+</details>
 
 <details>
 <summary>📜 <b>EG History</b> (click to expand)</summary>
@@ -1123,4 +1132,4 @@ This API helps you get direct, signed download URLs for OnePlus OTA firmware fil
 - **ARB Extraction**: [arbextract](https://github.com/koaaN/arbextract) by koaaN
 
 ---
-*Last updated: 2026-02-26 02:39 UTC*
+*Last updated: 2026-02-26 20:01 UTC*

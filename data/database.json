@@ -125,7 +125,7 @@
         "regions": [
           "EU"
         ],
-        "status": "current"
+        "status": "archived"
       },
       "CPH2307_15.0.0.1600(EX01)": {
         "arb": 0,
@@ -133,7 +133,8 @@
         "md5": "fe06415c8aa4aad526cb40e776ba9b36",
         "minor": 120,
         "regions": [
-          "EG"
+          "EG",
+          "EU"
         ],
         "status": "current"
       }
