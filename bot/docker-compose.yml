@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   telegram-bot:
     image: ghcr.io/bartixxx32/oneplus-antirollchecker-bot:latest
@@ -10,12 +8,9 @@ services:
       - GITHUB_PAT=${GITHUB_PAT}
       - STATS_FILE=/data/stats.json
     volumes:
-      - bot_data:/data
+      - ./data:/data
     logging:
       driver: "json-file"
       options:
         max-size: "10m"
         max-file: "3"
-
-volumes:
-  bot_data:
