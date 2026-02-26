@@ -84,20 +84,34 @@ jobs:
         run: |
           gh api -X PATCH "/repos/${{ github.repository }}/issues/comments/${{ steps.init_issue.outputs.comment_id }}" -f body=$'🤖 **Processing...**\n\n- [x] Setting up tools...\n- [/] Downloading firmware...\n- [ ] Analyzing ARB index...\n\n**URL**: `${{ steps.setup.outputs.url }}`'
 
+      - name: Cache APT Packages
+        if: steps.setup.outputs.url != ''
+        uses: awalsh128/cache-apt-pkgs-action@latest
+        with:
+          packages: aria2 unzip curl
+          version: 1.0
+
+      - name: Set up Python
+        if: steps.setup.outputs.url != ''
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
       - name: Cache Tools
         id: cache-tools
         if: steps.setup.outputs.url != ''
         uses: actions/cache@v4
         with:
           path: tools/
-          key: tools-v1
+          key: tools-v1-${{ runner.os }}-${{ github.run_id }}
+          restore-keys: |
+            tools-v1-${{ runner.os }}-
 
       - name: Install dependencies & Setup Tools
         if: steps.setup.outputs.url != '' && steps.cache-tools.outputs.cache-hit != 'true'
         run: |
-          sudo apt-get update
-          sudo apt-get install -y aria2 unzip curl python3-pip
-          pip3 install requests beautifulsoup4 --break-system-packages || pip3 install requests beautifulsoup4
+          pip install requests beautifulsoup4
           mkdir -p tools
           curl -L -o tools/arbextract https://github.com/koaaN/arbextract/releases/download/1.0/arbextract-x86_64-linux
           chmod +x tools/arbextract
