@@ -84,8 +84,16 @@ jobs:
         run: |
           gh api -X PATCH "/repos/${{ github.repository }}/issues/comments/${{ steps.init_issue.outputs.comment_id }}" -f body=$'🤖 **Processing...**\n\n- [x] Setting up tools...\n- [/] Downloading firmware...\n- [ ] Analyzing ARB index...\n\n**URL**: `${{ steps.setup.outputs.url }}`'
 
-      - name: Install dependencies & Setup Tools
+      - name: Cache Tools
+        id: cache-tools
         if: steps.setup.outputs.url != ''
+        uses: actions/cache@v4
+        with:
+          path: tools/
+          key: tools-v1
+
+      - name: Install dependencies & Setup Tools
+        if: steps.setup.outputs.url != '' && steps.cache-tools.outputs.cache-hit != 'true'
         run: |
           sudo apt-get update
           sudo apt-get install -y aria2 unzip curl python3-pip
@@ -101,6 +109,10 @@ jobs:
           tar -xzvf pdg.tar.gz
           mv payload-dumper-go tools/payload-dumper-go || find . -name "payload-dumper-go" -type f -exec mv {} tools/payload-dumper-go \;
           chmod +x tools/payload-dumper-go
+
+      - name: Ensure Tools are Executable
+        if: steps.setup.outputs.url != ''
+        run: chmod +x tools/* || true
 
       - name: Download Firmware
         if: steps.setup.outputs.url != ''
