@@ -111,7 +111,7 @@ jobs:
       - name: Install dependencies & Setup Tools
         if: steps.setup.outputs.url != '' && steps.cache-tools.outputs.cache-hit != 'true'
         run: |
-          pip install requests beautifulsoup4
+          pip install -r requirements.txt
           mkdir -p tools
           curl -L -o tools/arbextract https://github.com/koaaN/arbextract/releases/download/1.0/arbextract-x86_64-linux
           chmod +x tools/arbextract

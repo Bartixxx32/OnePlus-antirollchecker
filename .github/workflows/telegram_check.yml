@@ -57,7 +57,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install requests beautifulsoup4
+          pip install -r requirements.txt
 
       - name: Cache Tools
         id: cache-tools

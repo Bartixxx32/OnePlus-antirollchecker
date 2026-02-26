@@ -54,7 +54,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install requests beautifulsoup4
+          pip install -r requirements.txt
 
       - name: Cache Tools
         id: cache-tools
@@ -312,11 +312,17 @@ jobs:
           path: data/history
           merge-multiple: true
       
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
       - name: Restore History & Generate README
         run: |
           
           # Install dependencies
-          pip3 install jinja2
+          pip install -r requirements.txt
 
           # Generate
           python3 generate_readme.py

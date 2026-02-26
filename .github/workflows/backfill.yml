@@ -38,7 +38,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip3 install requests beautifulsoup4 --break-system-packages || pip3 install requests beautifulsoup4
+          pip install -r requirements.txt
 
       - name: Generate Backfill Matrix
         id: set-matrix
@@ -76,7 +76,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install requests beautifulsoup4
+          pip install -r requirements.txt
 
       - name: Cache Tools
         id: cache-tools
