@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   telegram-bot:
-    build: .
+    image: ghcr.io/bartixxx32/oneplus-antirollchecker-bot:latest
     container_name: oneplus_arb_bot
     restart: unless-stopped
     environment:
