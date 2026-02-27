@@ -260,7 +260,12 @@ async def check(update: Update, context: ContextTypes.DEFAULT_TYPE):
         request_chat_id = f"{chat_id}_{message_thread_id}"
 
     # Reply immediately
-    status_msg = await update.message.reply_text(f"🚀 Initiating check...", reply_to_message_id=message_id)
+    status_msg = await context.bot.send_message(
+        chat_id=chat_id,
+        text=f"🚀 Initiating check...",
+        message_thread_id=message_thread_id,
+        reply_to_message_id=message_id
+    )
 
     # Trigger GitHub Action
     success = await trigger_github_workflow(firmware_url, request_chat_id, message_id, user_mention, status_msg.message_id)

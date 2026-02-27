@@ -12,6 +12,7 @@ def send_telegram_message(token, chat_id, message, reply_to=None, message_thread
     }
     if reply_to:
         payload["reply_to_message_id"] = reply_to
+        payload["allow_sending_without_reply"] = True
     if message_thread_id:
         payload["message_thread_id"] = message_thread_id
 
@@ -63,6 +64,7 @@ def main():
     parser.add_argument("--reply-to", help="Message ID to reply to")
     parser.add_argument("--user-mention", help="User name to mention (e.g. @username)")
     parser.add_argument("--delete-message-id", help="Message ID to delete after sending")
+    parser.add_argument("--delete-user-message-id", help="User message ID to delete after sending")
 
     # Extended metadata
     parser.add_argument("--product", help="Product Name")
@@ -103,6 +105,8 @@ def main():
         send_telegram_message(args.token, chat_id, message, args.reply_to, message_thread_id)
         if args.delete_message_id:
             delete_telegram_message(args.token, chat_id, args.delete_message_id)
+        if args.delete_user_message_id:
+            delete_telegram_message(args.token, chat_id, args.delete_user_message_id)
         return
 
     if args.user_mention:
@@ -166,6 +170,9 @@ def main():
 
     if args.delete_message_id:
         delete_telegram_message(args.token, chat_id, args.delete_message_id)
+
+    if args.delete_user_message_id:
+        delete_telegram_message(args.token, chat_id, args.delete_user_message_id)
 
 if __name__ == "__main__":
     main()

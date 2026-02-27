@@ -183,9 +183,9 @@ jobs:
                 --build-id "$DETECTED_BUILD" \
                 --arb "$DETECTED_ARB" \
                 --url "${{ github.event.inputs.firmware_url }}" \
-                --reply-to "${{ github.event.inputs.request_message_id }}" \
                 --user-mention "${{ github.event.inputs.request_user_name }}" \
-                --delete-message-id "${{ github.event.inputs.request_status_message_id }}"
+                --delete-message-id "${{ github.event.inputs.request_status_message_id }}" \
+                --delete-user-message-id "${{ github.event.inputs.request_message_id }}"
           else
               # Send error notification
               python3 send_telegram.py \
@@ -195,7 +195,7 @@ jobs:
                 --version "Error" \
                 --arb "Error" \
                 --error "$ERROR_MSG" \
-                --reply-to "${{ github.event.inputs.request_message_id }}" \
                 --user-mention "${{ github.event.inputs.request_user_name }}" \
-                --delete-message-id "${{ github.event.inputs.request_status_message_id }}"
+                --delete-message-id "${{ github.event.inputs.request_status_message_id }}" \
+                --delete-user-message-id "${{ github.event.inputs.request_message_id }}"
           fi
