@@ -294,10 +294,37 @@
             border-color: var(--accent-color);
             box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.2);
         }
+
+        /* Floating Buy Me a Coffee Button */
+        .floating-bmc {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .floating-bmc:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .floating-bmc {
+                display: none;
+                /* Hide on smaller screens to prevent obstruction */
+            }
+        }
     </style>
 </head>
 
 <body>
+    <!-- Floating Buy Me a Coffee Button -->
+    <a href="https://www.buymeacoffee.com/bartixxx32" target="_blank" class="floating-bmc">
+        <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a beer&emoji=🍺&slug=bartixxx32&button_colour=FFDD00&font_colour=000000&font_family=Comic&outline_colour=000000&coffee_colour=ffffff"
+            alt="Buy Me A Coffee"
+            style="height: 45px !important;width: auto !important; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0,0,0,0.5);">
+    </a>
+
     <div class="container">
         <header>
             <h1>OnePlus ARB Checker</h1>
@@ -10732,6 +10759,17 @@
 
         <div class="footer">
             <div
+                style="background-color: var(--card-bg); border: 1px solid #FFDD00; border-radius: 8px; padding: 20px; margin-bottom: 20px; text-align: center;">
+                <h3 style="margin: 0 0 10px 0; color: #FFDD00; font-size: 1.1rem;">🍻 Support the Project</h3>
+                <p style="margin: 0 0 15px 0; font-size: 0.95rem;">
+                    If you find this tool helpful, consider buying me a beer! Your support keeps the updates coming.
+                </p>
+                <a href="https://www.buymeacoffee.com/bartixxx32" target="_blank" style="display: inline-block;">
+                    <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a beer&emoji=🍺&slug=bartixxx32&button_colour=FFDD00&font_colour=000000&font_family=Comic&outline_colour=000000&coffee_colour=ffffff"
+                        alt="Buy Me A Coffee" style="height: 40px !important;width: auto !important;">
+                </a>
+            </div>
+            <div
                 style="background-color: var(--card-bg); border: 1px solid #0088cc; border-radius: 8px; padding: 20px; margin-bottom: 20px;">
                 <h3 style="margin: 0 0 10px 0; color: #0088cc; font-size: 1.1rem;">💬 Telegram Bot</h3>
                 <p style="margin: 0 0 10px 0; font-size: 0.95rem;">
@@ -10768,11 +10806,15 @@
                 <strong>Credits:</strong>
                 Payload Extraction by <a href="https://github.com/syedinsaf/otaripper">otaripper</a> (syedinsaf)
                 &bull;
-                Fallback by <a href="https://github.com/ssut/payload-dumper-go">payload-dumper-go</a> (ssut)
+                Playback & Validation by <a href="https://github.com/ssut/payload-dumper-go">payload-dumper-go</a>
+                (ssut)
                 &bull;
                 ARB Extraction by <a href="https://github.com/koaaN/arbextract">arbextract</a> (koaaN)
+                &bull;
+                API for CN variants by <a href="https://roms.danielspringer.at/">roms.danielspringer.at</a> (Daniel
+                Springer)
             </div>
-            <p>Last scan: 2026-03-04 02:35 UTC</p>
+            <p>Last scan: 2026-03-04 05:24 UTC</p>
             <p>
                 <a href="https://github.com/Bartixxx32/Oneplus-antirollchecker">View Source on GitHub</a>
                 &bull;
