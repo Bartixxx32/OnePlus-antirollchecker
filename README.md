@@ -1165,4 +1165,4 @@ This API helps you get direct, signed download URLs for OnePlus OTA firmware fil
 - **API for CN variants**: [roms.danielspringer.at](https://roms.danielspringer.at/) by Daniel Springer
 
 ---
-*Last updated: 2026-03-04 18:58 UTC*
+*Last updated: 2026-03-04 20:31 UTC*
