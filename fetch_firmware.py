@@ -94,11 +94,20 @@ def get_springer_versions(device_id: str, region: str, session=None) -> list:
     if key in SPRING_MAPPING:
         mapped_name = SPRING_MAPPING[key]
     
-    try:
-        response = session.get(SPRINGER_API_URL, headers=headers, timeout=15)
-        response.raise_for_status()
-    except Exception as e:
-        logger.error(f"Error fetching page: {e}")
+    response = None
+    last_ex = None
+    for attempt in range(10):
+        try:
+            response = session.get(SPRINGER_API_URL, headers=headers, timeout=15)
+            response.raise_for_status()
+            break
+        except Exception as e:
+            last_ex = e
+            if attempt < 9:
+                logger.warning(f"Error fetching page (attempt {attempt+1}/10): {e}. Retrying in 10s...")
+                time.sleep(10)
+    else:
+        logger.error(f"Failed fetching page after 10 attempts: {last_ex}")
         return None
 
     soup = BeautifulSoup(response.text, 'html.parser')
@@ -179,11 +188,20 @@ def get_signed_url_springer(device_id: str, region: str, target_version: str = N
         'Referer': SPRINGER_API_URL,
     })
     
-    try:
-        response = session.post(SPRINGER_API_URL, data=form_data, headers=post_headers, timeout=15)
-        response.raise_for_status()
-    except Exception as e:
-        logger.error(f"Form submission failed: {e}")
+    response = None
+    last_ex = None
+    for attempt in range(10):
+        try:
+            response = session.post(SPRINGER_API_URL, data=form_data, headers=post_headers, timeout=15)
+            response.raise_for_status()
+            break
+        except Exception as e:
+            last_ex = e
+            if attempt < 9:
+                logger.warning(f"Form submission failed (attempt {attempt+1}/10): {e}. Retrying in 10s...")
+                time.sleep(10)
+    else:
+        logger.error(f"Form submission failed after 10 attempts: {last_ex}")
         return None
         
     soup = BeautifulSoup(response.text, 'html.parser')
