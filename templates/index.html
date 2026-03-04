@@ -272,6 +272,25 @@
             color: white;
         }
 
+        .badges-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            margin: 20px 0;
+        }
+
+        .badges-container img {
+            display: block;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+
+        .badges-container a:hover img {
+            opacity: 0.85;
+            transform: translateY(-1px);
+        }
+
         .search-container {
             margin-top: 20px;
             text-align: center;
@@ -329,6 +348,7 @@
         <header>
             <h1>OnePlus ARB Checker</h1>
             <p class="subtitle">Real-time Anti-Rollback (ARB) index tracking for OnePlus devices</p>
+
             <div class="search-container">
                 <input type="text" id="search-input" placeholder="🔍 Search devices (e.g. OnePlus 15, Nord)..."
                     onkeyup="filterDevices()">
@@ -515,6 +535,33 @@
                 API for CN variants by <a href="https://roms.danielspringer.at/">roms.danielspringer.at</a> (Daniel
                 Springer)
             </div>
+
+            <div class="badges-container">
+                <a href="https://github.com/Bartixxx32/OnePlus-antirollchecker/actions/workflows/check_arb.yml"
+                    target="_blank" rel="noopener noreferrer">
+                    <img src="https://img.shields.io/github/actions/workflow/status/Bartixxx32/OnePlus-antirollchecker/check_arb.yml?style=flat-square&logo=github&label=ARB%20Checking"
+                        alt="GitHub Workflow Status">
+                </a>
+                <a href="https://github.com/Bartixxx32/OnePlus-antirollchecker/stargazers" target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="https://img.shields.io/github/stars/Bartixxx32/OnePlus-antirollchecker?style=flat-square&color=yellow"
+                        alt="GitHub stars">
+                </a>
+                <a href="https://github.com/Bartixxx32/OnePlus-antirollchecker/network/members" target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="https://img.shields.io/github/forks/Bartixxx32/OnePlus-antirollchecker?style=flat-square"
+                        alt="GitHub forks">
+                </a>
+                <a href="https://github.com/Bartixxx32/OnePlus-antirollchecker/commits/main" target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="https://img.shields.io/github/last-commit/Bartixxx32/OnePlus-antirollchecker?style=flat-square"
+                        alt="GitHub last commit">
+                </a>
+                <img src="https://img.shields.io/badge/Python-3.11+-blue?style=flat-square&logo=python"
+                    alt="Python Version">
+                <img src="https://visitor-badge.laobi.icu/badge?page_id=Bartixxx32.OnePlus-antirollchecker" alt="Views">
+            </div>
+
             <p>Last scan: {{ generated_at }}</p>
             <p>
                 <a href="https://github.com/Bartixxx32/Oneplus-antirollchecker">View Source on GitHub</a>
