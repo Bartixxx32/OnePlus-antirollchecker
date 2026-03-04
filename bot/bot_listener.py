@@ -140,7 +140,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     await context.bot.send_message(
         chat_id=update.effective_chat.id,
-        text="Hello! Send /check <firmware_url> to analyze a firmware file."
+        text="Hello! Send /check https://example.com/firmware.zip to analyze a firmware file."
     )
 
 async def help_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -148,7 +148,7 @@ async def help_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
     msg = (
         "🤖 *OnePlus ARB Checker Bot*\n\n"
         "*Available Commands:*\n\n"
-        "🔍 /check `<url>` — Analyze a firmware file\n"
+        "🔍 /check `https://...` — Analyze a firmware file\n"
         "   _Send a direct download link to a OnePlus firmware .zip_\n\n"
         "ℹ️ /about — Bot info, version & uptime\n"
         "❓ /help — Show this message\n\n"
@@ -238,14 +238,28 @@ async def check(update: Update, context: ContextTypes.DEFAULT_TYPE):
         return
 
     if not context.args:
-        await update.message.reply_text("❌ Usage: /check <firmware_url>")
+        try:
+            await update.message.delete()
+        except Exception as e:
+            logging.error(f"Failed to delete message: {e}")
+        await context.bot.send_message(
+            chat_id=chat_id,
+            text=f"{user_mention}, ❌ Usage: /check https://..."
+        )
         return
 
-    firmware_url = context.args[0]
+    firmware_url = context.args[0].strip('<>')
     
     # URL Validation
     if not firmware_url.startswith(("http://", "https://")) or " " in firmware_url:
-        await update.message.reply_text("❌ Invalid URL. Please provide a valid Direct Download Link starting with http:// or https://")
+        try:
+            await update.message.delete()
+        except Exception as e:
+            logging.error(f"Failed to delete message: {e}")
+        await context.bot.send_message(
+            chat_id=chat_id,
+            text=f"{user_mention}, ❌ Invalid URL format. Please provide a valid Direct Download Link starting with http:// or https://"
+        )
         return
 
     # Record stats
