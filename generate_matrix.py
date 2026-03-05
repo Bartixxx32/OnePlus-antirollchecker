@@ -5,6 +5,10 @@ from config import DEVICE_METADATA
 def generate_matrix():
     include_list = []
     
+    # Optional filtering from workflow_dispatch inputs
+    target_device = os.environ.get('TARGET_DEVICE', '').strip()
+    target_variant = os.environ.get('TARGET_VARIANT', '').strip()
+    
     # Temporary exclusions for failing devices
     EXCLUDE = [
         ("Find X8 Pro", "IN"), ("Find X8 Pro", "EU"), ("Find X8 Pro", "CN"),
@@ -18,10 +22,18 @@ def generate_matrix():
     ]
 
     for device_id, meta in DEVICE_METADATA.items():
+        # Filter by device if specified
+        if target_device and device_id != target_device:
+            continue
+            
         # Get all valid regions from the 'models' dictionary keys
         valid_regions = meta.get('models', {}).keys()
         
         for region in valid_regions:
+            # Filter by variant if specified
+            if target_variant and region != target_variant:
+                continue
+                
             if (device_id, region) in EXCLUDE:
                 continue
                 
@@ -40,6 +52,7 @@ def generate_matrix():
         with open(os.environ["GITHUB_OUTPUT"], "a") as f:
             f.write(f"matrix={matrix_json}\n")
     else:
+        print(f"Generated {len(include_list)} matrix entries.")
         print(matrix_json)
 
 if __name__ == "__main__":

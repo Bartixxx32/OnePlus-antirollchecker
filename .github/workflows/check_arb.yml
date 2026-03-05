@@ -8,6 +8,12 @@ on:
         required: false
         default: false
         type: boolean
+      device:
+        description: 'Target Device (optional, e.g. 15)'
+        required: false
+      variant:
+        description: 'Target Variant (optional, e.g. GLO)'
+        required: false
   schedule:
     - cron: '0 0 * * *' # Run daily
 
@@ -26,6 +32,9 @@ jobs:
       
       - name: Generate Matrix
         id: set-matrix
+        env:
+          TARGET_DEVICE: ${{ inputs.device }}
+          TARGET_VARIANT: ${{ inputs.variant }}
         run: python3 generate_matrix.py
 
   prepare-tools:
