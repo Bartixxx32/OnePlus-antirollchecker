@@ -40,6 +40,8 @@ DEVICE_ORDER = [
     # Nords
     "Nord 5",
     "Nord 4", 
+    "Nord CE 3 Lite", "Nord CE 2 Lite",
+    "Nord N30", "Nord N20",
     "Nord 1", "Nord N200 5G",
     
     # China Exclusives (Ace)
@@ -52,6 +54,7 @@ DEVICE_ORDER = [
     "Pad 3", "Pad 2 Pro", "Pad 2", 
     
     # Oppo
+    "Reno10 Pro",
     "Find X8 Ultra", "Find N5", "Find N3", "Find X5 Pro", "Find X5", "Find X3 Pro"
 ]
 
@@ -212,7 +215,7 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
     "7T Pro": {
         "name": "OnePlus 7T Pro",
         "models": {
-            "GLO": "HD1913",
+            "GLO": "HD1917",
             "EU": "HD1913",
             "IN": "HD1911"
         },
@@ -220,7 +223,7 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
     "7T": {
         "name": "OnePlus 7T",
         "models": {
-            "GLO": "HD1903",
+            "GLO": "HD1905",
             "EU": "HD1903",
             "IN": "HD1901"
         },
@@ -262,13 +265,41 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
     "Nord 1": {
         "name": "OnePlus Nord",
         "models": {
-            "EU": "AC2003",
+            "EU": "Nord_EEA",
             "IN": "AC2001"
         },
     },
     "Nord N200 5G": {
         "name": "OnePlus Nord N200 5G",
         "models": {
+        },
+    },
+    "Nord N30": {
+        "name": "OnePlus Nord N30",
+        "models": {
+            "NA": "CPH2513"
+        },
+    },
+    "Nord N20": {
+        "name": "OnePlus Nord N20",
+        "models": {
+            "NA": "CPH2459"
+        },
+    },
+    "Nord CE 3 Lite": {
+        "name": "OnePlus Nord CE 3 Lite",
+        "models": {
+            "EU": "CPH2465EEA",
+            "GLO": "CPH2465",
+            "IN": "CPH2467"
+        },
+    },
+    "Nord CE 2 Lite": {
+        "name": "OnePlus Nord CE 2 Lite",
+        "models": {
+            "EU": "CPH2409EEA",
+            "GLO": "CPH2409",
+            "IN": "CPH2381"
         },
     },
 
@@ -368,6 +399,25 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "EG": "CPH2307",
             "OCA": "CPH2307",
             "SA": "CPH2307"
+        },
+    },
+
+    "Reno10 Pro": {
+        "name": "Oppo Reno10 Pro",
+        "models": {
+            "EEA": "CPH2525EEA",
+            "APC": "CPH2525",
+            "IN": "CPH2525IN",
+            "ID": "CPH2525ID",
+            "MEA": "CPH2525MEA",
+            "MY": "CPH2525MY",
+            "OCA": "CPH2525OCA",
+            "PH": "CPH2525PH",
+            "SA": "CPH2525SA",
+            "SG": "CPH2525SG",
+            "TH": "CPH2525TH",
+            "TW": "CPH2525TW",
+            "VN": "CPH2525VN"
         },
     },
 
@@ -507,6 +557,11 @@ OOS_MAPPING = {
     "Find X5 Pro": "oppo_find_x5_pro",
     "Find X5": "oppo_find_x5",
     "Find X3 Pro": "oppo_find_x3_pro",
+    "Reno10 Pro": "oppo_reno10_pro",
+    "Nord N30": "oneplus_nord_n30",
+    "Nord N20": "oneplus_nord_n20",
+    "Nord CE 3 Lite": "oneplus_nord_ce_3_lite",
+    "Nord CE 2 Lite": "oneplus_nord_ce_2_lite",
     "Open": "oneplus_open",
 }
 
