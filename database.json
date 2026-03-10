@@ -478,6 +478,17 @@
         "regions": [
           "IN"
         ],
+        "status": "archived"
+      },
+      "CPH2487_16.0.3.501(EX01)": {
+        "arb": 0,
+        "first_seen": "2026-03-10",
+        "major": 2,
+        "md5": "be9da74a7e6549b50b667f9420d1df84",
+        "minor": 0,
+        "regions": [
+          "IN"
+        ],
         "status": "current"
       }
     }
@@ -745,6 +756,17 @@
         "first_seen": "2026-02-04",
         "major": 3,
         "md5": "0930cc879bd35c5c17c3f0e4eb0b014b",
+        "minor": 0,
+        "regions": [
+          "NA"
+        ],
+        "status": "archived"
+      },
+      "CPH2583_16.0.3.500(EX01)": {
+        "arb": 1,
+        "first_seen": "2026-03-10",
+        "major": 3,
+        "md5": "c4bf38e7b691b79f32605967303b77e0",
         "minor": 0,
         "regions": [
           "NA"
