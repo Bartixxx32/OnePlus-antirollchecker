@@ -3188,6 +3188,50 @@
   "PKX110": {
     "device_name": "OnePlus 13T",
     "versions": {
+      "PKX110_16.0.0.213(CN01)": {
+        "arb": 0,
+        "first_seen": "2026-03-10",
+        "major": 3,
+        "md5": "e6d61fc87ad841d90922b0703ea79d14",
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "archived"
+      },
+      "PKX110_16.0.1.301(CN01)": {
+        "arb": 0,
+        "first_seen": "2026-03-10",
+        "major": 3,
+        "md5": "77b376681c8ac0a7a4d1a65e0a6b12f5",
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "archived"
+      },
+      "PKX110_16.0.2.400(CN01)": {
+        "arb": 0,
+        "first_seen": "2026-03-10",
+        "major": 3,
+        "md5": "9e24382675ed8ca6fede1da4b69043f7",
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "archived"
+      },
+      "PKX110_16.0.3.501(CN01)": {
+        "arb": 1,
+        "first_seen": "2026-03-10",
+        "major": 3,
+        "md5": "4b08985d35a0fa74c5041ac96d5efb0b",
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "archived"
+      },
       "PKX110_16.0.3.502(CN01)": {
         "arb": 1,
         "first_seen": "2026-03-10",
@@ -3253,6 +3297,17 @@
         "first_seen": "2026-02-04",
         "major": 3,
         "md5": "0912b44f2bcc36beec783941e1016c47",
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "archived"
+      },
+      "PLK110_16.0.5.701(CN01)": {
+        "arb": 0,
+        "first_seen": "2026-03-10",
+        "major": 3,
+        "md5": "9e9688532ff5ec1eb19b4ca9de363199",
         "minor": 0,
         "regions": [
           "CN"
