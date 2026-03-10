@@ -2849,6 +2849,22 @@
       }
     }
   },
+  "PKX110": {
+    "device_name": "OnePlus 13T",
+    "versions": {
+      "PKX110_16.0.3.502(CN01)": {
+        "arb": 1,
+        "first_seen": "2026-03-10",
+        "major": 3,
+        "md5": "cd9a0b7b1b34f2402637f07ad93c9639",
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "current"
+      }
+    }
+  },
   "PLK110": {
     "device_name": "OnePlus 15",
     "versions": {
