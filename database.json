@@ -153,6 +153,54 @@
       }
     }
   },
+  "CPH2381": {
+    "device_name": "OnePlus Nord CE 2 Lite",
+    "versions": {
+      "CPH2381_14.0.0.2700(EX01)": {
+        "arb": 0,
+        "first_seen": "2026-03-10",
+        "major": 0,
+        "md5": "99fec841bb7c8abb22a11dd88b8bd73e",
+        "minor": 120,
+        "regions": [
+          "IN"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2409": {
+    "device_name": "OnePlus Nord CE 2 Lite",
+    "versions": {
+      "CPH2409_14.0.0.2700(EX01)": {
+        "arb": 0,
+        "first_seen": "2026-03-10",
+        "major": 0,
+        "md5": "b101fe4ea22334155ed14c766bb8d1ab",
+        "minor": 120,
+        "regions": [
+          "GLO"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2409EEA": {
+    "device_name": "OnePlus Nord CE 2 Lite",
+    "versions": {
+      "CPH2409_14.0.0.2700(EX01)": {
+        "arb": 0,
+        "first_seen": "2026-03-10",
+        "major": 0,
+        "md5": "4b628f389081f069651aaf8663ce1355",
+        "minor": 120,
+        "regions": [
+          "EU"
+        ],
+        "status": "current"
+      }
+    }
+  },
   "CPH2413": {
     "device_name": "OnePlus 10T",
     "versions": {
@@ -411,6 +459,70 @@
       }
     }
   },
+  "CPH2459": {
+    "device_name": "OnePlus Nord N20",
+    "versions": {
+      "CPH2459_11_C.24": {
+        "arb": 0,
+        "first_seen": "2026-03-10",
+        "major": 0,
+        "md5": "b2dac2cc86b0f5315ce9f5ff861ac6cb",
+        "minor": 120,
+        "regions": [
+          "NA"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2465": {
+    "device_name": "OnePlus Nord CE 3 Lite",
+    "versions": {
+      "CPH2465_15.0.0.1600(EX01)": {
+        "arb": 0,
+        "first_seen": "2026-03-10",
+        "major": 0,
+        "md5": "72d0c27bdc608978592e04cdce62b016",
+        "minor": 120,
+        "regions": [
+          "GLO"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2465EEA": {
+    "device_name": "OnePlus Nord CE 3 Lite",
+    "versions": {
+      "CPH2465_15.0.0.1600(EX01)": {
+        "arb": 0,
+        "first_seen": "2026-03-10",
+        "major": 0,
+        "md5": "b08db09891b432a2ef4648888803668a",
+        "minor": 120,
+        "regions": [
+          "EU"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2467": {
+    "device_name": "OnePlus Nord CE 3 Lite",
+    "versions": {
+      "CPH2467_15.0.0.1600(EX01)": {
+        "arb": 0,
+        "first_seen": "2026-03-10",
+        "major": 0,
+        "md5": "479a7a4ead369db901314969f4728b37",
+        "minor": 120,
+        "regions": [
+          "IN"
+        ],
+        "status": "current"
+      }
+    }
+  },
   "CPH2487": {
     "device_name": "OnePlus 11R",
     "versions": {
@@ -520,6 +632,230 @@
           "TH",
           "MY",
           "SG",
+          "VN"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2513": {
+    "device_name": "OnePlus Nord N30",
+    "versions": {
+      "CPH2513_11_C.62": {
+        "arb": 0,
+        "first_seen": "2026-03-10",
+        "major": 0,
+        "md5": "0aee1de71ddf7ea9251b46d0bce01fdd",
+        "minor": 120,
+        "regions": [
+          "NA"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2525": {
+    "device_name": "Oppo Reno10 Pro",
+    "versions": {
+      "CPH2525_15.0.0.1600(EX01)": {
+        "arb": 0,
+        "first_seen": "2026-03-10",
+        "major": 0,
+        "md5": "7ffcae1c7860325a9db9ebd846c9f072",
+        "minor": 120,
+        "regions": [
+          "APC"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2525EEA": {
+    "device_name": "Oppo Reno10 Pro",
+    "versions": {
+      "CPH2525_15.0.0.1600(EX01)": {
+        "arb": 0,
+        "first_seen": "2026-03-10",
+        "major": 0,
+        "md5": "5331936b839bd4267088fa89b461d060",
+        "minor": 120,
+        "regions": [
+          "EEA"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2525ID": {
+    "device_name": "Oppo Reno10 Pro",
+    "versions": {
+      "CPH2525_15.0.0.1600(EX01)": {
+        "arb": 0,
+        "first_seen": "2026-03-10",
+        "major": 0,
+        "md5": "b502f539b8bc91a414018a5eebd68250",
+        "minor": 120,
+        "regions": [
+          "ID"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2525IN": {
+    "device_name": "Oppo Reno10 Pro",
+    "versions": {
+      "CPH2525_13.1.1.147(EX01)": {
+        "arb": 0,
+        "first_seen": "2026-03-10",
+        "major": 0,
+        "md5": "abb2a1ef3450621de3073f48d5215b19",
+        "minor": 120,
+        "regions": [
+          "IN"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2525MEA": {
+    "device_name": "Oppo Reno10 Pro",
+    "versions": {
+      "CPH2525_15.0.0.1600(EX01)": {
+        "arb": 0,
+        "first_seen": "2026-03-10",
+        "major": 0,
+        "md5": "d75e6df459ee8ed050e99e143a9ffe1c",
+        "minor": 120,
+        "regions": [
+          "MEA"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2525MY": {
+    "device_name": "Oppo Reno10 Pro",
+    "versions": {
+      "CPH2525_15.0.0.1600(EX01)": {
+        "arb": 0,
+        "first_seen": "2026-03-10",
+        "major": 0,
+        "md5": "0da7796177735bd736ae027aad6ffbde",
+        "minor": 120,
+        "regions": [
+          "MY"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2525OCA": {
+    "device_name": "Oppo Reno10 Pro",
+    "versions": {
+      "CPH2525_15.0.0.1600(EX01)": {
+        "arb": 0,
+        "first_seen": "2026-03-10",
+        "major": 0,
+        "md5": "6554872f0d665c9a77cefb972287a7e5",
+        "minor": 120,
+        "regions": [
+          "OCA"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2525PH": {
+    "device_name": "Oppo Reno10 Pro",
+    "versions": {
+      "CPH2525_15.0.0.1600(EX01)": {
+        "arb": 0,
+        "first_seen": "2026-03-10",
+        "major": 0,
+        "md5": "1f6e08b4926652d580b2fce0839b95f4",
+        "minor": 120,
+        "regions": [
+          "PH"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2525SA": {
+    "device_name": "Oppo Reno10 Pro",
+    "versions": {
+      "CPH2525_15.0.0.1600(EX01)": {
+        "arb": 0,
+        "first_seen": "2026-03-10",
+        "major": 0,
+        "md5": "c1f95a3c9caae0d0a89c62e9d6589fea",
+        "minor": 120,
+        "regions": [
+          "SA"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2525SG": {
+    "device_name": "Oppo Reno10 Pro",
+    "versions": {
+      "CPH2525_15.0.0.1600(EX01)": {
+        "arb": 0,
+        "first_seen": "2026-03-10",
+        "major": 0,
+        "md5": "3835050ceee6140cf06affe9cf7db263",
+        "minor": 120,
+        "regions": [
+          "SG"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2525TH": {
+    "device_name": "Oppo Reno10 Pro",
+    "versions": {
+      "CPH2525_15.0.0.1600(EX01)": {
+        "arb": 0,
+        "first_seen": "2026-03-10",
+        "major": 0,
+        "md5": "b72448e68f81b4efb446f67570935915",
+        "minor": 120,
+        "regions": [
+          "TH"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2525TW": {
+    "device_name": "Oppo Reno10 Pro",
+    "versions": {
+      "CPH2525_15.0.0.1600(EX01)": {
+        "arb": 0,
+        "first_seen": "2026-03-10",
+        "major": 0,
+        "md5": "d3aeff26f756d3b5e7e85de67999662c",
+        "minor": 120,
+        "regions": [
+          "TW"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2525VN": {
+    "device_name": "Oppo Reno10 Pro",
+    "versions": {
+      "CPH2525_15.0.0.1600(EX01)": {
+        "arb": 0,
+        "first_seen": "2026-03-10",
+        "major": 0,
+        "md5": "945e55b6759b3147e2661e0db1cdb0a3",
+        "minor": 120,
+        "regions": [
           "VN"
         ],
         "status": "current"
@@ -2856,7 +3192,7 @@
         "arb": 1,
         "first_seen": "2026-03-10",
         "major": 3,
-        "md5": "cd9a0b7b1b34f2402637f07ad93c9639",
+        "md5": null,
         "minor": 0,
         "regions": [
           "CN"
