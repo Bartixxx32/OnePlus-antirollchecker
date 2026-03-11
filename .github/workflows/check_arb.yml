@@ -88,6 +88,9 @@ jobs:
     needs: [setup-matrix, prepare-tools]
     runs-on: ubuntu-latest
     continue-on-error: true
+    env:
+      TELEGRAM_BOT_TOKEN: ${{ secrets.BOTTOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
     strategy:
       fail-fast: false
       matrix: ${{ fromJson(needs.setup-matrix.outputs.matrix) }}
@@ -291,9 +294,6 @@ jobs:
       
       - name: Send Telegram Notification
         if: steps.update_history.outputs.is_new == 'true' && env.TELEGRAM_BOT_TOKEN != '' && env.TELEGRAM_CHAT_ID != ''
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.BOTTOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           # Extract ARB from result.json (it is always created by previous steps if we are here)
           ARB=$(python3 -c "import sys, json; print(json.load(open('result.json')).get('arb_index', 'Unknown'))")
