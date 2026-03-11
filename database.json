@@ -3252,6 +3252,17 @@
         "regions": [
           "CN"
         ],
+        "status": "archived"
+      },
+      "PKX110_16.0.5.701(CN01)": {
+        "arb": 1,
+        "first_seen": "2026-03-11",
+        "major": 3,
+        "md5": "77e2399108c694805d711231570bc2dc",
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
         "status": "current"
       }
     }
