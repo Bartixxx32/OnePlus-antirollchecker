@@ -10,6 +10,11 @@ on:
       variant:
         description: 'Target Variant (optional, e.g. CN)'
         required: false
+      force_recheck:
+        description: 'Force recheck all firmwares'
+        required: false
+        default: false
+        type: boolean
 
 concurrency:
   group: ${{ github.workflow }}
@@ -147,6 +152,7 @@ jobs:
 
       - name: Cache ARB Data
         id: cache-arb
+        if: github.event.inputs.force_recheck != 'true'
         uses: actions/cache@v4
         with:
           path: firmware_data/
