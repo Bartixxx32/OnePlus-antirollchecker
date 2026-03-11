@@ -17,7 +17,8 @@
       "minor": 0,
       "first_seen": "2026-03-11",
       "last_checked": "2026-03-11",
-      "status": "archived"
+      "status": "archived",
+      "md5": "77b376681c8ac0a7a4d1a65e0a6b12f5"
     },
     {
       "version": "PKX110_16.0.3.502(CN01)",
@@ -26,7 +27,8 @@
       "minor": 0,
       "first_seen": "2026-03-11",
       "last_checked": "2026-03-11",
-      "status": "archived"
+      "status": "archived",
+      "md5": "cd9a0b7b1b34f2402637f07ad93c9639"
     },
     {
       "version": "PKX110_16.0.2.400(CN01)",
@@ -35,7 +37,8 @@
       "minor": 0,
       "first_seen": "2026-03-11",
       "last_checked": "2026-03-11",
-      "status": "archived"
+      "status": "archived",
+      "md5": "9e24382675ed8ca6fede1da4b69043f7"
     },
     {
       "version": "PKX110_16.0.3.501(CN01)",
@@ -44,7 +47,8 @@
       "minor": 0,
       "first_seen": "2026-03-11",
       "last_checked": "2026-03-11",
-      "status": "archived"
+      "status": "archived",
+      "md5": "4b08985d35a0fa74c5041ac96d5efb0b"
     }
   ],
   "device": "OnePlus 13T",
