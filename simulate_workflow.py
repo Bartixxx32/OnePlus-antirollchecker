@@ -88,17 +88,16 @@ def main():
     # Patch requests in fetch_firmware module to return our mocked data
     with patch('fetch_firmware.requests.get') as mock_get:
         # We need to simulate the response structure expected by get_from_oos_api
-        mock_resp_url = MagicMock()
-        mock_resp_url.status_code = 200
-        mock_resp_url.text = mock_url
-        mock_resp_url.raise_for_status = MagicMock()
+        mock_resp = MagicMock()
+        mock_resp.status_code = 200
+        mock_resp.json.return_value = {
+            "download_url": mock_url,
+            "version_number": mock_version,
+            "md5sum": "d41d8cd98f00b204e9800998ecf8427e"
+        }
+        mock_resp.raise_for_status = MagicMock()
 
-        mock_resp_ver = MagicMock()
-        mock_resp_ver.status_code = 200
-        mock_resp_ver.text = mock_version
-        mock_resp_ver.raise_for_status = MagicMock()
-
-        mock_get.side_effect = [mock_resp_url, mock_resp_ver]
+        mock_get.return_value = mock_resp
 
         fetched_info = fetch_firmware.get_from_oos_api(target_device, target_variant)
 
