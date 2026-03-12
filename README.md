@@ -281,6 +281,19 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 |:---|:---|:---|:---|:---|:---|:---|
 | India | CPH2723 | CPH2723_16.0.3.501(EX01)<br><details><summary>MD5</summary><code>8d3c3d88720a2097c02e7de193a9d969</code></details> | **1** | Major: 3, Minor: 0 | 2026-03-12 | ❌ |
 
+<details>
+<summary>📜 <b>India History</b> (click to expand)</summary>
+
+| Firmware Version | ARB | OEM Version | Last Seen | Safe |
+|:---|:---|:---|:---|:---|
+| CPH2723_16.0.2.400(EX01)<br><details><summary>MD5</summary><code>83966b4ce06e0839f885db0f1f32d674</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-12 | ✅ |
+| CPH2723_16.0.1.303(EX01)<br><details><summary>MD5</summary><code>7f19055c5ac85499a884c510e6494423</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-12 | ✅ |
+| CPH2723_16.0.0.211(EX01)<br><details><summary>MD5</summary><code>b8f70c2ec2e24c9bcadfcae362580780</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-12 | ✅ |
+| CPH2723_15.0.2.601(EX01)<br><details><summary>MD5</summary><code>295320daf7b8f7c7299c0be010a689c4</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-12 | ✅ |
+
+</details>
+
+
 ---
 
 ### OnePlus Open
@@ -1066,9 +1079,9 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | OCA | CPH2525OCA | CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>6554872f0d665c9a77cefb972287a7e5</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-12 | ✅ |
 | SA | CPH2525SA | CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>c1f95a3c9caae0d0a89c62e9d6589fea</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-12 | ✅ |
 | PH | CPH2525PH | CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>1f6e08b4926652d580b2fce0839b95f4</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-12 | ✅ |
+| EEA | CPH2525EEA | CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>5331936b839bd4267088fa89b461d060</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-12 | ✅ |
 | India | CPH2525IN | CPH2525_13.1.1.147(EX01)<br><details><summary>MD5</summary><code>abb2a1ef3450621de3073f48d5215b19</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-12 | ✅ |
 | MEA | CPH2525MEA | CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>d75e6df459ee8ed050e99e143a9ffe1c</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-12 | ✅ |
-| EEA | CPH2525EEA | CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>5331936b839bd4267088fa89b461d060</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-12 | ✅ |
 
 ---
 
@@ -1273,4 +1286,4 @@ Prefer a native mobile experience? We have an official Android app on F-Droid! C
 > **Important:** The bot **only** works within this group to prevent spam and ensure availability. DM checks are disabled.
 
 ---
-*Last updated: 2026-03-12 08:20 UTC*
+*Last updated: 2026-03-12 08:24 UTC*
