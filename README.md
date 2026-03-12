@@ -275,6 +275,14 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 ---
 
+### OnePlus 13s
+
+| Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
+|:---|:---|:---|:---|:---|:---|:---|
+| India | CPH2723 | CPH2723_16.0.3.501(EX01)<br><details><summary>MD5</summary><code>8d3c3d88720a2097c02e7de193a9d969</code></details> | **1** | Major: 3, Minor: 0 | 2026-03-12 | ❌ |
+
+---
+
 ### OnePlus Open
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
@@ -1265,4 +1273,4 @@ Prefer a native mobile experience? We have an official Android app on F-Droid! C
 > **Important:** The bot **only** works within this group to prevent spam and ensure availability. DM checks are disabled.
 
 ---
-*Last updated: 2026-03-12 07:31 UTC*
+*Last updated: 2026-03-12 08:20 UTC*
