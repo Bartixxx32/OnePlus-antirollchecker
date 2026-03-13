@@ -54,6 +54,7 @@ def main():
     parser.add_argument("--token", required=True, help="Telegram Bot Token")
     parser.add_argument("--chat-id", required=True, help="Telegram Chat ID")
     parser.add_argument("--device", required=True, help="Device Name")
+    parser.add_argument("--title", help="Custom message title")
     parser.add_argument("--variant", help="Device Variant (Optional)")
     parser.add_argument("--version", required=True, help="Firmware Version")
     parser.add_argument("--arb", required=True, help="ARB Index")
@@ -123,8 +124,10 @@ def main():
     safe_arb = escape_markdown(args.arb)
     safe_md5 = args.md5 # Used in code block
     
+    title = args.title if args.title else "✨ *Firmware Analysis Result* ✨"
+
     message += (
-        f"✨ *Firmware Analysis Result* ✨\n\n"
+        f"{title}\n\n"
         f"📱 *Device:* {safe_device}\n"
     )
 
