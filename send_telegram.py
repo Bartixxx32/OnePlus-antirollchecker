@@ -3,6 +3,8 @@ import argparse
 import requests
 import sys
 
+DEFAULT_TITLE = "✨ *Firmware Analysis Result* ✨"
+
 def send_telegram_message(token, chat_id, message, reply_to=None, message_thread_id=None):
     url = f"https://api.telegram.org/bot{token}/sendMessage"
     payload = {
@@ -54,7 +56,7 @@ def main():
     parser.add_argument("--token", required=True, help="Telegram Bot Token")
     parser.add_argument("--chat-id", required=True, help="Telegram Chat ID")
     parser.add_argument("--device", required=True, help="Device Name")
-    parser.add_argument("--title", help="Custom message title")
+    parser.add_argument("--title", help=f"Custom message title (default: {DEFAULT_TITLE})")
     parser.add_argument("--variant", help="Device Variant (Optional)")
     parser.add_argument("--version", required=True, help="Firmware Version")
     parser.add_argument("--arb", required=True, help="ARB Index")
@@ -124,10 +126,13 @@ def main():
     safe_arb = escape_markdown(args.arb)
     safe_md5 = args.md5 # Used in code block
     
-    title = args.title if args.title else "✨ *Firmware Analysis Result* ✨"
+    if args.title:
+        safe_title = f"*{escape_markdown(args.title)}*"
+    else:
+        safe_title = DEFAULT_TITLE
 
     message += (
-        f"{title}\n\n"
+        f"{safe_title}\n\n"
         f"📱 *Device:* {safe_device}\n"
     )
 

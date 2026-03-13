@@ -309,7 +309,7 @@ jobs:
           python3 send_telegram.py \
             --token "$TELEGRAM_BOT_TOKEN" \
             --chat-id "$TELEGRAM_CHAT_ID" \
-            --title "🆕 *New Firmware Detected!*" \
+            --title "🆕 New Firmware Detected!" \
             --device "${{ steps.get_details.outputs.device_name }}" \
             --variant "${{ matrix.variant }}" \
             --version "${{ steps.get_details.outputs.version }}" \
