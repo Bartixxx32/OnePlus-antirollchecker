@@ -280,9 +280,10 @@ async def status_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
             for v in current_versions:
                 v_det = versions[v]
                 arb = v_det.get('arb', '?')
+                md5 = v_det.get('md5', 'N/A')
                 regions = ", ".join(v_det.get('regions', []))
                 status_icon = "🟢" if arb == 0 else "🔴"
-                text += f"  • `{v}` ({regions}) - ARB: {arb} {status_icon}\n"
+                text += f"  • `{v}` ({regions}) - ARB: {arb} {status_icon}\n    MD5: `{md5}`\n"
         text += "\n"
         
     if len(found_models) > 10:
