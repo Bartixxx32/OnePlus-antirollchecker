@@ -145,7 +145,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 |:---|:---|:---|:---|:---|:---|:---|
 | Global | CPH2653 | CPH2653_16.0.3.501(EX01)<br><details><summary>MD5</summary><code>55382e1f872388d09a539d64ce09d65e</code></details> | **1** | Major: 3, Minor: 0 | 2026-03-16 | ❌ |
 | Europe | CPH2653 | CPH2653_16.0.3.501(EX01)<br><details><summary>MD5</summary><code>4a5640ac2917ad8baeb334b286572b46</code></details> | **1** | Major: 3, Minor: 0 | 2026-03-16 | ❌ |
-| India | CPH2649 | CPH2649_16.0.3.501(EX01)<br><details><summary>MD5</summary><code>c5987fd6c9052e39b5dce573883b2f97</code></details> | **1** | Major: 3, Minor: 0 | 2026-03-16 | ❌ |
+| India | CPH2649 | CPH2649_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>6998133c921d754bf06e693455aabcdc</code></details> | **1** | Major: 3, Minor: 0 | 2026-03-16 | ❌ |
 | NA | CPH2655 | CPH2655_15.0.0.832(EX01)<br><details><summary>MD5</summary><code>7d0ce94be24263393454ae140889a523</code></details> | **0** | Major: 3, Minor: 0 | 2026-03-16 | ✅ |
 | China | PJZ110 | PJZ110_16.0.5.701(CN01)<br><details><summary>MD5</summary><code>552380013ed612435e17774068d3dc38</code></details> | **1** | Major: 3, Minor: 0 | 2026-03-16 | ❌ |
 
@@ -178,6 +178,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| CPH2649_16.0.3.501(EX01)<br><details><summary>MD5</summary><code>c5987fd6c9052e39b5dce573883b2f97</code></details> | 1 | Major: 3, Minor: 0 | 2026-03-16 | ❌ |
 | CPH2649_15.0.0.860(EX01)<br><details><summary>MD5</summary><code>7792bdabc5d756298ab6891d6fa4711c</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-10 | ✅ |
 | CPH2649_16.0.2.402(EX01)<br><details><summary>MD5</summary><code>b8bb28a60b49b828a5e5fb93a9a76c55</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-25 | ✅ |
 | CPH2649_16.0.0.210(EX01)<br><details><summary>MD5</summary><code>9207f5e5aa09b192946b30026f6569d3</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-13 | ✅ |
@@ -305,7 +306,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
 | Europe | CPH2551 | CPH2551_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>c6e40fec39894a2f17684fc5d826dbce</code></details> | **0** | Major: 2, Minor: 0 | 2026-03-16 | ✅ |
-| India | CPH2551 | CPH2551_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>33f9bce9ecb17b30e8f84f97c91edb7f</code></details> | **0** | Major: 2, Minor: 0 | 2026-03-16 | ✅ |
+| India | CPH2551 | CPH2551_16.0.3.505(EX01)<br><details><summary>MD5</summary><code>992c3916a53a72e8e0b7449a60e5c83f</code></details> | **0** | Major: 2, Minor: 0 | 2026-03-16 | ✅ |
 | NA | CPH2551 | CPH2551_15.0.0.822(EX01)<br><details><summary>MD5</summary><code>9ee66cf78b25acaee3681d138f04c04f</code></details> | **0** | Major: 2, Minor: 0 | 2026-03-16 | ✅ |
 
 <details>
@@ -327,6 +328,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| CPH2551_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>33f9bce9ecb17b30e8f84f97c91edb7f</code></details> | 0 | Major: 2, Minor: 0 | 2026-03-16 | ✅ |
 | CPH2551_16.0.2.400(EX01)<br><details><summary>MD5</summary><code>dc72dd05d476d8ecb198014177572cbf</code></details> | 0 | Major: 2, Minor: 0 | 2026-03-10 | ✅ |
 | CPH2551_16.0.1.300(EX01)<br><details><summary>MD5</summary><code>d131d0fcd87a0aa53cf5cf2549d239a2</code></details> | 0 | Major: 2, Minor: 0 | 2026-02-26 | ✅ |
 | CPH2551_16.0.0.201(EX01)<br><details><summary>MD5</summary><code>0969618dfdfaaf6ca8867ac16f3dc32e</code></details> | 0 | Major: 2, Minor: 0 | 2026-02-04 | ✅ |
@@ -1082,9 +1084,9 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | APC | CPH2525 | CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>7ffcae1c7860325a9db9ebd846c9f072</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-16 | ✅ |
 | OCA | CPH2525OCA | CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>6554872f0d665c9a77cefb972287a7e5</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-16 | ✅ |
 | SA | CPH2525SA | CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>c1f95a3c9caae0d0a89c62e9d6589fea</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-16 | ✅ |
-| India | CPH2525IN | CPH2525_13.1.1.147(EX01)<br><details><summary>MD5</summary><code>abb2a1ef3450621de3073f48d5215b19</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-16 | ✅ |
-| EEA | CPH2525EEA | CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>5331936b839bd4267088fa89b461d060</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-16 | ✅ |
 | MEA | CPH2525MEA | CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>d75e6df459ee8ed050e99e143a9ffe1c</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-16 | ✅ |
+| EEA | CPH2525EEA | CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>5331936b839bd4267088fa89b461d060</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-16 | ✅ |
+| India | CPH2525IN | CPH2525_13.1.1.147(EX01)<br><details><summary>MD5</summary><code>abb2a1ef3450621de3073f48d5215b19</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-16 | ✅ |
 | PH | CPH2525PH | CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>1f6e08b4926652d580b2fce0839b95f4</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-16 | ✅ |
 
 ---
@@ -1290,4 +1292,4 @@ Prefer a native mobile experience? We have an official Android app on F-Droid! C
 > **Important:** The bot **only** works within this group to prevent spam and ensure availability. DM checks are disabled.
 
 ---
-*Last updated: 2026-03-16 11:54 UTC*
+*Last updated: 2026-03-16 12:04 UTC*
