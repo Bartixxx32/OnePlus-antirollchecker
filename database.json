@@ -1871,6 +1871,18 @@
           "EU",
           "GLO"
         ],
+        "status": "archived"
+      },
+      "CPH2747_16.0.5.700(EX01)": {
+        "arb": 0,
+        "first_seen": "2026-03-16",
+        "major": 3,
+        "md5": "529891ce7bbbaf52357a7fdee83431ff",
+        "minor": 0,
+        "regions": [
+          "EU",
+          "GLO"
+        ],
         "status": "current"
       }
     }
