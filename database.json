@@ -3499,6 +3499,17 @@
         "regions": [
           "CN"
         ],
+        "status": "archived"
+      },
+      "PLQ110_16.0.5.700(CN01)": {
+        "arb": 1,
+        "first_seen": "2026-03-16",
+        "major": 3,
+        "md5": "d8f24e1cf3c2f0ef83fe6325dca9cc12",
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
         "status": "current"
       }
     }
@@ -3555,6 +3566,17 @@
         "first_seen": "2026-02-04",
         "major": 3,
         "md5": "44b826a364824bfc10d0720402b8822f",
+        "minor": 0,
+        "regions": [
+          "CN"
+        ],
+        "status": "archived"
+      },
+      "PLR110_16.0.5.702(CN01)": {
+        "arb": 0,
+        "first_seen": "2026-03-16",
+        "major": 3,
+        "md5": "d51484f274245087d9eecfbbe5af7c77",
         "minor": 0,
         "regions": [
           "CN"
