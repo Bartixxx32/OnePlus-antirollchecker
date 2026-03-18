@@ -43,7 +43,7 @@ DEVICE_ORDER = [
     "Nord CE 4 Lite", "Nord CE 4", "Nord CE 3",
     "Nord CE 3 Lite", "Nord CE 2 Lite",
     "Nord N30", "Nord N20",
-    "Nord 1", "Nord N200 5G", "Nord N10 5G", "Nord N100",
+    "Nord 1", "Nord N200 5G",
     
     # China Exclusives (Ace)
     "Ace 6T", 
@@ -280,22 +280,6 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
         "name": "OnePlus Nord N200 5G",
         "models": {
             "NA": "DE2117"
-        },
-    },
-    "Nord N10 5G": {
-        "name": "OnePlus Nord N10 5G",
-        "models": {
-            "NA": "BE2026",
-            "EU": "BE2028",
-            "GLO": "BE2029"
-        },
-    },
-    "Nord N100": {
-        "name": "OnePlus Nord N100",
-        "models": {
-            "NA": "BE2011",
-            "EU": "BE2013",
-            "GLO": "BE2013"
         },
     },
     "Nord N30": {
@@ -538,9 +522,6 @@ SPRING_MAPPING = {
     "oneplus_7_pro": "OP 7 PRO",
     "oneplus_7": "OP 7",
     "oneplus_nord_1": "OP NORD",
-    "oneplus_nord_n200_5g": "OP NORD N200 5G",
-    "oneplus_nord_n10": "OP NORD N10",
-    "oneplus_nord_n100": "OP NORD N100",
     "oneplus_nord_ce_4_lite": "OP NORD CE 4 LITE",
     "oneplus_nord_ce_4": "OP NORD CE 4",
     "oneplus_nord_ce_3": "OP NORD CE 3",
@@ -584,7 +565,6 @@ OOS_MAPPING = {
     "7 Pro": "oneplus_7_pro",
     "7": "oneplus_7",
     "Nord 1": "oneplus_nord",
-    "Nord N200 5G": "oneplus_nord_n200_5g",
     # Nords
     "Nord 5": "oneplus_nord_5",
     "Nord 4": "oneplus_nord_4",
@@ -611,9 +591,7 @@ OOS_MAPPING = {
     "Reno10 Pro": "oppo_reno10_pro",
     "Nord N30": "oneplus_nord_n30",
     "Nord N20": "oneplus_nord_n20",
-    "Nord N200 5G": "oneplus_nord_n200_5g",
-    "Nord N10 5G": "oneplus_nord_n10",
-    "Nord N100": "oneplus_nord_n100",
+    "Nord N200 5G": "oneplus_nord_n200",
     "Nord CE 4 Lite": "oneplus_nord_ce_4_lite",
     "Nord CE 4": "oneplus_nord_ce_4",
     "Nord CE 3": "oneplus_nord_ce_3",
