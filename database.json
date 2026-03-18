@@ -2134,6 +2134,22 @@
       }
     }
   },
+  "DE2117": {
+    "device_name": "OnePlus Nord N200 5G",
+    "versions": {
+      "DE2117_11_C.34": {
+        "arb": 0,
+        "first_seen": "2026-03-18",
+        "major": 0,
+        "md5": "29ba37ef58d043e6f1d6088946844fae",
+        "minor": 120,
+        "regions": [
+          "NA"
+        ],
+        "status": "current"
+      }
+    }
+  },
   "GM1901": {
     "device_name": "OnePlus 7",
     "versions": {
