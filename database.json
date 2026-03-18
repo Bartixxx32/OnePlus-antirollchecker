@@ -31,6 +31,38 @@
       }
     }
   },
+  "BE2013": {
+    "device_name": "OnePlus Nord N100",
+    "versions": {
+      "OnePlusN100Oxygen_14_2310092319": {
+        "arb": 0,
+        "first_seen": "2026-03-18",
+        "major": 0,
+        "md5": "1e0899169c583e567883f997493e46b2",
+        "minor": 120,
+        "regions": [
+          "EU"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "BE2028": {
+    "device_name": "OnePlus Nord N10 5G",
+    "versions": {
+      "OnePlusN10Oxygen_14_2311081250": {
+        "arb": 0,
+        "first_seen": "2026-03-18",
+        "major": 0,
+        "md5": "e0042802f1ff13237b70e9a164d0287a",
+        "minor": 120,
+        "regions": [
+          "EU"
+        ],
+        "status": "current"
+      }
+    }
+  },
   "CPH2173": {
     "device_name": "Oppo Find X3 Pro",
     "versions": {
@@ -981,6 +1013,22 @@
       }
     }
   },
+  "CPH2567": {
+    "device_name": "OnePlus Nord CE 3",
+    "versions": {
+      "CPH2569_15.0.0.1604(EX01)": {
+        "arb": 0,
+        "first_seen": "2026-03-18",
+        "major": 0,
+        "md5": "4182a58172f56cac990e1b3685113af7",
+        "minor": 120,
+        "regions": [
+          "IN"
+        ],
+        "status": "current"
+      }
+    }
+  },
   "CPH2573": {
     "device_name": "OnePlus 12",
     "versions": {
@@ -1199,6 +1247,50 @@
         "minor": 0,
         "regions": [
           "NA"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2613": {
+    "device_name": "OnePlus Nord CE 4",
+    "versions": {
+      "CPH2613_16.0.3.500(EX01)": {
+        "arb": 0,
+        "first_seen": "2026-03-18",
+        "major": 2,
+        "md5": "3990e7a5b3eb6dd87b82ab4ee9efebbd",
+        "minor": 0,
+        "regions": [
+          "IN"
+        ],
+        "status": "current"
+      }
+    }
+  },
+  "CPH2619": {
+    "device_name": "OnePlus Nord CE 4 Lite",
+    "versions": {
+      "CPH2619_16.0.1.303(EX01)": {
+        "arb": 0,
+        "first_seen": "2026-03-18",
+        "major": 0,
+        "md5": "317e7a25185b6acfa3188b188609d552",
+        "minor": 120,
+        "regions": [
+          "IN"
+        ],
+        "status": "current"
+      },
+      "CPH2621_16.0.1.303(EX01)": {
+        "arb": 0,
+        "first_seen": "2026-03-18",
+        "major": 0,
+        "md5": "b7c365069ec43d6ac385bcc54709ea07",
+        "minor": 120,
+        "regions": [
+          "GLO",
+          "EU"
         ],
         "status": "current"
       }
