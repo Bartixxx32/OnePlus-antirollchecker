@@ -102,15 +102,16 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
-| Global | CPH2769 | CPH2769_16.0.3.503(EX01)<br><details><summary>MD5</summary><code>bbf8456ba035fd52691af46cf4d87222</code></details> | **0** | Major: 3, Minor: 0 | 2026-03-18 | ✅ |
+| Global | CPH2769 | CPH2769_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>ffb1c3aa990044f327a8171e6162af21</code></details> | **0** | Major: 3, Minor: 0 | 2026-03-18 | ✅ |
 | Europe | CPH2769 | CPH2769_16.0.3.501(EX01)<br><details><summary>MD5</summary><code>44828fb8b432f3c38dadef0d7cb7f400</code></details> | **0** | Major: 3, Minor: 0 | 2026-03-18 | ✅ |
-| India | CPH2767 | CPH2767_16.0.3.503(EX01)<br><details><summary>MD5</summary><code>2c9829fafdd4921812f293a4e3ed2d26</code></details> | **0** | Major: 3, Minor: 0 | 2026-03-18 | ✅ |
+| India | CPH2767 | CPH2767_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>13f5c6f6338480d641c381e2644dd3f7</code></details> | **0** | Major: 3, Minor: 0 | 2026-03-18 | ✅ |
 
 <details>
 <summary>📜 <b>Global History</b> (click to expand)</summary>
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| CPH2769_16.0.3.503(EX01)<br><details><summary>MD5</summary><code>bbf8456ba035fd52691af46cf4d87222</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-18 | ✅ |
 | CPH2769_16.0.3.501(EX01)<br><details><summary>MD5</summary><code>cb319baa6d71168d9743f4b0492859f5</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-10 | ✅ |
 | CPH2769_16.0.2.401(EX01)<br><details><summary>MD5</summary><code>557df71dadd39f65968ad8bbc0ce2293</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-06 | ✅ |
 
@@ -130,6 +131,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| CPH2767_16.0.3.503(EX01)<br><details><summary>MD5</summary><code>2c9829fafdd4921812f293a4e3ed2d26</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-18 | ✅ |
 | CPH2767_16.0.2.401(EX01)<br><details><summary>MD5</summary><code>310d2f5237de8789f0cb8f886b4c0bb4</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-10 | ✅ |
 | CPH2767_16.0.1.305(EX01)<br><details><summary>MD5</summary><code>40f81334dddadd8e1917148c57cbc713</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-25 | ✅ |
 | CPH2767_16.0.3.501(EX01)<br><details><summary>MD5</summary><code>b66486ede893305d3c4b297cef45d3f2</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-11 | ✅ |
@@ -1087,8 +1089,8 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | APC | CPH2525 | CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>7ffcae1c7860325a9db9ebd846c9f072</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-18 | ✅ |
 | OCA | CPH2525OCA | CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>6554872f0d665c9a77cefb972287a7e5</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-18 | ✅ |
 | SA | CPH2525SA | CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>c1f95a3c9caae0d0a89c62e9d6589fea</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-18 | ✅ |
-| PH | CPH2525PH | CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>1f6e08b4926652d580b2fce0839b95f4</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-18 | ✅ |
 | India | CPH2525IN | CPH2525_13.1.1.147(EX01)<br><details><summary>MD5</summary><code>abb2a1ef3450621de3073f48d5215b19</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-18 | ✅ |
+| PH | CPH2525PH | CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>1f6e08b4926652d580b2fce0839b95f4</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-18 | ✅ |
 | MEA | CPH2525MEA | CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>d75e6df459ee8ed050e99e143a9ffe1c</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-18 | ✅ |
 | EEA | CPH2525EEA | CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>5331936b839bd4267088fa89b461d060</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-18 | ✅ |
 
@@ -1121,11 +1123,20 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 |:---|:---|:---|:---|:---|:---|:---|
 | SG | CPH2671 | CPH2671_16.0.2.401(EX01)<br><details><summary>MD5</summary><code>de7a9e13bbc55161b557883f77edb1ca</code></details> | **0** | Major: 3, Minor: 0 | 2026-03-18 | ✅ |
 | MY | CPH2671 | CPH2671_16.0.2.401(EX01)<br><details><summary>MD5</summary><code>01a344e7df285c3cc131bb2726620b73</code></details> | **0** | Major: 3, Minor: 0 | 2026-03-18 | ✅ |
-| ID | CPH2671 | CPH2671_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>18f07a08f16946cd095decd8945ced7f</code></details> | **0** | Major: 3, Minor: 0 | 2026-03-18 | ✅ |
+| ID | CPH2671 | CPH2671_16.0.5.700(EX01)<br><details><summary>MD5</summary><code>11fc5bc7dad9dd4b15d1166f0d42034f</code></details> | **0** | Major: 3, Minor: 0 | 2026-03-18 | ✅ |
 | TH | CPH2671 | CPH2671_16.0.2.401(EX01)<br><details><summary>MD5</summary><code>d7aa0bf5f0f86e68711f68f2ff8bc7c1</code></details> | **0** | Major: 3, Minor: 0 | 2026-03-18 | ✅ |
 | APC | CPH2671 | CPH2671_16.0.2.401(EX01)<br><details><summary>MD5</summary><code>8092cdb0dcf5a44e27ff8b863bbcde89</code></details> | **0** | Major: 3, Minor: 0 | 2026-03-18 | ✅ |
 | MX | CPH2671 | CPH2671_16.0.1.302(EX01)<br><details><summary>MD5</summary><code>18d2e0aadec512467ad8f7b38c40d115</code></details> | **0** | Major: 3, Minor: 0 | 2026-03-18 | ✅ |
 | China | PKV110 | PKH110_16.0.3.500(CN01)<br><details><summary>MD5</summary><code>0f0d5e5ca45e64af32b99f7401d65a12</code></details> | **0** | Major: 3, Minor: 0 | 2026-03-18 | ✅ |
+
+<details>
+<summary>📜 <b>ID History</b> (click to expand)</summary>
+
+| Firmware Version | ARB | OEM Version | Last Seen | Safe |
+|:---|:---|:---|:---|:---|
+| CPH2671_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>18f07a08f16946cd095decd8945ced7f</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-18 | ✅ |
+
+</details>
 
 <details>
 <summary>📜 <b>China History</b> (click to expand)</summary>
@@ -1304,4 +1315,4 @@ Prefer a native mobile experience? We have an official Android app on F-Droid! C
 > **Important:** The bot **only** works within this group to prevent spam and ensure availability. DM checks are disabled.
 
 ---
-*Last updated: 2026-03-18 02:48 UTC*
+*Last updated: 2026-03-18 13:35 UTC*
