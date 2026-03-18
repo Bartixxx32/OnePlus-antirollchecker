@@ -635,6 +635,17 @@
           "VN"
         ],
         "status": "current"
+      },
+      "CPH2499_16.0.3.505(EX01)": {
+        "arb": 0,
+        "first_seen": "2026-03-18",
+        "major": 2,
+        "md5": "c7978bb9b21f5ab05179ce1957e1e7fa",
+        "minor": 0,
+        "regions": [
+          "ID"
+        ],
+        "status": "current"
       }
     }
   },
@@ -2559,6 +2570,17 @@
         "first_seen": "2026-02-11",
         "major": 2,
         "md5": "6789b9fa5b12cea96885ed118c29cf7b",
+        "minor": 0,
+        "regions": [
+          "IN"
+        ],
+        "status": "archived"
+      },
+      "NE2211_16.0.3.520(EX01)": {
+        "arb": 0,
+        "first_seen": "2026-03-18",
+        "major": 2,
+        "md5": "46f577fb0b2656d629b5993c3a7762e3",
         "minor": 0,
         "regions": [
           "IN"
