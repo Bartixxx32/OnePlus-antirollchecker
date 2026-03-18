@@ -1,0 +1,18 @@
+{
+  "history": [
+    {
+      "version": "CPH2569_15.0.0.1604(EX01)",
+      "arb": 0,
+      "major": 0,
+      "minor": 120,
+      "first_seen": "2026-03-18",
+      "last_checked": "2026-03-18",
+      "status": "current",
+      "md5": "4182a58172f56cac990e1b3685113af7"
+    }
+  ],
+  "device": "OnePlus Nord CE 3",
+  "device_id": "Nord CE 3",
+  "region": "IN",
+  "model": "CPH2567"
+}

@@ -794,6 +794,32 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 ---
 
+### OnePlus Nord CE 4 Lite
+
+| Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
+|:---|:---|:---|:---|:---|:---|:---|
+| Global | CPH2619 | CPH2621_16.0.1.303(EX01)<br><details><summary>MD5</summary><code>b7c365069ec43d6ac385bcc54709ea07</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-18 | ✅ |
+| Europe | CPH2619 | CPH2621_16.0.1.303(EX01)<br><details><summary>MD5</summary><code>7f747226ec77f81583f012f71a24a974</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-18 | ✅ |
+| India | CPH2619 | CPH2619_16.0.1.303(EX01)<br><details><summary>MD5</summary><code>317e7a25185b6acfa3188b188609d552</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-18 | ✅ |
+
+---
+
+### OnePlus Nord CE 4
+
+| Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
+|:---|:---|:---|:---|:---|:---|:---|
+| India | CPH2613 | CPH2613_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>3990e7a5b3eb6dd87b82ab4ee9efebbd</code></details> | **0** | Major: 2, Minor: 0 | 2026-03-18 | ✅ |
+
+---
+
+### OnePlus Nord CE 3
+
+| Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
+|:---|:---|:---|:---|:---|:---|:---|
+| India | CPH2567 | CPH2569_15.0.0.1604(EX01)<br><details><summary>MD5</summary><code>4182a58172f56cac990e1b3685113af7</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-18 | ✅ |
+
+---
+
 ### OnePlus Nord CE 3 Lite
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
@@ -836,6 +862,22 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 |:---|:---|:---|:---|:---|:---|:---|
 | Europe | AC2003 | AC2003_11_F.24<br><details><summary>MD5</summary><code>c704f8b99a545a5a53b3bbe141bfb0ec</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-18 | ✅ |
 | India | AC2001 | AC2001_11_F.24<br><details><summary>MD5</summary><code>fa6ff6d1f91c0549371c28932f7b37cc</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-18 | ✅ |
+
+---
+
+### OnePlus Nord N10 5G
+
+| Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
+|:---|:---|:---|:---|:---|:---|:---|
+| Europe | BE2028 | OnePlusN10Oxygen_14_2311081250<br><details><summary>MD5</summary><code>e0042802f1ff13237b70e9a164d0287a</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-18 | ✅ |
+
+---
+
+### OnePlus Nord N100
+
+| Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
+|:---|:---|:---|:---|:---|:---|:---|
+| Europe | BE2013 | OnePlusN100Oxygen_14_2310092319<br><details><summary>MD5</summary><code>1e0899169c583e567883f997493e46b2</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-18 | ✅ |
 
 ---
 
@@ -1089,10 +1131,10 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | APC | CPH2525 | CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>7ffcae1c7860325a9db9ebd846c9f072</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-18 | ✅ |
 | OCA | CPH2525OCA | CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>6554872f0d665c9a77cefb972287a7e5</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-18 | ✅ |
 | SA | CPH2525SA | CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>c1f95a3c9caae0d0a89c62e9d6589fea</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-18 | ✅ |
-| India | CPH2525IN | CPH2525_13.1.1.147(EX01)<br><details><summary>MD5</summary><code>abb2a1ef3450621de3073f48d5215b19</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-18 | ✅ |
-| PH | CPH2525PH | CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>1f6e08b4926652d580b2fce0839b95f4</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-18 | ✅ |
 | MEA | CPH2525MEA | CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>d75e6df459ee8ed050e99e143a9ffe1c</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-18 | ✅ |
+| India | CPH2525IN | CPH2525_13.1.1.147(EX01)<br><details><summary>MD5</summary><code>abb2a1ef3450621de3073f48d5215b19</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-18 | ✅ |
 | EEA | CPH2525EEA | CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>5331936b839bd4267088fa89b461d060</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-18 | ✅ |
+| PH | CPH2525PH | CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>1f6e08b4926652d580b2fce0839b95f4</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-18 | ✅ |
 
 ---
 
@@ -1315,4 +1357,4 @@ Prefer a native mobile experience? We have an official Android app on F-Droid! C
 > **Important:** The bot **only** works within this group to prevent spam and ensure availability. DM checks are disabled.
 
 ---
-*Last updated: 2026-03-18 13:35 UTC*
+*Last updated: 2026-03-18 14:08 UTC*

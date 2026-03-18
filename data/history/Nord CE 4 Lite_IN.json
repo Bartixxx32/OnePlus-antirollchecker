@@ -1,0 +1,18 @@
+{
+  "history": [
+    {
+      "version": "CPH2619_16.0.1.303(EX01)",
+      "arb": 0,
+      "major": 0,
+      "minor": 120,
+      "first_seen": "2026-03-18",
+      "last_checked": "2026-03-18",
+      "status": "current",
+      "md5": "317e7a25185b6acfa3188b188609d552"
+    }
+  ],
+  "device": "OnePlus Nord CE 4 Lite",
+  "device_id": "Nord CE 4 Lite",
+  "region": "IN",
+  "model": "CPH2619"
+}

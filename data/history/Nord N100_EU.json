@@ -1,0 +1,18 @@
+{
+  "history": [
+    {
+      "version": "OnePlusN100Oxygen_14_2310092319",
+      "arb": 0,
+      "major": 0,
+      "minor": 120,
+      "first_seen": "2026-03-18",
+      "last_checked": "2026-03-18",
+      "status": "current",
+      "md5": "1e0899169c583e567883f997493e46b2"
+    }
+  ],
+  "device": "OnePlus Nord N100",
+  "device_id": "Nord N100",
+  "region": "EU",
+  "model": "BE2013"
+}
