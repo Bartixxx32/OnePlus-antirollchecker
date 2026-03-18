@@ -1592,6 +1592,17 @@
         "regions": [
           "ID"
         ],
+        "status": "archived"
+      },
+      "CPH2671_16.0.5.700(EX01)": {
+        "arb": 0,
+        "first_seen": "2026-03-18",
+        "major": 3,
+        "md5": "11fc5bc7dad9dd4b15d1166f0d42034f",
+        "minor": 0,
+        "regions": [
+          "ID"
+        ],
         "status": "current"
       }
     }
@@ -1965,6 +1976,17 @@
         "regions": [
           "IN"
         ],
+        "status": "archived"
+      },
+      "CPH2767_16.0.5.701(EX01)": {
+        "arb": 0,
+        "first_seen": "2026-03-18",
+        "major": 3,
+        "md5": "13f5c6f6338480d641c381e2644dd3f7",
+        "minor": 0,
+        "regions": [
+          "IN"
+        ],
         "status": "current"
       }
     }
@@ -2001,6 +2023,17 @@
         "first_seen": "2026-02-11",
         "major": 3,
         "md5": "bbf8456ba035fd52691af46cf4d87222",
+        "minor": 0,
+        "regions": [
+          "GLO"
+        ],
+        "status": "archived"
+      },
+      "CPH2769_16.0.5.701(EX01)": {
+        "arb": 0,
+        "first_seen": "2026-03-18",
+        "major": 3,
+        "md5": "ffb1c3aa990044f327a8171e6162af21",
         "minor": 0,
         "regions": [
           "GLO"
