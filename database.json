@@ -1579,6 +1579,17 @@
         "regions": [
           "IN"
         ],
+        "status": "archived"
+      },
+      "CPH2661_16.0.5.700(EX01)": {
+        "arb": 0,
+        "first_seen": "2026-03-19",
+        "major": 3,
+        "md5": "f4d9b971fe52613b02edfe8225e86c95",
+        "minor": 0,
+        "regions": [
+          "IN"
+        ],
         "status": "current"
       }
     }
