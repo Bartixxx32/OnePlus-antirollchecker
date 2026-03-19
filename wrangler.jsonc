@@ -5,9 +5,7 @@
   "observability": {
     "enabled": true
   },
-  "assets": {
-    "directory": "."
-  },
+  "pages_build_output_dir": ".",
   "compatibility_flags": [
     "nodejs_compat"
   ],
