@@ -35,6 +35,10 @@
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23da3633'/><text x='50' y='70' font-family='Arial' font-size='60' font-weight='bold' fill='white' text-anchor='middle'>1+</text></svg>">
     <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
         :root {
             --bg-color: #0d1117;
             --card-bg: #161b22;
@@ -55,6 +59,8 @@
             margin: 0;
             padding: 20px;
             line-height: 1.5;
+            overflow-x: hidden;
+            width: 100%;
         }
 
         .container {
@@ -210,6 +216,10 @@
         }
 
         @media (max-width: 600px) {
+            body {
+                padding: 15px 10px;
+            }
+
             .grid {
                 grid-template-columns: 1fr;
             }
@@ -294,6 +304,7 @@
         .search-container {
             margin-top: 20px;
             text-align: center;
+            padding: 0 10px;
         }
 
         #search-input {
