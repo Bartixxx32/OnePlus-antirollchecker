@@ -98,7 +98,7 @@ def format_uptime():
     parts.append(f"{seconds}s")
     return " ".join(parts)
 
-DB_URL = "https://oneplusantiroll.netlify.app/database.json"
+DB_URL = "https://oparb.pages.dev/database.json"
 
 async def fetch_database():
     try:

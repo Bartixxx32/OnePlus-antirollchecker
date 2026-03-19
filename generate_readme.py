@@ -161,7 +161,7 @@ def generate_readme(history_data: Dict) -> str:
         '',
         'Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository monitors firmware updates and tracks ARB changes over time.',
         '',
-        '**🌐 ARB Info Website:** [https://oneplusantiroll.netlify.app/](https://oneplusantiroll.netlify.app/)',
+        '**🌐 ARB Info Website:** [https://oparb.pages.dev/](https://oparb.pages.dev/)',
         '',
         '## 🤖 OnePlus ARB Checker Bot',
         '',
