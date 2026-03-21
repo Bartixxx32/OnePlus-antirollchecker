@@ -282,7 +282,7 @@ async def status_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 arb = v_det.get('arb', '?')
                 md5 = v_det.get('md5', 'N/A')
                 regions = ", ".join(v_det.get('regions', []))
-                status_icon = "🟢" if arb == 0 else "🔴"
+                status_icon = "🟢" if arb == 0 else "🔴" if arb > 0 else "⚠️" if arb == -2 else "❓"
                 text += f"  • `{v}` ({regions}) - ARB: {arb} {status_icon}\n    MD5: `{md5}`\n"
         text += "\n"
         
@@ -317,7 +317,7 @@ async def latest(update: Update, context: ContextTypes.DEFAULT_TYPE, is_callback
     for first_seen, dev_name, v_name, v_det in all_fw[:5]:
         arb = v_det.get('arb', '?')
         regions = ", ".join(v_det.get('regions', []))
-        status_icon = "🟢" if arb == 0 else "🔴"
+        status_icon = "🟢" if arb == 0 else "🔴" if arb > 0 else "⚠️" if arb == -2 else "❓"
         
         date_str = ""
         if first_seen != '2000-01-01':

@@ -185,6 +185,12 @@
             color: #e3b341;
         }
 
+        .badge-undetectable {
+            background-color: rgba(255, 152, 0, 0.15);
+            border: 1px solid rgba(255, 152, 0, 0.4);
+            color: #ff9800;
+        }
+
         .version-cell {
             max-width: 200px;
             overflow: hidden;
@@ -415,6 +421,8 @@
                                     <span class="badge badge-safe">Safe</span>
                                     {% elif variant.arb > 0 %}
                                     <span class="badge badge-danger">Protected</span>
+                                    {% elif variant.arb == -2 %}
+                                    <span class="badge badge-undetectable">⚠️ Undetectable protected</span>
                                     {% else %}
                                     <span class="badge badge-warning">Unknown</span>
                                     {% endif %}
@@ -467,6 +475,8 @@
                                                         <span class="badge badge-safe">Safe</span>
                                                         {% elif entry.arb > 0 %}
                                                         <span class="badge badge-danger">Protected</span>
+                                                        {% elif entry.arb == -2 %}
+                                                        <span class="badge badge-undetectable">⚠️ Undetectable protected</span>
                                                         {% else %}
                                                         <span class="badge badge-warning">Unknown</span>
                                                         {% endif %}

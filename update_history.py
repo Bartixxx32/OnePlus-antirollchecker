@@ -6,6 +6,7 @@ Update JSON history files with new ARB check results.
 import json
 import argparse
 import sys
+import re
 from datetime import datetime
 from pathlib import Path
 from typing import Dict
@@ -148,6 +149,16 @@ def main():
         
         history['model'] = model_num
     
+    # Hardcode for Nord CE 3 Lite undetectable ARB
+    if device_short == "Nord CE 3 Lite" and int(arb) == 0:
+        # Match .XXXX before optional (EX01) or similar
+        match = re.search(r'\.(\d{4})', version)
+        if match:
+            version_num = int(match.group(1))
+            if version_num >= 1600:
+                print(f"Hardcoding ARB to -2 for {device_short} {version} (Undetectable Protected)")
+                arb = -2
+
     is_new = update_history_entry(history, version, int(arb), int(major), int(minor), args.historical, md5=args.md5)
     save_history(history_file, history)
     

@@ -111,7 +111,9 @@ def process_data(history_data):
             variant_entry['history'].sort(key=lambda x: (x.get('last_checked', ''), x.get('version', '')), reverse=True)
             # Add helper for status
             # ARB 0 means safe (downgrade possible), >0 means protected
+            # ARB -2 means undetectable protected (Nord CE 3 Lite)
             variant_entry['is_safe'] = (variant_entry['arb'] == 0)
+            variant_entry['is_undetectable'] = (variant_entry['arb'] == -2)
 
             variant_entry['short_version'] = variant_entry['version']
 

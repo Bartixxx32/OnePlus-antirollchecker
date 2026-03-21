@@ -80,7 +80,7 @@ def generate_device_section(device_id: str, device_name: str, history_data: Dict
             model = data.get('model', 'Unknown')
             
             # Status icon
-            safe_icon = "✅" if arb == 0 else "❌" if arb > 0 else "❓"
+            safe_icon = "✅" if arb == 0 else "❌" if arb > 0 else "⚠️" if arb == -2 else "❓"
                 
             # MD5 formating
             md5 = current_entry.get('md5')
@@ -125,9 +125,7 @@ def generate_device_section(device_id: str, device_name: str, history_data: Dict
                     maj = entry.get('major', '?')
                     min_ = entry.get('minor', '?')
                     ls = entry.get('last_checked', 'Unknown')
-                    s_icon = "✅" if a == 0 else "❌" if a > 0 else "❓"
-                    ls = entry.get('last_checked', 'Unknown')
-                    s_icon = "✅" if a == 0 else "❌" if a > 0 else "❓"
+                    s_icon = "✅" if a == 0 else "❌" if a > 0 else "⚠️" if a == -2 else "❓"
                     
                     md5_hist = entry.get('md5')
                     md5_hist_str = ""

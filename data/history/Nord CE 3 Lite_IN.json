@@ -2,7 +2,7 @@
   "history": [
     {
       "version": "CPH2467_15.0.0.1800(EX01)",
-      "arb": 0,
+      "arb": -2,
       "major": 0,
       "minor": 120,
       "first_seen": "2026-03-21",
@@ -12,7 +12,7 @@
     },
     {
       "version": "CPH2467_15.0.0.1600(EX01)",
-      "arb": 0,
+      "arb": -2,
       "major": 0,
       "minor": 120,
       "first_seen": "2026-03-10",
