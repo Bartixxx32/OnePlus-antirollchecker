@@ -1,8 +1,10 @@
 import shutil
 import logging
 import os
+import json
 from pathlib import Path
 from jinja2 import Template
+from config import REGION_MAPPING
 
 def generate(template_path: Path, output_path: Path, db_path: Path):
     """Core logic to generate the site."""
@@ -14,7 +16,14 @@ def generate(template_path: Path, output_path: Path, db_path: Path):
         template = Template(template_content)
         
         ga_id = os.environ.get("GOOGLE_ANALYTICS_ID")
-        rendered = template.render(ga_id=ga_id)
+        
+        # Convert mapping to JSON for injection into script tag
+        region_map_json = json.dumps(REGION_MAPPING)
+        
+        rendered = template.render(
+            ga_id=ga_id,
+            region_map_json=region_map_json
+        )
         
         output_path.write_text(rendered, encoding="utf-8")
         logging.info(f"Site generated successfully with Jinja metadata at {output_path}")

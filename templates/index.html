@@ -228,15 +228,14 @@
             vertical-align: middle;
             white-space: nowrap;
             overflow: hidden;
-            text-overflow: ellipsis;
         }
 
         tbody tr:last-child td { border-bottom: none; }
         tbody tr:hover { background: var(--row-hover); }
 
         .card-body > table { table-layout: fixed; }
-        .col-region { width: 14%; }
-        .col-firmware { width: 40%; }
+        .col-region { width: 15%; min-width: 110px; }
+        .col-firmware { width: 39%; }
         .col-status { width: 23%; text-align: center; }
         .col-actions { width: 23%; text-align: center; }
 
@@ -568,23 +567,41 @@
             /* Make status badge text smaller */
             .badge { font-size: 0.55rem; padding: 2px 4px; }
             
-            /* Define mobile column widths */
-            .col-region { width: 10%; }
-            .col-firmware { width: 40%; }
-            .col-status { width: 30%; text-align: center; }
-            .col-actions { width: 20%; text-align: center; }
+            .col-region { width: 15%; min-width: 110px; }
+            .col-firmware { width: 39%; }
+            .col-status { width: 23%; text-align: center; }
+            .col-actions { width: 23%; text-align: center; }
             
-            /* Shrink button padding slightly to fit */
-            .btn-history { padding: 4px 8px; font-size: 0.68rem; }
-
-            /* Show history button in a separate tappable row below firmware on mobile */
-            .mobile-history-wrap {
-                display: block;
-                margin-top: 4px;
-            }
-
             .footer-links { gap: 12px; }
             .footer-bottom { flex-direction: column; align-items: flex-start; }
+        }
+
+        /* Responsive Badge Styling (Always active, media-queried inside) */
+        .region-full, .region-short { 
+            display: inline-block; 
+            padding: 2px 6px; 
+            background: rgba(255,255,255,0.05); 
+            border-radius: 4px; 
+            font-weight: 600; 
+            font-size: 0.7rem; 
+            border: 1px solid rgba(255,255,255,0.1); 
+        }
+
+        .region-model-sub {
+            display: block;
+            font-size: 0.65rem;
+            color: var(--text-dim);
+            margin-top: 4px;
+            font-family: inherit;
+        }
+
+        @media (max-width: 600px) {
+            .region-full { display: none; }
+            .region-short { display: inline-block; }
+        }
+        @media (min-width: 601px) {
+            .region-short { display: none; }
+            .region-full { display: inline-block; }
         }
     </style>
 </head>
@@ -728,32 +745,12 @@
             return 0;
         };
 
+        // Canonical mapping injected from config.py via Jinja
+        const regionMap = {{ region_map_json | safe if region_map_json else '{}' }};
+
         // Map compact region codes to human-readable labels for display
         const getRegionName = (code) => {
-            if (!code) return 'Unknown';
-            const map = {
-                GLO: 'Global',
-                GLB: 'Global',
-                IN: 'India',
-                EU: 'Europe',
-                EEA: 'Europe',
-                NA: 'North America',
-                US: 'United States',
-                CN: 'China',
-                SG: 'Singapore',
-                MY: 'Malaysia',
-                TW: 'Taiwan',
-                ID: 'Indonesia',
-                TH: 'Thailand',
-                VN: 'Vietnam',
-                APC: 'Asia Pacific',
-                OCA: 'Oceania',
-                EG: 'Egypt',
-                SA: 'Saudi Arabia',
-                MX: 'Mexico',
-                VISIBLE: 'Visible USA'
-            };
-            return map[code] || code;
+            return regionMap[code] || code;
         };
 
         const renderBadge = (v) => {
@@ -770,12 +767,19 @@
                     rows = `<tr><td colspan="4" style="text-align:center; padding:20px; color: var(--text-dim);">No data available</td></tr>`;
                 } else {
                     device.variants.forEach(variant => {
-                        const histId = `history-${device.id}-${variant.region_name.replace(/\\s+/g, '-')}`;
-                        const hasHistory = variant.history && variant.history.length > 0;
+                        const regionFull = getRegionName(variant.region_name);
+                        const regionShort = variant.region_name;
                         
+                        const hasHistory = variant.history && variant.history.length > 0;
+                        const histId = `history-${device.id}-${variant.region_name.replace(/\s+/g, '-')}`;
+
                         rows += `
                         <tr>
-                            <td><span class="region-badge region-${variant.region_name}">${getRegionName(variant.region_name)}</span></td>
+                            <td class="col-region">
+                                <span class="region-full">${regionFull}</span>
+                                <span class="region-short">${regionShort}</span>
+                                <div class="region-model-sub">${variant.model || ''}</div>
+                            </td>
                             <td>
                                 <div class="firmware-title-wrap">
                                     <div class="firmware-title">${variant.version || 'Unknown'}</div>
@@ -905,8 +909,10 @@
 
                     for (const r of v.regions || []) {
                         if (!byDevice[devName].variantsMap[r]) {
-                            byDevice[devName].variantsMap[r] = { region_name: r, history: [], regions: [] }; // Initialize regions array
+                            byDevice[devName].variantsMap[r] = { region_name: r, model: modelKey, history: [], regions: [] };
                         }
+                        // Update model if not set (ensures we have model number per region)
+                        if (!byDevice[devName].variantsMap[r].model) byDevice[devName].variantsMap[r].model = modelKey;
                         const vr = byDevice[devName].variantsMap[r];
                         
                         // Add region to the regions array if not already present

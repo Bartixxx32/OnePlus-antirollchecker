@@ -2,9 +2,8 @@ import json
 from pathlib import Path
 from datetime import datetime, timezone
 from typing import Dict, List, Optional
-from config import DEVICE_ORDER, DEVICE_METADATA
+from config import DEVICE_ORDER, DEVICE_METADATA, REGION_MAPPING
 import re
-
 from hardcode_rules import is_hardcode_protected, version_sort_key
 
 def load_history(file_path: Path) -> Dict:
@@ -15,17 +14,9 @@ def load_history(file_path: Path) -> Dict:
     except FileNotFoundError:
         return {}
 
-def get_region_name(region_code: str) -> str:
-    """Convert region code to human readable name."""
-    names = {
-        'GLO': 'Global',
-        'EU': 'Europe',
-        'IN': 'India',
-        'CN': 'China',
-        'NA': 'NA',
-        'VISIBLE': 'Visible USA'
-    }
-    return names.get(region_code, region_code)
+def get_region_name(variant: str) -> str:
+    """Map compact region codes to human-readable labels."""
+    return REGION_MAPPING.get(variant, variant)
 
 def generate_device_section(device_id: str, device_name: str, history_data: Dict) -> List[str]:
     """Generate Markdown section for a specific device."""

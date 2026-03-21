@@ -11,6 +11,33 @@ USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTM
 HISTORY_DIR = "data/history"
 GOOGLE_ANALYTICS_ID = "G-7B8F6LHTVF"
 
+# Region Mapping (used for README and Website)
+REGION_MAPPING = {
+    'GLO': 'Global',
+    'GLB': 'Global',
+    'IN': 'India',
+    'EU': 'Europe',
+    'EEA': 'Europe',
+    'NA': 'North America',
+    'US': 'United States',
+    'CN': 'China',
+    'SG': 'Singapore',
+    'MY': 'Malaysia',
+    'TW': 'Taiwan',
+    'ID': 'Indonesia',
+    'TH:': 'Thailand',
+    'VN': 'Vietnam',
+    'APC': 'Asia Pacific',
+    'OCA': 'Oceania',
+    'EG': 'Egypt',
+    'SA': 'Saudi Arabia',
+    'MX': 'Mexico',
+    'VISIBLE': 'Visible USA',
+    'TH': 'Thailand',
+    'PH': 'Philippines',
+    'MEA': 'Middle East'
+}
+
 # Type definitions
 class DeviceModels(TypedDict, total=False):
     GLO: str
