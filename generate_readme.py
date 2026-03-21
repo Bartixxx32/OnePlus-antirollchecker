@@ -5,7 +5,7 @@ from typing import Dict, List, Optional
 from config import DEVICE_ORDER, DEVICE_METADATA
 import re
 
-from hardcode_rules import is_hardcode_protected
+from hardcode_rules import is_hardcode_protected, version_sort_key
 
 def load_history(file_path: Path) -> Dict:
     """Load history from a JSON file."""
@@ -123,7 +123,7 @@ def generate_device_section(device_id: str, device_name: str, history_data: Dict
             history_entries = [e for e in data.get('history', []) if e.get('status') != 'current']
             
             # Sort history by firmware version descending (parse numeric parts for correct ordering)
-            history_entries.sort(key=lambda x: tuple(int(p) for p in re.findall(r'\d+', x.get('version', ''))), reverse=True)
+            history_entries.sort(key=lambda x: version_sort_key(x.get('version', '')), reverse=True)
             
             if history_entries: # Only show history if there's actual old versions
                 region_name = get_region_name(variant)

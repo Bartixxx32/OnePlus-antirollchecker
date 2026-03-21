@@ -711,6 +711,51 @@
             });
         }
 
+        const versionSortKey = (v) => {
+            if (!v) return [0];
+            const parts = v.match(/\d+/g);
+            return parts ? parts.map(Number) : [0];
+        };
+
+        const compareVersions = (a, b) => {
+            const ka = versionSortKey(a);
+            const kb = versionSortKey(b);
+            for (let i = 0; i < Math.max(ka.length, kb.length); i++) {
+                const na = ka[i] || 0;
+                const nb = kb[i] || 0;
+                if (na !== nb) return na - nb;
+            }
+            return 0;
+        };
+
+        // Map compact region codes to human-readable labels for display
+        const getRegionName = (code) => {
+            if (!code) return 'Unknown';
+            const map = {
+                GLO: 'Global',
+                GLB: 'Global',
+                IN: 'India',
+                EU: 'Europe',
+                EEA: 'Europe',
+                NA: 'North America',
+                US: 'United States',
+                CN: 'China',
+                SG: 'Singapore',
+                MY: 'Malaysia',
+                TW: 'Taiwan',
+                ID: 'Indonesia',
+                TH: 'Thailand',
+                VN: 'Vietnam',
+                APC: 'Asia Pacific',
+                OCA: 'Oceania',
+                EG: 'Egypt',
+                SA: 'Saudi Arabia',
+                MX: 'Mexico',
+                VISIBLE: 'Visible USA'
+            };
+            return map[code] || code;
+        };
+
         const renderBadge = (v) => {
             if (v.is_hardcoded) return `<span class="badge badge-hardcode" title="Anti-rollback is present but undetectable by standard tools"><span class="badge-dot"></span>Undetectable ARB</span>`;
             if (v.arb === 0) return `<span class="badge badge-safe"><span class="badge-dot"></span>Safe</span>`;
@@ -730,7 +775,7 @@
                         
                         rows += `
                         <tr>
-                            <td><span class="region-badge region-${variant.region_name}">${variant.region_name}</span></td>
+                            <td><span class="region-badge region-${variant.region_name}">${getRegionName(variant.region_name)}</span></td>
                             <td>
                                 <div class="firmware-title-wrap">
                                     <div class="firmware-title">${variant.version || 'Unknown'}</div>
@@ -860,10 +905,15 @@
 
                     for (const r of v.regions || []) {
                         if (!byDevice[devName].variantsMap[r]) {
-                            byDevice[devName].variantsMap[r] = { region_name: r, history: [] };
+                            byDevice[devName].variantsMap[r] = { region_name: r, history: [], regions: [] }; // Initialize regions array
                         }
                         const vr = byDevice[devName].variantsMap[r];
                         
+                        // Add region to the regions array if not already present
+                        if (!vr.regions.includes(r)) {
+                            vr.regions.push(r);
+                        }
+
                         if (v.status === 'current' || !vr.version) {
                             vr.version = v.version;
                             vr.arb = v.arb;
@@ -889,15 +939,7 @@
                 dev.variants = Object.values(dev.variantsMap).sort((a,b) => (regionScores[a.region_name] || 99) - (regionScores[b.region_name] || 99));
                 // Ensure history is sorted by version parsing numeric parts
                 for (const v of dev.variants) {
-                    v.history.sort((a,b) => {
-                        const aParts = (a.version.match(/\\d+/g)||[]).map(Number);
-                        const bParts = (b.version.match(/\\d+/g)||[]).map(Number);
-                        for(let i=0; i<Math.max(aParts.length, bParts.length); i++) {
-                            const av = aParts[i]||0, bv = bParts[i]||0;
-                            if(av!==bv) return bv - av;
-                        }
-                        return 0;
-                    });
+                    v.history.sort((a, b) => compareVersions(b.version, a.version));
                 }
             }
             

@@ -3,7 +3,7 @@ import re
 from pathlib import Path
 from typing import Dict, List, Optional
 from config import DEVICE_METADATA, DEVICE_ORDER
-from hardcode_rules import is_hardcode_protected
+from hardcode_rules import is_hardcode_protected, version_sort_key
 
 def load_history(file_path: Path) -> Dict:
     """Load history from a JSON file."""
@@ -13,10 +13,7 @@ def load_history(file_path: Path) -> Dict:
     except FileNotFoundError:
         return {}
 
-def version_sort_key(version_str: str) -> tuple:
-    """Extract numeric parts from version string for correct ordering."""
-    parts = re.findall(r'\d+', version_str)
-    return tuple(int(p) for p in parts)
+
 
 def generate_database():
     """Generates a unified database.json from history files."""
