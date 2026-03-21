@@ -551,6 +551,17 @@
         "regions": [
           "IN"
         ],
+        "status": "archived"
+      },
+      "CPH2467_15.0.0.1800(EX01)": {
+        "arb": 0,
+        "first_seen": "2026-03-21",
+        "major": 0,
+        "md5": "8726ea7cfe6acb09a6c31ac8a0e82679",
+        "minor": 120,
+        "regions": [
+          "IN"
+        ],
         "status": "current"
       }
     }
