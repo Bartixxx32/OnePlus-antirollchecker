@@ -1,6 +1,16 @@
 {
   "history": [
     {
+      "version": "CPH2551_16.0.3.505(EX01)",
+      "arb": 0,
+      "major": 2,
+      "minor": 0,
+      "first_seen": "2026-03-21",
+      "last_checked": "2026-03-21",
+      "status": "current",
+      "md5": "b0b7acd843ad2eb4e736fae0aa079e88"
+    },
+    {
       "version": "CPH2551_15.0.0.610(EX01)",
       "arb": 0,
       "major": 2,
@@ -27,7 +37,7 @@
       "minor": 0,
       "first_seen": "2026-02-06",
       "last_checked": "2026-03-21",
-      "status": "current",
+      "status": "archived",
       "md5": "c6e40fec39894a2f17684fc5d826dbce"
     },
     {
