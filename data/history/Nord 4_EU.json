@@ -1,6 +1,16 @@
 {
   "history": [
     {
+      "version": "CPH2663_16.0.2.401(EX01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-02-04",
+      "last_checked": "2026-03-21",
+      "status": "current",
+      "md5": "0fabc357b219c3f26b48c8a688f5f2eb"
+    },
+    {
       "version": "CPH2663_15.0.0.401(EX01)",
       "arb": 0,
       "major": 3,
@@ -21,14 +31,14 @@
       "md5": "ec7efaa59e89c06a1e4f433f955235ac"
     },
     {
-      "version": "CPH2663_16.0.2.401(EX01)",
+      "version": "CPH2663_16.0.1.301(EX01)",
       "arb": 0,
       "major": 3,
       "minor": 0,
       "first_seen": "2026-02-04",
-      "last_checked": "2026-03-21",
-      "status": "current",
-      "md5": "0fabc357b219c3f26b48c8a688f5f2eb"
+      "last_checked": "2026-03-18",
+      "status": "archived",
+      "md5": "57c99d530f04ff66f78acbfce67fb509"
     },
     {
       "version": "CPH2663_15.0.0.1301(EX01)",
@@ -39,16 +49,6 @@
       "last_checked": "2026-02-25",
       "status": "archived",
       "md5": "fac4c9f584f53d2e05315a980ee2eded"
-    },
-    {
-      "version": "CPH2663_16.0.1.301(EX01)",
-      "arb": 0,
-      "major": 3,
-      "minor": 0,
-      "first_seen": "2026-02-04",
-      "last_checked": "2026-03-18",
-      "status": "archived",
-      "md5": "57c99d530f04ff66f78acbfce67fb509"
     }
   ],
   "device": "OnePlus Nord 4",

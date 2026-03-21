@@ -41,16 +41,6 @@
       "md5": "084a427ff00012ce4b2dbeb683f1601d"
     },
     {
-      "version": "PJZ110_16.0.1.303(CN01)",
-      "arb": 0,
-      "major": 3,
-      "minor": 0,
-      "first_seen": "2026-02-04",
-      "last_checked": "2026-03-18",
-      "status": "archived",
-      "md5": "bbe9311fd7953f89af8faa8863920654"
-    },
-    {
       "version": "PJZ110_16.0.2.403(CN01)",
       "arb": 0,
       "major": 3,
@@ -59,6 +49,16 @@
       "last_checked": "2026-02-11",
       "status": "archived",
       "md5": "e88c0d89f3feffed5dc9e8d5c4ce99fb"
+    },
+    {
+      "version": "PJZ110_16.0.1.303(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-02-04",
+      "last_checked": "2026-03-18",
+      "status": "archived",
+      "md5": "bbe9311fd7953f89af8faa8863920654"
     }
   ],
   "device": "OnePlus 13",

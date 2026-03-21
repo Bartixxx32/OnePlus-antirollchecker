@@ -1,6 +1,16 @@
 {
   "history": [
     {
+      "version": "CPH2653_16.0.3.501(EX01)",
+      "arb": 1,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-02-04",
+      "last_checked": "2026-03-21",
+      "status": "current",
+      "md5": "55382e1f872388d09a539d64ce09d65e"
+    },
+    {
       "version": "CPH2653_16.0.0.210(EX01)",
       "arb": 0,
       "major": 3,
@@ -21,14 +31,14 @@
       "md5": "fdde59c8fb76a88491b44d44b8d2797d"
     },
     {
-      "version": "CPH2653_16.0.3.501(EX01)",
-      "arb": 1,
+      "version": "CPH2653_16.0.2.402(EX01)",
+      "arb": 0,
       "major": 3,
       "minor": 0,
       "first_seen": "2026-02-04",
-      "last_checked": "2026-03-21",
-      "status": "current",
-      "md5": "55382e1f872388d09a539d64ce09d65e"
+      "last_checked": "2026-02-11",
+      "status": "archived",
+      "md5": "515f5110ca780fda710ef1ff1ad9f100"
     },
     {
       "version": "CPH2653_16.0.1.304(EX01)",
@@ -39,16 +49,6 @@
       "last_checked": "2026-02-06",
       "status": "archived",
       "md5": "e854bde9b2f472d1cfb499c886b1cbe9"
-    },
-    {
-      "version": "CPH2653_16.0.2.402(EX01)",
-      "arb": 0,
-      "major": 3,
-      "minor": 0,
-      "first_seen": "2026-02-04",
-      "last_checked": "2026-02-11",
-      "status": "archived",
-      "md5": "515f5110ca780fda710ef1ff1ad9f100"
     }
   ],
   "device": "OnePlus 13",

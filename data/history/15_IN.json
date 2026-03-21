@@ -41,16 +41,6 @@
       "md5": "e9e6a68cc908913ac7a03578dc41366d"
     },
     {
-      "version": "CPH2745_16.0.2.401(EX01)",
-      "arb": 0,
-      "major": 3,
-      "minor": 0,
-      "first_seen": "2026-02-04",
-      "last_checked": "2026-02-11",
-      "status": "archived",
-      "md5": "45404f2227169e79b328fde3c008aef6"
-    },
-    {
       "version": "CPH2745_16.0.3.501(EX01)",
       "arb": 0,
       "major": 3,
@@ -59,6 +49,16 @@
       "last_checked": "2026-03-10",
       "status": "archived",
       "md5": "3b72808a5cd0d8133fb7311e53f5f7e3"
+    },
+    {
+      "version": "CPH2745_16.0.2.401(EX01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-02-04",
+      "last_checked": "2026-02-11",
+      "status": "archived",
+      "md5": "45404f2227169e79b328fde3c008aef6"
     }
   ],
   "device": "OnePlus 15",

@@ -11,16 +11,6 @@
       "md5": "b549aa2ee70831834ff52baada2f91f0"
     },
     {
-      "version": "OPD2403_16.0.0.202(EX01)",
-      "arb": 0,
-      "major": 3,
-      "minor": 0,
-      "first_seen": "2026-02-04",
-      "last_checked": "2026-03-18",
-      "status": "archived",
-      "md5": "d3dd8401e908aa37be0d34921c04068e"
-    },
-    {
       "version": "OPD2403_16.0.1.301(EX01)",
       "arb": 0,
       "major": 3,
@@ -29,6 +19,16 @@
       "last_checked": "2026-03-10",
       "status": "archived",
       "md5": "b45470fbeb6a785f32209d7711e37ffa"
+    },
+    {
+      "version": "OPD2403_16.0.0.202(EX01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-02-04",
+      "last_checked": "2026-03-18",
+      "status": "archived",
+      "md5": "d3dd8401e908aa37be0d34921c04068e"
     }
   ],
   "device": "OnePlus Pad 2",

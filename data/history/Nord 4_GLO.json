@@ -1,16 +1,6 @@
 {
   "history": [
     {
-      "version": "CPH2663_14.1.0.605(EX01)",
-      "arb": 0,
-      "major": 3,
-      "minor": 0,
-      "first_seen": "2026-02-13",
-      "last_checked": "2026-02-13",
-      "status": "archived",
-      "md5": "89d7e0f18fe0b145fc3ab2e3430a5fea"
-    },
-    {
       "version": "CPH2663_16.0.2.401(EX01)",
       "arb": 0,
       "major": 3,
@@ -19,6 +9,16 @@
       "last_checked": "2026-03-21",
       "status": "current",
       "md5": "94c3d509d75d2cf2ef7ff546a19d12d2"
+    },
+    {
+      "version": "CPH2663_14.1.0.605(EX01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-02-13",
+      "last_checked": "2026-02-13",
+      "status": "archived",
+      "md5": "89d7e0f18fe0b145fc3ab2e3430a5fea"
     },
     {
       "version": "CPH2663_16.0.1.301(EX01)",

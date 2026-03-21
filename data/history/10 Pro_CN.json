@@ -1,14 +1,14 @@
 {
   "history": [
     {
-      "version": "NE2210_14.0.0.300(CN01)",
+      "version": "NE2210_15.0.0.1301(CN01)",
       "arb": 0,
       "major": 2,
       "minor": 0,
-      "first_seen": "2026-02-13",
-      "last_checked": "2026-02-26",
-      "status": "archived",
-      "md5": "2f8b4435bd0db699fbce689846ed46ae"
+      "first_seen": "2026-02-04",
+      "last_checked": "2026-03-21",
+      "status": "current",
+      "md5": "d1b71c63550e15270a3580cf7220e927"
     },
     {
       "version": "NE2210_14.0.0.940(CN01)",
@@ -21,24 +21,14 @@
       "md5": "58d3a22b4a1e05194d5ce7374fe58282"
     },
     {
-      "version": "NE2210_15.0.0.1301(CN01)",
+      "version": "NE2210_14.0.0.300(CN01)",
       "arb": 0,
       "major": 2,
       "minor": 0,
-      "first_seen": "2026-02-04",
-      "last_checked": "2026-03-21",
-      "status": "current",
-      "md5": "d1b71c63550e15270a3580cf7220e927"
-    },
-    {
-      "version": "NE2210_15.0.0.1202(CN01)",
-      "arb": 0,
-      "major": 2,
-      "minor": 0,
-      "first_seen": "2026-02-04",
-      "last_checked": "2026-03-10",
+      "first_seen": "2026-02-13",
+      "last_checked": "2026-02-26",
       "status": "archived",
-      "md5": "851094bc9f6829aae556cb124ae35a55"
+      "md5": "2f8b4435bd0db699fbce689846ed46ae"
     },
     {
       "version": "NE2210_15.0.0.700(CN01)",
@@ -49,6 +39,16 @@
       "last_checked": "2026-02-25",
       "status": "archived",
       "md5": "83bfd50e3b49ebc8c73a3fa7f7ddae50"
+    },
+    {
+      "version": "NE2210_15.0.0.1202(CN01)",
+      "arb": 0,
+      "major": 2,
+      "minor": 0,
+      "first_seen": "2026-02-04",
+      "last_checked": "2026-03-10",
+      "status": "archived",
+      "md5": "851094bc9f6829aae556cb124ae35a55"
     }
   ],
   "device": "OnePlus 10 Pro",

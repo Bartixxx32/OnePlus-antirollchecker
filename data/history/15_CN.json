@@ -11,16 +11,6 @@
       "md5": "9e9688532ff5ec1eb19b4ca9de363199"
     },
     {
-      "version": "PLK110_16.0.1.301(CN01)",
-      "arb": 0,
-      "major": 3,
-      "minor": 0,
-      "first_seen": "2026-02-13",
-      "last_checked": "2026-02-13",
-      "status": "archived",
-      "md5": "18f1654b5f21e2af8c19190042a3c612"
-    },
-    {
       "version": "PLK110_16.0.2.401(CN01)",
       "arb": 0,
       "major": 3,
@@ -29,6 +19,16 @@
       "last_checked": "2026-02-13",
       "status": "archived",
       "md5": "6866e32183304023149907b7899c1963"
+    },
+    {
+      "version": "PLK110_16.0.1.301(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-02-13",
+      "last_checked": "2026-02-13",
+      "status": "archived",
+      "md5": "18f1654b5f21e2af8c19190042a3c612"
     },
     {
       "version": "PLK110_16.0.3.503(CN01)",
@@ -41,16 +41,6 @@
       "md5": "0912b44f2bcc36beec783941e1016c47"
     },
     {
-      "version": "PLK110_16.0.2.402(CN01)",
-      "arb": 0,
-      "major": 3,
-      "minor": 0,
-      "first_seen": "2026-02-04",
-      "last_checked": "2026-02-26",
-      "status": "archived",
-      "md5": "6e5ecbdbd9f49e6e5d054340f52b9641"
-    },
-    {
       "version": "PLK110_16.0.3.502(CN01)",
       "arb": 0,
       "major": 3,
@@ -59,6 +49,16 @@
       "last_checked": "2026-03-10",
       "status": "archived",
       "md5": "2620712413a1f04dfae81b64ec32eb6e"
+    },
+    {
+      "version": "PLK110_16.0.2.402(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-02-04",
+      "last_checked": "2026-02-26",
+      "status": "archived",
+      "md5": "6e5ecbdbd9f49e6e5d054340f52b9641"
     }
   ],
   "device": "OnePlus 15",

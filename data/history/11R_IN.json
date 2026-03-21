@@ -51,16 +51,6 @@
       "md5": "ab372586fbb439bad1e8cfa19dfee40f"
     },
     {
-      "version": "CPH2487_14.0.0.810(EX01)",
-      "arb": 0,
-      "major": 2,
-      "minor": 0,
-      "first_seen": "2026-02-04",
-      "last_checked": "2026-02-04",
-      "status": "archived",
-      "md5": "41257dd6ab4cd746d7855c6b320c2285"
-    },
-    {
       "version": "CPH2487_15.0.0.601(EX01)",
       "arb": 0,
       "major": 2,
@@ -69,6 +59,16 @@
       "last_checked": "2026-03-18",
       "status": "archived",
       "md5": "ca359a0253ba4d590b38bbc44dd55607"
+    },
+    {
+      "version": "CPH2487_14.0.0.810(EX01)",
+      "arb": 0,
+      "major": 2,
+      "minor": 0,
+      "first_seen": "2026-02-04",
+      "last_checked": "2026-02-04",
+      "status": "archived",
+      "md5": "41257dd6ab4cd746d7855c6b320c2285"
     }
   ],
   "device": "OnePlus 11R",
