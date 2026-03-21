@@ -137,6 +137,11 @@
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
+            vertical-align: middle;
+        }
+
+        .status-cell {
+            overflow: visible !important;
         }
 
         th {
@@ -391,11 +396,11 @@
                         <thead>
                             <tr>
                                 <th scope="col" style="width: 15%;">Region</th>
-                                <th scope="col" style="width: 35%;">Version</th>
-                                <th scope="col" style="width: 10%;">ARB</th>
-                                <th scope="col" style="width: 15%;">Status</th>
-                                <th scope="col" style="width: 15%;">Last Checked</th>
-                                <th scope="col" style="width: 10%;">Actions</th>
+                                <th scope="col" style="width: 30%;">Version</th>
+                                <th scope="col" style="width: 10%;" class="text-center">ARB</th>
+                                <th scope="col" style="width: 20%;" class="text-center">Status</th>
+                                <th scope="col" style="width: 15%;" class="text-center">Last Checked</th>
+                                <th scope="col" style="width: 10%;" class="text-center">Actions</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -418,20 +423,16 @@
                                     </details>
                                     {% endif %}
                                 </td>
-                                <td><strong>{{ variant.arb }}</strong></td>
-                                <td>
-                                    {% if variant.arb == 0 %}
-                                    <span class="badge badge-safe">Safe</span>
-                                    {% elif variant.arb > 0 %}
-                                    <span class="badge badge-danger">Protected</span>
-                                    {% elif variant.arb == -2 %}
-                                    <span class="badge badge-undetectable">⚠️ Undetectable protected</span>
-                                    {% else %}
-                                    <span class="badge badge-warning">Unknown</span>
-                                    {% endif %}
+                                <td class="text-center"><strong>{{ variant.arb }}</strong></td>
+                                <td class="text-center status-cell">
+                                    {%- if variant.arb == 0 -%}<span class="badge badge-safe">Safe</span>
+                                    {%- elif variant.arb > 0 -%}<span class="badge badge-danger">Protected</span>
+                                    {%- elif variant.arb == -2 -%}<span class="badge badge-undetectable">⚠️ Undetectable protected</span>
+                                    {%- else -%}<span class="badge badge-warning">Unknown</span>
+                                    {%- endif -%}
                                 </td>
-                                <td>{{ variant.last_checked }}</td>
-                                <td>
+                                <td class="text-center">{{ variant.last_checked }}</td>
+                                <td class="text-center">
                                     {% if variant.history|length > 0 %}
                                     <button class="toggle-history"
                                         onclick="toggleHistory('{{ device.id|replace(' ', '-') }}-{{ variant.region_name|replace(' ', '-') }}', this)">
@@ -451,10 +452,10 @@
                                             <thead>
                                                 <tr>
                                                     <th>Firmware Version</th>
-                                                    <th>ARB</th>
-                                                    <th>Status</th>
+                                                    <th class="text-center">ARB</th>
+                                                    <th class="text-center">Status</th>
                                                     <th>OEM Version</th>
-                                                    <th>Last Seen</th>
+                                                    <th class="text-center">Last Seen</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -472,20 +473,16 @@
                                                         </details>
                                                         {% endif %}
                                                     </td>
-                                                    <td>{{ entry.arb }}</td>
-                                                    <td>
-                                                        {% if entry.arb == 0 %}
-                                                        <span class="badge badge-safe">Safe</span>
-                                                        {% elif entry.arb > 0 %}
-                                                        <span class="badge badge-danger">Protected</span>
-                                                        {% elif entry.arb == -2 %}
-                                                        <span class="badge badge-undetectable">⚠️ Undetectable protected</span>
-                                                        {% else %}
-                                                        <span class="badge badge-warning">Unknown</span>
-                                                        {% endif %}
+                                                    <td class="text-center">{{ entry.arb }}</td>
+                                                    <td class="text-center status-cell">
+                                                        {%- if entry.arb == 0 -%}<span class="badge badge-safe">Safe</span>
+                                                        {%- elif entry.arb > 0 -%}<span class="badge badge-danger">Protected</span>
+                                                        {%- elif entry.arb == -2 -%}<span class="badge badge-undetectable">⚠️ Undetectable protected</span>
+                                                        {%- else -%}<span class="badge badge-warning">Unknown</span>
+                                                        {%- endif -%}
                                                     </td>
                                                     <td>Major: {{ entry.major }}, Minor: {{ entry.minor }}</td>
-                                                    <td>{{ entry.last_checked }}</td>
+                                                    <td class="text-center">{{ entry.last_checked }}</td>
                                                 </tr>
                                                 {% endfor %}
                                             </tbody>
