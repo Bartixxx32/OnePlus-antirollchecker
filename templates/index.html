@@ -26,7 +26,6 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', '{{ ga_id }}');
     </script>
     {% endif %}
@@ -34,605 +33,878 @@
     <!-- Favicon (SVG Data URI) -->
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23da3633'/><text x='50' y='70' font-family='Arial' font-size='60' font-weight='bold' fill='white' text-anchor='middle'>1+</text></svg>">
+
     <style>
         *, *::before, *::after {
             box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         :root {
-            --bg-color: #0d1117;
-            --card-bg: #161b22;
-            --text-color: #c9d1d9;
-            --text-muted: #8b949e;
-            --border-color: #30363d;
-            --accent-color: #58a6ff;
-            --success-color: #238636;
-            --danger-color: #da3633;
-            --table-header-bg: #21262d;
-            --hover-bg: #21262d;
+            --bg: #0a0a0a;
+            --surface: #141414;
+            --card-bg: #1a1a1a;
+            --card-border: #2a2a2a;
+            --text: #e8e8e8;
+            --text-muted: #888;
+            --text-dim: #555;
+            --accent: #58a6ff;
+            --accent-hover: #79b8ff;
+            --success: #00c853;
+            --success-bg: rgba(0, 200, 83, 0.1);
+            --success-border: rgba(0, 200, 83, 0.3);
+            --danger: #ff4444;
+            --danger-bg: rgba(255, 68, 68, 0.1);
+            --danger-border: rgba(255, 68, 68, 0.3);
+            --warning: #ffab00;
+            --warning-bg: rgba(255, 171, 0, 0.1);
+            --warning-border: rgba(255, 171, 0, 0.3);
+            --th-bg: #111;
+            --row-hover: rgba(255,255,255,0.03);
+            --radius: 10px;
+            --header-h: 60px;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            margin: 0;
-            padding: 20px;
+            background-color: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
             line-height: 1.5;
-            overflow-x: hidden;
-            width: 100%;
+            padding-bottom: 60px;
         }
 
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
+        /* ─── TOPBAR ─── */
+        .topbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(10,10,10,0.92);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--card-border);
+            height: var(--header-h);
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            gap: 16px;
         }
 
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        h1 {
-            margin: 0;
-            color: var(--text-color);
-        }
-
-        p.subtitle {
-            color: var(--text-muted);
-            margin-top: 10px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 25px;
-        }
-
-        .card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 0;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        .topbar-brand {
             display: flex;
             flex-direction: column;
+            flex-shrink: 0;
         }
 
-        .card-header {
-            background-color: var(--table-header-bg);
-            padding: 15px 20px;
-            border-bottom: 1px solid var(--border-color);
+        .topbar-brand h1 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text);
+            line-height: 1.1;
         }
 
-        .card h2 {
-            margin: 0;
-            font-size: 1.25rem;
-            color: var(--accent-color);
-        }
-
-        .card-body {
-            padding: 0;
-            overflow-x: auto;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 0.9em;
-            table-layout: fixed;
-            min-width: 800px;
-            /* Ensure table is wide enough to scroll on mobile */
-            /* Force fixed layout for consistency */
-        }
-
-        th,
-        td {
-            text-align: left;
-            padding: 12px 15px;
-            border-bottom: 1px solid var(--border-color);
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
-
-        th {
-            background-color: var(--table-header-bg);
-            color: var(--text-muted);
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 0.75rem;
-            letter-spacing: 0.5px;
-        }
-
-
-        tr:last-child td {
-            border-bottom: none;
-        }
-
-        tr:hover {
-            background-color: var(--hover-bg);
-        }
-
-        .badge {
-            display: inline-flex;
-            align-items: center;
-            padding: 2px 8px;
-            border-radius: 12px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            line-height: 1.4;
-        }
-
-        .badge-safe {
-            background-color: rgba(35, 134, 54, 0.15);
-            border: 1px solid rgba(35, 134, 54, 0.4);
-            color: #7ee787;
-        }
-
-        .badge-danger {
-            background-color: rgba(218, 54, 51, 0.15);
-            border: 1px solid rgba(218, 54, 51, 0.4);
-            color: #f85149;
-        }
-
-        .badge-warning {
-            background-color: rgba(210, 153, 34, 0.15);
-            border: 1px solid rgba(210, 153, 34, 0.4);
-            color: #e3b341;
-        }
-
-        .version-cell {
-            max-width: 200px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .meta-info {
-            font-size: 0.8em;
-            color: var(--text-muted);
-            display: block;
-        }
-
-        .footer {
-            margin-top: 60px;
-            padding-top: 20px;
-            border-top: 1px solid var(--border-color);
-            text-align: center;
-            font-size: 0.9em;
-            color: var(--text-muted);
-        }
-
-        a {
-            color: var(--accent-color);
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 600px) {
-            body {
-                padding: 15px 10px;
-            }
-
-            .grid {
-                grid-template-columns: 1fr;
-            }
-
-            .card-body {
-                overflow-x: auto;
-            }
-        }
-
-        /* History styles */
-        .history-row {
-            display: none;
-            background-color: #0d1117;
-        }
-
-        .history-row.active {
-            display: table-row;
-        }
-
-        .history-container {
-            padding: 15px 25px;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .history-table {
-            width: 100%;
-            font-size: 0.85rem;
-            margin: 10px 0;
-            border: 1px solid var(--border-color);
-            background-color: var(--bg-color);
-        }
-
-        .history-table th {
+        .topbar-brand p {
             font-size: 0.7rem;
-            padding: 8px 12px;
-        }
-
-        .history-table td {
-            padding: 8px 12px;
             color: var(--text-muted);
         }
 
-        .toggle-history {
-            cursor: pointer;
-            color: var(--accent-color);
-            background: none;
-            border: 1px solid var(--accent-color);
-            padding: 4px 10px;
-            border-radius: 4px;
-            font-size: 0.75rem;
-            transition: all 0.2s;
+        .topbar-search {
+            flex: 1;
+            max-width: 340px;
+            margin-left: auto;
+            position: relative;
         }
 
-        .toggle-history:hover {
-            background-color: rgba(88, 166, 255, 0.1);
-        }
-
-        .toggle-history.active {
-            background-color: var(--accent-color);
-            color: white;
-        }
-
-        .badges-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            gap: 8px;
-            margin: 20px 0;
-        }
-
-        .badges-container img {
-            display: block;
-            transition: opacity 0.2s ease, transform 0.2s ease;
-        }
-
-        .badges-container a:hover img {
-            opacity: 0.85;
-            transform: translateY(-1px);
-        }
-
-        .search-container {
-            margin-top: 20px;
-            text-align: center;
-            padding: 0 10px;
+        .topbar-search svg {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            pointer-events: none;
         }
 
         #search-input {
             width: 100%;
-            max-width: 400px;
-            padding: 10px 15px;
-            border: 1px solid var(--border-color);
-            background-color: var(--card-bg);
-            color: var(--text-color);
+            padding: 7px 12px 7px 34px;
+            background: var(--surface);
+            border: 1px solid var(--card-border);
             border-radius: 6px;
-            font-size: 1rem;
+            color: var(--text);
+            font-size: 0.85rem;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        #search-input::placeholder { color: var(--text-dim); }
+        #search-input:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(88,166,255,0.15);
+        }
+
+
+        /* ─── MAIN ─── */
+        .main {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 22px 16px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+        }
+
+        /* ─── CARD ─── */
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
             transition: border-color 0.2s;
         }
 
-        #search-input:focus {
-            outline: none;
-            border-color: var(--accent-color);
-            box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.2);
+        .card:hover {
+            border-color: #3a3a3a;
         }
 
-        /* Floating Buy Me a Coffee Button */
+        .card-header {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--card-border);
+            background: var(--surface);
+        }
+
+        .card-header h2 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text);
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+        }
+
+        .device-models {
+            font-size: 0.72rem;
+            color: var(--text-dim);
+            font-weight: 400;
+            letter-spacing: 0.3px;
+        }
+
+        .card-body {
+            overflow-x: auto;
+        }
+
+        /* ─── TABLE ─── */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.78rem;
+            min-width: 480px;
+        }
+
+        thead th {
+            background: var(--th-bg);
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.68rem;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            padding: 8px 12px;
+            border-bottom: 1px solid var(--card-border);
+            white-space: nowrap;
+        }
+
+        tbody td {
+            padding: 8px 12px;
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+            vertical-align: middle;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        tbody tr:last-child td { border-bottom: none; }
+        tbody tr:hover { background: var(--row-hover); }
+
+        .card-body > table { table-layout: fixed; }
+        .col-region { width: 14%; }
+        .col-firmware { width: 40%; }
+        .col-status { width: 23%; text-align: center; }
+        .col-actions { width: 23%; text-align: center; }
+
+        .card-body > table > tbody > tr:not(.history-row) > td:nth-child(3) { text-align: center; }
+        .card-body > table > tbody > tr:not(.history-row) > td:nth-child(4) { text-align: center; }
+
+        .region-main { font-weight: 600; color: var(--text); font-size: 0.8rem; }
+        .region-model { color: var(--text-dim); font-size: 0.68rem; display: block; margin-top: 1px; }
+
+        .firmware-ver { font-family: 'SFMono-Regular', Consolas, monospace; font-size: 0.75rem; }
+        .firmware-oem { color: var(--text-dim); font-size: 0.68rem; display: block; margin-top: 1px; }
+
+        .arb-val {
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+
+        .arb-sub {
+            display: block;
+            font-size: 0.62rem;
+            color: var(--text-dim);
+            margin-top: 3px;
+            font-variant-numeric: tabular-nums;
+        }
+
+        /* ─── BADGES ─── */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 2px 8px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+            white-space: nowrap;
+        }
+
+        .badge-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .badge-safe {
+            background: var(--success-bg);
+            border: 1px solid var(--success-border);
+            color: var(--success);
+        }
+        .badge-safe .badge-dot { background: var(--success); }
+
+        .badge-danger {
+            background: var(--danger-bg);
+            border: 1px solid var(--danger-border);
+            color: var(--danger);
+        }
+        .badge-danger .badge-dot { background: var(--danger); }
+
+        .badge-hardcode {
+            background: var(--warning-bg);
+            border: 1px solid var(--warning-border);
+            color: var(--warning);
+        }
+        .badge-hardcode .badge-dot { background: var(--warning); }
+
+        .badge-warning {
+            background: rgba(100,100,100,0.15);
+            border: 1px solid rgba(100,100,100,0.3);
+            color: var(--text-muted);
+        }
+        .badge-warning .badge-dot { background: var(--text-muted); }
+
+        /* ─── FIRMWARE TITLE SCROLL ─── */
+        .firmware-title-wrap {
+            overflow-x: auto;
+            white-space: nowrap;
+            width: 100%;
+            position: relative;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE 10+ */
+        }
+        .firmware-title-wrap::-webkit-scrollbar {
+            display: none; /* Chrome/Safari */
+        }
+        .firmware-title {
+            display: inline-block;
+            font-weight: 400; /* Reverted from 700 to normal */
+            color: var(--text);
+            font-size: 0.78rem; /* Slightly smaller from 0.82rem */
+        }
+        /* Mobile adjustment */
+        @media (max-width: 600px) {
+            .firmware-title { 
+                font-size: 0.7rem; 
+                padding-right: 12px;
+            }
+        }
+
+
+        /* ─── MD5 details ─── */
+        details.md5-details { margin-top: 2px; }
+        details.md5-details summary {
+            cursor: pointer;
+            font-size: 0.68rem;
+            color: var(--accent);
+            list-style: none;
+            user-select: none;
+        }
+        details.md5-details summary::-webkit-details-marker { display: none; }
+        details.md5-details code {
+            display: block;
+            font-size: 0.65rem;
+            background: #111;
+            padding: 3px 6px;
+            border-radius: 4px;
+            margin-top: 2px;
+            word-break: break-all;
+            color: var(--text-muted);
+        }
+
+        /* ─── HISTORY BUTTON ─── */
+        .btn-history {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 12px;
+            background: transparent;
+            border: 1px solid var(--accent);
+            border-radius: 5px;
+            color: var(--accent);
+            font-size: 0.72rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.15s;
+            white-space: nowrap;
+            letter-spacing: 0.2px;
+        }
+
+        .btn-history:hover { background: rgba(88,166,255,0.1); }
+        .btn-history.active { background: var(--accent); color: #000; }
+
+        .btn-history-arrow {
+            font-size: 0.8rem;
+            transition: transform 0.2s;
+        }
+
+        .btn-history.active .btn-history-arrow {
+            transform: rotate(90deg);
+        }
+
+        /* ─── HISTORY ROW ─── */
+        .history-row { display: none; }
+        .history-row.active { display: table-row; }
+
+        .history-container {
+            padding: 12px 16px 16px;
+            background: #0f0f0f;
+        }
+
+        .history-title {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .history-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.75rem;
+            border: 1px solid var(--card-border);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .history-table th {
+            background: #111;
+            color: var(--text-dim);
+            font-size: 0.65rem;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            padding: 6px 10px;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .history-table td {
+            padding: 7px 10px;
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+            color: var(--text-muted);
+            vertical-align: middle;
+        }
+
+        .history-table tbody tr:last-child td { border-bottom: none; }
+
+        /* ─── FOOTER ─── */
+        .footer {
+            border-top: 1px solid var(--card-border);
+            margin-top: 40px;
+            padding-top: 28px;
+        }
+
+        .footer-cards {
+            max-width: 1400px;
+            margin: 0 auto 24px;
+            padding: 0 16px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .footer-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: var(--radius);
+            padding: 16px;
+        }
+
+        .footer-card h3 {
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .footer-card p {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+
+        .footer-card a { color: var(--accent); }
+        .footer-card a:hover { color: var(--accent-hover); }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 16px 16px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .footer-link {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-link:hover { color: var(--text); }
+
+        .footer-link svg { flex-shrink: 0; }
+
+        .footer-meta {
+            font-size: 0.72rem;
+            color: var(--text-dim);
+        }
+
+        .footer-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            align-items: center;
+        }
+
+        .footer-badges img { display: block; }
+
+        .footer-credits {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 12px 16px;
+            border-top: 1px solid var(--card-border);
+            font-size: 0.72rem;
+            color: var(--text-dim);
+            text-align: center;
+        }
+
+        .footer-credits a { color: var(--text-dim); text-decoration: none; }
+        .footer-credits a:hover { color: var(--text-muted); }
+
+        /* ─── BMC FLOAT ─── */
         .floating-bmc {
             position: fixed;
-            top: 20px;
+            bottom: 20px;
             right: 20px;
             z-index: 1000;
-            transition: transform 0.2s ease-in-out;
+            transition: transform 0.2s;
+        }
+        .floating-bmc:hover { transform: scale(1.05); }
+        .floating-bmc img { height: 40px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.5); }
+
+        /* ─── RESPONSIVE ─── */
+        @media (max-width: 900px) {
+            .grid { grid-template-columns: 1fr; }
+            .footer-cards { grid-template-columns: 1fr; }
         }
 
-        .floating-bmc:hover {
-            transform: scale(1.05);
-        }
-
-        @media (max-width: 768px) {
-            .floating-bmc {
-                top: auto;
-                bottom: 15px;
-                right: 15px;
+        @media (max-width: 600px) {
+            .topbar-search {
+                flex: 1;
+                max-width: none;
+                margin-left: 0;
             }
 
-            body {
-                padding-bottom: 60px;
+            /* Hide only OEM version subtext on mobile to save space */
+            .firmware-oem { display: none; }
+
+            /* Ensure table fits mobile screen without forced min-width */
+            table { min-width: 0; }
+            .card-body > table { table-layout: fixed; }
+            
+            /* Tighten padding for mobile */
+            thead th, tbody td { padding: 8px 6px; }
+
+            /* Make status badge text smaller */
+            .badge { font-size: 0.55rem; padding: 2px 4px; }
+            
+            /* Define mobile column widths */
+            .col-region { width: 10%; }
+            .col-firmware { width: 40%; }
+            .col-status { width: 30%; text-align: center; }
+            .col-actions { width: 20%; text-align: center; }
+            
+            /* Shrink button padding slightly to fit */
+            .btn-history { padding: 4px 8px; font-size: 0.68rem; }
+
+            /* Show history button in a separate tappable row below firmware on mobile */
+            .mobile-history-wrap {
+                display: block;
+                margin-top: 4px;
             }
+
+            .footer-links { gap: 12px; }
+            .footer-bottom { flex-direction: column; align-items: flex-start; }
         }
     </style>
 </head>
 
 <body>
-    <!-- Floating Buy Me a Coffee Button -->
-    <a href="https://www.buymeacoffee.com/bartixxx32" target="_blank" class="floating-bmc">
-        <img src="https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20beer&emoji=🍺&slug=bartixxx32&button_colour=FFDD00&font_colour=000000&font_family=Comic&outline_colour=000000&coffee_colour=ffffff"
-            alt="Buy Me A Coffee"
-            style="height: 45px !important;width: auto !important; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0,0,0,0.5);">
-    </a>
-
-    <div class="container">
-        <header>
+    <!-- TOPBAR -->
+    <header class="topbar">
+        <div class="topbar-brand">
             <h1>OnePlus ARB Checker</h1>
-            <p class="subtitle">Real-time Anti-Rollback (ARB) index tracking for OnePlus devices</p>
+            <p>Find firmware and ARB details for your device.</p>
+        </div>
+        <div class="topbar-search">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input type="text" id="search-input" placeholder="Search devices..." onkeyup="filterDevices()">
+        </div>
+    </header>
 
-            <div class="search-container">
-                <input type="text" id="search-input" placeholder="🔍 Search devices (e.g. OnePlus 15, Nord)..."
-                    onkeyup="filterDevices()">
+    <!-- MAIN GRID -->
+    <main class="main">
+        <div class="grid" id="devices-grid">
+            <div style="color:var(--text-muted); text-align:center; padding: 40px; grid-column: 1/-1;">
+                <p>Loading database...</p>
             </div>
-        </header>
+        </div>
+    </main>
 
-        <div class="grid">
-            {% for device in devices %}
-            <div class="card">
-                <div class="card-header">
-                    <h2>{{ device.name }}</h2>
-                </div>
-                <div class="card-body">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th scope="col" style="width: 15%;">Region</th>
-                                <th scope="col" style="width: 35%;">Version</th>
-                                <th scope="col" style="width: 10%;">ARB</th>
-                                <th scope="col" style="width: 15%;">Status</th>
-                                <th scope="col" style="width: 15%;">Last Checked</th>
-                                <th scope="col" style="width: 10%;">Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {% for variant in device.variants %}
-                            <tr>
-                                <td>
-                                    <strong>{{ variant.region_name }}</strong>
-                                    <span class="meta-info">{{ variant.model }}</span>
-                                </td>
-                                <td class="version-cell" title="{{ variant.version }}">
-                                    {{ variant.version }}
-                                    <span class="meta-info">Major: {{ variant.major }},&nbsp;Minor: {{ variant.minor
-                                        }}</span>
-                                    {% if variant.md5 %}
-                                    <details style="margin-top:4px;">
-                                        <summary style="cursor:pointer; font-size:0.75rem; color:var(--accent-color);">
-                                            Show MD5</summary>
-                                        <code
-                                            style="display:block; font-size:0.7rem; background:#222; padding:4px; border-radius:4px; margin-top:2px; word-break: break-all;">{{ variant.md5 }}</code>
-                                    </details>
-                                    {% endif %}
-                                </td>
-                                <td><strong>{{ variant.arb }}</strong></td>
-                                <td>
-                                    {% if variant.arb == 0 %}
-                                    <span class="badge badge-safe">Safe</span>
-                                    {% elif variant.arb > 0 %}
-                                    <span class="badge badge-danger">Protected</span>
-                                    {% else %}
-                                    <span class="badge badge-warning">Unknown</span>
-                                    {% endif %}
-                                </td>
-                                <td>{{ variant.last_checked }}</td>
-                                <td>
-                                    {% if variant.history|length > 0 %}
-                                    <button class="toggle-history"
-                                        onclick="toggleHistory('{{ device.id|replace(' ', '-') }}-{{ variant.region_name|replace(' ', '-') }}', this)">
-                                        History
-                                    </button>
-                                    {% endif %}
-                                </td>
-                            </tr>
-                            {% if variant.history|length > 0 %}
-                            <tr id="history-{{ device.id|replace(' ', '-') }}-{{ variant.region_name|replace(' ', '-') }}"
-                                class="history-row">
-                                <td colspan="6">
-                                    <div class="history-container">
-                                        <h4 style="margin: 0 0 10px 0; font-size: 0.9rem;">📜 Version History - {{
-                                            variant.region_name }}</h4>
-                                        <table class="history-table">
-                                            <thead>
-                                                <tr>
-                                                    <th>Firmware Version</th>
-                                                    <th>ARB</th>
-                                                    <th>Status</th>
-                                                    <th>OEM Version</th>
-                                                    <th>Last Seen</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                {% for entry in variant.history %}
-                                                <tr>
-                                                    <td class="version-cell" title="{{ entry.version }}">
-                                                        {{ entry.version }}
-                                                        {% if entry.md5 %}
-                                                        <details style="margin-top:4px;">
-                                                            <summary
-                                                                style="cursor:pointer; font-size:0.75rem; color:var(--accent-color);">
-                                                                Show MD5</summary>
-                                                            <code
-                                                                style="display:block; font-size:0.7rem; background:#222; padding:4px; border-radius:4px; margin-top:2px; word-break: break-all;">{{ entry.md5 }}</code>
-                                                        </details>
-                                                        {% endif %}
-                                                    </td>
-                                                    <td>{{ entry.arb }}</td>
-                                                    <td>
-                                                        {% if entry.arb == 0 %}
-                                                        <span class="badge badge-safe">Safe</span>
-                                                        {% elif entry.arb > 0 %}
-                                                        <span class="badge badge-danger">Protected</span>
-                                                        {% else %}
-                                                        <span class="badge badge-warning">Unknown</span>
-                                                        {% endif %}
-                                                    </td>
-                                                    <td>Major: {{ entry.major }}, Minor: {{ entry.minor }}</td>
-                                                    <td>{{ entry.last_checked }}</td>
-                                                </tr>
-                                                {% endfor %}
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </td>
-                            </tr>
-                            {% endif %}
-                            {% endfor %}
-                            {% if not device.variants %}
-                            <tr>
-                                <td colspan="5" style="text-align:center; padding: 20px;">No data available</td>
-                            </tr>
-                            {% endif %}
-                        </tbody>
-                    </table>
-                </div>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-cards">
+            <div class="footer-card">
+                <h3 style="color: #0088cc;">💬 Telegram Bot</h3>
+                <p>Check ARB directly from Telegram with real-time status updates.</p>
+                <p>
+                    <a href="https://t.me/oparbcheckerbot" target="_blank">@oparbcheckerbot</a>
+                    &bull;
+                    <a href="https://t.me/oneplusarbchecker" target="_blank">@oneplusarbchecker</a>
+                </p>
             </div>
-            {% endfor %}
+            <div class="footer-card">
+                <h3 style="color: var(--accent);">🌐 OOS Downloader API</h3>
+                <p>Get direct, signed download URLs for OnePlus OTA firmware files.</p>
+                <p><a href="https://oosdownloader-gui.fly.dev/" target="_blank">oosdownloader-gui.fly.dev</a></p>
+            </div>
+            <div class="footer-card" style="text-align:center;">
+                <h3 style="color: var(--accent);">📱 Android App</h3>
+                <p>Check ARB statuses directly from your phone.</p>
+                <a href="https://f-droid.org/packages/com.bartixxx.oneplusarbchecker/" target="_blank">
+                    <img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="44"
+                        style="border-radius: 6px; margin-top: 4px;">
+                </a>
+            </div>
         </div>
 
-        <div class="footer">
-            <div
-                style="background-color: var(--card-bg); border: 1px solid #FFDD00; border-radius: 8px; padding: 20px; margin-bottom: 20px; text-align: center;">
-                <h3 style="margin: 0 0 10px 0; color: #FFDD00; font-size: 1.1rem;">🍻 Support the Project</h3>
-                <p style="margin: 0 0 15px 0; font-size: 0.95rem;">
-                    If you find this tool helpful, consider buying me a beer! Your support keeps the updates coming.
-                </p>
-                <a href="https://www.buymeacoffee.com/bartixxx32" target="_blank" style="display: inline-block;">
-                    <img src="https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20beer&emoji=🍺&slug=bartixxx32&button_colour=FFDD00&font_colour=000000&font_family=Comic&outline_colour=000000&coffee_colour=ffffff"
-                        alt="Buy Me A Coffee" style="height: 40px !important;width: auto !important;">
+        <div class="footer-bottom">
+            <div class="footer-links">
+                <a href="https://github.com/Bartixxx32/OnePlus-antirollchecker" class="footer-link" target="_blank">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                    </svg>
+                    PROJECT GITHUB
+                </a>
+                <a href="https://t.me/oneplusarbchecker" class="footer-link" target="_blank">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                    </svg>
+                    TELEGRAM CHANNEL
+                </a>
+                <a href="https://oosdownloader-gui.fly.dev/" class="footer-link" target="_blank">
+                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                    </svg>
+                    OOS DOWNLOADER
                 </a>
             </div>
-            <div
-                style="background-color: var(--card-bg); border: 1px solid #0088cc; border-radius: 8px; padding: 20px; margin-bottom: 20px;">
-                <h3 style="margin: 0 0 10px 0; color: #0088cc; font-size: 1.1rem;">💬 Telegram Bot</h3>
-                <p style="margin: 0 0 10px 0; font-size: 0.95rem;">
-                    Check firmware ARB directly from Telegram with <strong>real-time status updates</strong>!
-                </p>
-                <p style="margin: 0; font-size: 0.9rem;">
-                    🤖 <a href="https://t.me/oparbcheckerbot"
-                        style="font-weight: 600; color: #0088cc;">@oparbcheckerbot</a>
-                    &bull;
-                    👥 <a href="https://t.me/oneplusarbchecker"
-                        style="font-weight: 600; color: #0088cc;">@oneplusarbchecker</a>
-                </p>
-                <p style="margin: 10px 0 0 0; font-size: 0.85rem; color: var(--text-muted);">
-                    Send <code style="background:#222; padding:2px 6px; border-radius:3px;">/check &lt;url&gt;</code> to
-                    analyze any OnePlus firmware instantly.
-                </p>
-            </div>
-            <div
-                style="background-color: var(--card-bg); border: 1px solid var(--accent-color); border-radius: 8px; padding: 20px; margin-bottom: 30px;">
-                <h3 style="margin: 0 0 10px 0; color: var(--accent-color); font-size: 1.1rem;">🔗 OOS Downloader API
-                </h3>
-                <p style="margin: 0 0 10px 0; font-size: 0.95rem;">
-                    Need direct download URLs for OnePlus firmware? Use our <strong>OOS Downloader API</strong>!
-                </p>
-                <p style="margin: 0; font-size: 0.9rem;">
-                    🌐 <a href="https://oosdownloader-gui.fly.dev/"
-                        style="font-weight: 600;">https://oosdownloader-gui.fly.dev/</a>
-                </p>
-                <p style="margin: 10px 0 0 0; font-size: 0.85rem; color: var(--text-muted);">
-                    Get direct, signed download URLs for OnePlus OTA firmware files.
-                </p>
-            </div>
-            <div
-                style="background-color: var(--card-bg); border: 1px solid var(--accent-color); border-radius: 8px; padding: 20px; margin-bottom: 30px; text-align: center;">
-                <h3 style="margin: 0 0 15px 0; color: var(--accent-color); font-size: 1.1rem;">📱 Official Android App
-                </h3>
-                <a href="https://f-droid.org/pl/packages/com.bartixxx.oneplusarbchecker/" target="_blank"
-                    rel="noopener noreferrer">
-                    <img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="60"
-                        style="transition: transform 0.2s; border-radius: 8px;"
-                        onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                </a>
-                <p style="margin: 15px 0 0 0; font-size: 0.95rem; color: var(--text-muted);">
-                    Check firmware statuses, view ARB indices, and stay protected directly from your phone!
-                </p>
-            </div>
-            <div style="margin-bottom: 20px; font-size: 0.85em;">
-                <strong>Credits:</strong>
-                Payload Extraction by <a href="https://github.com/syedinsaf/otaripper">otaripper</a> (syedinsaf)
-                &bull;
-                Playback & Validation by <a href="https://github.com/ssut/payload-dumper-go">payload-dumper-go</a>
-                (ssut)
-                &bull;
-                ARB Extraction by <a href="https://github.com/koaaN/arbextract">arbextract</a> (koaaN)
-                &bull;
-                API for CN variants by <a href="https://roms.danielspringer.at/">roms.danielspringer.at</a> (Daniel
-                Springer)
-            </div>
-
-            <div class="badges-container">
-                <a href="https://github.com/Bartixxx32/OnePlus-antirollchecker/actions/workflows/check_arb.yml"
-                    target="_blank" rel="noopener noreferrer">
-                    <img src="https://img.shields.io/github/actions/workflow/status/Bartixxx32/OnePlus-antirollchecker/check_arb.yml?style=flat-square&logo=github&label=ARB%20Checking"
-                        alt="GitHub Workflow Status">
-                </a>
-                <a href="https://github.com/Bartixxx32/OnePlus-antirollchecker/stargazers" target="_blank"
-                    rel="noopener noreferrer">
-                    <img src="https://img.shields.io/github/stars/Bartixxx32/OnePlus-antirollchecker?style=flat-square&color=yellow"
-                        alt="GitHub stars">
-                </a>
-                <a href="https://github.com/Bartixxx32/OnePlus-antirollchecker/network/members" target="_blank"
-                    rel="noopener noreferrer">
-                    <img src="https://img.shields.io/github/forks/Bartixxx32/OnePlus-antirollchecker?style=flat-square"
-                        alt="GitHub forks">
-                </a>
-                <a href="https://github.com/Bartixxx32/OnePlus-antirollchecker/commits/main" target="_blank"
-                    rel="noopener noreferrer">
-                    <img src="https://img.shields.io/github/last-commit/Bartixxx32/OnePlus-antirollchecker?style=flat-square"
-                        alt="GitHub last commit">
-                </a>
-                <img src="https://img.shields.io/badge/Python-3.11+-blue?style=flat-square&logo=python"
-                    alt="Python Version">
+            <div class="footer-badges">
+                <img src="https://img.shields.io/github/actions/workflow/status/Bartixxx32/OnePlus-antirollchecker/check_arb.yml?style=flat-square&logo=github&label=ARB%20Checking" alt="Workflow Status">
+                <img src="https://img.shields.io/github/stars/Bartixxx32/OnePlus-antirollchecker?style=flat-square&color=yellow" alt="Stars">
+                <img src="https://img.shields.io/github/forks/Bartixxx32/OnePlus-antirollchecker?style=flat-square" alt="Forks">
+                <img src="https://img.shields.io/badge/Python-3.11+-blue?style=flat-square&logo=python" alt="Python Version">
                 <img src="https://visitor-badge.laobi.icu/badge?page_id=Bartixxx32.OnePlus-antirollchecker" alt="Views">
             </div>
-
-            <p>Last scan: {{ generated_at }}</p>
-            <p>
-                <a href="https://github.com/Bartixxx32/Oneplus-antirollchecker">View Source on GitHub</a>
-                &bull;
-                <a href="https://github.com/Bartixxx32/Oneplus-antirollchecker/actions">Workflow Status</a>
-            </p>
         </div>
-    </div>
+
+        <div class="footer-credits">
+            <p>
+                Payload Extraction by <a href="https://github.com/syedinsaf/otaripper" target="_blank">otaripper</a> (syedinsaf)
+                &bull;
+                Validation by <a href="https://github.com/ssut/payload-dumper-go" target="_blank">payload-dumper-go</a> (ssut)
+                &bull;
+                ARB Extraction by <a href="https://github.com/koaaN/arbextract" target="_blank">arbextract</a> (koaaN)
+                &bull;
+                CN API by <a href="https://roms.danielspringer.at/" target="_blank">roms.danielspringer.at</a> (Daniel Springer)
+            </p>
+            <p style="margin-top:6px;" id="last-scan">Last scan: Loading...</p>
+        </div>
+    </footer>
+
+    <!-- Floating BMC -->
+    <a href="https://www.buymeacoffee.com/bartixxx32" target="_blank" class="floating-bmc">
+        <img src="https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20beer&emoji=🍺&slug=bartixxx32&button_colour=FFDD00&font_colour=000000&font_family=Comic&outline_colour=000000&coffee_colour=ffffff" alt="Buy Me A Coffee">
+    </a>
 
     <script>
         function toggleHistory(id, btn) {
-            const row = document.getElementById('history-' + id);
+            const row = document.getElementById(id);
             if (row.classList.contains('active')) {
                 row.classList.remove('active');
                 btn.classList.remove('active');
-                btn.textContent = 'History';
             } else {
                 row.classList.add('active');
                 btn.classList.add('active');
-                btn.textContent = 'Close';
             }
         }
 
         function filterDevices() {
-            var input, filter, grid, cards, h2, i, txtValue;
-            input = document.getElementById('search-input');
-            filter = input.value.toUpperCase();
-            cards = document.getElementsByClassName('card');
+            const filter = document.getElementById('search-input').value.toLowerCase();
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                const name = card.getAttribute('data-name') || '';
+                card.style.display = name.includes(filter) ? '' : 'none';
+            });
+        }
 
-            for (i = 0; i < cards.length; i++) {
-                h2 = cards[i].getElementsByTagName("h2")[0];
-                if (h2) {
-                    txtValue = h2.textContent || h2.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        cards[i].style.display = "";
-                    } else {
-                        cards[i].style.display = "none";
+        const renderBadge = (v) => {
+            if (v.is_hardcoded) return `<span class="badge badge-hardcode" title="Anti-rollback is present but undetectable by standard tools"><span class="badge-dot"></span>Undetectable ARB</span>`;
+            if (v.arb === 0) return `<span class="badge badge-safe"><span class="badge-dot"></span>Safe</span>`;
+            if (typeof v.arb === 'number' && v.arb > 0) return `<span class="badge badge-danger"><span class="badge-dot"></span>Protected</span>`;
+            return `<span class="badge badge-warning"><span class="badge-dot"></span>Unknown</span>`;
+        };
+
+        const renderHTML = (devices) => {
+            return devices.map(device => {
+                let rows = '';
+                if (device.variants.length === 0) {
+                    rows = `<tr><td colspan="4" style="text-align:center; padding:20px; color: var(--text-dim);">No data available</td></tr>`;
+                } else {
+                    device.variants.forEach(variant => {
+                        const histId = `history-${device.id}-${variant.region_name.replace(/\\s+/g, '-')}`;
+                        const hasHistory = variant.history && variant.history.length > 0;
+                        
+                        rows += `
+                        <tr>
+                            <td><span class="region-badge region-${variant.region_name}">${variant.region_name}</span></td>
+                            <td>
+                                <div class="firmware-title-wrap">
+                                    <div class="firmware-title">${variant.version || 'Unknown'}</div>
+                                </div>
+                                <div class="firmware-oem">Major: ${variant.major || '?'}, Minor: ${variant.minor || '?'}</div>
+                                ${variant.md5 ? `<details class="md5-details"><summary>Show MD5</summary><code>${variant.md5}</code></details>` : ''}
+                            </td>
+                            <td>
+                                ${renderBadge(variant)}
+                                <span class="arb-sub">ARB: ${variant.arb != null ? variant.arb : '?'}</span>
+                            </td>
+                            <td>
+                                ${hasHistory ? `<button class="btn-history" onclick="toggleHistory('${histId}', this)">History <span class="btn-history-arrow">›</span></button>` : ''}
+                            </td>
+                        </tr>
+                        `;
+                        
+                        if (hasHistory) {
+                            let histRows = variant.history.map(entry => `
+                                <tr>
+                                    <td>
+                                        <div class="firmware-title-wrap">
+                                            <div class="firmware-title" style="font-size:0.75rem;">${entry.version}</div>
+                                        </div>
+                                        ${entry.md5 ? `<details class="md5-details"><summary>Show MD5</summary><code>${entry.md5}</code></details>` : ''}
+                                    </td>
+                                    <td>
+                                        ${renderBadge(entry)}
+                                        <span class="arb-sub">ARB: ${entry.arb != null ? entry.arb : '?'}</span>
+                                    </td>
+                                    <td>Major: ${entry.major||'?'}, Minor: ${entry.minor||'?'}</td>
+                                    <td>${entry.last_checked || entry.first_seen || 'Unknown'}</td>
+                                </tr>
+                            `).join('');
+                            
+                            rows += `
+                            <tr id="${histId}" class="history-row">
+                                <td colspan="4" style="padding:0;">
+                                    <div class="history-container">
+                                        <div class="history-title">📜 Version History — ${variant.region_name}</div>
+                                        <table class="history-table">
+                                            <thead><tr><th>Firmware Version</th><th>Status</th><th>OEM Version</th><th>Last Seen</th></tr></thead>
+                                            <tbody>${histRows}</tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                            `;
+                        }
+                    });
+                }
+                
+                return `
+                <div class="card" data-name="${device.name.toLowerCase()} ${device.models.join(' ').toLowerCase()}">
+                    <div class="card-header">
+                        <h2>
+                            ${device.name}
+                            <span class="device-models">${device.models.join(' / ')}</span>
+                        </h2>
+                    </div>
+                    <div class="card-body">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="col-region">Region</th>
+                                    <th class="col-firmware">Firmware</th>
+                                    <th class="col-status">Status</th>
+                                    <th class="col-actions">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${rows}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                `;
+            }).join('');
+        };
+
+        async function loadData() {
+            const grid = document.getElementById('devices-grid');
+            let db;
+            
+            try {
+                // Try local first
+                const res = await fetch('./database.json');
+                if (!res.ok) throw new Error();
+                db = await res.json();
+            } catch (e1) {
+                try {
+                    // Fallback to prod URL
+                    const res = await fetch('https://oparb.pages.dev/database.json');
+                    db = await res.json();
+                } catch (e2) {
+                    grid.innerHTML = '<div style="color:var(--danger); text-align:center; padding: 40px; grid-column: 1/-1;">Failed to load database.json. Ensure you are not blocking CORS or check your network.</div>';
+                    return;
+                }
+            }
+
+            // Process db into devices array
+            const byDevice = {};
+            let latestScan = '';
+            
+            const regionScores = { "GLO": 1, "EU": 2, "IN": 3, "NA": 4, "CN": 5 };
+
+            for (const modelKey of Object.keys(db)) {
+                const d = db[modelKey];
+                const devName = d.device_name;
+                if (!byDevice[devName]) {
+                    byDevice[devName] = { 
+                        name: devName, 
+                        id: devName.replace(/\s+/g, '-'), 
+                        order: d.device_order ?? 999, 
+                        variantsMap: {},
+                        models: [] // Initialize models array
+                    };
+                }
+                // Add modelKey to the models array if not already present
+                if (!byDevice[devName].models.includes(modelKey)) {
+                    byDevice[devName].models.push(modelKey);
+                }
+                
+                for (const v of d.versions) {
+                    // Update latest scan time across the DB
+                    if (v.last_checked && v.last_checked > latestScan) latestScan = v.last_checked;
+
+                    for (const r of v.regions || []) {
+                        if (!byDevice[devName].variantsMap[r]) {
+                            byDevice[devName].variantsMap[r] = { region_name: r, history: [] };
+                        }
+                        const vr = byDevice[devName].variantsMap[r];
+                        
+                        if (v.status === 'current' || !vr.version) {
+                            vr.version = v.version;
+                            vr.arb = v.arb;
+                            vr.md5 = v.md5;
+                            vr.major = v.major;
+                            vr.minor = v.minor;
+                            vr.is_hardcoded = v.is_hardcoded;
+                            // Match legacy Python generator logic: push to history if it's an implicit fallback
+                            if (v.status !== 'current') {
+                                vr.history.push(v);
+                            }
+                        } else {
+                            vr.history.push(v);
+                        }
                     }
                 }
             }
+
+            document.getElementById('last-scan').innerText = 'Last scan: ' + (latestScan || new Date().toISOString().split('T')[0]);
+            
+            const sortedDevices = Object.values(byDevice).sort((a,b) => a.order - b.order);
+            for (const dev of sortedDevices) {
+                dev.variants = Object.values(dev.variantsMap).sort((a,b) => (regionScores[a.region_name] || 99) - (regionScores[b.region_name] || 99));
+                // Ensure history is sorted by version parsing numeric parts
+                for (const v of dev.variants) {
+                    v.history.sort((a,b) => {
+                        const aParts = (a.version.match(/\\d+/g)||[]).map(Number);
+                        const bParts = (b.version.match(/\\d+/g)||[]).map(Number);
+                        for(let i=0; i<Math.max(aParts.length, bParts.length); i++) {
+                            const av = aParts[i]||0, bv = bParts[i]||0;
+                            if(av!==bv) return bv - av;
+                        }
+                        return 0;
+                    });
+                }
+            }
+            
+            grid.innerHTML = renderHTML(sortedDevices);
         }
+
+        loadData();
     </script>
 </body>
 

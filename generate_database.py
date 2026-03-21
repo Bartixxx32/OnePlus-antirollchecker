@@ -1,7 +1,9 @@
 import json
+import re
 from pathlib import Path
 from typing import Dict, List, Optional
-from config import DEVICE_METADATA
+from config import DEVICE_METADATA, DEVICE_ORDER
+from hardcode_rules import is_hardcode_protected
 
 def load_history(file_path: Path) -> Dict:
     """Load history from a JSON file."""
@@ -10,6 +12,11 @@ def load_history(file_path: Path) -> Dict:
             return json.load(f)
     except FileNotFoundError:
         return {}
+
+def version_sort_key(version_str: str) -> tuple:
+    """Extract numeric parts from version string for correct ordering."""
+    parts = re.findall(r'\d+', version_str)
+    return tuple(int(p) for p in parts)
 
 def generate_database():
     """Generates a unified database.json from history files."""
@@ -36,8 +43,14 @@ def generate_database():
             
         # Initialize model entry if not exists
         if model not in database:
+            try:
+                order = DEVICE_ORDER.index(device_id)
+            except ValueError:
+                order = 999
+            
             database[model] = {
                 "device_name": device_name,
+                "device_order": order,
                 "versions": {}
             }
         
@@ -47,10 +60,6 @@ def generate_database():
             if not version_str:
                 continue
 
-            # If version already exists, we might want to merge or check for consistency
-            # For now, we assume the data is consistent or simply overwrite/append region info if we wanted to track regions per version.
-            # The current requirement is just to look up by model and version.
-            
             if version_str not in database[model]["versions"]:
                 database[model]["versions"][version_str] = {
                     "arb": entry.get("arb", -1),
@@ -58,26 +67,36 @@ def generate_database():
                     "minor": entry.get("minor", -1),
                     "md5": entry.get("md5"),
                     "first_seen": entry.get("first_seen"),
-                    "status": entry.get("status"), # Keep the status from the file (current/archived) - though this might be region specific. 
-                                                   # If a version is current in one region and archived in another, this might be ambiguous.
-                                                   # But usually the version string is unique enough or we just care about the ARB.
+                    "last_checked": entry.get("last_checked"),
+                    "status": entry.get("status"),
+                    "is_hardcoded": is_hardcode_protected(device_id, version_str),
                     "regions": [region]
                 }
             else:
                 # Append region if not already present
                 if region not in database[model]["versions"][version_str]["regions"]:
                     database[model]["versions"][version_str]["regions"].append(region)
-                
-                # Update status? If it's current in ANY region, maybe we should mark it? 
-                # Or just leave it as is. The user just wants to check fuse (arb).
-                # ARB should be constant for the same version string.
+
+    # Convert versions dict to sorted list (descending by firmware version number)
+    output_database = {}
+    for model, model_data in sorted(database.items()):
+        sorted_versions = sorted(
+            [{"version": v, **info} for v, info in model_data["versions"].items()],
+            key=lambda x: version_sort_key(x["version"]),
+            reverse=True
+        )
+        output_database[model] = {
+            "device_name": model_data["device_name"],
+            "device_order": model_data["device_order"],
+            "versions": sorted_versions
+        }
 
     # Write to database.json
     output_path = Path("data/database.json")
     with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(database, f, indent=2, sort_keys=True)
+        json.dump(output_database, f, indent=2)
     
-    print(f"Generated {output_path} with {len(database)} models.")
+    print(f"Generated {output_path} with {len(output_database)} models.")
 
 if __name__ == "__main__":
     generate_database()

@@ -3,6 +3,9 @@ from pathlib import Path
 from datetime import datetime, timezone
 from typing import Dict, List, Optional
 from config import DEVICE_ORDER, DEVICE_METADATA
+import re
+
+from hardcode_rules import is_hardcode_protected
 
 def load_history(file_path: Path) -> Dict:
     """Load history from a JSON file."""
@@ -73,6 +76,9 @@ def generate_device_section(device_id: str, device_name: str, history_data: Dict
             has_data = True
             version = current_entry.get('version', 'Unknown')
             arb = current_entry.get('arb', -1)
+            
+            is_hardcoded = is_hardcode_protected(device_id, version)
+                
             date = current_entry.get('last_checked', 'Unknown')
             major = current_entry.get('major', '?')
             minor = current_entry.get('minor', '?')
@@ -80,7 +86,14 @@ def generate_device_section(device_id: str, device_name: str, history_data: Dict
             model = data.get('model', 'Unknown')
             
             # Status icon
-            safe_icon = "✅" if arb == 0 else "❌" if arb > 0 else "❓"
+            if is_hardcoded:
+                safe_icon = "⚠️"
+            elif arb == 0:
+                safe_icon = "✅"
+            elif isinstance(arb, int) and arb > 0:
+                safe_icon = "❌"
+            else:
+                safe_icon = "❓"
                 
             # MD5 formating
             md5 = current_entry.get('md5')
@@ -109,8 +122,8 @@ def generate_device_section(device_id: str, device_name: str, history_data: Dict
             # Filter out 'current' version from history to avoid redundancy
             history_entries = [e for e in data.get('history', []) if e.get('status') != 'current']
             
-            # Sort history by date descending
-            history_entries.sort(key=lambda x: (x.get('last_checked', ''), x.get('version', '')), reverse=True)
+            # Sort history by firmware version descending (parse numeric parts for correct ordering)
+            history_entries.sort(key=lambda x: tuple(int(p) for p in re.findall(r'\d+', x.get('version', ''))), reverse=True)
             
             if history_entries: # Only show history if there's actual old versions
                 region_name = get_region_name(variant)
@@ -122,12 +135,21 @@ def generate_device_section(device_id: str, device_name: str, history_data: Dict
                 for entry in history_entries:
                     v = entry.get('version', 'Unknown')
                     a = entry.get('arb', -1)
+                    
+                    hist_is_hardcoded = is_hardcode_protected(device_id, v)
+                        
                     maj = entry.get('major', '?')
                     min_ = entry.get('minor', '?')
                     ls = entry.get('last_checked', 'Unknown')
-                    s_icon = "✅" if a == 0 else "❌" if a > 0 else "❓"
-                    ls = entry.get('last_checked', 'Unknown')
-                    s_icon = "✅" if a == 0 else "❌" if a > 0 else "❓"
+                    
+                    if hist_is_hardcoded:
+                        s_icon = "⚠️"
+                    elif a == 0:
+                        s_icon = "✅"
+                    elif isinstance(a, int) and a > 0:
+                        s_icon = "❌"
+                    else:
+                        s_icon = "❓"
                     
                     md5_hist = entry.get('md5')
                     md5_hist_str = ""
