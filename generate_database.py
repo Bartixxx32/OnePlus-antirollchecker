@@ -2,7 +2,7 @@ import json
 import re
 from pathlib import Path
 from typing import Dict, List, Optional
-from config import DEVICE_METADATA, DEVICE_ORDER
+from config import DEVICE_METADATA, DEVICE_ORDER, OOS_MAPPING
 from hardcode_rules import is_hardcode_protected, version_sort_key
 
 def load_history(file_path: Path) -> Dict:
@@ -30,7 +30,10 @@ def generate_database():
         if not data:
             continue
 
-        device_id = data.get("device_id")
+        device_id_raw = data.get("device_id")
+        # Resolve canonical ID if possible
+        device_id = OOS_MAPPING.get(device_id_raw, device_id_raw)
+        
         model = data.get("model")
         device_name = data.get("device")
         region = data.get("region")
@@ -41,7 +44,8 @@ def generate_database():
         # Initialize model entry if not exists
         if model not in database:
             try:
-                order = DEVICE_ORDER.index(device_id)
+                # Use raw device_id (e.g. "15", "Nord CE 3 Lite") for sorting as it matches DEVICE_ORDER
+                order = DEVICE_ORDER.index(device_id_raw)
             except ValueError:
                 order = 999
             

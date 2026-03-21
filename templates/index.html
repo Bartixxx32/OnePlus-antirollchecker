@@ -391,11 +391,18 @@
         .history-row { display: none; }
         .history-row.active { display: table-row; }
 
+        .history-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 500px;
+        }
+
         .history-container {
             padding: 12px 16px 16px;
             background: #0f0f0f;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
         }
-
         .history-title {
             font-size: 0.72rem;
             color: var(--text-muted);
@@ -403,15 +410,7 @@
             letter-spacing: 0.6px;
             text-transform: uppercase;
             margin-bottom: 8px;
-        }
-
-        .history-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 0.75rem;
-            border: 1px solid var(--card-border);
-            border-radius: 6px;
-            overflow: hidden;
+            white-space: nowrap;
         }
 
         .history-table th {
@@ -554,23 +553,26 @@
                 margin-left: 0;
             }
 
-            /* Hide only OEM version subtext on mobile to save space */
-            .firmware-oem { display: none; }
-
-            /* Ensure table fits mobile screen without forced min-width */
-            table { min-width: 0; }
-            .card-body > table { table-layout: fixed; }
+            /* Fully dynamic scaling for mobile */
+            table { table-layout: auto; min-width: 100%; width: 100%; }
+            .card-body > table { table-layout: auto; }
             
-            /* Tighten padding for mobile */
-            thead th, tbody td { padding: 8px 6px; }
-
-            /* Make status badge text smaller */
-            .badge { font-size: 0.55rem; padding: 2px 4px; }
+            /* Tighten padding and allow content-based width */
+            thead th, tbody td { padding: 6px 4px; }
             
-            .col-region { width: 15%; min-width: 110px; }
-            .col-firmware { width: 39%; }
-            .col-status { width: 23%; text-align: center; }
-            .col-actions { width: 23%; text-align: center; }
+            /* Allow long versions to break if they really hit the wall */
+            .firmware-title { 
+                white-space: normal; 
+                word-break: break-all;
+                line-height: 1.2;
+            }
+
+            .col-region, .col-firmware, .col-status, .col-actions { 
+                width: auto; 
+                min-width: 0; 
+            }
+            
+            .firmware-oem { font-size: 0.62rem; margin-top: 2px; }
             
             .footer-links { gap: 12px; }
             .footer-bottom { flex-direction: column; align-items: flex-start; }
@@ -728,6 +730,10 @@
             });
         }
 
+        /**
+         * Extract numeric parts from version string for correct ordering.
+         * Note: Keep this in sync with version_sort_key() in hardcode_rules.py.
+         */
         const versionSortKey = (v) => {
             if (!v) return [0];
             const parts = v.match(/\d+/g);
@@ -784,7 +790,7 @@
                                 <div class="firmware-title-wrap">
                                     <div class="firmware-title">${variant.version || 'Unknown'}</div>
                                 </div>
-                                <div class="firmware-oem">Major: ${variant.major || '?'}, Minor: ${variant.minor || '?'}</div>
+                                <div class="firmware-oem">Major: ${variant.major != null ? variant.major : '?'}, Minor: ${variant.minor != null ? variant.minor : '?'}</div>
                                 ${variant.md5 ? `<details class="md5-details"><summary>Show MD5</summary><code>${variant.md5}</code></details>` : ''}
                             </td>
                             <td>
@@ -810,14 +816,14 @@
                                         ${renderBadge(entry)}
                                         <span class="arb-sub">ARB: ${entry.arb != null ? entry.arb : '?'}</span>
                                     </td>
-                                    <td>Major: ${entry.major||'?'}, Minor: ${entry.minor||'?'}</td>
+                                    <td>Major: ${entry.major != null ? entry.major : '?'}, Minor: ${entry.minor != null ? entry.minor : '?'}</td>
                                     <td>${entry.last_checked || entry.first_seen || 'Unknown'}</td>
                                 </tr>
                             `).join('');
                             
                             rows += `
                             <tr id="${histId}" class="history-row">
-                                <td colspan="4" style="padding:0;">
+                                <td colspan="4" style="padding:0; overflow: visible;">
                                     <div class="history-container">
                                         <div class="history-title">📜 Version History — ${variant.region_name}</div>
                                         <table class="history-table">

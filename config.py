@@ -25,7 +25,6 @@ REGION_MAPPING = {
     'MY': 'Malaysia',
     'TW': 'Taiwan',
     'ID': 'Indonesia',
-    'TH:': 'Thailand',
     'VN': 'Vietnam',
     'APC': 'Asia Pacific',
     'OCA': 'Oceania',
