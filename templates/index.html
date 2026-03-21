@@ -1088,11 +1088,14 @@
                     byDevice[devName].models.push(modelKey);
                 }
 
-                for (const v of d.versions) {
+                // versions is a Map<version_string, VersionData> — iterate as entries
+                for (const [versionStr, v] of Object.entries(d.versions)) {
+                    // Inject the version string into the entry object for convenience
+                    const vWithKey = { ...v, version: versionStr };
                     // Update latest scan time across the DB
-                    if (v.last_checked && v.last_checked > latestScan) latestScan = v.last_checked;
+                    if (vWithKey.last_checked && vWithKey.last_checked > latestScan) latestScan = vWithKey.last_checked;
 
-                    for (const r of v.regions || []) {
+                    for (const r of vWithKey.regions || []) {
                         if (!byDevice[devName].variantsMap[r]) {
                             byDevice[devName].variantsMap[r] = { region_name: r, model: modelKey, history: [], regions: [] };
                         }
@@ -1105,21 +1108,21 @@
                             vr.regions.push(r);
                         }
 
-                        if (v.status === 'current' || !vr.version) {
-                            vr.version = v.version;
-                            vr.arb = v.arb;
-                            vr.md5 = v.md5;
-                            vr.major = v.major;
-                            vr.minor = v.minor;
-                            vr.is_hardcoded = v.is_hardcoded;
-                            vr.last_checked = v.last_checked;
-                            vr.first_seen = v.first_seen;
+                        if (vWithKey.status === 'current' || !vr.version) {
+                            vr.version = vWithKey.version;
+                            vr.arb = vWithKey.arb;
+                            vr.md5 = vWithKey.md5;
+                            vr.major = vWithKey.major;
+                            vr.minor = vWithKey.minor;
+                            vr.is_hardcoded = vWithKey.is_hardcoded;
+                            vr.last_checked = vWithKey.last_checked;
+                            vr.first_seen = vWithKey.first_seen;
                             // Match legacy Python generator logic: push to history if it's an implicit fallback
-                            if (v.status !== 'current') {
-                                vr.history.push(v);
+                            if (vWithKey.status !== 'current') {
+                                vr.history.push(vWithKey);
                             }
                         } else {
-                            vr.history.push(v);
+                            vr.history.push(vWithKey);
                         }
                     }
                 }
