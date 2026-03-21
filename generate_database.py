@@ -78,18 +78,25 @@ def generate_database():
                 if region not in database[model]["versions"][version_str]["regions"]:
                     database[model]["versions"][version_str]["regions"].append(region)
 
-    # Convert versions dict to sorted list (descending by firmware version number)
+    # Output versions as an ordered dict keyed by version string (descending order).
+    # This maintains backwards compatibility with the Android app which expects
+    # Map<String, VersionData>. Python dicts preserve insertion order (3.7+),
+    # so the JSON will be sorted correctly for the web frontend as well.
     output_database = {}
     for model, model_data in sorted(database.items()):
-        sorted_versions = sorted(
-            [{"version": v, **info} for v, info in model_data["versions"].items()],
-            key=lambda x: version_sort_key(x["version"]),
+        sorted_version_keys = sorted(
+            model_data["versions"].keys(),
+            key=version_sort_key,
             reverse=True
         )
+        sorted_versions_dict = {
+            v: model_data["versions"][v]
+            for v in sorted_version_keys
+        }
         output_database[model] = {
             "device_name": model_data["device_name"],
             "device_order": model_data["device_order"],
-            "versions": sorted_versions
+            "versions": sorted_versions_dict
         }
 
     # Write to database.json
