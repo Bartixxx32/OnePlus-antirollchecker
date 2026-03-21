@@ -34,21 +34,17 @@ def update_history_entry(history: Dict, version: str, arb: int, major: int, mino
     for entry in history['history']:
         if entry['version'] == version:
             entry['last_checked'] = today
-            if not is_historical and entry['status'] == 'archived':
-                # Promote to current
-                for e in history['history']:
-                    e['status'] = 'archived'
-                entry['status'] = 'current'
-                # Move to top
-                history['history'].remove(entry)
-                history['history'].insert(0, entry)
-                # Update MD5 if new one is provided and old one is missing/different
-                if md5:
-                     entry['md5'] = md5
-                return True
-            # Update MD5 if provided
+            # Update MD5 if provided and check for changes
             if md5:
-                 entry['md5'] = md5
+                if entry.get('md5') and entry['md5'] != md5:
+                    print(f"WARNING: MD5 changed for version {version}: {entry['md5']} -> {md5}")
+                entry['md5'] = md5
+            
+            # If it's already in history, we don't change its status/position
+            # to avoid demoting a newer 'current' version by re-checking an old one.
+            
+            # Sort before returning
+            history['history'].sort(key=lambda x: (x['status'] == 'current', x['first_seen'], x['version']), reverse=True)
             return False
     
     # New version - add it
@@ -66,16 +62,17 @@ def update_history_entry(history: Dict, version: str, arb: int, major: int, mino
         new_entry["md5"] = md5
     
     if not is_historical:
-        # Mark all existing as archived
+        # Mark all existing as archived because we found a NEW current version
         for entry in history['history']:
             entry['status'] = 'archived'
-        # Insert new at beginning
         history['history'].insert(0, new_entry)
-        return True
     else:
-        # Just append historical to the end
+        # Just append historical to the end, sorting will fix position
         history['history'].append(new_entry)
-        return False
+    
+    # Final sorting: status 'current' first, then first_seen DESC, then version DESC
+    history['history'].sort(key=lambda x: (x['status'] == 'current', x['first_seen'], x['version']), reverse=True)
+    return not is_historical
 
 def main():
     parser = argparse.ArgumentParser(description="Update firmware history JSON.")
