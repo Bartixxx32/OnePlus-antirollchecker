@@ -11,6 +11,32 @@ USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTM
 HISTORY_DIR = "data/history"
 GOOGLE_ANALYTICS_ID = "G-7B8F6LHTVF"
 
+# Region Mapping (used for README and Website)
+REGION_MAPPING = {
+    'GLO': 'Global',
+    'GLB': 'Global',
+    'IN': 'India',
+    'EU': 'Europe',
+    'EEA': 'Europe',
+    'NA': 'North America',
+    'US': 'United States',
+    'CN': 'China',
+    'SG': 'Singapore',
+    'MY': 'Malaysia',
+    'TW': 'Taiwan',
+    'ID': 'Indonesia',
+    'VN': 'Vietnam',
+    'APC': 'Asia Pacific',
+    'OCA': 'Oceania',
+    'EG': 'Egypt',
+    'SA': 'Saudi Arabia',
+    'MX': 'Mexico',
+    'VISIBLE': 'Visible USA',
+    'TH': 'Thailand',
+    'PH': 'Philippines',
+    'MEA': 'Middle East'
+}
+
 # Type definitions
 class DeviceModels(TypedDict, total=False):
     GLO: str
@@ -556,6 +582,7 @@ OOS_MAPPING = {
     "9": "oneplus_9",
     "9RT": "oneplus_9rt",
     "9R": "oneplus_9r",
+    "Open": "oneplus_open",
     # Legacy
     "8T": "oneplus_8t",
     "8 Pro": "oneplus_8_pro",
@@ -568,6 +595,14 @@ OOS_MAPPING = {
     # Nords
     "Nord 5": "oneplus_nord_5",
     "Nord 4": "oneplus_nord_4",
+    "Nord N30": "oneplus_nord_n30",
+    "Nord N20": "oneplus_nord_n20",
+    "Nord N200 5G": "oneplus_nord_n200",
+    "Nord CE 4 Lite": "oneplus_nord_ce_4_lite",
+    "Nord CE 4": "oneplus_nord_ce_4",
+    "Nord CE 3": "oneplus_nord_ce_3",
+    "Nord CE 3 Lite": "oneplus_nord_ce_3_lite",
+    "Nord CE 2 Lite": "oneplus_nord_ce_2_lite",
     # Ace
     "Ace 6T": "oneplus_ace_6t",
     "Ace 6": "oneplus_ace_6",
@@ -589,15 +624,6 @@ OOS_MAPPING = {
     "Find X5": "oppo_find_x5",
     "Find X3 Pro": "oppo_find_x3_pro",
     "Reno10 Pro": "oppo_reno10_pro",
-    "Nord N30": "oneplus_nord_n30",
-    "Nord N20": "oneplus_nord_n20",
-    "Nord N200 5G": "oneplus_nord_n200",
-    "Nord CE 4 Lite": "oneplus_nord_ce_4_lite",
-    "Nord CE 4": "oneplus_nord_ce_4",
-    "Nord CE 3": "oneplus_nord_ce_3",
-    "Nord CE 3 Lite": "oneplus_nord_ce_3_lite",
-    "Nord CE 2 Lite": "oneplus_nord_ce_2_lite",
-    "Open": "oneplus_open",
 }
 
 
