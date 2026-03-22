@@ -155,34 +155,34 @@ jobs:
           with open('result.json', 'r') as f:
               result = json.load(f)
           
-           # Extract model from metadata
-           meta = result.get('ota_metadata', {})
-           model = meta.get('pre-device', '')
-           
-           if model:
-               # Fetch database.json from GitHub Pages
-               import urllib.request
-               try:
-                   with urllib.request.urlopen('https://oparb.pages.dev/database.json', timeout=10) as response:
-                       database = json.loads(response.read().decode())
-                   
-                   # Check if model exists and is hardcoded
-                   if model in database:
-                       versions = database[model].get('versions', {})
-                       # Check current versions for is_hardcoded flag
-                       is_hardcoded = any(v.get('is_hardcoded', False) for v in versions.values())
-                       if is_hardcoded:
-                           print(f"Device {model} is hardcoded - ARB will be displayed as '?'")
-                           print("is_hardcoded=true")
-                       else:
-                           print("is_hardcoded=false")
-                   else:
-                       print("is_hardcoded=false")
-               except Exception as e:
-                   print(f"Error checking hardcoded status: {e}")
-                   print("is_hardcoded=false")
-           else:
-               print("is_hardcoded=false")
+          # Extract model from metadata
+          meta = result.get('ota_metadata', {})
+          model = meta.get('pre-device', '')
+          
+          if model:
+              # Fetch database.json from GitHub Pages
+              import urllib.request
+              try:
+                  with urllib.request.urlopen('https://oparb.pages.dev/database.json', timeout=10) as response:
+                      database = json.loads(response.read().decode())
+                  
+                  # Check if model exists and is hardcoded
+                  if model in database:
+                      versions = database[model].get('versions', {})
+                      # Check current versions for is_hardcoded flag
+                      is_hardcoded = any(v.get('is_hardcoded', False) for v in versions.values())
+                      if is_hardcoded:
+                          print(f"Device {model} is hardcoded - ARB will be displayed as '?'")
+                          print("is_hardcoded=true")
+                      else:
+                          print("is_hardcoded=false")
+                  else:
+                      print("is_hardcoded=false")
+              except Exception as e:
+                  print(f"Error checking hardcoded status: {e}")
+                  print("is_hardcoded=false")
+          else:
+              print("is_hardcoded=false")
           EOF
           else
               echo "is_hardcoded=false"
