@@ -158,6 +158,7 @@ jobs:
           if [ -f result.json ]; then
               python3 << 'EOF'
           import json
+          import os
           
           # Load result.json
           with open('result.json', 'r') as f:
@@ -172,6 +173,8 @@ jobs:
               # Fallback to pre-device if product_name not available
               model = meta.get('pre-device', '')
           print(f"DEBUG: Extracted model (product_name): '{model}'")
+          
+          is_hardcoded = False
           
           if model:
               # Fetch database.json from GitHub Pages
@@ -195,7 +198,6 @@ jobs:
                       is_hardcoded = any(v.get('is_hardcoded', False) for v in versions.values())
                       if is_hardcoded:
                           print(f"Device {model} is hardcoded - ARB will be displayed as '?'")
-                          print("is_hardcoded=true")
                       else:
                           print("is_hardcoded=false")
                   else:
@@ -206,6 +208,11 @@ jobs:
                   print("is_hardcoded=false")
           else:
               print("No model extracted from metadata, is_hardcoded=false")
+          
+          # Write output to GitHub Actions output file
+          with open(os.environ.get('GITHUB_OUTPUT', '/dev/null'), 'a') as f:
+              f.write(f"is_hardcoded={str(is_hardcoded).lower()}\n")
+          
           EOF
           else
               echo "is_hardcoded=false"
