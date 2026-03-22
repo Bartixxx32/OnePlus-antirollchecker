@@ -157,10 +157,13 @@ jobs:
           
           print(f"DEBUG: result.json contents: {json.dumps(result, indent=2)}")
           
-          # Extract model from metadata
+          # Extract model from metadata - use product_name for database lookup
           meta = result.get('ota_metadata', {})
-          model = meta.get('pre-device', '')
-          print(f"DEBUG: Extracted model: '{model}'")
+          model = meta.get('product_name', '')
+          if not model:
+              # Fallback to pre-device if product_name not available
+              model = meta.get('pre-device', '')
+          print(f"DEBUG: Extracted model (product_name): '{model}'")
           
           if model:
               # Fetch database.json from GitHub Pages
