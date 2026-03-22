@@ -248,7 +248,7 @@ jobs:
                   is_hardcoded = os.environ.get('IS_HARDCODED', 'false') == 'true'
                   if is_hardcoded:
                       arb_display = "?"
-                      status = "⚠️ **Hardcoded Device - ARB Unknown**"
+                      status = '? ⚠️ **Undetectable ARB**'
                   else:
                       arb_display = arb
                       status = '✅ **Safe to flash/roll back**' if arb == '0' else '⚠️ **Anti-Rollback Active!**'
