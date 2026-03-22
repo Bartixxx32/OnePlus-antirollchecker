@@ -151,6 +151,7 @@ def main():
         message += f"🏗️ *Build ID:* `{safe_build}`\n"
 
     arb_emoji = ""
+    arb_suffix = ""
     try:
         # standard ARB is typically integer string "0" or "1"
         arb_val = int(args.arb.strip())
@@ -162,9 +163,14 @@ def main():
         # If it's "Error" or "Unknown" or "?", show warning
         if "error" in args.arb.lower() or args.arb.strip() == "?":
             arb_emoji = "⚠️"
+            if args.arb.strip() == "?":
+                arb_suffix = "Undetectable ARB"
         pass
 
-    message += f"🛡️ *ARB Index:* {safe_arb} {arb_emoji}\n"
+    message += f"🛡️ *ARB Index:* {safe_arb} {arb_emoji}"
+    if arb_suffix:
+        message += f" - {arb_suffix}"
+    message += "\n"
 
     if safe_md5:
         message += f"🔑 *MD5:* `{safe_md5}`\n"
