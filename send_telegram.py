@@ -159,9 +159,9 @@ def main():
         else:
             arb_emoji = "✅"
     except:
-        # If it's "Error" or "Unknown", maybe no emoji or warning
-        if "error" in args.arb.lower():
-             arb_emoji = "⚠️"
+        # If it's "Error" or "Unknown" or "?", show warning
+        if "error" in args.arb.lower() or args.arb.strip() == "?":
+            arb_emoji = "⚠️"
         pass
 
     message += f"🛡️ *ARB Index:* {safe_arb} {arb_emoji}\n"
