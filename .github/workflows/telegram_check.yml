@@ -155,9 +155,12 @@ jobs:
           with open('result.json', 'r') as f:
               result = json.load(f)
           
+          print(f"DEBUG: result.json contents: {json.dumps(result, indent=2)}")
+          
           # Extract model from metadata
           meta = result.get('ota_metadata', {})
           model = meta.get('pre-device', '')
+          print(f"DEBUG: Extracted model: '{model}'")
           
           if model:
               # Fetch database.json from GitHub Pages
@@ -171,9 +174,12 @@ jobs:
                   with urllib.request.urlopen(req, timeout=10) as response:
                       database = json.loads(response.read().decode())
                   
+                  print(f"DEBUG: Database loaded, {len(database)} models available")
+                  
                   # Check if model exists and is hardcoded
                   if model in database:
                       versions = database[model].get('versions', {})
+                      print(f"DEBUG: Found {len(versions)} versions for {model}")
                       # Check current versions for is_hardcoded flag
                       is_hardcoded = any(v.get('is_hardcoded', False) for v in versions.values())
                       if is_hardcoded:
@@ -182,12 +188,13 @@ jobs:
                       else:
                           print("is_hardcoded=false")
                   else:
+                      print(f"Model '{model}' not found in database. Available models: {list(database.keys())[:10]}")
                       print("is_hardcoded=false")
               except Exception as e:
                   print(f"Error checking hardcoded status: {e}")
                   print("is_hardcoded=false")
           else:
-              print("is_hardcoded=false")
+              print("No model extracted from metadata, is_hardcoded=false")
           EOF
           else
               echo "is_hardcoded=false"
