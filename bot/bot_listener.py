@@ -279,11 +279,17 @@ async def status_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 current_versions = list(versions.keys())[-3:]
             for v in current_versions:
                 v_det = versions[v]
-                arb = v_det.get('arb', '?')
+                is_hardcoded = v_det.get('is_hardcoded', False)
+                if is_hardcoded:
+                    arb_display = "?"
+                    status_icon = "⚠️"
+                else:
+                    arb = v_det.get('arb', '?')
+                    arb_display = arb
+                    status_icon = "🟢" if arb == 0 else "🔴"
                 md5 = v_det.get('md5', 'N/A')
                 regions = ", ".join(v_det.get('regions', []))
-                status_icon = "🟢" if arb == 0 else "🔴"
-                text += f"  • `{v}` ({regions}) - ARB: {arb} {status_icon}\n    MD5: `{md5}`\n"
+                text += f"  • `{v}` ({regions}) - ARB: {arb_display} {status_icon}\n    MD5: `{md5}`\n"
         text += "\n"
         
     if len(found_models) > 10:
@@ -315,15 +321,22 @@ async def latest(update: Update, context: ContextTypes.DEFAULT_TYPE, is_callback
     
     text = "🔥 **Latest Discovered Firmwares:**\n\n"
     for first_seen, dev_name, v_name, v_det in all_fw[:5]:
-        arb = v_det.get('arb', '?')
+        is_hardcoded = v_det.get('is_hardcoded', False)
+        if is_hardcoded:
+            arb_display = "?"
+            status_icon = "⚠️"
+        else:
+            arb = v_det.get('arb', '?')
+            arb_display = arb
+            status_icon = "🟢" if arb == 0 else "🔴"
+        
         regions = ", ".join(v_det.get('regions', []))
-        status_icon = "🟢" if arb == 0 else "🔴"
         
         date_str = ""
         if first_seen != '2000-01-01':
             date_str = f" 📅 `{first_seen}`"
             
-        text += f"📱 *{dev_name}*\n  • `{v_name}` ({regions}) - ARB: {arb} {status_icon}{date_str}\n\n"
+        text += f"📱 *{dev_name}*\n  • `{v_name}` ({regions}) - ARB: {arb_display} {status_icon}{date_str}\n\n"
         
     if is_callback:
         await update.callback_query.message.reply_text(text, parse_mode="Markdown")

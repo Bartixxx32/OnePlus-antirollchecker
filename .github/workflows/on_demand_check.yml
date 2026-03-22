@@ -151,12 +151,58 @@ jobs:
             --final-dir firmware_data \
             --json > result.json
 
+      - name: Check Hardcoded Status
+        if: always() && steps.setup.outputs.url != ''
+        id: check_hardcode
+        run: |
+          if [ -f result.json ]; then
+              python3 << 'EOF'
+          import json
+          
+          # Load result.json
+          with open('result.json', 'r') as f:
+              result = json.load(f)
+          
+          # Extract model from metadata
+          meta = result.get('ota_metadata', {})
+          model = meta.get('pre-device', '')
+          
+          if model:
+              # Fetch database.json from GitHub Pages
+              import urllib.request
+              try:
+                  with urllib.request.urlopen('https://oparb.pages.dev/database.json', timeout=10) as response:
+                      database = json.loads(response.read().decode())
+                  
+                  # Check if model exists and is hardcoded
+                  if model in database:
+                      versions = database[model].get('versions', {})
+                      # Check current versions for is_hardcoded flag
+                      is_hardcoded = any(v.get('is_hardcoded', False) for v in versions.values())
+                      if is_hardcoded:
+                          print(f"Device {model} is hardcoded - ARB will be displayed as '?'")
+                          print("is_hardcoded=true")
+                      else:
+                          print("is_hardcoded=false")
+                  else:
+                      print("is_hardcoded=false")
+              except Exception as e:
+                  print(f"Error checking hardcoded status: {e}")
+                  print("is_hardcoded=false")
+          else:
+              print("is_hardcoded=false")
+          EOF
+          else
+              echo "is_hardcoded=false"
+          fi
+
       - name: Generate Final Report
         if: always() && steps.setup.outputs.url != ''
         shell: python
         env:
           ISSUE_USER: ${{ github.event.issue.user.login }}
           EVENT_NAME: ${{ github.event_name }}
+          IS_HARDCODED: ${{ steps.check_hardcode.outputs.is_hardcoded }}
         run: |
           import json, os
           
@@ -169,8 +215,6 @@ jobs:
                       res = json.load(f)
                   
                   arb = res.get('arb_index', 'Unknown')
-                  status = '✅ **Safe to flash/roll back**' if arb == '0' else '⚠️ **Anti-Rollback Active!**'
-                  
                   meta = res.get('ota_metadata', {})
                   device = meta.get('pre-device', 'Unknown')
                   product = meta.get('product_name', 'Unknown')
@@ -178,14 +222,23 @@ jobs:
                   version = meta.get('version_name_show', meta.get('display-version', 'Unknown'))
                   build = meta.get('post-build', 'Unknown')
                   
+                  # Check if device is hardcoded
+                  is_hardcoded = os.environ.get('IS_HARDCODED', 'false') == 'true'
+                  if is_hardcoded:
+                      arb_display = "?"
+                      status = "⚠️ **Hardcoded Device - ARB Unknown**"
+                  else:
+                      arb_display = arb
+                      status = '✅ **Safe to flash/roll back**' if arb == '0' else '⚠️ **Anti-Rollback Active!**'
+                  
                   # Get user handle or default for manual
                   user = os.environ.get('ISSUE_USER')
-                  if not user or user == 'null': 
+                  if not user or user == 'null':
                       user = "Manual Trigger"
 
                   output = f"@{user}, here is your analysis!\n"
                   output += f"### 👑 🎯 Analysis Result\n"
-                  output += f"- **ARB Index**: `{arb}`\n"
+                  output += f"- **ARB Index**: `{arb_display}`\n"
                   output += f"- **Status**: {status}\n\n"
                   output += f"#### 📱 Firmware Details\n"
                   output += f"- **Version**: `{version}`\n"
@@ -197,7 +250,7 @@ jobs:
                   print("-" * 40)
                   print("MANUAL ANALYSIS RESULT")
                   print("-" * 40)
-                  print(f"ARB Index: {arb}")
+                  print(f"ARB Index: {arb_display}")
                   print(f"Status: {status}")
                   print(f"Device: {product} ({device})")
                   print(f"Version: {version}")
