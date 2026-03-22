@@ -973,7 +973,7 @@
                             </td>
                             <td>
                                 ${renderBadge(variant)}
-                                <span class="arb-sub">ARB: ${variant.arb != null ? variant.arb : '?'}</span>
+                                <span class="arb-sub">ARB: ${variant.is_hardcoded ? '?' : (variant.arb != null ? variant.arb : '?')}</span>
                                 <div class="last-checked-sub">${variant.last_checked || variant.first_seen || 'Unknown'}</div>
                             </td>
                             <td>
@@ -993,7 +993,7 @@
                                     </td>
                                     <td>
                                         ${renderBadge(entry)}
-                                        <span class="arb-sub">ARB: ${entry.arb != null ? entry.arb : '?'}</span>
+                                        <span class="arb-sub">ARB: ${entry.is_hardcoded ? '?' : (entry.arb != null ? entry.arb : '?')}</span>
                                     </td>
                                     <td>Major: ${entry.major != null ? entry.major : '?'}, Minor: ${entry.minor != null ? entry.minor : '?'}</td>
                                     <td>${entry.last_checked || entry.first_seen || 'Unknown'}</td>
