@@ -2,15 +2,21 @@ import re
 
 def is_hardcode_protected(device_id: str, version: str) -> bool:
     """
-    Checks if a specific firmware version is 'hardcode protected' 
+    Checks if a specific firmware version is 'hardcode protected'
     (i.e., known to have ARB regardless of undetectable values).
     """
-    # Use canonical device_id (oneplus_nord_ce_3_lite) instead of display name
+    # Nord CE 3 Lite - build numbers >= 1600
     if device_id == "oneplus_nord_ce_3_lite" and version:
-        # Match version strings like .1600 or .1611
         match = re.search(r'\.(\d{4,})(?:\(|$|_)', version)
         if match and int(match.group(1)) >= 1600:
             return True
+    
+    # Nord CE 3 (non-lite) - build numbers >= 1600
+    if device_id == "oneplus_nord_ce_3" and version:
+        match = re.search(r'\.(\d{4,})(?:\(|$|_)', version)
+        if match and int(match.group(1)) >= 1600:
+            return True
+    
     return False
 
 def version_sort_key(version_str: str) -> tuple:
