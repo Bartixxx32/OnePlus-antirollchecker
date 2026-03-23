@@ -735,14 +735,16 @@
         "arb": 0,
         "major": 2,
         "minor": 0,
-        "md5": "c7978bb9b21f5ab05179ce1957e1e7fa",
-        "first_seen": "2026-03-18",
+        "md5": "9bfc00e1335a3f6dab6ccdeacf242d65",
+        "first_seen": "2026-03-23",
         "last_checked": "2026-03-23",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
+          "TW",
           "ID",
           "TH",
+          "MY",
           "SG",
           "VN"
         ]
@@ -1187,7 +1189,7 @@
         "first_seen": "2026-03-18",
         "last_checked": "2026-03-23",
         "status": "current",
-        "is_hardcoded": false,
+        "is_hardcoded": true,
         "regions": [
           "IN"
         ]
@@ -1198,6 +1200,19 @@
     "device_name": "OnePlus 12",
     "device_order": 7,
     "versions": {
+      "CPH2573_16.0.5.702(EX01)": {
+        "arb": 1,
+        "major": 3,
+        "minor": 0,
+        "md5": "a599a8f3fdbd426588b8f544c5b19fa3",
+        "first_seen": "2026-03-23",
+        "last_checked": "2026-03-23",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "IN"
+        ]
+      },
       "CPH2573_16.0.3.500(EX01)": {
         "arb": 1,
         "major": 3,
@@ -1205,7 +1220,7 @@
         "md5": "54fd9ec64be6d91bb7b68b9c14864033",
         "first_seen": "2026-02-04",
         "last_checked": "2026-03-23",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "IN"
@@ -1793,6 +1808,19 @@
     "device_name": "OnePlus Nord 4",
     "device_order": 25,
     "versions": {
+      "CPH2661_16.0.5.701(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": "6352d9d637f01ddfb574d13c412c3cae",
+        "first_seen": "2026-03-23",
+        "last_checked": "2026-03-23",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "IN"
+        ]
+      },
       "CPH2661_16.0.5.700(EX01)": {
         "arb": 0,
         "major": 3,
@@ -1800,7 +1828,7 @@
         "md5": "f4d9b971fe52613b02edfe8225e86c95",
         "first_seen": "2026-03-19",
         "last_checked": "2026-03-23",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "IN"
@@ -2000,6 +2028,19 @@
     "device_name": "OnePlus 13R",
     "device_order": 3,
     "versions": {
+      "CPH2691_16.0.5.701(EX01)": {
+        "arb": 1,
+        "major": 3,
+        "minor": 0,
+        "md5": "6e491c496b73deea2dc834cd5f460d8b",
+        "first_seen": "2026-03-23",
+        "last_checked": "2026-03-23",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "IN"
+        ]
+      },
       "CPH2691_16.0.3.500(EX01)": {
         "arb": 1,
         "major": 3,
@@ -2007,7 +2048,7 @@
         "md5": "7052fdc3ef6ba695876c463e220b0666",
         "first_seen": "2026-02-11",
         "last_checked": "2026-03-23",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "IN"
@@ -3329,6 +3370,19 @@
     "device_name": "OnePlus Pad 2",
     "device_order": 44,
     "versions": {
+      "OPD2403_16.0.5.701(EX01)": {
+        "arb": 1,
+        "major": 3,
+        "minor": 0,
+        "md5": "81159aae331be32f00155760c8b14b14",
+        "first_seen": "2026-03-23",
+        "last_checked": "2026-03-23",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "IN"
+        ]
+      },
       "OPD2403_16.0.3.501(EX01)": {
         "arb": 1,
         "major": 3,
@@ -3815,6 +3869,19 @@
     "device_name": "OnePlus Ace 5",
     "device_order": 38,
     "versions": {
+      "PKG110_16.0.5.701(CN01)": {
+        "arb": 1,
+        "major": 3,
+        "minor": 0,
+        "md5": "9e846bf2d37cfc10168757bbf98f9606",
+        "first_seen": "2026-03-23",
+        "last_checked": "2026-03-23",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "CN"
+        ]
+      },
       "PKG110_16.0.3.500(CN01)": {
         "arb": 1,
         "major": 3,
@@ -3822,7 +3889,7 @@
         "md5": "d216133625b3690b7e66df13d17fc659",
         "first_seen": "2026-02-04",
         "last_checked": "2026-03-23",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "CN"
@@ -3957,6 +4024,19 @@
     "device_name": "OnePlus Ace 5 Pro",
     "device_order": 37,
     "versions": {
+      "PKR110_16.0.5.700(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": "1032105ab6780803db30bfb1ceaf8cff",
+        "first_seen": "2026-03-23",
+        "last_checked": "2026-03-23",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "CN"
+        ]
+      },
       "PKR110_16.0.3.500(CN01)": {
         "arb": 0,
         "major": 3,
@@ -3964,7 +4044,7 @@
         "md5": "a29150f57f67b99083f6a4081c468171",
         "first_seen": "2026-02-04",
         "last_checked": "2026-03-23",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "CN"
