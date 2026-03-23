@@ -147,67 +147,56 @@ jobs:
         if: always()
         id: check_hardcode
         run: |
+          is_hardcoded=false
+          
           if [ -f result.json ]; then
               python3 << 'EOF'
           import json
           import os
           
-          # Load result.json
-          with open('result.json', 'r') as f:
-              result = json.load(f)
-          
-          print(f"DEBUG: result.json contents: {json.dumps(result, indent=2)}")
-          
-          # Extract model from metadata - use product_name for database lookup
-          meta = result.get('ota_metadata', {})
-          model = meta.get('product_name', '')
-          if not model:
-              # Fallback to pre-device if product_name not available
-              model = meta.get('pre-device', '')
-          print(f"DEBUG: Extracted model (product_name): '{model}'")
-          
           is_hardcoded = False
           
-          if model:
-              # Fetch database.json from GitHub Pages
-              import urllib.request
-              try:
-                  # Create request with User-Agent to avoid 403
-                  req = urllib.request.Request(
-                      'https://oparb.pages.dev/database.json',
-                      headers={'User-Agent': 'Mozilla/5.0 (compatible; OnePlus-ARB-Checker/1.0)'}
-                  )
-                  with urllib.request.urlopen(req, timeout=10) as response:
-                      database = json.loads(response.read().decode())
-                  
-                  print(f"DEBUG: Database loaded, {len(database)} models available")
-                  
-                  # Check if model exists and is hardcoded
-                  if model in database:
-                      versions = database[model].get('versions', {})
-                      print(f"DEBUG: Found {len(versions)} versions for {model}")
-                      # Check current versions for is_hardcoded flag
-                      is_hardcoded = any(v.get('is_hardcoded', False) for v in versions.values())
-                      if is_hardcoded:
-                          print(f"Device {model} is hardcoded - ARB will be displayed as '?'")
-                      else:
-                          print("is_hardcoded=false")
-                  else:
-                      print(f"Model '{model}' not found in database. Available models: {list(database.keys())[:10]}")
-                      print("is_hardcoded=false")
-              except Exception as e:
-                  print(f"Error checking hardcoded status: {e}")
-                  print("is_hardcoded=false")
-          else:
-              print("No model extracted from metadata, is_hardcoded=false")
+          try:
+              # Load result.json
+              with open('result.json', 'r') as f:
+                  result = json.load(f)
+              
+              # Extract model from metadata - use product_name for database lookup
+              meta = result.get('ota_metadata', {})
+              model = meta.get('product_name', '')
+              if not model:
+                  # Fallback to pre-device if product_name not available
+                  model = meta.get('pre-device', '')
+              
+              if model:
+                  # Fetch database.json from GitHub Pages
+                  import urllib.request
+                  try:
+                      # Create request with User-Agent to avoid 403
+                      req = urllib.request.Request(
+                          'https://oparb.pages.dev/database.json',
+                          headers={'User-Agent': 'Mozilla/5.0 (compatible; OnePlus-ARB-Checker/1.0)'}
+                      )
+                      with urllib.request.urlopen(req, timeout=10) as response:
+                          database = json.loads(response.read().decode())
+                      
+                      # Check if model exists and is hardcoded
+                      if model in database:
+                          versions = database[model].get('versions', {})
+                          # Check current versions for is_hardcoded flag
+                          is_hardcoded = any(v.get('is_hardcoded', False) for v in versions.values())
+                  except Exception as e:
+                      print(f"Error checking hardcoded status: {e}")
+          except json.JSONDecodeError:
+              print("result.json is empty or invalid, skipping hardcoded check")
+          except Exception as e:
+              print(f"Unexpected error: {e}")
           
           # Write output to GitHub Actions output file
           with open(os.environ.get('GITHUB_OUTPUT', '/dev/null'), 'a') as f:
               f.write(f"is_hardcoded={str(is_hardcoded).lower()}\n")
           
           EOF
-          else
-              echo "is_hardcoded=false"
           fi
 
       - name: Send Telegram Reply
