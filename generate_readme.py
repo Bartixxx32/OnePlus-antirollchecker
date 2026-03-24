@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 from datetime import datetime, timezone
 from typing import Dict, List, Optional
-from config import DEVICE_ORDER, DEVICE_METADATA, REGION_MAPPING
+from config import DEVICE_ORDER, DEVICE_METADATA, REGION_MAPPING, OOS_MAPPING
 import re
 from hardcode_rules import is_hardcode_protected, version_sort_key
 
@@ -21,6 +21,9 @@ def get_region_name(variant: str) -> str:
 def generate_device_section(device_id: str, device_name: str, history_data: Dict) -> List[str]:
     """Generate Markdown section for a specific device."""
     lines = []
+    
+    # Convert device_id to snake_case format for hardcode checking
+    device_id_mapped = OOS_MAPPING.get(device_id, device_id)
     
     # Get available variants
     variants = set()
@@ -68,7 +71,9 @@ def generate_device_section(device_id: str, device_name: str, history_data: Dict
             version = current_entry.get('version', 'Unknown')
             arb = current_entry.get('arb', -1)
             
-            is_hardcoded = is_hardcode_protected(device_id, version)
+            is_hardcoded = is_hardcode_protected(device_id_mapped, version)
+            # For hardcoded entries, show ? for ARB value (matching website)
+            display_arb = '?' if is_hardcoded else (arb if arb is not None and arb >= 0 else '?')
                 
             date = current_entry.get('last_checked', 'Unknown')
             major = current_entry.get('major', '?')
@@ -76,15 +81,15 @@ def generate_device_section(device_id: str, device_name: str, history_data: Dict
             region_name = get_region_name(variant)
             model = data.get('model', 'Unknown')
             
-            # Status icon
+            # Status icon and text (matching website badges)
             if is_hardcoded:
-                safe_icon = "⚠️"
+                safe_icon = "⚠️ Undetectable ARB"
             elif arb == 0:
-                safe_icon = "✅"
+                safe_icon = "✅ Safe"
             elif isinstance(arb, int) and arb > 0:
-                safe_icon = "❌"
+                safe_icon = "❌ Protected"
             else:
-                safe_icon = "❓"
+                safe_icon = "❓ Unknown"
                 
             # MD5 formating
             md5 = current_entry.get('md5')
@@ -92,7 +97,7 @@ def generate_device_section(device_id: str, device_name: str, history_data: Dict
             if md5:
                 md5_str = f"<br><details><summary>MD5</summary><code>{md5}</code></details>"
 
-            rows.append(f"| {region_name} | {model} | {version}{md5_str} | **{arb}** | Major: {major}, Minor: {minor} | {date} | {safe_icon} |")
+            rows.append(f"| {region_name} | {model} | {version}{md5_str} | **{display_arb}** | Major: {major}, Minor: {minor} | {date} | {safe_icon} |")
 
     if has_data:
         lines.append(f"### {device_name}")
@@ -127,27 +132,29 @@ def generate_device_section(device_id: str, device_name: str, history_data: Dict
                     v = entry.get('version', 'Unknown')
                     a = entry.get('arb', -1)
                     
-                    hist_is_hardcoded = is_hardcode_protected(device_id, v)
+                    hist_is_hardcoded = is_hardcode_protected(device_id_mapped, v)
+                    # For hardcoded entries, show ? for ARB value (matching website)
+                    display_a = '?' if hist_is_hardcoded else (a if a is not None and a >= 0 else '?')
                         
                     maj = entry.get('major', '?')
                     min_ = entry.get('minor', '?')
                     ls = entry.get('last_checked', 'Unknown')
                     
                     if hist_is_hardcoded:
-                        s_icon = "⚠️"
+                        s_icon = "⚠️ Undetectable ARB"
                     elif a == 0:
-                        s_icon = "✅"
+                        s_icon = "✅ Safe"
                     elif isinstance(a, int) and a > 0:
-                        s_icon = "❌"
+                        s_icon = "❌ Protected"
                     else:
-                        s_icon = "❓"
+                        s_icon = "❓ Unknown"
                     
                     md5_hist = entry.get('md5')
                     md5_hist_str = ""
                     if md5_hist:
                         md5_hist_str = f"<br><details><summary>MD5</summary><code>{md5_hist}</code></details>"
                         
-                    history_lines.append(f"| {v}{md5_hist_str} | {a} | Major: {maj}, Minor: {min_} | {ls} | {s_icon} |")
+                    history_lines.append(f"| {v}{md5_hist_str} | {display_a} | Major: {maj}, Minor: {min_} | {ls} | {s_icon} |")
                 history_lines.append("")
                 history_lines.append("</details>")
                 history_lines.append("")
