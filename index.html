@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnePlus ARB Checker</title>
+    <meta name="description" content="OnePlus Anti-Rollback (ARB) index tracker.">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bartixxx32.github.io/OnePlus-antirollchecker/">
+    <meta property="og:title" content="OnePlus ARB Checker">
+    <meta property="og:description"
+        content="Real-time Anti-Rollback (ARB) index tracking for OnePlus devices. Monitor firmware updates and protect your device.">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://bartixxx32.github.io/OnePlus-antirollchecker/">
+    <meta property="twitter:title" content="OnePlus ARB Checker">
+    <meta property="twitter:description"
+        content="Real-time Anti-Rollback (ARB) index tracking for OnePlus devices. Monitor firmware updates and protect your device.">
+
+    <!-- Google Analytics -->
+    
+
+    <!-- Favicon (SVG Data URI) -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23da3633'/><text x='50' y='70' font-family='Arial' font-size='60' font-weight='bold' fill='white' text-anchor='middle'>1+</text></svg>">
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg: #0a0a0a;
+            --surface: #141414;
+            --card-bg: #1a1a1a;
+            --card-border: #2a2a2a;
+            --text: #e8e8e8;
+            --text-muted: #888;
+            --text-dim: #555;
+            --accent: #58a6ff;
+            --accent-hover: #79b8ff;
+            --success: #00c853;
+            --success-bg: rgba(0, 200, 83, 0.1);
+            --success-border: rgba(0, 200, 83, 0.3);
+            --danger: #ff4444;
+            --danger-bg: rgba(255, 68, 68, 0.1);
+            --danger-border: rgba(255, 68, 68, 0.3);
+            --warning: #ffab00;
+            --warning-bg: rgba(255, 171, 0, 0.1);
+            --warning-border: rgba(255, 171, 0, 0.3);
+            --th-bg: #111;
+            --row-hover: rgba(255, 255, 255, 0.03);
+            --radius: 10px;
+            --header-h: 60px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            line-height: 1.5;
+            padding-bottom: 60px;
+        }
+
+        /* ─── TOPBAR ─── */
+        .topbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(10, 10, 10, 0.92);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--card-border);
+            height: var(--header-h);
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            gap: 16px;
+        }
+
+        .topbar-brand {
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+        }
+
+        .topbar-brand h1 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text);
+            line-height: 1.1;
+        }
+
+        .topbar-brand p {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+        }
+
+        .topbar-search {
+            flex: 1;
+            max-width: 340px;
+            margin-left: auto;
+            position: relative;
+        }
+
+        .topbar-search svg {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            pointer-events: none;
+        }
+
+        #search-input {
+            width: 100%;
+            padding: 7px 12px 7px 34px;
+            background: var(--surface);
+            border: 1px solid var(--card-border);
+            border-radius: 6px;
+            color: var(--text);
+            font-size: 0.85rem;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        #search-input::placeholder {
+            color: var(--text-dim);
+        }
+
+        #search-input:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.15);
+        }
+
+
+        /* ─── MAIN ─── */
+        .main {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 22px 16px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+        }
+
+        /* ─── CARD ─── */
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: border-color 0.2s;
+        }
+
+        .card:hover {
+            border-color: #3a3a3a;
+        }
+
+        .card-header {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--card-border);
+            background: var(--surface);
+        }
+
+        .card-header h2 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text);
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+        }
+
+        .device-models {
+            font-size: 0.72rem;
+            color: var(--text-dim);
+            font-weight: 400;
+            letter-spacing: 0.3px;
+        }
+
+        .card-body {
+            overflow-x: auto;
+        }
+
+        /* ─── TABLE ─── */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.78rem;
+            min-width: 480px;
+        }
+
+        thead th {
+            background: var(--th-bg);
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.68rem;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            padding: 8px 12px;
+            border-bottom: 1px solid var(--card-border);
+            white-space: nowrap;
+        }
+
+        tbody td {
+            padding: 8px 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            vertical-align: middle;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        tbody tr:hover {
+            background: var(--row-hover);
+        }
+
+        .card-body>table {
+            table-layout: fixed;
+        }
+
+        .col-region {
+            width: 15%;
+            min-width: 110px;
+        }
+
+        .col-firmware {
+            width: 39%;
+        }
+
+        .col-status {
+            width: 23%;
+            text-align: center;
+        }
+
+        .col-actions {
+            width: 23%;
+            text-align: center;
+        }
+
+        .card-body>table>tbody>tr:not(.history-row)>td:nth-child(3) {
+            text-align: center;
+        }
+
+        .card-body>table>tbody>tr:not(.history-row)>td:nth-child(4) {
+            text-align: center;
+        }
+
+        .region-main {
+            font-weight: 600;
+            color: var(--text);
+            font-size: 0.8rem;
+        }
+
+        .region-model {
+            color: var(--text-dim);
+            font-size: 0.68rem;
+            display: block;
+            margin-top: 1px;
+        }
+
+        .firmware-ver {
+            font-family: 'SFMono-Regular', Consolas, monospace;
+            font-size: 0.75rem;
+        }
+
+        .firmware-oem {
+            color: var(--text-dim);
+            font-size: 0.68rem;
+            display: block;
+            margin-top: 1px;
+        }
+
+        .arb-val {
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+
+        .arb-sub {
+            display: block;
+            font-size: 0.62rem;
+            color: var(--text-dim);
+            margin-top: 3px;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .last-checked-sub {
+            display: block;
+            font-size: 0.58rem;
+            color: var(--text-dim);
+            margin-top: 2px;
+            opacity: 0.8;
+            font-variant-numeric: tabular-nums;
+        }
+
+        /* ─── BADGES ─── */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 2px 8px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+            white-space: nowrap;
+        }
+
+        .badge-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .badge-safe {
+            background: var(--success-bg);
+            border: 1px solid var(--success-border);
+            color: var(--success);
+        }
+
+        .badge-safe .badge-dot {
+            background: var(--success);
+        }
+
+        .badge-danger {
+            background: var(--danger-bg);
+            border: 1px solid var(--danger-border);
+            color: var(--danger);
+        }
+
+        .badge-danger .badge-dot {
+            background: var(--danger);
+        }
+
+        .badge-hardcode {
+            background: var(--warning-bg);
+            border: 1px solid var(--warning-border);
+            color: var(--warning);
+        }
+
+        .badge-hardcode .badge-dot {
+            background: var(--warning);
+        }
+
+        .badge-warning {
+            background: rgba(100, 100, 100, 0.15);
+            border: 1px solid rgba(100, 100, 100, 0.3);
+            color: var(--text-muted);
+        }
+
+        .badge-warning .badge-dot {
+            background: var(--text-muted);
+        }
+
+        /* ─── FIRMWARE TITLE SCROLL ─── */
+        .firmware-title-wrap {
+            overflow-x: auto;
+            white-space: nowrap;
+            width: 100%;
+            position: relative;
+            scrollbar-width: none;
+            /* Firefox */
+            -ms-overflow-style: none;
+            /* IE 10+ */
+        }
+
+        .firmware-title-wrap::-webkit-scrollbar {
+            display: none;
+            /* Chrome/Safari */
+        }
+
+        .firmware-title {
+            display: inline-block;
+            font-weight: 400;
+            /* Reverted from 700 to normal */
+            color: var(--text);
+            font-size: 0.78rem;
+            /* Slightly smaller from 0.82rem */
+        }
+
+        /* Mobile adjustment */
+        @media (max-width: 600px) {
+            .firmware-title {
+                font-size: 0.7rem;
+                padding-right: 12px;
+            }
+        }
+
+
+        /* ─── MD5 details ─── */
+        details.md5-details {
+            margin-top: 2px;
+        }
+
+        details.md5-details summary {
+            cursor: pointer;
+            font-size: 0.68rem;
+            color: var(--accent);
+            list-style: none;
+            user-select: none;
+        }
+
+        details.md5-details summary::-webkit-details-marker {
+            display: none;
+        }
+
+        details.md5-details code {
+            display: block;
+            font-size: 0.65rem;
+            background: #111;
+            padding: 3px 6px;
+            border-radius: 4px;
+            margin-top: 2px;
+            word-break: break-all;
+            color: var(--text-muted);
+        }
+
+        /* ─── HISTORY BUTTON ─── */
+        .btn-history {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 12px;
+            background: transparent;
+            border: 1px solid var(--accent);
+            border-radius: 5px;
+            color: var(--accent);
+            font-size: 0.72rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.15s;
+            white-space: nowrap;
+            letter-spacing: 0.2px;
+        }
+
+        .btn-history:hover {
+            background: rgba(88, 166, 255, 0.1);
+        }
+
+        .btn-history.active {
+            background: var(--accent);
+            color: #000;
+        }
+
+        .btn-history-arrow {
+            font-size: 0.8rem;
+            transition: transform 0.2s;
+        }
+
+        .btn-history.active .btn-history-arrow {
+            transform: rotate(90deg);
+        }
+
+        /* ─── HISTORY ROW ─── */
+        .history-row {
+            display: none;
+        }
+
+        .history-row.active {
+            display: table-row;
+        }
+
+        .history-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 500px;
+        }
+
+        .history-container {
+            padding: 12px 16px 16px;
+            background: #0f0f0f;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .history-title {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            white-space: nowrap;
+        }
+
+        .history-table th {
+            background: #111;
+            color: var(--text-dim);
+            font-size: 0.65rem;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            padding: 6px 10px;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .history-table td {
+            padding: 7px 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            color: var(--text-muted);
+            vertical-align: middle;
+        }
+
+        .history-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* ─── FOOTER ─── */
+        .footer {
+            border-top: 1px solid var(--card-border);
+            margin-top: 40px;
+            padding-top: 28px;
+        }
+
+        .footer-cards {
+            max-width: 1400px;
+            margin: 0 auto 24px;
+            padding: 0 16px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .footer-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: var(--radius);
+            padding: 16px;
+        }
+
+        .footer-card h3 {
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .footer-card p {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+
+        .footer-card a {
+            color: var(--accent);
+        }
+
+        .footer-card a:hover {
+            color: var(--accent-hover);
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 16px 16px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .footer-link {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-link:hover {
+            color: var(--text);
+        }
+
+        .footer-link svg {
+            flex-shrink: 0;
+        }
+
+        .footer-meta {
+            font-size: 0.72rem;
+            color: var(--text-dim);
+        }
+
+        .footer-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            align-items: center;
+        }
+
+        .footer-badges img {
+            display: block;
+        }
+
+        .footer-credits {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 12px 16px;
+            border-top: 1px solid var(--card-border);
+            font-size: 0.72rem;
+            color: var(--text-dim);
+            text-align: center;
+        }
+
+        .footer-credits a {
+            color: var(--text-dim);
+            text-decoration: none;
+        }
+
+        .footer-credits a:hover {
+            color: var(--text-muted);
+        }
+
+        /* ─── BMC FLOAT ─── */
+        .floating-bmc {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            transition: transform 0.2s;
+        }
+
+        .floating-bmc:hover {
+            transform: scale(1.05);
+        }
+
+        .floating-bmc img {
+            height: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        /* ─── RESPONSIVE ─── */
+        @media (max-width: 900px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .topbar-search {
+                flex: 1;
+                max-width: none;
+                margin-left: 0;
+            }
+
+            /* Fully dynamic scaling for mobile */
+            table {
+                table-layout: auto;
+                min-width: 100%;
+                width: 100%;
+            }
+
+            .card-body>table {
+                table-layout: auto;
+            }
+
+            /* Tighten padding and allow content-based width */
+            thead th,
+            tbody td {
+                padding: 6px 4px;
+            }
+
+            /* Allow long versions to break if they really hit the wall */
+            .firmware-title {
+                white-space: normal;
+                word-break: break-all;
+                line-height: 1.2;
+            }
+
+            .col-region,
+            .col-firmware,
+            .col-status,
+            .col-actions {
+                width: auto;
+                min-width: 0;
+            }
+
+            .firmware-oem {
+                font-size: 0.62rem;
+                margin-top: 2px;
+            }
+
+            .footer-links {
+                gap: 12px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        /* Responsive Badge Styling (Always active, media-queried inside) */
+        .region-full,
+        .region-short {
+            display: inline-block;
+            padding: 2px 6px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.7rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .region-model-sub {
+            display: block;
+            font-size: 0.65rem;
+            color: var(--text-dim);
+            margin-top: 4px;
+            font-family: inherit;
+        }
+
+        @media (max-width: 600px) {
+            .region-full {
+                display: none;
+            }
+
+            .region-short {
+                display: inline-block;
+            }
+        }
+
+        @media (min-width: 601px) {
+            .region-short {
+                display: none;
+            }
+
+            .region-full {
+                display: inline-block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- TOPBAR -->
+    <header class="topbar">
+        <div class="topbar-brand">
+            <h1>OnePlus ARB Checker</h1>
+            <p>Find firmware and ARB details for your device.</p>
+        </div>
+        <div class="topbar-search">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+            <input type="text" id="search-input" placeholder="Search devices..." onkeyup="filterDevices()">
+        </div>
+    </header>
+
+    <!-- MAIN GRID -->
+    <main class="main">
+        <div class="grid" id="devices-grid">
+            <div style="color:var(--text-muted); text-align:center; padding: 40px; grid-column: 1/-1;">
+                <p>Loading database...</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-cards">
+            <div class="footer-card">
+                <h3 style="color: #0088cc;">💬 Telegram Bot</h3>
+                <p>Check ARB directly from Telegram with real-time status updates.</p>
+                <p>
+                    <a href="https://t.me/oparbcheckerbot" target="_blank">@oparbcheckerbot</a>
+                    &bull;
+                    <a href="https://t.me/oneplusarbchecker" target="_blank">@oneplusarbchecker</a>
+                </p>
+            </div>
+            <div class="footer-card">
+                <h3 style="color: var(--accent);">🌐 OOS Downloader API</h3>
+                <p>Get direct, signed download URLs for OnePlus OTA firmware files.</p>
+                <p><a href="https://oosdownloader-gui.fly.dev/" target="_blank">oosdownloader-gui.fly.dev</a></p>
+            </div>
+            <div class="footer-card" style="text-align:center;">
+                <h3 style="color: var(--accent);">📱 Android App</h3>
+                <p>Check ARB statuses directly from your phone.</p>
+                <a href="https://f-droid.org/packages/com.bartixxx.oneplusarbchecker/" target="_blank">
+                    <img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="44"
+                        style="border-radius: 6px; margin-top: 4px;">
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-links">
+                <a href="https://github.com/Bartixxx32/OnePlus-antirollchecker" class="footer-link" target="_blank">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                    </svg>
+                    PROJECT GITHUB
+                </a>
+                <a href="https://t.me/oneplusarbchecker" class="footer-link" target="_blank">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+                    </svg>
+                    TELEGRAM CHANNEL
+                </a>
+                <a href="https://oosdownloader-gui.fly.dev/" class="footer-link" target="_blank">
+                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10" />
+                        <line x1="2" y1="12" x2="22" y2="12" />
+                        <path
+                            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                    </svg>
+                    OOS DOWNLOADER
+                </a>
+            </div>
+            <div class="footer-badges">
+                <img src="https://img.shields.io/github/actions/workflow/status/Bartixxx32/OnePlus-antirollchecker/check_arb.yml?style=flat-square&logo=github&label=ARB%20Checking"
+                    alt="Workflow Status">
+                <img src="https://img.shields.io/github/stars/Bartixxx32/OnePlus-antirollchecker?style=flat-square&color=yellow"
+                    alt="Stars">
+                <img src="https://img.shields.io/github/forks/Bartixxx32/OnePlus-antirollchecker?style=flat-square"
+                    alt="Forks">
+                <img src="https://img.shields.io/badge/Python-3.11+-blue?style=flat-square&logo=python"
+                    alt="Python Version">
+                <img src="https://visitor-badge.laobi.icu/badge?page_id=Bartixxx32.OnePlus-antirollchecker" alt="Views">
+            </div>
+        </div>
+
+        <div class="footer-credits">
+            <p>
+                Payload Extraction by <a href="https://github.com/syedinsaf/otaripper" target="_blank">otaripper</a>
+                (syedinsaf)
+                &bull;
+                Validation by <a href="https://github.com/ssut/payload-dumper-go" target="_blank">payload-dumper-go</a>
+                (ssut)
+                &bull;
+                ARB Extraction by <a href="https://github.com/koaaN/arbextract" target="_blank">arbextract</a> (koaaN)
+                &bull;
+                CN API by <a href="https://roms.danielspringer.at/" target="_blank">roms.danielspringer.at</a> (Daniel
+                Springer)
+            </p>
+            <p style="margin-top:6px;" id="last-scan">Last scan: Loading...</p>
+        </div>
+    </footer>
+
+    <!-- Floating BMC -->
+    <a href="https://www.buymeacoffee.com/bartixxx32" target="_blank" class="floating-bmc">
+        <img src="https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20beer&emoji=🍺&slug=bartixxx32&button_colour=FFDD00&font_colour=000000&font_family=Comic&outline_colour=000000&coffee_colour=ffffff"
+            alt="Buy Me A Coffee">
+    </a>
+
+    <script>
+        function toggleHistory(id, btn) {
+            const row = document.getElementById(id);
+            if (row.classList.contains('active')) {
+                row.classList.remove('active');
+                btn.classList.remove('active');
+            } else {
+                row.classList.add('active');
+                btn.classList.add('active');
+            }
+        }
+
+        function filterDevices() {
+            const filter = document.getElementById('search-input').value.toLowerCase();
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                const name = card.getAttribute('data-name') || '';
+                card.style.display = name.includes(filter) ? '' : 'none';
+            });
+        }
+
+        /**
+         * Extract numeric parts from version string for correct ordering.
+         * Note: Keep this in sync with version_sort_key() in hardcode_rules.py.
+         */
+        const versionSortKey = (v) => {
+            if (!v) return [0];
+            const parts = v.match(/\d+/g);
+            return parts ? parts.map(Number) : [0];
+        };
+
+        const compareVersions = (a, b) => {
+            const ka = versionSortKey(a);
+            const kb = versionSortKey(b);
+            for (let i = 0; i < Math.max(ka.length, kb.length); i++) {
+                const na = ka[i] || 0;
+                const nb = kb[i] || 0;
+                if (na !== nb) return na - nb;
+            }
+            return 0;
+        };
+
+        // Canonical mapping injected from config.py via Jinja
+        const regionMap = {"GLO": "Global", "GLB": "Global", "IN": "India", "EU": "Europe", "EEA": "Europe", "NA": "North America", "US": "United States", "CN": "China", "SG": "Singapore", "MY": "Malaysia", "TW": "Taiwan", "ID": "Indonesia", "VN": "Vietnam", "APC": "Asia Pacific", "OCA": "Oceania", "EG": "Egypt", "SA": "Saudi Arabia", "MX": "Mexico", "VISIBLE": "Visible USA", "TH": "Thailand", "PH": "Philippines", "MEA": "Middle East"};
+
+        // Map compact region codes to human-readable labels for display
+        const getRegionName = (code) => {
+            return regionMap[code] || code;
+        };
+
+        const renderBadge = (v) => {
+            if (v.is_hardcoded) return `<span class="badge badge-hardcode" title="Anti-rollback is present but undetectable by standard tools"><span class="badge-dot"></span>Undetectable ARB</span>`;
+            if (v.arb === 0) return `<span class="badge badge-safe"><span class="badge-dot"></span>Safe</span>`;
+            if (typeof v.arb === 'number' && v.arb > 0) return `<span class="badge badge-danger"><span class="badge-dot"></span>Protected</span>`;
+            return `<span class="badge badge-warning"><span class="badge-dot"></span>Unknown</span>`;
+        };
+
+        const renderHTML = (devices) => {
+            return devices.map(device => {
+                let rows = '';
+                if (device.variants.length === 0) {
+                    rows = `<tr><td colspan="4" style="text-align:center; padding:20px; color: var(--text-dim);">No data available</td></tr>`;
+                } else {
+                    device.variants.forEach(variant => {
+                        const regionFull = getRegionName(variant.region_name);
+                        const regionShort = variant.region_name;
+
+                        const hasHistory = variant.history && variant.history.length > 0;
+                        const histId = `history-${device.id}-${variant.region_name.replace(/\s+/g, '-')}`;
+
+                        rows += `
+                        <tr>
+                            <td class="col-region">
+                                <span class="region-full">${regionFull}</span>
+                                <span class="region-short">${regionShort}</span>
+                                <div class="region-model-sub">${variant.model || ''}</div>
+                            </td>
+                            <td>
+                                <div class="firmware-title-wrap">
+                                    <div class="firmware-title">${variant.version || 'Unknown'}</div>
+                                </div>
+                                <div class="firmware-oem">Major: ${variant.major != null ? variant.major : '?'}, Minor: ${variant.minor != null ? variant.minor : '?'}</div>
+                                ${variant.md5 ? `<details class="md5-details"><summary>Show MD5</summary><code>${variant.md5}</code></details>` : ''}
+                            </td>
+                            <td>
+                                ${renderBadge(variant)}
+                                <span class="arb-sub">ARB: ${variant.is_hardcoded ? '?' : (variant.arb != null ? variant.arb : '?')}</span>
+                                <div class="last-checked-sub">${variant.last_checked || variant.first_seen || 'Unknown'}</div>
+                            </td>
+                            <td>
+                                ${hasHistory ? `<button class="btn-history" onclick="toggleHistory('${histId}', this)">History <span class="btn-history-arrow">›</span></button>` : ''}
+                            </td>
+                        </tr>
+                        `;
+
+                        if (hasHistory) {
+                            let histRows = variant.history.map(entry => `
+                                <tr>
+                                    <td>
+                                        <div class="firmware-title-wrap">
+                                            <div class="firmware-title" style="font-size:0.75rem;">${entry.version}</div>
+                                        </div>
+                                        ${entry.md5 ? `<details class="md5-details"><summary>Show MD5</summary><code>${entry.md5}</code></details>` : ''}
+                                    </td>
+                                    <td>
+                                        ${renderBadge(entry)}
+                                        <span class="arb-sub">ARB: ${entry.is_hardcoded ? '?' : (entry.arb != null ? entry.arb : '?')}</span>
+                                    </td>
+                                    <td>Major: ${entry.major != null ? entry.major : '?'}, Minor: ${entry.minor != null ? entry.minor : '?'}</td>
+                                    <td>${entry.last_checked || entry.first_seen || 'Unknown'}</td>
+                                </tr>
+                            `).join('');
+
+                            rows += `
+                            <tr id="${histId}" class="history-row">
+                                <td colspan="4" style="padding:0; overflow: visible;">
+                                    <div class="history-container">
+                                        <div class="history-title">📜 Version History — ${variant.region_name}</div>
+                                        <table class="history-table">
+                                            <thead><tr><th>Firmware Version</th><th>Status</th><th>OEM Version</th><th>Last Seen</th></tr></thead>
+                                            <tbody>${histRows}</tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                            `;
+                        }
+                    });
+                }
+
+                return `
+                <div class="card" data-name="${device.name.toLowerCase()} ${device.models.join(' ').toLowerCase()}">
+                    <div class="card-header">
+                        <h2>
+                            ${device.name}
+                            <span class="device-models">${device.models.join(' / ')}</span>
+                        </h2>
+                    </div>
+                    <div class="card-body">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="col-region">Region</th>
+                                    <th class="col-firmware">Firmware</th>
+                                    <th class="col-status">Status</th>
+                                    <th class="col-actions">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${rows}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                `;
+            }).join('');
+        };
+
+        async function loadData() {
+            const grid = document.getElementById('devices-grid');
+            let db;
+
+            try {
+                // Try local first
+                const res = await fetch('./database.json');
+                if (!res.ok) throw new Error();
+                db = await res.json();
+            } catch (e1) {
+                try {
+                    // Fallback to prod URL
+                    const res = await fetch('https://oparb.pages.dev/database.json');
+                    db = await res.json();
+                } catch (e2) {
+                    grid.innerHTML = '<div style="color:var(--danger); text-align:center; padding: 40px; grid-column: 1/-1;">Failed to load database.json. Ensure you are not blocking CORS or check your network.</div>';
+                    return;
+                }
+            }
+
+            // Process db into devices array
+            const byDevice = {};
+            let latestScan = '';
+
+            const regionScores = { "GLO": 1, "EU": 2, "IN": 3, "NA": 4, "CN": 5 };
+
+            for (const modelKey of Object.keys(db)) {
+                const d = db[modelKey];
+                const devName = d.device_name;
+                if (!byDevice[devName]) {
+                    byDevice[devName] = {
+                        name: devName,
+                        id: devName.replace(/\s+/g, '-'),
+                        order: d.device_order ?? 999,
+                        variantsMap: {},
+                        models: [] // Initialize models array
+                    };
+                }
+                // Add modelKey to the models array if not already present
+                if (!byDevice[devName].models.includes(modelKey)) {
+                    byDevice[devName].models.push(modelKey);
+                }
+
+                // versions is a Map<version_string, VersionData> — iterate as entries
+                for (const [versionStr, v] of Object.entries(d.versions)) {
+                    // Inject the version string into the entry object for convenience
+                    const vWithKey = { ...v, version: versionStr };
+                    // Update latest scan time across the DB
+                    if (vWithKey.last_checked && vWithKey.last_checked > latestScan) latestScan = vWithKey.last_checked;
+
+                    for (const r of vWithKey.regions || []) {
+                        if (!byDevice[devName].variantsMap[r]) {
+                            byDevice[devName].variantsMap[r] = { region_name: r, model: modelKey, history: [], regions: [] };
+                        }
+                        // Update model if not set (ensures we have model number per region)
+                        if (!byDevice[devName].variantsMap[r].model) byDevice[devName].variantsMap[r].model = modelKey;
+                        const vr = byDevice[devName].variantsMap[r];
+
+                        // Add region to the regions array if not already present
+                        if (!vr.regions.includes(r)) {
+                            vr.regions.push(r);
+                        }
+
+                        if (vWithKey.status === 'current' || !vr.version) {
+                            vr.version = vWithKey.version;
+                            vr.arb = vWithKey.arb;
+                            vr.md5 = vWithKey.md5;
+                            vr.major = vWithKey.major;
+                            vr.minor = vWithKey.minor;
+                            vr.is_hardcoded = vWithKey.is_hardcoded;
+                            vr.last_checked = vWithKey.last_checked;
+                            vr.first_seen = vWithKey.first_seen;
+                            // Match legacy Python generator logic: push to history if it's an implicit fallback
+                            if (vWithKey.status !== 'current') {
+                                vr.history.push(vWithKey);
+                            }
+                        } else {
+                            vr.history.push(vWithKey);
+                        }
+                    }
+                }
+            }
+
+            document.getElementById('last-scan').innerText = 'Last scan: ' + (latestScan || new Date().toISOString().split('T')[0]);
+
+            const sortedDevices = Object.values(byDevice).sort((a, b) => a.order - b.order);
+            for (const dev of sortedDevices) {
+                dev.variants = Object.values(dev.variantsMap).sort((a, b) => (regionScores[a.region_name] || 99) - (regionScores[b.region_name] || 99));
+                // Ensure history is sorted by version parsing numeric parts
+                for (const v of dev.variants) {
+                    v.history.sort((a, b) => compareVersions(b.version, a.version));
+                }
+            }
+
+            grid.innerHTML = renderHTML(sortedDevices);
+        }
+
+        loadData();
+    </script>
+</body>
+
+</html>
