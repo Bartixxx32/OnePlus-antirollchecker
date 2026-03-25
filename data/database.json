@@ -564,6 +564,19 @@
     "device_name": "OnePlus Nord CE 3 Lite",
     "device_order": 29,
     "versions": {
+      "CPH2465_15.0.0.1800(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "896bcc834f23fb5b29a68af89628a281",
+        "first_seen": "2026-03-25",
+        "last_checked": "2026-03-25",
+        "status": "current",
+        "is_hardcoded": true,
+        "regions": [
+          "GLO"
+        ]
+      },
       "CPH2465_15.0.0.1600(EX01)": {
         "arb": 0,
         "major": 0,
@@ -571,7 +584,7 @@
         "md5": "72d0c27bdc608978592e04cdce62b016",
         "first_seen": "2026-03-10",
         "last_checked": "2026-03-25",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": true,
         "regions": [
           "GLO"
@@ -583,6 +596,19 @@
     "device_name": "OnePlus Nord CE 3 Lite",
     "device_order": 29,
     "versions": {
+      "CPH2465_15.0.0.1800(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "431b6e97ef2d135b41b3f5a1816bd484",
+        "first_seen": "2026-03-25",
+        "last_checked": "2026-03-25",
+        "status": "current",
+        "is_hardcoded": true,
+        "regions": [
+          "EU"
+        ]
+      },
       "CPH2465_15.0.0.1600(EX01)": {
         "arb": 0,
         "major": 0,
@@ -590,7 +616,7 @@
         "md5": "b08db09891b432a2ef4648888803668a",
         "first_seen": "2026-03-10",
         "last_checked": "2026-03-25",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": true,
         "regions": [
           "EU"
@@ -845,6 +871,19 @@
     "device_name": "Oppo Reno10 Pro",
     "device_order": 45,
     "versions": {
+      "CPH2525_15.0.0.1603(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "afbfa780bdb0d4eb6b31ad63bf895804",
+        "first_seen": "2026-03-25",
+        "last_checked": "2026-03-25",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "ID"
+        ]
+      },
       "CPH2525_15.0.0.1600(EX01)": {
         "arb": 0,
         "major": 0,
@@ -852,7 +891,7 @@
         "md5": "b502f539b8bc91a414018a5eebd68250",
         "first_seen": "2026-03-10",
         "last_checked": "2026-03-25",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "ID"
@@ -902,6 +941,19 @@
     "device_name": "Oppo Reno10 Pro",
     "device_order": 45,
     "versions": {
+      "CPH2525_15.0.0.1603(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "6966558af815390daee7bcaca2a5885f",
+        "first_seen": "2026-03-25",
+        "last_checked": "2026-03-25",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "MY"
+        ]
+      },
       "CPH2525_15.0.0.1600(EX01)": {
         "arb": 0,
         "major": 0,
@@ -909,7 +961,7 @@
         "md5": "0da7796177735bd736ae027aad6ffbde",
         "first_seen": "2026-03-10",
         "last_checked": "2026-03-25",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "MY"
@@ -940,6 +992,19 @@
     "device_name": "Oppo Reno10 Pro",
     "device_order": 45,
     "versions": {
+      "CPH2525_15.0.0.1603(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "8b682eb6bda3ae1adb3a75bbe4cea3ee",
+        "first_seen": "2026-03-25",
+        "last_checked": "2026-03-25",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "PH"
+        ]
+      },
       "CPH2525_15.0.0.1600(EX01)": {
         "arb": 0,
         "major": 0,
@@ -947,7 +1012,7 @@
         "md5": "1f6e08b4926652d580b2fce0839b95f4",
         "first_seen": "2026-03-10",
         "last_checked": "2026-03-25",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "PH"
@@ -997,6 +1062,19 @@
     "device_name": "Oppo Reno10 Pro",
     "device_order": 45,
     "versions": {
+      "CPH2525_15.0.0.1603(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "19f4a1e35ab303463061db6c4d91ff1e",
+        "first_seen": "2026-03-25",
+        "last_checked": "2026-03-25",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "TH"
+        ]
+      },
       "CPH2525_15.0.0.1600(EX01)": {
         "arb": 0,
         "major": 0,
@@ -1004,7 +1082,7 @@
         "md5": "b72448e68f81b4efb446f67570935915",
         "first_seen": "2026-03-10",
         "last_checked": "2026-03-25",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "TH"
@@ -1285,6 +1363,20 @@
     "device_name": "OnePlus 12",
     "device_order": 7,
     "versions": {
+      "CPH2581_16.0.5.702(EX01)": {
+        "arb": 1,
+        "major": 3,
+        "minor": 0,
+        "md5": "7d46f0c9123feec1c4d06e9e61133c52",
+        "first_seen": "2026-03-25",
+        "last_checked": "2026-03-25",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "GLO",
+          "EU"
+        ]
+      },
       "CPH2581_16.0.3.500(EX01)": {
         "arb": 1,
         "major": 3,
@@ -1292,7 +1384,7 @@
         "md5": "3386a9f7548f18e9cda8558ca851a059",
         "first_seen": "2026-02-04",
         "last_checked": "2026-03-25",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "GLO",
@@ -1529,6 +1621,20 @@
     "device_name": "OnePlus 13R",
     "device_order": 3,
     "versions": {
+      "CPH2645_16.0.5.701(EX01)": {
+        "arb": 1,
+        "major": 3,
+        "minor": 0,
+        "md5": "3ba2218f9e855815653d54839f50fa66",
+        "first_seen": "2026-03-25",
+        "last_checked": "2026-03-25",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "EU",
+          "GLO"
+        ]
+      },
       "CPH2645_16.0.3.500(EX01)": {
         "arb": 1,
         "major": 3,
@@ -1536,7 +1642,7 @@
         "md5": "fc83d78ebf942ee641d6a70bea3c2646",
         "first_seen": "2026-02-11",
         "last_checked": "2026-03-25",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "EU",
@@ -1907,6 +2013,19 @@
     "device_name": "OnePlus Nord 4",
     "device_order": 25,
     "versions": {
+      "CPH2663_16.0.5.701(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": "e64b6607ccb5361937039a6e10f34483",
+        "first_seen": "2026-03-25",
+        "last_checked": "2026-03-25",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "GLO"
+        ]
+      },
       "CPH2663_16.0.2.401(EX01)": {
         "arb": 0,
         "major": 3,
@@ -1914,7 +2033,7 @@
         "md5": "94c3d509d75d2cf2ef7ff546a19d12d2",
         "first_seen": "2026-02-04",
         "last_checked": "2026-03-25",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "GLO",
@@ -1986,13 +2105,18 @@
         "arb": 0,
         "major": 3,
         "minor": 0,
-        "md5": "11fc5bc7dad9dd4b15d1166f0d42034f",
-        "first_seen": "2026-03-18",
+        "md5": "86da73ef6fcfeca76e6c4ea80f543481",
+        "first_seen": "2026-03-25",
         "last_checked": "2026-03-25",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
-          "ID"
+          "APC",
+          "MX",
+          "SG",
+          "ID",
+          "TH",
+          "MY"
         ]
       },
       "CPH2671_16.0.3.500(EX01)": {
@@ -2015,7 +2139,7 @@
         "md5": "8092cdb0dcf5a44e27ff8b863bbcde89",
         "first_seen": "2026-02-04",
         "last_checked": "2026-03-25",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "APC",
@@ -2031,7 +2155,7 @@
         "md5": "18d2e0aadec512467ad8f7b38c40d115",
         "first_seen": "2026-02-04",
         "last_checked": "2026-03-25",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "MX"
@@ -3517,6 +3641,19 @@
     "device_name": "OnePlus Pad 3",
     "device_order": 42,
     "versions": {
+      "OPD2415_16.0.5.700(EX01)": {
+        "arb": 1,
+        "major": 3,
+        "minor": 0,
+        "md5": "8f4c4c2d5cc38455bf74e3f20c0884b2",
+        "first_seen": "2026-03-25",
+        "last_checked": "2026-03-25",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "IN"
+        ]
+      },
       "OPD2415_16.0.3.500(EX01)": {
         "arb": 1,
         "major": 3,
