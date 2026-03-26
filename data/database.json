@@ -3526,13 +3526,15 @@
         "arb": 1,
         "major": 3,
         "minor": 0,
-        "md5": "81159aae331be32f00155760c8b14b14",
-        "first_seen": "2026-03-23",
+        "md5": "995d3095adbd8be28edf59e85c3d29e0",
+        "first_seen": "2026-03-26",
         "last_checked": "2026-03-26",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
-          "IN"
+          "EU",
+          "IN",
+          "GLO"
         ]
       },
       "OPD2403_16.0.3.501(EX01)": {
@@ -3542,7 +3544,7 @@
         "md5": "8440c19505c47de99a60f66a9daa8d17",
         "first_seen": "2026-02-04",
         "last_checked": "2026-03-26",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "EU",
@@ -3645,12 +3647,14 @@
         "arb": 1,
         "major": 3,
         "minor": 0,
-        "md5": "8f4c4c2d5cc38455bf74e3f20c0884b2",
-        "first_seen": "2026-03-25",
+        "md5": "c245716d418c3a6417df4662dfae9efb",
+        "first_seen": "2026-03-26",
         "last_checked": "2026-03-26",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
+          "GLO",
+          "EU",
           "IN"
         ]
       },
@@ -3661,7 +3665,7 @@
         "md5": "64101499d86baf3ef11eb91384f782fe",
         "first_seen": "2026-02-04",
         "last_checked": "2026-03-26",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "GLO",
