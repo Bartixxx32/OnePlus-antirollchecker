@@ -741,8 +741,8 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
-| Global | CPH2709 | CPH2709_16.0.2.400(EX01)<br><details><summary>MD5</summary><code>215ac417ec05bafcd5d2c8afe8fa140f</code></details> | **0** | Major: 3, Minor: 0 | 2026-03-28 | ✅ Safe |
-| Europe | CPH2709 | CPH2709_16.0.2.400(EX01)<br><details><summary>MD5</summary><code>7988a8ec49273c093ed02b906deb20a1</code></details> | **0** | Major: 3, Minor: 0 | 2026-03-28 | ✅ Safe |
+| Global | CPH2709 | CPH2709_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>1fa0ad252c46d6ccdc9699a4f331bbd4</code></details> | **0** | Major: 3, Minor: 0 | 2026-03-28 | ✅ Safe |
+| Europe | CPH2709 | CPH2709_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>d462744e077d08fab080ee7c54bbe2da</code></details> | **0** | Major: 3, Minor: 0 | 2026-03-28 | ✅ Safe |
 | India | CPH2707 | CPH2707_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>8a0c0fc15a64768dd40c6599197c5e46</code></details> | **0** | Major: 3, Minor: 0 | 2026-03-28 | ✅ Safe |
 
 <details>
@@ -750,6 +750,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| CPH2709_16.0.2.400(EX01)<br><details><summary>MD5</summary><code>215ac417ec05bafcd5d2c8afe8fa140f</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-28 | ✅ Safe |
 | CPH2709_16.0.1.300(EX01)<br><details><summary>MD5</summary><code>e897c75b850e4acbb9a6556d541bc3b7</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-22 | ✅ Safe |
 | CPH2709_15.0.2.604(EX01)<br><details><summary>MD5</summary><code>e5d66cec7708b0178f31bd7b6c67c74a</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-18 | ✅ Safe |
 
@@ -760,6 +761,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| CPH2709_16.0.2.400(EX01)<br><details><summary>MD5</summary><code>7988a8ec49273c093ed02b906deb20a1</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-28 | ✅ Safe |
 | CPH2709_16.0.1.300(EX01)<br><details><summary>MD5</summary><code>1c641f0b3c40922ba9f736d54a957c8a</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-18 | ✅ Safe |
 | CPH2709_15.0.2.604(EX01)<br><details><summary>MD5</summary><code>07641d9d8bf4466472600f8ea8a083a0</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ Safe |
 
@@ -1598,4 +1600,4 @@ Prefer a native mobile experience? We have an official Android app on F-Droid! C
 > **Important:** The bot **only** works within this group to prevent spam and ensure availability. DM checks are disabled.
 
 ---
-*Last updated: 2026-03-28 02:47 UTC*
+*Last updated: 2026-03-28 19:30 UTC*
