@@ -1661,7 +1661,7 @@
         "first_seen": "2026-03-18",
         "last_checked": "2026-03-30",
         "status": "current",
-        "is_hardcoded": false,
+        "is_hardcoded": true,
         "regions": [
           "EU",
           "GLO"
@@ -1675,7 +1675,7 @@
         "first_seen": "2026-03-18",
         "last_checked": "2026-03-30",
         "status": "current",
-        "is_hardcoded": false,
+        "is_hardcoded": true,
         "regions": [
           "IN"
         ]
