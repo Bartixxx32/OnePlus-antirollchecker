@@ -73,10 +73,22 @@ Find the latest Anti-Rollback (ARB) status for your device below, organized by s
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
+| Global | CPH2747 | CPH2747_16.0.5.700(EX01)<br><details><summary>MD5</summary><code>6086e417cba87486cceab28f08635b19</code></details> | **0** | Major: 3, Minor: 0 | 2026-04-01 | ✅ Safe |
 | Europe | CPH2747 | CPH2747_16.0.5.700(EX01)<br><details><summary>MD5</summary><code>529891ce7bbbaf52357a7fdee83431ff</code></details> | **0** | Major: 3, Minor: 0 | 2026-04-01 | ✅ Safe |
 | India | CPH2745 | CPH2745_16.0.5.700(EX01)<br><details><summary>MD5</summary><code>b01f22e57655584a93a7e6051752f4c4</code></details> | **0** | Major: 3, Minor: 0 | 2026-04-01 | ✅ Safe |
-| Global | CPH2747 | CPH2747_16.0.5.700(EX01)<br><details><summary>MD5</summary><code>6086e417cba87486cceab28f08635b19</code></details> | **0** | Major: 3, Minor: 0 | 2026-04-01 | ✅ Safe |
 | China | PLK110 | PLK110_16.0.5.701(CN01)<br><details><summary>MD5</summary><code>9e9688532ff5ec1eb19b4ca9de363199</code></details> | **0** | Major: 3, Minor: 0 | 2026-04-01 | ✅ Safe |
+
+<details>
+<summary>📜 <b>Global History</b> (click to expand)</summary>
+
+| Firmware Version | ARB | OEM Version | Last Seen | Safe |
+|:---|:---|:---|:---|:---|
+| CPH2747_16.0.3.503(EX01)<br><details><summary>MD5</summary><code>1f617649e2d5d76a5863776bb65100c0</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-16 | ✅ Safe |
+| CPH2747_16.0.3.501(EX01)<br><details><summary>MD5</summary><code>4c9d70c8dbe2b867a7e497aa063acb71</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-08 | ✅ Safe |
+| CPH2747_16.0.2.401(EX01)<br><details><summary>MD5</summary><code>a5ddbd8ae6c4a86e4eac062520ac5d0a</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-11 | ✅ Safe |
+| CPH2747_16.0.1.303(EX01)<br><details><summary>MD5</summary><code>e6da9981cab374beeae4ddbba4e8d083</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-25 | ✅ Safe |
+
+</details>
 
 <details>
 <summary>📜 <b>Europe History</b> (click to expand)</summary>
@@ -104,18 +116,6 @@ Find the latest Anti-Rollback (ARB) status for your device below, organized by s
 </details>
 
 <details>
-<summary>📜 <b>Global History</b> (click to expand)</summary>
-
-| Firmware Version | ARB | OEM Version | Last Seen | Safe |
-|:---|:---|:---|:---|:---|
-| CPH2747_16.0.3.503(EX01)<br><details><summary>MD5</summary><code>1f617649e2d5d76a5863776bb65100c0</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-16 | ✅ Safe |
-| CPH2747_16.0.3.501(EX01)<br><details><summary>MD5</summary><code>4c9d70c8dbe2b867a7e497aa063acb71</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-08 | ✅ Safe |
-| CPH2747_16.0.2.401(EX01)<br><details><summary>MD5</summary><code>a5ddbd8ae6c4a86e4eac062520ac5d0a</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-11 | ✅ Safe |
-| CPH2747_16.0.1.303(EX01)<br><details><summary>MD5</summary><code>e6da9981cab374beeae4ddbba4e8d083</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-25 | ✅ Safe |
-
-</details>
-
-<details>
 <summary>📜 <b>China History</b> (click to expand)</summary>
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
@@ -135,9 +135,20 @@ Find the latest Anti-Rollback (ARB) status for your device below, organized by s
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
+| Global | CPH2769 | CPH2769_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>ffb1c3aa990044f327a8171e6162af21</code></details> | **0** | Major: 3, Minor: 0 | 2026-04-01 | ✅ Safe |
 | Europe | CPH2769 | CPH2769_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>8ed18c461d884a4b5108147840644bb7</code></details> | **0** | Major: 3, Minor: 0 | 2026-04-01 | ✅ Safe |
 | India | CPH2767 | CPH2767_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>13f5c6f6338480d641c381e2644dd3f7</code></details> | **0** | Major: 3, Minor: 0 | 2026-04-01 | ✅ Safe |
-| Global | CPH2769 | CPH2769_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>ffb1c3aa990044f327a8171e6162af21</code></details> | **0** | Major: 3, Minor: 0 | 2026-04-01 | ✅ Safe |
+
+<details>
+<summary>📜 <b>Global History</b> (click to expand)</summary>
+
+| Firmware Version | ARB | OEM Version | Last Seen | Safe |
+|:---|:---|:---|:---|:---|
+| CPH2769_16.0.3.503(EX01)<br><details><summary>MD5</summary><code>bbf8456ba035fd52691af46cf4d87222</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-18 | ✅ Safe |
+| CPH2769_16.0.3.501(EX01)<br><details><summary>MD5</summary><code>cb319baa6d71168d9743f4b0492859f5</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-10 | ✅ Safe |
+| CPH2769_16.0.2.401(EX01)<br><details><summary>MD5</summary><code>557df71dadd39f65968ad8bbc0ce2293</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-06 | ✅ Safe |
+
+</details>
 
 <details>
 <summary>📜 <b>Europe History</b> (click to expand)</summary>
@@ -161,17 +172,6 @@ Find the latest Anti-Rollback (ARB) status for your device below, organized by s
 
 </details>
 
-<details>
-<summary>📜 <b>Global History</b> (click to expand)</summary>
-
-| Firmware Version | ARB | OEM Version | Last Seen | Safe |
-|:---|:---|:---|:---|:---|
-| CPH2769_16.0.3.503(EX01)<br><details><summary>MD5</summary><code>bbf8456ba035fd52691af46cf4d87222</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-18 | ✅ Safe |
-| CPH2769_16.0.3.501(EX01)<br><details><summary>MD5</summary><code>cb319baa6d71168d9743f4b0492859f5</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-10 | ✅ Safe |
-| CPH2769_16.0.2.401(EX01)<br><details><summary>MD5</summary><code>557df71dadd39f65968ad8bbc0ce2293</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-06 | ✅ Safe |
-
-</details>
-
 
 ---
 
@@ -179,11 +179,24 @@ Find the latest Anti-Rollback (ARB) status for your device below, organized by s
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
+| Global | CPH2653 | CPH2653_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>385877a9463d7b5de2f5a2ffea4a12d6</code></details> | **1** | Major: 3, Minor: 0 | 2026-04-01 | ❌ Protected |
 | Europe | CPH2653 | CPH2653_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>23318bec5be6849803c95d47c0e7d8f8</code></details> | **1** | Major: 3, Minor: 0 | 2026-04-01 | ❌ Protected |
 | India | CPH2649 | CPH2649_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>6998133c921d754bf06e693455aabcdc</code></details> | **1** | Major: 3, Minor: 0 | 2026-04-01 | ❌ Protected |
-| Global | CPH2653 | CPH2653_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>385877a9463d7b5de2f5a2ffea4a12d6</code></details> | **1** | Major: 3, Minor: 0 | 2026-04-01 | ❌ Protected |
 | North America | CPH2655 | CPH2655_15.0.0.832(EX01)<br><details><summary>MD5</summary><code>7d0ce94be24263393454ae140889a523</code></details> | **0** | Major: 3, Minor: 0 | 2026-04-01 | ✅ Safe |
 | China | PJZ110 | PJZ110_16.0.5.701(CN01)<br><details><summary>MD5</summary><code>552380013ed612435e17774068d3dc38</code></details> | **1** | Major: 3, Minor: 0 | 2026-04-01 | ❌ Protected |
+
+<details>
+<summary>📜 <b>Global History</b> (click to expand)</summary>
+
+| Firmware Version | ARB | OEM Version | Last Seen | Safe |
+|:---|:---|:---|:---|:---|
+| CPH2653_16.0.3.501(EX01)<br><details><summary>MD5</summary><code>55382e1f872388d09a539d64ce09d65e</code></details> | 1 | Major: 3, Minor: 0 | 2026-03-24 | ❌ Protected |
+| CPH2653_16.0.2.402(EX01)<br><details><summary>MD5</summary><code>515f5110ca780fda710ef1ff1ad9f100</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-11 | ✅ Safe |
+| CPH2653_16.0.1.304(EX01)<br><details><summary>MD5</summary><code>e854bde9b2f472d1cfb499c886b1cbe9</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-06 | ✅ Safe |
+| CPH2653_16.0.0.210(EX01)<br><details><summary>MD5</summary><code>2dfc7934f7610af104e094e1a8f43cb1</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-10 | ✅ Safe |
+| CPH2653_15.0.0.864(EX01)<br><details><summary>MD5</summary><code>fdde59c8fb76a88491b44d44b8d2797d</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-18 | ✅ Safe |
+
+</details>
 
 <details>
 <summary>📜 <b>Europe History</b> (click to expand)</summary>
@@ -208,19 +221,6 @@ Find the latest Anti-Rollback (ARB) status for your device below, organized by s
 | CPH2649_16.0.1.304(EX01)<br><details><summary>MD5</summary><code>d9b18f26264785200dfcdf42e625338c</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ Safe |
 | CPH2649_16.0.0.210(EX01)<br><details><summary>MD5</summary><code>9207f5e5aa09b192946b30026f6569d3</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-13 | ✅ Safe |
 | CPH2649_15.0.0.860(EX01)<br><details><summary>MD5</summary><code>7792bdabc5d756298ab6891d6fa4711c</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-10 | ✅ Safe |
-
-</details>
-
-<details>
-<summary>📜 <b>Global History</b> (click to expand)</summary>
-
-| Firmware Version | ARB | OEM Version | Last Seen | Safe |
-|:---|:---|:---|:---|:---|
-| CPH2653_16.0.3.501(EX01)<br><details><summary>MD5</summary><code>55382e1f872388d09a539d64ce09d65e</code></details> | 1 | Major: 3, Minor: 0 | 2026-03-24 | ❌ Protected |
-| CPH2653_16.0.2.402(EX01)<br><details><summary>MD5</summary><code>515f5110ca780fda710ef1ff1ad9f100</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-11 | ✅ Safe |
-| CPH2653_16.0.1.304(EX01)<br><details><summary>MD5</summary><code>e854bde9b2f472d1cfb499c886b1cbe9</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-06 | ✅ Safe |
-| CPH2653_16.0.0.210(EX01)<br><details><summary>MD5</summary><code>2dfc7934f7610af104e094e1a8f43cb1</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-10 | ✅ Safe |
-| CPH2653_15.0.0.864(EX01)<br><details><summary>MD5</summary><code>fdde59c8fb76a88491b44d44b8d2797d</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-18 | ✅ Safe |
 
 </details>
 
@@ -253,9 +253,22 @@ Find the latest Anti-Rollback (ARB) status for your device below, organized by s
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
+| Global | CPH2645 | CPH2645_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>9d947f896823878e3a32a809ec76fd71</code></details> | **1** | Major: 3, Minor: 0 | 2026-04-01 | ❌ Protected |
 | Europe | CPH2645 | CPH2645_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>3ba2218f9e855815653d54839f50fa66</code></details> | **1** | Major: 3, Minor: 0 | 2026-04-01 | ❌ Protected |
 | India | CPH2691 | CPH2691_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>6e491c496b73deea2dc834cd5f460d8b</code></details> | **1** | Major: 3, Minor: 0 | 2026-04-01 | ❌ Protected |
-| Global | CPH2645 | CPH2645_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>9d947f896823878e3a32a809ec76fd71</code></details> | **1** | Major: 3, Minor: 0 | 2026-04-01 | ❌ Protected |
+
+<details>
+<summary>📜 <b>Global History</b> (click to expand)</summary>
+
+| Firmware Version | ARB | OEM Version | Last Seen | Safe |
+|:---|:---|:---|:---|:---|
+| CPH2645_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>9fd992eaf16b4c0b2212d8675d2f57a7</code></details> | 1 | Major: 3, Minor: 0 | 2026-03-25 | ❌ Protected |
+| CPH2645_16.0.0.205(EX01)<br><details><summary>MD5</summary><code>72c1aa34316c7ee6ba23b39be0edb5ea</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-18 | ✅ Safe |
+| CPH2645_15.0.0.871(EX01)<br><details><summary>MD5</summary><code>dec1cc4c7c37f67bcbc0d0921a99a4b5</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-10 | ✅ Safe |
+| CPH2645_15.0.0.860(EX01)<br><details><summary>MD5</summary><code>a090f7c9ef5d4bb789c729dd8376bf89</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-13 | ✅ Safe |
+| CPH2645_15.0.0.850(EX01)<br><details><summary>MD5</summary><code>7a4ecdcdb8ec576fc3960ee4c4af26e2</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-25 | ✅ Safe |
+
+</details>
 
 <details>
 <summary>📜 <b>Europe History</b> (click to expand)</summary>
@@ -280,19 +293,6 @@ Find the latest Anti-Rollback (ARB) status for your device below, organized by s
 | CPH2691_16.0.1.302(EX01)<br><details><summary>MD5</summary><code>bea10f391a69cffabf770457a1c65953</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-11 | ✅ Safe |
 | CPH2691_16.0.0.205(EX01)<br><details><summary>MD5</summary><code>40a9662c0c40130043b83a48daa44de5</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-18 | ✅ Safe |
 | CPH2691_15.0.0.860(EX01)<br><details><summary>MD5</summary><code>9616225a40cc97ad0e27072aaa2fe72b</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-13 | ✅ Safe |
-
-</details>
-
-<details>
-<summary>📜 <b>Global History</b> (click to expand)</summary>
-
-| Firmware Version | ARB | OEM Version | Last Seen | Safe |
-|:---|:---|:---|:---|:---|
-| CPH2645_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>9fd992eaf16b4c0b2212d8675d2f57a7</code></details> | 1 | Major: 3, Minor: 0 | 2026-03-25 | ❌ Protected |
-| CPH2645_16.0.0.205(EX01)<br><details><summary>MD5</summary><code>72c1aa34316c7ee6ba23b39be0edb5ea</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-18 | ✅ Safe |
-| CPH2645_15.0.0.871(EX01)<br><details><summary>MD5</summary><code>dec1cc4c7c37f67bcbc0d0921a99a4b5</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-10 | ✅ Safe |
-| CPH2645_15.0.0.860(EX01)<br><details><summary>MD5</summary><code>a090f7c9ef5d4bb789c729dd8376bf89</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-13 | ✅ Safe |
-| CPH2645_15.0.0.850(EX01)<br><details><summary>MD5</summary><code>7a4ecdcdb8ec576fc3960ee4c4af26e2</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-25 | ✅ Safe |
 
 </details>
 
@@ -346,11 +346,24 @@ Find the latest Anti-Rollback (ARB) status for your device below, organized by s
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
+| Global | CPH2581 | CPH2581_16.0.5.702(EX01)<br><details><summary>MD5</summary><code>7d46f0c9123feec1c4d06e9e61133c52</code></details> | **1** | Major: 3, Minor: 0 | 2026-04-01 | ❌ Protected |
 | Europe | CPH2581 | CPH2581_16.0.5.702(EX01)<br><details><summary>MD5</summary><code>a67c5530baf67def45927cd7bd67104f</code></details> | **1** | Major: 3, Minor: 0 | 2026-04-01 | ❌ Protected |
 | India | CPH2573 | CPH2573_16.0.5.702(EX01)<br><details><summary>MD5</summary><code>a599a8f3fdbd426588b8f544c5b19fa3</code></details> | **1** | Major: 3, Minor: 0 | 2026-04-01 | ❌ Protected |
-| Global | CPH2581 | CPH2581_16.0.5.702(EX01)<br><details><summary>MD5</summary><code>7d46f0c9123feec1c4d06e9e61133c52</code></details> | **1** | Major: 3, Minor: 0 | 2026-04-01 | ❌ Protected |
 | North America | CPH2583 | CPH2583_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>c4bf38e7b691b79f32605967303b77e0</code></details> | **1** | Major: 3, Minor: 0 | 2026-04-01 | ❌ Protected |
 | China | PJD110 | PJD110_16.0.3.500(CN01)<br><details><summary>MD5</summary><code>50eb6ea86f6d7b2b9936b477920151aa</code></details> | **1** | Major: 3, Minor: 0 | 2026-04-01 | ❌ Protected |
+
+<details>
+<summary>📜 <b>Global History</b> (click to expand)</summary>
+
+| Firmware Version | ARB | OEM Version | Last Seen | Safe |
+|:---|:---|:---|:---|:---|
+| CPH2581_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>3386a9f7548f18e9cda8558ca851a059</code></details> | 1 | Major: 3, Minor: 0 | 2026-03-25 | ❌ Protected |
+| CPH2581_16.0.0.201(EX01)<br><details><summary>MD5</summary><code>15ba498ef524eea6e173a53e390054ec</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-26 | ✅ Safe |
+| CPH2581_15.0.0.863(EX01)<br><details><summary>MD5</summary><code>e4e38d8a69fec1e73ee3b897027597f0</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-11 | ✅ Safe |
+| CPH2581_15.0.0.204(EX01)<br><details><summary>MD5</summary><code>f9034c616e472c4e4e097da203fede90</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-18 | ✅ Safe |
+| CPH2581_14.0.0.850(EX01)<br><details><summary>MD5</summary><code>4922bd352fbc39f51d01af5284662327</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-10 | ✅ Safe |
+
+</details>
 
 <details>
 <summary>📜 <b>Europe History</b> (click to expand)</summary>
@@ -375,19 +388,6 @@ Find the latest Anti-Rollback (ARB) status for your device below, organized by s
 | CPH2573_16.0.1.300(EX01)<br><details><summary>MD5</summary><code>b66c873aa39cee31906a1257c46b5261</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-18 | ✅ Safe |
 | CPH2573_16.0.0.201(EX01)<br><details><summary>MD5</summary><code>84a95ef4f01c7f1c8e96a607e931af6e</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-13 | ✅ Safe |
 | CPH2573_15.0.0.860(EX01)<br><details><summary>MD5</summary><code>313e1e889a69333f6eac245871fee652</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-13 | ✅ Safe |
-
-</details>
-
-<details>
-<summary>📜 <b>Global History</b> (click to expand)</summary>
-
-| Firmware Version | ARB | OEM Version | Last Seen | Safe |
-|:---|:---|:---|:---|:---|
-| CPH2581_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>3386a9f7548f18e9cda8558ca851a059</code></details> | 1 | Major: 3, Minor: 0 | 2026-03-25 | ❌ Protected |
-| CPH2581_16.0.0.201(EX01)<br><details><summary>MD5</summary><code>15ba498ef524eea6e173a53e390054ec</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-26 | ✅ Safe |
-| CPH2581_15.0.0.863(EX01)<br><details><summary>MD5</summary><code>e4e38d8a69fec1e73ee3b897027597f0</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-11 | ✅ Safe |
-| CPH2581_15.0.0.204(EX01)<br><details><summary>MD5</summary><code>f9034c616e472c4e4e097da203fede90</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-18 | ✅ Safe |
-| CPH2581_14.0.0.850(EX01)<br><details><summary>MD5</summary><code>4922bd352fbc39f51d01af5284662327</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-10 | ✅ Safe |
 
 </details>
 
@@ -419,19 +419,10 @@ Find the latest Anti-Rollback (ARB) status for your device below, organized by s
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
+| Global | CPH2609 | CPH2609_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>3d8966b0addcc72059f43c75c910eeac</code></details> | **0** | Major: 2, Minor: 0 | 2026-04-01 | ✅ Safe |
 | Europe | CPH2609 | CPH2609_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>3bf4f77014c7ecc56da8c34b8e2da4a8</code></details> | **0** | Major: 2, Minor: 0 | 2026-04-01 | ✅ Safe |
 | India | CPH2585 | CPH2585_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>febde3a798251dc6ce1c3d29d6f6cb9e</code></details> | **0** | Major: 2, Minor: 0 | 2026-04-01 | ✅ Safe |
-| Global | CPH2609 | CPH2609_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>3d8966b0addcc72059f43c75c910eeac</code></details> | **0** | Major: 2, Minor: 0 | 2026-04-01 | ✅ Safe |
 | North America | CPH2611 | CPH2611_11_A.65<br><details><summary>MD5</summary><code>a16a2f0dbbd5eeaff10041299f4d1508</code></details> | **0** | Major: 2, Minor: 0 | 2026-04-01 | ✅ Safe |
-
-<details>
-<summary>📜 <b>Europe History</b> (click to expand)</summary>
-
-| Firmware Version | ARB | OEM Version | Last Seen | Safe |
-|:---|:---|:---|:---|:---|
-| CPH2609_16.0.2.401(EX01)<br><details><summary>MD5</summary><code>6ad8b8c67ad8500b573df241254fcdd6</code></details> | 0 | Major: 2, Minor: 0 | 2026-02-11 | ✅ Safe |
-
-</details>
 
 <details>
 <summary>📜 <b>Global History</b> (click to expand)</summary>
@@ -442,6 +433,15 @@ Find the latest Anti-Rollback (ARB) status for your device below, organized by s
 
 </details>
 
+<details>
+<summary>📜 <b>Europe History</b> (click to expand)</summary>
+
+| Firmware Version | ARB | OEM Version | Last Seen | Safe |
+|:---|:---|:---|:---|:---|
+| CPH2609_16.0.2.401(EX01)<br><details><summary>MD5</summary><code>6ad8b8c67ad8500b573df241254fcdd6</code></details> | 0 | Major: 2, Minor: 0 | 2026-02-11 | ✅ Safe |
+
+</details>
+
 
 ---
 
@@ -449,10 +449,23 @@ Find the latest Anti-Rollback (ARB) status for your device below, organized by s
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
+| Global | CPH2449 | CPH2449_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>8744bb0bfc9b3bc5e02bf0c3ad0d8352</code></details> | **0** | Major: 2, Minor: 0 | 2026-04-01 | ✅ Safe |
 | Europe | CPH2449 | CPH2449_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>9db981106445969885335a2d35cfda5f</code></details> | **0** | Major: 2, Minor: 0 | 2026-04-01 | ✅ Safe |
 | India | CPH2447 | CPH2447_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>f98c5382db9a4486355e5fa4e7979abd</code></details> | **0** | Major: 2, Minor: 0 | 2026-04-01 | ✅ Safe |
-| Global | CPH2449 | CPH2449_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>8744bb0bfc9b3bc5e02bf0c3ad0d8352</code></details> | **0** | Major: 2, Minor: 0 | 2026-04-01 | ✅ Safe |
 | North America | CPH2451 | CPH2451_15.0.0.800(EX01)<br><details><summary>MD5</summary><code>6cf186b46c64e0e0f81ce44f9df02689</code></details> | **0** | Major: 2, Minor: 0 | 2026-04-01 | ✅ Safe |
+
+<details>
+<summary>📜 <b>Global History</b> (click to expand)</summary>
+
+| Firmware Version | ARB | OEM Version | Last Seen | Safe |
+|:---|:---|:---|:---|:---|
+| CPH2449_16.0.2.400(EX01)<br><details><summary>MD5</summary><code>b5745266807941dfbd1740eb4d81b26c</code></details> | 0 | Major: 2, Minor: 0 | 2026-03-18 | ✅ Safe |
+| CPH2449_15.0.0.862(EX01)<br><details><summary>MD5</summary><code>54cc417e44e221c6960e4a6446c56cd0</code></details> | 0 | Major: 2, Minor: 0 | 2026-03-10 | ✅ Safe |
+| CPH2449_15.0.0.600(EX01)<br><details><summary>MD5</summary><code>419b9c2222c3db98dd3dab2092b071ea</code></details> | 0 | Major: 2, Minor: 0 | 2026-02-04 | ✅ Safe |
+| CPH2449_14.0.0.833(EX01)<br><details><summary>MD5</summary><code>b9d025ed11a63e79b8a27120f528bcd5</code></details> | 0 | Major: 2, Minor: 0 | 2026-02-13 | ✅ Safe |
+| CPH2449_14.0.0.304(EX01)<br><details><summary>MD5</summary><code>e698b0fa87d61c1b081abe119c52fb86</code></details> | 0 | Major: 2, Minor: 0 | 2026-02-25 | ✅ Safe |
+
+</details>
 
 <details>
 <summary>📜 <b>Europe History</b> (click to expand)</summary>
@@ -479,19 +492,6 @@ Find the latest Anti-Rollback (ARB) status for your device below, organized by s
 | CPH2447_15.0.0.600(EX01)<br><details><summary>MD5</summary><code>4cc0d301bd86dd3ff0713e5fade8eaf7</code></details> | 0 | Major: 2, Minor: 0 | 2026-03-18 | ✅ Safe |
 | CPH2447_14.0.0.833(EX01)<br><details><summary>MD5</summary><code>5339aa54232836e9f81f5b09304ca784</code></details> | 0 | Major: 2, Minor: 0 | 2026-02-13 | ✅ Safe |
 | CPH2447_14.0.0.304(EX01)<br><details><summary>MD5</summary><code>14942843ae7c515bce8f829008806095</code></details> | 0 | Major: 2, Minor: 0 | 2026-03-10 | ✅ Safe |
-
-</details>
-
-<details>
-<summary>📜 <b>Global History</b> (click to expand)</summary>
-
-| Firmware Version | ARB | OEM Version | Last Seen | Safe |
-|:---|:---|:---|:---|:---|
-| CPH2449_16.0.2.400(EX01)<br><details><summary>MD5</summary><code>b5745266807941dfbd1740eb4d81b26c</code></details> | 0 | Major: 2, Minor: 0 | 2026-03-18 | ✅ Safe |
-| CPH2449_15.0.0.862(EX01)<br><details><summary>MD5</summary><code>54cc417e44e221c6960e4a6446c56cd0</code></details> | 0 | Major: 2, Minor: 0 | 2026-03-10 | ✅ Safe |
-| CPH2449_15.0.0.600(EX01)<br><details><summary>MD5</summary><code>419b9c2222c3db98dd3dab2092b071ea</code></details> | 0 | Major: 2, Minor: 0 | 2026-02-04 | ✅ Safe |
-| CPH2449_14.0.0.833(EX01)<br><details><summary>MD5</summary><code>b9d025ed11a63e79b8a27120f528bcd5</code></details> | 0 | Major: 2, Minor: 0 | 2026-02-13 | ✅ Safe |
-| CPH2449_14.0.0.304(EX01)<br><details><summary>MD5</summary><code>e698b0fa87d61c1b081abe119c52fb86</code></details> | 0 | Major: 2, Minor: 0 | 2026-02-25 | ✅ Safe |
 
 </details>
 
@@ -525,11 +525,25 @@ Find the latest Anti-Rollback (ARB) status for your device below, organized by s
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
+| Global | NE2213 | NE2213_16.0.3.520(EX01)<br><details><summary>MD5</summary><code>adb64bb0101e46c2428c0387ba49060d</code></details> | **0** | Major: 2, Minor: 0 | 2026-04-01 | ✅ Safe |
 | Europe | NE2213 | NE2213_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>0602a2e727fc048cf73ad53577013a9a</code></details> | **0** | Major: 2, Minor: 0 | 2026-04-01 | ✅ Safe |
 | India | NE2211 | NE2211_16.0.3.520(EX01)<br><details><summary>MD5</summary><code>46f577fb0b2656d629b5993c3a7762e3</code></details> | **0** | Major: 2, Minor: 0 | 2026-04-01 | ✅ Safe |
-| Global | NE2213 | NE2213_16.0.3.520(EX01)<br><details><summary>MD5</summary><code>adb64bb0101e46c2428c0387ba49060d</code></details> | **0** | Major: 2, Minor: 0 | 2026-04-01 | ✅ Safe |
 | North America | NE2215 | NE2215_15.0.0.401(EX01)<br><details><summary>MD5</summary><code>203d379328732fae89f3134e3b808304</code></details> | **0** | Major: 2, Minor: 0 | 2026-04-01 | ✅ Safe |
 | China | NE2210 | NE2210_15.0.0.1301(CN01)<br><details><summary>MD5</summary><code>d1b71c63550e15270a3580cf7220e927</code></details> | **0** | Major: 2, Minor: 0 | 2026-04-01 | ✅ Safe |
+
+<details>
+<summary>📜 <b>Global History</b> (click to expand)</summary>
+
+| Firmware Version | ARB | OEM Version | Last Seen | Safe |
+|:---|:---|:---|:---|:---|
+| NE2213_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>442a1ffc6ab53fdcafb05e4b555a7c31</code></details> | 0 | Major: 2, Minor: 0 | 2026-03-30 | ✅ Safe |
+| NE2213_15.0.0.1302(EX01)<br><details><summary>MD5</summary><code>4f4678dc3a6898a2c76745886fa79313</code></details> | 0 | Major: 2, Minor: 0 | 2026-03-18 | ✅ Safe |
+| NE2213_15.0.0.700(EX01)<br><details><summary>MD5</summary><code>9544be7ad28064a120da7c8ccd6290be</code></details> | 0 | Major: 2, Minor: 0 | 2026-02-25 | ✅ Safe |
+| NE2213_14.0.0.940(EX01)<br><details><summary>MD5</summary><code>6fd2cf03a80a55fe4337a754f76d16a8</code></details> | 0 | Major: 2, Minor: 0 | 2026-03-10 | ✅ Safe |
+| NE2213_14.0.0.202(EX01)<br><details><summary>MD5</summary><code>2cd47fb517e2d0869da9daab7a673ce4</code></details> | 0 | Major: 2, Minor: 0 | 2026-02-13 | ✅ Safe |
+| NE2213_13.1.0.597(EX01)<br><details><summary>MD5</summary><code>c4d883a698e3f1de8a8a6392fd5c36ba</code></details> | 0 | Major: 2, Minor: 0 | 2026-02-26 | ✅ Safe |
+
+</details>
 
 <details>
 <summary>📜 <b>Europe History</b> (click to expand)</summary>
@@ -559,20 +573,6 @@ Find the latest Anti-Rollback (ARB) status for your device below, organized by s
 </details>
 
 <details>
-<summary>📜 <b>Global History</b> (click to expand)</summary>
-
-| Firmware Version | ARB | OEM Version | Last Seen | Safe |
-|:---|:---|:---|:---|:---|
-| NE2213_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>442a1ffc6ab53fdcafb05e4b555a7c31</code></details> | 0 | Major: 2, Minor: 0 | 2026-03-30 | ✅ Safe |
-| NE2213_15.0.0.1302(EX01)<br><details><summary>MD5</summary><code>4f4678dc3a6898a2c76745886fa79313</code></details> | 0 | Major: 2, Minor: 0 | 2026-03-18 | ✅ Safe |
-| NE2213_15.0.0.700(EX01)<br><details><summary>MD5</summary><code>9544be7ad28064a120da7c8ccd6290be</code></details> | 0 | Major: 2, Minor: 0 | 2026-02-25 | ✅ Safe |
-| NE2213_14.0.0.940(EX01)<br><details><summary>MD5</summary><code>6fd2cf03a80a55fe4337a754f76d16a8</code></details> | 0 | Major: 2, Minor: 0 | 2026-03-10 | ✅ Safe |
-| NE2213_14.0.0.202(EX01)<br><details><summary>MD5</summary><code>2cd47fb517e2d0869da9daab7a673ce4</code></details> | 0 | Major: 2, Minor: 0 | 2026-02-13 | ✅ Safe |
-| NE2213_13.1.0.597(EX01)<br><details><summary>MD5</summary><code>c4d883a698e3f1de8a8a6392fd5c36ba</code></details> | 0 | Major: 2, Minor: 0 | 2026-02-26 | ✅ Safe |
-
-</details>
-
-<details>
 <summary>📜 <b>China History</b> (click to expand)</summary>
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
@@ -591,10 +591,19 @@ Find the latest Anti-Rollback (ARB) status for your device below, organized by s
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
+| Global | CPH2415 | CPH2415_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>f13eab2d1a00aa9179e0e5e1e04b7d4c</code></details> | **0** | Major: 2, Minor: 0 | 2026-04-01 | ✅ Safe |
 | Europe | CPH2415 | CPH2415_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>7789c263157952e4b85a1dc505771a5a</code></details> | **0** | Major: 2, Minor: 0 | 2026-04-01 | ✅ Safe |
 | India | CPH2413 | CPH2413_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>f2f49f81fdec15884d9b6df3f8018d4b</code></details> | **0** | Major: 2, Minor: 0 | 2026-04-01 | ✅ Safe |
-| Global | CPH2415 | CPH2415_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>f13eab2d1a00aa9179e0e5e1e04b7d4c</code></details> | **0** | Major: 2, Minor: 0 | 2026-04-01 | ✅ Safe |
 | North America | CPH2417 | CPH2417_11_C.46<br><details><summary>MD5</summary><code>c0fe595ca50e4db92c009f49273c5c9a</code></details> | **0** | Major: 2, Minor: 0 | 2026-04-01 | ✅ Safe |
+
+<details>
+<summary>📜 <b>Global History</b> (click to expand)</summary>
+
+| Firmware Version | ARB | OEM Version | Last Seen | Safe |
+|:---|:---|:---|:---|:---|
+| CPH2415_15.0.0.1601(EX01)<br><details><summary>MD5</summary><code>98462c7099333250b1ec2f168af822ce</code></details> | 0 | Major: 2, Minor: 0 | 2026-02-08 | ✅ Safe |
+
+</details>
 
 <details>
 <summary>📜 <b>Europe History</b> (click to expand)</summary>
@@ -611,15 +620,6 @@ Find the latest Anti-Rollback (ARB) status for your device below, organized by s
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
 | CPH2413_15.0.0.1601(EX01) | 0 | Major: 2, Minor: 0 | 2026-02-05 | ✅ Safe |
-
-</details>
-
-<details>
-<summary>📜 <b>Global History</b> (click to expand)</summary>
-
-| Firmware Version | ARB | OEM Version | Last Seen | Safe |
-|:---|:---|:---|:---|:---|
-| CPH2415_15.0.0.1601(EX01)<br><details><summary>MD5</summary><code>98462c7099333250b1ec2f168af822ce</code></details> | 0 | Major: 2, Minor: 0 | 2026-02-08 | ✅ Safe |
 
 </details>
 
@@ -698,9 +698,9 @@ Find the latest Anti-Rollback (ARB) status for your device below, organized by s
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
+| Global | HD1917 | HD1917_11_F.22<br><details><summary>MD5</summary><code>3d15c9a772241e92cfb0c74acac2d739</code></details> | **0** | Major: 0, Minor: 120 | 2026-04-01 | ✅ Safe |
 | Europe | HD1913 | HD1913_11_F.22<br><details><summary>MD5</summary><code>e6681e6d8c0e0e903c514bd5f29b8c7a</code></details> | **0** | Major: 0, Minor: 120 | 2026-04-01 | ✅ Safe |
 | India | HD1911 | HD1911_11_F.22<br><details><summary>MD5</summary><code>4eb9c8bf005ad8b76ed0fc23ddc6f6e4</code></details> | **0** | Major: 0, Minor: 120 | 2026-04-01 | ✅ Safe |
-| Global | HD1917 | HD1917_11_F.22<br><details><summary>MD5</summary><code>3d15c9a772241e92cfb0c74acac2d739</code></details> | **0** | Major: 0, Minor: 120 | 2026-04-01 | ✅ Safe |
 
 ---
 
@@ -708,9 +708,9 @@ Find the latest Anti-Rollback (ARB) status for your device below, organized by s
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
+| Global | HD1905 | HD1905_11_F.22<br><details><summary>MD5</summary><code>87a2d003e867c131ff0d0b5829f9d91a</code></details> | **0** | Major: 0, Minor: 120 | 2026-04-01 | ✅ Safe |
 | Europe | HD1903 | HD1903_11_F.22<br><details><summary>MD5</summary><code>03f0b0432ad0b1420fecdcbc5de9a6ed</code></details> | **0** | Major: 0, Minor: 120 | 2026-04-01 | ✅ Safe |
 | India | HD1901 | HD1901_11_F.22<br><details><summary>MD5</summary><code>b4e4a35d93399eca1543acb4fa126a36</code></details> | **0** | Major: 0, Minor: 120 | 2026-04-01 | ✅ Safe |
-| Global | HD1905 | HD1905_11_F.22<br><details><summary>MD5</summary><code>87a2d003e867c131ff0d0b5829f9d91a</code></details> | **0** | Major: 0, Minor: 120 | 2026-04-01 | ✅ Safe |
 
 ---
 
@@ -718,9 +718,9 @@ Find the latest Anti-Rollback (ARB) status for your device below, organized by s
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
+| Global | GM1917 | GM1917_11_H.41<br><details><summary>MD5</summary><code>1ccb5dc4196b7979673ef1cf8338dd76</code></details> | **0** | Major: 0, Minor: 120 | 2026-04-01 | ✅ Safe |
 | Europe | GM1913 | GM1913_11_H.40<br><details><summary>MD5</summary><code>96591b6e18ef733a63f631077928f384</code></details> | **0** | Major: 0, Minor: 120 | 2026-04-01 | ✅ Safe |
 | India | GM1911 | GM1911_11_H.40<br><details><summary>MD5</summary><code>33dac37728530166116a3e354d16fda6</code></details> | **0** | Major: 0, Minor: 120 | 2026-04-01 | ✅ Safe |
-| Global | GM1917 | GM1917_11_H.41<br><details><summary>MD5</summary><code>1ccb5dc4196b7979673ef1cf8338dd76</code></details> | **0** | Major: 0, Minor: 120 | 2026-04-01 | ✅ Safe |
 
 ---
 
@@ -728,9 +728,9 @@ Find the latest Anti-Rollback (ARB) status for your device below, organized by s
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
+| Global | GM1905 | GM1905_11_H.41<br><details><summary>MD5</summary><code>49eb65dde1179f77ad92c5035a51c4ae</code></details> | **0** | Major: 0, Minor: 120 | 2026-04-01 | ✅ Safe |
 | Europe | GM1903 | GM1903_11_H.40<br><details><summary>MD5</summary><code>6bb15c264956576babcd5ded2eae55d0</code></details> | **0** | Major: 0, Minor: 120 | 2026-04-01 | ✅ Safe |
 | India | GM1901 | GM1901_11_H.40<br><details><summary>MD5</summary><code>ab3c412e906853535f21f2823d2358d7</code></details> | **0** | Major: 0, Minor: 120 | 2026-04-01 | ✅ Safe |
-| Global | GM1905 | GM1905_11_H.41<br><details><summary>MD5</summary><code>49eb65dde1179f77ad92c5035a51c4ae</code></details> | **0** | Major: 0, Minor: 120 | 2026-04-01 | ✅ Safe |
 
 ---
 
@@ -780,9 +780,20 @@ Find the latest Anti-Rollback (ARB) status for your device below, organized by s
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
+| Global | CPH2709 | CPH2709_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>1fa0ad252c46d6ccdc9699a4f331bbd4</code></details> | **0** | Major: 3, Minor: 0 | 2026-04-01 | ✅ Safe |
 | Europe | CPH2709 | CPH2709_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>d462744e077d08fab080ee7c54bbe2da</code></details> | **0** | Major: 3, Minor: 0 | 2026-04-01 | ✅ Safe |
 | India | CPH2707 | CPH2707_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>8a0c0fc15a64768dd40c6599197c5e46</code></details> | **0** | Major: 3, Minor: 0 | 2026-04-01 | ✅ Safe |
-| Global | CPH2709 | CPH2709_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>1fa0ad252c46d6ccdc9699a4f331bbd4</code></details> | **0** | Major: 3, Minor: 0 | 2026-04-01 | ✅ Safe |
+
+<details>
+<summary>📜 <b>Global History</b> (click to expand)</summary>
+
+| Firmware Version | ARB | OEM Version | Last Seen | Safe |
+|:---|:---|:---|:---|:---|
+| CPH2709_16.0.2.400(EX01)<br><details><summary>MD5</summary><code>215ac417ec05bafcd5d2c8afe8fa140f</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-28 | ✅ Safe |
+| CPH2709_16.0.1.300(EX01)<br><details><summary>MD5</summary><code>e897c75b850e4acbb9a6556d541bc3b7</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-22 | ✅ Safe |
+| CPH2709_15.0.2.604(EX01)<br><details><summary>MD5</summary><code>e5d66cec7708b0178f31bd7b6c67c74a</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-18 | ✅ Safe |
+
+</details>
 
 <details>
 <summary>📜 <b>Europe History</b> (click to expand)</summary>
@@ -804,17 +815,6 @@ Find the latest Anti-Rollback (ARB) status for your device below, organized by s
 
 </details>
 
-<details>
-<summary>📜 <b>Global History</b> (click to expand)</summary>
-
-| Firmware Version | ARB | OEM Version | Last Seen | Safe |
-|:---|:---|:---|:---|:---|
-| CPH2709_16.0.2.400(EX01)<br><details><summary>MD5</summary><code>215ac417ec05bafcd5d2c8afe8fa140f</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-28 | ✅ Safe |
-| CPH2709_16.0.1.300(EX01)<br><details><summary>MD5</summary><code>e897c75b850e4acbb9a6556d541bc3b7</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-22 | ✅ Safe |
-| CPH2709_15.0.2.604(EX01)<br><details><summary>MD5</summary><code>e5d66cec7708b0178f31bd7b6c67c74a</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-18 | ✅ Safe |
-
-</details>
-
 
 ---
 
@@ -822,9 +822,21 @@ Find the latest Anti-Rollback (ARB) status for your device below, organized by s
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
+| Global | CPH2663 | CPH2663_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>e64b6607ccb5361937039a6e10f34483</code></details> | **0** | Major: 3, Minor: 0 | 2026-04-01 | ✅ Safe |
 | Europe | CPH2663 | CPH2663_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>75cb2c75c9f1c1c2c34515a6462b871a</code></details> | **0** | Major: 3, Minor: 0 | 2026-04-01 | ✅ Safe |
 | India | CPH2661 | CPH2661_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>6352d9d637f01ddfb574d13c412c3cae</code></details> | **0** | Major: 3, Minor: 0 | 2026-04-01 | ✅ Safe |
-| Global | CPH2663 | CPH2663_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>e64b6607ccb5361937039a6e10f34483</code></details> | **0** | Major: 3, Minor: 0 | 2026-04-01 | ✅ Safe |
+
+<details>
+<summary>📜 <b>Global History</b> (click to expand)</summary>
+
+| Firmware Version | ARB | OEM Version | Last Seen | Safe |
+|:---|:---|:---|:---|:---|
+| CPH2663_16.0.2.401(EX01)<br><details><summary>MD5</summary><code>94c3d509d75d2cf2ef7ff546a19d12d2</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-25 | ✅ Safe |
+| CPH2663_16.0.1.301(EX01)<br><details><summary>MD5</summary><code>48c0cb97cbfe448d50b8f730236c8019</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-18 | ✅ Safe |
+| CPH2663_15.0.0.401(EX01)<br><details><summary>MD5</summary><code>f35c38d521127a1cfb5be683711fa5db</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-26 | ✅ Safe |
+| CPH2663_14.1.0.605(EX01)<br><details><summary>MD5</summary><code>89d7e0f18fe0b145fc3ab2e3430a5fea</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-13 | ✅ Safe |
+
+</details>
 
 <details>
 <summary>📜 <b>Europe History</b> (click to expand)</summary>
@@ -852,18 +864,6 @@ Find the latest Anti-Rollback (ARB) status for your device below, organized by s
 
 </details>
 
-<details>
-<summary>📜 <b>Global History</b> (click to expand)</summary>
-
-| Firmware Version | ARB | OEM Version | Last Seen | Safe |
-|:---|:---|:---|:---|:---|
-| CPH2663_16.0.2.401(EX01)<br><details><summary>MD5</summary><code>94c3d509d75d2cf2ef7ff546a19d12d2</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-25 | ✅ Safe |
-| CPH2663_16.0.1.301(EX01)<br><details><summary>MD5</summary><code>48c0cb97cbfe448d50b8f730236c8019</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-18 | ✅ Safe |
-| CPH2663_15.0.0.401(EX01)<br><details><summary>MD5</summary><code>f35c38d521127a1cfb5be683711fa5db</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-26 | ✅ Safe |
-| CPH2663_14.1.0.605(EX01)<br><details><summary>MD5</summary><code>89d7e0f18fe0b145fc3ab2e3430a5fea</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-13 | ✅ Safe |
-
-</details>
-
 
 ---
 
@@ -871,9 +871,9 @@ Find the latest Anti-Rollback (ARB) status for your device below, organized by s
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
+| Global | CPH2619 | CPH2621_16.0.1.303(EX01)<br><details><summary>MD5</summary><code>b7c365069ec43d6ac385bcc54709ea07</code></details> | **?** | Major: 0, Minor: 120 | 2026-04-01 | ⚠️ Undetectable protected |
 | Europe | CPH2619 | CPH2621_16.0.1.303(EX01)<br><details><summary>MD5</summary><code>7f747226ec77f81583f012f71a24a974</code></details> | **?** | Major: 0, Minor: 120 | 2026-04-01 | ⚠️ Undetectable protected |
 | India | CPH2619 | CPH2619_16.0.1.303(EX01)<br><details><summary>MD5</summary><code>317e7a25185b6acfa3188b188609d552</code></details> | **?** | Major: 0, Minor: 120 | 2026-04-01 | ⚠️ Undetectable protected |
-| Global | CPH2619 | CPH2621_16.0.1.303(EX01)<br><details><summary>MD5</summary><code>b7c365069ec43d6ac385bcc54709ea07</code></details> | **?** | Major: 0, Minor: 120 | 2026-04-01 | ⚠️ Undetectable protected |
 
 ---
 
@@ -907,9 +907,18 @@ Find the latest Anti-Rollback (ARB) status for your device below, organized by s
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
+| Global | CPH2465 | CPH2465_15.0.0.1800(EX01)<br><details><summary>MD5</summary><code>896bcc834f23fb5b29a68af89628a281</code></details> | **0** | Major: 0, Minor: 120 | 2026-04-01 | ✅ Safe |
 | Europe | CPH2465EEA | CPH2465_15.0.0.1800(EX01)<br><details><summary>MD5</summary><code>431b6e97ef2d135b41b3f5a1816bd484</code></details> | **0** | Major: 0, Minor: 120 | 2026-04-01 | ✅ Safe |
 | India | CPH2467 | CPH2467_15.0.0.1800(EX01)<br><details><summary>MD5</summary><code>8726ea7cfe6acb09a6c31ac8a0e82679</code></details> | **0** | Major: 0, Minor: 120 | 2026-04-01 | ✅ Safe |
-| Global | CPH2465 | CPH2465_15.0.0.1800(EX01)<br><details><summary>MD5</summary><code>896bcc834f23fb5b29a68af89628a281</code></details> | **0** | Major: 0, Minor: 120 | 2026-04-01 | ✅ Safe |
+
+<details>
+<summary>📜 <b>Global History</b> (click to expand)</summary>
+
+| Firmware Version | ARB | OEM Version | Last Seen | Safe |
+|:---|:---|:---|:---|:---|
+| CPH2465_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>72d0c27bdc608978592e04cdce62b016</code></details> | 0 | Major: 0, Minor: 120 | 2026-03-25 | ✅ Safe |
+
+</details>
 
 <details>
 <summary>📜 <b>Europe History</b> (click to expand)</summary>
@@ -929,15 +938,6 @@ Find the latest Anti-Rollback (ARB) status for your device below, organized by s
 
 </details>
 
-<details>
-<summary>📜 <b>Global History</b> (click to expand)</summary>
-
-| Firmware Version | ARB | OEM Version | Last Seen | Safe |
-|:---|:---|:---|:---|:---|
-| CPH2465_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>72d0c27bdc608978592e04cdce62b016</code></details> | 0 | Major: 0, Minor: 120 | 2026-03-25 | ✅ Safe |
-
-</details>
-
 
 ---
 
@@ -945,9 +945,9 @@ Find the latest Anti-Rollback (ARB) status for your device below, organized by s
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
+| Global | CPH2409 | CPH2409_14.0.0.2700(EX01)<br><details><summary>MD5</summary><code>b101fe4ea22334155ed14c766bb8d1ab</code></details> | **0** | Major: 0, Minor: 120 | 2026-04-01 | ✅ Safe |
 | Europe | CPH2409EEA | CPH2409_14.0.0.2700(EX01)<br><details><summary>MD5</summary><code>4b628f389081f069651aaf8663ce1355</code></details> | **0** | Major: 0, Minor: 120 | 2026-04-01 | ✅ Safe |
 | India | CPH2381 | CPH2381_14.0.0.2700(EX01)<br><details><summary>MD5</summary><code>99fec841bb7c8abb22a11dd88b8bd73e</code></details> | **0** | Major: 0, Minor: 120 | 2026-04-01 | ✅ Safe |
-| Global | CPH2409 | CPH2409_14.0.0.2700(EX01)<br><details><summary>MD5</summary><code>b101fe4ea22334155ed14c766bb8d1ab</code></details> | **0** | Major: 0, Minor: 120 | 2026-04-01 | ✅ Safe |
 
 ---
 
@@ -1139,10 +1139,21 @@ Find the latest Anti-Rollback (ARB) status for your device below, organized by s
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
+| Global | OPD2415 | OPD2415_16.0.5.700(EX01)<br><details><summary>MD5</summary><code>c245716d418c3a6417df4662dfae9efb</code></details> | **1** | Major: 3, Minor: 0 | 2026-04-01 | ❌ Protected |
 | Europe | OPD2415 | OPD2415_16.0.5.700(EX01)<br><details><summary>MD5</summary><code>efad8cb2b8e9024919366bd0699c934f</code></details> | **1** | Major: 3, Minor: 0 | 2026-04-01 | ❌ Protected |
 | India | OPD2415 | OPD2415_16.0.5.700(EX01)<br><details><summary>MD5</summary><code>8f4c4c2d5cc38455bf74e3f20c0884b2</code></details> | **1** | Major: 3, Minor: 0 | 2026-04-01 | ❌ Protected |
-| Global | OPD2415 | OPD2415_16.0.5.700(EX01)<br><details><summary>MD5</summary><code>c245716d418c3a6417df4662dfae9efb</code></details> | **1** | Major: 3, Minor: 0 | 2026-04-01 | ❌ Protected |
 | North America | OPD2415 | OPD2415_15.0.1.500(EX01)<br><details><summary>MD5</summary><code>4a431268abcc614778a06fa408aa1064</code></details> | **0** | Major: 3, Minor: 0 | 2026-04-01 | ✅ Safe |
+
+<details>
+<summary>📜 <b>Global History</b> (click to expand)</summary>
+
+| Firmware Version | ARB | OEM Version | Last Seen | Safe |
+|:---|:---|:---|:---|:---|
+| OPD2415_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>64101499d86baf3ef11eb91384f782fe</code></details> | 1 | Major: 3, Minor: 0 | 2026-03-26 | ❌ Protected |
+| OPD2415_16.0.1.302(EX01)<br><details><summary>MD5</summary><code>29a03855c25e72197c24d5c603ace45a</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-10 | ✅ Safe |
+| OPD2415_16.0.0.211(EX01)<br><details><summary>MD5</summary><code>6be9e071c6c3284866ddd02c06e52fb0</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-18 | ✅ Safe |
+
+</details>
 
 <details>
 <summary>📜 <b>Europe History</b> (click to expand)</summary>
@@ -1163,17 +1174,6 @@ Find the latest Anti-Rollback (ARB) status for your device below, organized by s
 | OPD2415_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>f04541e8fba46fe4b066b7f7deaa0334</code></details> | 1 | Major: 3, Minor: 0 | 2026-03-25 | ❌ Protected |
 | OPD2415_16.0.1.302(EX01)<br><details><summary>MD5</summary><code>ed72adfd06e1f9684e051be6fc797d02</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-18 | ✅ Safe |
 | OPD2415_16.0.0.211(EX01)<br><details><summary>MD5</summary><code>31422d40cca779e619e20aec05910e61</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-25 | ✅ Safe |
-
-</details>
-
-<details>
-<summary>📜 <b>Global History</b> (click to expand)</summary>
-
-| Firmware Version | ARB | OEM Version | Last Seen | Safe |
-|:---|:---|:---|:---|:---|
-| OPD2415_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>64101499d86baf3ef11eb91384f782fe</code></details> | 1 | Major: 3, Minor: 0 | 2026-03-26 | ❌ Protected |
-| OPD2415_16.0.1.302(EX01)<br><details><summary>MD5</summary><code>29a03855c25e72197c24d5c603ace45a</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-10 | ✅ Safe |
-| OPD2415_16.0.0.211(EX01)<br><details><summary>MD5</summary><code>6be9e071c6c3284866ddd02c06e52fb0</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-18 | ✅ Safe |
 
 </details>
 
@@ -1204,9 +1204,18 @@ Find the latest Anti-Rollback (ARB) status for your device below, organized by s
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
+| Global | OPD2403 | OPD2403_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>a2af0d57211c379b8bf70f5a0bd381a5</code></details> | **1** | Major: 3, Minor: 0 | 2026-04-01 | ❌ Protected |
 | Europe | OPD2403 | OPD2403_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>995d3095adbd8be28edf59e85c3d29e0</code></details> | **1** | Major: 3, Minor: 0 | 2026-04-01 | ❌ Protected |
 | India | OPD2403 | OPD2403_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>81159aae331be32f00155760c8b14b14</code></details> | **1** | Major: 3, Minor: 0 | 2026-04-01 | ❌ Protected |
-| Global | OPD2403 | OPD2403_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>a2af0d57211c379b8bf70f5a0bd381a5</code></details> | **1** | Major: 3, Minor: 0 | 2026-04-01 | ❌ Protected |
+
+<details>
+<summary>📜 <b>Global History</b> (click to expand)</summary>
+
+| Firmware Version | ARB | OEM Version | Last Seen | Safe |
+|:---|:---|:---|:---|:---|
+| OPD2403_16.0.3.501(EX01)<br><details><summary>MD5</summary><code>dcf3998f433db53966a08aa889ce5228</code></details> | 1 | Major: 3, Minor: 0 | 2026-03-26 | ❌ Protected |
+
+</details>
 
 <details>
 <summary>📜 <b>Europe History</b> (click to expand)</summary>
@@ -1229,15 +1238,6 @@ Find the latest Anti-Rollback (ARB) status for your device below, organized by s
 
 </details>
 
-<details>
-<summary>📜 <b>Global History</b> (click to expand)</summary>
-
-| Firmware Version | ARB | OEM Version | Last Seen | Safe |
-|:---|:---|:---|:---|:---|
-| OPD2403_16.0.3.501(EX01)<br><details><summary>MD5</summary><code>dcf3998f433db53966a08aa889ce5228</code></details> | 1 | Major: 3, Minor: 0 | 2026-03-26 | ❌ Protected |
-
-</details>
-
 
 ---
 
@@ -1247,13 +1247,25 @@ Find the latest Anti-Rollback (ARB) status for your device below, organized by s
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
+| China | PKV110 | PKH110_16.0.3.500(CN01)<br><details><summary>MD5</summary><code>0f0d5e5ca45e64af32b99f7401d65a12</code></details> | **0** | Major: 3, Minor: 0 | 2026-04-01 | ✅ Safe |
 | Singapore | CPH2671 | CPH2671_16.0.5.700(EX01)<br><details><summary>MD5</summary><code>84b434d3337990b381cb6de3898f7c8e</code></details> | **0** | Major: 3, Minor: 0 | 2026-04-01 | ✅ Safe |
 | Malaysia | CPH2671 | CPH2671_16.0.5.700(EX01)<br><details><summary>MD5</summary><code>228e24d61a2a79d5e6702aac2296e288</code></details> | **0** | Major: 3, Minor: 0 | 2026-04-01 | ✅ Safe |
 | Asia-Pacific | CPH2671 | CPH2671_16.0.5.700(EX01)<br><details><summary>MD5</summary><code>86da73ef6fcfeca76e6c4ea80f543481</code></details> | **0** | Major: 3, Minor: 0 | 2026-04-01 | ✅ Safe |
 | Indonesia | CPH2671 | CPH2671_16.0.5.700(EX01)<br><details><summary>MD5</summary><code>11fc5bc7dad9dd4b15d1166f0d42034f</code></details> | **0** | Major: 3, Minor: 0 | 2026-04-01 | ✅ Safe |
 | Mexico | CPH2671 | CPH2671_16.0.5.700(EX01)<br><details><summary>MD5</summary><code>1dc9bb44e6e64ce0397434b2330f528d</code></details> | **0** | Major: 3, Minor: 0 | 2026-04-01 | ✅ Safe |
 | Thailand | CPH2671 | CPH2671_16.0.5.700(EX01)<br><details><summary>MD5</summary><code>00a4eb590b6d5ef63a39d4424855cf3a</code></details> | **0** | Major: 3, Minor: 0 | 2026-04-01 | ✅ Safe |
-| China | PKV110 | PKH110_16.0.3.500(CN01)<br><details><summary>MD5</summary><code>0f0d5e5ca45e64af32b99f7401d65a12</code></details> | **0** | Major: 3, Minor: 0 | 2026-04-01 | ✅ Safe |
+
+<details>
+<summary>📜 <b>China History</b> (click to expand)</summary>
+
+| Firmware Version | ARB | OEM Version | Last Seen | Safe |
+|:---|:---|:---|:---|:---|
+| PKH110_16.0.2.401(CN01)<br><details><summary>MD5</summary><code>00b0dede5abeff5658076861f2ea8792</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ Safe |
+| PKH110_16.0.1.302(CN01)<br><details><summary>MD5</summary><code>8fb8fbb2d3f009fe0e5ecc9e211736e0</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-06 | ✅ Safe |
+| PKH110_16.0.0.208(CN01)<br><details><summary>MD5</summary><code>b2c749968762898844999f838b9a658f</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-18 | ✅ Safe |
+| PKH110_15.0.1.860(CN01)<br><details><summary>MD5</summary><code>367e3b4be47bcea04f101d4c4aefe5d1</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-26 | ✅ Safe |
+
+</details>
 
 <details>
 <summary>📜 <b>Singapore History</b> (click to expand)</summary>
@@ -1306,18 +1318,6 @@ Find the latest Anti-Rollback (ARB) status for your device below, organized by s
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
 | CPH2671_16.0.2.401(EX01)<br><details><summary>MD5</summary><code>d7aa0bf5f0f86e68711f68f2ff8bc7c1</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-25 | ✅ Safe |
-
-</details>
-
-<details>
-<summary>📜 <b>China History</b> (click to expand)</summary>
-
-| Firmware Version | ARB | OEM Version | Last Seen | Safe |
-|:---|:---|:---|:---|:---|
-| PKH110_16.0.2.401(CN01)<br><details><summary>MD5</summary><code>00b0dede5abeff5658076861f2ea8792</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ Safe |
-| PKH110_16.0.1.302(CN01)<br><details><summary>MD5</summary><code>8fb8fbb2d3f009fe0e5ecc9e211736e0</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-06 | ✅ Safe |
-| PKH110_16.0.0.208(CN01)<br><details><summary>MD5</summary><code>b2c749968762898844999f838b9a658f</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-18 | ✅ Safe |
-| PKH110_15.0.1.860(CN01)<br><details><summary>MD5</summary><code>367e3b4be47bcea04f101d4c4aefe5d1</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-26 | ✅ Safe |
 
 </details>
 
@@ -1682,4 +1682,4 @@ Prefer a native mobile experience? We have an official Android app on F-Droid! C
 > The bot **only** works within this group to prevent spam and ensure availability. DM checks are disabled.
 
 ---
-<div align="center"><i>Last updated: 2026-04-01 05:18 UTC</i></div>
+<div align="center"><i>Last updated: 2026-04-01 06:04 UTC</i></div>

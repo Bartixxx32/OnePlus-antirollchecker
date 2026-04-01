@@ -72,8 +72,8 @@ def generate_device_section(device_id: str, device_name: str, history_data: Dict
     elif device_id_mapped == "11r": device_id_mapped = "oneplus_11r"
     elif "nord_ce_4_lite" in device_id_mapped: device_id_mapped = "oneplus_nord_ce_4_lite"
 
-    # Pre-sort variants based on priority (EU/IN first)
-    priority = {'EU': 0, 'IN': 1, 'GLO': 2, 'NA': 3}
+    # Pre-sort variants based on priority (GLO > EU > IN > NA > CN)
+    priority = {'GLO': 0, 'EU': 1, 'IN': 2, 'NA': 3, 'CN': 4}
     models_dict = DEVICE_METADATA[device_id].get('models', {})
     sorted_variants = sorted(models_dict.keys(),
                              key=lambda x: priority.get(x, 99))
