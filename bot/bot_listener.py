@@ -16,7 +16,7 @@ GITHUB_TOKEN = os.environ.get("GITHUB_PAT")
 GITHUB_REPO = "Bartixxx32/OnePlus-antirollchecker"
 WORKFLOW_ID = "telegram_check.yml"
 ADMIN_USER_ID = 277390840  # Bartixxx32's Telegram user ID
-BOT_VERSION = "1.1.0"
+BOT_VERSION = "1.1.2"
 BOT_START_TIME = time.time()
 
 # Paths
@@ -179,7 +179,7 @@ async def help_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "ℹ️ /about — Bot info, version & uptime\n"
         "❓ /help — Show this message\n\n"
         "*How /download works:*\n"
-        "1. Bot resolves device name → fetches firmware URL from API\n"
+        "1. Bot resolves device name → fetches firmware URL from Oxygen Updater API\n"
         "2. Triggers ARB analysis via GitHub Actions\n"
         "3. Posts download link + ARB results as replies\n\n"
         "📋 _Rate limit: 2 checks per minute_"
@@ -208,7 +208,8 @@ async def about(update: Update, context: ContextTypes.DEFAULT_TYPE):
         f"⏱️ *Uptime:* {uptime}\n"
         f"🔢 *Total checks:* {data.get('total_checks', 0)}\n\n"
         f"🔗 [GitHub Repository](https://github.com/{GITHUB_REPO})\n"
-        f"💬 [Support Group](https://t.me/oneplusarbchecker)\n\n"
+        f"💬 [Support Group](https://t.me/oneplusarbchecker)\n"
+        f"🌐 [Oxygen Updater API](https://play.google.com/store/apps/details?id=com.arjanvlek.oxygenupdater)\n\n"
         f"_Made with ❤️ by @Bartixxx32_"
     )
     await update.message.reply_text(msg, parse_mode="Markdown", disable_web_page_preview=True)

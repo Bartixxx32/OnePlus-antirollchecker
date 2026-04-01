@@ -40,10 +40,10 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
-| Global | CPH2747 | CPH2747_16.0.5.700(EX01)<br><details><summary>MD5</summary><code>6086e417cba87486cceab28f08635b19</code></details> | **0** | Major: 3, Minor: 0 | 2026-03-31 | ✅ Safe |
-| Europe | CPH2747 | CPH2747_16.0.5.700(EX01)<br><details><summary>MD5</summary><code>529891ce7bbbaf52357a7fdee83431ff</code></details> | **0** | Major: 3, Minor: 0 | 2026-03-31 | ✅ Safe |
-| India | CPH2745 | CPH2745_16.0.5.700(EX01)<br><details><summary>MD5</summary><code>b01f22e57655584a93a7e6051752f4c4</code></details> | **0** | Major: 3, Minor: 0 | 2026-03-31 | ✅ Safe |
-| China | PLK110 | PLK110_16.0.5.701(CN01)<br><details><summary>MD5</summary><code>9e9688532ff5ec1eb19b4ca9de363199</code></details> | **0** | Major: 3, Minor: 0 | 2026-03-31 | ✅ Safe |
+| Global | CPH2747 | CPH2747_16.0.5.700(EX01)<br><details><summary>MD5</summary><code>6086e417cba87486cceab28f08635b19</code></details> | **0** | Major: 3, Minor: 0 | 2026-04-01 | ✅ Safe |
+| Europe | CPH2747 | CPH2747_16.0.5.700(EX01)<br><details><summary>MD5</summary><code>529891ce7bbbaf52357a7fdee83431ff</code></details> | **0** | Major: 3, Minor: 0 | 2026-04-01 | ✅ Safe |
+| India | CPH2745 | CPH2745_16.0.5.700(EX01)<br><details><summary>MD5</summary><code>b01f22e57655584a93a7e6051752f4c4</code></details> | **0** | Major: 3, Minor: 0 | 2026-04-01 | ✅ Safe |
+| China | PLK110 | PLK110_16.0.5.701(CN01)<br><details><summary>MD5</summary><code>9e9688532ff5ec1eb19b4ca9de363199</code></details> | **0** | Major: 3, Minor: 0 | 2026-04-01 | ✅ Safe |
 
 <details>
 <summary>📜 <b>Global History</b> (click to expand)</summary>
@@ -1203,10 +1203,10 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | Asia Pacific | CPH2525 | CPH2525_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>dbd2b3559dd8b1ef6c62d26ff1df4dcb</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-31 | ✅ Safe |
 | Oceania | CPH2525OCA | CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>6554872f0d665c9a77cefb972287a7e5</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-31 | ✅ Safe |
 | Saudi Arabia | CPH2525SA | CPH2525_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>1f6d57b4a491cfdc11ea8a67d480eebc</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-31 | ✅ Safe |
+| India | CPH2525IN | CPH2525_13.1.1.147(EX01)<br><details><summary>MD5</summary><code>abb2a1ef3450621de3073f48d5215b19</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-31 | ✅ Safe |
+| Middle East | CPH2525MEA | CPH2525_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>ae1e910b70f736368c2aec048b8f1d99</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-31 | ✅ Safe |
 | Europe | CPH2525EEA | CPH2525_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>128650aa4175ac0e3c4cda9f3ae9eb25</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-31 | ✅ Safe |
 | Philippines | CPH2525PH | CPH2525_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>8b682eb6bda3ae1adb3a75bbe4cea3ee</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-31 | ✅ Safe |
-| Middle East | CPH2525MEA | CPH2525_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>ae1e910b70f736368c2aec048b8f1d99</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-31 | ✅ Safe |
-| India | CPH2525IN | CPH2525_13.1.1.147(EX01)<br><details><summary>MD5</summary><code>abb2a1ef3450621de3073f48d5215b19</code></details> | **0** | Major: 0, Minor: 120 | 2026-03-31 | ✅ Safe |
 
 <details>
 <summary>📜 <b>Singapore History</b> (click to expand)</summary>
@@ -1281,6 +1281,15 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 </details>
 
 <details>
+<summary>📜 <b>Middle East History</b> (click to expand)</summary>
+
+| Firmware Version | ARB | OEM Version | Last Seen | Safe |
+|:---|:---|:---|:---|:---|
+| CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>d75e6df459ee8ed050e99e143a9ffe1c</code></details> | 0 | Major: 0, Minor: 120 | 2026-03-27 | ✅ Safe |
+
+</details>
+
+<details>
 <summary>📜 <b>Europe History</b> (click to expand)</summary>
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
@@ -1295,15 +1304,6 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
 | CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>1f6e08b4926652d580b2fce0839b95f4</code></details> | 0 | Major: 0, Minor: 120 | 2026-03-25 | ✅ Safe |
-
-</details>
-
-<details>
-<summary>📜 <b>Middle East History</b> (click to expand)</summary>
-
-| Firmware Version | ARB | OEM Version | Last Seen | Safe |
-|:---|:---|:---|:---|:---|
-| CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>d75e6df459ee8ed050e99e143a9ffe1c</code></details> | 0 | Major: 0, Minor: 120 | 2026-03-27 | ✅ Safe |
 
 </details>
 
@@ -1601,7 +1601,7 @@ Need direct download URLs for OnePlus firmware? Use our **OOS Downloader API**!
 
 🌐 **API Endpoint**: [https://oosdownloader-gui.fly.dev/](https://oosdownloader-gui.fly.dev/)
 
-This API helps you get direct, signed download URLs for OnePlus OTA firmware files.
+Our OOS Downloader API provides direct, signed download URLs for OnePlus OTA firmware files by leveraging the [Oxygen Updater API](https://play.google.com/store/apps/details?id=com.arjanvlek.oxygenupdater).
 
 ---
 
@@ -1611,6 +1611,7 @@ This API helps you get direct, signed download URLs for OnePlus OTA firmware fil
 - **Playback & Validation**: [payload-dumper-go](https://github.com/ssut/payload-dumper-go) by ssut
 - **ARB Extraction**: [arbextract](https://github.com/koaaN/arbextract) by koaaN
 - **API for CN variants**: [roms.danielspringer.at](https://roms.danielspringer.at/) by Daniel Springer
+- **Firmware API**: [Oxygen Updater](https://play.google.com/store/apps/details?id=com.arjanvlek.oxygenupdater)
 
 ---
 
@@ -1629,4 +1630,4 @@ Prefer a native mobile experience? We have an official Android app on F-Droid! C
 > **Important:** The bot **only** works within this group to prevent spam and ensure availability. DM checks are disabled.
 
 ---
-*Last updated: 2026-03-31 02:56 UTC*
+*Last updated: 2026-04-01 03:12 UTC*
