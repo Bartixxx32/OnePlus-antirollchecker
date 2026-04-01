@@ -1,96 +1,129 @@
 import json
+import os
 from pathlib import Path
 from datetime import datetime, timezone
-from typing import Dict, List, Optional
-from config import DEVICE_ORDER, DEVICE_METADATA, REGION_MAPPING, OOS_MAPPING
+from typing import Dict, List, Any
 import re
-from hardcode_rules import is_hardcode_protected, version_sort_key
 
-def load_history(file_path: Path) -> Dict:
-    """Load history from a JSON file."""
+from config import DEVICE_METADATA, DEVICE_ORDER
+from hardcode_rules import is_hardcode_protected
+
+def get_region_name(region_code: str) -> str:
+    """Helper to get a readable region name from its code."""
+    regions = {
+        'IN': 'India',
+        'EU': 'Europe',
+        'GLO': 'Global',
+        'NA': 'North America',
+        'CN': 'China',
+        'ID': 'Indonesia',
+        'MY': 'Malaysia',
+        'OCA': 'Oceania',
+        'SG': 'Singapore',
+        'TH': 'Thailand',
+        'TW': 'Taiwan',
+        'VN': 'Vietnam',
+        'EG': 'Egypt',
+        'SA': 'Saudi Arabia',
+        'PH': 'Philippines',
+        'MEA': 'Middle East',
+        'APC': 'Asia-Pacific',
+        'MX': 'Mexico',
+        'EEA': 'Europe (EEA)'
+    }
+    return regions.get(region_code, region_code)
+
+def github_slug(text: str) -> str:
+    """Generate a GitHub-compatible anchor slug for a header."""
+    # Special cases for emojis/symbols based on GitHub's anchor generation
+    if "♠️ Ace Series" in text:
+        return "️-ace-series"
+    if "💬 Community & Support" in text:
+        return "-community--support"
+    if "📟 Tablets" in text:
+        return "-tablets"
+
+    # Standard GitHub slugification
+    slug = text.lower().replace(' ', '-')
+    slug = re.sub(r'[^\w-]', '', slug)
+    return slug
+
+def load_history(filepath: Path) -> Dict:
+    """Load history data from a JSON file."""
     try:
-        with open(file_path, 'r', encoding='utf-8') as f:
+        with open(filepath, 'r', encoding='utf-8') as f:
             return json.load(f)
-    except FileNotFoundError:
+    except Exception as e:
+        print(f"Error loading {filepath}: {e}")
         return {}
 
-def get_region_name(variant: str) -> str:
-    """Map compact region codes to human-readable labels."""
-    return REGION_MAPPING.get(variant, variant)
+def version_sort_key(version: str) -> List[Any]:
+    """Create a sort key for firmware versions to handle numeric parts correctly."""
+    return [int(c) if c.isdigit() else c for c in re.split(r'(\d+)', version)]
 
 def generate_device_section(device_id: str, device_name: str, history_data: Dict) -> List[str]:
-    """Generate Markdown section for a specific device."""
+    """Generate Markdown for a single device section."""
     lines = []
-    
-    # Convert device_id to snake_case format for hardcode checking
-    device_id_mapped = OOS_MAPPING.get(device_id, device_id)
-    
-    # Get available variants
-    variants = set()
-    if device_id in DEVICE_METADATA:
-        variants.update(DEVICE_METADATA[device_id]['models'].keys())
-    for key in history_data:
-        if key.startswith(f"{device_id}_"):
-             variants.add(key.replace(f"{device_id}_", ""))
-    
-    # Determine region order based on device type
-    if device_name.startswith("Oppo"):
-        # Oppo devices use different regional codes
-        preferred_order = ['EU', 'SG', 'TW', 'MY', 'ID', 'TH', 'VN', 'APC', 'OCA', 'EG', 'SA', 'MX', 'CN']
-    else:
-        # OnePlus devices use standard regions
-        preferred_order = ['GLO', 'EU', 'IN', 'NA', 'VISIBLE', 'CN']
-    
-    def sort_key(v):
-        try:
-            return preferred_order.index(v)
-        except ValueError:
-            return len(preferred_order)
-            
-    sorted_variants = sorted(list(variants), key=sort_key)
-    
-    has_data = False
     rows = []
+    
+    # Map device ID to the one used in hardcode_rules
+    device_id_mapped = device_id.lower().replace(" ", "_")
+    if device_id_mapped == "12r": device_id_mapped = "oneplus_12r"
+    elif device_id_mapped == "11r": device_id_mapped = "oneplus_11r"
+    elif "nord_ce_4_lite" in device_id_mapped: device_id_mapped = "oneplus_nord_ce_4_lite"
+
+    # Pre-sort variants based on priority (EU/IN first)
+    priority = {'EU': 0, 'IN': 1, 'GLO': 2, 'NA': 3}
+    models_dict = DEVICE_METADATA[device_id].get('models', {})
+    sorted_variants = sorted(models_dict.keys(),
+                             key=lambda x: priority.get(x, 99))
+
+    has_data = False
     for variant in sorted_variants:
         key = f"{device_id}_{variant}"
-        if key not in history_data:
-            continue
+        if key in history_data:
+            data = history_data[key]
+            current_entry = None
             
-        data = history_data[key]
-        current_entry = None
-        for entry in data.get('history', []):
-            if entry.get('status') == 'current':
-                current_entry = entry
-                break
-        
-        if not current_entry and data.get('history'):
-            current_entry = data['history'][0]
+            # Find the 'current' entry
+            for entry in data.get('history', []):
+                if entry.get('status') == 'current':
+                    current_entry = entry
+                    break
             
-        if current_entry:
+            if not current_entry:
+                continue
+
             has_data = True
+            region_name = get_region_name(variant)
+
+            # Model detection with fallback
+            model = current_entry.get('model')
+            if not model or model == "Unknown":
+                model = DEVICE_METADATA[device_id]['models'].get(variant, 'Unknown')
+
             version = current_entry.get('version', 'Unknown')
             arb = current_entry.get('arb', -1)
             
+            # Check hardcoded rules
             is_hardcoded = is_hardcode_protected(device_id_mapped, version)
-            # For hardcoded entries, show ? for ARB value (matching website)
+
+            # For hardcoded entries, show ? for ARB value
             display_arb = '?' if is_hardcoded else (arb if arb is not None and arb >= 0 else '?')
-                
-            date = current_entry.get('last_checked', 'Unknown')
+
             major = current_entry.get('major', '?')
             minor = current_entry.get('minor', '?')
-            region_name = get_region_name(variant)
-            model = data.get('model', 'Unknown')
+            date = current_entry.get('last_checked', 'Unknown')
             
-            # Status icon and text (matching website badges)
             if is_hardcoded:
-                safe_icon = "⚠️ Undetectable ARB"
+                safe_icon = "⚠️ Undetectable protected"
             elif arb == 0:
                 safe_icon = "✅ Safe"
             elif isinstance(arb, int) and arb > 0:
                 safe_icon = "❌ Protected"
             else:
                 safe_icon = "❓ Unknown"
-                
+
             # MD5 formating
             md5 = current_entry.get('md5')
             md5_str = ""
@@ -100,7 +133,7 @@ def generate_device_section(device_id: str, device_name: str, history_data: Dict
             rows.append(f"| {region_name} | {model} | {version}{md5_str} | **{display_arb}** | Major: {major}, Minor: {minor} | {date} | {safe_icon} |")
 
     if has_data:
-        lines.append(f"### {device_name}")
+        lines.append(f"#### {device_name}")
         lines.append("")
         lines.append("| Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |")
         lines.append("|:---|:---|:---|:---|:---|:---|:---|")
@@ -115,13 +148,10 @@ def generate_device_section(device_id: str, device_name: str, history_data: Dict
                 continue
             
             data = history_data[key]
-            # Filter out 'current' version from history to avoid redundancy
             history_entries = [e for e in data.get('history', []) if e.get('status') != 'current']
-            
-            # Sort history by firmware version descending (parse numeric parts for correct ordering)
             history_entries.sort(key=lambda x: version_sort_key(x.get('version', '')), reverse=True)
             
-            if history_entries: # Only show history if there's actual old versions
+            if history_entries:
                 region_name = get_region_name(variant)
                 history_lines.append(f"<details>")
                 history_lines.append(f"<summary>📜 <b>{region_name} History</b> (click to expand)</summary>")
@@ -131,17 +161,14 @@ def generate_device_section(device_id: str, device_name: str, history_data: Dict
                 for entry in history_entries:
                     v = entry.get('version', 'Unknown')
                     a = entry.get('arb', -1)
-                    
                     hist_is_hardcoded = is_hardcode_protected(device_id_mapped, v)
-                    # For hardcoded entries, show ? for ARB value (matching website)
                     display_a = '?' if hist_is_hardcoded else (a if a is not None and a >= 0 else '?')
-                        
                     maj = entry.get('major', '?')
                     min_ = entry.get('minor', '?')
                     ls = entry.get('last_checked', 'Unknown')
                     
                     if hist_is_hardcoded:
-                        s_icon = "⚠️ Undetectable ARB"
+                        s_icon = "⚠️ Undetectable protected"
                     elif a == 0:
                         s_icon = "✅ Safe"
                     elif isinstance(a, int) and a > 0:
@@ -153,7 +180,6 @@ def generate_device_section(device_id: str, device_name: str, history_data: Dict
                     md5_hist_str = ""
                     if md5_hist:
                         md5_hist_str = f"<br><details><summary>MD5</summary><code>{md5_hist}</code></details>"
-                        
                     history_lines.append(f"| {v}{md5_hist_str} | {display_a} | Major: {maj}, Minor: {min_} | {ls} | {s_icon} |")
                 history_lines.append("")
                 history_lines.append("</details>")
@@ -166,22 +192,53 @@ def generate_device_section(device_id: str, device_name: str, history_data: Dict
     return lines
 
 def generate_readme(history_data: Dict) -> str:
-    """Generate complete README content."""
+    """Generate complete README content with improved UI."""
+
+    # Define logical groups
+    GROUPS = {
+        "📱 Numbered Series": ["15", "15R", "13", "13R", "13T", "13s", "12", "12R", "11", "11R", "10 Pro", "10T", "9 Pro", "9", "9RT", "9R", "8T", "8 Pro", "8", "7T Pro", "7T", "7 Pro", "7"],
+        "📖 Foldables": ["Open"],
+        "⚡ Nord Series": ["Nord 5", "Nord 4", "Nord CE 4 Lite", "Nord CE 4", "Nord CE 3", "Nord CE 3 Lite", "Nord CE 2 Lite", "Nord N30", "Nord N20", "Nord 1", "Nord N200 5G"],
+        "♠️ Ace Series": ["Ace 6T", "Ace 6", "Ace 5 Pro", "Ace 5", "Ace 3 Pro", "Ace 3V", "Ace 3"],
+        "📟 Tablets": ["Pad 3", "Pad 2 Pro", "Pad 2"],
+        "🌐 Oppo Series": ["Find N5", "Find N3", "Reno10 Pro", "Find X8 Ultra", "Find X5 Pro", "Find X5", "Find X3 Pro"]
+    }
+
+    # Header section
     lines = [
-        '# OnePlus Anti-Rollback (ARB) Checker',
+        '<div align="center">',
+        '  <h1>OnePlus Anti-Rollback (ARB) Checker</h1>',
+        '  <p><b>Automated tracker for firmware updates and ARB indices across the OnePlus ecosystem.</b></p>',
         '',
-        '<!-- Badges -->',
-        '![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/Bartixxx32/OnePlus-antirollchecker/check_arb.yml?style=flat-square&logo=github&label=ARB%20Checking)',
-        '![GitHub stars](https://img.shields.io/github/stars/Bartixxx32/OnePlus-antirollchecker?style=flat-square&color=yellow)',
-        '![GitHub forks](https://img.shields.io/github/forks/Bartixxx32/OnePlus-antirollchecker?style=flat-square)',
-        '![GitHub last commit](https://img.shields.io/github/last-commit/Bartixxx32/OnePlus-antirollchecker?style=flat-square)',
-        '![Python Version](https://img.shields.io/badge/Python-3.11+-blue?style=flat-square&logo=python)',
-        '![Views](https://visitor-badge.laobi.icu/badge?page_id=Bartixxx32.OnePlus-antirollchecker)',
+        '  <!-- Badges -->',
+        '  <p>',
+        '    <img src="https://img.shields.io/github/actions/workflow/status/Bartixxx32/OnePlus-antirollchecker/check_arb.yml?style=for-the-badge&logo=github&label=Monitoring" alt="Workflow Status">',
+        '    <img src="https://img.shields.io/github/stars/Bartixxx32/OnePlus-antirollchecker?style=for-the-badge&color=yellow" alt="Stars">',
+        '    <img src="https://img.shields.io/github/last-commit/Bartixxx32/OnePlus-antirollchecker?style=for-the-badge" alt="Last Commit">',
+        '    <img src="https://img.shields.io/badge/Python-3.11+-blue?style=for-the-badge&logo=python" alt="Python">',
+        '    <img src="https://visitor-badge.laobi.icu/badge?page_id=Bartixxx32.OnePlus-antirollchecker" alt="Views">',
+        '  </p>',
+        '</div>',
+        '',
         '---',
         '',
-        'Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository monitors firmware updates and tracks ARB changes over time.',
+        '## 📑 Table of Contents',
+        f'- [🤖 Telegram Bot](#{github_slug("🤖 OnePlus ARB Checker Bot")})',
+        f'- [📊 Current Status](#{github_slug("📊 Current Status")})',
+    ]
+
+    # Add groups to TOC
+    for group_name in GROUPS.keys():
+        lines.append(f"  - [{group_name}](#{github_slug(group_name)})")
+
+    lines.extend([
+        f'- [🤖 On-Demand Checker](#{github_slug("🤖 On-Demand ARB Checker")})',
+        f'- [🌐 OOS Downloader API](#{github_slug("🌐 OOS Downloader API")})',
+        f'- [📱 Android App](#{github_slug("📱 Android App")})',
+        f'- [💬 Community](#{github_slug("💬 Community & Support")})',
+        f'- [🙏 Credits](#credits)',
         '',
-        '**🌐 ARB Info Website:** [https://oparb.pages.dev/](https://oparb.pages.dev/)',
+        '---',
         '',
         '## 🤖 OnePlus ARB Checker Bot',
         '',
@@ -197,28 +254,66 @@ def generate_readme(history_data: Dict) -> str:
         '  - `/help` - Show usage instructions',
         '  - `/about` - Bot version and stats',
         '',
-        '> **Note:** The bot **only** works within the [@oneplusarbchecker](https://t.me/oneplusarbchecker) group. DM checks are disabled. Checks are powered by GitHub Actions and may take a minute to process.',
+        '> [!IMPORTANT]',
+        '> The bot **only** works within the [@oneplusarbchecker](https://t.me/oneplusarbchecker) group. DM checks are disabled. Checks are powered by GitHub Actions and may take a minute to process.',
         '',
         '### 🍻 Support the Project',
         'If you find this tool helpful, consider buying me a beer! Your support keeps the updates coming.',
         '',
         '[![Buy Me A Coffee](https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20beer&emoji=%F0%9F%8D%BA&slug=bartixxx32&button_colour=FFDD00&font_colour=000000&font_family=Comic&outline_colour=000000&coffee_colour=ffffff)](https://www.buymeacoffee.com/bartixxx32)',
         '',
+        '---',
+        '',
         '## 📊 Current Status',
+        '',
+        'Find the latest Anti-Rollback (ARB) status for your device below, organized by series. **Check the legend for status meanings.**',
+        '',
+        '### 🛡️ Legend',
+        '- ✅ **Safe**: ARB index is 0. Standard flashing is safe.',
+        '- ❌ **Protected**: ARB index > 0. Downgrading will brick your device.',
+        '- ⚠️ **Undetectable**: Uses newer protection where ARB cannot be read normally, but it is **known to be protected**.',
+        '- ❓ **Unknown**: Status could not be verified.',
+        '',
+        '---',
         ''
-    ]
+    ])
 
-    for device_id in DEVICE_ORDER:
-        if device_id not in DEVICE_METADATA:
-            continue
-        meta = DEVICE_METADATA[device_id]
-        device_name = meta['name']
+    # Generate grouped device sections
+    processed_devices = set()
+    for group_name, device_ids in GROUPS.items():
+        group_lines = []
+        for device_id in device_ids:
+            if device_id in DEVICE_METADATA:
+                processed_devices.add(device_id)
+                device_name = DEVICE_METADATA[device_id]['name']
+                device_lines = generate_device_section(device_id, device_name, history_data)
+                if device_lines:
+                    group_lines.extend(device_lines)
+                    group_lines.append('---')
+                    group_lines.append('')
         
-        device_lines = generate_device_section(device_id, device_name, history_data)
-        if device_lines:
-            lines.extend(device_lines)
-            lines.append('---')
-            lines.append('')
+        if group_lines:
+            lines.append(f"### {group_name}")
+            lines.append("")
+            lines.extend(group_lines)
+
+    # Handle any devices in DEVICE_ORDER that weren't in a group
+    other_devices = [d for d in DEVICE_ORDER if d not in processed_devices]
+    if other_devices:
+        other_lines = []
+        for device_id in other_devices:
+            if device_id in DEVICE_METADATA:
+                device_name = DEVICE_METADATA[device_id]['name']
+                device_lines = generate_device_section(device_id, device_name, history_data)
+                if device_lines:
+                    other_lines.extend(device_lines)
+                    other_lines.append('---')
+                    other_lines.append('')
+
+        if other_lines:
+            lines.append(f"### 📁 Other Devices")
+            lines.append("")
+            lines.extend(other_lines)
             
     lines.extend([
         '## 🤖 On-Demand ARB Checker',
@@ -236,9 +331,6 @@ def generate_readme(history_data: Dict) -> str:
         '',
         '---',
         '',
-    ])
-
-    lines.extend([
         '## 🌐 OOS Downloader API',
         '',
         'Need direct download URLs for OnePlus firmware? Use our **OOS Downloader API**!',
@@ -248,39 +340,32 @@ def generate_readme(history_data: Dict) -> str:
         'Our OOS Downloader API provides direct, signed download URLs for OnePlus OTA firmware files by leveraging the [Oxygen Updater API](https://play.google.com/store/apps/details?id=com.arjanvlek.oxygenupdater).',
         '',
         '---',
-        ''
-    ])
-
-    lines.extend([
+        '',
         '## Credits',
         '',
         '- **Payload Extraction**: [otaripper](https://github.com/syedinsaf/otaripper) by syedinsaf',
         '- **Playback & Validation**: [payload-dumper-go](https://github.com/ssut/payload-dumper-go) by ssut',
         '- **ARB Extraction**: [arbextract](https://github.com/koaaN/arbextract) by koaaN',
         '- **API for CN variants**: [roms.danielspringer.at](https://roms.danielspringer.at/) by Daniel Springer',
-        '- **Firmware API**: [Oxygen Updater](https://play.google.com/store/apps/details?id=com.arjanvlek.oxygenupdater)',
+        '- **Firmware API source**: [Oxygen Updater](https://play.google.com/store/apps/details?id=com.arjanvlek.oxygenupdater)',
         '',
         '---',
         '',
-    ])
-
-    lines.extend([
         '## 📱 Android App',
         '',
         'Prefer a native mobile experience? We have an official Android app on F-Droid! Check firmware statuses, view ARB indices, and stay protected directly from your phone.',
         '',
-        '[<img src="https://f-droid.org/badge/get-it-on.png"',
-        '    alt="Get it on F-Droid"',
-        '    height="80">](https://f-droid.org/packages/com.bartixxx.oneplusarbchecker/)',
+        '[<img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="80">](https://f-droid.org/packages/com.bartixxx.oneplusarbchecker/)',
         '',
         '## 💬 Community & Support',
         '',
         '- **Telegram Group:** [@oneplusarbchecker](https://t.me/oneplusarbchecker)',
         '',
-        '> **Important:** The bot **only** works within this group to prevent spam and ensure availability. DM checks are disabled.',
+        '> [!IMPORTANT]',
+        '> The bot **only** works within this group to prevent spam and ensure availability. DM checks are disabled.',
         '',
         '---',
-        f'*Last updated: {datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")}*'
+        f'<div align="center"><i>Last updated: {datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")}</i></div>'
     ])
     
     return "\n".join(lines)
