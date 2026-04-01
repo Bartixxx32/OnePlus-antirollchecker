@@ -1071,7 +1071,7 @@
             const byDevice = {};
             let latestScan = '';
 
-            const regionScores = { "GLO": 1, "EU": 2, "IN": 3, "NA": 4, "CN": 5 };
+            const regionScores = { "GLO": 0, "EU": 1, "IN": 2, "NA": 3, "CN": 4 };
 
             for (const modelKey of Object.keys(db)) {
                 const d = db[modelKey];
