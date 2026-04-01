@@ -531,7 +531,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
 | Global | NE2213 | NE2213_16.0.3.520(EX01)<br><details><summary>MD5</summary><code>adb64bb0101e46c2428c0387ba49060d</code></details> | **0** | Major: 2, Minor: 0 | 2026-04-01 | ✅ Safe |
-| Europe | NE2213 | NE2213_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>0602a2e727fc048cf73ad53577013a9a</code></details> | **0** | Major: 2, Minor: 0 | 2026-04-01 | ✅ Safe |
+| Europe | NE2213 | NE2213_16.0.3.520(EX01)<br><details><summary>MD5</summary><code>6f11cb2e7b9ad8ca103927d558605da5</code></details> | **0** | Major: 2, Minor: 0 | 2026-04-01 | ✅ Safe |
 | India | NE2211 | NE2211_16.0.3.520(EX01)<br><details><summary>MD5</summary><code>46f577fb0b2656d629b5993c3a7762e3</code></details> | **0** | Major: 2, Minor: 0 | 2026-04-01 | ✅ Safe |
 | North America | NE2215 | NE2215_15.0.0.401(EX01)<br><details><summary>MD5</summary><code>203d379328732fae89f3134e3b808304</code></details> | **0** | Major: 2, Minor: 0 | 2026-04-01 | ✅ Safe |
 | China | NE2210 | NE2210_15.0.0.1301(CN01)<br><details><summary>MD5</summary><code>d1b71c63550e15270a3580cf7220e927</code></details> | **0** | Major: 2, Minor: 0 | 2026-04-01 | ✅ Safe |
@@ -555,6 +555,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| NE2213_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>0602a2e727fc048cf73ad53577013a9a</code></details> | 0 | Major: 2, Minor: 0 | 2026-04-01 | ✅ Safe |
 | NE2213_15.0.0.1302(EX01)<br><details><summary>MD5</summary><code>5daffaee08f4eeb3062b09b887aaa8c9</code></details> | 0 | Major: 2, Minor: 0 | 2026-02-26 | ✅ Safe |
 | NE2213_15.0.0.700(EX01)<br><details><summary>MD5</summary><code>ee4d7ff2fde85bfff044267251a1e204</code></details> | 0 | Major: 2, Minor: 0 | 2026-02-04 | ✅ Safe |
 | NE2213_14.0.0.940(EX01)<br><details><summary>MD5</summary><code>594bf98e18eafe719715a1441eece196</code></details> | 0 | Major: 2, Minor: 0 | 2026-02-11 | ✅ Safe |
@@ -1211,11 +1212,11 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | Thailand | CPH2525TH | CPH2525_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>19f4a1e35ab303463061db6c4d91ff1e</code></details> | **0** | Major: 0, Minor: 120 | 2026-04-01 | ✅ Safe |
 | Vietnam | CPH2525VN | CPH2525_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>f072fc3b8c605d96852168abe549d873</code></details> | **0** | Major: 0, Minor: 120 | 2026-04-01 | ✅ Safe |
 | Asia Pacific | CPH2525 | CPH2525_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>dbd2b3559dd8b1ef6c62d26ff1df4dcb</code></details> | **0** | Major: 0, Minor: 120 | 2026-04-01 | ✅ Safe |
-| Oceania | CPH2525OCA | CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>6554872f0d665c9a77cefb972287a7e5</code></details> | **0** | Major: 0, Minor: 120 | 2026-04-01 | ✅ Safe |
+| Oceania | CPH2525OCA | CPH2525_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>0407edf6593a82dc2d02b13bc38c0a2e</code></details> | **0** | Major: 0, Minor: 120 | 2026-04-01 | ✅ Safe |
 | Saudi Arabia | CPH2525SA | CPH2525_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>1f6d57b4a491cfdc11ea8a67d480eebc</code></details> | **0** | Major: 0, Minor: 120 | 2026-04-01 | ✅ Safe |
-| Middle East | CPH2525MEA | CPH2525_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>ae1e910b70f736368c2aec048b8f1d99</code></details> | **0** | Major: 0, Minor: 120 | 2026-04-01 | ✅ Safe |
-| Europe | CPH2525EEA | CPH2525_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>128650aa4175ac0e3c4cda9f3ae9eb25</code></details> | **0** | Major: 0, Minor: 120 | 2026-04-01 | ✅ Safe |
 | Philippines | CPH2525PH | CPH2525_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>8b682eb6bda3ae1adb3a75bbe4cea3ee</code></details> | **0** | Major: 0, Minor: 120 | 2026-04-01 | ✅ Safe |
+| Europe | CPH2525EEA | CPH2525_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>128650aa4175ac0e3c4cda9f3ae9eb25</code></details> | **0** | Major: 0, Minor: 120 | 2026-04-01 | ✅ Safe |
+| Middle East | CPH2525MEA | CPH2525_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>ae1e910b70f736368c2aec048b8f1d99</code></details> | **0** | Major: 0, Minor: 120 | 2026-04-01 | ✅ Safe |
 | India | CPH2525IN | CPH2525_13.1.1.147(EX01)<br><details><summary>MD5</summary><code>abb2a1ef3450621de3073f48d5215b19</code></details> | **0** | Major: 0, Minor: 120 | 2026-04-01 | ✅ Safe |
 
 <details>
@@ -1282,6 +1283,15 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 </details>
 
 <details>
+<summary>📜 <b>Oceania History</b> (click to expand)</summary>
+
+| Firmware Version | ARB | OEM Version | Last Seen | Safe |
+|:---|:---|:---|:---|:---|
+| CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>6554872f0d665c9a77cefb972287a7e5</code></details> | 0 | Major: 0, Minor: 120 | 2026-04-01 | ✅ Safe |
+
+</details>
+
+<details>
 <summary>📜 <b>Saudi Arabia History</b> (click to expand)</summary>
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
@@ -1291,11 +1301,11 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 </details>
 
 <details>
-<summary>📜 <b>Middle East History</b> (click to expand)</summary>
+<summary>📜 <b>Philippines History</b> (click to expand)</summary>
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
-| CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>d75e6df459ee8ed050e99e143a9ffe1c</code></details> | 0 | Major: 0, Minor: 120 | 2026-03-27 | ✅ Safe |
+| CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>1f6e08b4926652d580b2fce0839b95f4</code></details> | 0 | Major: 0, Minor: 120 | 2026-03-25 | ✅ Safe |
 
 </details>
 
@@ -1309,11 +1319,11 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 </details>
 
 <details>
-<summary>📜 <b>Philippines History</b> (click to expand)</summary>
+<summary>📜 <b>Middle East History</b> (click to expand)</summary>
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
-| CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>1f6e08b4926652d580b2fce0839b95f4</code></details> | 0 | Major: 0, Minor: 120 | 2026-03-25 | ✅ Safe |
+| CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>d75e6df459ee8ed050e99e143a9ffe1c</code></details> | 0 | Major: 0, Minor: 120 | 2026-03-27 | ✅ Safe |
 
 </details>
 
@@ -1640,4 +1650,4 @@ Prefer a native mobile experience? We have an official Android app on F-Droid! C
 > **Important:** The bot **only** works within this group to prevent spam and ensure availability. DM checks are disabled.
 
 ---
-*Last updated: 2026-04-01 07:12 UTC*
+*Last updated: 2026-04-01 18:50 UTC*
