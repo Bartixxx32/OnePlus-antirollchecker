@@ -16,7 +16,7 @@ GITHUB_TOKEN = os.environ.get("GITHUB_PAT")
 GITHUB_REPO = "Bartixxx32/OnePlus-antirollchecker"
 WORKFLOW_ID = "telegram_check.yml"
 ADMIN_USER_ID = 277390840  # Bartixxx32's Telegram user ID
-BOT_VERSION = "1.1.2"
+BOT_VERSION = "1.1.3"
 BOT_START_TIME = time.time()
 
 # Paths
@@ -209,7 +209,7 @@ async def about(update: Update, context: ContextTypes.DEFAULT_TYPE):
         f"🔢 *Total checks:* {data.get('total_checks', 0)}\n\n"
         f"🔗 [GitHub Repository](https://github.com/{GITHUB_REPO})\n"
         f"💬 [Support Group](https://t.me/oneplusarbchecker)\n"
-        f"🌐 [Oxygen Updater API](https://play.google.com/store/apps/details?id=com.arjanvlek.oxygenupdater)\n\n"
+        f"🌐 [OOS Downloader API](https://oosdownloader-gui.fly.dev/) (Powered by [Oxygen Updater](https://play.google.com/store/apps/details?id=com.arjanvlek.oxygenupdater))\n\n"
         f"_Made with ❤️ by @Bartixxx32_"
     )
     await update.message.reply_text(msg, parse_mode="Markdown", disable_web_page_preview=True)
