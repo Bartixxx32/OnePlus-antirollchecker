@@ -245,7 +245,7 @@ def generate_readme(history_data: Dict) -> str:
         '',
         '🌐 **API Endpoint**: [https://oosdownloader-gui.fly.dev/](https://oosdownloader-gui.fly.dev/)',
         '',
-        'This API helps you get direct, signed download URLs for OnePlus OTA firmware files.',
+        'Our OOS Downloader API provides direct, signed download URLs for OnePlus OTA firmware files by leveraging the [Oxygen Updater API](https://play.google.com/store/apps/details?id=com.arjanvlek.oxygenupdater).',
         '',
         '---',
         ''
@@ -258,6 +258,7 @@ def generate_readme(history_data: Dict) -> str:
         '- **Playback & Validation**: [payload-dumper-go](https://github.com/ssut/payload-dumper-go) by ssut',
         '- **ARB Extraction**: [arbextract](https://github.com/koaaN/arbextract) by koaaN',
         '- **API for CN variants**: [roms.danielspringer.at](https://roms.danielspringer.at/) by Daniel Springer',
+        '- **Firmware API**: [Oxygen Updater](https://play.google.com/store/apps/details?id=com.arjanvlek.oxygenupdater)',
         '',
         '---',
         '',
