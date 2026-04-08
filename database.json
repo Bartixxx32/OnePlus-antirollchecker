@@ -4140,6 +4140,19 @@
     "device_name": "OnePlus 13",
     "device_order": 2,
     "versions": {
+      "PJZ110_16.0.5.702(CN01)": {
+        "arb": 1,
+        "major": 3,
+        "minor": 0,
+        "md5": "e79027edfae91a2594e965cc21b14f99",
+        "first_seen": "2026-04-08",
+        "last_checked": "2026-04-08",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "CN"
+        ]
+      },
       "PJZ110_16.0.5.701(CN01)": {
         "arb": 1,
         "major": 3,
@@ -4147,7 +4160,7 @@
         "md5": "552380013ed612435e17774068d3dc38",
         "first_seen": "2026-03-13",
         "last_checked": "2026-04-08",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "CN"
