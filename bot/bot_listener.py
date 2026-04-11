@@ -80,6 +80,53 @@ def record_error():
     stats["total_errors"] += 1
     save_stats(stats)
 
+def record_dm_user(user_id, username):
+    """Record a DM user in stats."""
+    stats = load_stats()
+    if "dm_users" not in stats:
+        stats["dm_users"] = {}
+    
+    uid = str(user_id)
+    if uid not in stats["dm_users"]:
+        stats["dm_users"][uid] = {"name": username, "first_seen": datetime.now(timezone.utc).strftime("%Y-%m-%d")}
+    else:
+        stats["dm_users"][uid]["name"] = username
+    
+    save_stats(stats)
+
+async def delete_messages_delayed(chat_id, message_ids, delay, bot):
+    await asyncio.sleep(delay)
+    for msg_id in message_ids:
+        try:
+            await bot.delete_message(chat_id=chat_id, message_id=msg_id)
+        except Exception:
+            pass
+
+async def reject_info_command_in_group(update, context, command_name):
+    user = update.effective_user
+    mention = f"@{user.username}" if user.username else user.first_name
+    bot_username = context.bot.username
+    warning_msg = await context.bot.send_message(
+        chat_id=update.effective_chat.id,
+        message_thread_id=update.effective_message.message_thread_id if update.effective_message else None,
+        text=f"Hello {mention}, please use informational commands like `{command_name}` in my private messages (DM): @{bot_username} to keep this group clean.",
+        parse_mode="Markdown"
+    )
+    
+    msgs_to_del = [warning_msg.message_id]
+    if update.message:
+        msgs_to_del.append(update.message.message_id)
+    elif update.callback_query and update.callback_query.message:
+        msgs_to_del.append(update.callback_query.message.message_id)
+        
+    asyncio.create_task(delete_messages_delayed(
+        update.effective_chat.id, 
+        msgs_to_del, 
+        300, 
+        context.bot
+    ))
+
+
 # --- Rate Limiting ---
 user_requests = defaultdict(list)
 RATE_LIMIT_COUNT = 2
@@ -157,20 +204,33 @@ async def error_handler(update: object, context: ContextTypes.DEFAULT_TYPE) -> N
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if update.effective_chat.type == 'private':
+        user = update.effective_user
+        user_mention = f"@{user.username}" if user.username else user.first_name
+        record_dm_user(user.id, user_mention)
         await update.message.reply_text(
-            "❌ This bot operates in the OnePlus ARB Checker group only.\n"
-            "👉 Join here: https://t.me/oneplusarbchecker"
+            "Hello! Welcome to the OnePlus ARB Checker Bot.\n"
+            "You can use commands like /latest and /devicestatus directly here to avoid cluttering the main group.",
+            reply_markup=get_main_keyboard()
         )
         return
 
+    
+    bot_username = context.bot.username
+    keyboard = [[InlineKeyboardButton("🤖 Use Bot in DM", url=f"https://t.me/{bot_username}")]]
+    
     await context.bot.send_message(
         chat_id=update.effective_chat.id,
-        text="Hello! Send /check https://example.com/firmware.zip to analyze a firmware file.",
-        reply_markup=get_main_keyboard()
+        message_thread_id=update.effective_message.message_thread_id if update.effective_message else None,
+        text="Hello! Send `/check https://example.com/firmware.zip` to analyze a firmware file, or use my DM for informational commands.",
+        reply_markup=InlineKeyboardMarkup(keyboard),
+        parse_mode="Markdown"
     )
 
 async def help_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Show available commands and usage."""
+    if update.effective_chat.type != 'private':
+        await reject_info_command_in_group(update, context, "/help")
+        return
     msg = (
         "🤖 *OnePlus ARB Checker Bot*\n\n"
         "*Available Commands:*\n\n"
@@ -196,14 +256,26 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await query.answer()
     
     if query.data == "cmd_status":
+        if update.effective_chat.type != 'private':
+            await reject_info_command_in_group(update, context, "Device Status button")
+            return
         await query.message.reply_text("📱 Usage: /devicestatus <device_name_or_model>\nExample: /devicestatus OnePlus 12")
     elif query.data == "cmd_latest":
+        if update.effective_chat.type != 'private':
+            await reject_info_command_in_group(update, context, "Latest Firmwares button")
+            return
         await latest(update, context, is_callback=True)
     elif query.data == "cmd_download":
+        if update.effective_chat.type == 'private':
+            await query.message.reply_text("❌ DM downloads are not allowed.\nPlease use the group: https://t.me/oneplusarbchecker")
+            return
         await download_cmd(update, context, is_callback=True)
 
 async def about(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Show bot info, version, and uptime."""
+    if update.effective_chat.type != 'private':
+        await reject_info_command_in_group(update, context, "/about")
+        return
     data = load_stats()
     uptime = format_uptime()
     
@@ -251,10 +323,8 @@ async def stats(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def status_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if update.effective_chat.type != 'private':
-        try:
-            await update.message.delete()
-        except:
-            pass
+        await reject_info_command_in_group(update, context, "/devicestatus")
+        return
     
     if not context.args:
         await context.bot.send_message(chat_id=update.effective_chat.id, message_thread_id=update.effective_message.message_thread_id, text="📱 Usage: /devicestatus <device_name_or_model>\nExample: /devicestatus OnePlus 12")
@@ -307,16 +377,15 @@ async def status_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=update.effective_chat.id, message_thread_id=update.effective_message.message_thread_id, text=text, parse_mode="Markdown")
 
 async def latest(update: Update, context: ContextTypes.DEFAULT_TYPE, is_callback=False):
+    if not is_callback and update.effective_chat.type != 'private':
+        await reject_info_command_in_group(update, context, "/latest")
+        return
     data = await fetch_database()
     if not data:
         msg = "❌ Failed to fetch database."
         if is_callback:
             await update.callback_query.message.reply_text(msg)
         else:
-            try:
-                await update.message.delete()
-            except:
-                pass
             await context.bot.send_message(chat_id=update.effective_chat.id, message_thread_id=update.effective_message.message_thread_id, text=msg)
         return
         
@@ -354,10 +423,6 @@ async def latest(update: Update, context: ContextTypes.DEFAULT_TYPE, is_callback
     if is_callback:
         await update.callback_query.message.reply_text(text, parse_mode="Markdown")
     else:
-        try:
-            await update.message.delete()
-        except:
-            pass
         await context.bot.send_message(chat_id=update.effective_chat.id, message_thread_id=update.effective_message.message_thread_id, text=text, parse_mode="Markdown")
 
 # --- Device Resolution Helpers ---
@@ -592,6 +657,14 @@ async def download_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE, is_ca
     """Fetch the latest firmware for a device and trigger an ARB check."""
     ALLOWED_GROUP_ID = -1003662409203
     
+    if update.effective_chat.type == 'private':
+        await update.message.reply_text(f"❌ DM downloads are not allowed.\nPlease use the group: https://t.me/oneplusarbchecker")
+        return
+
+    if update.effective_chat.id != ALLOWED_GROUP_ID:
+        await update.message.reply_text(f"❌ This command is only authorized for the OnePlus ARB Checker group.")
+        return
+
     if is_callback:
         msg_target = update.callback_query.message
     else:
@@ -760,7 +833,7 @@ async def check(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     # 2. Strict Group Check
     if chat_id != ALLOWED_GROUP_ID:
-        await update.message.reply_text(f"❌ This bot is only authorized for the OnePlus ARB Checker group.")
+        await update.message.reply_text(f"❌ This command is only authorized for the OnePlus ARB Checker group.")
         return
 
     if not context.args:
