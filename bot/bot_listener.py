@@ -321,6 +321,34 @@ async def stats(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
     await update.message.reply_text(msg, parse_mode="HTML")
 
+
+async def dm_subs(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Show list of DM subscribers (admin only)."""
+    user = update.effective_user
+    
+    if user.id != ADMIN_USER_ID:
+        await update.message.reply_text("❌ This command is restricted to the bot admin.")
+        return
+    
+    data = load_stats()
+    dm_users = data.get("dm_users", {})
+    
+    if not dm_users:
+        await update.message.reply_text("👥 <b>DM Subscribers:</b>\n\nNo subscribers yet.", parse_mode="HTML")
+        return
+        
+    text = f"👥 <b>DM Subscribers ({len(dm_users)} total):</b>\n\n"
+    for uid, info in dm_users.items():
+        name = html_mod.escape(str(info.get('name', 'Unknown')))
+        date = info.get('first_seen', 'Unknown')
+        text += f"• {name} (ID: <code>{uid}</code>) - Since: {date}\n"
+        
+    if len(text) > 4000:
+        for i in range(0, len(text), 4000):
+            await update.message.reply_text(text[i:i+4000], parse_mode="HTML")
+    else:
+        await update.message.reply_text(text, parse_mode="HTML")
+
 async def status_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if update.effective_chat.type != 'private':
         await reject_info_command_in_group(update, context, "/devicestatus")
@@ -950,6 +978,7 @@ if __name__ == '__main__':
     application.add_handler(CommandHandler('start', start))
     application.add_handler(CommandHandler('check', check))
     application.add_handler(CommandHandler('stats', stats))
+    application.add_handler(CommandHandler('subs', dm_subs))
     application.add_handler(CommandHandler('help', help_cmd))
     application.add_handler(CommandHandler('about', about))
     
