@@ -2,6 +2,7 @@ import logging
 import os
 import json
 import time
+import asyncio
 import aiohttp
 import html as html_mod
 from bs4 import BeautifulSoup
@@ -101,13 +102,17 @@ def format_uptime():
 DB_URL = "https://oparb.pages.dev/database.json"
 
 async def fetch_database():
-    try:
-        async with aiohttp.ClientSession() as session:
-            async with session.get(DB_URL, timeout=10) as response:
-                if response.status == 200:
-                    return await response.json()
-    except Exception as e:
-        logging.error(f"Failed to fetch database.json: {e}")
+    for attempt in range(3):
+        try:
+            async with aiohttp.ClientSession() as session:
+                async with session.get(DB_URL, timeout=10) as response:
+                    if response.status == 200:
+                        return await response.json()
+        except Exception as e:
+            logging.warning(f"Database fetch attempt {attempt+1} failed: {e}")
+        if attempt < 2:
+            await asyncio.sleep(2)
+    logging.error("Failed to fetch database.json after 3 attempts.")
     return None
 
 def get_main_keyboard():
@@ -245,17 +250,20 @@ async def stats(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(msg, parse_mode="HTML")
 
 async def status_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    if update.effective_chat.type == 'private':
-        return
+    if update.effective_chat.type != 'private':
+        try:
+            await update.message.delete()
+        except:
+            pass
     
     if not context.args:
-        await update.message.reply_text("📱 Usage: /devicestatus <device_name_or_model>\nExample: /devicestatus OnePlus 12")
+        await context.bot.send_message(chat_id=update.effective_chat.id, message_thread_id=update.effective_message.message_thread_id, text="📱 Usage: /devicestatus <device_name_or_model>\nExample: /devicestatus OnePlus 12")
         return
         
     query = " ".join(context.args).lower().strip()
     data = await fetch_database()
     if not data:
-        await update.message.reply_text("❌ Failed to fetch database. Try again later.")
+        await context.bot.send_message(chat_id=update.effective_chat.id, message_thread_id=update.effective_message.message_thread_id, text="❌ Failed to fetch database. Try again later.")
         return
         
     found_models = []
@@ -264,7 +272,7 @@ async def status_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
             found_models.append((model, details))
             
     if not found_models:
-        await update.message.reply_text(f"❌ No data found for '{query}'.")
+        await context.bot.send_message(chat_id=update.effective_chat.id, message_thread_id=update.effective_message.message_thread_id, text=f"❌ No data found for '{query}'.")
         return
         
     text = f"📱 **Search results for '{query}':**\n\n"
@@ -296,7 +304,7 @@ async def status_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if len(found_models) > 10:
         text += f"_...and {len(found_models)-10} more models._\n"
         
-    await update.message.reply_text(text, parse_mode="Markdown")
+    await context.bot.send_message(chat_id=update.effective_chat.id, message_thread_id=update.effective_message.message_thread_id, text=text, parse_mode="Markdown")
 
 async def latest(update: Update, context: ContextTypes.DEFAULT_TYPE, is_callback=False):
     data = await fetch_database()
@@ -305,7 +313,11 @@ async def latest(update: Update, context: ContextTypes.DEFAULT_TYPE, is_callback
         if is_callback:
             await update.callback_query.message.reply_text(msg)
         else:
-            await update.message.reply_text(msg)
+            try:
+                await update.message.delete()
+            except:
+                pass
+            await context.bot.send_message(chat_id=update.effective_chat.id, message_thread_id=update.effective_message.message_thread_id, text=msg)
         return
         
     all_fw = []
@@ -342,7 +354,11 @@ async def latest(update: Update, context: ContextTypes.DEFAULT_TYPE, is_callback
     if is_callback:
         await update.callback_query.message.reply_text(text, parse_mode="Markdown")
     else:
-        await update.message.reply_text(text, parse_mode="Markdown")
+        try:
+            await update.message.delete()
+        except:
+            pass
+        await context.bot.send_message(chat_id=update.effective_chat.id, message_thread_id=update.effective_message.message_thread_id, text=text, parse_mode="Markdown")
 
 # --- Device Resolution Helpers ---
 # Device metadata mappings (embedded from config.py for bot autonomy)
@@ -448,20 +464,23 @@ async def fetch_firmware_oos(device_id: str, region: str) -> dict:
     brand = "oneplus"
     url = f"{OOS_API_BASE}/{brand}/{mapped_id}/{region}/full/info"
     
-    try:
-        async with aiohttp.ClientSession() as session:
-            async with session.get(url, timeout=aiohttp.ClientTimeout(total=15)) as resp:
-                if resp.status != 200:
-                    return None
-                data = await resp.json()
-                if "download_url" in data and data["download_url"]:
-                    return {
-                        "url": data["download_url"],
-                        "version": data.get("version_number", "Unknown"),
-                        "md5": data.get("md5sum")
-                    }
-    except Exception as e:
-        logging.error(f"OOS API error: {e}")
+    for attempt in range(3):
+        try:
+            async with aiohttp.ClientSession() as session:
+                async with session.get(url, timeout=aiohttp.ClientTimeout(total=15)) as resp:
+                    if resp.status == 200:
+                        data = await resp.json()
+                        if "download_url" in data and data["download_url"]:
+                            return {
+                                "url": data["download_url"],
+                                "version": data.get("version_number", "Unknown"),
+                                "md5": data.get("md5sum")
+                            }
+        except Exception as e:
+            logging.warning(f"OOS API error attempt {attempt+1}: {e}")
+        if attempt < 2:
+            await asyncio.sleep(2)
+    logging.error("Failed to fetch from OOS API after 3 attempts.")
     return None
 
 async def fetch_firmware_springer(device_id: str, region: str) -> dict:
@@ -473,75 +492,79 @@ async def fetch_firmware_springer(device_id: str, region: str) -> dict:
     
     headers = {"User-Agent": USER_AGENT}
     
-    try:
-        async with aiohttp.ClientSession() as session:
-            # Step 1: GET the page to find available versions
-            async with session.get(SPRINGER_API_URL, headers=headers, timeout=aiohttp.ClientTimeout(total=20)) as resp:
-                if resp.status != 200:
+    for attempt in range(3):
+        try:
+            async with aiohttp.ClientSession() as session:
+                # Step 1: GET the page to find available versions
+                async with session.get(SPRINGER_API_URL, headers=headers, timeout=aiohttp.ClientTimeout(total=30)) as resp:
+                    if resp.status != 200:
+                        continue
+                    page_html = await resp.text()
+                
+                soup = BeautifulSoup(page_html, 'html.parser')
+                device_select = soup.find('select', {'id': 'device'})
+                if not device_select:
                     return None
-                page_html = await resp.text()
-            
-            soup = BeautifulSoup(page_html, 'html.parser')
-            device_select = soup.find('select', {'id': 'device'})
-            if not device_select:
-                return None
-            
-            devices_json = device_select.get('data-devices')
-            if not devices_json:
-                return None
-            
-            devices_data = json.loads(html_mod.unescape(devices_json))
-            
-            # Resolve device name (fuzzy match)
-            device_name = springer_name
-            if device_name not in devices_data:
-                found = False
-                for d in devices_data:
-                    if device_name.upper() == d.upper() or d.upper().startswith(device_name.upper() + " "):
-                        device_name = d
-                        found = True
-                        break
-                if not found:
+                
+                devices_json = device_select.get('data-devices')
+                if not devices_json:
                     return None
-            
-            if region not in devices_data[device_name]:
-                return None
-            
-            versions = devices_data[device_name][region]
-            if not versions:
-                return None
-            
-            found_version_name = versions[0]  # Latest version is first
-            
-            # Step 2: POST form to get signed URL
-            form_data = {
-                'device': device_name,
-                'region': region,
-                'version_index': '0',
-            }
-            post_headers = {
-                'User-Agent': USER_AGENT,
-                'Content-Type': 'application/x-www-form-urlencoded',
-                'Referer': SPRINGER_API_URL,
-            }
-            
-            async with session.post(SPRINGER_API_URL, data=form_data, headers=post_headers, timeout=aiohttp.ClientTimeout(total=20)) as resp:
-                if resp.status != 200:
+                
+                devices_data = json.loads(html_mod.unescape(devices_json))
+                
+                # Resolve device name (fuzzy match)
+                device_name = springer_name
+                if device_name not in devices_data:
+                    found = False
+                    for d in devices_data:
+                        if device_name.upper() == d.upper() or d.upper().startswith(device_name.upper() + " "):
+                            device_name = d
+                            found = True
+                            break
+                    if not found:
+                        return None
+                
+                if region not in devices_data[device_name]:
                     return None
-                result_html = await resp.text()
-            
-            soup = BeautifulSoup(result_html, 'html.parser')
-            result_div = soup.find('div', {'id': 'resultBox'})
-            
-            if result_div and result_div.get('data-url'):
-                download_url = html_mod.unescape(result_div.get('data-url'))
-                return {
-                    "url": download_url,
-                    "version": found_version_name,
-                    "md5": None
+                
+                versions = devices_data[device_name][region]
+                if not versions:
+                    return None
+                
+                found_version_name = versions[0]  # Latest version is first
+                
+                # Step 2: POST form to get signed URL
+                form_data = {
+                    'device': device_name,
+                    'region': region,
+                    'version_index': '0',
                 }
-    except Exception as e:
-        logging.error(f"Springer API error: {e}")
+                post_headers = {
+                    'User-Agent': USER_AGENT,
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'Referer': SPRINGER_API_URL,
+                }
+                
+                async with session.post(SPRINGER_API_URL, data=form_data, headers=post_headers, timeout=aiohttp.ClientTimeout(total=30)) as resp:
+                    if resp.status != 200:
+                        continue
+                    result_html = await resp.text()
+                
+                soup = BeautifulSoup(result_html, 'html.parser')
+                result_div = soup.find('div', {'id': 'resultBox'})
+                
+                if result_div and result_div.get('data-url'):
+                    download_url = html_mod.unescape(result_div.get('data-url'))
+                    return {
+                        "url": download_url,
+                        "version": found_version_name,
+                        "md5": None
+                    }
+        except Exception as e:
+            logging.warning(f"Springer API error attempt {attempt+1}: {e}")
+        if attempt < 2:
+            await asyncio.sleep(2)
+    logging.error("Failed to fetch from Springer API after 3 attempts.")
     return None
 
 async def fetch_firmware_url(device_id: str, region: str) -> dict:
@@ -572,6 +595,10 @@ async def download_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE, is_ca
     if is_callback:
         msg_target = update.callback_query.message
     else:
+        try:
+            await update.message.delete()
+        except:
+            pass
         msg_target = update.message
     
     chat_id = update.effective_chat.id
@@ -579,8 +606,10 @@ async def download_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE, is_ca
     user_mention = f"@{user.username}" if user.username else user.first_name
     
     if not context.args and not is_callback:
-        await msg_target.reply_text(
-            "📥 **Download & Check Firmware**\n\n"
+        await context.bot.send_message(
+            chat_id=chat_id,
+            message_thread_id=update.effective_message.message_thread_id,
+            text="📥 **Download & Check Firmware**\n\n"
             "Usage: `/download <device> [region]`\n"
             "Example: `/download OnePlus 15 EU`\n\n"
             "This will fetch the latest firmware and automatically run an ARB check!",
@@ -602,16 +631,18 @@ async def download_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE, is_ca
     device_id, device_name, region = resolve_device(query)
     
     if not device_id:
-        await msg_target.reply_text(f"❌ Device not found: `{query}`\n\nTry: `/download OnePlus 15` or `/download CPH2747`", parse_mode="Markdown")
+        await context.bot.send_message(chat_id=chat_id, message_thread_id=update.effective_message.message_thread_id, text=f"❌ Device not found: `{query}`\n\nTry: `/download OnePlus 15` or `/download CPH2747`", parse_mode="Markdown")
         return
     
     if not region:
-        await msg_target.reply_text(f"❌ No region found for {device_name}. Try: `/download {device_name} EU`", parse_mode="Markdown")
+        await context.bot.send_message(chat_id=chat_id, message_thread_id=update.effective_message.message_thread_id, text=f"❌ No region found for {device_name}. Try: `/download {device_name} EU`", parse_mode="Markdown")
         return
     
     # Send a status message
-    status_msg = await msg_target.reply_text(
-        f"🔍 Fetching latest firmware for **{device_name}** ({region})...",
+    status_msg = await context.bot.send_message(
+        chat_id=chat_id,
+        message_thread_id=update.effective_message.message_thread_id,
+        text=f"🔍 Fetching latest firmware for **{device_name}** ({region})...",
         parse_mode="Markdown"
     )
     
@@ -768,12 +799,16 @@ async def check(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if message_thread_id:
         request_chat_id = f"{chat_id}_{message_thread_id}"
 
+    try:
+        await update.message.delete()
+    except Exception as e:
+        pass
+
     # Reply immediately
     status_msg = await context.bot.send_message(
         chat_id=chat_id,
         text=f"🚀 Initiating check...",
-        message_thread_id=message_thread_id,
-        reply_to_message_id=message_id
+        message_thread_id=message_thread_id
     )
 
     # Trigger GitHub Action
@@ -809,26 +844,27 @@ async def trigger_github_workflow(url, chat_id, message_id, user_mention, status
         }
     }
     
-    try:
-        async with aiohttp.ClientSession() as session:
-            async with session.post(
-                f"https://api.github.com/repos/{GITHUB_REPO}/actions/workflows/{WORKFLOW_ID}/dispatches",
-                headers=headers,
-                json=data,
-                timeout=30
-            ) as response:
-                
-                if response.status == 204:
-                    logging.info("Workflow triggered successfully.")
-                    return True
-                else:
-                    text = await response.text()
-                    logging.error(f"Failed to trigger workflow: {response.status} {text}")
-                    return False
-            
-    except Exception as e:
-        logging.error(f"Network error triggering workflow: {e}")
-        return False
+    for attempt in range(3):
+        try:
+            async with aiohttp.ClientSession() as session:
+                async with session.post(
+                    f"https://api.github.com/repos/{GITHUB_REPO}/actions/workflows/{WORKFLOW_ID}/dispatches",
+                    headers=headers,
+                    json=data,
+                    timeout=30
+                ) as response:
+                    
+                    if response.status == 204:
+                        logging.info("Workflow triggered successfully.")
+                        return True
+                    else:
+                        resp_text = await response.text()
+                        logging.warning(f"Failed to trigger workflow attempt {attempt+1}: {response.status} {resp_text}")
+        except Exception as e:
+            logging.warning(f"Network error triggering workflow attempt {attempt+1}: {e}")
+        if attempt < 2:
+            await asyncio.sleep(2)
+    return False
 
 
 if __name__ == '__main__':
