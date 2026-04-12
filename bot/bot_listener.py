@@ -188,10 +188,10 @@ async def error_handler(update: object, context: ContextTypes.DEFAULT_TYPE) -> N
                 chat_info = f"\n📍 Chat: <code>{update.effective_chat.id}</code>"
             if update.effective_user:
                 name = update.effective_user.first_name
-                name = html.escape(str(name)) if name else "Unknown"
+                name = html_mod.escape(str(name)) if name else "Unknown"
                 user_info = f"\n👤 User: {name} (<code>{update.effective_user.id}</code>)"
         
-        error_text_esc = html.escape(error_text[:500])
+        error_text_esc = html_mod.escape(error_text[:500])
         admin_msg = (
             f"🚨 <b>Bot Error Alert</b>\n\n"
             f"⏰ {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')}\n"
@@ -307,7 +307,7 @@ async def stats(update: Update, context: ContextTypes.DEFAULT_TYPE):
     sorted_users = sorted(data.get("users", {}).items(), key=lambda x: x[1]["count"], reverse=True)[:5]
     
     top_users_text = "\n".join(
-        [f"  {i+1}. {html.escape(str(u[1]['name']))} — {u[1]['count']}" for i, u in enumerate(sorted_users)]
+        [f"  {i+1}. {html_mod.escape(str(u[1]['name']))} — {u[1]['count']}" for i, u in enumerate(sorted_users)]
     ) or "  No data yet"
     
     msg = (
