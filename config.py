@@ -64,6 +64,7 @@ DEVICE_ORDER = [
     "7T Pro", "7T", "7 Pro", "7",
 
     # Nords
+    "Nord 6",
     "Nord 5",
     "Nord 4", 
     "Nord CE 4 Lite", "Nord CE 4", "Nord CE 3",
@@ -279,6 +280,13 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
     },
 
     # Nords
+    "Nord 6": {
+        "name": "OnePlus Nord 6",
+        "models": {
+            "GLO": "CPH2795",
+            "IN": "CPH2793"
+        },
+    },
     "Nord 5": {
         "name": "OnePlus Nord 5",
         "models": {
@@ -537,6 +545,7 @@ SPRING_MAPPING = {
     "oneplus_pad_3": "OP PAD3",
     "oneplus_pad_2": "OP PAD2",
     "oneplus_open": "OP OPEN",
+    "oneplus_nord_6": "OP NORD 6",
     "oneplus_nord_5": "OP NORD 5",
     "oneplus_nord_4": "OP NORD 4",
     # Legacy
@@ -593,6 +602,7 @@ OOS_MAPPING = {
     "7": "oneplus_7",
     "Nord 1": "oneplus_nord",
     # Nords
+    "Nord 6": "oneplus_nord_6",
     "Nord 5": "oneplus_nord_5",
     "Nord 4": "oneplus_nord_4",
     "Nord N30": "oneplus_nord_n30",

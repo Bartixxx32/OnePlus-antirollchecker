@@ -469,6 +469,7 @@ DEVICE_METADATA = {
     "9 Pro": {"name": "OnePlus 9 Pro", "models": {"NA": "LE2125", "EU": "LE2123", "IN": "LE2121"}},
     "9": {"name": "OnePlus 9", "models": {"NA": "LE2115", "EU": "LE2113", "IN": "LE2111"}},
     "Open": {"name": "OnePlus Open", "models": {"EU": "CPH2551", "IN": "CPH2551", "NA": "CPH2551"}},
+    "Nord 6": {"name": "OnePlus Nord 6", "models": {"GLO": "CPH2795", "IN": "CPH2793"}},
     "Nord 5": {"name": "OnePlus Nord 5", "models": {"GLO": "CPH2709", "EU": "CPH2709", "IN": "CPH2707"}},
     "Nord 4": {"name": "OnePlus Nord 4", "models": {"GLO": "CPH2663", "EU": "CPH2663", "IN": "CPH2661"}},
     "Ace 6T": {"name": "OnePlus Ace 6T", "models": {"CN": "PLR110"}},
@@ -491,7 +492,7 @@ OOS_MAPPING = {
     "10 Pro": "oneplus_10_pro", "10T": "oneplus_10t",
     "9 Pro": "oneplus_9_pro", "9": "oneplus_9",
     "Open": "oneplus_open",
-    "Nord 5": "oneplus_nord_5", "Nord 4": "oneplus_nord_4",
+    "Nord 6": "oneplus_nord_6", "Nord 5": "oneplus_nord_5", "Nord 4": "oneplus_nord_4",
     "Ace 6T": "oneplus_ace_6t", "Ace 6": "oneplus_ace_6",
     "Ace 5": "oneplus_ace_5", "Ace 5 Pro": "oneplus_ace_5_pro",
     "Ace 3 Pro": "oneplus_ace_3_pro", "Ace 3V": "oneplus_ace_3v", "Ace 3": "oneplus_ace_3",
@@ -511,7 +512,7 @@ SPRING_MAPPING = {
     "oneplus_ace_3_pro": "OP ACE 3 PRO", "oneplus_ace_3v": "OP ACE 3V", "oneplus_ace_3": "OP ACE 3",
     "oneplus_pad2_pro": "OP PAD2 PRO", "oneplus_pad_3": "OP PAD3", "oneplus_pad_2": "OP PAD2",
     "oneplus_open": "OP OPEN",
-    "oneplus_nord_5": "OP NORD 5", "oneplus_nord_4": "OP NORD 4",
+    "oneplus_nord_6": "OP NORD 6", "oneplus_nord_5": "OP NORD 5", "oneplus_nord_4": "OP NORD 4",
 }
 
 OOS_API_BASE = "https://oosdownloader-gui.fly.dev/api"
