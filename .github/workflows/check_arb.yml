@@ -188,7 +188,8 @@ jobs:
           while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
             echo "Attempting download (Try $((RETRY_COUNT+1))/$MAX_RETRIES)..."
             
-            # Construct aria2c command with optional checksum
+            # Construct aria2c command
+            # -c: resume partial download (critical for large CN files with expiring URLs)
             ARIA_CMD="aria2c -c -x16 -s16 -k1M -o firmware.zip"
             if [[ "$MD5" != "" && "$MD5" != "None" ]]; then
                 echo "Enforcing MD5 checksum: $MD5"
@@ -203,16 +204,34 @@ jobs:
               break
             fi
             
-            echo "Download failed or checksum mismatch."
+            echo "Download failed."
             
-            # If checksum failed, aria2c returns non-zero.
-            # We should remove the file to ensure fresh retry?
-            rm -f firmware.zip
+            # Determine failure reason:
+            # - If firmware.zip exists but is incomplete → URL expired mid-download
+            #   → KEEP the partial file so aria2c can resume with a refreshed URL
+            # - If firmware.zip is missing or MD5 mismatch on a complete file
+            #   → Remove and start fresh
+            FILESIZE=0
+            if [ -f firmware.zip ]; then
+              FILESIZE=$(stat -c%s firmware.zip 2>/dev/null || echo 0)
+            fi
+            
+            if [[ $FILESIZE -gt 0 && ! -f firmware.zip.aria2 ]]; then
+              # File exists but no .aria2 control file = download completed but MD5 failed
+              echo "Checksum mismatch on completed file. Removing for fresh download."
+              rm -f firmware.zip firmware.zip.aria2
+            elif [[ $FILESIZE -gt 0 ]]; then
+              # Partial download with .aria2 control file = URL expired mid-download
+              echo "Partial download preserved ($(du -sh firmware.zip | cut -f1)). Will resume with refreshed URL."
+            else
+              echo "No partial file found. Starting fresh."
+              rm -f firmware.zip firmware.zip.aria2
+            fi
 
-            echo "Refreshing URL..."
             RETRY_COUNT=$((RETRY_COUNT+1))
             if [ $RETRY_COUNT -eq $MAX_RETRIES ]; then break; fi
-            
+
+            echo "Refreshing URL..."
             python3 fetch_firmware.py "${{ matrix.device }}" "${{ matrix.variant }}" "$VERSION" --output fw_refresh.json
             if [ -f fw_refresh.json ]; then
                NEW_URL=$(python3 -c "import sys, json; print(json.load(open('fw_refresh.json'))['url'])")
@@ -228,6 +247,7 @@ jobs:
              echo "Download failed after all attempts."
              touch skip_check.txt
           fi
+
 
       - name: Analyze Firmware (Check ARB)
         if: steps.cache-arb.outputs.cache-hit != 'true' && hashFiles('skip_check.txt') == ''
@@ -300,6 +320,20 @@ jobs:
           # Extract MD5 from result.json (it might be calculated or passed through)
           CALC_MD5=$(python3 -c "import sys, json; print(json.load(open('result.json')).get('md5', ''))")
           
+          # Check if device+version is hardcode protected (shows ARB=0 but is actually protected)
+          IS_HARDCODED=$(python3 -c "
+          from hardcode_rules import is_hardcode_protected
+          from config import OOS_MAPPING
+          device_id = '${{ matrix.device }}'
+          oos_key = OOS_MAPPING.get(device_id, 'oneplus_' + device_id.lower().replace(' ', '_'))
+          version = '${{ steps.get_details.outputs.version }}'
+          print('true' if is_hardcode_protected(oos_key, version) else 'false')
+          ")
+          if [[ "$IS_HARDCODED" == "true" ]]; then
+              echo "Device is hardcode protected, overriding ARB display to '?'"
+              ARB="?"
+          fi
+          
           # Prefer calculated MD5, fallback to API one
           FINAL_MD5="${{ steps.get_details.outputs.md5 }}"
           if [[ "$CALC_MD5" != "" && "$CALC_MD5" != "null" ]]; then
@@ -316,6 +350,7 @@ jobs:
             --arb "$ARB" \
             --md5 "$FINAL_MD5" \
             --url "${{ steps.get_details.outputs.url }}"
+
 
       - name: Upload JSON History
         uses: actions/upload-artifact@v4
