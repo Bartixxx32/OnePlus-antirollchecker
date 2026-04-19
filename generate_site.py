@@ -4,7 +4,7 @@ import os
 import json
 from pathlib import Path
 from jinja2 import Template
-from config import REGION_MAPPING
+from config import REGION_MAPPING, DEVICE_METADATA, OOS_MAPPING, SPRING_MAPPING
 
 def generate(template_path: Path, output_path: Path, db_path: Path):
     """Core logic to generate the site."""
@@ -36,6 +36,20 @@ def generate(template_path: Path, output_path: Path, db_path: Path):
     if db_path.exists():
         shutil.copy2(db_path, output_path.parent / "database.json")
         logging.info(f"Database copied to {output_path.parent / 'database.json'}")
+
+    # Generate mapping.json for the bot
+    try:
+        mapping_data = {
+            "DEVICE_METADATA": DEVICE_METADATA,
+            "OOS_MAPPING": OOS_MAPPING,
+            "SPRING_MAPPING": SPRING_MAPPING
+        }
+        mapping_path = output_path.parent / "mapping.json"
+        with open(mapping_path, "w", encoding="utf-8") as f:
+            json.dump(mapping_data, f, ensure_ascii=False, indent=2)
+        logging.info(f"Mapping generated at {mapping_path}")
+    except Exception as e:
+        logging.error(f"Failed to generate mapping.json: {e}")
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
