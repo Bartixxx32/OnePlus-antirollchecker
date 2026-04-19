@@ -169,6 +169,24 @@ def get_main_keyboard():
     ]
     return InlineKeyboardMarkup(keyboard)
 
+async def is_user_allowed_in_group(update: Update, context: ContextTypes.DEFAULT_TYPE) -> bool:
+    """Check if the user is allowed to use informational commands in a group."""
+    if update.effective_chat.type == 'private':
+        return True
+    
+    user_id = update.effective_user.id
+    if user_id == ADMIN_USER_ID:
+        return True
+        
+    try:
+        chat_member = await context.bot.get_chat_member(chat_id=update.effective_chat.id, user_id=user_id)
+        if chat_member.status in ['administrator', 'creator']:
+            return True
+    except Exception as e:
+        logging.warning(f"Could not fetch chat member: {e}")
+        
+    return False
+
 # --- Handlers ---
 async def error_handler(update: object, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Log the error, notify user, and DM admin with details."""
@@ -228,7 +246,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def help_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Show available commands and usage."""
-    if update.effective_chat.type != 'private':
+    if not await is_user_allowed_in_group(update, context):
         await reject_info_command_in_group(update, context, "/help")
         return
     msg = (
@@ -256,12 +274,12 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await query.answer()
     
     if query.data == "cmd_status":
-        if update.effective_chat.type != 'private':
+        if not await is_user_allowed_in_group(update, context):
             await reject_info_command_in_group(update, context, "Device Status button")
             return
         await query.message.reply_text("📱 Usage: /devicestatus <device_name_or_model>\nExample: /devicestatus OnePlus 12")
     elif query.data == "cmd_latest":
-        if update.effective_chat.type != 'private':
+        if not await is_user_allowed_in_group(update, context):
             await reject_info_command_in_group(update, context, "Latest Firmwares button")
             return
         await latest(update, context, is_callback=True)
@@ -273,7 +291,7 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def about(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Show bot info, version, and uptime."""
-    if update.effective_chat.type != 'private':
+    if not await is_user_allowed_in_group(update, context):
         await reject_info_command_in_group(update, context, "/about")
         return
     data = load_stats()
@@ -350,7 +368,7 @@ async def dm_subs(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text(text, parse_mode="HTML")
 
 async def status_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    if update.effective_chat.type != 'private':
+    if not await is_user_allowed_in_group(update, context):
         await reject_info_command_in_group(update, context, "/devicestatus")
         return
     
@@ -405,7 +423,7 @@ async def status_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=update.effective_chat.id, message_thread_id=update.effective_message.message_thread_id, text=text, parse_mode="Markdown")
 
 async def latest(update: Update, context: ContextTypes.DEFAULT_TYPE, is_callback=False):
-    if not is_callback and update.effective_chat.type != 'private':
+    if not is_callback and not await is_user_allowed_in_group(update, context):
         await reject_info_command_in_group(update, context, "/latest")
         return
     data = await fetch_database()
