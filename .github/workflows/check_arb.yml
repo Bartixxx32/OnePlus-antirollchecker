@@ -31,7 +31,7 @@ jobs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       
       - name: Generate Matrix
         id: set-matrix
@@ -44,7 +44,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Cache APT Packages
         uses: awalsh128/cache-apt-pkgs-action@latest
@@ -53,7 +53,7 @@ jobs:
           version: 1.0
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.11'
           cache: 'pip'
@@ -64,7 +64,7 @@ jobs:
 
       - name: Cache Tools
         id: cache-tools
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: tools/
           key: tools-v1
@@ -100,7 +100,7 @@ jobs:
     
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Cache APT Packages
         uses: awalsh128/cache-apt-pkgs-action@latest
@@ -109,7 +109,7 @@ jobs:
           version: 1.0
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.11'
           cache: 'pip'
@@ -119,7 +119,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Restore Tools Cache
-        uses: actions/cache/restore@v4
+        uses: actions/cache/restore@v5
         with:
           path: tools/
           key: tools-v1
@@ -159,7 +159,7 @@ jobs:
       - name: Cache ARB Data
         id: cache-arb
         if: github.event.inputs.force_recheck != 'true'
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: firmware_data/
           key: arb-v9-${{ matrix.device }}-${{ matrix.variant }}-${{ steps.get_details.outputs.version }}-${{ steps.get_details.outputs.md5 }}
@@ -370,7 +370,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Download All Artifacts
         uses: actions/download-artifact@v4
@@ -380,7 +380,7 @@ jobs:
           merge-multiple: true
       
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.11'
           cache: 'pip'

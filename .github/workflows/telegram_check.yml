@@ -44,7 +44,7 @@ jobs:
           echo "raw_chat_id=$RAW_CHAT_ID" >> $GITHUB_OUTPUT
 
       - name: Checkout Repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Cache APT Packages
         uses: awalsh128/cache-apt-pkgs-action@latest
@@ -53,7 +53,7 @@ jobs:
           version: 1.0
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.11'
           cache: 'pip'
@@ -64,7 +64,7 @@ jobs:
 
       - name: Cache Tools
         id: cache-tools
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: tools/
           key: tools-v1-${{ runner.os }}-${{ github.run_id }}
