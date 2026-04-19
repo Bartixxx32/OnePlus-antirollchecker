@@ -27,6 +27,7 @@ logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     level=logging.INFO
 )
+logging.getLogger("httpx").setLevel(logging.WARNING)
 
 # --- Stats Management ---
 def load_stats():
@@ -221,6 +222,8 @@ async def error_handler(update: object, context: ContextTypes.DEFAULT_TYPE) -> N
         logging.error(f"Failed to notify admin: {e}")
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    user = update.effective_user
+    logging.info(f"User {user.id} ({user.username}) executed /start")
     if update.effective_chat.type == 'private':
         user = update.effective_user
         user_mention = f"@{user.username}" if user.username else user.first_name
@@ -246,6 +249,8 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def help_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Show available commands and usage."""
+    user = update.effective_user
+    logging.info(f"User {user.id} ({user.username}) executed /help")
     if not await is_user_allowed_in_group(update, context):
         await reject_info_command_in_group(update, context, "/help")
         return
@@ -271,6 +276,8 @@ async def help_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
+    user = update.effective_user
+    logging.info(f"User {user.id} ({user.username}) clicked button: {query.data}")
     await query.answer()
     
     if query.data == "cmd_status":
@@ -291,6 +298,8 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def about(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Show bot info, version, and uptime."""
+    user = update.effective_user
+    logging.info(f"User {user.id} ({user.username}) executed /about")
     if not await is_user_allowed_in_group(update, context):
         await reject_info_command_in_group(update, context, "/about")
         return
@@ -368,6 +377,8 @@ async def dm_subs(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text(text, parse_mode="HTML")
 
 async def status_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    user = update.effective_user
+    logging.info(f"User {user.id} ({user.username}) executed /devicestatus with args: {context.args}")
     if not await is_user_allowed_in_group(update, context):
         await reject_info_command_in_group(update, context, "/devicestatus")
         return
@@ -423,6 +434,8 @@ async def status_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=update.effective_chat.id, message_thread_id=update.effective_message.message_thread_id, text=text, parse_mode="Markdown")
 
 async def latest(update: Update, context: ContextTypes.DEFAULT_TYPE, is_callback=False):
+    user = update.effective_user
+    logging.info(f"User {user.id} ({user.username}) executed /latest (callback={is_callback})")
     if not is_callback and not await is_user_allowed_in_group(update, context):
         await reject_info_command_in_group(update, context, "/latest")
         return
@@ -662,6 +675,9 @@ async def fetch_firmware_url(device_id: str, region: str, mappings: dict) -> dic
 
 async def download_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE, is_callback=False):
     """Fetch the latest firmware for a device and trigger an ARB check."""
+    user = update.effective_user
+    args_str = context.args if context.args else []
+    logging.info(f"User {user.id} ({user.username}) executed /download with args: {args_str} (callback={is_callback})")
     ALLOWED_GROUP_ID = -1003662409203
     
     if update.effective_chat.type == 'private':
@@ -820,6 +836,9 @@ async def broadcast(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text(f"❌ Failed to send broadcast: {e}")
 
 async def check(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    user = update.effective_user
+    args_str = context.args if context.args else []
+    logging.info(f"User {user.id} ({user.username}) executed /check with args: {args_str}")
     # Configuration
     ALLOWED_GROUP_ID = -1003662409203
 
