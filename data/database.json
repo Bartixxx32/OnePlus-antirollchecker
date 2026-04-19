@@ -3511,7 +3511,7 @@
         "first_seen": "2026-02-04",
         "last_checked": "2026-04-19",
         "status": "current",
-        "is_hardcoded": false,
+        "is_hardcoded": true,
         "regions": [
           "IN"
         ]
