@@ -22,7 +22,13 @@ def is_hardcode_protected(device_id: str, version: str) -> bool:
         match = re.search(r'\.(\d+)(?:\(|$|_)', version)
         if match and int(match.group(1)) >= 303:
             return True
-    
+            
+    # OnePlus 9RT - build numbers >= 2702
+    if device_id == "oneplus_9rt" and version:
+        match = re.search(r'\.(\d{4,})(?:\(|$|_)', version)
+        if match and int(match.group(1)) >= 2702:
+            return True
+            
     return False
 
 def version_sort_key(version_str: str) -> tuple:
