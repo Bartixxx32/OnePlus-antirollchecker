@@ -340,6 +340,19 @@
     "device_name": "OnePlus 11",
     "device_order": 9,
     "versions": {
+      "CPH2447_16.0.5.701(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "minor": 0,
+        "md5": "d8c3b0ea8b41f132e45951a5a586e4dc",
+        "first_seen": "2026-04-20",
+        "last_checked": "2026-04-20",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "IN"
+        ]
+      },
       "CPH2447_16.0.3.500(EX01)": {
         "arb": 0,
         "major": 2,
@@ -347,7 +360,7 @@
         "md5": "f98c5382db9a4486355e5fa4e7979abd",
         "first_seen": "2026-02-05",
         "last_checked": "2026-04-20",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "IN"
@@ -2481,6 +2494,20 @@
     "device_name": "OnePlus Nord 5",
     "device_order": 25,
     "versions": {
+      "CPH2709_16.0.5.710(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": "fe7c98015d682710d8934ebadd6f8a50",
+        "first_seen": "2026-04-20",
+        "last_checked": "2026-04-20",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "EU",
+          "GLO"
+        ]
+      },
       "CPH2709_16.0.5.701(EX01)": {
         "arb": 0,
         "major": 3,
@@ -2488,7 +2515,7 @@
         "md5": "d462744e077d08fab080ee7c54bbe2da",
         "first_seen": "2026-03-28",
         "last_checked": "2026-04-20",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "EU",
@@ -2871,6 +2898,19 @@
     "device_name": "OnePlus 15R",
     "device_order": 1,
     "versions": {
+      "CPH2769_16.0.5.703(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": "d2fe430aa902110c362112888bc3046e",
+        "first_seen": "2026-04-20",
+        "last_checked": "2026-04-20",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "EU"
+        ]
+      },
       "CPH2769_16.0.5.701(EX01)": {
         "arb": 0,
         "major": 3,
@@ -2878,7 +2918,7 @@
         "md5": "8ed18c461d884a4b5108147840644bb7",
         "first_seen": "2026-03-30",
         "last_checked": "2026-04-20",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "EU",
