@@ -1,16 +1,6 @@
 {
   "history": [
     {
-      "version": "PJD110_16.0.3.500(CN01)",
-      "arb": 1,
-      "major": 3,
-      "minor": 0,
-      "first_seen": "2026-02-04",
-      "last_checked": "2026-04-20",
-      "status": "current",
-      "md5": "50eb6ea86f6d7b2b9936b477920151aa"
-    },
-    {
       "version": "PJD110_15.0.0.860(CN01)",
       "arb": 0,
       "major": 3,
@@ -31,6 +21,16 @@
       "md5": "f499e6f7683a1c87ccb1f5a83e9be433"
     },
     {
+      "version": "PJD110_16.0.3.500(CN01)",
+      "arb": 1,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-02-04",
+      "last_checked": "2026-04-20",
+      "status": "current",
+      "md5": "50eb6ea86f6d7b2b9936b477920151aa"
+    },
+    {
       "version": "PJD110_16.0.1.300(CN01)",
       "arb": 0,
       "major": 3,
@@ -46,7 +46,7 @@
       "major": 3,
       "minor": 0,
       "first_seen": "2026-02-04",
-      "last_checked": "2026-04-19",
+      "last_checked": "2026-04-20",
       "status": "archived",
       "md5": "c79e0d5283b76ee44074f41ed2578378"
     }
