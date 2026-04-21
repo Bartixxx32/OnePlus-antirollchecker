@@ -1,13 +1,23 @@
 {
   "history": [
     {
+      "version": "PLK110_16.0.5.702(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-04-21",
+      "last_checked": "2026-04-21",
+      "status": "current",
+      "md5": "da74d6223be403d8b7a6d7c1e041baa1"
+    },
+    {
       "version": "PLK110_16.0.5.701(CN01)",
       "arb": 0,
       "major": 3,
       "minor": 0,
       "first_seen": "2026-03-10",
       "last_checked": "2026-04-20",
-      "status": "current",
+      "status": "archived",
       "md5": "9e9688532ff5ec1eb19b4ca9de363199"
     },
     {
