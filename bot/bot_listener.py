@@ -106,12 +106,13 @@ async def delete_messages_delayed(chat_id, message_ids, delay, bot):
 async def reject_info_command_in_group(update, context, command_name):
     user = update.effective_user
     mention = f"@{user.username}" if user.username else user.first_name
+    mention_esc = html_mod.escape(mention)
     bot_username = context.bot.username
     warning_msg = await context.bot.send_message(
         chat_id=update.effective_chat.id,
         message_thread_id=update.effective_message.message_thread_id if update.effective_message else None,
-        text=f"Hello {mention}, please use informational commands like `{command_name}` in my private messages (DM): @{bot_username} to keep this group clean.",
-        parse_mode="Markdown"
+        text=f"Hello {mention_esc}, please use informational commands like <code>{html_mod.escape(command_name)}</code> in my private messages (DM): @{bot_username} to keep this group clean.",
+        parse_mode="HTML"
     )
     
     msgs_to_del = [warning_msg.message_id]
