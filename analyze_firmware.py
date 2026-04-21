@@ -107,36 +107,58 @@ def analyze_firmware(zip_path, tools_dir, output_dir, final_dir=None):
         if not final_dir.exists():
             final_dir.mkdir(parents=True)
             
-        # otaripper <zip> -p <partitions> -o <output>
-        cmd_extract = [str(otaripper), str(zip_path), "-p", "xbl_config", "-o", str(output_dir), "-n"]
-        logger.info("Attempting extraction with otaripper...")
-        
-        if not run_command(cmd_extract):
-            logger.warning("otaripper failed, attempting fallback with payload-dumper-go...")
+        extracted_direct = None
+        try:
+            with zipfile.ZipFile(zip_path, 'r') as z:
+                for info in z.infolist():
+                    if info.is_dir():
+                        continue
+                    path_obj = Path(info.filename)
+                    if 'xbl_config' in path_obj.stem and path_obj.suffix == '.img':
+                        logger.info(f"Found {info.filename} directly in zip. Extracting...")
+                        extracted_direct = Path(z.extract(info, path=output_dir))
+                        break
+        except Exception as e:
+            logger.warning(f"Direct extraction search failed: {e}")
             
-            # Fallback to payload-dumper-go
-            # payload-dumper-go -p <partitions> -o <output> <zip>
-            pdg = tools_dir / "payload-dumper-go"
-            cmd_fallback = [str(pdg), "-p", "xbl_config", "-o", str(output_dir), str(zip_path)]
+        if extracted_direct:
+            src_img = extracted_direct
+            logger.info(f"Found image directly: {src_img}")
+            logger.info(f"Moving to: {final_img}")
+            shutil.move(src_img, final_img)
+            # Cleanup temp extraction
+            shutil.rmtree(output_dir)
+        else:
+            # otaripper <zip> -p <partitions> -o <output>
+            cmd_extract = [str(otaripper), str(zip_path), "-p", "xbl_config", "-o", str(output_dir), "-n"]
+            logger.info("Attempting extraction with otaripper...")
             
-            if not run_command(cmd_fallback):
-                logger.error("Both otaripper and payload-dumper-go failed to extract firmware.")
+            if not run_command(cmd_extract):
+                logger.warning("otaripper failed, attempting fallback with payload-dumper-go...")
+                
+                # Fallback to payload-dumper-go
+                # payload-dumper-go -p <partitions> -o <output> <zip>
+                pdg = tools_dir / "payload-dumper-go"
+                cmd_fallback = [str(pdg), "-p", "xbl_config", "-o", str(output_dir), str(zip_path)]
+                
+                if not run_command(cmd_fallback):
+                    logger.error("Both otaripper and payload-dumper-go failed to extract firmware.")
+                    return None
+                
+            # 3. Find extracted image recursively
+            img_files = list(output_dir.rglob("*xbl_config*.img"))
+            if not img_files:
+                logger.error("xbl_config image not found in extraction output")
                 return None
             
-        # 3. Find extracted image recursively
-        img_files = list(output_dir.rglob("*xbl_config*.img"))
-        if not img_files:
-            logger.error("xbl_config image not found in extraction output")
-            return None
-        
-        # Move and rename
-        src_img = img_files[0]
-        logger.info(f"Found image: {src_img}")
-        logger.info(f"Moving to: {final_img}")
-        shutil.move(src_img, final_img)
-        
-        # Cleanup temp extraction
-        shutil.rmtree(output_dir)
+            # Move and rename
+            src_img = img_files[0]
+            logger.info(f"Found image: {src_img}")
+            logger.info(f"Moving to: {final_img}")
+            shutil.move(src_img, final_img)
+            
+            # Cleanup temp extraction
+            shutil.rmtree(output_dir)
     
     # 3. Run arbextract on the FINAL file
     cmd_arb = [str(arbextract), str(final_img)]
