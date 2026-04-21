@@ -2,6 +2,8 @@ name: Bot Docker Image Build & Publish
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}-bot
 
 on:
   push:
@@ -9,10 +11,6 @@ on:
     paths:
       - 'bot/**'
   workflow_dispatch:
-
-env:
-  REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}-bot
 
 jobs:
   build-and-push-image:
