@@ -37,6 +37,16 @@ def generate(template_path: Path, output_path: Path, db_path: Path):
         shutil.copy2(db_path, output_path.parent / "database.json")
         logging.info(f"Database copied to {output_path.parent / 'database.json'}")
 
+    # Copy static assets (css, js)
+    for asset_dir in ["css", "js"]:
+        src = template_path.parent / asset_dir
+        dst = output_path.parent / asset_dir
+        if src.exists():
+            if dst.exists():
+                shutil.rmtree(dst)
+            shutil.copytree(src, dst)
+            logging.info(f"Asset directory {asset_dir} copied to {dst}")
+
     # Generate mapping.json for the bot
     try:
         mapping_data = {
