@@ -255,6 +255,19 @@
     "device_name": "OnePlus 10T",
     "device_order": 12,
     "versions": {
+      "CPH2413_15.0.0.1800(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "minor": 0,
+        "md5": "1999fd17ccd05c608406d2b5da4706bb",
+        "first_seen": "2026-04-24",
+        "last_checked": "2026-04-24",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "IN"
+        ]
+      },
       "CPH2413_15.0.0.1603(EX01)": {
         "arb": 0,
         "major": 2,
@@ -262,7 +275,7 @@
         "md5": "f2f49f81fdec15884d9b6df3f8018d4b",
         "first_seen": "2026-02-06",
         "last_checked": "2026-04-24",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "IN"
@@ -1648,6 +1661,20 @@
     "device_name": "OnePlus 12R",
     "device_order": 8,
     "versions": {
+      "CPH2609_16.0.5.701(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "minor": 0,
+        "md5": "0266e6140064061e0596996a7a56ea70",
+        "first_seen": "2026-04-24",
+        "last_checked": "2026-04-24",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "EU",
+          "GLO"
+        ]
+      },
       "CPH2609_16.0.3.500(EX01)": {
         "arb": 0,
         "major": 2,
@@ -1655,7 +1682,7 @@
         "md5": "3bf4f77014c7ecc56da8c34b8e2da4a8",
         "first_seen": "2026-02-11",
         "last_checked": "2026-04-24",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "EU",
@@ -2778,6 +2805,20 @@
     "device_name": "OnePlus 15",
     "device_order": 0,
     "versions": {
+      "CPH2747_16.0.5.703(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": "e4c0a74a1fcab67539cf39294c60ba1c",
+        "first_seen": "2026-04-24",
+        "last_checked": "2026-04-24",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "GLO",
+          "EU"
+        ]
+      },
       "CPH2747_16.0.5.700(EX01)": {
         "arb": 0,
         "major": 3,
@@ -2785,7 +2826,7 @@
         "md5": "6086e417cba87486cceab28f08635b19",
         "first_seen": "2026-03-16",
         "last_checked": "2026-04-24",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "GLO",
