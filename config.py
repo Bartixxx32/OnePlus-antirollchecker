@@ -648,3 +648,48 @@ def get_display_name(device_id: str) -> str:
 def get_model_number(device_id: str, region: str) -> str:
     """Get the model number for a specific device and region."""
     return DEVICE_METADATA.get(device_id, {}).get("models", {}).get(region, "Unknown")
+
+# Hardware features for identifying conversions
+HARDWARE_FEATURES = {
+    # OnePlus 15 (eSIM: True, Barometer: True)
+    "CPH2747": {"expect_esim": True, "expect_barometer": True},   # 15 GLO/EU
+    "CPH2749": {"expect_esim": True, "expect_barometer": True},   # 15 NA
+    "CPH2745": {"expect_esim": True, "expect_barometer": True},   # 15 IN
+
+    # OnePlus 15R (eSIM: True, Barometer: False)
+    "CPH2769": {"expect_esim": True, "expect_barometer": False},  # 15R GLO/EU
+    "CPH2767": {"expect_esim": True, "expect_barometer": False},  # 15R IN
+
+    # OnePlus 13 (eSIM: True, Barometer: True)
+    "CPH2653": {"expect_esim": True, "expect_barometer": True},   # 13 GLO/EU
+    "CPH2655": {"expect_esim": True, "expect_barometer": True},   # 13 NA
+    "CPH2649": {"expect_esim": True, "expect_barometer": True},   # 13 IN
+
+    # OnePlus 13R (eSIM: True, Barometer: False)
+    "CPH2645": {"expect_esim": True, "expect_barometer": False},  # 13R GLO/EU
+    "CPH2691": {"expect_esim": True, "expect_barometer": False},  # 13R IN
+
+    # OnePlus 12 (eSIM: True, Barometer: False)
+    "CPH2581": {"expect_esim": True, "expect_barometer": False},  # 12 GLO/EU
+    "CPH2583": {"expect_esim": True, "expect_barometer": False},  # 12 NA
+    "CPH2573": {"expect_esim": True, "expect_barometer": False},  # 12 IN
+
+    # OnePlus 12R (eSIM: True, Barometer: False)
+    "CPH2609": {"expect_esim": True, "expect_barometer": False},  # 12R GLO/EU
+    "CPH2611": {"expect_esim": True, "expect_barometer": False},  # 12R NA
+    "CPH2585": {"expect_esim": True, "expect_barometer": False},  # 12R IN
+
+    # OnePlus 11 (eSIM: True, Barometer: False)
+    "CPH2449": {"expect_esim": True, "expect_barometer": False},  # 11 GLO/EU
+    "CPH2451": {"expect_esim": True, "expect_barometer": False},  # 11 NA
+    "CPH2447": {"expect_esim": True, "expect_barometer": False},  # 11 IN
+    
+    # OnePlus Open (eSIM: True, Barometer: True)
+    "CPH2551": {"expect_esim": True, "expect_barometer": True},   # Open EU/IN/NA
+
+    # Exceptions: no eSIM, but has barometer
+    "BE2026": {"expect_esim": False, "expect_barometer": True},   # Nord N10 5G
+    "BE2029": {"expect_esim": False, "expect_barometer": True},   # Nord N10 5G
+    "DE2117": {"expect_esim": False, "expect_barometer": True},   # Nord N200 5G
+    "DE2118": {"expect_esim": False, "expect_barometer": True},   # Nord N200 5G
+}

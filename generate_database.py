@@ -2,7 +2,7 @@ import json
 import re
 from pathlib import Path
 from typing import Dict, List, Optional
-from config import DEVICE_METADATA, DEVICE_ORDER, OOS_MAPPING
+from config import DEVICE_METADATA, DEVICE_ORDER, OOS_MAPPING, HARDWARE_FEATURES
 from hardcode_rules import is_hardcode_protected, version_sort_key
 
 def load_history(file_path: Path) -> Dict:
@@ -93,9 +93,12 @@ def generate_database():
             v: model_data["versions"][v]
             for v in sorted_version_keys
         }
+        features = HARDWARE_FEATURES.get(model, {})
         output_database[model] = {
             "device_name": model_data["device_name"],
             "device_order": model_data["device_order"],
+            "expect_esim": features.get("expect_esim", False),
+            "expect_barometer": features.get("expect_barometer", False),
             "versions": sorted_versions_dict
         }
 
