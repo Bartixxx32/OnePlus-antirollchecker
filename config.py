@@ -652,9 +652,9 @@ def get_model_number(device_id: str, region: str) -> str:
 # Hardware features for identifying conversions
 HARDWARE_FEATURES = {
     # OnePlus 15 (eSIM: True, Barometer: True)
-    "CPH2747": {"expect_esim": True, "expect_barometer": True},   # 15 GLO/EU
-    "CPH2749": {"expect_esim": True, "expect_barometer": True},   # 15 NA
-    "CPH2745": {"expect_esim": True, "expect_barometer": True},   # 15 IN
+    "CPH2747": {"expect_esim": True, "expect_barometer": False},   # 15 GLO/EU
+    "CPH2749": {"expect_esim": True, "expect_barometer": False},   # 15 NA
+    "CPH2745": {"expect_esim": True, "expect_barometer": False},   # 15 IN
 
     # OnePlus 15R (eSIM: True, Barometer: False)
     "CPH2769": {"expect_esim": True, "expect_barometer": False},  # 15R GLO/EU
