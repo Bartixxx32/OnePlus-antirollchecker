@@ -1,13 +1,23 @@
 {
   "history": [
     {
+      "version": "CPH2305_15.0.0.1301(EX01)",
+      "arb": 0,
+      "major": 2,
+      "minor": 0,
+      "first_seen": "2026-05-08",
+      "last_checked": "2026-05-08",
+      "status": "current",
+      "md5": "3f6ea5e51cd36086013baf858c5a2f76"
+    },
+    {
       "version": "CPH2305_11_A.22",
       "arb": 0,
       "major": 2,
       "minor": 0,
       "first_seen": "2026-02-04",
       "last_checked": "2026-05-07",
-      "status": "current",
+      "status": "archived",
       "md5": "d47d75e64707954fece8083ddb3c5437"
     }
   ],
