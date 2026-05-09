@@ -9,6 +9,24 @@
       "last_checked": "2026-05-09",
       "status": "current",
       "md5": "80ad2fbae8b1b4d167e9f70316753eca"
+    },
+    {
+      "version": "PLZ110_16.0.5.703(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-05-09",
+      "last_checked": "2026-05-09",
+      "status": "archived"
+    },
+    {
+      "version": "PLZ110_16.0.5.701(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-05-09",
+      "last_checked": "2026-05-09",
+      "status": "archived"
     }
   ],
   "device": "OnePlus 15T",
