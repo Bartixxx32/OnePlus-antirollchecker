@@ -51,7 +51,7 @@ class DeviceMeta(TypedDict):
 # Device order for README and Website (Flagships -> Open -> Nords -> Ace -> Pads -> Oppo)
 DEVICE_ORDER = [
     # Flagships (New)
-    "15", "15R", 
+    "15", "15R", "15T", 
     "13", "13R", "13T", "13s",
     "Open",
     "12", "12R", 
@@ -97,6 +97,12 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "EU": "CPH2747",
             "IN": "CPH2745",
             "CN": "PLK110"
+        },
+    },
+    "15T": {
+        "name": "OnePlus 15T",
+        "models": {
+            "CN": "PLZ110"
         },
     },
     "15R": {
@@ -528,6 +534,7 @@ SPRING_MAPPING = {
     # Existing
     "oneplus_15": "OP 15",
     "oneplus_15r": "OP 15R",
+    "oneplus_15t": "OP 15T",
     "oneplus_11": "OP 11",
     "oneplus_11r": "OP 11R",
     "oneplus_10_pro": "OP 10 PRO",
@@ -577,6 +584,7 @@ SPRING_MAPPING = {
 OOS_MAPPING = {
     "15": "oneplus_15",
     "15R": "oneplus_15r",
+    "15T": "oneplus_15t",
     "13": "oneplus_13",
     "13R": "oneplus_13r",
     "13T": "oneplus_13t",
