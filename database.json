@@ -5458,6 +5458,32 @@
         "regions": [
           "CN"
         ]
+      },
+      "PLZ110_16.0.5.703(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": null,
+        "first_seen": "2026-05-09",
+        "last_checked": "2026-05-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "CN"
+        ]
+      },
+      "PLZ110_16.0.5.701(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": null,
+        "first_seen": "2026-05-09",
+        "last_checked": "2026-05-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "CN"
+        ]
       }
     }
   }
