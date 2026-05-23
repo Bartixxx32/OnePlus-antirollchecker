@@ -1,13 +1,23 @@
 {
   "history": [
     {
+      "version": "PJF110_16.0.5.701(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-05-23",
+      "last_checked": "2026-05-23",
+      "status": "current",
+      "md5": "da7644a47989fb00e21c13015af886a8"
+    },
+    {
       "version": "PJF110_16.0.1.301(CN01)",
       "arb": 0,
       "major": 3,
       "minor": 0,
       "first_seen": "2026-02-04",
       "last_checked": "2026-05-22",
-      "status": "current",
+      "status": "archived",
       "md5": "856a520469ed78dce30155893f413617"
     },
     {
