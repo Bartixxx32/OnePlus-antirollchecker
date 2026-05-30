@@ -17,6 +17,12 @@ def is_hardcode_protected(device_id: str, version: str) -> bool:
         if match and int(match.group(1)) >= 1600:
             return True
 
+    # Nord CE 2 Lite - build numbers >= 2900
+    if device_id == "oneplus_nord_ce_2_lite" and version:
+        match = re.search(r'\.(\d{4,})(?:\(|$|_)', version)
+        if match and int(match.group(1)) >= 2900:
+            return True
+
     # Nord CE 4 Lite - build numbers > 303
     if device_id == "oneplus_nord_ce_4_lite" and version:
         match = re.search(r'\.(\d+)(?:\(|$|_)', version)
