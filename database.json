@@ -219,7 +219,7 @@
         "first_seen": "2026-05-26",
         "last_checked": "2026-05-30",
         "status": "current",
-        "is_hardcoded": false,
+        "is_hardcoded": true,
         "regions": [
           "IN"
         ]
@@ -253,7 +253,7 @@
         "first_seen": "2026-05-27",
         "last_checked": "2026-05-30",
         "status": "current",
-        "is_hardcoded": false,
+        "is_hardcoded": true,
         "regions": [
           "GLO"
         ]
@@ -287,7 +287,7 @@
         "first_seen": "2026-05-27",
         "last_checked": "2026-05-30",
         "status": "current",
-        "is_hardcoded": false,
+        "is_hardcoded": true,
         "regions": [
           "EU"
         ]
