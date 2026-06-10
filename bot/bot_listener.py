@@ -6,7 +6,6 @@ import asyncio
 import aiohttp
 import html as html_mod
 from bs4 import BeautifulSoup
-from collections import defaultdict
 from datetime import datetime, timezone
 from telegram import Update, InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.ext import ApplicationBuilder, ContextTypes, CommandHandler, CallbackQueryHandler
@@ -19,9 +18,14 @@ WORKFLOW_ID = "telegram_check.yml"
 ADMIN_USER_ID = 277390840  # Bartixxx32's Telegram user ID
 BOT_VERSION = "1.1.4"
 BOT_START_TIME = time.time()
+ALLOWED_GROUP_ID = -1003662409203
 
 # Paths
 STATS_FILE = os.environ.get("STATS_FILE", "/data/stats.json")
+
+def _user_mention(user):
+    name = user.first_name or "User"
+    return f"@{user.username}" if user.username else name
 
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -104,9 +108,7 @@ async def delete_messages_delayed(chat_id, message_ids, delay, bot):
             pass
 
 async def reject_info_command_in_group(update, context, command_name):
-    user = update.effective_user
-    mention = f"@{user.username}" if user.username else user.first_name
-    mention_esc = html_mod.escape(mention)
+    mention_esc = html_mod.escape(_user_mention(update.effective_user))
     bot_username = context.bot.username
     warning_msg = await context.bot.send_message(
         chat_id=update.effective_chat.id,
@@ -130,7 +132,8 @@ async def reject_info_command_in_group(update, context, command_name):
 
 
 # --- Rate Limiting ---
-user_requests = defaultdict(list)
+user_requests = {}
+_requests_lock = asyncio.Lock()
 RATE_LIMIT_COUNT = 2
 RATE_LIMIT_WINDOW = 60  # seconds
 
@@ -163,6 +166,15 @@ async def fetch_database():
             await asyncio.sleep(2)
     logging.error("Failed to fetch database.json after 3 attempts.")
     return None
+
+async def _send_chunked(context, chat_id, text, parse_mode="Markdown", message_thread_id=None):
+    """Send a message, splitting into chunks if it exceeds 4096 characters."""
+    MAX_LEN = 4096
+    if len(text) <= MAX_LEN:
+        await context.bot.send_message(chat_id=chat_id, text=text, parse_mode=parse_mode, message_thread_id=message_thread_id)
+    else:
+        for i in range(0, len(text), MAX_LEN):
+            await context.bot.send_message(chat_id=chat_id, text=text[i:i+MAX_LEN], parse_mode=parse_mode, message_thread_id=message_thread_id)
 
 def get_main_keyboard():
     keyboard = [
@@ -226,9 +238,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user = update.effective_user
     logging.info(f"User {user.id} ({user.username}) executed /start")
     if update.effective_chat.type == 'private':
-        user = update.effective_user
-        user_mention = f"@{user.username}" if user.username else user.first_name
-        record_dm_user(user.id, user_mention)
+        record_dm_user(user.id, _user_mention(user))
         await update.message.reply_text(
             "Hello! Welcome to the OnePlus ARB Checker Bot.\n"
             "You can use commands like /latest and /devicestatus directly here to avoid cluttering the main group.",
@@ -384,14 +394,17 @@ async def status_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await reject_info_command_in_group(update, context, "/devicestatus")
         return
     
+    chat_id = update.effective_chat.id
+    message_thread_id = update.effective_message.message_thread_id if update.effective_message else None
+    
     if not context.args:
-        await context.bot.send_message(chat_id=update.effective_chat.id, message_thread_id=update.effective_message.message_thread_id, text="📱 Usage: /devicestatus <device_name_or_model>\nExample: /devicestatus OnePlus 12")
+        await update.message.reply_text("📱 Usage: /devicestatus <device_name_or_model>\nExample: /devicestatus OnePlus 12")
         return
         
     query = " ".join(context.args).lower().strip()
     data = await fetch_database()
     if not data:
-        await context.bot.send_message(chat_id=update.effective_chat.id, message_thread_id=update.effective_message.message_thread_id, text="❌ Failed to fetch database. Try again later.")
+        await update.message.reply_text("❌ Failed to fetch database. Try again later.")
         return
         
     found_models = []
@@ -400,7 +413,7 @@ async def status_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
             found_models.append((model, details))
             
     if not found_models:
-        await context.bot.send_message(chat_id=update.effective_chat.id, message_thread_id=update.effective_message.message_thread_id, text=f"❌ No data found for '{query}'.")
+        await update.message.reply_text(f"❌ No data found for '{query}'.")
         return
         
     text = f"📱 **Search results for '{query}':**\n\n"
@@ -432,7 +445,7 @@ async def status_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if len(found_models) > 10:
         text += f"_...and {len(found_models)-10} more models._\n"
         
-    await context.bot.send_message(chat_id=update.effective_chat.id, message_thread_id=update.effective_message.message_thread_id, text=text, parse_mode="Markdown")
+    await _send_chunked(context, chat_id, text, parse_mode="Markdown", message_thread_id=message_thread_id)
 
 async def latest(update: Update, context: ContextTypes.DEFAULT_TYPE, is_callback=False):
     user = update.effective_user
@@ -483,7 +496,9 @@ async def latest(update: Update, context: ContextTypes.DEFAULT_TYPE, is_callback
     if is_callback:
         await update.callback_query.message.reply_text(text, parse_mode="Markdown")
     else:
-        await context.bot.send_message(chat_id=update.effective_chat.id, message_thread_id=update.effective_message.message_thread_id, text=text, parse_mode="Markdown")
+        chat_id = update.effective_chat.id
+        message_thread_id = update.effective_message.message_thread_id if update.effective_message else None
+        await _send_chunked(context, chat_id, text, parse_mode="Markdown", message_thread_id=message_thread_id)
 
 # --- Device Resolution Helpers ---
 MAPPING_URL = "https://oparb.pages.dev/mapping.json"
@@ -542,7 +557,7 @@ def resolve_device(query: str, device_metadata: dict):
 async def fetch_firmware_oos(device_id: str, region: str, oos_mapping: dict) -> dict:
     """Fetch the latest firmware download URL from OOS API."""
     mapped_id = oos_mapping.get(device_id, f"oneplus_{device_id.lower().replace(' ', '_')}")
-    brand = "oneplus"
+    brand = "oppo" if mapped_id.startswith("oppo_") or mapped_id.startswith("find_") else "oneplus"
     url = f"{OOS_API_BASE}/{brand}/{mapped_id}/{region}/full/info"
     
     for attempt in range(3):
@@ -679,14 +694,13 @@ async def download_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE, is_ca
     user = update.effective_user
     args_str = context.args if context.args else []
     logging.info(f"User {user.id} ({user.username}) executed /download with args: {args_str} (callback={is_callback})")
-    ALLOWED_GROUP_ID = -1003662409203
     
     if update.effective_chat.type == 'private':
-        await update.message.reply_text(f"❌ DM downloads are not allowed.\nPlease use the group: https://t.me/oneplusarbchecker")
+        await update.message.reply_text("❌ DM downloads are not allowed.\nPlease use the group: https://t.me/oneplusarbchecker")
         return
 
     if update.effective_chat.id != ALLOWED_GROUP_ID:
-        await update.message.reply_text(f"❌ This command is only authorized for the OnePlus ARB Checker group.")
+        await update.message.reply_text("❌ This command is only authorized for the OnePlus ARB Checker group.")
         return
 
     if is_callback:
@@ -699,8 +713,7 @@ async def download_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE, is_ca
         msg_target = update.message
     
     chat_id = update.effective_chat.id
-    user = update.effective_user
-    user_mention = f"@{user.username}" if user.username else user.first_name
+    user_mention = _user_mention(user)
     
     if not context.args and not is_callback:
         await context.bot.send_message(
@@ -823,13 +836,12 @@ async def broadcast(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("❌ Usage: /broadcast <message>")
         return
         
-    message = " ".join(context.args)
-    ALLOWED_GROUP_ID = -1003662409203
+    message = html_mod.escape(" ".join(context.args))
     try:
         await context.bot.send_message(
             chat_id=ALLOWED_GROUP_ID,
-            text=f"📢 **Announcement**\n\n{message}",
-            parse_mode="Markdown"
+            text=f"📢 <b>Announcement</b>\n\n{message}",
+            parse_mode="HTML"
         )
         if update.effective_chat.id != ALLOWED_GROUP_ID:
             await update.message.reply_text("✅ Broadcast sent successfully!")
@@ -840,34 +852,35 @@ async def check(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user = update.effective_user
     args_str = context.args if context.args else []
     logging.info(f"User {user.id} ({user.username}) executed /check with args: {args_str}")
-    # Configuration
-    ALLOWED_GROUP_ID = -1003662409203
 
     chat_id = update.effective_chat.id
-    user = update.effective_user
     user_id = user.id
-    user_mention = f"@{user.username}" if user.username else user.first_name
+    user_mention = _user_mention(user)
+    message_thread_id = update.effective_message.message_thread_id if update.effective_message else None
 
-    # 0. Rate Limiting
-    now = time.time()
-    user_requests[user_id] = [t for t in user_requests[user_id] if now - t < RATE_LIMIT_WINDOW]
-    
-    if len(user_requests[user_id]) >= RATE_LIMIT_COUNT:
-        wait_time = int(RATE_LIMIT_WINDOW - (now - user_requests[user_id][0]))
-        await update.message.reply_text(f"⚠️ Rate limit exceeded. Please wait {wait_time} seconds before making another request.")
-        return
-    
-    user_requests[user_id].append(now)
-
-    # 1. Restrict DMs
+    # 1. Restrict DMs first
     if update.effective_chat.type == 'private':
-        await update.message.reply_text(f"❌ DM checks are not allowed.\nPlease use the group: https://t.me/oneplusarbchecker")
+        await update.message.reply_text("❌ DM checks are not allowed.\nPlease use the group: https://t.me/oneplusarbchecker")
         return
 
     # 2. Strict Group Check
     if chat_id != ALLOWED_GROUP_ID:
-        await update.message.reply_text(f"❌ This command is only authorized for the OnePlus ARB Checker group.")
+        await update.message.reply_text("❌ This command is only authorized for the OnePlus ARB Checker group.")
         return
+
+    # 3. Rate Limiting
+    async with _requests_lock:
+        now = time.time()
+        user_reqs = user_requests.get(user_id, [])
+        user_reqs = [t for t in user_reqs if now - t < RATE_LIMIT_WINDOW]
+
+        if len(user_reqs) >= RATE_LIMIT_COUNT:
+            wait_time = int(RATE_LIMIT_WINDOW - (now - user_reqs[0]))
+            await update.message.reply_text(f"⚠️ Rate limit exceeded. Please wait {wait_time} seconds before making another request.")
+            return
+
+        user_reqs.append(now)
+        user_requests[user_id] = user_reqs
 
     if not context.args:
         try:
@@ -876,6 +889,7 @@ async def check(update: Update, context: ContextTypes.DEFAULT_TYPE):
             logging.error(f"Failed to delete message: {e}")
         await context.bot.send_message(
             chat_id=chat_id,
+            message_thread_id=message_thread_id,
             text=f"{user_mention}, ❌ Usage: /check https://..."
         )
         return
@@ -890,6 +904,7 @@ async def check(update: Update, context: ContextTypes.DEFAULT_TYPE):
             logging.error(f"Failed to delete message: {e}")
         await context.bot.send_message(
             chat_id=chat_id,
+            message_thread_id=message_thread_id,
             text=f"{user_mention}, ❌ Invalid URL format.\nUsage: /check https://example.com/firmware.zip"
         )
         return

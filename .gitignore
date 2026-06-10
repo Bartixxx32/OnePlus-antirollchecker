@@ -18,6 +18,9 @@ result.json
 fw_info.json
 fw_refresh.json
 
+# Cloudflare Worker
+oparb/
+
 # Secrets
 .env
 stats.json
