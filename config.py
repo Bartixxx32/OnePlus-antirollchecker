@@ -359,7 +359,7 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
     "Nord CE 3": {
         "name": "OnePlus Nord CE 3",
         "models": {
-            "IN": "CPH2567"
+            "IN": "CPH2569"
         },
     },
     "Nord CE 2 Lite": {
