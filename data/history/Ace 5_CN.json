@@ -1,13 +1,23 @@
 {
   "history": [
     {
+      "version": "PKG110_16.0.8.300(CN01)",
+      "arb": 1,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-06-18",
+      "last_checked": "2026-06-18",
+      "status": "current",
+      "md5": "a28632dc4e3e2c8b51cc6e938c87b6fb"
+    },
+    {
       "version": "PKG110_16.0.7.200(CN01)",
       "arb": 1,
       "major": 3,
       "minor": 0,
       "first_seen": "2026-05-20",
       "last_checked": "2026-06-17",
-      "status": "current",
+      "status": "archived",
       "md5": "a2a682ea36410c580c4a6c5bd3ffcc04"
     },
     {
