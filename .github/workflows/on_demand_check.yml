@@ -91,7 +91,7 @@ jobs:
         if: steps.setup.outputs.url != ''
         uses: awalsh128/cache-apt-pkgs-action@latest
         with:
-          packages: aria2 unzip curl
+          packages: aria2 unzip curl p7zip
           version: 1.0
 
       - name: Set up Python
@@ -138,6 +138,8 @@ jobs:
           if [[ "$URL" == *.img ]]; then
             mkdir -p firmware_data
             aria2c -x16 -s16 -k1M -o firmware_data/xbl_config.img "$URL"
+          elif [[ "$URL" == *.7z ]]; then
+            aria2c -x16 -s16 -k1M -o firmware.7z "$URL"
           else
             aria2c -x16 -s16 -k1M -o firmware.zip "$URL"
           fi
@@ -155,6 +157,8 @@ jobs:
         run: |
           if [ -f firmware_data/xbl_config.img ]; then
             FW_FILE="firmware_data/xbl_config.img"
+          elif [ -f firmware.7z ]; then
+            FW_FILE="firmware.7z"
           elif [ -f firmware.zip ]; then
             FW_FILE="firmware.zip"
           else
@@ -334,4 +338,4 @@ jobs:
 
       - name: Cleanup
         if: always()
-        run: rm -f firmware.zip firmware_data/xbl_config.img result.json
+        run: rm -f firmware.zip firmware.7z firmware_data/xbl_config.img result.json

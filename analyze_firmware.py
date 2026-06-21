@@ -92,32 +92,53 @@ def analyze_firmware(zip_path, tools_dir, output_dir, final_dir=None):
         md5_sum = calculate_md5(zip_path)
         metadata = {}
     else:
-        # 0. Extract basic metadata (always try even if cache hit)
         metadata = {}
         if zip_path and Path(zip_path).exists():
-            metadata = extract_ota_metadata(zip_path)
-            # Calculate MD5 for the zip
-            logger.info("Calculating MD5 checksum...")
             md5_sum = calculate_md5(zip_path)
         
-            # 1. Skip extraction if image already exists (cache hit optimization)
-            if final_img.exists():
-                logger.info(f"Image already exists at {final_img}, skipping extraction.")
-            else:
-                if not zip_path or not Path(zip_path).exists():
-                    logger.error("Missing firmware.zip and no cached image found.")
+        # 1. Skip extraction if image already exists (cache hit optimization)
+        if final_img.exists():
+            logger.info(f"Image already exists at {final_img}, skipping extraction.")
+        else:
+            if not zip_path or not Path(zip_path).exists():
+                logger.error("Missing firmware file and no cached image found.")
+                return None
+            
+            zip_path = Path(zip_path).resolve()
+
+            # 2. Clean/Create directories for extraction
+            if output_dir.exists():
+                shutil.rmtree(output_dir)
+            output_dir.mkdir(parents=True)
+            
+            if not final_dir.exists():
+                final_dir.mkdir(parents=True)
+            
+            suffix = zip_path.suffix.lower()
+            
+            # --- Handle .7z archives (fastboot image packages) ---
+            if suffix == '.7z':
+                logger.info("Input is a .7z archive, extracting with 7z...")
+                cmd_7z = ["7z", "x", str(zip_path), f"-o{output_dir}", "-y"]
+                if not run_command(cmd_7z):
+                    logger.error("7z extraction failed.")
                     return None
                 
-                zip_path = Path(zip_path).resolve()
-
-                # 2. Clean/Create directories for extraction
-                if output_dir.exists():
-                    shutil.rmtree(output_dir)
-                output_dir.mkdir(parents=True)
+                img_files = list(output_dir.rglob("*xbl_config*.img"))
+                if not img_files:
+                    logger.error("xbl_config.img not found in .7z archive")
+                    return None
                 
-                if not final_dir.exists():
-                    final_dir.mkdir(parents=True)
-                    
+                src_img = img_files[0]
+                logger.info(f"Found image: {src_img}")
+                logger.info(f"Moving to: {final_img}")
+                shutil.move(src_img, final_img)
+                shutil.rmtree(output_dir)
+                
+            # --- Handle .zip archives (OTA payload packages) ---
+            elif suffix == '.zip':
+                metadata = extract_ota_metadata(zip_path)
+                
                 extracted_direct = None
                 try:
                     with zipfile.ZipFile(zip_path, 'r') as z:
@@ -137,7 +158,6 @@ def analyze_firmware(zip_path, tools_dir, output_dir, final_dir=None):
                     logger.info(f"Found image directly: {src_img}")
                     logger.info(f"Moving to: {final_img}")
                     shutil.move(src_img, final_img)
-                    # Cleanup temp extraction
                     shutil.rmtree(output_dir)
                 else:
                     # otaripper <zip> -p <partitions> -o <output>
@@ -156,20 +176,20 @@ def analyze_firmware(zip_path, tools_dir, output_dir, final_dir=None):
                             logger.error("Both otaripper and payload-dumper-go failed to extract firmware.")
                             return None
                         
-                    # 3. Find extracted image recursively
+                    # Find extracted image recursively
                     img_files = list(output_dir.rglob("*xbl_config*.img"))
                     if not img_files:
                         logger.error("xbl_config image not found in extraction output")
                         return None
                     
-                    # Move and rename
                     src_img = img_files[0]
                     logger.info(f"Found image: {src_img}")
                     logger.info(f"Moving to: {final_img}")
                     shutil.move(src_img, final_img)
-                    
-                    # Cleanup temp extraction
                     shutil.rmtree(output_dir)
+            else:
+                logger.error(f"Unsupported file format: {suffix}")
+                return None
     
     # 3. Run arbextract on the FINAL file
     cmd_arb = [str(arbextract), str(final_img)]

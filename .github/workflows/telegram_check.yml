@@ -49,7 +49,7 @@ jobs:
       - name: Cache APT Packages
         uses: awalsh128/cache-apt-pkgs-action@latest
         with:
-          packages: aria2 unzip curl
+          packages: aria2 unzip curl p7zip
           version: 1.0
 
       - name: Set up Python
@@ -112,6 +112,8 @@ jobs:
           if [[ "$URL" == *.img ]]; then
             ARIA_CMD="aria2c -c -x16 -s16 -k1M -o firmware_data/xbl_config.img"
             mkdir -p firmware_data
+          elif [[ "$URL" == *.7z ]]; then
+            ARIA_CMD="aria2c -c -x16 -s16 -k1M -o firmware.7z"
           else
             ARIA_CMD="aria2c -c -x16 -s16 -k1M -o firmware.zip"
           fi
@@ -137,6 +139,8 @@ jobs:
         run: |
           if [ -f firmware_data/xbl_config.img ]; then
             FW_FILE="firmware_data/xbl_config.img"
+          elif [ -f firmware.7z ]; then
+            FW_FILE="firmware.7z"
           else
             FW_FILE="firmware.zip"
           fi
