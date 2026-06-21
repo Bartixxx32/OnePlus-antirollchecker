@@ -76,6 +76,9 @@ def main():
     
     # Error handling
     parser.add_argument("--error", help="Error message to send instead of result")
+    
+    # .img check flag
+    parser.add_argument("--is-img-check", action="store_true", help="Mark result as direct .img analysis")
 
     args = parser.parse_args()
 
@@ -131,24 +134,26 @@ def main():
     else:
         safe_title = DEFAULT_TITLE
 
-    message += (
-        f"{safe_title}\n\n"
-        f"📱 *Device:* {safe_device}\n"
-    )
+    message += f"{safe_title}\n\n"
 
-    if safe_product:
-         message += f"📦 *Product:* {safe_product}\n"
+    if args.is_img_check:
+        message += f"📎 *Source:* `{safe_device}`\n"
+    else:
+        message += f"📱 *Device:* {safe_device}\n"
 
-    if safe_variant:
-        message += f"🌍 *Variant:* {safe_variant}\n"
+        if safe_product:
+             message += f"📦 *Product:* {safe_product}\n"
 
-    message += f"🚀 *Version:* {safe_version}\n"
+        if safe_variant:
+            message += f"🌍 *Variant:* {safe_variant}\n"
 
-    if safe_patch:
-        message += f"🔒 *Security Patch:* {safe_patch}\n"
-    
-    if safe_build:
-        message += f"🏗️ *Build ID:* `{safe_build}`\n"
+        message += f"🚀 *Version:* {safe_version}\n"
+
+        if safe_patch:
+            message += f"🔒 *Security Patch:* {safe_patch}\n"
+        
+        if safe_build:
+            message += f"🏗️ *Build ID:* `{safe_build}`\n"
 
     arb_emoji = ""
     arb_suffix = ""

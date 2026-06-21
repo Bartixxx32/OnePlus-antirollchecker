@@ -109,7 +109,12 @@ jobs:
           URL="${{ github.event.inputs.firmware_url }}"
           echo "Downloading firmware from $URL..."
           
-          ARIA_CMD="aria2c -c -x16 -s16 -k1M -o firmware.zip"
+          if [[ "$URL" == *.img ]]; then
+            ARIA_CMD="aria2c -c -x16 -s16 -k1M -o firmware_data/xbl_config.img"
+            mkdir -p firmware_data
+          else
+            ARIA_CMD="aria2c -c -x16 -s16 -k1M -o firmware.zip"
+          fi
           
           if $ARIA_CMD "$URL"; then
              echo "Download successful!"
@@ -130,7 +135,13 @@ jobs:
         id: analyze
         continue-on-error: true
         run: |
-          python3 analyze_firmware.py firmware.zip \
+          if [ -f firmware_data/xbl_config.img ]; then
+            FW_FILE="firmware_data/xbl_config.img"
+          else
+            FW_FILE="firmware.zip"
+          fi
+          
+          python3 analyze_firmware.py "$FW_FILE" \
             --tools-dir tools \
             --output-dir extracted \
             --final-dir firmware_data \
@@ -237,19 +248,23 @@ jobs:
                  fi
               fi
               
-              python3 send_telegram.py \
-                --token "$TELEGRAM_BOT_TOKEN" \
-                --chat-id "${{ github.event.inputs.request_chat_id }}" \
-                --device "$DETECTED_DEVICE" \
-                --product "$DETECTED_PRODUCT" \
-                --version "$DETECTED_VERSION" \
-                --security-patch "$DETECTED_PATCH" \
-                --build-id "$DETECTED_BUILD" \
-                --arb "$DETECTED_ARB" \
-                --url "${{ github.event.inputs.firmware_url }}" \
-                --user-mention "${{ github.event.inputs.request_user_name }}" \
-                --delete-message-id "${{ github.event.inputs.request_status_message_id }}" \
-                --delete-user-message-id "${{ github.event.inputs.request_message_id }}"
+               IMG_FLAG=""
+               [ "${IMAGE_CHECK:-false}" = "true" ] && IMG_FLAG="--is-img-check"
+               
+               python3 send_telegram.py \
+                 --token "$TELEGRAM_BOT_TOKEN" \
+                 --chat-id "${{ github.event.inputs.request_chat_id }}" \
+                 --device "$DETECTED_DEVICE" \
+                 --product "$DETECTED_PRODUCT" \
+                 --version "$DETECTED_VERSION" \
+                 --security-patch "$DETECTED_PATCH" \
+                 --build-id "$DETECTED_BUILD" \
+                 --arb "$DETECTED_ARB" \
+                 --url "${{ github.event.inputs.firmware_url }}" \
+                 --user-mention "${{ github.event.inputs.request_user_name }}" \
+                 --delete-message-id "${{ github.event.inputs.request_status_message_id }}" \
+                 --delete-user-message-id "${{ github.event.inputs.request_message_id }}" \
+                 $IMG_FLAG
           else
               # Send error notification
               python3 send_telegram.py \
