@@ -83,8 +83,11 @@ def analyze_firmware(zip_path, tools_dir, output_dir, final_dir=None):
     # --- Handle direct .img input ---
     if zip_path.suffix.lower() == '.img':
         logger.info("Input is a direct .img file, using it as xbl_config...")
-        final_dir.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(zip_path, final_img)
+        if zip_path != final_img:
+            final_dir.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(zip_path, final_img)
+        else:
+            logger.info("File is already at the target location, skipping copy.")
         logger.info("Calculating MD5 checksum...")
         md5_sum = calculate_md5(zip_path)
         metadata = {}
