@@ -40,6 +40,23 @@ def calculate_md5(file_path):
 import shutil
 import zipfile
 
+def detect_file_type(path: Path) -> str:
+    """Detect file type by magic bytes, returns '.7z', '.zip', '.img' or ''."""
+    try:
+        with open(path, 'rb') as f:
+            header = f.read(8)
+        if header[:2] == b'PK':
+            return '.zip'
+        if header[:6] == b'\x37\x7a\xbc\xaf\x27\x1c':
+            return '.7z'
+        if header[:2] == b'\x7f\x45':  # ELF (xbl_config.img is an ELF binary)
+            return '.img'
+        if header[:4] == b'\x41\x4e\x44\x52':  # ANDROID! (boot image)
+            return '.img'
+    except Exception:
+        pass
+    return ''
+
 def extract_ota_metadata(zip_path):
     """Peek into the zip to find META-INF/com/android/metadata"""
     metadata = {}
@@ -116,8 +133,25 @@ def analyze_firmware(zip_path, tools_dir, output_dir, final_dir=None):
             
             suffix = zip_path.suffix.lower()
             
+            # Detect by magic bytes if extension is unknown
+            if suffix not in ('.7z', '.zip', '.img'):
+                detected = detect_file_type(zip_path)
+                if detected:
+                    logger.info(f"Detected file type '{detected}' by magic bytes (extension: '{suffix}')")
+                    suffix = detected
+            
+            # --- Handle .img files (detected by magic bytes) ---
+            if suffix == '.img':
+                logger.info("Detected as a direct .img file...")
+                if zip_path != final_img:
+                    final_dir.mkdir(parents=True, exist_ok=True)
+                    shutil.copy2(zip_path, final_img)
+                else:
+                    logger.info("File is already at the target location, skipping copy.")
+                metadata = {}
+                
             # --- Handle .7z archives (fastboot image packages) ---
-            if suffix == '.7z':
+            elif suffix == '.7z':
                 logger.info("Input is a .7z archive, extracting with 7z...")
                 cmd_7z = ["7z", "x", str(zip_path), f"-o{output_dir}", "-y"]
                 if not run_command(cmd_7z):
