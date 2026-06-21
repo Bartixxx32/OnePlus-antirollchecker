@@ -133,12 +133,13 @@ def analyze_firmware(zip_path, tools_dir, output_dir, final_dir=None):
             
             suffix = zip_path.suffix.lower()
             
-            # Detect by magic bytes if extension is unknown
-            if suffix not in ('.7z', '.zip', '.img'):
-                detected = detect_file_type(zip_path)
-                if detected:
-                    logger.info(f"Detected file type '{detected}' by magic bytes (extension: '{suffix}')")
-                    suffix = detected
+            # Always prefer magic byte detection over extension
+            detected = detect_file_type(zip_path)
+            if detected and detected != suffix:
+                logger.info(f"Detected file type '{detected}' by magic bytes (extension was '{suffix}'), overriding.")
+                suffix = detected
+            elif detected:
+                suffix = detected
             
             # --- Handle .img files (detected by magic bytes) ---
             if suffix == '.img':
