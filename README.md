@@ -1447,8 +1447,8 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | Asia Pacific | CPH2525 | CPH2525_15.0.0.1801(EX01)<br><details><summary>MD5</summary><code>0bc28c21ad6cfe29583670eaf46ff7ca</code></details> | **0** | Major: 0, Minor: 120 | 2026-06-22 | ✅ Safe |
 | Oceania | CPH2525OCA | CPH2525_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>0407edf6593a82dc2d02b13bc38c0a2e</code></details> | **0** | Major: 0, Minor: 120 | 2026-06-22 | ✅ Safe |
 | Saudi Arabia | CPH2525SA | CPH2525_15.0.0.1801(EX01)<br><details><summary>MD5</summary><code>0337b5c9112b7f4862df3e384b133654</code></details> | **0** | Major: 0, Minor: 120 | 2026-06-22 | ✅ Safe |
-| Philippines | CPH2525PH | CPH2525_15.0.0.1801(EX01)<br><details><summary>MD5</summary><code>0ebdf90eae9d86caa8d112ba68565ed1</code></details> | **0** | Major: 0, Minor: 120 | 2026-06-22 | ✅ Safe |
 | India | CPH2525IN | CPH2525_13.1.1.147(EX01)<br><details><summary>MD5</summary><code>abb2a1ef3450621de3073f48d5215b19</code></details> | **0** | Major: 0, Minor: 120 | 2026-06-22 | ✅ Safe |
+| Philippines | CPH2525PH | CPH2525_15.0.0.1801(EX01)<br><details><summary>MD5</summary><code>0ebdf90eae9d86caa8d112ba68565ed1</code></details> | **0** | Major: 0, Minor: 120 | 2026-06-22 | ✅ Safe |
 | Middle East | CPH2525MEA | CPH2525_15.0.0.1801(EX01)<br><details><summary>MD5</summary><code>d6c541a6a7cbc905257da9f2c89370bf</code></details> | **0** | Major: 0, Minor: 120 | 2026-06-22 | ✅ Safe |
 | Europe | CPH2525EEA | CPH2525_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>128650aa4175ac0e3c4cda9f3ae9eb25</code></details> | **0** | Major: 0, Minor: 120 | 2026-04-23 | ✅ Safe |
 
@@ -1930,4 +1930,4 @@ Prefer a native mobile experience? We have an official Android app on F-Droid! C
 > **Important:** The bot **only** works within this group to prevent spam and ensure availability. DM checks are disabled.
 
 ---
-*Last updated: 2026-06-22 05:04 UTC*
+*Last updated: 2026-06-22 16:53 UTC*
