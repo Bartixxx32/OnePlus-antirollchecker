@@ -399,6 +399,15 @@ tbody tr:hover {
     font-variant-numeric: tabular-nums;
 }
 
+.oem-sub {
+    display: block;
+    font-size: 0.6rem;
+    color: var(--text-dim);
+    margin-top: 1px;
+    opacity: 0.7;
+    font-variant-numeric: tabular-nums;
+}
+
 .last-checked-sub {
     display: block;
     font-size: 0.58rem;
@@ -536,31 +545,36 @@ details.md5-details code {
     display: inline-flex;
     align-items: center;
     gap: 5px;
-    padding: 4px 12px;
+    padding: 4px 10px;
     background: transparent;
-    border: 1px solid var(--accent);
+    border: 1px solid var(--card-border);
     border-radius: 5px;
-    color: var(--accent);
-    font-size: 0.72rem;
-    font-weight: 600;
+    color: var(--text-muted);
+    font-size: 0.65rem;
+    font-weight: 500;
     cursor: pointer;
-    transition: all 0.15s;
+    transition: all 0.2s;
     white-space: nowrap;
-    letter-spacing: 0.2px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
 }
 
 .btn-history:hover {
-    background: rgba(88, 166, 255, 0.1);
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(88, 166, 255, 0.06);
 }
 
 .btn-history.active {
-    background: var(--accent);
-    color: #000;
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(88, 166, 255, 0.08);
 }
 
 .btn-history-arrow {
-    font-size: 0.8rem;
-    transition: transform 0.2s;
+    font-size: 0.9rem;
+    transition: transform 0.25s;
+    line-height: 1;
 }
 
 .btn-history.active .btn-history-arrow {
@@ -579,7 +593,6 @@ details.md5-details code {
 .history-table {
     width: 100%;
     border-collapse: collapse;
-    min-width: 500px;
 }
 
 .history-container {
@@ -607,6 +620,15 @@ details.md5-details code {
     text-transform: uppercase;
     padding: 6px 10px;
     border-bottom: 1px solid var(--card-border);
+}
+
+.history-table th:nth-child(1) { width: 52%; }
+.history-table th:nth-child(2) { width: 28%; }
+.history-table th:nth-child(3) { width: 20%; }
+
+.history-last-seen {
+    font-size: 0.62rem;
+    color: var(--text-dim);
 }
 
 .history-table td {

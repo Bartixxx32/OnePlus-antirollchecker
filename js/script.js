@@ -197,14 +197,14 @@ const renderHTML = (devices) => {
                                 <div class="firmware-title-wrap">
                                     <div class="firmware-title" style="font-size:0.75rem;">${entry.version}</div>
                                 </div>
+                                <div class="firmware-oem">Major: ${entry.major != null ? entry.major : '?'}, Minor: ${entry.minor != null ? entry.minor : '?'}</div>
                                 ${entry.md5 ? `<details class="md5-details"><summary>Show MD5</summary><code>${entry.md5}</code></details>` : ''}
                             </td>
                             <td>
                                 ${renderBadge(entry)}
                                 <span class="arb-sub">ARB: ${entry.is_hardcoded ? '?' : (entry.arb != null ? entry.arb : '?')}</span>
                             </td>
-                            <td>Major: ${entry.major != null ? entry.major : '?'}, Minor: ${entry.minor != null ? entry.minor : '?'}</td>
-                            <td>${entry.last_checked || entry.first_seen || 'Unknown'}</td>
+                            <td><span class="history-last-seen">${entry.last_checked || entry.first_seen || 'Unknown'}</span></td>
                         </tr>
                     `).join('');
 
@@ -214,7 +214,7 @@ const renderHTML = (devices) => {
                             <div class="history-container">
                                 <div class="history-title">📜 Version History — ${variant.region_name}</div>
                                 <table class="history-table">
-                                    <thead><tr><th>Firmware Version</th><th>Status</th><th>OEM Version</th><th>Last Seen</th></tr></thead>
+                                    <thead><tr><th>Firmware Version</th><th>Status</th><th>Last Seen</th></tr></thead>
                                     <tbody>${histRows}</tbody>
                                 </table>
                             </div>
