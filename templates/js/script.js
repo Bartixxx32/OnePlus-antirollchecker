@@ -4,6 +4,8 @@
 function scrollToCard(el) {
     const target = typeof el === 'string' ? document.getElementById(el) : el;
     if (target) {
+        const topbar = document.querySelector('.topbar');
+        if (topbar) topbar.classList.remove('hidden');
         target.scrollIntoView({ block: 'start', behavior: 'smooth' });
         target.classList.add('highlight-card');
     }
@@ -85,6 +87,24 @@ function filterDevices() {
     }
     const newUrl = params.toString() ? `${window.location.pathname}?${params}` : window.location.pathname;
     window.history.replaceState({}, '', newUrl);
+
+    // Scroll to first visible card if it's outside the viewport
+    if (filter && visibleCount > 0) {
+        const topbar = document.querySelector('.topbar');
+        if (topbar) topbar.classList.remove('hidden');
+        const firstCard = document.querySelector('.card[style*="display: block"], .card:not([style*="display: none"])');
+        if (firstCard) {
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                    const offset = topbar ? topbar.offsetHeight + 32 : 120;
+                    const rect = firstCard.getBoundingClientRect();
+                    if (rect.top < offset || rect.bottom > window.innerHeight) {
+                        window.scrollTo({ top: rect.top + window.scrollY - offset, behavior: 'smooth' });
+                    }
+                });
+            });
+        }
+    }
 }
 
 /**
@@ -206,7 +226,7 @@ const renderHTML = (devices) => {
         }
 
         return `
-        <div class="card" id="card-${device.id}" data-name="${device.name.toLowerCase()} ${device.models.join(' ').toLowerCase()}" style="scroll-margin-top:80px">
+        <div class="card" id="card-${device.id}" data-name="${device.name.toLowerCase()} ${device.models.join(' ').toLowerCase()}" style="scroll-margin-top:120px">
             <div class="card-header">
                 <h2>
                     ${device.name}
@@ -240,24 +260,45 @@ const renderHTML = (devices) => {
 async function loadData() {
     const grid = document.getElementById('devices-grid');
     let db;
+    const cacheKey = 'oparb_db';
+    const cacheTTL = 5 * 60 * 1000; // 5 minutes
 
-    try {
-        // Try local first
-        const res = await fetch('./database.json');
-        if (!res.ok) throw new Error();
-        db = await res.json();
-    } catch (e1) {
+    // Check localStorage cache first
+    const cached = localStorage.getItem(cacheKey);
+    if (cached) {
         try {
-            // Fallback to prod URL
-            const res = await fetch('https://oparb.pages.dev/database.json');
+            const { data, ts } = JSON.parse(cached);
+            if (Date.now() - ts < cacheTTL) {
+                db = data;
+            }
+        } catch (_) { localStorage.removeItem(cacheKey); }
+    }
+
+    if (!db) {
+        try {
+            const res = await fetch('./database.json');
+            if (!res.ok) throw new Error();
             db = await res.json();
-        } catch (e2) {
-            grid.innerHTML = `
-                <div style="grid-column:1/-1; text-align:center; padding:40px;">
-                    <p style="color:var(--danger); margin-bottom:16px;">❌ Failed to load database. Check your network or CORS settings.</p>
-                    <button onclick="loadData()" style="background:var(--accent); color:#000; border:none; padding:8px 20px; border-radius:6px; font-weight:700; cursor:pointer; font-size:0.85rem;">🔄 Retry</button>
-                </div>`;
-            return;
+            localStorage.setItem(cacheKey, JSON.stringify({ data: db, ts: Date.now() }));
+        } catch (e1) {
+            try {
+                const res = await fetch('https://oparb.pages.dev/database.json');
+                db = await res.json();
+                localStorage.setItem(cacheKey, JSON.stringify({ data: db, ts: Date.now() }));
+            } catch (e2) {
+                // If fetch fails, use stale cache as fallback
+                if (cached) {
+                    try { db = JSON.parse(cached).data; } catch (_) {}
+                }
+                if (!db) {
+                    grid.innerHTML = `
+                        <div style="grid-column:1/-1; text-align:center; padding:40px;">
+                            <p style="color:var(--danger); margin-bottom:16px;">❌ Failed to load database. Check your network or CORS settings.</p>
+                            <button onclick="loadData()" style="background:var(--accent); color:#000; border:none; padding:8px 20px; border-radius:6px; font-weight:700; cursor:pointer; font-size:0.85rem;">🔄 Retry</button>
+                        </div>`;
+                    return;
+                }
+            }
         }
     }
 
@@ -347,13 +388,18 @@ async function loadData() {
         if (input) {
             input.value = searchQuery;
             filterDevices();
-            // Scroll to first visible card with custom eased scroll
+            // Scroll to first visible card with topbar offset
             setTimeout(() => {
+                const topbar = document.querySelector('.topbar');
+                if (topbar) topbar.classList.remove('hidden');
                 const firstVisible = document.querySelector('.card[style*="display: block"], .card:not([style*="display: none"])');
                 if (firstVisible) {
-                    const topbar = document.querySelector('.topbar');
-                    const offset = topbar ? topbar.offsetHeight + 16 : 76;
-                    scrollToCard(firstVisible);
+                    requestAnimationFrame(() => {
+                        requestAnimationFrame(() => {
+                            const offset = topbar ? topbar.offsetHeight + 32 : 120;
+                            window.scrollTo({ top: firstVisible.getBoundingClientRect().top + window.scrollY - offset, behavior: 'smooth' });
+                        });
+                    });
                 }
             }, 150);
         }
@@ -361,7 +407,7 @@ async function loadData() {
 
     // Set scroll-margin-top on all cards so browser native #hash scroll respects topbar
     const topbar = document.querySelector('.topbar');
-    const scrollMargin = topbar ? topbar.offsetHeight + 16 : 80;
+    const scrollMargin = topbar ? topbar.offsetHeight + 32 : 120;
     document.querySelectorAll('.card').forEach(card => {
         card.style.scrollMarginTop = scrollMargin + 'px';
     });
@@ -394,6 +440,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         document.addEventListener('touchend', () => {
             glow.style.opacity = '0';
+        });
+    }
+
+    // Hide topbar on scroll down, show on scroll up
+    const topbar = document.querySelector('.topbar');
+    if (topbar) {
+        let lastScrollY = window.scrollY;
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    const current = window.scrollY;
+                    if (current > 80 && current > lastScrollY) {
+                        topbar.classList.add('hidden');
+                    } else {
+                        topbar.classList.remove('hidden');
+                    }
+                    lastScrollY = current;
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }, { passive: true });
+        // Show topbar when search input is focused
+        document.getElementById('search-input')?.addEventListener('focus', () => {
+            topbar.classList.remove('hidden');
         });
     }
     
