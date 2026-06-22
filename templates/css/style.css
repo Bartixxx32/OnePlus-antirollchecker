@@ -41,6 +41,7 @@ body {
     color: var(--text);
     min-height: 100vh;
     line-height: 1.5;
+    padding-top: var(--header-h);
     padding-bottom: 60px;
     position: relative;
     overflow-x: hidden;
@@ -48,8 +49,10 @@ body {
 
 /* ─── TOPBAR ─── */
 .topbar {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 100;
     background: rgba(10, 10, 10, 0.92);
     backdrop-filter: blur(10px);
@@ -60,6 +63,11 @@ body {
     align-items: center;
     padding: 0 20px;
     gap: 16px;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+.topbar.hidden {
+    transform: translateY(-100%);
 }
 
 .topbar-brand {
@@ -188,7 +196,7 @@ body {
 
 /* ─── TOPBAR INFO ─── */
 .topbar-info {
-    font-size: 0.65rem;
+    font-size: 0.85rem;
     color: var(--text-dim);
     white-space: nowrap;
     flex-shrink: 0;
@@ -785,7 +793,7 @@ details.md5-details code {
     }
 
     .topbar-info {
-        font-size: 0.55rem;
+        font-size: 0.7rem;
         order: 2;
     }
 
