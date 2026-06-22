@@ -1,4 +1,15 @@
 /**
+ * Scroll to a card using native smooth scroll + scroll-margin-top for offset.
+ */
+function scrollToCard(el) {
+    const target = typeof el === 'string' ? document.getElementById(el) : el;
+    if (target) {
+        target.scrollIntoView({ block: 'start', behavior: 'smooth' });
+        target.classList.add('highlight-card');
+    }
+}
+
+/**
  * Toggle visibility of version history row.
  */
 function toggleHistory(id, btn) {
@@ -13,15 +24,67 @@ function toggleHistory(id, btn) {
 }
 
 /**
- * Filter device cards based on search input.
+ * Copy a shareable link to this device card to clipboard.
+ */
+function copyCardLink(id, deviceName) {
+    const url = new URL(window.location.origin + window.location.pathname);
+    url.hash = id;
+    navigator.clipboard.writeText(url.toString()).then(() => {
+        const btn = document.querySelector(`[onclick*="copyCardLink('${id}'"]`) || document.querySelector(`#${id} .btn-share`);
+        if (btn) {
+            const orig = btn.textContent;
+            btn.textContent = '✓';
+            setTimeout(() => btn.textContent = orig, 1500);
+        }
+    }).catch(() => {});
+}
+
+/**
+ * Filter and sort device cards based on search input.
  */
 function filterDevices() {
     const filter = document.getElementById('search-input').value.toLowerCase();
-    const cards = document.querySelectorAll('.card');
-    cards.forEach(card => {
-        const name = card.getAttribute('data-name') || '';
-        card.style.display = name.includes(filter) ? '' : 'none';
+    const grid = document.getElementById('devices-grid');
+    const cards = Array.from(document.querySelectorAll('.card'));
+    let visibleCount = 0;
+
+    const scored = cards.map(card => {
+        const name = (card.getAttribute('data-name') || '').toLowerCase();
+        let score = 0;
+        if (!filter) score = 1;
+        else if (name === filter) score = 100;
+        else if (name.startsWith(filter)) score = 50;
+        else if (name.includes(filter)) score = 10;
+        return { card, score };
     });
+
+    scored.sort((a, b) => b.score - a.score);
+
+    scored.forEach(({ card, score }) => {
+        if (score > 0) {
+            card.style.display = '';
+            grid.appendChild(card);
+            visibleCount++;
+        } else {
+            card.style.display = 'none';
+        }
+    });
+
+    const total = cards.length;
+    const el = document.getElementById('result-count');
+    if (el) {
+        el.textContent = filter ? `${visibleCount}/${total}` : '';
+    }
+
+    // Update URL with search query
+    const params = new URLSearchParams(window.location.search);
+    if (filter) {
+        params.set('search', filter);
+    } else {
+        params.delete('search');
+    }
+    const newUrl = params.toString() ? `${window.location.pathname}?${params}` : window.location.pathname;
+    window.history.replaceState({}, '', newUrl);
 }
 
 /**
@@ -143,12 +206,13 @@ const renderHTML = (devices) => {
         }
 
         return `
-        <div class="card" data-name="${device.name.toLowerCase()} ${device.models.join(' ').toLowerCase()}">
+        <div class="card" id="card-${device.id}" data-name="${device.name.toLowerCase()} ${device.models.join(' ').toLowerCase()}" style="scroll-margin-top:80px">
             <div class="card-header">
                 <h2>
                     ${device.name}
                     <span class="device-models">${device.models.join(' / ')}</span>
                 </h2>
+                <button class="btn-share" onclick="copyCardLink('card-${device.id}','${device.name.replace(/'/g, "\\'")}')" title="Copy link to this device">🔗</button>
             </div>
             <div class="card-body">
                 <table>
@@ -188,10 +252,18 @@ async function loadData() {
             const res = await fetch('https://oparb.pages.dev/database.json');
             db = await res.json();
         } catch (e2) {
-            grid.innerHTML = '<div style="color:var(--danger); text-align:center; padding: 40px; grid-column: 1/-1;">Failed to load database.json. Ensure you are not blocking CORS or check your network.</div>';
+            grid.innerHTML = `
+                <div style="grid-column:1/-1; text-align:center; padding:40px;">
+                    <p style="color:var(--danger); margin-bottom:16px;">❌ Failed to load database. Check your network or CORS settings.</p>
+                    <button onclick="loadData()" style="background:var(--accent); color:#000; border:none; padding:8px 20px; border-radius:6px; font-weight:700; cursor:pointer; font-size:0.85rem;">🔄 Retry</button>
+                </div>`;
             return;
         }
     }
+
+    // Remove skeleton
+    const skeleton = document.getElementById('skeleton-grid');
+    if (skeleton) skeleton.remove();
 
     // Process db into devices array
     const byDevice = {};
@@ -249,7 +321,8 @@ async function loadData() {
         }
     }
 
-    document.getElementById('last-scan').innerText = 'Last scan: ' + (latestScan || new Date().toISOString().split('T')[0]);
+    const lastScanEl = document.getElementById('last-scan');
+    if (lastScanEl) lastScanEl.innerText = '📅 ' + (latestScan || new Date().toISOString().split('T')[0]);
 
     const sortedDevices = Object.values(byDevice).sort((a, b) => a.order - b.order);
     for (const dev of sortedDevices) {
@@ -260,6 +333,45 @@ async function loadData() {
     }
 
     grid.innerHTML = renderHTML(sortedDevices);
+
+    // Initialize result count
+    const totalCards = document.querySelectorAll('.card').length;
+    const countEl = document.getElementById('result-count');
+    if (countEl && totalCards > 0) countEl.textContent = `${totalCards} devices`;
+
+    // Deep link: ?search= or ?device=
+    const params = new URLSearchParams(window.location.search);
+    const searchQuery = params.get('search') || params.get('device');
+    if (searchQuery) {
+        const input = document.getElementById('search-input');
+        if (input) {
+            input.value = searchQuery;
+            filterDevices();
+            // Scroll to first visible card with custom eased scroll
+            setTimeout(() => {
+                const firstVisible = document.querySelector('.card[style*="display: block"], .card:not([style*="display: none"])');
+                if (firstVisible) {
+                    const topbar = document.querySelector('.topbar');
+                    const offset = topbar ? topbar.offsetHeight + 16 : 76;
+                    scrollToCard(firstVisible);
+                }
+            }, 150);
+        }
+    }
+
+    // Set scroll-margin-top on all cards so browser native #hash scroll respects topbar
+    const topbar = document.querySelector('.topbar');
+    const scrollMargin = topbar ? topbar.offsetHeight + 16 : 80;
+    document.querySelectorAll('.card').forEach(card => {
+        card.style.scrollMarginTop = scrollMargin + 'px';
+    });
+
+    // Deep link by hash (#card-DeviceName)
+    if (window.location.hash) {
+        setTimeout(() => {
+            scrollToCard(window.location.hash.substring(1));
+        }, 100);
+    }
 }
 
 // Cursor Glow Logic
@@ -287,4 +399,11 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Initial data load
     loadData();
+});
+
+// pageshow fires on bfcache restore (e.g. Enter in URL bar on same tab)
+window.addEventListener('pageshow', (e) => {
+    if (e.persisted && window.location.hash) {
+        scrollToCard(window.location.hash.substring(1));
+    }
 });
