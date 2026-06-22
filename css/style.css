@@ -559,10 +559,17 @@ details.md5-details code {
     text-transform: uppercase;
 }
 
-.btn-history:hover {
-    border-color: var(--accent);
-    color: var(--accent);
-    background: rgba(88, 166, 255, 0.06);
+.btn-history:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+@media (hover: hover) {
+    .btn-history:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+        background: rgba(88, 166, 255, 0.06);
+    }
 }
 
 .btn-history.active {
