@@ -1,6 +1,5 @@
 import shutil
 import logging
-import os
 import json
 from pathlib import Path
 from jinja2 import Template
@@ -15,7 +14,7 @@ def generate(template_path: Path, output_path: Path, db_path: Path):
         template_content = template_path.read_text(encoding="utf-8")
         template = Template(template_content)
         
-        ga_id = os.environ.get("GOOGLE_ANALYTICS_ID")
+        ga_id = "G-7B8F6LHTVF"
         
         # Convert mapping to JSON for injection into script tag
         region_map_json = json.dumps(REGION_MAPPING)
