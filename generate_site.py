@@ -36,6 +36,12 @@ def generate(template_path: Path, output_path: Path, db_path: Path):
         shutil.copy2(db_path, output_path.parent / "database.json")
         logging.info(f"Database copied to {output_path.parent / 'database.json'}")
 
+    # Copy appinfo.json for Android app alerts
+    appinfo_path = db_path.parent / "appinfo.json"
+    if appinfo_path.exists():
+        shutil.copy2(appinfo_path, output_path.parent / "appinfo.json")
+        logging.info(f"App info copied to {output_path.parent / 'appinfo.json'}")
+
     # Copy static assets (css, js)
     for asset_dir in ["css", "js"]:
         src = template_path.parent / asset_dir
