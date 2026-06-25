@@ -1442,6 +1442,145 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 ---
 
+### Oppo Reno10 Pro
+
+| Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
+|:---|:---|:---|:---|:---|:---|:---|
+| Singapore | CPH2525SG | CPH2525_15.0.0.1801(EX01)<br><details><summary>MD5</summary><code>59849b739cec623c99e32d1441b2a12b</code></details> | **0** | Major: 0, Minor: 120 | 2026-06-25 | ✅ Safe |
+| Taiwan | CPH2525TW | CPH2525_15.0.0.1801(EX01)<br><details><summary>MD5</summary><code>b7d91594cd038c0d69b8e9d3f35a7eec</code></details> | **0** | Major: 0, Minor: 120 | 2026-06-25 | ✅ Safe |
+| Malaysia | CPH2525MY | CPH2525_15.0.0.1801(EX01)<br><details><summary>MD5</summary><code>274a18d9559be7d7c94435c35a8e79ae</code></details> | **0** | Major: 0, Minor: 120 | 2026-06-25 | ✅ Safe |
+| Indonesia | CPH2525ID | CPH2525_15.0.0.1801(EX01)<br><details><summary>MD5</summary><code>08dedbe5d8ae672e5aad56f3a8d8a362</code></details> | **0** | Major: 0, Minor: 120 | 2026-06-25 | ✅ Safe |
+| Thailand | CPH2525TH | CPH2525_15.0.0.1801(EX01)<br><details><summary>MD5</summary><code>6a25d7a1080dd636ca9eb74608fe2681</code></details> | **0** | Major: 0, Minor: 120 | 2026-06-25 | ✅ Safe |
+| Vietnam | CPH2525VN | CPH2525_15.0.0.1801(EX01)<br><details><summary>MD5</summary><code>ac9434c69d38425fbd3e0b31beef122f</code></details> | **0** | Major: 0, Minor: 120 | 2026-06-25 | ✅ Safe |
+| Asia Pacific | CPH2525 | CPH2525_15.0.0.1801(EX01)<br><details><summary>MD5</summary><code>0bc28c21ad6cfe29583670eaf46ff7ca</code></details> | **0** | Major: 0, Minor: 120 | 2026-06-25 | ✅ Safe |
+| Oceania | CPH2525OCA | CPH2525_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>0407edf6593a82dc2d02b13bc38c0a2e</code></details> | **0** | Major: 0, Minor: 120 | 2026-06-25 | ✅ Safe |
+| Saudi Arabia | CPH2525SA | CPH2525_15.0.0.1801(EX01)<br><details><summary>MD5</summary><code>0337b5c9112b7f4862df3e384b133654</code></details> | **0** | Major: 0, Minor: 120 | 2026-06-25 | ✅ Safe |
+| Philippines | CPH2525PH | CPH2525_15.0.0.1801(EX01)<br><details><summary>MD5</summary><code>0ebdf90eae9d86caa8d112ba68565ed1</code></details> | **0** | Major: 0, Minor: 120 | 2026-06-25 | ✅ Safe |
+| Middle East | CPH2525MEA | CPH2525_15.0.0.1801(EX01)<br><details><summary>MD5</summary><code>d6c541a6a7cbc905257da9f2c89370bf</code></details> | **0** | Major: 0, Minor: 120 | 2026-06-25 | ✅ Safe |
+| India | CPH2525IN | CPH2525_13.1.1.147(EX01)<br><details><summary>MD5</summary><code>abb2a1ef3450621de3073f48d5215b19</code></details> | **0** | Major: 0, Minor: 120 | 2026-06-25 | ✅ Safe |
+| Europe | CPH2525EEA | CPH2525_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>128650aa4175ac0e3c4cda9f3ae9eb25</code></details> | **0** | Major: 0, Minor: 120 | 2026-04-23 | ✅ Safe |
+
+<details>
+<summary>📜 <b>Singapore History</b> (click to expand)</summary>
+
+| Firmware Version | ARB | OEM Version | Last Seen | Safe |
+|:---|:---|:---|:---|:---|
+| CPH2525_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>308573b1553dc7381448f4a4a669b42c</code></details> | 0 | Major: 0, Minor: 120 | 2026-05-28 | ✅ Safe |
+| CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>3835050ceee6140cf06affe9cf7db263</code></details> | 0 | Major: 0, Minor: 120 | 2026-03-27 | ✅ Safe |
+
+</details>
+
+<details>
+<summary>📜 <b>Taiwan History</b> (click to expand)</summary>
+
+| Firmware Version | ARB | OEM Version | Last Seen | Safe |
+|:---|:---|:---|:---|:---|
+| CPH2525_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>2c5dbdc609f8eec4e127584dc103c82f</code></details> | 0 | Major: 0, Minor: 120 | 2026-05-25 | ✅ Safe |
+| CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>d3aeff26f756d3b5e7e85de67999662c</code></details> | 0 | Major: 0, Minor: 120 | 2026-03-30 | ✅ Safe |
+
+</details>
+
+<details>
+<summary>📜 <b>Malaysia History</b> (click to expand)</summary>
+
+| Firmware Version | ARB | OEM Version | Last Seen | Safe |
+|:---|:---|:---|:---|:---|
+| CPH2525_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>6966558af815390daee7bcaca2a5885f</code></details> | 0 | Major: 0, Minor: 120 | 2026-05-25 | ✅ Safe |
+| CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>0da7796177735bd736ae027aad6ffbde</code></details> | 0 | Major: 0, Minor: 120 | 2026-03-25 | ✅ Safe |
+
+</details>
+
+<details>
+<summary>📜 <b>Indonesia History</b> (click to expand)</summary>
+
+| Firmware Version | ARB | OEM Version | Last Seen | Safe |
+|:---|:---|:---|:---|:---|
+| CPH2525_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>afbfa780bdb0d4eb6b31ad63bf895804</code></details> | 0 | Major: 0, Minor: 120 | 2026-05-25 | ✅ Safe |
+| CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>b502f539b8bc91a414018a5eebd68250</code></details> | 0 | Major: 0, Minor: 120 | 2026-03-25 | ✅ Safe |
+
+</details>
+
+<details>
+<summary>📜 <b>Thailand History</b> (click to expand)</summary>
+
+| Firmware Version | ARB | OEM Version | Last Seen | Safe |
+|:---|:---|:---|:---|:---|
+| CPH2525_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>19f4a1e35ab303463061db6c4d91ff1e</code></details> | 0 | Major: 0, Minor: 120 | 2026-05-25 | ✅ Safe |
+| CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>b72448e68f81b4efb446f67570935915</code></details> | 0 | Major: 0, Minor: 120 | 2026-03-25 | ✅ Safe |
+
+</details>
+
+<details>
+<summary>📜 <b>Vietnam History</b> (click to expand)</summary>
+
+| Firmware Version | ARB | OEM Version | Last Seen | Safe |
+|:---|:---|:---|:---|:---|
+| CPH2525_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>f072fc3b8c605d96852168abe549d873</code></details> | 0 | Major: 0, Minor: 120 | 2026-05-22 | ✅ Safe |
+| CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>945e55b6759b3147e2661e0db1cdb0a3</code></details> | 0 | Major: 0, Minor: 120 | 2026-03-27 | ✅ Safe |
+
+</details>
+
+<details>
+<summary>📜 <b>Asia Pacific History</b> (click to expand)</summary>
+
+| Firmware Version | ARB | OEM Version | Last Seen | Safe |
+|:---|:---|:---|:---|:---|
+| CPH2525_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>dbd2b3559dd8b1ef6c62d26ff1df4dcb</code></details> | 0 | Major: 0, Minor: 120 | 2026-05-28 | ✅ Safe |
+| CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>7ffcae1c7860325a9db9ebd846c9f072</code></details> | 0 | Major: 0, Minor: 120 | 2026-03-27 | ✅ Safe |
+
+</details>
+
+<details>
+<summary>📜 <b>Oceania History</b> (click to expand)</summary>
+
+| Firmware Version | ARB | OEM Version | Last Seen | Safe |
+|:---|:---|:---|:---|:---|
+| CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>6554872f0d665c9a77cefb972287a7e5</code></details> | 0 | Major: 0, Minor: 120 | 2026-04-01 | ✅ Safe |
+
+</details>
+
+<details>
+<summary>📜 <b>Saudi Arabia History</b> (click to expand)</summary>
+
+| Firmware Version | ARB | OEM Version | Last Seen | Safe |
+|:---|:---|:---|:---|:---|
+| CPH2525_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>1f6d57b4a491cfdc11ea8a67d480eebc</code></details> | 0 | Major: 0, Minor: 120 | 2026-05-28 | ✅ Safe |
+| CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>c1f95a3c9caae0d0a89c62e9d6589fea</code></details> | 0 | Major: 0, Minor: 120 | 2026-03-30 | ✅ Safe |
+
+</details>
+
+<details>
+<summary>📜 <b>Philippines History</b> (click to expand)</summary>
+
+| Firmware Version | ARB | OEM Version | Last Seen | Safe |
+|:---|:---|:---|:---|:---|
+| CPH2525_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>8b682eb6bda3ae1adb3a75bbe4cea3ee</code></details> | 0 | Major: 0, Minor: 120 | 2026-05-25 | ✅ Safe |
+| CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>1f6e08b4926652d580b2fce0839b95f4</code></details> | 0 | Major: 0, Minor: 120 | 2026-03-25 | ✅ Safe |
+
+</details>
+
+<details>
+<summary>📜 <b>Middle East History</b> (click to expand)</summary>
+
+| Firmware Version | ARB | OEM Version | Last Seen | Safe |
+|:---|:---|:---|:---|:---|
+| CPH2525_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>ae1e910b70f736368c2aec048b8f1d99</code></details> | 0 | Major: 0, Minor: 120 | 2026-05-28 | ✅ Safe |
+| CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>d75e6df459ee8ed050e99e143a9ffe1c</code></details> | 0 | Major: 0, Minor: 120 | 2026-03-27 | ✅ Safe |
+
+</details>
+
+<details>
+<summary>📜 <b>Europe History</b> (click to expand)</summary>
+
+| Firmware Version | ARB | OEM Version | Last Seen | Safe |
+|:---|:---|:---|:---|:---|
+| CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>5331936b839bd4267088fa89b461d060</code></details> | 0 | Major: 0, Minor: 120 | 2026-03-27 | ✅ Safe |
+
+</details>
+
+
+---
+
 ### Oppo Find X8 Ultra
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |

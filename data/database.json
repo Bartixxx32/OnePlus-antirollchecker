@@ -1089,6 +1089,565 @@
       }
     }
   },
+  "CPH2525": {
+    "device_name": "Oppo Reno10 Pro",
+    "device_order": 47,
+    "expect_esim": false,
+    "expect_barometer": false,
+    "versions": {
+      "CPH2525_15.0.0.1801(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "0bc28c21ad6cfe29583670eaf46ff7ca",
+        "first_seen": "2026-05-29",
+        "last_checked": "2026-06-25",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "APC"
+        ]
+      },
+      "CPH2525_15.0.0.1603(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "dbd2b3559dd8b1ef6c62d26ff1df4dcb",
+        "first_seen": "2026-03-28",
+        "last_checked": "2026-05-28",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "APC"
+        ]
+      },
+      "CPH2525_15.0.0.1600(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "7ffcae1c7860325a9db9ebd846c9f072",
+        "first_seen": "2026-03-10",
+        "last_checked": "2026-03-27",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "APC"
+        ]
+      }
+    }
+  },
+  "CPH2525EEA": {
+    "device_name": "Oppo Reno10 Pro",
+    "device_order": 47,
+    "expect_esim": false,
+    "expect_barometer": false,
+    "versions": {
+      "CPH2525_15.0.0.1603(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "128650aa4175ac0e3c4cda9f3ae9eb25",
+        "first_seen": "2026-03-28",
+        "last_checked": "2026-04-23",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "EEA"
+        ]
+      },
+      "CPH2525_15.0.0.1600(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "5331936b839bd4267088fa89b461d060",
+        "first_seen": "2026-03-10",
+        "last_checked": "2026-03-27",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "EEA"
+        ]
+      }
+    }
+  },
+  "CPH2525ID": {
+    "device_name": "Oppo Reno10 Pro",
+    "device_order": 47,
+    "expect_esim": false,
+    "expect_barometer": false,
+    "versions": {
+      "CPH2525_15.0.0.1801(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "08dedbe5d8ae672e5aad56f3a8d8a362",
+        "first_seen": "2026-05-26",
+        "last_checked": "2026-06-25",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "ID"
+        ]
+      },
+      "CPH2525_15.0.0.1603(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "afbfa780bdb0d4eb6b31ad63bf895804",
+        "first_seen": "2026-03-25",
+        "last_checked": "2026-05-25",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "ID"
+        ]
+      },
+      "CPH2525_15.0.0.1600(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "b502f539b8bc91a414018a5eebd68250",
+        "first_seen": "2026-03-10",
+        "last_checked": "2026-03-25",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "ID"
+        ]
+      }
+    }
+  },
+  "CPH2525IN": {
+    "device_name": "Oppo Reno10 Pro",
+    "device_order": 47,
+    "expect_esim": false,
+    "expect_barometer": false,
+    "versions": {
+      "CPH2525_13.1.1.147(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "abb2a1ef3450621de3073f48d5215b19",
+        "first_seen": "2026-03-10",
+        "last_checked": "2026-06-25",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "IN"
+        ]
+      }
+    }
+  },
+  "CPH2525MEA": {
+    "device_name": "Oppo Reno10 Pro",
+    "device_order": 47,
+    "expect_esim": false,
+    "expect_barometer": false,
+    "versions": {
+      "CPH2525_15.0.0.1801(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "d6c541a6a7cbc905257da9f2c89370bf",
+        "first_seen": "2026-05-29",
+        "last_checked": "2026-06-25",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "MEA"
+        ]
+      },
+      "CPH2525_15.0.0.1603(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "ae1e910b70f736368c2aec048b8f1d99",
+        "first_seen": "2026-03-28",
+        "last_checked": "2026-05-28",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "MEA"
+        ]
+      },
+      "CPH2525_15.0.0.1600(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "d75e6df459ee8ed050e99e143a9ffe1c",
+        "first_seen": "2026-03-10",
+        "last_checked": "2026-03-27",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "MEA"
+        ]
+      }
+    }
+  },
+  "CPH2525MY": {
+    "device_name": "Oppo Reno10 Pro",
+    "device_order": 47,
+    "expect_esim": false,
+    "expect_barometer": false,
+    "versions": {
+      "CPH2525_15.0.0.1801(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "274a18d9559be7d7c94435c35a8e79ae",
+        "first_seen": "2026-05-26",
+        "last_checked": "2026-06-25",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "MY"
+        ]
+      },
+      "CPH2525_15.0.0.1603(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "6966558af815390daee7bcaca2a5885f",
+        "first_seen": "2026-03-25",
+        "last_checked": "2026-05-25",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "MY"
+        ]
+      },
+      "CPH2525_15.0.0.1600(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "0da7796177735bd736ae027aad6ffbde",
+        "first_seen": "2026-03-10",
+        "last_checked": "2026-03-25",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "MY"
+        ]
+      }
+    }
+  },
+  "CPH2525OCA": {
+    "device_name": "Oppo Reno10 Pro",
+    "device_order": 47,
+    "expect_esim": false,
+    "expect_barometer": false,
+    "versions": {
+      "CPH2525_15.0.0.1603(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "0407edf6593a82dc2d02b13bc38c0a2e",
+        "first_seen": "2026-04-01",
+        "last_checked": "2026-06-25",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "OCA"
+        ]
+      },
+      "CPH2525_15.0.0.1600(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "6554872f0d665c9a77cefb972287a7e5",
+        "first_seen": "2026-03-10",
+        "last_checked": "2026-04-01",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "OCA"
+        ]
+      }
+    }
+  },
+  "CPH2525PH": {
+    "device_name": "Oppo Reno10 Pro",
+    "device_order": 47,
+    "expect_esim": false,
+    "expect_barometer": false,
+    "versions": {
+      "CPH2525_15.0.0.1801(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "0ebdf90eae9d86caa8d112ba68565ed1",
+        "first_seen": "2026-05-26",
+        "last_checked": "2026-06-25",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "PH"
+        ]
+      },
+      "CPH2525_15.0.0.1603(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "8b682eb6bda3ae1adb3a75bbe4cea3ee",
+        "first_seen": "2026-03-25",
+        "last_checked": "2026-05-25",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "PH"
+        ]
+      },
+      "CPH2525_15.0.0.1600(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "1f6e08b4926652d580b2fce0839b95f4",
+        "first_seen": "2026-03-10",
+        "last_checked": "2026-03-25",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "PH"
+        ]
+      }
+    }
+  },
+  "CPH2525SA": {
+    "device_name": "Oppo Reno10 Pro",
+    "device_order": 47,
+    "expect_esim": false,
+    "expect_barometer": false,
+    "versions": {
+      "CPH2525_15.0.0.1801(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "0337b5c9112b7f4862df3e384b133654",
+        "first_seen": "2026-05-29",
+        "last_checked": "2026-06-25",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "SA"
+        ]
+      },
+      "CPH2525_15.0.0.1603(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "1f6d57b4a491cfdc11ea8a67d480eebc",
+        "first_seen": "2026-03-31",
+        "last_checked": "2026-05-28",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "SA"
+        ]
+      },
+      "CPH2525_15.0.0.1600(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "c1f95a3c9caae0d0a89c62e9d6589fea",
+        "first_seen": "2026-03-10",
+        "last_checked": "2026-03-30",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "SA"
+        ]
+      }
+    }
+  },
+  "CPH2525SG": {
+    "device_name": "Oppo Reno10 Pro",
+    "device_order": 47,
+    "expect_esim": false,
+    "expect_barometer": false,
+    "versions": {
+      "CPH2525_15.0.0.1801(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "59849b739cec623c99e32d1441b2a12b",
+        "first_seen": "2026-05-29",
+        "last_checked": "2026-06-25",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "SG"
+        ]
+      },
+      "CPH2525_15.0.0.1603(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "308573b1553dc7381448f4a4a669b42c",
+        "first_seen": "2026-03-28",
+        "last_checked": "2026-05-28",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "SG"
+        ]
+      },
+      "CPH2525_15.0.0.1600(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "3835050ceee6140cf06affe9cf7db263",
+        "first_seen": "2026-03-10",
+        "last_checked": "2026-03-27",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "SG"
+        ]
+      }
+    }
+  },
+  "CPH2525TH": {
+    "device_name": "Oppo Reno10 Pro",
+    "device_order": 47,
+    "expect_esim": false,
+    "expect_barometer": false,
+    "versions": {
+      "CPH2525_15.0.0.1801(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "6a25d7a1080dd636ca9eb74608fe2681",
+        "first_seen": "2026-05-26",
+        "last_checked": "2026-06-25",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "TH"
+        ]
+      },
+      "CPH2525_15.0.0.1603(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "19f4a1e35ab303463061db6c4d91ff1e",
+        "first_seen": "2026-03-25",
+        "last_checked": "2026-05-25",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "TH"
+        ]
+      },
+      "CPH2525_15.0.0.1600(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "b72448e68f81b4efb446f67570935915",
+        "first_seen": "2026-03-10",
+        "last_checked": "2026-03-25",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "TH"
+        ]
+      }
+    }
+  },
+  "CPH2525TW": {
+    "device_name": "Oppo Reno10 Pro",
+    "device_order": 47,
+    "expect_esim": false,
+    "expect_barometer": false,
+    "versions": {
+      "CPH2525_15.0.0.1801(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "b7d91594cd038c0d69b8e9d3f35a7eec",
+        "first_seen": "2026-05-26",
+        "last_checked": "2026-06-25",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "TW"
+        ]
+      },
+      "CPH2525_15.0.0.1603(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "2c5dbdc609f8eec4e127584dc103c82f",
+        "first_seen": "2026-03-31",
+        "last_checked": "2026-05-25",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "TW"
+        ]
+      },
+      "CPH2525_15.0.0.1600(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "d3aeff26f756d3b5e7e85de67999662c",
+        "first_seen": "2026-03-10",
+        "last_checked": "2026-03-30",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "TW"
+        ]
+      }
+    }
+  },
+  "CPH2525VN": {
+    "device_name": "Oppo Reno10 Pro",
+    "device_order": 47,
+    "expect_esim": false,
+    "expect_barometer": false,
+    "versions": {
+      "CPH2525_15.0.0.1801(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "ac9434c69d38425fbd3e0b31beef122f",
+        "first_seen": "2026-05-23",
+        "last_checked": "2026-06-25",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "VN"
+        ]
+      },
+      "CPH2525_15.0.0.1603(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "f072fc3b8c605d96852168abe549d873",
+        "first_seen": "2026-03-28",
+        "last_checked": "2026-05-22",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "VN"
+        ]
+      },
+      "CPH2525_15.0.0.1600(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "945e55b6759b3147e2661e0db1cdb0a3",
+        "first_seen": "2026-03-10",
+        "last_checked": "2026-03-27",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "VN"
+        ]
+      }
+    }
+  },
   "CPH2551": {
     "device_name": "OnePlus Open",
     "device_order": 7,

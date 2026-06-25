@@ -82,6 +82,7 @@ DEVICE_ORDER = [
     "Pad 3", "Pad 2 Pro", "Pad 2", 
     
     # Oppo
+    "Reno10 Pro",
     "Find X8 Ultra", "Find N5", "Find N3", "Find X5 Pro", "Find X5", "Find X3 Pro"
 ]
 
@@ -469,6 +470,25 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
         },
     },
 
+    "Reno10 Pro": {
+        "name": "Oppo Reno10 Pro",
+        "models": {
+            "EEA": "CPH2525EEA",
+            "APC": "CPH2525",
+            "IN": "CPH2525IN",
+            "ID": "CPH2525ID",
+            "MEA": "CPH2525MEA",
+            "MY": "CPH2525MY",
+            "OCA": "CPH2525OCA",
+            "PH": "CPH2525PH",
+            "SA": "CPH2525SA",
+            "SG": "CPH2525SG",
+            "TH": "CPH2525TH",
+            "TW": "CPH2525TW",
+            "VN": "CPH2525VN"
+        },
+    },
+
     "Find X8 Ultra": {
         "name": "Oppo Find X8 Ultra",
         "models": {
@@ -621,6 +641,7 @@ OOS_MAPPING = {
     "Find X5 Pro": "oppo_find_x5_pro",
     "Find X5": "oppo_find_x5",
     "Find X3 Pro": "oppo_find_x3_pro",
+    "Reno10 Pro": "oppo_reno10_pro",
 }
 
 
