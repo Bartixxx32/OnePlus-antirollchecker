@@ -1,13 +1,23 @@
 {
   "history": [
     {
+      "version": "NE2211_16.0.3.530(EX01)",
+      "arb": 0,
+      "major": 2,
+      "minor": 0,
+      "first_seen": "2026-06-25",
+      "last_checked": "2026-06-25",
+      "status": "current",
+      "md5": "88e0e6108203a30e4c5ad43319e67e37"
+    },
+    {
       "version": "NE2211_16.0.3.520(EX01)",
       "arb": 0,
       "major": 2,
       "minor": 0,
       "first_seen": "2026-03-18",
       "last_checked": "2026-06-24",
-      "status": "current",
+      "status": "archived",
       "md5": "46f577fb0b2656d629b5993c3a7762e3"
     },
     {
