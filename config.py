@@ -473,7 +473,6 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
     "Reno10 Pro": {
         "name": "Oppo Reno10 Pro",
         "models": {
-            "EEA": "CPH2525EEA",
             "APC": "CPH2525",
             "IN": "CPH2525IN",
             "ID": "CPH2525ID",

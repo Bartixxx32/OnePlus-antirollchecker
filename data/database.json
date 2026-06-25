@@ -1136,40 +1136,6 @@
       }
     }
   },
-  "CPH2525EEA": {
-    "device_name": "Oppo Reno10 Pro",
-    "device_order": 47,
-    "expect_esim": false,
-    "expect_barometer": false,
-    "versions": {
-      "CPH2525_15.0.0.1603(EX01)": {
-        "arb": 0,
-        "major": 0,
-        "minor": 120,
-        "md5": "128650aa4175ac0e3c4cda9f3ae9eb25",
-        "first_seen": "2026-03-28",
-        "last_checked": "2026-04-23",
-        "status": "current",
-        "is_hardcoded": false,
-        "regions": [
-          "EEA"
-        ]
-      },
-      "CPH2525_15.0.0.1600(EX01)": {
-        "arb": 0,
-        "major": 0,
-        "minor": 120,
-        "md5": "5331936b839bd4267088fa89b461d060",
-        "first_seen": "2026-03-10",
-        "last_checked": "2026-03-27",
-        "status": "archived",
-        "is_hardcoded": false,
-        "regions": [
-          "EEA"
-        ]
-      }
-    }
-  },
   "CPH2525ID": {
     "device_name": "Oppo Reno10 Pro",
     "device_order": 47,
