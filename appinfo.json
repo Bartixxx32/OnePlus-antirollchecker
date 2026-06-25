@@ -1,25 +1,25 @@
 {
   "alerts": [
     {
-      "id": "example_001",
+      "id": "example_global",
       "type": "info",
-      "title": "Example announcement",
-      "message": "This is an example info alert for all devices.",
+      "title": "Welcome to OnePlus ARB Checker",
+      "message": "This is a global announcement shown on all devices.",
       "device": "all"
     },
     {
-      "id": "example_002",
+      "id": "example_15_glo",
       "type": "warning",
-      "title": "OnePlus 15 ARB Warning",
-      "message": "Example: Latest firmware CPH2747_16.0.8.300 is safe with ARB=0. Always check before downgrading.",
-      "device": "15"
+      "title": "OnePlus 15 - ARB Check",
+      "message": "Latest firmware CPH2747_16.0.8.300 has ARB=0. You are safe.",
+      "device": "CPH2747"
     },
     {
-      "id": "example_003",
+      "id": "example_13_arb",
       "type": "danger",
-      "title": "OnePlus 13 ARB = 1",
-      "message": "Example: OnePlus 13 Global firmware 16.0.8.301 has ARB=1. Downgrade is NOT recommended.",
-      "device": "13"
+      "title": "ARB Warning: OnePlus 13",
+      "message": "Firmware 16.0.8.301 has ARB=1 on model CPH2653. Do not downgrade.",
+      "device": "CPH2653"
     }
   ]
 }
