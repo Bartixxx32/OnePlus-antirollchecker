@@ -825,6 +825,19 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "CPH2467_15.0.0.1900(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "7b708d145fda9722c7b62c4260516662",
+        "first_seen": "2026-06-25",
+        "last_checked": "2026-06-25",
+        "status": "current",
+        "is_hardcoded": true,
+        "regions": [
+          "IN"
+        ]
+      },
       "CPH2467_15.0.0.1810(EX01)": {
         "arb": 0,
         "major": 0,
@@ -832,7 +845,7 @@
         "md5": "e7c3ef3766eb129e5735e49124051886",
         "first_seen": "2026-05-20",
         "last_checked": "2026-06-25",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": true,
         "regions": [
           "IN"
