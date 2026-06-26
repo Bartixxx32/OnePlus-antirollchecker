@@ -74,10 +74,22 @@ jobs:
           DEVICE: ${{ inputs.device }}
           TYPE: ${{ inputs.type }}
 
-      - name: Commit and push
+      - name: Commit and push to main
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add data/appinfo.json
           git commit -m "Add alert: ${{ inputs.title }}"
           git push
+
+      - name: Prepare appinfo.json for Pages
+        run: |
+          mkdir -p page
+          cp data/appinfo.json page/appinfo.json
+
+      - name: Deploy to GitHub Pages (gh-pages)
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./page
+          keep_files: true
