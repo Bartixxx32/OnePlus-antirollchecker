@@ -1,0 +1,83 @@
+name: Add Alert to appinfo.json
+
+on:
+  workflow_dispatch:
+    inputs:
+      title:
+        description: 'Alert title (e.g. "CPH2655 ARB = 3")'
+        required: true
+        type: string
+      message:
+        description: 'Alert message body'
+        required: true
+        type: string
+      device:
+        description: 'Device model ("all" or model number like "CPH2655")'
+        required: true
+        type: string
+      type:
+        description: 'Severity type'
+        required: false
+        default: 'warning'
+        type: choice
+        options:
+          - info
+          - warning
+          - danger
+
+jobs:
+  add-alert:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v5
+
+      - name: Add alert to appinfo.json
+        run: |
+          python3 << 'PYEOF'
+          import json, os
+          from datetime import datetime
+
+          path = "data/appinfo.json"
+          with open(path) as f:
+              data = json.load(f)
+
+          alert_id = "alert_" + datetime.utcnow().strftime("%Y%m%d_%H%M%S")
+
+          new_alert = {
+              "id": alert_id,
+              "type": os.environ["TYPE"],
+              "title": os.environ["ALERT_TITLE"],
+              "message": os.environ["ALERT_MESSAGE"],
+              "device": os.environ["DEVICE"]
+          }
+
+          if "alerts" not in data or not isinstance(data["alerts"], list):
+              data["alerts"] = []
+
+          data["alerts"].append(new_alert)
+
+          with open(path, "w") as f:
+              json.dump(data, f, indent=2, ensure_ascii=False)
+              f.write("\n")
+
+          print(f"Added alert: {alert_id}")
+          with open(os.environ["GITHUB_ENV"], "a") as f:
+              f.write(f"ALERT_ID={alert_id}\n")
+          PYEOF
+        env:
+          ALERT_TITLE: ${{ inputs.title }}
+          ALERT_MESSAGE: ${{ inputs.message }}
+          DEVICE: ${{ inputs.device }}
+          TYPE: ${{ inputs.type }}
+
+      - name: Commit and push
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data/appinfo.json
+          git commit -m "Add alert: ${{ inputs.title }}"
+          git push
