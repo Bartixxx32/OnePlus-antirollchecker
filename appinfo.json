@@ -6,17 +6,19 @@
         "type": "info | warning | danger",
         "title": "Short alert title",
         "message": "Full alert message displayed in the app",
-        "device": "all | CPH2747 | CPH2653 | ... (model number from database.json keys)"
+        "device": "all | CPH2747 | CPH2653 | ... (model number from database.json keys)",
+        "display": "banner | notification | (omit for both)"
       }
     ]
   },
   "alerts": [
     {
-      "id": "alert_20260626_235546",
-      "type": "info",
+      "id": "alert_20260627_000533",
+      "type": "warning",
       "title": "test",
-      "message": "test",
-      "device": "all"
+      "message": "test2",
+      "device": "all",
+      "display": "notification"
     }
   ]
 }
