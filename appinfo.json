@@ -27,6 +27,14 @@
       "message": "teetete",
       "device": "all",
       "display": "notification"
+    },
+    {
+      "id": "alert_20260627_001253",
+      "type": "danger",
+      "title": "test",
+      "message": "testtest",
+      "device": "all",
+      "display": "notification"
     }
   ]
 }
