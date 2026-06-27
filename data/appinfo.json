@@ -11,5 +11,14 @@
       }
     ]
   },
-  "alerts": []
+  "alerts": [
+    {
+      "id": "alert_20260627_000533",
+      "type": "warning",
+      "title": "test",
+      "message": "test2",
+      "device": "all",
+      "display": "notification"
+    }
+  ]
 }
