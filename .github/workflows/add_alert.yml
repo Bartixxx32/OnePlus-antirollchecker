@@ -24,6 +24,15 @@ on:
           - info
           - warning
           - danger
+      display:
+        description: 'Where to show (banner=carousel, notification=system, omit=both)'
+        required: false
+        default: ''
+        type: choice
+        options:
+          - ''
+          - banner
+          - notification
 
 jobs:
   add-alert:
@@ -52,8 +61,12 @@ jobs:
               "type": os.environ["TYPE"],
               "title": os.environ["ALERT_TITLE"],
               "message": os.environ["ALERT_MESSAGE"],
-              "device": os.environ["DEVICE"]
+              "device": os.environ["DEVICE"],
           }
+
+          display = os.environ.get("DISPLAY", "").strip()
+          if display:
+              new_alert["display"] = display
 
           if "alerts" not in data or not isinstance(data["alerts"], list):
               data["alerts"] = []
@@ -73,6 +86,7 @@ jobs:
           ALERT_MESSAGE: ${{ inputs.message }}
           DEVICE: ${{ inputs.device }}
           TYPE: ${{ inputs.type }}
+          DISPLAY: ${{ inputs.display }}
 
       - name: Commit and push to main
         run: |
