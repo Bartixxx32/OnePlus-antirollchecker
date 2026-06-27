@@ -10,5 +10,13 @@
       }
     ]
   },
-  "alerts": []
+  "alerts": [
+    {
+      "id": "alert_20260626_235546",
+      "type": "info",
+      "title": "test",
+      "message": "test",
+      "device": "all"
+    }
+  ]
 }
