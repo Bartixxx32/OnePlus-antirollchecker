@@ -6557,6 +6557,19 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "PLR110_16.0.8.301(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": "768d172d87e65933801fd6e374aba10b",
+        "first_seen": "2026-06-30",
+        "last_checked": "2026-06-30",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "CN"
+        ]
+      },
       "PLR110_16.0.8.300(CN01)": {
         "arb": 0,
         "major": 3,
@@ -6564,7 +6577,7 @@
         "md5": "1b9f134e55d27732141a72fe0661ec78",
         "first_seen": "2026-06-16",
         "last_checked": "2026-06-30",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "CN"
