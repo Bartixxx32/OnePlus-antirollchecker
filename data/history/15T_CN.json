@@ -1,13 +1,23 @@
 {
   "history": [
     {
+      "version": "PLZ110_16.0.9.400(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-07-03",
+      "last_checked": "2026-07-03",
+      "status": "current",
+      "md5": "b5b3730e9d5f92f6ba4ef5a6685ce384"
+    },
+    {
       "version": "PLZ110_16.0.8.300(CN01)",
       "arb": 0,
       "major": 3,
       "minor": 0,
       "first_seen": "2026-06-03",
       "last_checked": "2026-07-02",
-      "status": "current",
+      "status": "archived",
       "md5": "cb6375da24d98d90048a13f9d6a67d5f"
     },
     {
