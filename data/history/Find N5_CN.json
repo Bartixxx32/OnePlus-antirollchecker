@@ -1,13 +1,23 @@
 {
   "history": [
     {
+      "version": "PKH120_16.0.9.400(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-07-10",
+      "last_checked": "2026-07-10",
+      "status": "current",
+      "md5": "df8780bbebf60275031e6133215792d0"
+    },
+    {
       "version": "PKH120_16.0.8.300(CN01)",
       "arb": 0,
       "major": 3,
       "minor": 0,
       "first_seen": "2026-06-11",
       "last_checked": "2026-07-09",
-      "status": "current",
+      "status": "archived",
       "md5": "09ed251bdc89e81dd27b542c46967544"
     },
     {
