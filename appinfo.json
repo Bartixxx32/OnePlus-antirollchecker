@@ -35,6 +35,13 @@
       "message": "testtest",
       "device": "all",
       "display": "notification"
+    },
+    {
+      "id": "alert_20260714_135136",
+      "type": "warning",
+      "title": "CVE-2026-43499 — Possible ARB Increase",
+      "message": "OnePlus 15 and possibly other devices are vulnerable to CVE-2026-43499. OnePlus may push an ARB increase in response, especially on kernel 6.12.23. Check ARB before installing any new firmware.",
+      "device": "all"
     }
   ]
 }
