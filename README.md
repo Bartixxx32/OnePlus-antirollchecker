@@ -1407,13 +1407,14 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
-| China | OPD2413 | OPD2413_16.0.8.300(CN01)<br><details><summary>MD5</summary><code>2681c6c59925c4cf41efeb658f765afe</code></details> | **1** | Major: 3, Minor: 0 | 2026-07-14 | ❌ Protected |
+| China | OPD2413 | OPD2413_16.0.9.400(CN01)<br><details><summary>MD5</summary><code>c7d36364f94daa509c19f71b1e100982</code></details> | **1** | Major: 3, Minor: 0 | 2026-07-14 | ❌ Protected |
 
 <details>
 <summary>📜 <b>China History</b> (click to expand)</summary>
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| OPD2413_16.0.8.300(CN01)<br><details><summary>MD5</summary><code>2681c6c59925c4cf41efeb658f765afe</code></details> | 1 | Major: 3, Minor: 0 | 2026-07-14 | ❌ Protected |
 | OPD2413_16.0.7.200(CN01)<br><details><summary>MD5</summary><code>f6a77eeb8ff0270c4f557d84999d4891</code></details> | 1 | Major: 3, Minor: 0 | 2026-06-15 | ❌ Protected |
 | OPD2413_16.0.3.501(CN01)<br><details><summary>MD5</summary><code>7af2eda10018ec1b4c0d66b1df258e55</code></details> | 0 | Major: 3, Minor: 0 | 2026-05-22 | ✅ Safe |
 | OPD2413_16.0.2.400(CN01)<br><details><summary>MD5</summary><code>d91040afb739f2b5b119cc9cc585a7c9</code></details> | 0 | Major: 3, Minor: 0 | 2026-04-20 | ✅ Safe |
@@ -1483,8 +1484,8 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | Oceania | CPH2525OCA | CPH2525_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>0407edf6593a82dc2d02b13bc38c0a2e</code></details> | **0** | Major: 0, Minor: 120 | 2026-07-14 | ✅ Safe |
 | Saudi Arabia | CPH2525SA | CPH2525_15.0.0.1901(EX01)<br><details><summary>MD5</summary><code>6260acd0c725d9b5d2c66c9ebebe1c55</code></details> | **0** | Major: 0, Minor: 120 | 2026-07-14 | ✅ Safe |
 | Middle East | CPH2525MEA | CPH2525_15.0.0.1801(EX01)<br><details><summary>MD5</summary><code>d6c541a6a7cbc905257da9f2c89370bf</code></details> | **0** | Major: 0, Minor: 120 | 2026-07-14 | ✅ Safe |
-| India | CPH2525IN | CPH2525_13.1.1.147(EX01)<br><details><summary>MD5</summary><code>abb2a1ef3450621de3073f48d5215b19</code></details> | **0** | Major: 0, Minor: 120 | 2026-07-14 | ✅ Safe |
 | Philippines | CPH2525PH | CPH2525_15.0.0.1901(EX01)<br><details><summary>MD5</summary><code>9fdc262d0e71288ea7ac1d1aefb40125</code></details> | **0** | Major: 0, Minor: 120 | 2026-07-14 | ✅ Safe |
+| India | CPH2525IN | CPH2525_13.1.1.147(EX01)<br><details><summary>MD5</summary><code>abb2a1ef3450621de3073f48d5215b19</code></details> | **0** | Major: 0, Minor: 120 | 2026-07-14 | ✅ Safe |
 
 <details>
 <summary>📜 <b>Singapore History</b> (click to expand)</summary>
@@ -1972,4 +1973,4 @@ Prefer a native mobile experience? We have an official Android app on F-Droid! C
 > **Important:** The bot **only** works within this group to prevent spam and ensure availability. DM checks are disabled.
 
 ---
-*Last updated: 2026-07-14 13:56 UTC*
+*Last updated: 2026-07-14 23:31 UTC*
