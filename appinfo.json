@@ -13,30 +13,6 @@
   },
   "alerts": [
     {
-      "id": "alert_20260627_000533",
-      "type": "warning",
-      "title": "test",
-      "message": "test2",
-      "device": "all",
-      "display": "notification"
-    },
-    {
-      "id": "alert_20260627_000652",
-      "type": "warning",
-      "title": "teetet",
-      "message": "teetete",
-      "device": "all",
-      "display": "notification"
-    },
-    {
-      "id": "alert_20260627_001253",
-      "type": "danger",
-      "title": "test",
-      "message": "testtest",
-      "device": "all",
-      "display": "notification"
-    },
-    {
       "id": "alert_20260714_135136",
       "type": "warning",
       "title": "CVE-2026-43499 — Possible ARB Increase",
