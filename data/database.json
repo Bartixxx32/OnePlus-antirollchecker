@@ -2262,6 +2262,19 @@
     "expect_esim": true,
     "expect_barometer": false,
     "versions": {
+      "CPH2585_16.0.5.1001(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "minor": 0,
+        "md5": "2b599cf5d3fe8b2e3854da6aed5b6d15",
+        "first_seen": "2026-07-16",
+        "last_checked": "2026-07-16",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "IN"
+        ]
+      },
       "CPH2585_16.0.5.702(EX01)": {
         "arb": 0,
         "major": 2,
@@ -2269,7 +2282,7 @@
         "md5": "bf4e0cccac0d0a2298689a1e5ce22dcf",
         "first_seen": "2026-05-13",
         "last_checked": "2026-07-13",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "IN"
@@ -6013,6 +6026,19 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "PKG110_16.0.9.400(CN01)": {
+        "arb": 1,
+        "major": 3,
+        "minor": 0,
+        "md5": "6fb0095cc9c07dbdb74074c87cbb643f",
+        "first_seen": "2026-07-16",
+        "last_checked": "2026-07-16",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "CN"
+        ]
+      },
       "PKG110_16.0.8.300(CN01)": {
         "arb": 1,
         "major": 3,
@@ -6020,7 +6046,7 @@
         "md5": "a28632dc4e3e2c8b51cc6e938c87b6fb",
         "first_seen": "2026-06-18",
         "last_checked": "2026-07-16",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "CN"
