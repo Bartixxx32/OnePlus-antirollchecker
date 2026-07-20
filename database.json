@@ -1996,6 +1996,19 @@
     "expect_esim": true,
     "expect_barometer": false,
     "versions": {
+      "CPH2573_16.0.9.400(EX01)": {
+        "arb": 1,
+        "major": 3,
+        "minor": 0,
+        "md5": "17af17165e4d01ab2293d56725775ac2",
+        "first_seen": "2026-07-20",
+        "last_checked": "2026-07-20",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "IN"
+        ]
+      },
       "CPH2573_16.0.8.300(EX01)": {
         "arb": 1,
         "major": 3,
@@ -2003,7 +2016,7 @@
         "md5": "7df0890276149e99d1d2e61cc1ad3597",
         "first_seen": "2026-06-24",
         "last_checked": "2026-07-20",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "IN"
@@ -3241,12 +3254,13 @@
         "arb": 0,
         "major": 3,
         "minor": 0,
-        "md5": "0d2ba73fcc91ea3ed1a6a81e25d7462f",
-        "first_seen": "2026-07-15",
+        "md5": "2696c70a51e83c0d4d5b49ec9c6790dc",
+        "first_seen": "2026-07-20",
         "last_checked": "2026-07-20",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
+          "MX",
           "ID",
           "MY",
           "TH"
@@ -3259,7 +3273,7 @@
         "md5": "819c6644f79107bd3c363f5e36c603c7",
         "first_seen": "2026-06-24",
         "last_checked": "2026-07-17",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "MX",
@@ -3919,7 +3933,8 @@
         "status": "current",
         "is_hardcoded": false,
         "regions": [
-          "GLO"
+          "GLO",
+          "EU"
         ]
       },
       "CPH2747_16.0.8.300(EX01)": {
@@ -5515,6 +5530,19 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "OPD2415_16.0.9.400(EX01)": {
+        "arb": 1,
+        "major": 3,
+        "minor": 0,
+        "md5": "de27a12f3d0894175dbe17a417c292ad",
+        "first_seen": "2026-07-20",
+        "last_checked": "2026-07-20",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "IN"
+        ]
+      },
       "OPD2415_16.0.7.200(EX01)": {
         "arb": 1,
         "major": 3,
