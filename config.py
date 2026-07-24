@@ -72,10 +72,11 @@ DEVICE_ORDER = [
     "Nord N30", "Nord N20",
     "Nord 1", "Nord N200 5G",
     
-    # China Exclusives (Ace)
-    "Ace 6T", 
+    # China Exclusives (Turbo / Ace)
+    "Turbo 6", "Turbo 6V",
+    "Ace 6T",
     "Ace 6",
-    "Ace 5 Pro", "Ace 5", 
+    "Ace 5 Pro", "Ace 5",
     "Ace 3 Pro", "Ace 3V", "Ace 3",
 
     # Pads
@@ -371,7 +372,19 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
         },
     },
 
-    # China Exclusives (Ace)
+    # China Exclusives (Turbo / Ace)
+    "Turbo 6": {
+        "name": "OnePlus Turbo 6",
+        "models": {
+            "CN": "PLU110"
+        },
+    },
+    "Turbo 6V": {
+        "name": "OnePlus Turbo 6V",
+        "models": {
+            "CN": "PLY110"
+        },
+    },
     "Ace 6T": {
         "name": "OnePlus Ace 6T",
         "models": {
@@ -543,6 +556,8 @@ SPRING_MAPPING = {
     "oneplus_13s": "OP 13S",
     "oneplus_12": "OP 12",
     "oneplus_12r": "OP ACE 3",
+    "oneplus_turbo_6": "OP TURBO 6",
+    "oneplus_turbo_6v": "OP TURBO 6V",
     "oneplus_ace_6t": "OP ACE 6T",
     "oneplus_ace_6": "OP ACE 6",
     "oneplus_ace_5": "OP ACE 5",
@@ -620,6 +635,9 @@ OOS_MAPPING = {
     "Nord CE 3": "oneplus_nord_ce_3",
     "Nord CE 3 Lite": "oneplus_nord_ce_3_lite",
     "Nord CE 2 Lite": "oneplus_nord_ce_2_lite",
+    # Turbo
+    "Turbo 6": "oneplus_turbo_6",
+    "Turbo 6V": "oneplus_turbo_6v",
     # Ace
     "Ace 6T": "oneplus_ace_6t",
     "Ace 6": "oneplus_ace_6",
