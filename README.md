@@ -574,7 +574,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
 | Global | CPH2449 | CPH2449_16.0.5.702(EX01)<br><details><summary>MD5</summary><code>5ec4120c2e67fb401b7d887988e8b9b0</code></details> | **0** | Major: 2, Minor: 0 | 2026-07-27 | ✅ Safe |
-| Europe | CPH2449 | CPH2449_16.0.5.702(EX01)<br><details><summary>MD5</summary><code>c54333bf7dabad17649dbea39fb56fd6</code></details> | **0** | Major: 2, Minor: 0 | 2026-07-27 | ✅ Safe |
+| Europe | CPH2449 | CPH2449_16.0.5.1002(EX01)<br><details><summary>MD5</summary><code>15e2d68a9e5324ee838a38b97052a105</code></details> | **0** | Major: 2, Minor: 0 | 2026-07-27 | ✅ Safe |
 | India | CPH2447 | CPH2447_16.0.5.1002(EX01)<br><details><summary>MD5</summary><code>abd92f7936e783edf34499cf52c77857</code></details> | **0** | Major: 2, Minor: 0 | 2026-07-27 | ✅ Safe |
 | North America | CPH2451 | CPH2451_15.0.0.800(EX01)<br><details><summary>MD5</summary><code>6cf186b46c64e0e0f81ce44f9df02689</code></details> | **0** | Major: 2, Minor: 0 | 2026-07-27 | ✅ Safe |
 
@@ -598,6 +598,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| CPH2449_16.0.5.702(EX01)<br><details><summary>MD5</summary><code>c54333bf7dabad17649dbea39fb56fd6</code></details> | 0 | Major: 2, Minor: 0 | 2026-07-27 | ✅ Safe |
 | CPH2449_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>5d8b993a4940e0e315053b2c126c851e</code></details> | 0 | Major: 2, Minor: 0 | 2026-05-25 | ✅ Safe |
 | CPH2449_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>9db981106445969885335a2d35cfda5f</code></details> | 0 | Major: 2, Minor: 0 | 2026-04-28 | ✅ Safe |
 | CPH2449_16.0.2.401(EX01)<br><details><summary>MD5</summary><code>7f3b8a402aaba42654f4b23aa3065120</code></details> | 0 | Major: 2, Minor: 0 | 2026-02-25 | ✅ Safe |
@@ -1765,7 +1766,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
 | Singapore | CPH2499 | CPH2499_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>a5b87ecebdb06a2023b9487c6a1d71aa</code></details> | **0** | Major: 2, Minor: 0 | 2026-07-27 | ✅ Safe |
-| Taiwan | CPH2499 | CPH2499_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>1d4fe18caac4bb9765ea20ce8cf61ed7</code></details> | **0** | Major: 2, Minor: 0 | 2026-07-27 | ✅ Safe |
+| Taiwan | CPH2499 | CPH2499_16.0.5.1002(EX01)<br><details><summary>MD5</summary><code>9161dcb8b8674ff6a9dd0d2d23411aeb</code></details> | **0** | Major: 2, Minor: 0 | 2026-07-27 | ✅ Safe |
 | Malaysia | CPH2499 | CPH2499_16.0.5.1002(EX01)<br><details><summary>MD5</summary><code>2f21937ce7c57b4c4723c4e738ea1b7f</code></details> | **0** | Major: 2, Minor: 0 | 2026-07-27 | ✅ Safe |
 | Indonesia | CPH2499 | CPH2499_16.0.5.1002(EX01)<br><details><summary>MD5</summary><code>48b00ad3baf9688eb505d41ac8cf77a3</code></details> | **0** | Major: 2, Minor: 0 | 2026-07-27 | ✅ Safe |
 | Thailand | CPH2499 | CPH2499_16.0.5.1002(EX01)<br><details><summary>MD5</summary><code>7e4bdd74c76e6964d1a1bed5f33fa3fb</code></details> | **0** | Major: 2, Minor: 0 | 2026-07-27 | ✅ Safe |
@@ -1787,6 +1788,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| CPH2499_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>1d4fe18caac4bb9765ea20ce8cf61ed7</code></details> | 0 | Major: 2, Minor: 0 | 2026-07-27 | ✅ Safe |
 | CPH2499_16.0.3.505(EX01)<br><details><summary>MD5</summary><code>9bfc00e1335a3f6dab6ccdeacf242d65</code></details> | 0 | Major: 2, Minor: 0 | 2026-05-29 | ✅ Safe |
 | CPH2499_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>202302d926d361279622913314cf2c6c</code></details> | 0 | Major: 2, Minor: 0 | 2026-03-23 | ✅ Safe |
 
@@ -2010,4 +2012,4 @@ Prefer a native mobile experience? We have an official Android app on F-Droid! C
 > **Important:** The bot **only** works within this group to prevent spam and ensure availability. DM checks are disabled.
 
 ---
-*Last updated: 2026-07-27 03:40 UTC*
+*Last updated: 2026-07-27 20:18 UTC*

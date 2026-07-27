@@ -624,6 +624,19 @@
     "expect_esim": true,
     "expect_barometer": false,
     "versions": {
+      "CPH2449_16.0.5.1002(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "minor": 0,
+        "md5": "15e2d68a9e5324ee838a38b97052a105",
+        "first_seen": "2026-07-27",
+        "last_checked": "2026-07-27",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "EU"
+        ]
+      },
       "CPH2449_16.0.5.702(EX01)": {
         "arb": 0,
         "major": 2,
@@ -631,7 +644,7 @@
         "md5": "c54333bf7dabad17649dbea39fb56fd6",
         "first_seen": "2026-05-27",
         "last_checked": "2026-07-27",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "EU",
@@ -1082,12 +1095,13 @@
         "arb": 0,
         "major": 2,
         "minor": 0,
-        "md5": "48b00ad3baf9688eb505d41ac8cf77a3",
-        "first_seen": "2026-07-22",
+        "md5": "9161dcb8b8674ff6a9dd0d2d23411aeb",
+        "first_seen": "2026-07-27",
         "last_checked": "2026-07-27",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
+          "TW",
           "ID",
           "TH",
           "VN",
@@ -1101,7 +1115,7 @@
         "md5": "1d4fe18caac4bb9765ea20ce8cf61ed7",
         "first_seen": "2026-05-30",
         "last_checked": "2026-07-27",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "TW",
