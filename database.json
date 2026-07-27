@@ -43,7 +43,7 @@
   },
   "CPH2173": {
     "device_name": "Oppo Find X3 Pro",
-    "device_order": 53,
+    "device_order": 55,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -66,7 +66,7 @@
   },
   "CPH2305": {
     "device_name": "Oppo Find X5 Pro",
-    "device_order": 51,
+    "device_order": 53,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -183,7 +183,7 @@
   },
   "CPH2307": {
     "device_name": "Oppo Find X5",
-    "device_order": 52,
+    "device_order": 54,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -1074,7 +1074,7 @@
   },
   "CPH2499": {
     "device_name": "Oppo Find N3",
-    "device_order": 50,
+    "device_order": 52,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -1188,7 +1188,7 @@
   },
   "CPH2525": {
     "device_name": "Oppo Reno10 Pro",
-    "device_order": 47,
+    "device_order": 49,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -1248,7 +1248,7 @@
   },
   "CPH2525ID": {
     "device_name": "Oppo Reno10 Pro",
-    "device_order": 47,
+    "device_order": 49,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -1308,7 +1308,7 @@
   },
   "CPH2525IN": {
     "device_name": "Oppo Reno10 Pro",
-    "device_order": 47,
+    "device_order": 49,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -1329,7 +1329,7 @@
   },
   "CPH2525MEA": {
     "device_name": "Oppo Reno10 Pro",
-    "device_order": 47,
+    "device_order": 49,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -1389,7 +1389,7 @@
   },
   "CPH2525MY": {
     "device_name": "Oppo Reno10 Pro",
-    "device_order": 47,
+    "device_order": 49,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -1449,7 +1449,7 @@
   },
   "CPH2525OCA": {
     "device_name": "Oppo Reno10 Pro",
-    "device_order": 47,
+    "device_order": 49,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -1483,7 +1483,7 @@
   },
   "CPH2525PH": {
     "device_name": "Oppo Reno10 Pro",
-    "device_order": 47,
+    "device_order": 49,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -1543,7 +1543,7 @@
   },
   "CPH2525SA": {
     "device_name": "Oppo Reno10 Pro",
-    "device_order": 47,
+    "device_order": 49,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -1603,7 +1603,7 @@
   },
   "CPH2525SG": {
     "device_name": "Oppo Reno10 Pro",
-    "device_order": 47,
+    "device_order": 49,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -1663,7 +1663,7 @@
   },
   "CPH2525TH": {
     "device_name": "Oppo Reno10 Pro",
-    "device_order": 47,
+    "device_order": 49,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -1723,7 +1723,7 @@
   },
   "CPH2525TW": {
     "device_name": "Oppo Reno10 Pro",
-    "device_order": 47,
+    "device_order": 49,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -1783,7 +1783,7 @@
   },
   "CPH2525VN": {
     "device_name": "Oppo Reno10 Pro",
-    "device_order": 47,
+    "device_order": 49,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -3340,7 +3340,7 @@
   },
   "CPH2671": {
     "device_name": "Oppo Find N5",
-    "device_order": 49,
+    "device_order": 51,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -5470,7 +5470,7 @@
   },
   "OPD2403": {
     "device_name": "OnePlus Pad 2",
-    "device_order": 46,
+    "device_order": 48,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -5563,7 +5563,7 @@
   },
   "OPD2413": {
     "device_name": "OnePlus Pad 2 Pro",
-    "device_order": 45,
+    "device_order": 47,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -5662,7 +5662,7 @@
   },
   "OPD2415": {
     "device_name": "OnePlus Pad 3",
-    "device_order": 44,
+    "device_order": 46,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -5898,7 +5898,7 @@
   },
   "PJE110": {
     "device_name": "OnePlus Ace 3",
-    "device_order": 43,
+    "device_order": 45,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -5984,7 +5984,7 @@
   },
   "PJF110": {
     "device_name": "OnePlus Ace 3V",
-    "device_order": 42,
+    "device_order": 44,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -6044,7 +6044,7 @@
   },
   "PJX110": {
     "device_name": "OnePlus Ace 3 Pro",
-    "device_order": 41,
+    "device_order": 43,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -6281,7 +6281,7 @@
   },
   "PKG110": {
     "device_name": "OnePlus Ace 5",
-    "device_order": 40,
+    "device_order": 42,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -6419,7 +6419,7 @@
   },
   "PKJ110": {
     "device_name": "Oppo Find X8 Ultra",
-    "device_order": 48,
+    "device_order": 50,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -6531,7 +6531,7 @@
   },
   "PKR110": {
     "device_name": "OnePlus Ace 5 Pro",
-    "device_order": 39,
+    "device_order": 41,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -6669,7 +6669,7 @@
   },
   "PKV110": {
     "device_name": "Oppo Find N5",
-    "device_order": 49,
+    "device_order": 51,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -7057,7 +7057,7 @@
   },
   "PLQ110": {
     "device_name": "OnePlus Ace 6",
-    "device_order": 38,
+    "device_order": 40,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -7221,7 +7221,7 @@
   },
   "PLR110": {
     "device_name": "OnePlus Ace 6T",
-    "device_order": 37,
+    "device_order": 39,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
