@@ -192,26 +192,15 @@ jobs:
           fi
 
           API_BASE="https://oosdownloader-gui.fly.dev/api"
-          VARIANT="${{ matrix.variant }}"
-          DEVNAME="${{ matrix.device_name }}"
 
-          # Determine brand from device name
-          BRAND="oneplus"
-          if [[ "${DEVNAME,,}" == oppo* ]]; then
-            BRAND="oppo"
-          elif [[ "${DEVNAME,,}" == realme* ]]; then
-            BRAND="realme"
-          fi
+          ENC_URL=$(python3 -c "import urllib.parse; print(urllib.parse.quote('$URL', safe=''))")
 
-          ENC_DEVNAME=$(python3 -c "import urllib.parse; print(urllib.parse.quote('$DEVNAME'))")
-          ENC_VARIANT=$(python3 -c "import urllib.parse; print(urllib.parse.quote('$VARIANT'))")
-
-          echo "Downloading xbl_config from OOS Downloader v2 API..."
+          echo "Downloading xbl_config from OOS Downloader v2 API using URL from fetch_firmware..."
           mkdir -p firmware_data
-          curl -sS -w "\n%{http_code}" --max-time 180 \
+          curl -sS -w "\n%{http_code}" --max-time 300 \
             --retry 3 --retry-delay 5 \
             -D /tmp/xbl_headers.txt \
-            "${API_BASE}/ota/v2/extract-partition?device=${ENC_DEVNAME}&region=${ENC_VARIANT}&partition=xbl_config&brand=${BRAND}" \
+            "${API_BASE}/ota/v2/extract-partition?url=${ENC_URL}&md5=${FW_MD5}&version=${VERSION}&partition=xbl_config" \
             -o firmware_data/xbl_config.img \
             > /tmp/xbl_status.txt
 
@@ -224,12 +213,18 @@ jobs:
           fi
 
           PART_MD5=$(grep -i '^X-Md5:' /tmp/xbl_headers.txt | awk '{print $2}' | tr -d '\r\n')
-          FW_MD5_HDR=$(grep -i '^X-Fw-Md5:' /tmp/xbl_headers.txt | awk '{print $2}' | tr -d '\r\n')
+          FW_API_MD5=$(grep -i '^X-Fw-Md5:' /tmp/xbl_headers.txt | awk '{print $2}' | tr -d '\r\n')
+          API_VERSION=$(grep -i '^X-Version:' /tmp/xbl_headers.txt | awk '{print $2}' | tr -d '\r\n')
           PART_SIZE=$(grep -i '^X-Partition-Size:' /tmp/xbl_headers.txt | awk '{print $2}' | tr -d '\r\n')
 
+          echo "API returned version: $API_VERSION"
           echo "Partition size: $PART_SIZE bytes"
           echo "Partition MD5: $PART_MD5"
-          echo "Firmware MD5 (from API): $FW_MD5"
+          echo "Firmware MD5 (from API): $FW_API_MD5"
+
+          if [[ "$API_VERSION" != "" && "$API_VERSION" != "$VERSION" ]]; then
+            echo "WARNING: API returned version $API_VERSION, expected $VERSION"
+          fi
 
           CALC_MD5=$(md5sum firmware_data/xbl_config.img | awk '{print $1}')
           if [[ "$PART_MD5" != "" && "$CALC_MD5" != "$PART_MD5" ]]; then
@@ -241,7 +236,6 @@ jobs:
           echo "Transfer verified (MD5 match: $CALC_MD5)"
 
           echo "part_md5=$PART_MD5" >> $GITHUB_OUTPUT
-          echo "fw_md5=$FW_MD5" >> $GITHUB_OUTPUT
 
 
       - name: Check ARB (Direct from v2)
@@ -260,7 +254,7 @@ jobs:
             "arb_index": "$ARB_INDEX",
             "major": "$MAJOR",
             "minor": "$MINOR",
-            "md5": "${{ steps.download_xbl.outputs.fw_md5 }}"
+            "md5": "${{ steps.get_details.outputs.md5 }}"
           }
           EOF
 
