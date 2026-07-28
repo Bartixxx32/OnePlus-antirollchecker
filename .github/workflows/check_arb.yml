@@ -58,9 +58,16 @@ jobs:
           python-version: '3.11'
           cache: 'pip'
 
-      - name: Install Python dependencies
+      - name: Install Python dependencies to cached dir
         run: |
-          pip install -r requirements.txt
+          mkdir -p .deps
+          pip install -r requirements.txt --target=.deps
+
+      - name: Cache Python Dependencies
+        uses: actions/cache/save@v5
+        with:
+          path: .deps
+          key: pydeps-${{ hashFiles('requirements.txt') }}
 
       - name: Cache Tools
         id: cache-tools
@@ -112,11 +119,17 @@ jobs:
         uses: actions/setup-python@v6
         with:
           python-version: '3.11'
-          cache: 'pip'
 
-      - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
+      - name: Restore Python Dependencies
+        id: restore-pydeps
+        uses: actions/cache/restore@v5
+        with:
+          path: .deps
+          key: pydeps-${{ hashFiles('requirements.txt') }}
+          fail-on-cache-miss: true
+
+      - name: Add deps to Python path
+        run: echo "PYTHONPATH=$PWD/.deps" >> $GITHUB_ENV
 
       - name: Restore Tools Cache
         uses: actions/cache/restore@v5
