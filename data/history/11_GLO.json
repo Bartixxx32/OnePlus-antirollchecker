@@ -1,23 +1,13 @@
 {
   "history": [
     {
-      "version": "CPH2449_16.0.5.1002(EX01)",
-      "arb": 0,
-      "major": 2,
-      "minor": 0,
-      "first_seen": "2026-07-28",
-      "last_checked": "2026-07-28",
-      "status": "current",
-      "md5": "2989f602832ec78246156589950fdf2d"
-    },
-    {
       "version": "CPH2449_16.0.5.702(EX01)",
       "arb": 0,
       "major": 2,
       "minor": 0,
       "first_seen": "2026-05-26",
       "last_checked": "2026-07-27",
-      "status": "archived",
+      "status": "current",
       "md5": "5ec4120c2e67fb401b7d887988e8b9b0"
     },
     {
@@ -76,7 +66,7 @@
       "major": 2,
       "minor": 0,
       "first_seen": "2026-02-04",
-      "last_checked": "2026-07-28",
+      "last_checked": "2026-03-10",
       "status": "archived",
       "md5": "54cc417e44e221c6960e4a6446c56cd0"
     },
