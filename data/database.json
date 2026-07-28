@@ -11,7 +11,7 @@
         "minor": 120,
         "md5": "fa6ff6d1f91c0549371c28932f7b37cc",
         "first_seen": "2026-02-04",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -32,7 +32,7 @@
         "minor": 120,
         "md5": "c704f8b99a545a5a53b3bbe141bfb0ec",
         "first_seen": "2026-02-04",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -53,17 +53,17 @@
         "minor": 120,
         "md5": {
           "SG": "0d2005b4b7818ccdc3590096b88d8d09",
-          "EU": "81bc0356f4e9dee62a305db9be52c3a8",
-          "TW": "4de6a395dea47703937b9786949868a5"
+          "TW": "4de6a395dea47703937b9786949868a5",
+          "EU": "81bc0356f4e9dee62a305db9be52c3a8"
         },
         "first_seen": "2026-02-04",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
           "SG",
-          "EU",
-          "TW"
+          "TW",
+          "EU"
         ]
       }
     }
@@ -80,17 +80,17 @@
         "minor": 0,
         "md5": {
           "SG": "71fd05842c877ec49e3b0e41c14cea25",
-          "EU": "8825b9931592d5f68b86a9baf7fe0837",
-          "TW": "e176ca4a48fccb9325fc7f1f005cabe7"
+          "TW": "e176ca4a48fccb9325fc7f1f005cabe7",
+          "EU": "8825b9931592d5f68b86a9baf7fe0837"
         },
         "first_seen": "2026-07-07",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
           "SG",
-          "EU",
-          "TW"
+          "TW",
+          "EU"
         ]
       },
       "CPH2305_16.0.3.530(EX01)": {
@@ -111,16 +111,16 @@
         "major": 2,
         "minor": 0,
         "md5": {
-          "EU": "4d50d6bc4def5cba0d05351c842670e8",
-          "TW": "cad47f9b17760e4549cbb82af3c85b13"
+          "TW": "cad47f9b17760e4549cbb82af3c85b13",
+          "EU": "4d50d6bc4def5cba0d05351c842670e8"
         },
-        "first_seen": "2026-04-15",
+        "first_seen": "2026-03-31",
         "last_checked": "2026-07-01",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "TW"
+          "TW",
+          "EU"
         ]
       },
       "CPH2305_16.0.3.501(EX01)": {
@@ -154,17 +154,17 @@
         "major": 2,
         "minor": 0,
         "md5": {
-          "OCA": "3f6ea5e51cd36086013baf858c5a2f76",
           "SG": "81aa48b49783dffec339e362edeb230b",
+          "OCA": "3f6ea5e51cd36086013baf858c5a2f76",
           "TW": "f872fdd23787fec04579586d7a34ac20"
         },
-        "first_seen": "2026-05-08",
-        "last_checked": "2026-07-27",
-        "status": "current",
+        "first_seen": "2026-02-04",
+        "last_checked": "2026-02-25",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "OCA",
           "SG",
+          "OCA",
           "TW"
         ]
       },
@@ -187,7 +187,7 @@
         "minor": 0,
         "md5": "f61010fa1d6349cc6e8000f62c70b670",
         "first_seen": "2026-02-04",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -209,18 +209,18 @@
         "md5": {
           "SA": "e08d24c25c9ca0b7187849047b819e76",
           "EG": "fe06415c8aa4aad526cb40e776ba9b36",
-          "OCA": "459ce1072fbd5f00c30b7c69cae5fb1f",
-          "EU": "2e4983e349bea6c8122a4cb7122fce2e"
+          "EU": "2e4983e349bea6c8122a4cb7122fce2e",
+          "OCA": "459ce1072fbd5f00c30b7c69cae5fb1f"
         },
         "first_seen": "2026-02-28",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
           "SA",
           "EG",
-          "OCA",
-          "EU"
+          "EU",
+          "OCA"
         ]
       },
       "CPH2307_15.0.0.1304(EX01)": {
@@ -269,7 +269,7 @@
         "minor": 120,
         "md5": "d3d404aee89bd994b3c751eb6e416844",
         "first_seen": "2026-05-26",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": true,
         "regions": [
@@ -303,7 +303,7 @@
         "minor": 120,
         "md5": "29cf8267e6a4a66a00dc480fae04cfcd",
         "first_seen": "2026-05-27",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": true,
         "regions": [
@@ -337,7 +337,7 @@
         "minor": 120,
         "md5": "5724c78163af42d048b1c4f28c4f34cd",
         "first_seen": "2026-05-27",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": true,
         "regions": [
@@ -507,7 +507,7 @@
         "minor": 0,
         "md5": "c0fe595ca50e4db92c009f49273c5c9a",
         "first_seen": "2026-02-04",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -606,7 +606,7 @@
         "minor": 0,
         "md5": "c0debf3a37dea71b0155a97781de08b4",
         "first_seen": "2026-02-04",
-        "last_checked": "2026-02-04",
+        "last_checked": "2026-07-28",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
@@ -665,16 +665,16 @@
         "major": 2,
         "minor": 0,
         "md5": {
-          "GLO": "5ec4120c2e67fb401b7d887988e8b9b0",
-          "EU": "c54333bf7dabad17649dbea39fb56fd6"
+          "EU": "c54333bf7dabad17649dbea39fb56fd6",
+          "GLO": "5ec4120c2e67fb401b7d887988e8b9b0"
         },
-        "first_seen": "2026-05-26",
+        "first_seen": "2026-05-27",
         "last_checked": "2026-07-27",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
-          "GLO",
-          "EU"
+          "EU",
+          "GLO"
         ]
       },
       "CPH2449_16.0.5.701(EX01)": {
@@ -682,16 +682,16 @@
         "major": 2,
         "minor": 0,
         "md5": {
-          "GLO": "d7f049726ca288960f64cc2fe21a278b",
-          "EU": "5d8b993a4940e0e315053b2c126c851e"
+          "EU": "5d8b993a4940e0e315053b2c126c851e",
+          "GLO": "d7f049726ca288960f64cc2fe21a278b"
         },
         "first_seen": "2026-04-29",
         "last_checked": "2026-05-25",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "GLO",
-          "EU"
+          "EU",
+          "GLO"
         ]
       },
       "CPH2449_16.0.3.500(EX01)": {
@@ -699,16 +699,16 @@
         "major": 2,
         "minor": 0,
         "md5": {
-          "GLO": "8744bb0bfc9b3bc5e02bf0c3ad0d8352",
-          "EU": "9db981106445969885335a2d35cfda5f"
+          "EU": "9db981106445969885335a2d35cfda5f",
+          "GLO": "8744bb0bfc9b3bc5e02bf0c3ad0d8352"
         },
         "first_seen": "2026-02-25",
         "last_checked": "2026-04-28",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "GLO",
-          "EU"
+          "EU",
+          "GLO"
         ]
       },
       "CPH2449_16.0.2.401(EX01)": {
@@ -729,16 +729,16 @@
         "major": 2,
         "minor": 0,
         "md5": {
-          "GLO": "b5745266807941dfbd1740eb4d81b26c",
-          "EU": "3a0e1f9b1288270b6a9339d36e91012b"
+          "EU": "3a0e1f9b1288270b6a9339d36e91012b",
+          "GLO": "b5745266807941dfbd1740eb4d81b26c"
         },
         "first_seen": "2026-02-04",
-        "last_checked": "2026-04-20",
+        "last_checked": "2026-02-04",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "GLO",
-          "EU"
+          "EU",
+          "GLO"
         ]
       },
       "CPH2449_15.0.0.862(EX01)": {
@@ -746,16 +746,16 @@
         "major": 2,
         "minor": 0,
         "md5": {
-          "GLO": "54cc417e44e221c6960e4a6446c56cd0",
-          "EU": "005720cd3a7ed022c504ea46aa08b108"
+          "EU": "005720cd3a7ed022c504ea46aa08b108",
+          "GLO": "54cc417e44e221c6960e4a6446c56cd0"
         },
         "first_seen": "2026-02-04",
-        "last_checked": "2026-03-10",
+        "last_checked": "2026-02-04",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "GLO",
-          "EU"
+          "EU",
+          "GLO"
         ]
       },
       "CPH2449_15.0.0.600(EX01)": {
@@ -763,16 +763,16 @@
         "major": 2,
         "minor": 0,
         "md5": {
-          "GLO": "419b9c2222c3db98dd3dab2092b071ea",
-          "EU": "34bbda6b42e72c2e9e536087355df1ae"
+          "EU": "34bbda6b42e72c2e9e536087355df1ae",
+          "GLO": "419b9c2222c3db98dd3dab2092b071ea"
         },
         "first_seen": "2026-02-04",
-        "last_checked": "2026-02-04",
+        "last_checked": "2026-04-20",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "GLO",
-          "EU"
+          "EU",
+          "GLO"
         ]
       },
       "CPH2449_14.0.0.833(EX01)": {
@@ -780,16 +780,16 @@
         "major": 2,
         "minor": 0,
         "md5": {
-          "GLO": "b9d025ed11a63e79b8a27120f528bcd5",
-          "EU": "c3e9d3216214792f7106adf6f72d5f4c"
+          "EU": "c3e9d3216214792f7106adf6f72d5f4c",
+          "GLO": "b9d025ed11a63e79b8a27120f528bcd5"
         },
         "first_seen": "2026-02-13",
-        "last_checked": "2026-02-13",
+        "last_checked": "2026-03-18",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "GLO",
-          "EU"
+          "EU",
+          "GLO"
         ]
       },
       "CPH2449_14.0.0.304(EX01)": {
@@ -797,16 +797,16 @@
         "major": 2,
         "minor": 0,
         "md5": {
-          "GLO": "e698b0fa87d61c1b081abe119c52fb86",
-          "EU": "c1f0435152c274076284d579f94b3427"
+          "EU": "c1f0435152c274076284d579f94b3427",
+          "GLO": "e698b0fa87d61c1b081abe119c52fb86"
         },
         "first_seen": "2026-02-13",
-        "last_checked": "2026-02-25",
+        "last_checked": "2026-02-13",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "GLO",
-          "EU"
+          "EU",
+          "GLO"
         ]
       }
     }
@@ -823,7 +823,7 @@
         "minor": 0,
         "md5": "6cf186b46c64e0e0f81ce44f9df02689",
         "first_seen": "2026-02-04",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -844,7 +844,7 @@
         "minor": 120,
         "md5": "b2dac2cc86b0f5315ce9f5ff861ac6cb",
         "first_seen": "2026-03-10",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -865,7 +865,7 @@
         "minor": 120,
         "md5": "1b08a7373453ff410e89698ec1629089",
         "first_seen": "2026-05-26",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": true,
         "regions": [
@@ -912,7 +912,7 @@
         "minor": 120,
         "md5": "aeaff8dc5364d51bbd6ec5455ff2d038",
         "first_seen": "2026-05-29",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": true,
         "regions": [
@@ -972,7 +972,7 @@
         "minor": 120,
         "md5": "e7c3ef3766eb129e5735e49124051886",
         "first_seen": "2026-05-20",
-        "last_checked": "2026-06-25",
+        "last_checked": "2026-07-28",
         "status": "archived",
         "is_hardcoded": true,
         "regions": [
@@ -1071,7 +1071,7 @@
         "minor": 0,
         "md5": "ab372586fbb439bad1e8cfa19dfee40f",
         "first_seen": "2026-02-04",
-        "last_checked": "2026-02-11",
+        "last_checked": "2026-07-28",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
@@ -1144,19 +1144,19 @@
         "minor": 0,
         "md5": {
           "ID": "48b00ad3baf9688eb505d41ac8cf77a3",
+          "TH": "7e4bdd74c76e6964d1a1bed5f33fa3fb",
           "VN": "51981794f4adc9f9ad78d7604233ff17",
-          "MY": "2f21937ce7c57b4c4723c4e738ea1b7f",
-          "TH": "7e4bdd74c76e6964d1a1bed5f33fa3fb"
+          "MY": "2f21937ce7c57b4c4723c4e738ea1b7f"
         },
         "first_seen": "2026-07-22",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
           "ID",
+          "TH",
           "VN",
-          "MY",
-          "TH"
+          "MY"
         ]
       },
       "CPH2499_16.0.5.701(EX01)": {
@@ -1166,10 +1166,10 @@
         "md5": {
           "TW": "1d4fe18caac4bb9765ea20ce8cf61ed7",
           "ID": "f591f86724bc3a090e2ba75412c5dd0f",
-          "SG": "a5b87ecebdb06a2023b9487c6a1d71aa",
+          "TH": "4725bd55759c2c2c287292fa965333ec",
           "VN": "13128119a7102eee679bd6215dcedc0a",
-          "MY": "0c6a6e3fec7272d22e52ec8bae493b85",
-          "TH": "4725bd55759c2c2c287292fa965333ec"
+          "SG": "a5b87ecebdb06a2023b9487c6a1d71aa",
+          "MY": "0c6a6e3fec7272d22e52ec8bae493b85"
         },
         "first_seen": "2026-05-30",
         "last_checked": "2026-07-27",
@@ -1178,10 +1178,10 @@
         "regions": [
           "TW",
           "ID",
-          "SG",
+          "TH",
           "VN",
-          "MY",
-          "TH"
+          "SG",
+          "MY"
         ]
       },
       "CPH2499_16.0.3.505(EX01)": {
@@ -1189,26 +1189,26 @@
         "major": 2,
         "minor": 0,
         "md5": {
+          "OCA": "d16a29224fce0f371833e7077dd6e389",
           "TW": "9bfc00e1335a3f6dab6ccdeacf242d65",
           "ID": "c7978bb9b21f5ab05179ce1957e1e7fa",
-          "SG": "b7b3a230dfe513127dbb292ed6b045b0",
+          "TH": "7be67cb2c369073250877959ca0ca104",
           "VN": "08baa3b9dc0fbf4f56897da909dddb18",
-          "OCA": "d16a29224fce0f371833e7077dd6e389",
-          "MY": "19cc7654da5c2e342268ab804c8fb464",
-          "TH": "7be67cb2c369073250877959ca0ca104"
+          "SG": "b7b3a230dfe513127dbb292ed6b045b0",
+          "MY": "19cc7654da5c2e342268ab804c8fb464"
         },
-        "first_seen": "2026-03-23",
-        "last_checked": "2026-05-29",
-        "status": "archived",
+        "first_seen": "2026-03-25",
+        "last_checked": "2026-07-28",
+        "status": "current",
         "is_hardcoded": false,
         "regions": [
+          "OCA",
           "TW",
           "ID",
-          "SG",
+          "TH",
           "VN",
-          "OCA",
-          "MY",
-          "TH"
+          "SG",
+          "MY"
         ]
       },
       "CPH2499_16.0.3.500(EX01)": {
@@ -1216,26 +1216,26 @@
         "major": 2,
         "minor": 0,
         "md5": {
+          "OCA": "c5977aa2232a230e43012cc872dd9109",
           "TW": "202302d926d361279622913314cf2c6c",
           "ID": "fe33546e7733610b7b0e39a49d0f923f",
-          "SG": "0d6ec3447fd78d448810857cdb0b2d5b",
+          "TH": "b7cfb500593a0367872fbf860d1d31f5",
           "VN": "fa577cadcd61718f70d11d12bce8f3ee",
-          "OCA": "c5977aa2232a230e43012cc872dd9109",
-          "MY": "f9cbe5cdb1cda3f8a1fa46e7a60c3bfe",
-          "TH": "b7cfb500593a0367872fbf860d1d31f5"
+          "SG": "0d6ec3447fd78d448810857cdb0b2d5b",
+          "MY": "f9cbe5cdb1cda3f8a1fa46e7a60c3bfe"
         },
-        "first_seen": "2026-02-04",
-        "last_checked": "2026-03-23",
+        "first_seen": "2026-02-11",
+        "last_checked": "2026-03-24",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
+          "OCA",
           "TW",
           "ID",
-          "SG",
+          "TH",
           "VN",
-          "OCA",
-          "MY",
-          "TH"
+          "SG",
+          "MY"
         ]
       },
       "CPH2499_16.0.0.203(EX01)": {
@@ -1265,7 +1265,7 @@
         "minor": 120,
         "md5": "0aee1de71ddf7ea9251b46d0bce01fdd",
         "first_seen": "2026-03-10",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -1286,7 +1286,7 @@
         "minor": 120,
         "md5": "92e65d7b95d5f6e1a28125938b158e59",
         "first_seen": "2026-07-16",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -1346,7 +1346,7 @@
         "minor": 120,
         "md5": "6a24db8efd1483da235f2d1d46ba9eca",
         "first_seen": "2026-07-08",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -1406,7 +1406,7 @@
         "minor": 120,
         "md5": "abb2a1ef3450621de3073f48d5215b19",
         "first_seen": "2026-03-10",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -1427,7 +1427,7 @@
         "minor": 120,
         "md5": "666e479b07fe7e4443e58a5c1e61b1e5",
         "first_seen": "2026-07-16",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -1487,7 +1487,7 @@
         "minor": 120,
         "md5": "d5cb83b71e9664fdec59fa344264512e",
         "first_seen": "2026-07-02",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -1547,7 +1547,7 @@
         "minor": 120,
         "md5": "0407edf6593a82dc2d02b13bc38c0a2e",
         "first_seen": "2026-04-01",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -1581,7 +1581,7 @@
         "minor": 120,
         "md5": "9fdc262d0e71288ea7ac1d1aefb40125",
         "first_seen": "2026-07-02",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -1641,7 +1641,7 @@
         "minor": 120,
         "md5": "6260acd0c725d9b5d2c66c9ebebe1c55",
         "first_seen": "2026-07-08",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -1701,7 +1701,7 @@
         "minor": 120,
         "md5": "2f80a6de553f06c5b659806d5fc6b6b9",
         "first_seen": "2026-07-02",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -1761,7 +1761,7 @@
         "minor": 120,
         "md5": "ba30a505d308a1414f06b4cf23ab0871",
         "first_seen": "2026-07-08",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -1821,7 +1821,7 @@
         "minor": 120,
         "md5": "51f6e934a1f55bd32fe46026895d55ab",
         "first_seen": "2026-07-08",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -1881,7 +1881,7 @@
         "minor": 120,
         "md5": "bee60bfdea5941ebd6b74b64d2ee5666",
         "first_seen": "2026-07-02",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -1941,7 +1941,7 @@
         "minor": 0,
         "md5": "be0d692d2a721243f48599214da8f4b1",
         "first_seen": "2026-07-23",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -1953,16 +1953,16 @@
         "major": 2,
         "minor": 0,
         "md5": {
-          "IN": "7fe7cbb28df8c928de225a08eb0bec34",
-          "EU": "8500cbd44a0d7cfca581d03d293c1caf"
+          "EU": "8500cbd44a0d7cfca581d03d293c1caf",
+          "IN": "7fe7cbb28df8c928de225a08eb0bec34"
         },
-        "first_seen": "2026-05-26",
-        "last_checked": "2026-07-22",
-        "status": "archived",
+        "first_seen": "2026-05-30",
+        "last_checked": "2026-07-27",
+        "status": "current",
         "is_hardcoded": false,
         "regions": [
-          "IN",
-          "EU"
+          "EU",
+          "IN"
         ]
       },
       "CPH2551_16.0.3.505(EX01)": {
@@ -1970,16 +1970,16 @@
         "major": 2,
         "minor": 0,
         "md5": {
-          "IN": "992c3916a53a72e8e0b7449a60e5c83f",
-          "EU": "b0b7acd843ad2eb4e736fae0aa079e88"
+          "EU": "b0b7acd843ad2eb4e736fae0aa079e88",
+          "IN": "992c3916a53a72e8e0b7449a60e5c83f"
         },
-        "first_seen": "2026-03-16",
-        "last_checked": "2026-05-25",
+        "first_seen": "2026-03-21",
+        "last_checked": "2026-05-29",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "IN",
-          "EU"
+          "EU",
+          "IN"
         ]
       },
       "CPH2551_16.0.3.500(EX01)": {
@@ -1987,30 +1987,30 @@
         "major": 2,
         "minor": 0,
         "md5": {
-          "IN": "33f9bce9ecb17b30e8f84f97c91edb7f",
-          "EU": "c6e40fec39894a2f17684fc5d826dbce"
+          "EU": "c6e40fec39894a2f17684fc5d826dbce",
+          "IN": "33f9bce9ecb17b30e8f84f97c91edb7f"
         },
-        "first_seen": "2026-02-04",
-        "last_checked": "2026-03-16",
+        "first_seen": "2026-02-06",
+        "last_checked": "2026-03-21",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "IN",
-          "EU"
+          "EU",
+          "IN"
         ]
       },
       "CPH2551_16.0.2.400(EX01)": {
         "arb": 0,
         "major": 2,
         "minor": 0,
-        "md5": "dc72dd05d476d8ecb198014177572cbf",
+        "md5": null,
         "first_seen": "2026-02-04",
-        "last_checked": "2026-03-10",
+        "last_checked": "2026-02-06",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "IN",
-          "EU"
+          "EU",
+          "IN"
         ]
       },
       "CPH2551_16.0.1.300(EX01)": {
@@ -2018,16 +2018,16 @@
         "major": 2,
         "minor": 0,
         "md5": {
-          "IN": "d131d0fcd87a0aa53cf5cf2549d239a2",
-          "EU": "37d145dd87e260c6833efcc2d65e6475"
+          "EU": "37d145dd87e260c6833efcc2d65e6475",
+          "IN": "d131d0fcd87a0aa53cf5cf2549d239a2"
         },
         "first_seen": "2026-02-04",
-        "last_checked": "2026-03-21",
+        "last_checked": "2026-02-26",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "IN",
-          "EU"
+          "EU",
+          "IN"
         ]
       },
       "CPH2551_16.0.0.201(EX01)": {
@@ -2035,16 +2035,16 @@
         "major": 2,
         "minor": 0,
         "md5": {
-          "IN": "0969618dfdfaaf6ca8867ac16f3dc32e",
-          "EU": "142855cdadd173b2b515e24663b89ae9"
+          "EU": "142855cdadd173b2b515e24663b89ae9",
+          "IN": "0969618dfdfaaf6ca8867ac16f3dc32e"
         },
         "first_seen": "2026-02-04",
         "last_checked": "2026-04-20",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "IN",
-          "EU"
+          "EU",
+          "IN"
         ]
       },
       "CPH2551_15.0.0.863(EX01)": {
@@ -2066,7 +2066,7 @@
         "minor": 0,
         "md5": "9ee66cf78b25acaee3681d138f04c04f",
         "first_seen": "2026-02-04",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -2113,7 +2113,7 @@
         "minor": 120,
         "md5": "cd2f0bef361c9c6cb241a95774ab06c5",
         "first_seen": "2026-06-09",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": true,
         "regions": [
@@ -2160,7 +2160,7 @@
         "minor": 0,
         "md5": "17af17165e4d01ab2293d56725775ac2",
         "first_seen": "2026-07-20",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -2284,16 +2284,16 @@
         "major": 3,
         "minor": 0,
         "md5": {
-          "GLO": "e8cb484c5244a14546ebee3470cf6ec6",
-          "EU": "19b88489bc1ef6b49dc2dc7916639fc3"
+          "EU": "19b88489bc1ef6b49dc2dc7916639fc3",
+          "GLO": "e8cb484c5244a14546ebee3470cf6ec6"
         },
-        "first_seen": "2026-06-30",
+        "first_seen": "2026-07-02",
         "last_checked": "2026-07-27",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
-          "GLO",
-          "EU"
+          "EU",
+          "GLO"
         ]
       },
       "CPH2581_16.0.7.200(EX01)": {
@@ -2301,16 +2301,16 @@
         "major": 3,
         "minor": 0,
         "md5": {
-          "GLO": "abb18c3a33d3a1e9695e09c11cf8b2ba",
-          "EU": "1acebe6ba4c893fd8007c0ba8ebfa75d"
+          "EU": "1acebe6ba4c893fd8007c0ba8ebfa75d",
+          "GLO": "abb18c3a33d3a1e9695e09c11cf8b2ba"
         },
-        "first_seen": "2026-05-27",
-        "last_checked": "2026-06-29",
+        "first_seen": "2026-05-28",
+        "last_checked": "2026-07-01",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "GLO",
-          "EU"
+          "EU",
+          "GLO"
         ]
       },
       "CPH2581_16.0.5.702(EX01)": {
@@ -2318,16 +2318,16 @@
         "major": 3,
         "minor": 0,
         "md5": {
-          "GLO": "7d46f0c9123feec1c4d06e9e61133c52",
-          "EU": "a67c5530baf67def45927cd7bd67104f"
+          "EU": "a67c5530baf67def45927cd7bd67104f",
+          "GLO": "7d46f0c9123feec1c4d06e9e61133c52"
         },
         "first_seen": "2026-03-25",
-        "last_checked": "2026-05-26",
+        "last_checked": "2026-05-27",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "GLO",
-          "EU"
+          "EU",
+          "GLO"
         ]
       },
       "CPH2581_16.0.3.500(EX01)": {
@@ -2335,16 +2335,16 @@
         "major": 3,
         "minor": 0,
         "md5": {
-          "GLO": "3386a9f7548f18e9cda8558ca851a059",
-          "EU": "3770e5ac2f6e8750d8172ca2788bd36b"
+          "EU": "3770e5ac2f6e8750d8172ca2788bd36b",
+          "GLO": "3386a9f7548f18e9cda8558ca851a059"
         },
         "first_seen": "2026-02-04",
-        "last_checked": "2026-03-25",
+        "last_checked": "2026-04-20",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "GLO",
-          "EU"
+          "EU",
+          "GLO"
         ]
       },
       "CPH2581_16.0.0.201(EX01)": {
@@ -2352,16 +2352,16 @@
         "major": 3,
         "minor": 0,
         "md5": {
-          "GLO": "15ba498ef524eea6e173a53e390054ec",
-          "EU": "a83aafae40f24e43e41b2c7c1be2f6ec"
+          "EU": "a83aafae40f24e43e41b2c7c1be2f6ec",
+          "GLO": "15ba498ef524eea6e173a53e390054ec"
         },
         "first_seen": "2026-02-04",
-        "last_checked": "2026-02-26",
+        "last_checked": "2026-03-10",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "GLO",
-          "EU"
+          "EU",
+          "GLO"
         ]
       },
       "CPH2581_15.0.0.863(EX01)": {
@@ -2369,16 +2369,16 @@
         "major": 3,
         "minor": 0,
         "md5": {
-          "GLO": "e4e38d8a69fec1e73ee3b897027597f0",
-          "EU": "ab9462ac5766c96daff20b425ef1df78"
+          "EU": "ab9462ac5766c96daff20b425ef1df78",
+          "GLO": "e4e38d8a69fec1e73ee3b897027597f0"
         },
         "first_seen": "2026-02-04",
-        "last_checked": "2026-04-20",
+        "last_checked": "2026-02-04",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "GLO",
-          "EU"
+          "EU",
+          "GLO"
         ]
       },
       "CPH2581_15.0.0.204(EX01)": {
@@ -2386,16 +2386,16 @@
         "major": 3,
         "minor": 0,
         "md5": {
-          "GLO": "f9034c616e472c4e4e097da203fede90",
-          "EU": "d9da31c8e681b27598b220b196901ab5"
+          "EU": "d9da31c8e681b27598b220b196901ab5",
+          "GLO": "f9034c616e472c4e4e097da203fede90"
         },
         "first_seen": "2026-02-13",
         "last_checked": "2026-03-18",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "GLO",
-          "EU"
+          "EU",
+          "GLO"
         ]
       },
       "CPH2581_14.0.0.850(EX01)": {
@@ -2403,16 +2403,16 @@
         "major": 3,
         "minor": 0,
         "md5": {
-          "GLO": "4922bd352fbc39f51d01af5284662327",
-          "EU": "51f474db6c5d3e1e426dd293248f2402"
+          "EU": "51f474db6c5d3e1e426dd293248f2402",
+          "GLO": "4922bd352fbc39f51d01af5284662327"
         },
         "first_seen": "2026-02-13",
-        "last_checked": "2026-03-10",
+        "last_checked": "2026-02-25",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "GLO",
-          "EU"
+          "EU",
+          "GLO"
         ]
       }
     }
@@ -2429,7 +2429,7 @@
         "minor": 0,
         "md5": "c4bf38e7b691b79f32605967303b77e0",
         "first_seen": "2026-03-10",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -2463,7 +2463,7 @@
         "minor": 0,
         "md5": "8b5e3bb7baea261107bce1f74df5651a",
         "first_seen": "2026-07-25",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -2535,16 +2535,16 @@
         "major": 2,
         "minor": 0,
         "md5": {
-          "EU": "87ad2458dc4ac3e281c841844dca3125",
-          "GLO": "970ad6b730d407802c015afbb1ab5b16"
+          "GLO": "970ad6b730d407802c015afbb1ab5b16",
+          "EU": "87ad2458dc4ac3e281c841844dca3125"
         },
         "first_seen": "2026-05-26",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ]
       },
       "CPH2609_16.0.5.701(EX01)": {
@@ -2552,16 +2552,16 @@
         "major": 2,
         "minor": 0,
         "md5": {
-          "EU": "0266e6140064061e0596996a7a56ea70",
-          "GLO": "21b571911450b6b291bf4be623a0973b"
+          "GLO": "21b571911450b6b291bf4be623a0973b",
+          "EU": "0266e6140064061e0596996a7a56ea70"
         },
         "first_seen": "2026-04-24",
         "last_checked": "2026-05-25",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ]
       },
       "CPH2609_16.0.3.500(EX01)": {
@@ -2569,16 +2569,16 @@
         "major": 2,
         "minor": 0,
         "md5": {
-          "EU": "3bf4f77014c7ecc56da8c34b8e2da4a8",
-          "GLO": "3d8966b0addcc72059f43c75c910eeac"
+          "GLO": "3d8966b0addcc72059f43c75c910eeac",
+          "EU": "3bf4f77014c7ecc56da8c34b8e2da4a8"
         },
-        "first_seen": "2026-02-11",
+        "first_seen": "2026-02-23",
         "last_checked": "2026-04-24",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ]
       },
       "CPH2609_16.0.2.401(EX01)": {
@@ -2621,7 +2621,7 @@
         "minor": 0,
         "md5": "a16a2f0dbbd5eeaff10041299f4d1508",
         "first_seen": "2026-02-04",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -2642,7 +2642,7 @@
         "minor": 0,
         "md5": "d2b1b3a176c10d0042cb3e402d24a965",
         "first_seen": "2026-06-19",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -2692,7 +2692,7 @@
           "EU": "1732947e93495edf76b8ac451c64867a"
         },
         "first_seen": "2026-06-30",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": true,
         "regions": [
@@ -2740,7 +2740,7 @@
         "minor": 120,
         "md5": "0766f7c291155cfad42a3b4d08f1cc61",
         "first_seen": "2026-06-18",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": true,
         "regions": [
@@ -2790,7 +2790,7 @@
           "EU": "a469b61ea31dfee26862bda588f080b9"
         },
         "first_seen": "2026-06-27",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -2931,7 +2931,7 @@
         "minor": 0,
         "md5": "5f1e9815a8171f76d276fe160b26c8b7",
         "first_seen": "2026-07-24",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -3095,7 +3095,7 @@
         "minor": 0,
         "md5": "c2efa338e688545a0b568ea6bb381dc7",
         "first_seen": "2026-07-18",
-        "last_checked": "2026-07-24",
+        "last_checked": "2026-07-28",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
@@ -3278,7 +3278,7 @@
         "minor": 0,
         "md5": "7d0ce94be24263393454ae140889a523",
         "first_seen": "2026-02-04",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -3312,7 +3312,7 @@
         "minor": 0,
         "md5": "0e1d8a680e0c7d1b9bac3e5aa427b85f",
         "first_seen": "2026-07-10",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -3423,16 +3423,16 @@
         "major": 3,
         "minor": 0,
         "md5": {
-          "EU": "4f65299c05bcf4e9c1201d85877db742",
-          "GLO": "5ed1213da153417ef05aaedc851345dd"
+          "GLO": "5ed1213da153417ef05aaedc851345dd",
+          "EU": "4f65299c05bcf4e9c1201d85877db742"
         },
         "first_seen": "2026-07-12",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ]
       },
       "CPH2663_16.0.5.702(EX01)": {
@@ -3440,16 +3440,16 @@
         "major": 3,
         "minor": 0,
         "md5": {
-          "EU": "16accee17408f6ce7989bba97b0f5c27",
-          "GLO": "719bf704a10e3894ce2a5f95a124ab0e"
+          "GLO": "719bf704a10e3894ce2a5f95a124ab0e",
+          "EU": "16accee17408f6ce7989bba97b0f5c27"
         },
         "first_seen": "2026-05-20",
         "last_checked": "2026-07-11",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ]
       },
       "CPH2663_16.0.5.701(EX01)": {
@@ -3457,16 +3457,16 @@
         "major": 3,
         "minor": 0,
         "md5": {
-          "EU": "75cb2c75c9f1c1c2c34515a6462b871a",
-          "GLO": "e64b6607ccb5361937039a6e10f34483"
+          "GLO": "e64b6607ccb5361937039a6e10f34483",
+          "EU": "75cb2c75c9f1c1c2c34515a6462b871a"
         },
-        "first_seen": "2026-03-28",
+        "first_seen": "2026-03-25",
         "last_checked": "2026-05-19",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ]
       },
       "CPH2663_16.0.2.401(EX01)": {
@@ -3474,16 +3474,16 @@
         "major": 3,
         "minor": 0,
         "md5": {
-          "EU": "0fabc357b219c3f26b48c8a688f5f2eb",
-          "GLO": "94c3d509d75d2cf2ef7ff546a19d12d2"
+          "GLO": "94c3d509d75d2cf2ef7ff546a19d12d2",
+          "EU": "0fabc357b219c3f26b48c8a688f5f2eb"
         },
         "first_seen": "2026-02-04",
-        "last_checked": "2026-03-27",
+        "last_checked": "2026-03-25",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ]
       },
       "CPH2663_16.0.1.301(EX01)": {
@@ -3491,16 +3491,16 @@
         "major": 3,
         "minor": 0,
         "md5": {
-          "EU": "57c99d530f04ff66f78acbfce67fb509",
-          "GLO": "48c0cb97cbfe448d50b8f730236c8019"
+          "GLO": "48c0cb97cbfe448d50b8f730236c8019",
+          "EU": "57c99d530f04ff66f78acbfce67fb509"
         },
         "first_seen": "2026-02-04",
         "last_checked": "2026-03-18",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ]
       },
       "CPH2663_15.0.0.1301(EX01)": {
@@ -3521,16 +3521,16 @@
         "major": 3,
         "minor": 0,
         "md5": {
-          "EU": "a2a5e83b73bc395eac686d6c6516ace8",
-          "GLO": "f35c38d521127a1cfb5be683711fa5db"
+          "GLO": "f35c38d521127a1cfb5be683711fa5db",
+          "EU": "a2a5e83b73bc395eac686d6c6516ace8"
         },
-        "first_seen": "2026-02-13",
+        "first_seen": "2026-02-04",
         "last_checked": "2026-04-20",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ]
       },
       "CPH2663_14.1.0.605(EX01)": {
@@ -3538,16 +3538,16 @@
         "major": 3,
         "minor": 0,
         "md5": {
-          "EU": "ec7efaa59e89c06a1e4f433f955235ac",
-          "GLO": "89d7e0f18fe0b145fc3ab2e3430a5fea"
+          "GLO": "89d7e0f18fe0b145fc3ab2e3430a5fea",
+          "EU": "ec7efaa59e89c06a1e4f433f955235ac"
         },
         "first_seen": "2026-02-13",
-        "last_checked": "2026-03-10",
+        "last_checked": "2026-02-13",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ]
       }
     }
@@ -3563,24 +3563,24 @@
         "major": 3,
         "minor": 0,
         "md5": {
-          "ID": "0d2ba73fcc91ea3ed1a6a81e25d7462f",
-          "TH": "1c2ffcff1fef5508ae5671af55b390c1",
+          "MX": "2696c70a51e83c0d4d5b49ec9c6790dc",
           "MY": "1f606836d260f514816df6c4c87807a2",
-          "SG": "98d7af91dde5fdab7fd4f257496abef4",
           "APC": "46f6c34df964402edb2ca6fac66b59cf",
-          "MX": "2696c70a51e83c0d4d5b49ec9c6790dc"
+          "SG": "98d7af91dde5fdab7fd4f257496abef4",
+          "TH": "1c2ffcff1fef5508ae5671af55b390c1",
+          "ID": "0d2ba73fcc91ea3ed1a6a81e25d7462f"
         },
-        "first_seen": "2026-07-15",
-        "last_checked": "2026-07-27",
+        "first_seen": "2026-07-20",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
-          "ID",
-          "TH",
+          "MX",
           "MY",
-          "SG",
           "APC",
-          "MX"
+          "SG",
+          "TH",
+          "ID"
         ]
       },
       "CPH2671_16.0.8.300(EX01)": {
@@ -3588,24 +3588,24 @@
         "major": 3,
         "minor": 0,
         "md5": {
-          "ID": "5ce70a466c48a317f2dab22530fb0ccc",
-          "TH": "ff0f693dcd7adffbe45521538c3b53c1",
+          "MX": "819c6644f79107bd3c363f5e36c603c7",
           "MY": "0edcea298dc20df9d38ead82513b8ea9",
-          "SG": "77b399cfe5dea020c6716b762e918e8d",
           "APC": "0f5755ced8a65af32736b95c92870beb",
-          "MX": "819c6644f79107bd3c363f5e36c603c7"
+          "SG": "77b399cfe5dea020c6716b762e918e8d",
+          "TH": "ff0f693dcd7adffbe45521538c3b53c1",
+          "ID": "5ce70a466c48a317f2dab22530fb0ccc"
         },
-        "first_seen": "2026-06-16",
-        "last_checked": "2026-07-14",
+        "first_seen": "2026-06-24",
+        "last_checked": "2026-07-17",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "ID",
-          "TH",
+          "MX",
           "MY",
-          "SG",
           "APC",
-          "MX"
+          "SG",
+          "TH",
+          "ID"
         ]
       },
       "CPH2671_16.0.7.200(EX01)": {
@@ -3613,24 +3613,24 @@
         "major": 3,
         "minor": 0,
         "md5": {
-          "ID": "faccb1cc26ed509850fced49bd2dcc0d",
-          "TH": "d0aa59cedacd7a5a8e87573fa23405a3",
+          "MX": "e7dc9a2123ac33f9ae1e810c85547291",
           "MY": "c8a5443551dceb21de9c27369a6dbae9",
-          "SG": "34c72aaa251dc629a48c24620357c49d",
           "APC": "8d955f18c1e510ef9262453d042ed2f8",
-          "MX": "e7dc9a2123ac33f9ae1e810c85547291"
+          "SG": "34c72aaa251dc629a48c24620357c49d",
+          "TH": "d0aa59cedacd7a5a8e87573fa23405a3",
+          "ID": "faccb1cc26ed509850fced49bd2dcc0d"
         },
-        "first_seen": "2026-05-20",
-        "last_checked": "2026-06-15",
+        "first_seen": "2026-05-27",
+        "last_checked": "2026-06-23",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "ID",
-          "TH",
+          "MX",
           "MY",
-          "SG",
           "APC",
-          "MX"
+          "SG",
+          "TH",
+          "ID"
         ]
       },
       "CPH2671_16.0.5.700(EX01)": {
@@ -3638,24 +3638,24 @@
         "major": 3,
         "minor": 0,
         "md5": {
-          "ID": "11fc5bc7dad9dd4b15d1166f0d42034f",
-          "TH": "00a4eb590b6d5ef63a39d4424855cf3a",
+          "MX": "1dc9bb44e6e64ce0397434b2330f528d",
           "MY": "228e24d61a2a79d5e6702aac2296e288",
-          "SG": "84b434d3337990b381cb6de3898f7c8e",
           "APC": "86da73ef6fcfeca76e6c4ea80f543481",
-          "MX": "1dc9bb44e6e64ce0397434b2330f528d"
+          "SG": "84b434d3337990b381cb6de3898f7c8e",
+          "TH": "00a4eb590b6d5ef63a39d4424855cf3a",
+          "ID": "11fc5bc7dad9dd4b15d1166f0d42034f"
         },
-        "first_seen": "2026-03-18",
-        "last_checked": "2026-05-19",
+        "first_seen": "2026-03-25",
+        "last_checked": "2026-05-26",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "ID",
-          "TH",
+          "MX",
           "MY",
-          "SG",
           "APC",
-          "MX"
+          "SG",
+          "TH",
+          "ID"
         ]
       },
       "CPH2671_16.0.3.500(EX01)": {
@@ -3676,20 +3676,20 @@
         "major": 3,
         "minor": 0,
         "md5": {
-          "TH": "d7aa0bf5f0f86e68711f68f2ff8bc7c1",
           "MY": "01a344e7df285c3cc131bb2726620b73",
+          "APC": "8092cdb0dcf5a44e27ff8b863bbcde89",
           "SG": "de7a9e13bbc55161b557883f77edb1ca",
-          "APC": "8092cdb0dcf5a44e27ff8b863bbcde89"
+          "TH": "d7aa0bf5f0f86e68711f68f2ff8bc7c1"
         },
         "first_seen": "2026-02-04",
         "last_checked": "2026-03-25",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "TH",
           "MY",
+          "APC",
           "SG",
-          "APC"
+          "TH"
         ]
       },
       "CPH2671_16.0.1.302(EX01)": {
@@ -3719,7 +3719,7 @@
         "minor": 0,
         "md5": "8448ee0eb089a9a61c94391f021a1c3e",
         "first_seen": "2026-07-16",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -3844,7 +3844,7 @@
         "minor": 0,
         "md5": "feb0d9f702a59a262fbd288b1289db4b",
         "first_seen": "2026-06-06",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -3903,16 +3903,16 @@
         "major": 3,
         "minor": 0,
         "md5": {
-          "GLO": "16502d986f9e32425c10097d126e0936",
-          "EU": "1197aaa3eaf341c7fcae6b251346d315"
+          "EU": "1197aaa3eaf341c7fcae6b251346d315",
+          "GLO": "16502d986f9e32425c10097d126e0936"
         },
         "first_seen": "2026-06-11",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
-          "GLO",
-          "EU"
+          "EU",
+          "GLO"
         ]
       },
       "CPH2709_16.0.5.710(EX01)": {
@@ -3920,16 +3920,16 @@
         "major": 3,
         "minor": 0,
         "md5": {
-          "GLO": "0007c6da68a5fe81f3328362517b1552",
-          "EU": "fe7c98015d682710d8934ebadd6f8a50"
+          "EU": "fe7c98015d682710d8934ebadd6f8a50",
+          "GLO": "0007c6da68a5fe81f3328362517b1552"
         },
         "first_seen": "2026-04-20",
         "last_checked": "2026-06-10",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "GLO",
-          "EU"
+          "EU",
+          "GLO"
         ]
       },
       "CPH2709_16.0.5.701(EX01)": {
@@ -3937,16 +3937,16 @@
         "major": 3,
         "minor": 0,
         "md5": {
-          "GLO": "1fa0ad252c46d6ccdc9699a4f331bbd4",
-          "EU": "d462744e077d08fab080ee7c54bbe2da"
+          "EU": "d462744e077d08fab080ee7c54bbe2da",
+          "GLO": "1fa0ad252c46d6ccdc9699a4f331bbd4"
         },
         "first_seen": "2026-03-28",
         "last_checked": "2026-04-20",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "GLO",
-          "EU"
+          "EU",
+          "GLO"
         ]
       },
       "CPH2709_16.0.2.400(EX01)": {
@@ -3954,16 +3954,16 @@
         "major": 3,
         "minor": 0,
         "md5": {
-          "GLO": "215ac417ec05bafcd5d2c8afe8fa140f",
-          "EU": "7988a8ec49273c093ed02b906deb20a1"
+          "EU": "7988a8ec49273c093ed02b906deb20a1",
+          "GLO": "215ac417ec05bafcd5d2c8afe8fa140f"
         },
-        "first_seen": "2026-02-23",
+        "first_seen": "2026-02-04",
         "last_checked": "2026-03-28",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "GLO",
-          "EU"
+          "EU",
+          "GLO"
         ]
       },
       "CPH2709_16.0.1.300(EX01)": {
@@ -3971,16 +3971,16 @@
         "major": 3,
         "minor": 0,
         "md5": {
-          "GLO": "e897c75b850e4acbb9a6556d541bc3b7",
-          "EU": "1c641f0b3c40922ba9f736d54a957c8a"
+          "EU": "1c641f0b3c40922ba9f736d54a957c8a",
+          "GLO": "e897c75b850e4acbb9a6556d541bc3b7"
         },
         "first_seen": "2026-02-04",
-        "last_checked": "2026-02-22",
+        "last_checked": "2026-04-20",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "GLO",
-          "EU"
+          "EU",
+          "GLO"
         ]
       },
       "CPH2709_15.0.2.604(EX01)": {
@@ -3988,16 +3988,16 @@
         "major": 3,
         "minor": 0,
         "md5": {
-          "GLO": "e5d66cec7708b0178f31bd7b6c67c74a",
-          "EU": "07641d9d8bf4466472600f8ea8a083a0"
+          "EU": "07641d9d8bf4466472600f8ea8a083a0",
+          "GLO": "e5d66cec7708b0178f31bd7b6c67c74a"
         },
         "first_seen": "2026-02-04",
-        "last_checked": "2026-04-20",
+        "last_checked": "2026-02-04",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "GLO",
-          "EU"
+          "EU",
+          "GLO"
         ]
       }
     }
@@ -4014,7 +4014,7 @@
         "minor": 0,
         "md5": "7d7b89ad8e72342568a0dee0dc9764c1",
         "first_seen": "2026-07-24",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -4152,7 +4152,7 @@
         "minor": 0,
         "md5": "d2989d5dd9fa2f666ea71d7add31456d",
         "first_seen": "2026-07-09",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -4302,16 +4302,16 @@
         "major": 3,
         "minor": 0,
         "md5": {
-          "EU": "2b88ed55f20d84630ab8abd852e2a801",
-          "GLO": "ff32749b3f7c7ce37e277ea881d6ba2e"
+          "GLO": "ff32749b3f7c7ce37e277ea881d6ba2e",
+          "EU": "2b88ed55f20d84630ab8abd852e2a801"
         },
-        "first_seen": "2026-07-20",
-        "last_checked": "2026-07-27",
+        "first_seen": "2026-07-16",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ]
       },
       "CPH2747_16.0.8.300(EX01)": {
@@ -4319,16 +4319,16 @@
         "major": 3,
         "minor": 0,
         "md5": {
-          "EU": "a868c92180f0ca8cb2aa855d97c937df",
-          "GLO": "d296b389cccf2c3cde2d5394a73ff360"
+          "GLO": "d296b389cccf2c3cde2d5394a73ff360",
+          "EU": "a868c92180f0ca8cb2aa855d97c937df"
         },
         "first_seen": "2026-06-16",
-        "last_checked": "2026-07-20",
+        "last_checked": "2026-07-16",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ]
       },
       "CPH2747_16.0.7.201(EX01)": {
@@ -4336,16 +4336,16 @@
         "major": 3,
         "minor": 0,
         "md5": {
-          "EU": "fc7c76ca2428f20a7601492ae1f08258",
-          "GLO": "b0005a5d968deeb32e0f21adef9e239e"
+          "GLO": "b0005a5d968deeb32e0f21adef9e239e",
+          "EU": "fc7c76ca2428f20a7601492ae1f08258"
         },
-        "first_seen": "2026-05-20",
+        "first_seen": "2026-05-18",
         "last_checked": "2026-06-15",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ]
       },
       "CPH2747_16.0.5.703(EX01)": {
@@ -4353,16 +4353,16 @@
         "major": 3,
         "minor": 0,
         "md5": {
-          "EU": "45f0790c8808f31d27bbaed5e28f5781",
-          "GLO": "e4c0a74a1fcab67539cf39294c60ba1c"
+          "GLO": "e4c0a74a1fcab67539cf39294c60ba1c",
+          "EU": "45f0790c8808f31d27bbaed5e28f5781"
         },
         "first_seen": "2026-04-24",
-        "last_checked": "2026-05-19",
+        "last_checked": "2026-05-18",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ]
       },
       "CPH2747_16.0.5.700(EX01)": {
@@ -4370,16 +4370,16 @@
         "major": 3,
         "minor": 0,
         "md5": {
-          "EU": "529891ce7bbbaf52357a7fdee83431ff",
-          "GLO": "6086e417cba87486cceab28f08635b19"
+          "GLO": "6086e417cba87486cceab28f08635b19",
+          "EU": "529891ce7bbbaf52357a7fdee83431ff"
         },
         "first_seen": "2026-03-16",
         "last_checked": "2026-04-24",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ]
       },
       "CPH2747_16.0.3.503(EX01)": {
@@ -4387,16 +4387,16 @@
         "major": 3,
         "minor": 0,
         "md5": {
-          "EU": "aead3e10aadb3ff506ae0673a110f8c6",
-          "GLO": "1f617649e2d5d76a5863776bb65100c0"
+          "GLO": "1f617649e2d5d76a5863776bb65100c0",
+          "EU": "aead3e10aadb3ff506ae0673a110f8c6"
         },
         "first_seen": "2026-02-11",
-        "last_checked": "2026-03-18",
+        "last_checked": "2026-03-16",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ]
       },
       "CPH2747_16.0.3.501(EX01)": {
@@ -4404,16 +4404,16 @@
         "major": 3,
         "minor": 0,
         "md5": {
-          "EU": "fbaeb7dc54da345cf94aeeced0af502c",
-          "GLO": "4c9d70c8dbe2b867a7e497aa063acb71"
+          "GLO": "4c9d70c8dbe2b867a7e497aa063acb71",
+          "EU": "fbaeb7dc54da345cf94aeeced0af502c"
         },
         "first_seen": "2026-02-04",
-        "last_checked": "2026-02-08",
+        "last_checked": "2026-04-20",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ]
       },
       "CPH2747_16.0.2.401(EX01)": {
@@ -4421,16 +4421,16 @@
         "major": 3,
         "minor": 0,
         "md5": {
-          "EU": "9e39c1366c03ff0f8f50a8d49a252ad7",
-          "GLO": "a5ddbd8ae6c4a86e4eac062520ac5d0a"
+          "GLO": "a5ddbd8ae6c4a86e4eac062520ac5d0a",
+          "EU": "9e39c1366c03ff0f8f50a8d49a252ad7"
         },
         "first_seen": "2026-02-04",
-        "last_checked": "2026-03-10",
+        "last_checked": "2026-02-11",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ]
       },
       "CPH2747_16.0.1.303(EX01)": {
@@ -4438,16 +4438,16 @@
         "major": 3,
         "minor": 0,
         "md5": {
-          "EU": "2ff1781d46561bf44a0eb40c128390a4",
-          "GLO": "e6da9981cab374beeae4ddbba4e8d083"
+          "GLO": "e6da9981cab374beeae4ddbba4e8d083",
+          "EU": "2ff1781d46561bf44a0eb40c128390a4"
         },
         "first_seen": "2026-02-04",
-        "last_checked": "2026-04-20",
+        "last_checked": "2026-02-25",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ]
       }
     }
@@ -4464,7 +4464,7 @@
         "minor": 0,
         "md5": "e1c7c856336422af11cd999263f5b5d0",
         "first_seen": "2026-07-16",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -4575,16 +4575,16 @@
         "major": 3,
         "minor": 0,
         "md5": {
-          "GLO": "dec4a1753e117fb9fdff8a7cfd22eaa5",
-          "EU": "6274539f5aacc16ad7fd85a08989eca6"
+          "EU": "6274539f5aacc16ad7fd85a08989eca6",
+          "GLO": "dec4a1753e117fb9fdff8a7cfd22eaa5"
         },
         "first_seen": "2026-07-23",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
-          "GLO",
-          "EU"
+          "EU",
+          "GLO"
         ]
       },
       "CPH2769_16.0.8.300(EX01)": {
@@ -4592,16 +4592,16 @@
         "major": 3,
         "minor": 0,
         "md5": {
-          "GLO": "901ef01e7381013d7fce57dfebfa773e",
-          "EU": "8a6301512fb52435b326267dbcda4b1d"
+          "EU": "8a6301512fb52435b326267dbcda4b1d",
+          "GLO": "901ef01e7381013d7fce57dfebfa773e"
         },
-        "first_seen": "2026-06-30",
+        "first_seen": "2026-06-27",
         "last_checked": "2026-07-22",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "GLO",
-          "EU"
+          "EU",
+          "GLO"
         ]
       },
       "CPH2769_16.0.7.200(EX01)": {
@@ -4609,16 +4609,16 @@
         "major": 3,
         "minor": 0,
         "md5": {
-          "GLO": "a4834ee837a00623e3ea91584ddbe513",
-          "EU": "954065b5798bb138339848fd8249a71f"
+          "EU": "954065b5798bb138339848fd8249a71f",
+          "GLO": "a4834ee837a00623e3ea91584ddbe513"
         },
-        "first_seen": "2026-05-18",
-        "last_checked": "2026-06-29",
+        "first_seen": "2026-05-21",
+        "last_checked": "2026-06-26",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "GLO",
-          "EU"
+          "EU",
+          "GLO"
         ]
       },
       "CPH2769_16.0.5.703(EX01)": {
@@ -4639,16 +4639,16 @@
         "major": 3,
         "minor": 0,
         "md5": {
-          "GLO": "ffb1c3aa990044f327a8171e6162af21",
-          "EU": "8ed18c461d884a4b5108147840644bb7"
+          "EU": "8ed18c461d884a4b5108147840644bb7",
+          "GLO": "ffb1c3aa990044f327a8171e6162af21"
         },
-        "first_seen": "2026-03-18",
-        "last_checked": "2026-05-18",
+        "first_seen": "2026-03-30",
+        "last_checked": "2026-04-20",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "GLO",
-          "EU"
+          "EU",
+          "GLO"
         ]
       },
       "CPH2769_16.0.3.503(EX01)": {
@@ -4669,16 +4669,16 @@
         "major": 3,
         "minor": 0,
         "md5": {
-          "GLO": "cb319baa6d71168d9743f4b0492859f5",
-          "EU": "44828fb8b432f3c38dadef0d7cb7f400"
+          "EU": "44828fb8b432f3c38dadef0d7cb7f400",
+          "GLO": "cb319baa6d71168d9743f4b0492859f5"
         },
-        "first_seen": "2026-02-04",
-        "last_checked": "2026-03-10",
+        "first_seen": "2026-02-11",
+        "last_checked": "2026-03-29",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "GLO",
-          "EU"
+          "EU",
+          "GLO"
         ]
       },
       "CPH2769_16.0.2.401(EX01)": {
@@ -4686,16 +4686,16 @@
         "major": 3,
         "minor": 0,
         "md5": {
-          "GLO": "557df71dadd39f65968ad8bbc0ce2293",
-          "EU": "77e4748592f464726b8d72f6614d2875"
+          "EU": "77e4748592f464726b8d72f6614d2875",
+          "GLO": "557df71dadd39f65968ad8bbc0ce2293"
         },
         "first_seen": "2026-02-04",
-        "last_checked": "2026-02-06",
+        "last_checked": "2026-04-20",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "GLO",
-          "EU"
+          "EU",
+          "GLO"
         ]
       }
     }
@@ -4712,7 +4712,7 @@
         "minor": 0,
         "md5": "5b4905ed21df9b065f5a18a275d1fc83",
         "first_seen": "2026-06-24",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -4772,7 +4772,7 @@
         "minor": 0,
         "md5": "f0e18b986114a272fe3997826793f0da",
         "first_seen": "2026-06-24",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -4832,7 +4832,7 @@
         "minor": 120,
         "md5": "29ba37ef58d043e6f1d6088946844fae",
         "first_seen": "2026-03-18",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -4874,7 +4874,7 @@
         "minor": 120,
         "md5": "6bb15c264956576babcd5ded2eae55d0",
         "first_seen": "2026-02-04",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -4895,7 +4895,7 @@
         "minor": 120,
         "md5": "49eb65dde1179f77ad92c5035a51c4ae",
         "first_seen": "2026-02-04",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -4958,7 +4958,7 @@
         "minor": 120,
         "md5": "1ccb5dc4196b7979673ef1cf8338dd76",
         "first_seen": "2026-02-04",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -5000,7 +5000,7 @@
         "minor": 120,
         "md5": "87a2d003e867c131ff0d0b5829f9d91a",
         "first_seen": "2026-02-04",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -5055,7 +5055,7 @@
         "minor": 120,
         "md5": "3d15c9a772241e92cfb0c74acac2d739",
         "first_seen": "2026-02-04",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -5068,7 +5068,7 @@
         "minor": 120,
         "md5": "e6681e6d8c0e0e903c514bd5f29b8c7a",
         "first_seen": "2026-02-04",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -5110,7 +5110,7 @@
         "minor": 120,
         "md5": "918bda26536c88621a0210b64f887074",
         "first_seen": "2026-02-04",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -5131,7 +5131,7 @@
         "minor": 120,
         "md5": "38f9e3ee0be3b595e5b3f4ccf244aca0",
         "first_seen": "2026-02-04",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -5173,7 +5173,7 @@
         "minor": 120,
         "md5": "6cce909b7b011d59bdd04b0830e364c6",
         "first_seen": "2026-03-28",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -5207,7 +5207,7 @@
         "minor": 120,
         "md5": "9262c4d8d4591ac891d13bf2e3bc9c04",
         "first_seen": "2026-02-04",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -5228,7 +5228,7 @@
         "minor": 120,
         "md5": "0fb14a28fe6ac6d91b52a66a9d6e76e7",
         "first_seen": "2026-02-04",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -5249,7 +5249,7 @@
         "minor": 120,
         "md5": "1c53e270fe049b1cdbd361f6a29900d0",
         "first_seen": "2026-02-04",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -5270,7 +5270,7 @@
         "minor": 120,
         "md5": "68134307caa39d9f0f07cbb107619dee",
         "first_seen": "2026-02-04",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -5291,7 +5291,7 @@
         "minor": 120,
         "md5": "25b0c8e1c6c1c3a9630644f08c02bf81",
         "first_seen": "2026-02-04",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -5312,7 +5312,7 @@
         "minor": 120,
         "md5": "ef5915d51a38a0213a15a31102ad904a",
         "first_seen": "2026-02-04",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -5333,7 +5333,7 @@
         "minor": 120,
         "md5": "7f497eba018cba18d4a57c720a2120eb",
         "first_seen": "2026-02-04",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -5354,7 +5354,7 @@
         "minor": 120,
         "md5": "5353f56dfa6db49482d1801ede7b4ca0",
         "first_seen": "2026-02-04",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -5375,7 +5375,7 @@
         "minor": 120,
         "md5": "95f48596dd863486130da6b32b823036",
         "first_seen": "2026-02-04",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -5396,7 +5396,7 @@
         "minor": 120,
         "md5": "b08d06b5f340ccb6c2a5e58c3cd51218",
         "first_seen": "2026-02-04",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -5417,7 +5417,7 @@
         "minor": 120,
         "md5": "ce87f568d2c236229f628f95bb82a08a",
         "first_seen": "2026-02-04",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": true,
         "regions": [
@@ -5652,7 +5652,7 @@
           "GLO": "63eaf2e1411c43a50b10bb95c2cbf5a6"
         },
         "first_seen": "2026-07-04",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -5793,7 +5793,7 @@
         "minor": 0,
         "md5": "203d379328732fae89f3134e3b808304",
         "first_seen": "2026-02-04",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -5814,7 +5814,7 @@
         "minor": 0,
         "md5": "e24794214f2487fd0b792ac5fae98825",
         "first_seen": "2026-07-25",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -5922,7 +5922,7 @@
         "minor": 0,
         "md5": "c7d36364f94daa509c19f71b1e100982",
         "first_seen": "2026-07-14",
-        "last_checked": "2026-07-24",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -6025,7 +6025,7 @@
           "EU": "ff553091027315b3409c3e434cfad4bd"
         },
         "first_seen": "2026-07-25",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -6156,7 +6156,7 @@
         "minor": 0,
         "md5": "622d110ed6f4cf0da0e3fa851dd23e10",
         "first_seen": "2026-07-23",
-        "last_checked": "2026-07-24",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -6294,7 +6294,7 @@
         "minor": 0,
         "md5": "20e0b3d0af30642118e358cb3cbf6bc8",
         "first_seen": "2026-05-23",
-        "last_checked": "2026-07-23",
+        "last_checked": "2026-07-28",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
@@ -6367,7 +6367,7 @@
         "minor": 0,
         "md5": "da7644a47989fb00e21c13015af886a8",
         "first_seen": "2026-05-23",
-        "last_checked": "2026-07-24",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -6427,7 +6427,7 @@
         "minor": 0,
         "md5": "7730a2a0baf2376a6bb857d9e9767c93",
         "first_seen": "2026-05-23",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -6513,7 +6513,7 @@
         "minor": 0,
         "md5": "d5a4233c25e2890a70909fc5eff74d7b",
         "first_seen": "2026-07-10",
-        "last_checked": "2026-07-23",
+        "last_checked": "2026-07-28",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
@@ -6664,7 +6664,7 @@
         "minor": 0,
         "md5": "6fb0095cc9c07dbdb74074c87cbb643f",
         "first_seen": "2026-07-16",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -6914,7 +6914,7 @@
         "minor": 0,
         "md5": "e21af44b770bfccfa08ee63401c23b4d",
         "first_seen": "2026-07-16",
-        "last_checked": "2026-07-24",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -7164,7 +7164,7 @@
         "minor": 0,
         "md5": "7e9067d6127a8d33169b323d1ee4c83c",
         "first_seen": "2026-07-09",
-        "last_checked": "2026-07-24",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -7276,7 +7276,7 @@
         "minor": 0,
         "md5": "8fdbfd42136ac85e4a763129491a2b7f",
         "first_seen": "2026-07-04",
-        "last_checked": "2026-07-24",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -7440,7 +7440,7 @@
         "minor": 0,
         "md5": "6533ffcf2bbd162e64817a16a4156883",
         "first_seen": "2026-07-14",
-        "last_checked": "2026-07-24",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -7604,7 +7604,7 @@
         "minor": 0,
         "md5": "9405af9464898ad1e50e14ab7d64baf9",
         "first_seen": "2026-07-14",
-        "last_checked": "2026-07-24",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -7755,7 +7755,7 @@
         "minor": 0,
         "md5": "b5b3730e9d5f92f6ba4ef5a6685ce384",
         "first_seen": "2026-07-03",
-        "last_checked": "2026-07-24",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
