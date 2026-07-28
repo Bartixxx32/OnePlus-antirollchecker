@@ -179,7 +179,6 @@ jobs:
           fi
 
           API_BASE="https://oosdownloader-gui.fly.dev/api"
-          DEVICE="${{ matrix.device }}"
           VARIANT="${{ matrix.variant }}"
           DEVNAME="${{ matrix.device_name }}"
 
@@ -191,7 +190,7 @@ jobs:
             BRAND="realme"
           fi
 
-          ENC_DEVICE=$(python3 -c "import urllib.parse; print(urllib.parse.quote('$DEVICE'))")
+          ENC_DEVNAME=$(python3 -c "import urllib.parse; print(urllib.parse.quote('$DEVNAME'))")
           ENC_VARIANT=$(python3 -c "import urllib.parse; print(urllib.parse.quote('$VARIANT'))")
 
           echo "Downloading xbl_config from OOS Downloader v2 API..."
@@ -199,7 +198,7 @@ jobs:
           curl -sS -w "\n%{http_code}" --max-time 180 \
             --retry 3 --retry-delay 5 \
             -D /tmp/xbl_headers.txt \
-            "${API_BASE}/ota/v2/extract-partition?device=${ENC_DEVICE}&region=${ENC_VARIANT}&partition=xbl_config&brand=${BRAND}" \
+            "${API_BASE}/ota/v2/extract-partition?device=${ENC_DEVNAME}&region=${ENC_VARIANT}&partition=xbl_config&brand=${BRAND}" \
             -o firmware_data/xbl_config.img \
             > /tmp/xbl_status.txt
 
