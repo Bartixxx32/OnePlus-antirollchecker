@@ -181,6 +181,15 @@ jobs:
           API_BASE="https://oosdownloader-gui.fly.dev/api"
           DEVICE="${{ matrix.device }}"
           VARIANT="${{ matrix.variant }}"
+          DEVNAME="${{ matrix.device_name }}"
+
+          # Determine brand from device name
+          BRAND="oneplus"
+          if [[ "${DEVNAME,,}" == oppo* ]]; then
+            BRAND="oppo"
+          elif [[ "${DEVNAME,,}" == realme* ]]; then
+            BRAND="realme"
+          fi
 
           ENC_DEVICE=$(python3 -c "import urllib.parse; print(urllib.parse.quote('$DEVICE'))")
           ENC_VARIANT=$(python3 -c "import urllib.parse; print(urllib.parse.quote('$VARIANT'))")
@@ -190,7 +199,7 @@ jobs:
           curl -sS -w "\n%{http_code}" --max-time 180 \
             --retry 3 --retry-delay 5 \
             -D /tmp/xbl_headers.txt \
-            "${API_BASE}/ota/v2/extract-partition?device=${ENC_DEVICE}&region=${ENC_VARIANT}&partition=xbl_config" \
+            "${API_BASE}/ota/v2/extract-partition?device=${ENC_DEVICE}&region=${ENC_VARIANT}&partition=xbl_config&brand=${BRAND}" \
             -o firmware_data/xbl_config.img \
             > /tmp/xbl_status.txt
 
@@ -245,23 +254,43 @@ jobs:
 
           cat result.json
 
-      - name: Fallback - Direct Download with Curl
+      - name: Fallback - Download with aria2c
         if: steps.cache-arb.outputs.cache-hit != 'true' && hashFiles('skip_check.txt') != ''
         run: |
           URL="${{ steps.get_details.outputs.url }}"
+          MD5="${{ steps.get_details.outputs.md5 }}"
           if [[ "$URL" == "" || "$URL" == "null" ]]; then
              exit 0
           fi
 
-          echo "Falling back to direct download with okhttp headers..."
+          echo "Falling back to aria2c download with okhttp headers..."
           mkdir -p firmware_data
-          curl -sS -L --max-time 600 --retry 2 --retry-delay 10 \
-            -H "User-Agent: okhttp/3.12.12" \
-            -H "userId: oplus-ota|16002018" \
-            -o firmware.zip "$URL" || true
 
-          if [ ! -f firmware.zip ] || [ ! -s firmware.zip ]; then
-            echo "Direct download also failed."
+          ARIA_CMD="aria2c -c -x16 -s16 -k1M --header=User-Agent:okhttp/3.12.12 --header=userId:oplus-ota|16002018 -o firmware.zip"
+          if [[ "$MD5" != "" && "$MD5" != "None" ]]; then
+              echo "Enforcing MD5 checksum: $MD5"
+              ARIA_CMD="$ARIA_CMD --checksum=md5=$MD5"
+          fi
+
+          MAX_RETRIES=3
+          SUCCESS=0
+          for i in $(seq 1 $MAX_RETRIES); do
+            echo "Attempt $i/$MAX_RETRIES..."
+            if $ARIA_CMD "$URL"; then
+              SUCCESS=1
+              break
+            fi
+            echo "Download failed."
+            if [ -f firmware.zip.aria2 ]; then
+              echo "Partial download preserved, will resume."
+            else
+              rm -f firmware.zip
+            fi
+            sleep 10
+          done
+
+          if [ $SUCCESS -eq 0 ]; then
+            echo "aria2c download failed after $MAX_RETRIES attempts."
             exit 0
           fi
 
