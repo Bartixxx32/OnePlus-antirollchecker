@@ -93,6 +93,8 @@ def generate_device_section(device_id: str, device_name: str, history_data: Dict
                 
             # MD5 formating
             md5 = current_entry.get('md5')
+            if isinstance(md5, dict):
+                md5 = md5.get(region, '')
             md5_str = ""
             if md5:
                 md5_str = f"<br><details><summary>MD5</summary><code>{md5}</code></details>"
@@ -150,6 +152,8 @@ def generate_device_section(device_id: str, device_name: str, history_data: Dict
                         s_icon = "❓ Unknown"
                     
                     md5_hist = entry.get('md5')
+                    if isinstance(md5_hist, dict):
+                        md5_hist = md5_hist.get(region, '')
                     md5_hist_str = ""
                     if md5_hist:
                         md5_hist_str = f"<br><details><summary>MD5</summary><code>{md5_hist}</code></details>"

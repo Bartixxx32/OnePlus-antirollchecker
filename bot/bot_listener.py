@@ -437,8 +437,13 @@ async def status_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
                     arb = v_det.get('arb', '?')
                     arb_display = arb
                     status_icon = "🟢" if arb == 0 else "🔴"
-                md5 = v_det.get('md5', 'N/A')
-                regions = ", ".join(v_det.get('regions', []))
+                md5_raw = v_det.get('md5', 'N/A')
+                md5 = md5_raw
+                regions_list = v_det.get('regions', [])
+                if isinstance(md5_raw, dict):
+                    md5_parts = [f"{r}: {md5_raw.get(r, '?')}" for r in regions_list if r in md5_raw]
+                    md5 = ", ".join(md5_parts) if md5_parts else 'N/A'
+                regions = ", ".join(regions_list)
                 text += f"  • `{v}` ({regions}) - ARB: {arb_display} {status_icon}\n    MD5: `{md5}`\n"
         text += "\n"
         

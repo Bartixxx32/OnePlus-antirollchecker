@@ -74,9 +74,15 @@ def generate_database():
                     "regions": [region]
                 }
             else:
-                # Append region if not already present
-                if region not in database[model]["versions"][version_str]["regions"]:
-                    database[model]["versions"][version_str]["regions"].append(region)
+                existing = database[model]["versions"][version_str]
+                if region not in existing["regions"]:
+                    existing["regions"].append(region)
+                    existing_md5 = existing.get("md5")
+                    new_md5 = entry.get("md5")
+                    if existing_md5 and new_md5 and existing_md5 != new_md5:
+                        if not isinstance(existing_md5, dict):
+                            existing["md5"] = {r: existing_md5 for r in existing["regions"] if r != region}
+                        existing["md5"][region] = new_md5
 
     # Output versions as an ordered dict keyed by version string (descending order).
     # This maintains backwards compatibility with the Android app which expects

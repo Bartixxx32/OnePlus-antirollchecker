@@ -346,17 +346,21 @@ async function loadData() {
                 if (vWithKey.status === 'current' || !vr.version) {
                     vr.version = vWithKey.version;
                     vr.arb = vWithKey.arb;
-                    vr.md5 = vWithKey.md5;
+                    vr.md5 = typeof vWithKey.md5 === 'object' ? (vWithKey.md5[r] || '') : vWithKey.md5;
                     vr.major = vWithKey.major;
                     vr.minor = vWithKey.minor;
                     vr.is_hardcoded = vWithKey.is_hardcoded;
                     vr.last_checked = vWithKey.last_checked;
                     vr.first_seen = vWithKey.first_seen;
                     if (vWithKey.status !== 'current') {
-                        vr.history.push(vWithKey);
+                        const hEntry = { ...vWithKey };
+                        if (typeof hEntry.md5 === 'object') hEntry.md5 = hEntry.md5[r] || '';
+                        vr.history.push(hEntry);
                     }
                 } else {
-                    vr.history.push(vWithKey);
+                    const hEntry = { ...vWithKey };
+                    if (typeof hEntry.md5 === 'object') hEntry.md5 = hEntry.md5[r] || '';
+                    vr.history.push(hEntry);
                 }
             }
         }
