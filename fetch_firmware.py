@@ -13,7 +13,7 @@ from config import SPRINGER_API_URL, OOS_API_URL, USER_AGENT, SPRING_MAPPING, OO
 logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
 logger = logging.getLogger(__name__)
 
-def requests_get_with_retry(url, retries=3, delay=10, timeout=10):
+def requests_get_with_retry(url, retries=3, delay=10, timeout=30):
     """
     Helper to perform requests.get with retries.
     """
@@ -39,10 +39,6 @@ def get_from_oos_api(device_id: str, region: str) -> dict:
     """
     mapped_id = OOS_MAPPING.get(device_id, f"oneplus_{device_id}")
     
-    # Skip CN for OOS API (usually not supported or tricky)
-    if region == "CN":
-        return None
-        
     # Determine brand
     brand = "oneplus"
     if mapped_id.startswith("oppo_") or mapped_id.startswith("find_"):
