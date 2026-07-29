@@ -2594,6 +2594,19 @@
     "expect_esim": true,
     "expect_barometer": false,
     "versions": {
+      "CPH2609_16.0.5.1002(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "minor": 0,
+        "md5": "b9c03939ee9dc63d0c8ca1306a11897d",
+        "first_seen": "2026-07-29",
+        "last_checked": "2026-07-29",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "GLO"
+        ]
+      },
       "CPH2609_16.0.5.702(EX01)": {
         "arb": 0,
         "major": 2,
@@ -2604,7 +2617,7 @@
         },
         "first_seen": "2026-05-26",
         "last_checked": "2026-07-28",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "GLO",
@@ -6615,7 +6628,7 @@
         "minor": 0,
         "md5": "3d1b183bf4edd4f785675c6e5f770a69",
         "first_seen": "2026-07-24",
-        "last_checked": "2026-07-24",
+        "last_checked": "2026-07-29",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
