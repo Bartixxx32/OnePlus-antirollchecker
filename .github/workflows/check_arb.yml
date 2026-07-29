@@ -1,8 +1,5 @@
 name: Check ARB
 
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
 on:
   workflow_dispatch:
     inputs:
@@ -353,7 +350,7 @@ jobs:
             --md5 "${{ steps.get_details.outputs.md5 }}"
 
       - name: Upload Result
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: result-${{ matrix.device }}-${{ matrix.variant }}
           path: result.json
@@ -399,7 +396,7 @@ jobs:
 
 
       - name: Upload JSON History
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: history-${{ matrix.device }}-${{ matrix.variant }}
           path: data/history/${{ steps.get_details.outputs.device_short }}_${{ matrix.variant }}.json
@@ -416,7 +413,7 @@ jobs:
         uses: actions/checkout@v5
 
       - name: Download All Artifacts
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           pattern: history-*
           path: data/history
