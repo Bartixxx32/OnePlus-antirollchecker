@@ -439,7 +439,7 @@ jobs:
           python3 generate_database.py
           python3 generate_readme.py
           python3 generate_site.py
-          
+
       - name: Commit and Push
         run: |
           git config --local user.email "action@github.com"
@@ -455,3 +455,10 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./page
           keep_files: true
+
+      - name: Sync to Supabase
+        if: env.SUPABASE_URL != '' && env.SUPABASE_SERVICE_KEY != ''
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: python3 sync_to_supabase.py
