@@ -2598,13 +2598,17 @@
         "arb": 0,
         "major": 2,
         "minor": 0,
-        "md5": "b9c03939ee9dc63d0c8ca1306a11897d",
+        "md5": {
+          "GLO": "b9c03939ee9dc63d0c8ca1306a11897d",
+          "EU": "07581354c672796a8b4bcdc1e6d18855"
+        },
         "first_seen": "2026-07-29",
         "last_checked": "2026-07-29",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
-          "GLO"
+          "GLO",
+          "EU"
         ]
       },
       "CPH2609_16.0.5.702(EX01)": {
@@ -2862,12 +2866,16 @@
         "arb": 1,
         "major": 3,
         "minor": 0,
-        "md5": "62695bbacbf3641df51d90153dc54ca5",
-        "first_seen": "2026-07-29",
-        "last_checked": "2026-07-29",
+        "md5": {
+          "GLO": "f75de7b93425005bd77f01c2553e4ed2",
+          "EU": "62695bbacbf3641df51d90153dc54ca5"
+        },
+        "first_seen": "2026-07-30",
+        "last_checked": "2026-07-30",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
+          "GLO",
           "EU"
         ]
       },
@@ -2881,7 +2889,7 @@
         },
         "first_seen": "2026-06-27",
         "last_checked": "2026-07-28",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "GLO",
@@ -6549,6 +6557,19 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "PJX110_16.0.5.1001(CN01)": {
+        "arb": 1,
+        "major": 3,
+        "minor": 0,
+        "md5": "12acd5d1b01dc3a03fec06a9a4f1a9c3",
+        "first_seen": "2026-07-30",
+        "last_checked": "2026-07-30",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "CN"
+        ]
+      },
       "PJX110_16.0.5.701(CN01)": {
         "arb": 1,
         "major": 3,
@@ -6556,7 +6577,7 @@
         "md5": "7730a2a0baf2376a6bb857d9e9767c93",
         "first_seen": "2026-05-23",
         "last_checked": "2026-07-28",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "CN"
