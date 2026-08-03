@@ -1113,7 +1113,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 |:---|:---|:---|:---|:---|:---|:---|
 | Global | CPH2465 | CPH2465_15.0.0.1810(EX01)<br><details><summary>MD5</summary><code>1b08a7373453ff410e89698ec1629089</code></details> | **?** | Major: 0, Minor: 120 | 2026-07-28 | ⚠️ Undetectable ARB |
 | Europe | CPH2465EEA | CPH2465_15.0.0.1810(EX01)<br><details><summary>MD5</summary><code>aeaff8dc5364d51bbd6ec5455ff2d038</code></details> | **?** | Major: 0, Minor: 120 | 2026-07-28 | ⚠️ Undetectable ARB |
-| India | CPH2467 | CPH2467_15.0.0.1900(EX01)<br><details><summary>MD5</summary><code>7b708d145fda9722c7b62c4260516662</code></details> | **?** | Major: 0, Minor: 120 | 2026-07-27 | ⚠️ Undetectable ARB |
+| India | CPH2467 | CPH2467_15.0.0.1910(EX01)<br><details><summary>MD5</summary><code>05e595476654d5cd3bf0e23007f460f2</code></details> | **?** | Major: 0, Minor: 120 | 2026-08-03 | ⚠️ Undetectable ARB |
 
 <details>
 <summary>📜 <b>Global History</b> (click to expand)</summary>
@@ -1140,6 +1140,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| CPH2467_15.0.0.1900(EX01)<br><details><summary>MD5</summary><code>7b708d145fda9722c7b62c4260516662</code></details> | ? | Major: 0, Minor: 120 | 2026-07-27 | ⚠️ Undetectable ARB |
 | CPH2467_15.0.0.1810(EX01)<br><details><summary>MD5</summary><code>e7c3ef3766eb129e5735e49124051886</code></details> | ? | Major: 0, Minor: 120 | 2026-07-28 | ⚠️ Undetectable ARB |
 | CPH2467_15.0.0.1800(EX01)<br><details><summary>MD5</summary><code>8726ea7cfe6acb09a6c31ac8a0e82679</code></details> | ? | Major: 0, Minor: 120 | 2026-05-19 | ⚠️ Undetectable ARB |
 | CPH2467_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>479a7a4ead369db901314969f4728b37</code></details> | ? | Major: 0, Minor: 120 | 2026-03-20 | ⚠️ Undetectable ARB |
@@ -1534,9 +1535,9 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | Asia Pacific | CPH2525 | CPH2525_15.0.0.1901(EX01)<br><details><summary>MD5</summary><code>92e65d7b95d5f6e1a28125938b158e59</code></details> | **0** | Major: 0, Minor: 120 | 2026-07-28 | ✅ Safe |
 | Oceania | CPH2525OCA | CPH2525_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>0407edf6593a82dc2d02b13bc38c0a2e</code></details> | **0** | Major: 0, Minor: 120 | 2026-07-28 | ✅ Safe |
 | Saudi Arabia | CPH2525SA | CPH2525_15.0.0.1901(EX01)<br><details><summary>MD5</summary><code>6260acd0c725d9b5d2c66c9ebebe1c55</code></details> | **0** | Major: 0, Minor: 120 | 2026-07-28 | ✅ Safe |
-| India | CPH2525IN | CPH2525_13.1.1.147(EX01)<br><details><summary>MD5</summary><code>abb2a1ef3450621de3073f48d5215b19</code></details> | **0** | Major: 0, Minor: 120 | 2026-07-28 | ✅ Safe |
 | Philippines | CPH2525PH | CPH2525_15.0.0.1901(EX01)<br><details><summary>MD5</summary><code>9fdc262d0e71288ea7ac1d1aefb40125</code></details> | **0** | Major: 0, Minor: 120 | 2026-07-28 | ✅ Safe |
 | Middle East | CPH2525MEA | CPH2525_15.0.0.1901(EX01)<br><details><summary>MD5</summary><code>666e479b07fe7e4443e58a5c1e61b1e5</code></details> | **0** | Major: 0, Minor: 120 | 2026-07-28 | ✅ Safe |
+| India | CPH2525IN | CPH2525_13.1.1.147(EX01)<br><details><summary>MD5</summary><code>abb2a1ef3450621de3073f48d5215b19</code></details> | **0** | Major: 0, Minor: 120 | 2026-07-28 | ✅ Safe |
 
 <details>
 <summary>📜 <b>Singapore History</b> (click to expand)</summary>
@@ -2039,4 +2040,4 @@ Prefer a native mobile experience? We have an official Android app on F-Droid! C
 > **Important:** The bot **only** works within this group to prevent spam and ensure availability. DM checks are disabled.
 
 ---
-*Last updated: 2026-08-02 03:33 UTC*
+*Last updated: 2026-08-03 03:32 UTC*
