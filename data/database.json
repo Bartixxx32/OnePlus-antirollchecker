@@ -1195,6 +1195,7 @@
         "major": 2,
         "minor": 0,
         "md5": {
+          "OCA": "85bc2a1a28da96b6b0e24f73a477f671",
           "TW": "9161dcb8b8674ff6a9dd0d2d23411aeb",
           "ID": "48b00ad3baf9688eb505d41ac8cf77a3",
           "TH": "7e4bdd74c76e6964d1a1bed5f33fa3fb",
@@ -1202,11 +1203,12 @@
           "SG": "96a7c2a09a54bacd80c5487e5463d022",
           "MY": "2f21937ce7c57b4c4723c4e738ea1b7f"
         },
-        "first_seen": "2026-07-29",
-        "last_checked": "2026-07-29",
+        "first_seen": "2026-08-04",
+        "last_checked": "2026-08-04",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
+          "OCA",
           "TW",
           "ID",
           "TH",
@@ -1255,7 +1257,7 @@
         },
         "first_seen": "2026-03-25",
         "last_checked": "2026-07-28",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "OCA",
