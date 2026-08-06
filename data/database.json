@@ -79,20 +79,20 @@
         "arb": 0,
         "major": 2,
         "minor": 0,
-        "md5": "8825b9931592d5f68b86a9baf7fe0837",
-        "first_seen": "2026-07-07",
+        "md5": "e176ca4a48fccb9325fc7f1f005cabe7",
+        "first_seen": "2026-07-02",
         "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
+          "TW",
           "EU",
-          "SG",
-          "TW"
+          "SG"
         ],
         "md5_by_region": {
+          "TW": "e176ca4a48fccb9325fc7f1f005cabe7",
           "EU": "8825b9931592d5f68b86a9baf7fe0837",
-          "SG": "71fd05842c877ec49e3b0e41c14cea25",
-          "TW": "e176ca4a48fccb9325fc7f1f005cabe7"
+          "SG": "71fd05842c877ec49e3b0e41c14cea25"
         }
       },
       "CPH2305_16.0.3.530(EX01)": {
@@ -112,18 +112,18 @@
         "arb": 0,
         "major": 2,
         "minor": 0,
-        "md5": "4d50d6bc4def5cba0d05351c842670e8",
-        "first_seen": "2026-04-15",
+        "md5": "cad47f9b17760e4549cbb82af3c85b13",
+        "first_seen": "2026-03-31",
         "last_checked": "2026-07-01",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "TW"
+          "TW",
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "4d50d6bc4def5cba0d05351c842670e8",
-          "TW": "cad47f9b17760e4549cbb82af3c85b13"
+          "TW": "cad47f9b17760e4549cbb82af3c85b13",
+          "EU": "4d50d6bc4def5cba0d05351c842670e8"
         }
       },
       "CPH2305_16.0.3.501(EX01)": {
@@ -163,13 +163,13 @@
         "is_hardcoded": false,
         "regions": [
           "OCA",
-          "SG",
-          "TW"
+          "TW",
+          "SG"
         ],
         "md5_by_region": {
           "OCA": "3f6ea5e51cd36086013baf858c5a2f76",
-          "SG": "81aa48b49783dffec339e362edeb230b",
-          "TW": "f872fdd23787fec04579586d7a34ac20"
+          "TW": "f872fdd23787fec04579586d7a34ac20",
+          "SG": "81aa48b49783dffec339e362edeb230b"
         }
       },
       "CPH2305_11_A.22": {
@@ -217,15 +217,15 @@
         "is_hardcoded": false,
         "regions": [
           "EG",
-          "EU",
           "OCA",
-          "SA"
+          "SA",
+          "EU"
         ],
         "md5_by_region": {
           "EG": "fe06415c8aa4aad526cb40e776ba9b36",
-          "EU": "2e4983e349bea6c8122a4cb7122fce2e",
           "OCA": "459ce1072fbd5f00c30b7c69cae5fb1f",
-          "SA": "e08d24c25c9ca0b7187849047b819e76"
+          "SA": "e08d24c25c9ca0b7187849047b819e76",
+          "EU": "2e4983e349bea6c8122a4cb7122fce2e"
         }
       },
       "CPH2307_15.0.0.1304(EX01)": {
@@ -713,54 +713,54 @@
         "arb": 0,
         "major": 2,
         "minor": 0,
-        "md5": "c54333bf7dabad17649dbea39fb56fd6",
-        "first_seen": "2026-05-27",
+        "md5": "5ec4120c2e67fb401b7d887988e8b9b0",
+        "first_seen": "2026-05-26",
         "last_checked": "2026-07-27",
-        "status": "archived",
+        "status": "current",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "c54333bf7dabad17649dbea39fb56fd6",
-          "GLO": "5ec4120c2e67fb401b7d887988e8b9b0"
+          "GLO": "5ec4120c2e67fb401b7d887988e8b9b0",
+          "EU": "c54333bf7dabad17649dbea39fb56fd6"
         }
       },
       "CPH2449_16.0.5.701(EX01)": {
         "arb": 0,
         "major": 2,
         "minor": 0,
-        "md5": "5d8b993a4940e0e315053b2c126c851e",
+        "md5": "d7f049726ca288960f64cc2fe21a278b",
         "first_seen": "2026-04-29",
         "last_checked": "2026-05-25",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "5d8b993a4940e0e315053b2c126c851e",
-          "GLO": "d7f049726ca288960f64cc2fe21a278b"
+          "GLO": "d7f049726ca288960f64cc2fe21a278b",
+          "EU": "5d8b993a4940e0e315053b2c126c851e"
         }
       },
       "CPH2449_16.0.3.500(EX01)": {
         "arb": 0,
         "major": 2,
         "minor": 0,
-        "md5": "9db981106445969885335a2d35cfda5f",
+        "md5": "8744bb0bfc9b3bc5e02bf0c3ad0d8352",
         "first_seen": "2026-02-25",
         "last_checked": "2026-04-28",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "9db981106445969885335a2d35cfda5f",
-          "GLO": "8744bb0bfc9b3bc5e02bf0c3ad0d8352"
+          "GLO": "8744bb0bfc9b3bc5e02bf0c3ad0d8352",
+          "EU": "9db981106445969885335a2d35cfda5f"
         }
       },
       "CPH2449_16.0.2.401(EX01)": {
@@ -780,90 +780,90 @@
         "arb": 0,
         "major": 2,
         "minor": 0,
-        "md5": "3a0e1f9b1288270b6a9339d36e91012b",
+        "md5": "b5745266807941dfbd1740eb4d81b26c",
         "first_seen": "2026-02-04",
-        "last_checked": "2026-02-04",
+        "last_checked": "2026-04-20",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "3a0e1f9b1288270b6a9339d36e91012b",
-          "GLO": "b5745266807941dfbd1740eb4d81b26c"
+          "GLO": "b5745266807941dfbd1740eb4d81b26c",
+          "EU": "3a0e1f9b1288270b6a9339d36e91012b"
         }
       },
       "CPH2449_15.0.0.862(EX01)": {
         "arb": 0,
         "major": 2,
         "minor": 0,
-        "md5": "005720cd3a7ed022c504ea46aa08b108",
+        "md5": "54cc417e44e221c6960e4a6446c56cd0",
         "first_seen": "2026-02-04",
-        "last_checked": "2026-02-04",
+        "last_checked": "2026-07-28",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "005720cd3a7ed022c504ea46aa08b108",
-          "GLO": "54cc417e44e221c6960e4a6446c56cd0"
+          "GLO": "54cc417e44e221c6960e4a6446c56cd0",
+          "EU": "005720cd3a7ed022c504ea46aa08b108"
         }
       },
       "CPH2449_15.0.0.600(EX01)": {
         "arb": 0,
         "major": 2,
         "minor": 0,
-        "md5": "34bbda6b42e72c2e9e536087355df1ae",
+        "md5": "419b9c2222c3db98dd3dab2092b071ea",
         "first_seen": "2026-02-04",
-        "last_checked": "2026-04-20",
+        "last_checked": "2026-02-04",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "34bbda6b42e72c2e9e536087355df1ae",
-          "GLO": "419b9c2222c3db98dd3dab2092b071ea"
+          "GLO": "419b9c2222c3db98dd3dab2092b071ea",
+          "EU": "34bbda6b42e72c2e9e536087355df1ae"
         }
       },
       "CPH2449_14.0.0.833(EX01)": {
         "arb": 0,
         "major": 2,
         "minor": 0,
-        "md5": "c3e9d3216214792f7106adf6f72d5f4c",
+        "md5": "b9d025ed11a63e79b8a27120f528bcd5",
         "first_seen": "2026-02-13",
-        "last_checked": "2026-03-18",
+        "last_checked": "2026-02-13",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "c3e9d3216214792f7106adf6f72d5f4c",
-          "GLO": "b9d025ed11a63e79b8a27120f528bcd5"
+          "GLO": "b9d025ed11a63e79b8a27120f528bcd5",
+          "EU": "c3e9d3216214792f7106adf6f72d5f4c"
         }
       },
       "CPH2449_14.0.0.304(EX01)": {
         "arb": 0,
         "major": 2,
         "minor": 0,
-        "md5": "c1f0435152c274076284d579f94b3427",
+        "md5": "e698b0fa87d61c1b081abe119c52fb86",
         "first_seen": "2026-02-13",
-        "last_checked": "2026-02-13",
+        "last_checked": "2026-02-25",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "c1f0435152c274076284d579f94b3427",
-          "GLO": "e698b0fa87d61c1b081abe119c52fb86"
+          "GLO": "e698b0fa87d61c1b081abe119c52fb86",
+          "EU": "c1f0435152c274076284d579f94b3427"
         }
       }
     }
@@ -1212,110 +1212,110 @@
         "arb": 0,
         "major": 2,
         "minor": 0,
-        "md5": "48b00ad3baf9688eb505d41ac8cf77a3",
-        "first_seen": "2026-07-22",
+        "md5": "2f21937ce7c57b4c4723c4e738ea1b7f",
+        "first_seen": "2026-07-25",
         "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
-          "ID",
           "MY",
-          "OCA",
-          "SG",
           "TH",
-          "TW",
-          "VN"
+          "ID",
+          "SG",
+          "VN",
+          "OCA",
+          "TW"
         ],
         "md5_by_region": {
-          "ID": "48b00ad3baf9688eb505d41ac8cf77a3",
           "MY": "2f21937ce7c57b4c4723c4e738ea1b7f",
-          "OCA": "85bc2a1a28da96b6b0e24f73a477f671",
-          "SG": "96a7c2a09a54bacd80c5487e5463d022",
           "TH": "7e4bdd74c76e6964d1a1bed5f33fa3fb",
-          "TW": "9161dcb8b8674ff6a9dd0d2d23411aeb",
-          "VN": "51981794f4adc9f9ad78d7604233ff17"
+          "ID": "48b00ad3baf9688eb505d41ac8cf77a3",
+          "SG": "96a7c2a09a54bacd80c5487e5463d022",
+          "VN": "51981794f4adc9f9ad78d7604233ff17",
+          "OCA": "85bc2a1a28da96b6b0e24f73a477f671",
+          "TW": "9161dcb8b8674ff6a9dd0d2d23411aeb"
         }
       },
       "CPH2499_16.0.5.701(EX01)": {
         "arb": 0,
         "major": 2,
         "minor": 0,
-        "md5": "f591f86724bc3a090e2ba75412c5dd0f",
-        "first_seen": "2026-05-27",
-        "last_checked": "2026-07-21",
+        "md5": "0c6a6e3fec7272d22e52ec8bae493b85",
+        "first_seen": "2026-05-30",
+        "last_checked": "2026-07-24",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "ID",
           "MY",
-          "SG",
           "TH",
-          "TW",
-          "VN"
+          "ID",
+          "SG",
+          "VN",
+          "TW"
         ],
         "md5_by_region": {
-          "ID": "f591f86724bc3a090e2ba75412c5dd0f",
           "MY": "0c6a6e3fec7272d22e52ec8bae493b85",
-          "SG": "a5b87ecebdb06a2023b9487c6a1d71aa",
           "TH": "4725bd55759c2c2c287292fa965333ec",
-          "TW": "1d4fe18caac4bb9765ea20ce8cf61ed7",
-          "VN": "13128119a7102eee679bd6215dcedc0a"
+          "ID": "f591f86724bc3a090e2ba75412c5dd0f",
+          "SG": "a5b87ecebdb06a2023b9487c6a1d71aa",
+          "VN": "13128119a7102eee679bd6215dcedc0a",
+          "TW": "1d4fe18caac4bb9765ea20ce8cf61ed7"
         }
       },
       "CPH2499_16.0.3.505(EX01)": {
         "arb": 0,
         "major": 2,
         "minor": 0,
-        "md5": "c7978bb9b21f5ab05179ce1957e1e7fa",
-        "first_seen": "2026-03-18",
-        "last_checked": "2026-05-26",
+        "md5": "19cc7654da5c2e342268ab804c8fb464",
+        "first_seen": "2026-03-23",
+        "last_checked": "2026-05-29",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "ID",
           "MY",
-          "OCA",
-          "SG",
           "TH",
-          "TW",
-          "VN"
+          "ID",
+          "SG",
+          "VN",
+          "OCA",
+          "TW"
         ],
         "md5_by_region": {
-          "ID": "c7978bb9b21f5ab05179ce1957e1e7fa",
           "MY": "19cc7654da5c2e342268ab804c8fb464",
-          "OCA": "d16a29224fce0f371833e7077dd6e389",
-          "SG": "b7b3a230dfe513127dbb292ed6b045b0",
           "TH": "7be67cb2c369073250877959ca0ca104",
-          "TW": "9bfc00e1335a3f6dab6ccdeacf242d65",
-          "VN": "08baa3b9dc0fbf4f56897da909dddb18"
+          "ID": "c7978bb9b21f5ab05179ce1957e1e7fa",
+          "SG": "b7b3a230dfe513127dbb292ed6b045b0",
+          "VN": "08baa3b9dc0fbf4f56897da909dddb18",
+          "OCA": "d16a29224fce0f371833e7077dd6e389",
+          "TW": "9bfc00e1335a3f6dab6ccdeacf242d65"
         }
       },
       "CPH2499_16.0.3.500(EX01)": {
         "arb": 0,
         "major": 2,
         "minor": 0,
-        "md5": "fe33546e7733610b7b0e39a49d0f923f",
+        "md5": "f9cbe5cdb1cda3f8a1fa46e7a60c3bfe",
         "first_seen": "2026-02-04",
-        "last_checked": "2026-03-17",
+        "last_checked": "2026-03-23",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "ID",
           "MY",
-          "OCA",
-          "SG",
           "TH",
-          "TW",
-          "VN"
+          "ID",
+          "SG",
+          "VN",
+          "OCA",
+          "TW"
         ],
         "md5_by_region": {
-          "ID": "fe33546e7733610b7b0e39a49d0f923f",
           "MY": "f9cbe5cdb1cda3f8a1fa46e7a60c3bfe",
-          "OCA": "c5977aa2232a230e43012cc872dd9109",
-          "SG": "0d6ec3447fd78d448810857cdb0b2d5b",
           "TH": "b7cfb500593a0367872fbf860d1d31f5",
-          "TW": "202302d926d361279622913314cf2c6c",
-          "VN": "fa577cadcd61718f70d11d12bce8f3ee"
+          "ID": "fe33546e7733610b7b0e39a49d0f923f",
+          "SG": "0d6ec3447fd78d448810857cdb0b2d5b",
+          "VN": "fa577cadcd61718f70d11d12bce8f3ee",
+          "OCA": "c5977aa2232a230e43012cc872dd9109",
+          "TW": "202302d926d361279622913314cf2c6c"
         }
       },
       "CPH2499_16.0.0.203(EX01)": {
@@ -2650,72 +2650,72 @@
         "arb": 0,
         "major": 2,
         "minor": 0,
-        "md5": "07581354c672796a8b4bcdc1e6d18855",
-        "first_seen": "2026-07-30",
-        "last_checked": "2026-07-30",
+        "md5": "b9c03939ee9dc63d0c8ca1306a11897d",
+        "first_seen": "2026-07-29",
+        "last_checked": "2026-07-29",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "07581354c672796a8b4bcdc1e6d18855",
-          "GLO": "b9c03939ee9dc63d0c8ca1306a11897d"
+          "GLO": "b9c03939ee9dc63d0c8ca1306a11897d",
+          "EU": "07581354c672796a8b4bcdc1e6d18855"
         }
       },
       "CPH2609_16.0.5.702(EX01)": {
         "arb": 0,
         "major": 2,
         "minor": 0,
-        "md5": "87ad2458dc4ac3e281c841844dca3125",
+        "md5": "970ad6b730d407802c015afbb1ab5b16",
         "first_seen": "2026-05-26",
         "last_checked": "2026-07-28",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "87ad2458dc4ac3e281c841844dca3125",
-          "GLO": "970ad6b730d407802c015afbb1ab5b16"
+          "GLO": "970ad6b730d407802c015afbb1ab5b16",
+          "EU": "87ad2458dc4ac3e281c841844dca3125"
         }
       },
       "CPH2609_16.0.5.701(EX01)": {
         "arb": 0,
         "major": 2,
         "minor": 0,
-        "md5": "0266e6140064061e0596996a7a56ea70",
+        "md5": "21b571911450b6b291bf4be623a0973b",
         "first_seen": "2026-04-24",
         "last_checked": "2026-05-25",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "0266e6140064061e0596996a7a56ea70",
-          "GLO": "21b571911450b6b291bf4be623a0973b"
+          "GLO": "21b571911450b6b291bf4be623a0973b",
+          "EU": "0266e6140064061e0596996a7a56ea70"
         }
       },
       "CPH2609_16.0.3.500(EX01)": {
         "arb": 0,
         "major": 2,
         "minor": 0,
-        "md5": "3bf4f77014c7ecc56da8c34b8e2da4a8",
-        "first_seen": "2026-02-11",
+        "md5": "3d8966b0addcc72059f43c75c910eeac",
+        "first_seen": "2026-02-23",
         "last_checked": "2026-04-24",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "3bf4f77014c7ecc56da8c34b8e2da4a8",
-          "GLO": "3d8966b0addcc72059f43c75c910eeac"
+          "GLO": "3d8966b0addcc72059f43c75c910eeac",
+          "EU": "3bf4f77014c7ecc56da8c34b8e2da4a8"
         }
       },
       "CPH2609_16.0.2.401(EX01)": {
@@ -2925,162 +2925,162 @@
         "arb": 1,
         "major": 3,
         "minor": 0,
-        "md5": "62695bbacbf3641df51d90153dc54ca5",
-        "first_seen": "2026-07-29",
-        "last_checked": "2026-07-29",
+        "md5": "f75de7b93425005bd77f01c2553e4ed2",
+        "first_seen": "2026-07-30",
+        "last_checked": "2026-07-30",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "62695bbacbf3641df51d90153dc54ca5",
-          "GLO": "f75de7b93425005bd77f01c2553e4ed2"
+          "GLO": "f75de7b93425005bd77f01c2553e4ed2",
+          "EU": "62695bbacbf3641df51d90153dc54ca5"
         }
       },
       "CPH2645_16.0.8.300(EX01)": {
         "arb": 1,
         "major": 3,
         "minor": 0,
-        "md5": "a469b61ea31dfee26862bda588f080b9",
+        "md5": "335cafe2bf5f48fabad742afce1ae9fe",
         "first_seen": "2026-06-27",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-28",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "a469b61ea31dfee26862bda588f080b9",
-          "GLO": "335cafe2bf5f48fabad742afce1ae9fe"
+          "GLO": "335cafe2bf5f48fabad742afce1ae9fe",
+          "EU": "a469b61ea31dfee26862bda588f080b9"
         }
       },
       "CPH2645_16.0.7.200(EX01)": {
         "arb": 1,
         "major": 3,
         "minor": 0,
-        "md5": "d349dd131a05357bb753dd8dbb459144",
-        "first_seen": "2026-05-29",
+        "md5": "e7e9aacbd19bbc8e2318f8df505cc6c0",
+        "first_seen": "2026-05-31",
         "last_checked": "2026-06-26",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "d349dd131a05357bb753dd8dbb459144",
-          "GLO": "e7e9aacbd19bbc8e2318f8df505cc6c0"
+          "GLO": "e7e9aacbd19bbc8e2318f8df505cc6c0",
+          "EU": "d349dd131a05357bb753dd8dbb459144"
         }
       },
       "CPH2645_16.0.5.701(EX01)": {
         "arb": 1,
         "major": 3,
         "minor": 0,
-        "md5": "3ba2218f9e855815653d54839f50fa66",
+        "md5": "9d947f896823878e3a32a809ec76fd71",
         "first_seen": "2026-03-25",
-        "last_checked": "2026-05-28",
+        "last_checked": "2026-05-30",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "3ba2218f9e855815653d54839f50fa66",
-          "GLO": "9d947f896823878e3a32a809ec76fd71"
+          "GLO": "9d947f896823878e3a32a809ec76fd71",
+          "EU": "3ba2218f9e855815653d54839f50fa66"
         }
       },
       "CPH2645_16.0.3.500(EX01)": {
         "arb": 1,
         "major": 3,
         "minor": 0,
-        "md5": "fc83d78ebf942ee641d6a70bea3c2646",
+        "md5": "9fd992eaf16b4c0b2212d8675d2f57a7",
         "first_seen": "2026-02-11",
-        "last_checked": "2026-03-25",
+        "last_checked": "2026-04-20",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "fc83d78ebf942ee641d6a70bea3c2646",
-          "GLO": "9fd992eaf16b4c0b2212d8675d2f57a7"
+          "GLO": "9fd992eaf16b4c0b2212d8675d2f57a7",
+          "EU": "fc83d78ebf942ee641d6a70bea3c2646"
         }
       },
       "CPH2645_16.0.0.205(EX01)": {
         "arb": 0,
         "major": 3,
         "minor": 0,
-        "md5": "2af9f3eea8081a1d027d97cb62a4c686",
+        "md5": "72c1aa34316c7ee6ba23b39be0edb5ea",
         "first_seen": "2026-02-11",
-        "last_checked": "2026-04-20",
+        "last_checked": "2026-03-18",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "2af9f3eea8081a1d027d97cb62a4c686",
-          "GLO": "72c1aa34316c7ee6ba23b39be0edb5ea"
+          "GLO": "72c1aa34316c7ee6ba23b39be0edb5ea",
+          "EU": "2af9f3eea8081a1d027d97cb62a4c686"
         }
       },
       "CPH2645_15.0.0.871(EX01)": {
         "arb": 0,
         "major": 3,
         "minor": 0,
-        "md5": "72c84c0f77618a85dd483d7eb3561530",
-        "first_seen": "2026-02-13",
-        "last_checked": "2026-02-13",
+        "md5": "dec1cc4c7c37f67bcbc0d0921a99a4b5",
+        "first_seen": "2026-02-11",
+        "last_checked": "2026-03-10",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "72c84c0f77618a85dd483d7eb3561530",
-          "GLO": "dec1cc4c7c37f67bcbc0d0921a99a4b5"
+          "GLO": "dec1cc4c7c37f67bcbc0d0921a99a4b5",
+          "EU": "72c84c0f77618a85dd483d7eb3561530"
         }
       },
       "CPH2645_15.0.0.860(EX01)": {
         "arb": 0,
         "major": 3,
         "minor": 0,
-        "md5": "901792cb15c4e43d6e5a1eeabe3ba91d",
-        "first_seen": "2026-02-11",
-        "last_checked": "2026-02-25",
+        "md5": "a090f7c9ef5d4bb789c729dd8376bf89",
+        "first_seen": "2026-02-13",
+        "last_checked": "2026-02-13",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "901792cb15c4e43d6e5a1eeabe3ba91d",
-          "GLO": "a090f7c9ef5d4bb789c729dd8376bf89"
+          "GLO": "a090f7c9ef5d4bb789c729dd8376bf89",
+          "EU": "901792cb15c4e43d6e5a1eeabe3ba91d"
         }
       },
       "CPH2645_15.0.0.850(EX01)": {
         "arb": 0,
         "major": 3,
         "minor": 0,
-        "md5": "c03cfe25321e8451076f4322708b5458",
+        "md5": "7a4ecdcdb8ec576fc3960ee4c4af26e2",
         "first_seen": "2026-02-13",
-        "last_checked": "2026-03-10",
+        "last_checked": "2026-02-25",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "c03cfe25321e8451076f4322708b5458",
-          "GLO": "7a4ecdcdb8ec576fc3960ee4c4af26e2"
+          "GLO": "7a4ecdcdb8ec576fc3960ee4c4af26e2",
+          "EU": "c03cfe25321e8451076f4322708b5458"
         }
       }
     }
@@ -3259,144 +3259,144 @@
         "arb": 1,
         "major": 3,
         "minor": 0,
-        "md5": "4e82c1e89828c614b644a9ea908d972a",
-        "first_seen": "2026-07-29",
-        "last_checked": "2026-07-29",
-        "status": "current",
+        "md5": "c2efa338e688545a0b568ea6bb381dc7",
+        "first_seen": "2026-07-18",
+        "last_checked": "2026-07-28",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "4e82c1e89828c614b644a9ea908d972a",
-          "GLO": "c2efa338e688545a0b568ea6bb381dc7"
+          "GLO": "c2efa338e688545a0b568ea6bb381dc7",
+          "EU": "4e82c1e89828c614b644a9ea908d972a"
         }
       },
       "CPH2653_16.0.8.301(EX01)": {
         "arb": 1,
         "major": 3,
         "minor": 0,
-        "md5": "bf13e97fa069c2b690e3a9997593baef",
+        "md5": "fd6b67496242dce6b2201add3ddddced",
         "first_seen": "2026-06-25",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-07-17",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "bf13e97fa069c2b690e3a9997593baef",
-          "GLO": "fd6b67496242dce6b2201add3ddddced"
+          "GLO": "fd6b67496242dce6b2201add3ddddced",
+          "EU": "bf13e97fa069c2b690e3a9997593baef"
         }
       },
       "CPH2653_16.0.7.201(EX01)": {
         "arb": 1,
         "major": 3,
         "minor": 0,
-        "md5": "bb0f615b0156ac9a9ab2df48d9530b3b",
+        "md5": "677bceae8e8b2ebd370d5c06e0ae2ce8",
         "first_seen": "2026-05-26",
         "last_checked": "2026-06-24",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "bb0f615b0156ac9a9ab2df48d9530b3b",
-          "GLO": "677bceae8e8b2ebd370d5c06e0ae2ce8"
+          "GLO": "677bceae8e8b2ebd370d5c06e0ae2ce8",
+          "EU": "bb0f615b0156ac9a9ab2df48d9530b3b"
         }
       },
       "CPH2653_16.0.5.703(EX01)": {
         "arb": 1,
         "major": 3,
         "minor": 0,
-        "md5": "5eb404fefe6c48fd4996f25bda682034",
+        "md5": "bd7bffda1812ac8732704fb38a0fc1c8",
         "first_seen": "2026-04-21",
         "last_checked": "2026-05-25",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "5eb404fefe6c48fd4996f25bda682034",
-          "GLO": "bd7bffda1812ac8732704fb38a0fc1c8"
+          "GLO": "bd7bffda1812ac8732704fb38a0fc1c8",
+          "EU": "5eb404fefe6c48fd4996f25bda682034"
         }
       },
       "CPH2653_16.0.5.701(EX01)": {
         "arb": 1,
         "major": 3,
         "minor": 0,
-        "md5": "23318bec5be6849803c95d47c0e7d8f8",
+        "md5": "385877a9463d7b5de2f5a2ffea4a12d6",
         "first_seen": "2026-03-25",
         "last_checked": "2026-04-20",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "23318bec5be6849803c95d47c0e7d8f8",
-          "GLO": "385877a9463d7b5de2f5a2ffea4a12d6"
+          "GLO": "385877a9463d7b5de2f5a2ffea4a12d6",
+          "EU": "23318bec5be6849803c95d47c0e7d8f8"
         }
       },
       "CPH2653_16.0.3.501(EX01)": {
         "arb": 1,
         "major": 3,
         "minor": 0,
-        "md5": "4a5640ac2917ad8baeb334b286572b46",
+        "md5": "55382e1f872388d09a539d64ce09d65e",
         "first_seen": "2026-02-04",
         "last_checked": "2026-03-24",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "4a5640ac2917ad8baeb334b286572b46",
-          "GLO": "55382e1f872388d09a539d64ce09d65e"
+          "GLO": "55382e1f872388d09a539d64ce09d65e",
+          "EU": "4a5640ac2917ad8baeb334b286572b46"
         }
       },
       "CPH2653_16.0.2.402(EX01)": {
         "arb": 0,
         "major": 3,
         "minor": 0,
-        "md5": "8a63e3f165b7ed13be5bb2bf6517e365",
+        "md5": "515f5110ca780fda710ef1ff1ad9f100",
         "first_seen": "2026-02-04",
-        "last_checked": "2026-04-20",
+        "last_checked": "2026-02-11",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "8a63e3f165b7ed13be5bb2bf6517e365",
-          "GLO": "515f5110ca780fda710ef1ff1ad9f100"
+          "GLO": "515f5110ca780fda710ef1ff1ad9f100",
+          "EU": "8a63e3f165b7ed13be5bb2bf6517e365"
         }
       },
       "CPH2653_16.0.1.304(EX01)": {
         "arb": 0,
         "major": 3,
         "minor": 0,
-        "md5": "1c8603874051bc2dd5e5d001ffaf3fe2",
+        "md5": "e854bde9b2f472d1cfb499c886b1cbe9",
         "first_seen": "2026-02-04",
-        "last_checked": "2026-03-18",
+        "last_checked": "2026-02-06",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "1c8603874051bc2dd5e5d001ffaf3fe2",
-          "GLO": "e854bde9b2f472d1cfb499c886b1cbe9"
+          "GLO": "e854bde9b2f472d1cfb499c886b1cbe9",
+          "EU": "1c8603874051bc2dd5e5d001ffaf3fe2"
         }
       },
       "CPH2653_16.0.0.210(EX01)": {
@@ -3416,18 +3416,18 @@
         "arb": 0,
         "major": 3,
         "minor": 0,
-        "md5": "eee24307e73dd6ec6d2abbef660e1b42",
+        "md5": "fdde59c8fb76a88491b44d44b8d2797d",
         "first_seen": "2026-02-13",
-        "last_checked": "2026-03-10",
+        "last_checked": "2026-03-18",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "eee24307e73dd6ec6d2abbef660e1b42",
-          "GLO": "fdde59c8fb76a88491b44d44b8d2797d"
+          "GLO": "fdde59c8fb76a88491b44d44b8d2797d",
+          "EU": "eee24307e73dd6ec6d2abbef660e1b42"
         }
       },
       "CPH2653_15.0.0.860(EX01)": {
@@ -3748,104 +3748,104 @@
         "arb": 0,
         "major": 3,
         "minor": 0,
-        "md5": "46f6c34df964402edb2ca6fac66b59cf",
-        "first_seen": "2026-07-22",
+        "md5": "2696c70a51e83c0d4d5b49ec9c6790dc",
+        "first_seen": "2026-07-20",
         "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
-          "APC",
-          "ID",
           "MX",
+          "ID",
           "MY",
           "SG",
-          "TH"
+          "TH",
+          "APC"
         ],
         "md5_by_region": {
-          "APC": "46f6c34df964402edb2ca6fac66b59cf",
-          "ID": "0d2ba73fcc91ea3ed1a6a81e25d7462f",
           "MX": "2696c70a51e83c0d4d5b49ec9c6790dc",
+          "ID": "0d2ba73fcc91ea3ed1a6a81e25d7462f",
           "MY": "1f606836d260f514816df6c4c87807a2",
           "SG": "98d7af91dde5fdab7fd4f257496abef4",
-          "TH": "1c2ffcff1fef5508ae5671af55b390c1"
+          "TH": "1c2ffcff1fef5508ae5671af55b390c1",
+          "APC": "46f6c34df964402edb2ca6fac66b59cf"
         }
       },
       "CPH2671_16.0.8.300(EX01)": {
         "arb": 0,
         "major": 3,
         "minor": 0,
-        "md5": "0f5755ced8a65af32736b95c92870beb",
+        "md5": "819c6644f79107bd3c363f5e36c603c7",
         "first_seen": "2026-06-24",
-        "last_checked": "2026-07-21",
+        "last_checked": "2026-07-17",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "APC",
-          "ID",
           "MX",
+          "ID",
           "MY",
           "SG",
-          "TH"
+          "TH",
+          "APC"
         ],
         "md5_by_region": {
-          "APC": "0f5755ced8a65af32736b95c92870beb",
-          "ID": "5ce70a466c48a317f2dab22530fb0ccc",
           "MX": "819c6644f79107bd3c363f5e36c603c7",
+          "ID": "5ce70a466c48a317f2dab22530fb0ccc",
           "MY": "0edcea298dc20df9d38ead82513b8ea9",
           "SG": "77b399cfe5dea020c6716b762e918e8d",
-          "TH": "ff0f693dcd7adffbe45521538c3b53c1"
+          "TH": "ff0f693dcd7adffbe45521538c3b53c1",
+          "APC": "0f5755ced8a65af32736b95c92870beb"
         }
       },
       "CPH2671_16.0.7.200(EX01)": {
         "arb": 0,
         "major": 3,
         "minor": 0,
-        "md5": "8d955f18c1e510ef9262453d042ed2f8",
+        "md5": "e7dc9a2123ac33f9ae1e810c85547291",
         "first_seen": "2026-05-27",
         "last_checked": "2026-06-23",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "APC",
-          "ID",
           "MX",
+          "ID",
           "MY",
           "SG",
-          "TH"
+          "TH",
+          "APC"
         ],
         "md5_by_region": {
-          "APC": "8d955f18c1e510ef9262453d042ed2f8",
-          "ID": "faccb1cc26ed509850fced49bd2dcc0d",
           "MX": "e7dc9a2123ac33f9ae1e810c85547291",
+          "ID": "faccb1cc26ed509850fced49bd2dcc0d",
           "MY": "c8a5443551dceb21de9c27369a6dbae9",
           "SG": "34c72aaa251dc629a48c24620357c49d",
-          "TH": "d0aa59cedacd7a5a8e87573fa23405a3"
+          "TH": "d0aa59cedacd7a5a8e87573fa23405a3",
+          "APC": "8d955f18c1e510ef9262453d042ed2f8"
         }
       },
       "CPH2671_16.0.5.700(EX01)": {
         "arb": 0,
         "major": 3,
         "minor": 0,
-        "md5": "86da73ef6fcfeca76e6c4ea80f543481",
+        "md5": "1dc9bb44e6e64ce0397434b2330f528d",
         "first_seen": "2026-03-25",
         "last_checked": "2026-05-26",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "APC",
-          "ID",
           "MX",
+          "ID",
           "MY",
           "SG",
-          "TH"
+          "TH",
+          "APC"
         ],
         "md5_by_region": {
-          "APC": "86da73ef6fcfeca76e6c4ea80f543481",
-          "ID": "11fc5bc7dad9dd4b15d1166f0d42034f",
           "MX": "1dc9bb44e6e64ce0397434b2330f528d",
+          "ID": "11fc5bc7dad9dd4b15d1166f0d42034f",
           "MY": "228e24d61a2a79d5e6702aac2296e288",
           "SG": "84b434d3337990b381cb6de3898f7c8e",
-          "TH": "00a4eb590b6d5ef63a39d4424855cf3a"
+          "TH": "00a4eb590b6d5ef63a39d4424855cf3a",
+          "APC": "86da73ef6fcfeca76e6c4ea80f543481"
         }
       },
       "CPH2671_16.0.3.500(EX01)": {
@@ -3865,22 +3865,22 @@
         "arb": 0,
         "major": 3,
         "minor": 0,
-        "md5": "8092cdb0dcf5a44e27ff8b863bbcde89",
+        "md5": "01a344e7df285c3cc131bb2726620b73",
         "first_seen": "2026-02-04",
         "last_checked": "2026-03-25",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "APC",
           "MY",
           "SG",
-          "TH"
+          "TH",
+          "APC"
         ],
         "md5_by_region": {
-          "APC": "8092cdb0dcf5a44e27ff8b863bbcde89",
           "MY": "01a344e7df285c3cc131bb2726620b73",
           "SG": "de7a9e13bbc55161b557883f77edb1ca",
-          "TH": "d7aa0bf5f0f86e68711f68f2ff8bc7c1"
+          "TH": "d7aa0bf5f0f86e68711f68f2ff8bc7c1",
+          "APC": "8092cdb0dcf5a44e27ff8b863bbcde89"
         }
       },
       "CPH2671_16.0.1.302(EX01)": {
@@ -4093,108 +4093,108 @@
         "arb": 0,
         "major": 3,
         "minor": 0,
-        "md5": "1197aaa3eaf341c7fcae6b251346d315",
+        "md5": "16502d986f9e32425c10097d126e0936",
         "first_seen": "2026-06-11",
         "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "1197aaa3eaf341c7fcae6b251346d315",
-          "GLO": "16502d986f9e32425c10097d126e0936"
+          "GLO": "16502d986f9e32425c10097d126e0936",
+          "EU": "1197aaa3eaf341c7fcae6b251346d315"
         }
       },
       "CPH2709_16.0.5.710(EX01)": {
         "arb": 0,
         "major": 3,
         "minor": 0,
-        "md5": "fe7c98015d682710d8934ebadd6f8a50",
+        "md5": "0007c6da68a5fe81f3328362517b1552",
         "first_seen": "2026-04-20",
         "last_checked": "2026-06-10",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "fe7c98015d682710d8934ebadd6f8a50",
-          "GLO": "0007c6da68a5fe81f3328362517b1552"
+          "GLO": "0007c6da68a5fe81f3328362517b1552",
+          "EU": "fe7c98015d682710d8934ebadd6f8a50"
         }
       },
       "CPH2709_16.0.5.701(EX01)": {
         "arb": 0,
         "major": 3,
         "minor": 0,
-        "md5": "d462744e077d08fab080ee7c54bbe2da",
+        "md5": "1fa0ad252c46d6ccdc9699a4f331bbd4",
         "first_seen": "2026-03-28",
         "last_checked": "2026-04-20",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "d462744e077d08fab080ee7c54bbe2da",
-          "GLO": "1fa0ad252c46d6ccdc9699a4f331bbd4"
+          "GLO": "1fa0ad252c46d6ccdc9699a4f331bbd4",
+          "EU": "d462744e077d08fab080ee7c54bbe2da"
         }
       },
       "CPH2709_16.0.2.400(EX01)": {
         "arb": 0,
         "major": 3,
         "minor": 0,
-        "md5": "7988a8ec49273c093ed02b906deb20a1",
-        "first_seen": "2026-02-04",
+        "md5": "215ac417ec05bafcd5d2c8afe8fa140f",
+        "first_seen": "2026-02-23",
         "last_checked": "2026-03-28",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "7988a8ec49273c093ed02b906deb20a1",
-          "GLO": "215ac417ec05bafcd5d2c8afe8fa140f"
+          "GLO": "215ac417ec05bafcd5d2c8afe8fa140f",
+          "EU": "7988a8ec49273c093ed02b906deb20a1"
         }
       },
       "CPH2709_16.0.1.300(EX01)": {
         "arb": 0,
         "major": 3,
         "minor": 0,
-        "md5": "1c641f0b3c40922ba9f736d54a957c8a",
+        "md5": "e897c75b850e4acbb9a6556d541bc3b7",
         "first_seen": "2026-02-04",
-        "last_checked": "2026-04-20",
+        "last_checked": "2026-02-22",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "1c641f0b3c40922ba9f736d54a957c8a",
-          "GLO": "e897c75b850e4acbb9a6556d541bc3b7"
+          "GLO": "e897c75b850e4acbb9a6556d541bc3b7",
+          "EU": "1c641f0b3c40922ba9f736d54a957c8a"
         }
       },
       "CPH2709_15.0.2.604(EX01)": {
         "arb": 0,
         "major": 3,
         "minor": 0,
-        "md5": "07641d9d8bf4466472600f8ea8a083a0",
+        "md5": "e5d66cec7708b0178f31bd7b6c67c74a",
         "first_seen": "2026-02-04",
-        "last_checked": "2026-02-04",
+        "last_checked": "2026-04-20",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "07641d9d8bf4466472600f8ea8a083a0",
-          "GLO": "e5d66cec7708b0178f31bd7b6c67c74a"
+          "GLO": "e5d66cec7708b0178f31bd7b6c67c74a",
+          "EU": "07641d9d8bf4466472600f8ea8a083a0"
         }
       }
     }
@@ -4780,54 +4780,54 @@
         "arb": 0,
         "major": 3,
         "minor": 0,
-        "md5": "6274539f5aacc16ad7fd85a08989eca6",
+        "md5": "dec4a1753e117fb9fdff8a7cfd22eaa5",
         "first_seen": "2026-07-23",
         "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "6274539f5aacc16ad7fd85a08989eca6",
-          "GLO": "dec4a1753e117fb9fdff8a7cfd22eaa5"
+          "GLO": "dec4a1753e117fb9fdff8a7cfd22eaa5",
+          "EU": "6274539f5aacc16ad7fd85a08989eca6"
         }
       },
       "CPH2769_16.0.8.300(EX01)": {
         "arb": 0,
         "major": 3,
         "minor": 0,
-        "md5": "8a6301512fb52435b326267dbcda4b1d",
-        "first_seen": "2026-06-27",
+        "md5": "901ef01e7381013d7fce57dfebfa773e",
+        "first_seen": "2026-06-30",
         "last_checked": "2026-07-22",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "8a6301512fb52435b326267dbcda4b1d",
-          "GLO": "901ef01e7381013d7fce57dfebfa773e"
+          "GLO": "901ef01e7381013d7fce57dfebfa773e",
+          "EU": "8a6301512fb52435b326267dbcda4b1d"
         }
       },
       "CPH2769_16.0.7.200(EX01)": {
         "arb": 0,
         "major": 3,
         "minor": 0,
-        "md5": "954065b5798bb138339848fd8249a71f",
-        "first_seen": "2026-05-21",
-        "last_checked": "2026-06-26",
+        "md5": "a4834ee837a00623e3ea91584ddbe513",
+        "first_seen": "2026-05-18",
+        "last_checked": "2026-06-29",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "954065b5798bb138339848fd8249a71f",
-          "GLO": "a4834ee837a00623e3ea91584ddbe513"
+          "GLO": "a4834ee837a00623e3ea91584ddbe513",
+          "EU": "954065b5798bb138339848fd8249a71f"
         }
       },
       "CPH2769_16.0.5.703(EX01)": {
@@ -4847,18 +4847,18 @@
         "arb": 0,
         "major": 3,
         "minor": 0,
-        "md5": "8ed18c461d884a4b5108147840644bb7",
-        "first_seen": "2026-03-30",
-        "last_checked": "2026-04-20",
+        "md5": "ffb1c3aa990044f327a8171e6162af21",
+        "first_seen": "2026-03-18",
+        "last_checked": "2026-05-18",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "8ed18c461d884a4b5108147840644bb7",
-          "GLO": "ffb1c3aa990044f327a8171e6162af21"
+          "GLO": "ffb1c3aa990044f327a8171e6162af21",
+          "EU": "8ed18c461d884a4b5108147840644bb7"
         }
       },
       "CPH2769_16.0.3.503(EX01)": {
@@ -4878,36 +4878,36 @@
         "arb": 0,
         "major": 3,
         "minor": 0,
-        "md5": "44828fb8b432f3c38dadef0d7cb7f400",
-        "first_seen": "2026-02-11",
-        "last_checked": "2026-03-29",
+        "md5": "cb319baa6d71168d9743f4b0492859f5",
+        "first_seen": "2026-02-04",
+        "last_checked": "2026-03-10",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "44828fb8b432f3c38dadef0d7cb7f400",
-          "GLO": "cb319baa6d71168d9743f4b0492859f5"
+          "GLO": "cb319baa6d71168d9743f4b0492859f5",
+          "EU": "44828fb8b432f3c38dadef0d7cb7f400"
         }
       },
       "CPH2769_16.0.2.401(EX01)": {
         "arb": 0,
         "major": 3,
         "minor": 0,
-        "md5": "77e4748592f464726b8d72f6614d2875",
+        "md5": "557df71dadd39f65968ad8bbc0ce2293",
         "first_seen": "2026-02-04",
-        "last_checked": "2026-04-20",
+        "last_checked": "2026-02-06",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "GLO"
+          "GLO",
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "77e4748592f464726b8d72f6614d2875",
-          "GLO": "557df71dadd39f65968ad8bbc0ce2293"
+          "GLO": "557df71dadd39f65968ad8bbc0ce2293",
+          "EU": "77e4748592f464726b8d72f6614d2875"
         }
       }
     }
@@ -6058,80 +6058,80 @@
         "arb": 1,
         "major": 3,
         "minor": 0,
-        "md5": "0a1df6596f371b7bbd675e7496058880",
-        "first_seen": "2026-07-29",
-        "last_checked": "2026-07-29",
+        "md5": "e24794214f2487fd0b792ac5fae98825",
+        "first_seen": "2026-07-25",
+        "last_checked": "2026-07-28",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
-          "EU",
+          "IN",
           "GLO",
-          "IN"
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "0a1df6596f371b7bbd675e7496058880",
+          "IN": "e24794214f2487fd0b792ac5fae98825",
           "GLO": "21569a230e8d2ba0e284cfd09b38bd4e",
-          "IN": "e24794214f2487fd0b792ac5fae98825"
+          "EU": "0a1df6596f371b7bbd675e7496058880"
         }
       },
       "OPD2403_16.0.5.702(EX01)": {
         "arb": 1,
         "major": 3,
         "minor": 0,
-        "md5": "932d5fd69517e240ac78d907cb851051",
-        "first_seen": "2026-05-21",
-        "last_checked": "2026-07-27",
+        "md5": "2656de07da8debe1664be8d63cca8492",
+        "first_seen": "2026-05-20",
+        "last_checked": "2026-07-24",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
+          "IN",
           "GLO",
-          "IN"
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "932d5fd69517e240ac78d907cb851051",
+          "IN": "2656de07da8debe1664be8d63cca8492",
           "GLO": "781a23dab883a68036e86367a2bee006",
-          "IN": "2656de07da8debe1664be8d63cca8492"
+          "EU": "932d5fd69517e240ac78d907cb851051"
         }
       },
       "OPD2403_16.0.5.701(EX01)": {
         "arb": 1,
         "major": 3,
         "minor": 0,
-        "md5": "995d3095adbd8be28edf59e85c3d29e0",
-        "first_seen": "2026-03-26",
-        "last_checked": "2026-05-20",
+        "md5": "81159aae331be32f00155760c8b14b14",
+        "first_seen": "2026-03-23",
+        "last_checked": "2026-05-19",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
+          "IN",
           "GLO",
-          "IN"
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "995d3095adbd8be28edf59e85c3d29e0",
+          "IN": "81159aae331be32f00155760c8b14b14",
           "GLO": "a2af0d57211c379b8bf70f5a0bd381a5",
-          "IN": "81159aae331be32f00155760c8b14b14"
+          "EU": "995d3095adbd8be28edf59e85c3d29e0"
         }
       },
       "OPD2403_16.0.3.501(EX01)": {
         "arb": 1,
         "major": 3,
         "minor": 0,
-        "md5": "8440c19505c47de99a60f66a9daa8d17",
+        "md5": "b549aa2ee70831834ff52baada2f91f0",
         "first_seen": "2026-02-04",
         "last_checked": "2026-04-20",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
+          "IN",
           "GLO",
-          "IN"
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "8440c19505c47de99a60f66a9daa8d17",
+          "IN": "b549aa2ee70831834ff52baada2f91f0",
           "GLO": "dcf3998f433db53966a08aa889ce5228",
-          "IN": "b549aa2ee70831834ff52baada2f91f0"
+          "EU": "8440c19505c47de99a60f66a9daa8d17"
         }
       },
       "OPD2403_16.0.1.301(EX01)": {
@@ -6151,18 +6151,18 @@
         "arb": 0,
         "major": 3,
         "minor": 0,
-        "md5": "8e31a7ea8e1c47112de078f2e8b5644c",
+        "md5": "d3dd8401e908aa37be0d34921c04068e",
         "first_seen": "2026-02-04",
         "last_checked": "2026-03-18",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
-          "IN"
+          "IN",
+          "EU"
         ],
         "md5_by_region": {
-          "EU": "8e31a7ea8e1c47112de078f2e8b5644c",
-          "IN": "d3dd8401e908aa37be0d34921c04068e"
+          "IN": "d3dd8401e908aa37be0d34921c04068e",
+          "EU": "8e31a7ea8e1c47112de078f2e8b5644c"
         }
       }
     }
@@ -6276,41 +6276,41 @@
         "arb": 1,
         "major": 3,
         "minor": 0,
-        "md5": "ff553091027315b3409c3e434cfad4bd",
-        "first_seen": "2026-07-25",
-        "last_checked": "2026-07-28",
+        "md5": "bcbfbef48945cdf2037e45639deba973",
+        "first_seen": "2026-07-29",
+        "last_checked": "2026-07-29",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
-          "EU",
+          "NA",
           "GLO",
-          "IN",
-          "NA"
+          "EU",
+          "IN"
         ],
         "md5_by_region": {
-          "EU": "ff553091027315b3409c3e434cfad4bd",
+          "NA": "bcbfbef48945cdf2037e45639deba973",
           "GLO": "b902215b77048e5d2f28d8166a4f7257",
-          "IN": "de27a12f3d0894175dbe17a417c292ad",
-          "NA": "bcbfbef48945cdf2037e45639deba973"
+          "EU": "ff553091027315b3409c3e434cfad4bd",
+          "IN": "de27a12f3d0894175dbe17a417c292ad"
         }
       },
       "OPD2415_16.0.7.200(EX01)": {
         "arb": 1,
         "major": 3,
         "minor": 0,
-        "md5": "6cb0ddd39d3488f1cb35f0cda85bfdbf",
+        "md5": "b51854906b227c5ce7cda13d52cdbda4",
         "first_seen": "2026-05-26",
         "last_checked": "2026-07-24",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
           "GLO",
+          "EU",
           "IN"
         ],
         "md5_by_region": {
-          "EU": "6cb0ddd39d3488f1cb35f0cda85bfdbf",
           "GLO": "b51854906b227c5ce7cda13d52cdbda4",
+          "EU": "6cb0ddd39d3488f1cb35f0cda85bfdbf",
           "IN": "c57a11ff5570b3f26687d9babc3193b7"
         }
       },
@@ -6318,19 +6318,19 @@
         "arb": 1,
         "major": 3,
         "minor": 0,
-        "md5": "efad8cb2b8e9024919366bd0699c934f",
+        "md5": "c245716d418c3a6417df4662dfae9efb",
         "first_seen": "2026-03-26",
         "last_checked": "2026-05-25",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
           "GLO",
+          "EU",
           "IN"
         ],
         "md5_by_region": {
-          "EU": "efad8cb2b8e9024919366bd0699c934f",
           "GLO": "c245716d418c3a6417df4662dfae9efb",
+          "EU": "efad8cb2b8e9024919366bd0699c934f",
           "IN": "8f4c4c2d5cc38455bf74e3f20c0884b2"
         }
       },
@@ -6338,19 +6338,19 @@
         "arb": 1,
         "major": 3,
         "minor": 0,
-        "md5": "2a9096260fd856ede66700ddf207b49b",
+        "md5": "64101499d86baf3ef11eb91384f782fe",
         "first_seen": "2026-02-04",
         "last_checked": "2026-03-26",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
           "GLO",
+          "EU",
           "IN"
         ],
         "md5_by_region": {
-          "EU": "2a9096260fd856ede66700ddf207b49b",
           "GLO": "64101499d86baf3ef11eb91384f782fe",
+          "EU": "2a9096260fd856ede66700ddf207b49b",
           "IN": "f04541e8fba46fe4b066b7f7deaa0334"
         }
       },
@@ -6358,19 +6358,19 @@
         "arb": 0,
         "major": 3,
         "minor": 0,
-        "md5": "9dbeb1decd4e820a95dd6c8ecf68b87e",
+        "md5": "29a03855c25e72197c24d5c603ace45a",
         "first_seen": "2026-02-04",
         "last_checked": "2026-03-10",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
           "GLO",
+          "EU",
           "IN"
         ],
         "md5_by_region": {
-          "EU": "9dbeb1decd4e820a95dd6c8ecf68b87e",
           "GLO": "29a03855c25e72197c24d5c603ace45a",
+          "EU": "9dbeb1decd4e820a95dd6c8ecf68b87e",
           "IN": "ed72adfd06e1f9684e051be6fc797d02"
         }
       },
@@ -6378,19 +6378,19 @@
         "arb": 0,
         "major": 3,
         "minor": 0,
-        "md5": "6070fbd5daf4d3ea7ae7e5e5af4d67cc",
+        "md5": "6be9e071c6c3284866ddd02c06e52fb0",
         "first_seen": "2026-02-04",
         "last_checked": "2026-04-20",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU",
           "GLO",
+          "EU",
           "IN"
         ],
         "md5_by_region": {
-          "EU": "6070fbd5daf4d3ea7ae7e5e5af4d67cc",
           "GLO": "6be9e071c6c3284866ddd02c06e52fb0",
+          "EU": "6070fbd5daf4d3ea7ae7e5e5af4d67cc",
           "IN": "31422d40cca779e619e20aec05910e61"
         }
       },
