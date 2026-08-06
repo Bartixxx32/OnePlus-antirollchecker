@@ -275,7 +275,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
-| PJZ110_16.0.9.401(CN01)<br><details><summary>MD5</summary><code>d5a4233c25e2890a70909fc5eff74d7b</code></details> | 1 | Major: 3, Minor: 0 | 2026-07-28 | ❌ Protected |
+| PJZ110_16.0.9.401(CN01)<br><details><summary>MD5</summary><code>d5a4233c25e2890a70909fc5eff74d7b</code></details> | 1 | Major: 3, Minor: 0 | 2026-08-06 | ❌ Protected |
 | PJZ110_16.0.8.301(CN01)<br><details><summary>MD5</summary><code>498a7b0a15616fcfec77416681bda790</code></details> | 1 | Major: 3, Minor: 0 | 2026-07-09 | ❌ Protected |
 | PJZ110_16.0.7.201(CN01)<br><details><summary>MD5</summary><code>afc5eb1ec721995687d4f27833d0f8e0</code></details> | 1 | Major: 3, Minor: 0 | 2026-06-10 | ❌ Protected |
 | PJZ110_16.0.5.703(CN01)<br><details><summary>MD5</summary><code>2cc8031b2589dd4e80bd3c93326c7c7e</code></details> | 1 | Major: 3, Minor: 0 | 2026-05-11 | ❌ Protected |
@@ -362,7 +362,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
-| PKX110_16.0.9.400(CN01)<br><details><summary>MD5</summary><code>7e9067d6127a8d33169b323d1ee4c83c</code></details> | 1 | Major: 3, Minor: 0 | 2026-07-28 | ❌ Protected |
+| PKX110_16.0.9.400(CN01)<br><details><summary>MD5</summary><code>7e9067d6127a8d33169b323d1ee4c83c</code></details> | 1 | Major: 3, Minor: 0 | 2026-08-06 | ❌ Protected |
 | PKX110_16.0.8.300(CN01)<br><details><summary>MD5</summary><code>d8b8d35fefb789920721e38a5edcea12</code></details> | 1 | Major: 3, Minor: 0 | 2026-07-08 | ❌ Protected |
 | PKX110_16.0.7.200(CN01)<br><details><summary>MD5</summary><code>3f0a11f9d7b23d4646a345921919a719</code></details> | 1 | Major: 3, Minor: 0 | 2026-06-09 | ❌ Protected |
 | PKX110_16.0.5.701(CN01)<br><details><summary>MD5</summary><code>77e2399108c694805d711231570bc2dc</code></details> | 1 | Major: 3, Minor: 0 | 2026-05-11 | ❌ Protected |
@@ -516,7 +516,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
-| PJD110_16.0.8.300(CN01)<br><details><summary>MD5</summary><code>0297c653bff9a7c5089f96b01d7dab9b</code></details> | 1 | Major: 3, Minor: 0 | 2026-07-22 | ❌ Protected |
+| PJD110_16.0.8.300(CN01)<br><details><summary>MD5</summary><code>0297c653bff9a7c5089f96b01d7dab9b</code></details> | 1 | Major: 3, Minor: 0 | 2026-08-06 | ❌ Protected |
 | PJD110_16.0.7.200(CN01)<br><details><summary>MD5</summary><code>0c4bc856af72aa6f8c07523945b5d827</code></details> | 1 | Major: 3, Minor: 0 | 2026-06-26 | ❌ Protected |
 | PJD110_16.0.5.702(CN01)<br><details><summary>MD5</summary><code>f367c5627baa0880b3101814c5315da8</code></details> | 1 | Major: 3, Minor: 0 | 2026-05-25 | ❌ Protected |
 | PJD110_16.0.3.500(CN01)<br><details><summary>MD5</summary><code>50eb6ea86f6d7b2b9936b477920151aa</code></details> | 1 | Major: 3, Minor: 0 | 2026-05-22 | ❌ Protected |
@@ -1232,7 +1232,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
-| PLR110_16.0.8.301(CN01)<br><details><summary>MD5</summary><code>768d172d87e65933801fd6e374aba10b</code></details> | 0 | Major: 3, Minor: 0 | 2026-07-13 | ✅ Safe |
+| PLR110_16.0.8.301(CN01)<br><details><summary>MD5</summary><code>768d172d87e65933801fd6e374aba10b</code></details> | 0 | Major: 3, Minor: 0 | 2026-08-06 | ✅ Safe |
 | PLR110_16.0.8.300(CN01)<br><details><summary>MD5</summary><code>1b9f134e55d27732141a72fe0661ec78</code></details> | 0 | Major: 3, Minor: 0 | 2026-06-30 | ✅ Safe |
 | PLR110_16.0.7.201(CN01)<br><details><summary>MD5</summary><code>cddeb10ac3142d547b1f478556e0f2e1</code></details> | 0 | Major: 3, Minor: 0 | 2026-06-15 | ✅ Safe |
 | PLR110_16.0.7.200(CN01)<br><details><summary>MD5</summary><code>e26c1c2a04e2a44a89668301a2d6cd9e</code></details> | 0 | Major: 3, Minor: 0 | 2026-05-24 | ✅ Safe |
@@ -1314,7 +1314,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
-| PKG110_16.0.8.300(CN01)<br><details><summary>MD5</summary><code>a28632dc4e3e2c8b51cc6e938c87b6fb</code></details> | 1 | Major: 3, Minor: 0 | 2026-07-16 | ❌ Protected |
+| PKG110_16.0.8.300(CN01)<br><details><summary>MD5</summary><code>a28632dc4e3e2c8b51cc6e938c87b6fb</code></details> | 1 | Major: 3, Minor: 0 | 2026-08-06 | ❌ Protected |
 | PKG110_16.0.7.200(CN01)<br><details><summary>MD5</summary><code>a2a682ea36410c580c4a6c5bd3ffcc04</code></details> | 1 | Major: 3, Minor: 0 | 2026-06-17 | ❌ Protected |
 | PKG110_16.0.5.702(CN01)<br><details><summary>MD5</summary><code>7a161c112a315fcaf7bdb46442ad68c5</code></details> | 1 | Major: 3, Minor: 0 | 2026-05-19 | ❌ Protected |
 | PKG110_16.0.5.701(CN01)<br><details><summary>MD5</summary><code>9e846bf2d37cfc10168757bbf98f9606</code></details> | 1 | Major: 3, Minor: 0 | 2026-04-16 | ❌ Protected |
@@ -1340,7 +1340,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
-| PJX110_16.0.5.701(CN01)<br><details><summary>MD5</summary><code>7730a2a0baf2376a6bb857d9e9767c93</code></details> | 1 | Major: 3, Minor: 0 | 2026-07-28 | ❌ Protected |
+| PJX110_16.0.5.701(CN01)<br><details><summary>MD5</summary><code>7730a2a0baf2376a6bb857d9e9767c93</code></details> | 1 | Major: 3, Minor: 0 | 2026-08-06 | ❌ Protected |
 | PJX110_16.0.1.301(CN01)<br><details><summary>MD5</summary><code>171c22c558cc25e3624419a11a80a420</code></details> | 0 | Major: 3, Minor: 0 | 2026-05-22 | ✅ Safe |
 | PJX110_15.0.0.861(CN01)<br><details><summary>MD5</summary><code>8b9af5316e75bf1a3332a3dae65deacf</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-10 | ✅ Safe |
 | PJX110_15.0.0.500(CN01)<br><details><summary>MD5</summary><code>9d263a30644f553dcd0958a84c3894c3</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-06 | ✅ Safe |
@@ -1382,7 +1382,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
-| PJE110_16.0.5.701(CN01)<br><details><summary>MD5</summary><code>20e0b3d0af30642118e358cb3cbf6bc8</code></details> | 0 | Major: 2, Minor: 0 | 2026-07-28 | ✅ Safe |
+| PJE110_16.0.5.701(CN01)<br><details><summary>MD5</summary><code>20e0b3d0af30642118e358cb3cbf6bc8</code></details> | 0 | Major: 2, Minor: 0 | 2026-08-06 | ✅ Safe |
 | PJE110_16.0.1.300(CN01)<br><details><summary>MD5</summary><code>2133450d657b8accda00dcd97101de80</code></details> | 0 | Major: 2, Minor: 0 | 2026-05-22 | ✅ Safe |
 | PJE110_15.0.0.870(CN01)<br><details><summary>MD5</summary><code>41ecfd297b1aa4b2d71410e4dd817781</code></details> | 0 | Major: 2, Minor: 0 | 2026-04-20 | ✅ Safe |
 | PJE110_15.0.0.600(CN01)<br><details><summary>MD5</summary><code>aa6baa53941cb20c2cb430343c16bdba</code></details> | 0 | Major: 2, Minor: 0 | 2026-03-18 | ✅ Safe |
@@ -1537,8 +1537,8 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | Oceania | CPH2525OCA | CPH2525_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>0407edf6593a82dc2d02b13bc38c0a2e</code></details> | **0** | Major: 0, Minor: 120 | 2026-07-28 | ✅ Safe |
 | Saudi Arabia | CPH2525SA | CPH2525_15.0.0.1901(EX01)<br><details><summary>MD5</summary><code>6260acd0c725d9b5d2c66c9ebebe1c55</code></details> | **0** | Major: 0, Minor: 120 | 2026-07-28 | ✅ Safe |
 | India | CPH2525IN | CPH2525_13.1.1.147(EX01)<br><details><summary>MD5</summary><code>abb2a1ef3450621de3073f48d5215b19</code></details> | **0** | Major: 0, Minor: 120 | 2026-07-28 | ✅ Safe |
-| Middle East | CPH2525MEA | CPH2525_15.0.0.1901(EX01)<br><details><summary>MD5</summary><code>666e479b07fe7e4443e58a5c1e61b1e5</code></details> | **0** | Major: 0, Minor: 120 | 2026-07-28 | ✅ Safe |
 | Philippines | CPH2525PH | CPH2525_15.0.0.1901(EX01)<br><details><summary>MD5</summary><code>9fdc262d0e71288ea7ac1d1aefb40125</code></details> | **0** | Major: 0, Minor: 120 | 2026-07-28 | ✅ Safe |
+| Middle East | CPH2525MEA | CPH2525_15.0.0.1901(EX01)<br><details><summary>MD5</summary><code>666e479b07fe7e4443e58a5c1e61b1e5</code></details> | **0** | Major: 0, Minor: 120 | 2026-07-28 | ✅ Safe |
 
 <details>
 <summary>📜 <b>Singapore History</b> (click to expand)</summary>
@@ -1638,17 +1638,6 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 </details>
 
 <details>
-<summary>📜 <b>Middle East History</b> (click to expand)</summary>
-
-| Firmware Version | ARB | OEM Version | Last Seen | Safe |
-|:---|:---|:---|:---|:---|
-| CPH2525_15.0.0.1801(EX01)<br><details><summary>MD5</summary><code>d6c541a6a7cbc905257da9f2c89370bf</code></details> | 0 | Major: 0, Minor: 120 | 2026-07-15 | ✅ Safe |
-| CPH2525_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>ae1e910b70f736368c2aec048b8f1d99</code></details> | 0 | Major: 0, Minor: 120 | 2026-05-28 | ✅ Safe |
-| CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>d75e6df459ee8ed050e99e143a9ffe1c</code></details> | 0 | Major: 0, Minor: 120 | 2026-03-27 | ✅ Safe |
-
-</details>
-
-<details>
 <summary>📜 <b>Philippines History</b> (click to expand)</summary>
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
@@ -1656,6 +1645,17 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | CPH2525_15.0.0.1801(EX01)<br><details><summary>MD5</summary><code>0ebdf90eae9d86caa8d112ba68565ed1</code></details> | 0 | Major: 0, Minor: 120 | 2026-07-01 | ✅ Safe |
 | CPH2525_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>8b682eb6bda3ae1adb3a75bbe4cea3ee</code></details> | 0 | Major: 0, Minor: 120 | 2026-05-25 | ✅ Safe |
 | CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>1f6e08b4926652d580b2fce0839b95f4</code></details> | 0 | Major: 0, Minor: 120 | 2026-03-25 | ✅ Safe |
+
+</details>
+
+<details>
+<summary>📜 <b>Middle East History</b> (click to expand)</summary>
+
+| Firmware Version | ARB | OEM Version | Last Seen | Safe |
+|:---|:---|:---|:---|:---|
+| CPH2525_15.0.0.1801(EX01)<br><details><summary>MD5</summary><code>d6c541a6a7cbc905257da9f2c89370bf</code></details> | 0 | Major: 0, Minor: 120 | 2026-07-15 | ✅ Safe |
+| CPH2525_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>ae1e910b70f736368c2aec048b8f1d99</code></details> | 0 | Major: 0, Minor: 120 | 2026-05-28 | ✅ Safe |
+| CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>d75e6df459ee8ed050e99e143a9ffe1c</code></details> | 0 | Major: 0, Minor: 120 | 2026-03-27 | ✅ Safe |
 
 </details>
 
@@ -2042,4 +2042,4 @@ Prefer a native mobile experience? We have an official Android app on F-Droid! C
 > **Important:** The bot **only** works within this group to prevent spam and ensure availability. DM checks are disabled.
 
 ---
-*Last updated: 2026-08-05 02:57 UTC*
+*Last updated: 2026-08-06 03:03 UTC*
