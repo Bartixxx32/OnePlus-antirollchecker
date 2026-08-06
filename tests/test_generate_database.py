@@ -114,10 +114,13 @@ class TestGenerateDatabase:
         generate_database()
         with open("data/database.json") as f:
             db = json.load(f)
-        md5_field = db["CPH2581"]["versions"]["14.0.0.800"]["md5"]
-        assert isinstance(md5_field, dict)
-        assert md5_field["GLO"] == "abc"
-        assert md5_field["EU"] == "def"
+        version = db["CPH2581"]["versions"]["14.0.0.800"]
+        md5_field = version["md5"]
+        assert isinstance(md5_field, str)
+        assert md5_field in ("abc", "def")
+        md5_map = version["md5_by_region"]
+        assert md5_map["GLO"] == "abc"
+        assert md5_map["EU"] == "def"
 
     def test_unknown_device_order_to_999(self, history_dir):
         self.write_history("UnknownX_GLO.json", {

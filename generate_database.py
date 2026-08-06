@@ -79,10 +79,14 @@ def generate_database():
                     existing["regions"].append(region)
                     existing_md5 = existing.get("md5")
                     new_md5 = entry.get("md5")
+                    # Keep "md5" as a plain string (Android app expects String?).
+                    # Per-region hashes go into a separate "md5_by_region" field.
                     if existing_md5 and new_md5 and existing_md5 != new_md5:
-                        if not isinstance(existing_md5, dict):
-                            existing["md5"] = {r: existing_md5 for r in existing["regions"] if r != region}
-                        existing["md5"][region] = new_md5
+                        md5_map = existing.setdefault("md5_by_region", {})
+                        for r in existing["regions"]:
+                            if r != region and r not in md5_map:
+                                md5_map[r] = existing_md5
+                        md5_map[region] = new_md5
 
     # Output versions as an ordered dict keyed by version string (descending order).
     # This maintains backwards compatibility with the Android app which expects
