@@ -346,7 +346,7 @@ async function loadData() {
                 if (vWithKey.status === 'current' || !vr.version) {
                     vr.version = vWithKey.version;
                     vr.arb = vWithKey.arb;
-                    vr.md5 = vWithKey.md5 && typeof vWithKey.md5 === 'object' ? (vWithKey.md5[r] || '') : vWithKey.md5;
+                    vr.md5 = vWithKey.md5_by_region ? (vWithKey.md5_by_region[r] || '') : (vWithKey.md5 && typeof vWithKey.md5 === 'object' ? (vWithKey.md5[r] || '') : vWithKey.md5);
                     vr.major = vWithKey.major;
                     vr.minor = vWithKey.minor;
                     vr.is_hardcoded = vWithKey.is_hardcoded;
@@ -354,12 +354,14 @@ async function loadData() {
                     vr.first_seen = vWithKey.first_seen;
                     if (vWithKey.status !== 'current') {
                         const hEntry = { ...vWithKey };
-                        if (hEntry.md5 && typeof hEntry.md5 === 'object') hEntry.md5 = hEntry.md5[r] || '';
+                        if (hEntry.md5_by_region) hEntry.md5 = hEntry.md5_by_region[r] || '';
+                        else if (hEntry.md5 && typeof hEntry.md5 === 'object') hEntry.md5 = hEntry.md5[r] || '';
                         vr.history.push(hEntry);
                     }
                 } else {
                     const hEntry = { ...vWithKey };
-                    if (hEntry.md5 && typeof hEntry.md5 === 'object') hEntry.md5 = hEntry.md5[r] || '';
+                    if (hEntry.md5_by_region) hEntry.md5 = hEntry.md5_by_region[r] || '';
+                    else if (hEntry.md5 && typeof hEntry.md5 === 'object') hEntry.md5 = hEntry.md5[r] || '';
                     vr.history.push(hEntry);
                 }
             }
