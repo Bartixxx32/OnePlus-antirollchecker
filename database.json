@@ -8066,6 +8066,19 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "PLZ110_16.0.10.500(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": "c613b61ceaf628f331eefc5856f3d88f",
+        "first_seen": "2026-08-08",
+        "last_checked": "2026-08-08",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "CN"
+        ]
+      },
       "PLZ110_16.0.9.400(CN01)": {
         "arb": 0,
         "major": 3,
@@ -8073,7 +8086,7 @@
         "md5": "b5b3730e9d5f92f6ba4ef5a6685ce384",
         "first_seen": "2026-07-03",
         "last_checked": "2026-07-28",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "CN"
