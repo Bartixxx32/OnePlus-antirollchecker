@@ -1,13 +1,22 @@
 {
   "history": [
     {
+      "version": "PKU110_16.0.10.501(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-08-12",
+      "last_checked": "2026-08-12",
+      "status": "current"
+    },
+    {
       "version": "PKU110_16.0.9.401(CN01)",
       "arb": 0,
       "major": 3,
       "minor": 0,
       "first_seen": "2026-08-01",
       "last_checked": "2026-08-01",
-      "status": "current"
+      "status": "archived"
     },
     {
       "version": "PKU110_16.0.9.400(CN01)",
