@@ -357,13 +357,14 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
-| China | PKX110 | PKX110_16.0.9.401(CN01)<br><details><summary>MD5</summary><code>782c1416f4fb1a3b7d52e98c483789e0</code></details> | **1** | Major: 3, Minor: 0 | 2026-07-31 | ❌ Protected |
+| China | PKX110 | PKX110_16.0.10.500(CN01)<br><details><summary>MD5</summary><code>918612b11b727fb05d9c6190ce1cd8d1</code></details> | **1** | Major: 3, Minor: 0 | 2026-08-13 | ❌ Protected |
 
 <details>
 <summary>📜 <b>China History</b> (click to expand)</summary>
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| PKX110_16.0.9.401(CN01)<br><details><summary>MD5</summary><code>782c1416f4fb1a3b7d52e98c483789e0</code></details> | 1 | Major: 3, Minor: 0 | 2026-07-31 | ❌ Protected |
 | PKX110_16.0.9.400(CN01)<br><details><summary>MD5</summary><code>7e9067d6127a8d33169b323d1ee4c83c</code></details> | 1 | Major: 3, Minor: 0 | 2026-08-06 | ❌ Protected |
 | PKX110_16.0.8.300(CN01)<br><details><summary>MD5</summary><code>d8b8d35fefb789920721e38a5edcea12</code></details> | 1 | Major: 3, Minor: 0 | 2026-07-08 | ❌ Protected |
 | PKX110_16.0.7.200(CN01)<br><details><summary>MD5</summary><code>3f0a11f9d7b23d4646a345921919a719</code></details> | 1 | Major: 3, Minor: 0 | 2026-06-09 | ❌ Protected |
@@ -454,7 +455,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | Europe | CPH2581 | CPH2581_16.0.9.400(EX01)<br><details><summary>MD5</summary><code>9b2d3db3fe4e7d9fc37706f03c4129fc</code></details> | **1** | Major: 3, Minor: 0 | 2026-07-29 | ❌ Protected |
 | India | CPH2573 | CPH2573_16.0.9.400(EX01)<br><details><summary>MD5</summary><code>17af17165e4d01ab2293d56725775ac2</code></details> | **1** | Major: 3, Minor: 0 | 2026-07-28 | ❌ Protected |
 | North America | CPH2583 | CPH2583_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>c4bf38e7b691b79f32605967303b77e0</code></details> | **1** | Major: 3, Minor: 0 | 2026-07-28 | ❌ Protected |
-| China | PJD110 | PJD110_16.0.9.400(CN01)<br><details><summary>MD5</summary><code>622d110ed6f4cf0da0e3fa851dd23e10</code></details> | **1** | Major: 3, Minor: 0 | 2026-07-28 | ❌ Protected |
+| China | PJD110 | PJD110_16.0.9.400(CN01)<br><details><summary>MD5</summary><code>622d110ed6f4cf0da0e3fa851dd23e10</code></details> | **1** | Major: 3, Minor: 0 | 2026-08-13 | ❌ Protected |
 
 <details>
 <summary>📜 <b>Global History</b> (click to expand)</summary>
@@ -1228,7 +1229,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
-| China | PLR110 | PLR110_16.0.9.400(CN01)<br><details><summary>MD5</summary><code>9405af9464898ad1e50e14ab7d64baf9</code></details> | **0** | Major: 3, Minor: 0 | 2026-07-28 | ✅ Safe |
+| China | PLR110 | PLR110_16.0.9.400(CN01)<br><details><summary>MD5</summary><code>9405af9464898ad1e50e14ab7d64baf9</code></details> | **0** | Major: 3, Minor: 0 | 2026-08-13 | ✅ Safe |
 
 <details>
 <summary>📜 <b>China History</b> (click to expand)</summary>
@@ -1255,7 +1256,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
-| China | PLQ110 | PLQ110_16.0.9.402(CN01)<br><details><summary>MD5</summary><code>3172e6587add66b756130437601a35eb</code></details> | **1** | Major: 3, Minor: 0 | 2026-08-05 | ❌ Protected |
+| China | PLQ110 | PLQ110_16.0.9.402(CN01)<br><details><summary>MD5</summary><code>3172e6587add66b756130437601a35eb</code></details> | **1** | Major: 3, Minor: 0 | 2026-08-13 | ❌ Protected |
 
 <details>
 <summary>📜 <b>China History</b> (click to expand)</summary>
@@ -1284,13 +1285,14 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
-| China | PKR110 | PKR110_16.0.9.400(CN01)<br><details><summary>MD5</summary><code>e21af44b770bfccfa08ee63401c23b4d</code></details> | **0** | Major: 3, Minor: 0 | 2026-07-28 | ✅ Safe |
+| China | PKR110 | PKR110_16.0.9.401(CN01)<br><details><summary>MD5</summary><code>b17e5b486bf2992bea1e37db111b4c6b</code></details> | **0** | Major: 3, Minor: 0 | 2026-08-13 | ✅ Safe |
 
 <details>
 <summary>📜 <b>China History</b> (click to expand)</summary>
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| PKR110_16.0.9.400(CN01)<br><details><summary>MD5</summary><code>e21af44b770bfccfa08ee63401c23b4d</code></details> | 0 | Major: 3, Minor: 0 | 2026-07-28 | ✅ Safe |
 | PKR110_16.0.8.300(CN01)<br><details><summary>MD5</summary><code>2fd31a6aad09661b7f59dcc620967c21</code></details> | 0 | Major: 3, Minor: 0 | 2026-07-16 | ✅ Safe |
 | PKR110_16.0.7.200(CN01)<br><details><summary>MD5</summary><code>5962a60bd0937eae6f811d0a6e330655</code></details> | 0 | Major: 3, Minor: 0 | 2026-06-17 | ✅ Safe |
 | PKR110_16.0.5.701(CN01)<br><details><summary>MD5</summary><code>deb779d154c41264bad665cc1ce4606c</code></details> | 0 | Major: 3, Minor: 0 | 2026-05-19 | ✅ Safe |
@@ -1310,7 +1312,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
-| China | PKG110 | PKG110_16.0.9.400(CN01)<br><details><summary>MD5</summary><code>6fb0095cc9c07dbdb74074c87cbb643f</code></details> | **1** | Major: 3, Minor: 0 | 2026-07-28 | ❌ Protected |
+| China | PKG110 | PKG110_16.0.9.400(CN01)<br><details><summary>MD5</summary><code>6fb0095cc9c07dbdb74074c87cbb643f</code></details> | **1** | Major: 3, Minor: 0 | 2026-08-13 | ❌ Protected |
 
 <details>
 <summary>📜 <b>China History</b> (click to expand)</summary>
@@ -2047,4 +2049,4 @@ Prefer a native mobile experience? We have an official Android app on F-Droid! C
 > **Important:** The bot **only** works within this group to prevent spam and ensure availability. DM checks are disabled.
 
 ---
-*Last updated: 2026-08-12 02:26 UTC*
+*Last updated: 2026-08-13 02:27 UTC*

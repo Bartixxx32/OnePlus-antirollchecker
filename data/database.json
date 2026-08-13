@@ -6434,7 +6434,7 @@
         "minor": 0,
         "md5": "622d110ed6f4cf0da0e3fa851dd23e10",
         "first_seen": "2026-07-23",
-        "last_checked": "2026-07-28",
+        "last_checked": "2026-08-13",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -6955,7 +6955,7 @@
         "minor": 0,
         "md5": "6fb0095cc9c07dbdb74074c87cbb643f",
         "first_seen": "2026-07-16",
-        "last_checked": "2026-07-28",
+        "last_checked": "2026-08-13",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -7225,6 +7225,19 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "PKR110_16.0.9.401(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": "b17e5b486bf2992bea1e37db111b4c6b",
+        "first_seen": "2026-08-13",
+        "last_checked": "2026-08-13",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "CN"
+        ]
+      },
       "PKR110_16.0.9.400(CN01)": {
         "arb": 0,
         "major": 3,
@@ -7232,7 +7245,7 @@
         "md5": "e21af44b770bfccfa08ee63401c23b4d",
         "first_seen": "2026-07-16",
         "last_checked": "2026-07-28",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "CN"
@@ -7488,6 +7501,19 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "PKX110_16.0.10.500(CN01)": {
+        "arb": 1,
+        "major": 3,
+        "minor": 0,
+        "md5": "918612b11b727fb05d9c6190ce1cd8d1",
+        "first_seen": "2026-08-13",
+        "last_checked": "2026-08-13",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "CN"
+        ]
+      },
       "PKX110_16.0.9.401(CN01)": {
         "arb": 1,
         "major": 3,
@@ -7495,7 +7521,7 @@
         "md5": "782c1416f4fb1a3b7d52e98c483789e0",
         "first_seen": "2026-07-31",
         "last_checked": "2026-07-31",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "CN"
@@ -7796,7 +7822,7 @@
         "minor": 0,
         "md5": "3172e6587add66b756130437601a35eb",
         "first_seen": "2026-08-05",
-        "last_checked": "2026-08-05",
+        "last_checked": "2026-08-13",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -7973,7 +7999,7 @@
         "minor": 0,
         "md5": "9405af9464898ad1e50e14ab7d64baf9",
         "first_seen": "2026-07-14",
-        "last_checked": "2026-07-28",
+        "last_checked": "2026-08-13",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
