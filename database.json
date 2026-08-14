@@ -1420,6 +1420,19 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "CPH2525_15.0.0.1910(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "1bb4aebb053ea59fbe141e9f3f236b63",
+        "first_seen": "2026-08-14",
+        "last_checked": "2026-08-14",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "ID"
+        ]
+      },
       "CPH2525_15.0.0.1901(EX01)": {
         "arb": 0,
         "major": 0,
@@ -1427,7 +1440,7 @@
         "md5": "6a24db8efd1483da235f2d1d46ba9eca",
         "first_seen": "2026-07-08",
         "last_checked": "2026-07-28",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "ID"
@@ -1561,6 +1574,19 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "CPH2525_15.0.0.1910(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "b9242981b008c2cf434b7a228543a9c5",
+        "first_seen": "2026-08-14",
+        "last_checked": "2026-08-14",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "MY"
+        ]
+      },
       "CPH2525_15.0.0.1901(EX01)": {
         "arb": 0,
         "major": 0,
@@ -1568,7 +1594,7 @@
         "md5": "d5cb83b71e9664fdec59fa344264512e",
         "first_seen": "2026-07-02",
         "last_checked": "2026-07-28",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "MY"
@@ -1621,6 +1647,19 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "CPH2525_15.0.0.1910(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "6032a687aed2e8eda721bb58f13ac626",
+        "first_seen": "2026-08-14",
+        "last_checked": "2026-08-14",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "OCA"
+        ]
+      },
       "CPH2525_15.0.0.1603(EX01)": {
         "arb": 0,
         "major": 0,
@@ -1628,7 +1667,7 @@
         "md5": "0407edf6593a82dc2d02b13bc38c0a2e",
         "first_seen": "2026-04-01",
         "last_checked": "2026-07-28",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "OCA"
@@ -1655,6 +1694,19 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "CPH2525_15.0.0.1910(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "48649307f9012448b291dd003ed2b0b2",
+        "first_seen": "2026-08-14",
+        "last_checked": "2026-08-14",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "PH"
+        ]
+      },
       "CPH2525_15.0.0.1901(EX01)": {
         "arb": 0,
         "major": 0,
@@ -1662,7 +1714,7 @@
         "md5": "9fdc262d0e71288ea7ac1d1aefb40125",
         "first_seen": "2026-07-02",
         "last_checked": "2026-07-28",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "PH"
@@ -1835,6 +1887,19 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "CPH2525_15.0.0.1910(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "5b38df087cac1fb09478101402695c8a",
+        "first_seen": "2026-08-14",
+        "last_checked": "2026-08-14",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "TH"
+        ]
+      },
       "CPH2525_15.0.0.1901(EX01)": {
         "arb": 0,
         "major": 0,
@@ -1842,7 +1907,7 @@
         "md5": "ba30a505d308a1414f06b4cf23ab0871",
         "first_seen": "2026-07-08",
         "last_checked": "2026-07-28",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "TH"
@@ -4356,6 +4421,19 @@
     "expect_esim": true,
     "expect_barometer": false,
     "versions": {
+      "CPH2745_16.0.10.500(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": "27466b035e8a04bc244aafcb38c88ee2",
+        "first_seen": "2026-08-14",
+        "last_checked": "2026-08-14",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "IN"
+        ]
+      },
       "CPH2745_16.0.9.400(EX01)": {
         "arb": 0,
         "major": 3,
@@ -4363,7 +4441,7 @@
         "md5": "d2989d5dd9fa2f666ea71d7add31456d",
         "first_seen": "2026-07-09",
         "last_checked": "2026-07-28",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "IN"
