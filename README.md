@@ -130,7 +130,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 |:---|:---|:---|:---|:---|:---|:---|
 | Global | CPH2769 | CPH2769_16.0.9.401(EX01)<br><details><summary>MD5</summary><code>dec4a1753e117fb9fdff8a7cfd22eaa5</code></details> | **0** | Major: 3, Minor: 0 | 2026-07-28 | ✅ Safe |
 | Europe | CPH2769 | CPH2769_16.0.9.401(EX01)<br><details><summary>MD5</summary><code>6274539f5aacc16ad7fd85a08989eca6</code></details> | **0** | Major: 3, Minor: 0 | 2026-07-28 | ✅ Safe |
-| India | CPH2767 | CPH2767_16.0.9.401(EX01)<br><details><summary>MD5</summary><code>e1c7c856336422af11cd999263f5b5d0</code></details> | **0** | Major: 3, Minor: 0 | 2026-07-28 | ✅ Safe |
+| India | CPH2767 | CPH2767_16.0.10.500(EX01)<br><details><summary>MD5</summary><code>c097d766c3b13cec60b1b076fdf2be3e</code></details> | **0** | Major: 3, Minor: 0 | 2026-08-20 | ✅ Safe |
 
 <details>
 <summary>📜 <b>Global History</b> (click to expand)</summary>
@@ -165,6 +165,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| CPH2767_16.0.9.401(EX01)<br><details><summary>MD5</summary><code>e1c7c856336422af11cd999263f5b5d0</code></details> | 0 | Major: 3, Minor: 0 | 2026-07-28 | ✅ Safe |
 | CPH2767_16.0.8.300(EX01)<br><details><summary>MD5</summary><code>e868d2b554b76d0c520dc513e0d1d361</code></details> | 0 | Major: 3, Minor: 0 | 2026-07-16 | ✅ Safe |
 | CPH2767_16.0.7.200(EX01)<br><details><summary>MD5</summary><code>0de34b0240e5938852c183d8849cc789</code></details> | 0 | Major: 3, Minor: 0 | 2026-06-16 | ✅ Safe |
 | CPH2767_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>13f5c6f6338480d641c381e2644dd3f7</code></details> | 0 | Major: 3, Minor: 0 | 2026-05-15 | ✅ Safe |
@@ -386,13 +387,14 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
-| India | CPH2723 | CPH2723_16.0.9.401(EX01)<br><details><summary>MD5</summary><code>7d7b89ad8e72342568a0dee0dc9764c1</code></details> | **1** | Major: 3, Minor: 0 | 2026-07-28 | ❌ Protected |
+| India | CPH2723 | CPH2723_16.0.10.500(EX01)<br><details><summary>MD5</summary><code>ebcccb0ea41bfe82c70b31f61342cc04</code></details> | **1** | Major: 3, Minor: 0 | 2026-08-20 | ❌ Protected |
 
 <details>
 <summary>📜 <b>India History</b> (click to expand)</summary>
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| CPH2723_16.0.9.401(EX01)<br><details><summary>MD5</summary><code>7d7b89ad8e72342568a0dee0dc9764c1</code></details> | 1 | Major: 3, Minor: 0 | 2026-07-28 | ❌ Protected |
 | CPH2723_16.0.9.400(EX01)<br><details><summary>MD5</summary><code>cfd062e1bdae9086d9f587c9e6c2b84c</code></details> | 1 | Major: 3, Minor: 0 | 2026-07-23 | ❌ Protected |
 | CPH2723_16.0.8.301(EX01)<br><details><summary>MD5</summary><code>d3207cb91375529ce63c57b0e8c8ac1c</code></details> | 1 | Major: 3, Minor: 0 | 2026-07-13 | ❌ Protected |
 | CPH2723_16.0.7.200(EX01)<br><details><summary>MD5</summary><code>464bf8a0901693b5540818d5f59ce50f</code></details> | 1 | Major: 3, Minor: 0 | 2026-06-12 | ❌ Protected |
@@ -1263,13 +1265,14 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
-| China | PLQ110 | PLQ110_16.0.9.402(CN01)<br><details><summary>MD5</summary><code>3172e6587add66b756130437601a35eb</code></details> | **1** | Major: 3, Minor: 0 | 2026-08-13 | ❌ Protected |
+| China | PLQ110 | PLQ110_16.0.10.500(CN01)<br><details><summary>MD5</summary><code>426959f59655e11efc126bc788a9a77f</code></details> | **1** | Major: 3, Minor: 0 | 2026-08-20 | ❌ Protected |
 
 <details>
 <summary>📜 <b>China History</b> (click to expand)</summary>
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| PLQ110_16.0.9.402(CN01)<br><details><summary>MD5</summary><code>3172e6587add66b756130437601a35eb</code></details> | 1 | Major: 3, Minor: 0 | 2026-08-13 | ❌ Protected |
 | PLQ110_16.0.9.401(CN01)<br><details><summary>MD5</summary><code>6533ffcf2bbd162e64817a16a4156883</code></details> | 1 | Major: 3, Minor: 0 | 2026-07-28 | ❌ Protected |
 | PLQ110_16.0.8.300(CN01)<br><details><summary>MD5</summary><code>9e314a544de8f6eee2a5f70ebbd07214</code></details> | 1 | Major: 3, Minor: 0 | 2026-07-13 | ❌ Protected |
 | PLQ110_16.0.7.201(CN01)<br><details><summary>MD5</summary><code>d273f63966ca7af765ace3cc1c00dea2</code></details> | 1 | Major: 3, Minor: 0 | 2026-06-15 | ❌ Protected |
@@ -2068,4 +2071,4 @@ Prefer a native mobile experience? We have an official Android app on F-Droid! C
 > **Important:** The bot **only** works within this group to prevent spam and ensure availability. DM checks are disabled.
 
 ---
-*Last updated: 2026-08-19 01:38 UTC*
+*Last updated: 2026-08-20 01:42 UTC*

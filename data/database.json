@@ -4400,6 +4400,19 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "CPH2723_16.0.10.500(EX01)": {
+        "arb": 1,
+        "major": 3,
+        "minor": 0,
+        "md5": "ebcccb0ea41bfe82c70b31f61342cc04",
+        "first_seen": "2026-08-20",
+        "last_checked": "2026-08-20",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "IN"
+        ]
+      },
       "CPH2723_16.0.9.401(EX01)": {
         "arb": 1,
         "major": 3,
@@ -4407,7 +4420,7 @@
         "md5": "7d7b89ad8e72342568a0dee0dc9764c1",
         "first_seen": "2026-07-24",
         "last_checked": "2026-07-28",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "IN"
@@ -4872,6 +4885,19 @@
     "expect_esim": true,
     "expect_barometer": false,
     "versions": {
+      "CPH2767_16.0.10.500(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": "c097d766c3b13cec60b1b076fdf2be3e",
+        "first_seen": "2026-08-20",
+        "last_checked": "2026-08-20",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "IN"
+        ]
+      },
       "CPH2767_16.0.9.401(EX01)": {
         "arb": 0,
         "major": 3,
@@ -4879,7 +4905,7 @@
         "md5": "e1c7c856336422af11cd999263f5b5d0",
         "first_seen": "2026-07-16",
         "last_checked": "2026-07-28",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "IN"
@@ -8050,6 +8076,19 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "PLQ110_16.0.10.500(CN01)": {
+        "arb": 1,
+        "major": 3,
+        "minor": 0,
+        "md5": "426959f59655e11efc126bc788a9a77f",
+        "first_seen": "2026-08-20",
+        "last_checked": "2026-08-20",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "CN"
+        ]
+      },
       "PLQ110_16.0.9.402(CN01)": {
         "arb": 1,
         "major": 3,
@@ -8057,7 +8096,7 @@
         "md5": "3172e6587add66b756130437601a35eb",
         "first_seen": "2026-08-05",
         "last_checked": "2026-08-13",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "CN"
