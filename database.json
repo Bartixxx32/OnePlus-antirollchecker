@@ -4419,7 +4419,7 @@
         "minor": 0,
         "md5": "ebcccb0ea41bfe82c70b31f61342cc04",
         "first_seen": "2026-08-20",
-        "last_checked": "2026-08-20",
+        "last_checked": "2026-08-23",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -4747,7 +4747,7 @@
         "minor": 0,
         "md5": "2b88ed55f20d84630ab8abd852e2a801",
         "first_seen": "2026-07-20",
-        "last_checked": "2026-07-28",
+        "last_checked": "2026-08-23",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
