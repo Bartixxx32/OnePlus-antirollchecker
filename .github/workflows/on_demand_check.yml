@@ -258,8 +258,8 @@ jobs:
                   with open('result.json', 'r') as f:
                       res = json.load(f)
                   
-                  arb = res.get('arb_index', 'Unknown')
-                   meta = res.get('ota_metadata', {})
+arb = res.get('arb_index', 'Unknown')
+                  meta = res.get('ota_metadata', {})
                    is_img_check = not meta
                    
                    # Check if device is hardcoded
