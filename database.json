@@ -2544,7 +2544,7 @@
         "minor": 0,
         "md5": "9b2d3db3fe4e7d9fc37706f03c4129fc",
         "first_seen": "2026-07-29",
-        "last_checked": "2026-07-29",
+        "last_checked": "2026-08-25",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -3665,7 +3665,7 @@
         "minor": 0,
         "md5": "7d0ce94be24263393454ae140889a523",
         "first_seen": "2026-02-04",
-        "last_checked": "2026-07-28",
+        "last_checked": "2026-08-25",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -4596,7 +4596,7 @@
         "minor": 0,
         "md5": "27466b035e8a04bc244aafcb38c88ee2",
         "first_seen": "2026-08-14",
-        "last_checked": "2026-08-14",
+        "last_checked": "2026-08-25",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -6727,6 +6727,19 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "PJD110_16.0.10.501(CN01)": {
+        "arb": 1,
+        "major": 3,
+        "minor": 0,
+        "md5": "ec2001b7d8e6b945308f152aa773a26b",
+        "first_seen": "2026-08-25",
+        "last_checked": "2026-08-25",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "CN"
+        ]
+      },
       "PJD110_16.0.9.400(CN01)": {
         "arb": 1,
         "major": 3,
@@ -6734,7 +6747,7 @@
         "md5": "622d110ed6f4cf0da0e3fa851dd23e10",
         "first_seen": "2026-07-23",
         "last_checked": "2026-08-13",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "CN"
