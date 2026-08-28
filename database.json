@@ -3965,6 +3965,19 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "CPH2671_16.0.10.500(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": null,
+        "first_seen": "2026-08-28",
+        "last_checked": "2026-08-28",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "SG"
+        ]
+      },
       "CPH2671_16.0.9.400(EX01)": {
         "arb": 0,
         "major": 3,
