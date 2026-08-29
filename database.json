@@ -4784,12 +4784,13 @@
         "arb": 0,
         "major": 3,
         "minor": 0,
-        "md5": "01cbbeb18a0b9e22c6bda698ce2f080a",
-        "first_seen": "2026-08-22",
-        "last_checked": "2026-08-22",
+        "md5": null,
+        "first_seen": "2026-08-29",
+        "last_checked": "2026-08-29",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
+          "EU",
           "GLO"
         ]
       },
@@ -4800,7 +4801,7 @@
         "md5": "2b88ed55f20d84630ab8abd852e2a801",
         "first_seen": "2026-07-20",
         "last_checked": "2026-08-23",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "EU",
