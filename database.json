@@ -2551,6 +2551,20 @@
     "expect_esim": true,
     "expect_barometer": false,
     "versions": {
+      "CPH2581_16.0.10.501(EX01)": {
+        "arb": 1,
+        "major": 3,
+        "minor": 0,
+        "md5": null,
+        "first_seen": "2026-09-02",
+        "last_checked": "2026-09-02",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "EU",
+          "GLO"
+        ]
+      },
       "CPH2581_16.0.9.400(EX01)": {
         "arb": 1,
         "major": 3,
@@ -2558,7 +2572,7 @@
         "md5": "9b2d3db3fe4e7d9fc37706f03c4129fc",
         "first_seen": "2026-07-29",
         "last_checked": "2026-08-25",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "EU",
@@ -8088,7 +8102,7 @@
         "minor": 0,
         "md5": "8fdbfd42136ac85e4a763129491a2b7f",
         "first_seen": "2026-07-04",
-        "last_checked": "2026-07-28",
+        "last_checked": "2026-09-02",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
