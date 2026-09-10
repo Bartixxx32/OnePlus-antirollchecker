@@ -316,6 +316,19 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "CPH2409_14.0.0.3000(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "832d14fdae57427c336532de40191a30",
+        "first_seen": "2026-09-10",
+        "last_checked": "2026-09-10",
+        "status": "current",
+        "is_hardcoded": true,
+        "regions": [
+          "GLO"
+        ]
+      },
       "CPH2409_14.0.0.2900(EX01)": {
         "arb": 0,
         "major": 0,
@@ -323,7 +336,7 @@
         "md5": "29cf8267e6a4a66a00dc480fae04cfcd",
         "first_seen": "2026-05-27",
         "last_checked": "2026-09-09",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": true,
         "regions": [
           "GLO"
@@ -350,6 +363,19 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "CPH2409_14.0.0.3000(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "ced5590504fe54d3672d3ba6bf061e63",
+        "first_seen": "2026-09-10",
+        "last_checked": "2026-09-10",
+        "status": "current",
+        "is_hardcoded": true,
+        "regions": [
+          "EU"
+        ]
+      },
       "CPH2409_14.0.0.2900(EX01)": {
         "arb": 0,
         "major": 0,
@@ -357,7 +383,7 @@
         "md5": "5724c78163af42d048b1c4f28c4f34cd",
         "first_seen": "2026-05-27",
         "last_checked": "2026-09-09",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": true,
         "regions": [
           "EU"
@@ -590,7 +616,7 @@
         "minor": 0,
         "md5": "abd92f7936e783edf34499cf52c77857",
         "first_seen": "2026-07-23",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-09-10",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -1232,7 +1258,7 @@
         "minor": 0,
         "md5": "0dce73db5e8c7278656b99d41c3c8a81",
         "first_seen": "2026-02-13",
-        "last_checked": "2026-04-20",
+        "last_checked": "2026-09-10",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
@@ -2399,7 +2425,7 @@
         "md5": "243631c13291e64994eb63bb97e2602b",
         "first_seen": "2026-08-11",
         "last_checked": "2026-08-11",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": true,
         "regions": [
           "IN"
@@ -2440,6 +2466,19 @@
         "last_checked": "2026-05-12",
         "status": "archived",
         "is_hardcoded": true,
+        "regions": [
+          "IN"
+        ]
+      },
+      "CPH2569_14.0.0.300(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "819f1e77dabf8a69536303855460c0d9",
+        "first_seen": "2026-09-10",
+        "last_checked": "2026-09-10",
+        "status": "current",
+        "is_hardcoded": false,
         "regions": [
           "IN"
         ]
