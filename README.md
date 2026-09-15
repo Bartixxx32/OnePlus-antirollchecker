@@ -1581,8 +1581,8 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | Oceania | CPH2525OCA | CPH2525_15.0.0.1910(EX01)<br><details><summary>MD5</summary><code>6032a687aed2e8eda721bb58f13ac626</code></details> | **0** | Major: 0, Minor: 120 | 2026-09-09 | ✅ Safe |
 | Saudi Arabia | CPH2525SA | CPH2525_15.0.0.1910(EX01)<br><details><summary>MD5</summary><code>ebac589ae3ea435b59eaf336293bc633</code></details> | **0** | Major: 0, Minor: 120 | 2026-09-09 | ✅ Safe |
 | Philippines | CPH2525PH | CPH2525_15.0.0.1910(EX01)<br><details><summary>MD5</summary><code>48649307f9012448b291dd003ed2b0b2</code></details> | **0** | Major: 0, Minor: 120 | 2026-09-09 | ✅ Safe |
-| India | CPH2525IN | CPH2525_13.1.1.147(EX01)<br><details><summary>MD5</summary><code>abb2a1ef3450621de3073f48d5215b19</code></details> | **0** | Major: 0, Minor: 120 | 2026-09-09 | ✅ Safe |
 | Middle East | CPH2525MEA | CPH2525_15.0.0.1910(EX01)<br><details><summary>MD5</summary><code>71c1c22334536ad3e63d20d7ffece5a8</code></details> | **0** | Major: 0, Minor: 120 | 2026-09-09 | ✅ Safe |
+| India | CPH2525IN | CPH2525_13.1.1.147(EX01)<br><details><summary>MD5</summary><code>abb2a1ef3450621de3073f48d5215b19</code></details> | **0** | Major: 0, Minor: 120 | 2026-09-09 | ✅ Safe |
 
 <details>
 <summary>📜 <b>Singapore History</b> (click to expand)</summary>
@@ -1711,32 +1711,6 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | CPH2525_15.0.0.1801(EX01)<br><details><summary>MD5</summary><code>d6c541a6a7cbc905257da9f2c89370bf</code></details> | 0 | Major: 0, Minor: 120 | 2026-07-15 | ✅ Safe |
 | CPH2525_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>ae1e910b70f736368c2aec048b8f1d99</code></details> | 0 | Major: 0, Minor: 120 | 2026-05-28 | ✅ Safe |
 | CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>d75e6df459ee8ed050e99e143a9ffe1c</code></details> | 0 | Major: 0, Minor: 120 | 2026-03-27 | ✅ Safe |
-
-</details>
-
-
----
-
-### Oppo Find X8 Ultra
-
-| Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
-|:---|:---|:---|:---|:---|:---|:---|
-| China | PKJ110 | PKU110_16.0.10.501(CN01) | **0** | Major: 3, Minor: 0 | 2026-08-24 | ✅ Safe |
-
-<details>
-<summary>📜 <b>China History</b> (click to expand)</summary>
-
-| Firmware Version | ARB | OEM Version | Last Seen | Safe |
-|:---|:---|:---|:---|:---|
-| PKU110_16.0.9.401(CN01) | 0 | Major: 3, Minor: 0 | 2026-08-01 | ✅ Safe |
-| PKU110_16.0.9.400(CN01)<br><details><summary>MD5</summary><code>a03c8ef2d0f66b86674a0761d754da8b</code></details> | 0 | Major: 3, Minor: 0 | 2026-07-27 | ✅ Safe |
-| PKU110_16.0.8.300(CN01)<br><details><summary>MD5</summary><code>5d178867bdd6a4d9a246ea5cf5ce810e</code></details> | 0 | Major: 3, Minor: 0 | 2026-07-08 | ✅ Safe |
-| PKU110_16.0.7.200(CN01)<br><details><summary>MD5</summary><code>882cdfa7d2d11d93ca1490f4534cef3e</code></details> | 0 | Major: 3, Minor: 0 | 2026-06-09 | ✅ Safe |
-| PKJ110_16.0.3.500(CN01)<br><details><summary>MD5</summary><code>0f2a5043def5b99ae0903db69d932bff</code></details> | 0 | Major: 3, Minor: 0 | 2026-05-22 | ✅ Safe |
-| PKJ110_16.0.2.400(CN01)<br><details><summary>MD5</summary><code>d6133146502d44b3a9795d2686f0b06c</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-10 | ✅ Safe |
-| PKJ110_16.0.1.301(CN01)<br><details><summary>MD5</summary><code>41e50bbe474aab4c7cfaf60eef6d218e</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-11 | ✅ Safe |
-| PKJ110_16.0.0.212(CN01)<br><details><summary>MD5</summary><code>3d758b4da350de2dca8a6825984d5486</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-13 | ✅ Safe |
-| PKJ110_15.0.1.622(CN01)<br><details><summary>MD5</summary><code>0e06b14fd353c14855c21312d00bd158</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-18 | ✅ Safe |
 
 </details>
 
@@ -2105,4 +2079,4 @@ Prefer a native mobile experience? We have an official Android app on F-Droid! C
 > **Important:** The bot **only** works within this group to prevent spam and ensure availability. DM checks are disabled.
 
 ---
-*Last updated: 2026-09-14 19:37 UTC*
+*Last updated: 2026-09-15 04:24 UTC*
