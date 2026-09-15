@@ -487,6 +487,13 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "VN": "CPH2525VN"
         },
     },
+
+    "Find X8 Ultra": {
+        "name": "Oppo Find X8 Ultra",
+        "models": {
+            "CN": "PKJ110"
+        },
+    },
     "Find N5": {
         "name": "Oppo Find N5",
         "models": {
@@ -495,7 +502,8 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "APC": "CPH2671",
             "ID": "CPH2671",
             "MX": "CPH2671",
-            "TH": "CPH2671"
+            "TH": "CPH2671",
+            "CN": "PKV110"
         },
     },
     "Find N3": {
