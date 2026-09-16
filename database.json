@@ -1095,7 +1095,7 @@
         "md5": "05e595476654d5cd3bf0e23007f460f2",
         "first_seen": "2026-08-03",
         "last_checked": "2026-08-03",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": true,
         "regions": [
           "IN"
@@ -1149,6 +1149,19 @@
         "last_checked": "2026-03-20",
         "status": "archived",
         "is_hardcoded": true,
+        "regions": [
+          "IN"
+        ]
+      },
+      "CPH2467_14.0.0.201(EX01)": {
+        "arb": 0,
+        "major": 0,
+        "minor": 120,
+        "md5": "1f2420ba594f9354c87339d8497a9807",
+        "first_seen": "2026-09-16",
+        "last_checked": "2026-09-16",
+        "status": "current",
+        "is_hardcoded": false,
         "regions": [
           "IN"
         ]
@@ -6383,7 +6396,7 @@
         "md5": "ba2bc492a059033a1bbc5ac30cdea645",
         "first_seen": "2026-07-29",
         "last_checked": "2026-07-29",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "IN"
@@ -6397,6 +6410,19 @@
         "first_seen": "2026-02-13",
         "last_checked": "2026-03-18",
         "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "IN"
+        ]
+      },
+      "NE2211_13.1.0.597(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "minor": 0,
+        "md5": "ca20a2980bb18361683843489f26c07a",
+        "first_seen": "2026-09-16",
+        "last_checked": "2026-09-16",
+        "status": "current",
         "is_hardcoded": false,
         "regions": [
           "IN"
