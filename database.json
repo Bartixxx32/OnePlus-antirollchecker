@@ -503,7 +503,7 @@
         "md5": "b16e12438669b9295e6ba023455e44ee",
         "first_seen": "2026-07-08",
         "last_checked": "2026-09-09",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "EU",
@@ -572,14 +572,19 @@
         "arb": 0,
         "major": 2,
         "minor": 0,
-        "md5": "a64fed2576347ece7c224a39eb675509",
-        "first_seen": "2026-07-29",
-        "last_checked": "2026-07-29",
+        "md5": "c3c01802a27eaebe69a76dc03066c0e4",
+        "first_seen": "2026-09-16",
+        "last_checked": "2026-09-16",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
+          "EU",
           "GLO"
-        ]
+        ],
+        "md5_by_region": {
+          "EU": "c3c01802a27eaebe69a76dc03066c0e4",
+          "GLO": "a64fed2576347ece7c224a39eb675509"
+        }
       }
     }
   },
@@ -2377,11 +2382,24 @@
         "minor": 0,
         "md5": "4f1b8c4f45cfb394c05e1ef5728b13a2",
         "first_seen": "2026-02-04",
-        "last_checked": "2026-03-18",
+        "last_checked": "2026-09-16",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "EU"
+        ]
+      },
+      "CPH2551_15.0.0.860(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "minor": 0,
+        "md5": "7b3a8722f2e7395367ec6d3e8851c0ba",
+        "first_seen": "2026-09-16",
+        "last_checked": "2026-09-16",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "IN"
         ]
       },
       "CPH2551_15.0.0.822(EX01)": {
@@ -4005,7 +4023,7 @@
         "minor": 0,
         "md5": "16accee17408f6ce7989bba97b0f5c27",
         "first_seen": "2026-05-20",
-        "last_checked": "2026-07-11",
+        "last_checked": "2026-09-16",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
@@ -6555,6 +6573,19 @@
         "is_hardcoded": false,
         "regions": [
           "GLO"
+        ]
+      },
+      "NE2213_14.0.0.402(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "minor": 0,
+        "md5": "d8750ca653d212843cb40c8292e1eb70",
+        "first_seen": "2026-09-16",
+        "last_checked": "2026-09-16",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "EU"
         ]
       },
       "NE2213_14.0.0.202(EX01)": {
