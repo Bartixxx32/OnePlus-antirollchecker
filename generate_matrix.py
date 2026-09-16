@@ -18,7 +18,17 @@ def generate_matrix():
         ("10R", "IN"),
         ("Ace 5 Ultimate", "CN"),
         ("Find X5", "CN"),
-        ("Find X5 Pro", "CN")
+        ("Find X5 Pro", "CN"),
+        ("13", "NA"),
+        ("12", "NA"),
+        ("10 Pro", "NA"),
+        ("12R", "NA"),
+        ("11", "NA"),
+        ("8", "NA"),
+        ("8 Pro", "NA"),
+        ("10T", "NA"),
+        ("9", "NA"),
+        ("8T", "IN"),
     ]
 
     for device_id, meta in DEVICE_METADATA.items():
