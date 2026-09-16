@@ -588,27 +588,6 @@
       }
     }
   },
-  "CPH2417": {
-    "device_name": "OnePlus 10T",
-    "device_order": 13,
-    "expect_esim": false,
-    "expect_barometer": false,
-    "versions": {
-      "CPH2417_11_C.46": {
-        "arb": 0,
-        "major": 2,
-        "minor": 0,
-        "md5": "c0fe595ca50e4db92c009f49273c5c9a",
-        "first_seen": "2026-02-04",
-        "last_checked": "2026-09-09",
-        "status": "current",
-        "is_hardcoded": false,
-        "regions": [
-          "NA"
-        ]
-      }
-    }
-  },
   "CPH2447": {
     "device_name": "OnePlus 11",
     "device_order": 10,
@@ -922,27 +901,6 @@
           "GLO": "e698b0fa87d61c1b081abe119c52fb86",
           "EU": "c1f0435152c274076284d579f94b3427"
         }
-      }
-    }
-  },
-  "CPH2451": {
-    "device_name": "OnePlus 11",
-    "device_order": 10,
-    "expect_esim": true,
-    "expect_barometer": false,
-    "versions": {
-      "CPH2451_15.0.0.800(EX01)": {
-        "arb": 0,
-        "major": 2,
-        "minor": 0,
-        "md5": "6cf186b46c64e0e0f81ce44f9df02689",
-        "first_seen": "2026-02-04",
-        "last_checked": "2026-09-09",
-        "status": "current",
-        "is_hardcoded": false,
-        "regions": [
-          "NA"
-        ]
       }
     }
   },
@@ -2842,40 +2800,6 @@
       }
     }
   },
-  "CPH2583": {
-    "device_name": "OnePlus 12",
-    "device_order": 8,
-    "expect_esim": true,
-    "expect_barometer": false,
-    "versions": {
-      "CPH2583_16.0.3.500(EX01)": {
-        "arb": 1,
-        "major": 3,
-        "minor": 0,
-        "md5": "c4bf38e7b691b79f32605967303b77e0",
-        "first_seen": "2026-03-10",
-        "last_checked": "2026-09-09",
-        "status": "current",
-        "is_hardcoded": false,
-        "regions": [
-          "NA"
-        ]
-      },
-      "CPH2583_11_C.61": {
-        "arb": 0,
-        "major": 3,
-        "minor": 0,
-        "md5": "0930cc879bd35c5c17c3f0e4eb0b014b",
-        "first_seen": "2026-02-04",
-        "last_checked": "2026-03-09",
-        "status": "archived",
-        "is_hardcoded": false,
-        "regions": [
-          "NA"
-        ]
-      }
-    }
-  },
   "CPH2585": {
     "device_name": "OnePlus 12R",
     "device_order": 9,
@@ -3051,27 +2975,6 @@
         "is_hardcoded": false,
         "regions": [
           "GLO"
-        ]
-      }
-    }
-  },
-  "CPH2611": {
-    "device_name": "OnePlus 12R",
-    "device_order": 9,
-    "expect_esim": true,
-    "expect_barometer": false,
-    "versions": {
-      "CPH2611_11_A.65": {
-        "arb": 0,
-        "major": 2,
-        "minor": 0,
-        "md5": "a16a2f0dbbd5eeaff10041299f4d1508",
-        "first_seen": "2026-02-04",
-        "last_checked": "2026-09-09",
-        "status": "current",
-        "is_hardcoded": false,
-        "regions": [
-          "NA"
         ]
       }
     }
@@ -3843,40 +3746,6 @@
         "is_hardcoded": false,
         "regions": [
           "EU"
-        ]
-      }
-    }
-  },
-  "CPH2655": {
-    "device_name": "OnePlus 13",
-    "device_order": 3,
-    "expect_esim": true,
-    "expect_barometer": true,
-    "versions": {
-      "CPH2655_15.0.0.832(EX01)": {
-        "arb": 0,
-        "major": 3,
-        "minor": 0,
-        "md5": "7d0ce94be24263393454ae140889a523",
-        "first_seen": "2026-02-04",
-        "last_checked": "2026-09-09",
-        "status": "current",
-        "is_hardcoded": false,
-        "regions": [
-          "NA"
-        ]
-      },
-      "CPH2655_15.0.0.405(EX01)": {
-        "arb": 0,
-        "major": 3,
-        "minor": 0,
-        "md5": "5b693110ced8964a707defcd198acfc4",
-        "first_seen": "2026-02-04",
-        "last_checked": "2026-03-18",
-        "status": "archived",
-        "is_hardcoded": false,
-        "regions": [
-          "NA"
         ]
       }
     }
@@ -5904,27 +5773,6 @@
       }
     }
   },
-  "IN2015": {
-    "device_name": "OnePlus 8",
-    "device_order": 20,
-    "expect_esim": false,
-    "expect_barometer": false,
-    "versions": {
-      "IN2015_11_F.67": {
-        "arb": 0,
-        "major": 0,
-        "minor": 120,
-        "md5": "38f9e3ee0be3b595e5b3f4ccf244aca0",
-        "first_seen": "2026-02-04",
-        "last_checked": "2026-09-09",
-        "status": "current",
-        "is_hardcoded": false,
-        "regions": [
-          "NA"
-        ]
-      }
-    }
-  },
   "IN2021": {
     "device_name": "OnePlus 8 Pro",
     "device_order": 19,
@@ -5976,48 +5824,6 @@
         "is_hardcoded": false,
         "regions": [
           "EU"
-        ]
-      }
-    }
-  },
-  "IN2025": {
-    "device_name": "OnePlus 8 Pro",
-    "device_order": 19,
-    "expect_esim": false,
-    "expect_barometer": false,
-    "versions": {
-      "IN2025_11_F.67": {
-        "arb": 0,
-        "major": 0,
-        "minor": 120,
-        "md5": "9262c4d8d4591ac891d13bf2e3bc9c04",
-        "first_seen": "2026-02-04",
-        "last_checked": "2026-09-09",
-        "status": "current",
-        "is_hardcoded": false,
-        "regions": [
-          "NA"
-        ]
-      }
-    }
-  },
-  "KB2001": {
-    "device_name": "OnePlus 8T",
-    "device_order": 18,
-    "expect_esim": false,
-    "expect_barometer": false,
-    "versions": {
-      "KB2001_14.0.0.1311(EX01)": {
-        "arb": 0,
-        "major": 0,
-        "minor": 120,
-        "md5": "0fb14a28fe6ac6d91b52a66a9d6e76e7",
-        "first_seen": "2026-02-04",
-        "last_checked": "2026-09-09",
-        "status": "current",
-        "is_hardcoded": false,
-        "regions": [
-          "IN"
         ]
       }
     }
@@ -6102,27 +5908,6 @@
         "is_hardcoded": false,
         "regions": [
           "EU"
-        ]
-      }
-    }
-  },
-  "LE2115": {
-    "device_name": "OnePlus 9",
-    "device_order": 15,
-    "expect_esim": false,
-    "expect_barometer": false,
-    "versions": {
-      "LE2115_11_F.30": {
-        "arb": 0,
-        "major": 0,
-        "minor": 120,
-        "md5": "7f497eba018cba18d4a57c720a2120eb",
-        "first_seen": "2026-02-04",
-        "last_checked": "2026-09-09",
-        "status": "current",
-        "is_hardcoded": false,
-        "regions": [
-          "NA"
         ]
       }
     }
@@ -6623,27 +6408,6 @@
           "GLO": "c4d883a698e3f1de8a8a6392fd5c36ba",
           "EU": "48c7cc94e62946762e71b32f7f264f26"
         }
-      }
-    }
-  },
-  "NE2215": {
-    "device_name": "OnePlus 10 Pro",
-    "device_order": 12,
-    "expect_esim": false,
-    "expect_barometer": false,
-    "versions": {
-      "NE2215_15.0.0.401(EX01)": {
-        "arb": 0,
-        "major": 2,
-        "minor": 0,
-        "md5": "203d379328732fae89f3134e3b808304",
-        "first_seen": "2026-02-04",
-        "last_checked": "2026-09-09",
-        "status": "current",
-        "is_hardcoded": false,
-        "regions": [
-          "NA"
-        ]
       }
     }
   },
