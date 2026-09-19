@@ -2367,6 +2367,19 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "CPH2661_16.0.5.1301(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": "d5109d5261caacb6c65a799fd5c91652",
+        "first_seen": "2026-09-19",
+        "last_checked": "2026-09-19",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "IN"
+        ]
+      },
       "CPH2661_16.0.5.1001(EX01)": {
         "arb": 0,
         "major": 3,
@@ -2374,7 +2387,7 @@
         "md5": "0e1d8a680e0c7d1b9bac3e5aa427b85f",
         "first_seen": "2026-07-10",
         "last_checked": "2026-09-09",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "IN"

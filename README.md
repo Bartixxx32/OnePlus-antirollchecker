@@ -877,7 +877,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 |:---|:---|:---|:---|:---|:---|:---|
 | Global | CPH2663 | CPH2663_16.0.5.1001(EX01)<br><details><summary>MD5</summary><code>5ed1213da153417ef05aaedc851345dd</code></details> | **0** | Major: 3, Minor: 0 | 2026-07-28 | ✅ Safe |
 | Europe | CPH2663 | CPH2663_16.0.5.1001(EX01)<br><details><summary>MD5</summary><code>4f65299c05bcf4e9c1201d85877db742</code></details> | **0** | Major: 3, Minor: 0 | 2026-09-09 | ✅ Safe |
-| India | CPH2661 | CPH2661_16.0.5.1001(EX01)<br><details><summary>MD5</summary><code>0e1d8a680e0c7d1b9bac3e5aa427b85f</code></details> | **0** | Major: 3, Minor: 0 | 2026-09-09 | ✅ Safe |
+| India | CPH2661 | CPH2661_16.0.5.1301(EX01)<br><details><summary>MD5</summary><code>d5109d5261caacb6c65a799fd5c91652</code></details> | **0** | Major: 3, Minor: 0 | 2026-09-19 | ✅ Safe |
 
 <details>
 <summary>📜 <b>Global History</b> (click to expand)</summary>
@@ -913,6 +913,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| CPH2661_16.0.5.1001(EX01)<br><details><summary>MD5</summary><code>0e1d8a680e0c7d1b9bac3e5aa427b85f</code></details> | 0 | Major: 3, Minor: 0 | 2026-09-09 | ✅ Safe |
 | CPH2661_16.0.5.702(EX01)<br><details><summary>MD5</summary><code>c3200117587fa160263dd46eff703992</code></details> | 0 | Major: 3, Minor: 0 | 2026-07-09 | ✅ Safe |
 | CPH2661_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>6352d9d637f01ddfb574d13c412c3cae</code></details> | 0 | Major: 3, Minor: 0 | 2026-05-18 | ✅ Safe |
 | CPH2661_16.0.5.700(EX01)<br><details><summary>MD5</summary><code>f4d9b971fe52613b02edfe8225e86c95</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-23 | ✅ Safe |
@@ -1405,4 +1406,4 @@ Prefer a native mobile experience? We have an official Android app on F-Droid! C
 > **Important:** The bot **only** works within this group to prevent spam and ensure availability. DM checks are disabled.
 
 ---
-*Last updated: 2026-09-18 04:06 UTC*
+*Last updated: 2026-09-19 04:04 UTC*
