@@ -1,13 +1,23 @@
 {
   "history": [
     {
+      "version": "CPH2745_16.0.10.601(EX01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-09-20",
+      "last_checked": "2026-09-20",
+      "status": "current",
+      "md5": "5114c2acf395b280c32265b95d8db95e"
+    },
+    {
       "version": "CPH2745_16.0.10.500(EX01)",
       "arb": 0,
       "major": 3,
       "minor": 0,
       "first_seen": "2026-08-14",
       "last_checked": "2026-09-09",
-      "status": "current",
+      "status": "archived",
       "md5": "27466b035e8a04bc244aafcb38c88ee2"
     },
     {
