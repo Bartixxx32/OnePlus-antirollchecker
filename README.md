@@ -48,7 +48,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | Global | CPH2747 | CPH2747_16.0.10.500(EX01)<br><details><summary>MD5</summary><code>01cbbeb18a0b9e22c6bda698ce2f080a</code></details> | **0** | Major: 3, Minor: 0 | 2026-08-22 | ✅ Safe |
 | Europe | CPH2747 | CPH2747_16.0.10.500(EX01)<br><details><summary>MD5</summary><code>efe722a4f9b1b185ea4996aa32494704</code></details> | **0** | Major: 3, Minor: 0 | 2026-09-16 | ✅ Safe |
 | India | CPH2745 | CPH2745_16.0.10.500(EX01)<br><details><summary>MD5</summary><code>27466b035e8a04bc244aafcb38c88ee2</code></details> | **0** | Major: 3, Minor: 0 | 2026-09-09 | ✅ Safe |
-| China | PLK110 | PLK110_16.0.10.500(CN01)<br><details><summary>MD5</summary><code>2cbe1af4dece932fff62c81f5e6dbb68</code></details> | **0** | Major: 3, Minor: 0 | 2026-08-09 | ✅ Safe |
+| China | PLK110 | PLK110_16.0.10.502(CN01)<br><details><summary>MD5</summary><code>b7bb3c38d5ab12ec276fcadff4e30222</code></details> | **0** | Major: 3, Minor: 0 | 2026-09-20 | ✅ Safe |
 
 <details>
 <summary>📜 <b>Global History</b> (click to expand)</summary>
@@ -108,6 +108,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| PLK110_16.0.10.500(CN01)<br><details><summary>MD5</summary><code>2cbe1af4dece932fff62c81f5e6dbb68</code></details> | 0 | Major: 3, Minor: 0 | 2026-08-09 | ✅ Safe |
 | PLK110_16.0.9.400(CN01)<br><details><summary>MD5</summary><code>8fdbfd42136ac85e4a763129491a2b7f</code></details> | 0 | Major: 3, Minor: 0 | 2026-09-02 | ✅ Safe |
 | PLK110_16.0.8.302(CN01)<br><details><summary>MD5</summary><code>2d0b064afc1f4b6a14be08c145675f84</code></details> | 0 | Major: 3, Minor: 0 | 2026-07-03 | ✅ Safe |
 | PLK110_16.0.8.301(CN01)<br><details><summary>MD5</summary><code>65d2d81db01d26b927d6c85b0ea326f0</code></details> | 0 | Major: 3, Minor: 0 | 2026-06-23 | ✅ Safe |
@@ -537,7 +538,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 |:---|:---|:---|:---|:---|:---|:---|
 | Global | CPH2609 | CPH2609_16.0.5.1002(EX01)<br><details><summary>MD5</summary><code>b9c03939ee9dc63d0c8ca1306a11897d</code></details> | **0** | Major: 2, Minor: 0 | 2026-07-29 | ✅ Safe |
 | Europe | CPH2609 | CPH2609_16.0.5.1002(EX01)<br><details><summary>MD5</summary><code>07581354c672796a8b4bcdc1e6d18855</code></details> | **0** | Major: 2, Minor: 0 | 2026-09-09 | ✅ Safe |
-| India | CPH2585 | CPH2585_16.0.5.1002(EX01)<br><details><summary>MD5</summary><code>8b5e3bb7baea261107bce1f74df5651a</code></details> | **0** | Major: 2, Minor: 0 | 2026-09-09 | ✅ Safe |
+| India | CPH2585 | CPH2585_16.0.5.1301(EX01)<br><details><summary>MD5</summary><code>708b6d14f4bdbd695dac3300142fbf3a</code></details> | **0** | Major: 2, Minor: 0 | 2026-09-20 | ✅ Safe |
 
 <details>
 <summary>📜 <b>Global History</b> (click to expand)</summary>
@@ -568,6 +569,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| CPH2585_16.0.5.1002(EX01)<br><details><summary>MD5</summary><code>8b5e3bb7baea261107bce1f74df5651a</code></details> | 0 | Major: 2, Minor: 0 | 2026-09-09 | ✅ Safe |
 | CPH2585_16.0.5.1001(EX01)<br><details><summary>MD5</summary><code>2b599cf5d3fe8b2e3854da6aed5b6d15</code></details> | 0 | Major: 2, Minor: 0 | 2026-07-24 | ✅ Safe |
 | CPH2585_16.0.5.702(EX01)<br><details><summary>MD5</summary><code>bf4e0cccac0d0a2298689a1e5ce22dcf</code></details> | 0 | Major: 2, Minor: 0 | 2026-07-13 | ✅ Safe |
 | CPH2585_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>7fd4af4985f528027f5194c152243172</code></details> | 0 | Major: 2, Minor: 0 | 2026-05-12 | ✅ Safe |
@@ -1406,4 +1408,4 @@ Prefer a native mobile experience? We have an official Android app on F-Droid! C
 > **Important:** The bot **only** works within this group to prevent spam and ensure availability. DM checks are disabled.
 
 ---
-*Last updated: 2026-09-19 04:04 UTC*
+*Last updated: 2026-09-20 04:23 UTC*
