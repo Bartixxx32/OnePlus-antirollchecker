@@ -1,13 +1,23 @@
 {
   "history": [
     {
+      "version": "OPD2403_16.0.5.1301(EX01)",
+      "arb": 1,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-09-22",
+      "last_checked": "2026-09-22",
+      "status": "current",
+      "md5": "7a4fa50bc05cab42eb3a252a173fc263"
+    },
+    {
       "version": "OPD2403_16.0.5.1002(EX01)",
       "arb": 1,
       "major": 3,
       "minor": 0,
       "first_seen": "2026-07-25",
       "last_checked": "2026-09-09",
-      "status": "current",
+      "status": "archived",
       "md5": "e24794214f2487fd0b792ac5fae98825"
     },
     {
