@@ -1503,6 +1503,19 @@
     "expect_esim": true,
     "expect_barometer": false,
     "versions": {
+      "CPH2609_16.0.5.1301(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "minor": 0,
+        "md5": "c5b0894201de900fb8f72741a7c6ccd5",
+        "first_seen": "2026-09-22",
+        "last_checked": "2026-09-22",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "GLO"
+        ]
+      },
       "CPH2609_16.0.5.1002(EX01)": {
         "arb": 0,
         "major": 2,
@@ -1510,7 +1523,7 @@
         "md5": "b9c03939ee9dc63d0c8ca1306a11897d",
         "first_seen": "2026-07-29",
         "last_checked": "2026-07-29",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "GLO",
@@ -1989,6 +2002,19 @@
     "expect_esim": true,
     "expect_barometer": true,
     "versions": {
+      "CPH2649_16.0.10.600(EX01)": {
+        "arb": 1,
+        "major": 3,
+        "minor": 0,
+        "md5": "5e117f0e20529af43b280c82a6e88458",
+        "first_seen": "2026-09-22",
+        "last_checked": "2026-09-22",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "IN"
+        ]
+      },
       "CPH2649_16.0.10.501(EX01)": {
         "arb": 1,
         "major": 3,
@@ -1996,7 +2022,7 @@
         "md5": "32b8fa2cd3cc2d8e5ff1b7411211529a",
         "first_seen": "2026-08-18",
         "last_checked": "2026-08-24",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "IN"
@@ -4385,6 +4411,19 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "OPD2403_16.0.5.1301(EX01)": {
+        "arb": 1,
+        "major": 3,
+        "minor": 0,
+        "md5": "7a4fa50bc05cab42eb3a252a173fc263",
+        "first_seen": "2026-09-22",
+        "last_checked": "2026-09-22",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "IN"
+        ]
+      },
       "OPD2403_16.0.5.1002(EX01)": {
         "arb": 1,
         "major": 3,
@@ -4603,6 +4642,19 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "OPD2415_16.0.10.600(EX01)": {
+        "arb": 1,
+        "major": 3,
+        "minor": 0,
+        "md5": "c57b6e0e0476998f4f35775297c48bb4",
+        "first_seen": "2026-09-22",
+        "last_checked": "2026-09-22",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "IN"
+        ]
+      },
       "OPD2415_16.0.9.400(EX01)": {
         "arb": 1,
         "major": 3,
