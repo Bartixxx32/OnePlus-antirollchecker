@@ -45,7 +45,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
-| Global | CPH2747 | CPH2747_16.0.10.500(EX01)<br><details><summary>MD5</summary><code>01cbbeb18a0b9e22c6bda698ce2f080a</code></details> | **0** | Major: 3, Minor: 0 | 2026-08-22 | ✅ Safe |
+| Global | CPH2747 | CPH2747_16.0.10.601(EX01)<br><details><summary>MD5</summary><code>f18405ee46ef1867265e17928cc88c2d</code></details> | **0** | Major: 3, Minor: 0 | 2026-09-23 | ✅ Safe |
 | Europe | CPH2747 | CPH2747_16.0.10.500(EX01)<br><details><summary>MD5</summary><code>efe722a4f9b1b185ea4996aa32494704</code></details> | **0** | Major: 3, Minor: 0 | 2026-09-16 | ✅ Safe |
 | India | CPH2745 | CPH2745_16.0.10.601(EX01)<br><details><summary>MD5</summary><code>5114c2acf395b280c32265b95d8db95e</code></details> | **0** | Major: 3, Minor: 0 | 2026-09-20 | ✅ Safe |
 | China | PLK110 | PLK110_16.0.10.502(CN01)<br><details><summary>MD5</summary><code>b7bb3c38d5ab12ec276fcadff4e30222</code></details> | **0** | Major: 3, Minor: 0 | 2026-09-20 | ✅ Safe |
@@ -55,6 +55,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| CPH2747_16.0.10.500(EX01)<br><details><summary>MD5</summary><code>01cbbeb18a0b9e22c6bda698ce2f080a</code></details> | 0 | Major: 3, Minor: 0 | 2026-08-22 | ✅ Safe |
 | CPH2747_16.0.9.400(EX01)<br><details><summary>MD5</summary><code>ff32749b3f7c7ce37e277ea881d6ba2e</code></details> | 0 | Major: 3, Minor: 0 | 2026-07-28 | ✅ Safe |
 | CPH2747_16.0.8.300(EX01)<br><details><summary>MD5</summary><code>d296b389cccf2c3cde2d5394a73ff360</code></details> | 0 | Major: 3, Minor: 0 | 2026-07-16 | ✅ Safe |
 | CPH2747_16.0.7.201(EX01)<br><details><summary>MD5</summary><code>b0005a5d968deeb32e0f21adef9e239e</code></details> | 0 | Major: 3, Minor: 0 | 2026-06-15 | ✅ Safe |
@@ -304,7 +305,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 |:---|:---|:---|:---|:---|:---|:---|
 | Global | CPH2645 | CPH2645_16.0.10.500(EX01)<br><details><summary>MD5</summary><code>46514c530bfd2d7a3a860bff3b2a7a1d</code></details> | **1** | Major: 3, Minor: 0 | 2026-09-01 | ❌ Protected |
 | Europe | CPH2645 | CPH2645_16.0.10.500(EX01)<br><details><summary>MD5</summary><code>6712affef7e15d5a299f9495b705ebfc</code></details> | **1** | Major: 3, Minor: 0 | 2026-09-09 | ❌ Protected |
-| India | CPH2691 | CPH2691_16.0.10.500(EX01)<br><details><summary>MD5</summary><code>e57fceae0123251445a3faf745bab0cc</code></details> | **1** | Major: 3, Minor: 0 | 2026-09-09 | ❌ Protected |
+| India | CPH2691 | CPH2691_16.0.10.600(EX01)<br><details><summary>MD5</summary><code>28319e787c2f41eed002216bea3c3ef1</code></details> | **1** | Major: 3, Minor: 0 | 2026-09-23 | ❌ Protected |
 
 <details>
 <summary>📜 <b>Global History</b> (click to expand)</summary>
@@ -345,6 +346,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| CPH2691_16.0.10.500(EX01)<br><details><summary>MD5</summary><code>e57fceae0123251445a3faf745bab0cc</code></details> | 1 | Major: 3, Minor: 0 | 2026-09-09 | ❌ Protected |
 | CPH2691_16.0.9.402(EX01)<br><details><summary>MD5</summary><code>8448ee0eb089a9a61c94391f021a1c3e</code></details> | 1 | Major: 3, Minor: 0 | 2026-08-24 | ❌ Protected |
 | CPH2691_16.0.8.300(EX01)<br><details><summary>MD5</summary><code>ad9e5852ee0216bd2670bfaf6c86c2dc</code></details> | 1 | Major: 3, Minor: 0 | 2026-07-16 | ❌ Protected |
 | CPH2691_16.0.7.200(EX01)<br><details><summary>MD5</summary><code>2b16072f901557b5b6261f5a40288017</code></details> | 1 | Major: 3, Minor: 0 | 2026-06-17 | ❌ Protected |
@@ -1416,4 +1418,4 @@ Prefer a native mobile experience? We have an official Android app on F-Droid! C
 > **Important:** The bot **only** works within this group to prevent spam and ensure availability. DM checks are disabled.
 
 ---
-*Last updated: 2026-09-23 04:14 UTC*
+*Last updated: 2026-09-23 16:59 UTC*
