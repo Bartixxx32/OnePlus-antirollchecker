@@ -5846,6 +5846,19 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "PLK110_17.0.0.102(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": "56745dd76b1f4872583cf224d2e9d2f6",
+        "first_seen": "2026-09-28",
+        "last_checked": "2026-09-28",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "CN"
+        ]
+      },
       "PLK110_16.0.10.502(CN01)": {
         "arb": 0,
         "major": 3,
@@ -5853,7 +5866,7 @@
         "md5": "b7bb3c38d5ab12ec276fcadff4e30222",
         "first_seen": "2026-09-20",
         "last_checked": "2026-09-20",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "CN"
