@@ -48,7 +48,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | Global | CPH2747 | CPH2747_16.0.10.601(EX01)<br><details><summary>MD5</summary><code>f18405ee46ef1867265e17928cc88c2d</code></details> | **0** | Major: 3, Minor: 0 | 2026-09-23 | ✅ Safe |
 | Europe | CPH2747 | CPH2747_16.0.10.601(EX01)<br><details><summary>MD5</summary><code>0bbca58fb5e96afba8afcedf7dc8e771</code></details> | **0** | Major: 3, Minor: 0 | 2026-09-25 | ✅ Safe |
 | India | CPH2745 | CPH2745_16.0.10.601(EX01)<br><details><summary>MD5</summary><code>5114c2acf395b280c32265b95d8db95e</code></details> | **0** | Major: 3, Minor: 0 | 2026-09-20 | ✅ Safe |
-| China | PLK110 | PLK110_16.0.10.502(CN01)<br><details><summary>MD5</summary><code>b7bb3c38d5ab12ec276fcadff4e30222</code></details> | **0** | Major: 3, Minor: 0 | 2026-09-20 | ✅ Safe |
+| China | PLK110 | PLK110_17.0.0.102(CN01)<br><details><summary>MD5</summary><code>56745dd76b1f4872583cf224d2e9d2f6</code></details> | **0** | Major: 3, Minor: 0 | 2026-09-28 | ✅ Safe |
 
 <details>
 <summary>📜 <b>Global History</b> (click to expand)</summary>
@@ -111,6 +111,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| PLK110_16.0.10.502(CN01)<br><details><summary>MD5</summary><code>b7bb3c38d5ab12ec276fcadff4e30222</code></details> | 0 | Major: 3, Minor: 0 | 2026-09-20 | ✅ Safe |
 | PLK110_16.0.10.500(CN01)<br><details><summary>MD5</summary><code>2cbe1af4dece932fff62c81f5e6dbb68</code></details> | 0 | Major: 3, Minor: 0 | 2026-08-09 | ✅ Safe |
 | PLK110_16.0.9.400(CN01)<br><details><summary>MD5</summary><code>8fdbfd42136ac85e4a763129491a2b7f</code></details> | 0 | Major: 3, Minor: 0 | 2026-09-02 | ✅ Safe |
 | PLK110_16.0.8.302(CN01)<br><details><summary>MD5</summary><code>2d0b064afc1f4b6a14be08c145675f84</code></details> | 0 | Major: 3, Minor: 0 | 2026-07-03 | ✅ Safe |
@@ -1424,4 +1425,4 @@ Prefer a native mobile experience? We have an official Android app on F-Droid! C
 > **Important:** The bot **only** works within this group to prevent spam and ensure availability. DM checks are disabled.
 
 ---
-*Last updated: 2026-09-28 04:46 UTC*
+*Last updated: 2026-09-28 11:10 UTC*
