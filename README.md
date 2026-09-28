@@ -192,13 +192,14 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
-| China | PLZ110 | PLZ110_16.0.10.500(CN01)<br><details><summary>MD5</summary><code>c613b61ceaf628f331eefc5856f3d88f</code></details> | **0** | Major: 3, Minor: 0 | 2026-08-08 | ✅ Safe |
+| China | PLZ110 | PLZ110_17.0.0.106(CN01)<br><details><summary>MD5</summary><code>ae75a29627fa341be311e9cdb6603ba1</code></details> | **0** | Major: 3, Minor: 0 | 2026-09-28 | ✅ Safe |
 
 <details>
 <summary>📜 <b>China History</b> (click to expand)</summary>
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| PLZ110_16.0.10.500(CN01)<br><details><summary>MD5</summary><code>c613b61ceaf628f331eefc5856f3d88f</code></details> | 0 | Major: 3, Minor: 0 | 2026-08-08 | ✅ Safe |
 | PLZ110_16.0.9.400(CN01)<br><details><summary>MD5</summary><code>b5b3730e9d5f92f6ba4ef5a6685ce384</code></details> | 0 | Major: 3, Minor: 0 | 2026-07-28 | ✅ Safe |
 | PLZ110_16.0.8.300(CN01)<br><details><summary>MD5</summary><code>cb6375da24d98d90048a13f9d6a67d5f</code></details> | 0 | Major: 3, Minor: 0 | 2026-07-02 | ✅ Safe |
 | PLZ110_16.0.7.201(CN01)<br><details><summary>MD5</summary><code>55f12e234207b43bcfcd81ae36828d6c</code></details> | 0 | Major: 3, Minor: 0 | 2026-06-03 | ✅ Safe |
@@ -1423,4 +1424,4 @@ Prefer a native mobile experience? We have an official Android app on F-Droid! C
 > **Important:** The bot **only** works within this group to prevent spam and ensure availability. DM checks are disabled.
 
 ---
-*Last updated: 2026-09-27 04:44 UTC*
+*Last updated: 2026-09-28 04:46 UTC*
