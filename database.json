@@ -1507,14 +1507,19 @@
         "arb": 0,
         "major": 2,
         "minor": 0,
-        "md5": "c5b0894201de900fb8f72741a7c6ccd5",
-        "first_seen": "2026-09-22",
-        "last_checked": "2026-09-22",
+        "md5": "dca33e27ebb50bc2a6f57e1b80196e59",
+        "first_seen": "2026-09-29",
+        "last_checked": "2026-09-29",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
+          "EU",
           "GLO"
-        ]
+        ],
+        "md5_by_region": {
+          "EU": "dca33e27ebb50bc2a6f57e1b80196e59",
+          "GLO": "c5b0894201de900fb8f72741a7c6ccd5"
+        }
       },
       "CPH2609_16.0.5.1002(EX01)": {
         "arb": 0,
@@ -1523,7 +1528,7 @@
         "md5": "07581354c672796a8b4bcdc1e6d18855",
         "first_seen": "2026-07-30",
         "last_checked": "2026-09-09",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "EU",
