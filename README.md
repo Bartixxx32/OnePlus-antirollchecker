@@ -1307,13 +1307,14 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
-| China | OPD2413 | OPD2413_16.0.9.400(CN01)<br><details><summary>MD5</summary><code>c7d36364f94daa509c19f71b1e100982</code></details> | **1** | Major: 3, Minor: 0 | 2026-07-28 | ❌ Protected |
+| China | OPD2413 | OPD2413_16.0.10.600(CN01)<br><details><summary>MD5</summary><code>aef84a65577444a3a7d2bbae6c068b3a</code></details> | **1** | Major: 3, Minor: 0 | 2026-09-30 | ❌ Protected |
 
 <details>
 <summary>📜 <b>China History</b> (click to expand)</summary>
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| OPD2413_16.0.9.400(CN01)<br><details><summary>MD5</summary><code>c7d36364f94daa509c19f71b1e100982</code></details> | 1 | Major: 3, Minor: 0 | 2026-07-28 | ❌ Protected |
 | OPD2413_16.0.8.300(CN01)<br><details><summary>MD5</summary><code>2681c6c59925c4cf41efeb658f765afe</code></details> | 1 | Major: 3, Minor: 0 | 2026-07-14 | ❌ Protected |
 | OPD2413_16.0.7.200(CN01)<br><details><summary>MD5</summary><code>f6a77eeb8ff0270c4f557d84999d4891</code></details> | 1 | Major: 3, Minor: 0 | 2026-06-15 | ❌ Protected |
 | OPD2413_16.0.3.501(CN01)<br><details><summary>MD5</summary><code>7af2eda10018ec1b4c0d66b1df258e55</code></details> | 0 | Major: 3, Minor: 0 | 2026-05-22 | ✅ Safe |
@@ -1426,4 +1427,4 @@ Prefer a native mobile experience? We have an official Android app on F-Droid! C
 > **Important:** The bot **only** works within this group to prevent spam and ensure availability. DM checks are disabled.
 
 ---
-*Last updated: 2026-09-29 05:13 UTC*
+*Last updated: 2026-09-30 05:01 UTC*

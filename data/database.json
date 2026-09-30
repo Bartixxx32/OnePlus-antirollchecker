@@ -4591,6 +4591,19 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "OPD2413_16.0.10.600(CN01)": {
+        "arb": 1,
+        "major": 3,
+        "minor": 0,
+        "md5": "aef84a65577444a3a7d2bbae6c068b3a",
+        "first_seen": "2026-09-30",
+        "last_checked": "2026-09-30",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "CN"
+        ]
+      },
       "OPD2413_16.0.9.400(CN01)": {
         "arb": 1,
         "major": 3,
@@ -4598,7 +4611,7 @@
         "md5": "c7d36364f94daa509c19f71b1e100982",
         "first_seen": "2026-07-14",
         "last_checked": "2026-07-28",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "CN"
