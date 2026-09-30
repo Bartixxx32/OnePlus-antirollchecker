@@ -13,6 +13,8 @@ def generate_matrix():
     EXCLUDE = [
         ("Find X8 Pro", "IN"), ("Find X8 Pro", "EU"), ("Find X8 Pro", "CN"),
         ("Find X8", "CN"), ("Find X8", "IN"),
+        ("Find X8 Ultra", "CN"),
+        ("Find N5", "CN"),
         ("Find N3", "IN"), # Fails in check-variant
         ("9R", "IN"),
         ("10R", "IN"),
