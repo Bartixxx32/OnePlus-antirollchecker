@@ -1,13 +1,23 @@
 {
   "history": [
     {
+      "version": "LE2121_13.1.0.593(EX01)",
+      "arb": 0,
+      "major": 0,
+      "minor": 120,
+      "first_seen": "2026-09-30",
+      "last_checked": "2026-09-30",
+      "status": "current",
+      "md5": "d7cc6666973abb056d5f9937f026bd3c"
+    },
+    {
       "version": "LE2121_14.0.0.1902(EX01)",
       "arb": 0,
       "major": 0,
       "minor": 120,
       "first_seen": "2026-02-04",
       "last_checked": "2026-09-09",
-      "status": "current",
+      "status": "archived",
       "md5": "5353f56dfa6db49482d1801ede7b4ca0"
     }
   ],
