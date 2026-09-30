@@ -28,9 +28,8 @@ jobs:
         run: |
           KEEP=${{ github.event.inputs.keep || 10 }}
           
-          WORKFLOWS=$(gh workflow list --json name --jq '.[].name')
-          
-          for wf in $WORKFLOWS; do
+          gh workflow list --json name --jq '.[].name' | while IFS= read -r wf; do
+            [ -z "$wf" ] && continue
             echo ">>> Processing workflow: $wf"
             
             # Get list of run IDs to delete (keeping only the most recent $KEEP)
