@@ -73,7 +73,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
-| CPH2747_16.0.10.500(EX01)<br><details><summary>MD5</summary><code>efe722a4f9b1b185ea4996aa32494704</code></details> | 0 | Major: 3, Minor: 0 | 2026-09-16 | ✅ Safe |
+| CPH2747_16.0.10.500(EX01)<br><details><summary>MD5</summary><code>efe722a4f9b1b185ea4996aa32494704</code></details> | 0 | Major: 3, Minor: 0 | 2026-10-08 | ✅ Safe |
 | CPH2747_16.0.9.400(EX01)<br><details><summary>MD5</summary><code>2b88ed55f20d84630ab8abd852e2a801</code></details> | 0 | Major: 3, Minor: 0 | 2026-08-23 | ✅ Safe |
 | CPH2747_16.0.8.300(EX01)<br><details><summary>MD5</summary><code>a868c92180f0ca8cb2aa855d97c937df</code></details> | 0 | Major: 3, Minor: 0 | 2026-07-20 | ✅ Safe |
 | CPH2747_16.0.7.201(EX01)<br><details><summary>MD5</summary><code>fc7c76ca2428f20a7601492ae1f08258</code></details> | 0 | Major: 3, Minor: 0 | 2026-06-15 | ✅ Safe |
@@ -1002,7 +1002,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
-| CPH2709_16.0.5.1002(EX01)<br><details><summary>MD5</summary><code>1197aaa3eaf341c7fcae6b251346d315</code></details> | 0 | Major: 3, Minor: 0 | 2026-09-16 | ✅ Safe |
+| CPH2709_16.0.5.1002(EX01)<br><details><summary>MD5</summary><code>1197aaa3eaf341c7fcae6b251346d315</code></details> | 0 | Major: 3, Minor: 0 | 2026-10-08 | ✅ Safe |
 | CPH2709_16.0.5.710(EX01)<br><details><summary>MD5</summary><code>fe7c98015d682710d8934ebadd6f8a50</code></details> | 0 | Major: 3, Minor: 0 | 2026-06-10 | ✅ Safe |
 | CPH2709_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>d462744e077d08fab080ee7c54bbe2da</code></details> | 0 | Major: 3, Minor: 0 | 2026-04-20 | ✅ Safe |
 | CPH2709_16.0.2.400(EX01)<br><details><summary>MD5</summary><code>7988a8ec49273c093ed02b906deb20a1</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-28 | ✅ Safe |
@@ -1055,7 +1055,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
 | CPH2663_16.0.5.1001(EX01)<br><details><summary>MD5</summary><code>4f65299c05bcf4e9c1201d85877db742</code></details> | 0 | Major: 3, Minor: 0 | 2026-09-09 | ✅ Safe |
-| CPH2663_16.0.5.702(EX01)<br><details><summary>MD5</summary><code>16accee17408f6ce7989bba97b0f5c27</code></details> | 0 | Major: 3, Minor: 0 | 2026-09-16 | ✅ Safe |
+| CPH2663_16.0.5.702(EX01)<br><details><summary>MD5</summary><code>16accee17408f6ce7989bba97b0f5c27</code></details> | 0 | Major: 3, Minor: 0 | 2026-10-08 | ✅ Safe |
 | CPH2663_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>75cb2c75c9f1c1c2c34515a6462b871a</code></details> | 0 | Major: 3, Minor: 0 | 2026-05-19 | ✅ Safe |
 | CPH2663_16.0.2.401(EX01)<br><details><summary>MD5</summary><code>0fabc357b219c3f26b48c8a688f5f2eb</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-27 | ✅ Safe |
 | CPH2663_16.0.1.301(EX01)<br><details><summary>MD5</summary><code>57c99d530f04ff66f78acbfce67fb509</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-18 | ✅ Safe |
@@ -1175,7 +1175,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 |:---|:---|:---|:---|:---|:---|:---|
 | Global | CPH2465 | CPH2465_15.0.0.1910(EX01)<br><details><summary>MD5</summary><code>e6136575ac91e1bdc8ce39a7600b0ff7</code></details> | **?** | Major: 0, Minor: 120 | 2026-09-01 | ⚠️ Undetectable ARB |
 | Europe | CPH2465EEA | CPH2465_15.0.0.1910(EX01)<br><details><summary>MD5</summary><code>dcdc65b911742bd3bf5bf07e614bcd72</code></details> | **?** | Major: 0, Minor: 120 | 2026-09-09 | ⚠️ Undetectable ARB |
-| India | CPH2467 | CPH2467_14.0.0.201(EX01)<br><details><summary>MD5</summary><code>1f2420ba594f9354c87339d8497a9807</code></details> | **0** | Major: 0, Minor: 120 | 2026-09-16 | ✅ Safe |
+| India | CPH2467 | CPH2467_15.0.0.2000(EX01)<br><details><summary>MD5</summary><code>51a6e665d1533fffc8c28e551fb8191d</code></details> | **?** | Major: 0, Minor: 120 | 2026-10-08 | ⚠️ Undetectable ARB |
 
 <details>
 <summary>📜 <b>Global History</b> (click to expand)</summary>
@@ -1209,6 +1209,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | CPH2467_15.0.0.1810(EX01)<br><details><summary>MD5</summary><code>e7c3ef3766eb129e5735e49124051886</code></details> | ? | Major: 0, Minor: 120 | 2026-07-28 | ⚠️ Undetectable ARB |
 | CPH2467_15.0.0.1800(EX01)<br><details><summary>MD5</summary><code>8726ea7cfe6acb09a6c31ac8a0e82679</code></details> | ? | Major: 0, Minor: 120 | 2026-05-19 | ⚠️ Undetectable ARB |
 | CPH2467_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>479a7a4ead369db901314969f4728b37</code></details> | ? | Major: 0, Minor: 120 | 2026-03-20 | ⚠️ Undetectable ARB |
+| CPH2467_14.0.0.201(EX01)<br><details><summary>MD5</summary><code>1f2420ba594f9354c87339d8497a9807</code></details> | 0 | Major: 0, Minor: 120 | 2026-09-16 | ✅ Safe |
 
 </details>
 
@@ -1238,7 +1239,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
-| CPH2409_14.0.0.2900(EX01)<br><details><summary>MD5</summary><code>5724c78163af42d048b1c4f28c4f34cd</code></details> | ? | Major: 0, Minor: 120 | 2026-09-09 | ⚠️ Undetectable ARB |
+| CPH2409_14.0.0.2900(EX01)<br><details><summary>MD5</summary><code>5724c78163af42d048b1c4f28c4f34cd</code></details> | ? | Major: 0, Minor: 120 | 2026-10-08 | ⚠️ Undetectable ARB |
 | CPH2409_14.0.0.2700(EX01)<br><details><summary>MD5</summary><code>4b628f389081f069651aaf8663ce1355</code></details> | 0 | Major: 0, Minor: 120 | 2026-05-26 | ✅ Safe |
 
 </details>
@@ -2121,4 +2122,4 @@ Prefer a native mobile experience? We have an official Android app on F-Droid! C
 > **Important:** The bot **only** works within this group to prevent spam and ensure availability. DM checks are disabled.
 
 ---
-*Last updated: 2026-10-07 05:21 UTC*
+*Last updated: 2026-10-08 05:31 UTC*
