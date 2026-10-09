@@ -3260,6 +3260,24 @@
     "expect_esim": true,
     "expect_barometer": false,
     "versions": {
+      "CPH2645_16.0.10.600(EX01)": {
+        "arb": 1,
+        "major": 3,
+        "minor": 0,
+        "md5": "4798301016a2e1bc344cda05afdfcedb",
+        "first_seen": "2026-10-09",
+        "last_checked": "2026-10-09",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "GLO",
+          "EU"
+        ],
+        "md5_by_region": {
+          "GLO": "4798301016a2e1bc344cda05afdfcedb",
+          "EU": "e14b0041b27009b22d236384ef0ddd81"
+        }
+      },
       "CPH2645_16.0.10.500(EX01)": {
         "arb": 1,
         "major": 3,
@@ -3267,7 +3285,7 @@
         "md5": "46514c530bfd2d7a3a860bff3b2a7a1d",
         "first_seen": "2026-09-01",
         "last_checked": "2026-09-01",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "GLO",
@@ -3625,6 +3643,19 @@
     "expect_esim": true,
     "expect_barometer": true,
     "versions": {
+      "CPH2653_16.0.10.600(EX01)": {
+        "arb": 1,
+        "major": 3,
+        "minor": 0,
+        "md5": "d1ad561d34a539c2c5bf3005bc2bc0ef",
+        "first_seen": "2026-10-09",
+        "last_checked": "2026-10-09",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "GLO"
+        ]
+      },
       "CPH2653_16.0.10.501(EX01)": {
         "arb": 1,
         "major": 3,
@@ -3632,7 +3663,7 @@
         "md5": "3531ddd50c5b229d68a690de1e0a4103",
         "first_seen": "2026-08-21",
         "last_checked": "2026-08-21",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "GLO",
@@ -5384,6 +5415,24 @@
     "expect_esim": true,
     "expect_barometer": false,
     "versions": {
+      "CPH2769_16.0.10.600(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": "cada613891a83ed763b2ab6c873446b0",
+        "first_seen": "2026-10-09",
+        "last_checked": "2026-10-09",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "GLO",
+          "EU"
+        ],
+        "md5_by_region": {
+          "GLO": "cada613891a83ed763b2ab6c873446b0",
+          "EU": "4a2db16fc788b2a287e2fe069af46c53"
+        }
+      },
       "CPH2769_16.0.10.500(EX01)": {
         "arb": 0,
         "major": 3,
@@ -5391,7 +5440,7 @@
         "md5": "f9deca6bd51f457149cac92816cc5cea",
         "first_seen": "2026-08-27",
         "last_checked": "2026-08-27",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "GLO",
@@ -8106,6 +8155,19 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "PLK110_17.0.0.105(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": "23541cc2dacaa0af4020c8aff60b3d96",
+        "first_seen": "2026-10-09",
+        "last_checked": "2026-10-09",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "CN"
+        ]
+      },
       "PLK110_17.0.0.102(CN01)": {
         "arb": 0,
         "major": 3,
@@ -8113,7 +8175,7 @@
         "md5": "56745dd76b1f4872583cf224d2e9d2f6",
         "first_seen": "2026-09-28",
         "last_checked": "2026-09-28",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "CN"
@@ -8663,6 +8725,19 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "PLZ110_17.0.0.107(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": "4d6df6f2b832e42e3e0e116dd8e58609",
+        "first_seen": "2026-10-09",
+        "last_checked": "2026-10-09",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "CN"
+        ]
+      },
       "PLZ110_17.0.0.106(CN01)": {
         "arb": 0,
         "major": 3,
@@ -8670,7 +8745,7 @@
         "md5": "ae75a29627fa341be311e9cdb6603ba1",
         "first_seen": "2026-09-28",
         "last_checked": "2026-09-28",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "CN"
