@@ -1300,6 +1300,7 @@
         "regions": [
           "SG",
           "TW",
+          "OCA",
           "TH",
           "VN",
           "ID",
@@ -1308,6 +1309,7 @@
         "md5_by_region": {
           "SG": "05d72640f2f168b15eadf3db868c4386",
           "TW": "08cc253f73edcbef57f921eb3a6df02a",
+          "OCA": "411796f003e891558ef27887d11c847a",
           "TH": "53f1723df2fb0fc0806fe860d4df9713",
           "VN": "7c6c4b1ef76b0d84a3682e4f38018b0e",
           "ID": "27236769e06df5c2c09d6b2953177b0e",
@@ -3068,6 +3070,19 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "CPH2613_16.0.5.1301(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "minor": 0,
+        "md5": "d0102208bfb0f4ee79a1f9d82345f76d",
+        "first_seen": "2026-10-10",
+        "last_checked": "2026-10-10",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "IN"
+        ]
+      },
       "CPH2613_16.0.5.1201(EX01)": {
         "arb": 0,
         "major": 2,
@@ -3075,7 +3090,7 @@
         "md5": "fd7a535f1ebda437cdd48fee31d3ce82",
         "first_seen": "2026-09-09",
         "last_checked": "2026-09-09",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "IN"
