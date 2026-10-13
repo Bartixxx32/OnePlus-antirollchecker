@@ -3668,8 +3668,13 @@
         "status": "current",
         "is_hardcoded": false,
         "regions": [
-          "GLO"
-        ]
+          "GLO",
+          "EU"
+        ],
+        "md5_by_region": {
+          "GLO": "d1ad561d34a539c2c5bf3005bc2bc0ef",
+          "EU": "d163fc51f9629c2f2ba6b6cc557a1f95"
+        }
       },
       "CPH2653_16.0.10.501(EX01)": {
         "arb": 1,
