@@ -1,13 +1,23 @@
 {
   "history": [
     {
+      "version": "PLR110_17.0.0.101(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-10-15",
+      "last_checked": "2026-10-15",
+      "status": "current",
+      "md5": "a076e2d13d4c61d4390b802264b68b66"
+    },
+    {
       "version": "PLR110_16.0.10.500(CN01)",
       "arb": 0,
       "major": 3,
       "minor": 0,
       "first_seen": "2026-08-19",
       "last_checked": "2026-08-19",
-      "status": "current",
+      "status": "archived",
       "md5": "2ce9f884cfc5cc27611d4d59f168b887"
     },
     {
