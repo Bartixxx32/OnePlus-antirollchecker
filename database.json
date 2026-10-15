@@ -4763,6 +4763,19 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "CPH2723_16.0.10.600(EX01)": {
+        "arb": 1,
+        "major": 3,
+        "minor": 0,
+        "md5": "fdd584b08957faea1e352005fc2459a3",
+        "first_seen": "2026-10-15",
+        "last_checked": "2026-10-15",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "IN"
+        ]
+      },
       "CPH2723_16.0.10.500(EX01)": {
         "arb": 1,
         "major": 3,
@@ -4770,7 +4783,7 @@
         "md5": "ebcccb0ea41bfe82c70b31f61342cc04",
         "first_seen": "2026-08-20",
         "last_checked": "2026-09-12",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "IN"
@@ -8417,6 +8430,19 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "PLQ110_17.0.0.104(CN01)": {
+        "arb": 1,
+        "major": 3,
+        "minor": 0,
+        "md5": "529b2115db3b3dc306769314bf2a3115",
+        "first_seen": "2026-10-15",
+        "last_checked": "2026-10-15",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "CN"
+        ]
+      },
       "PLQ110_16.0.10.500(CN01)": {
         "arb": 1,
         "major": 3,
@@ -8424,7 +8450,7 @@
         "md5": "426959f59655e11efc126bc788a9a77f",
         "first_seen": "2026-08-20",
         "last_checked": "2026-08-20",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "CN"
@@ -8607,6 +8633,19 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "PLR110_17.0.0.101(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": "a076e2d13d4c61d4390b802264b68b66",
+        "first_seen": "2026-10-15",
+        "last_checked": "2026-10-15",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "CN"
+        ]
+      },
       "PLR110_16.0.10.500(CN01)": {
         "arb": 0,
         "major": 3,
@@ -8614,7 +8653,7 @@
         "md5": "2ce9f884cfc5cc27611d4d59f168b887",
         "first_seen": "2026-08-19",
         "last_checked": "2026-08-19",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "CN"
