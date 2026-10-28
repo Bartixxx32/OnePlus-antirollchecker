@@ -4284,6 +4284,19 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "CPH2671_17.0.0.100(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": "486f471d5064d2915f1fc9c74892d802",
+        "first_seen": "2026-10-28",
+        "last_checked": "2026-10-28",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "ID"
+        ]
+      },
       "CPH2671_16.0.10.600(EX01)": {
         "arb": 0,
         "major": 3,
@@ -7495,6 +7508,19 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "PJE110_16.0.5.1301(CN01)": {
+        "arb": 0,
+        "major": 2,
+        "minor": 0,
+        "md5": "e24f761bbadffeab86ecf56ce42b1434",
+        "first_seen": "2026-10-28",
+        "last_checked": "2026-10-28",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "CN"
+        ]
+      },
       "PJE110_16.0.5.1002(CN01)": {
         "arb": 0,
         "major": 2,
@@ -7502,7 +7528,7 @@
         "md5": "fd1b0301a17e416e4eab063ec082ac68",
         "first_seen": "2026-07-24",
         "last_checked": "2026-07-31",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "CN"
@@ -8107,6 +8133,19 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "PKR110_17.0.0.100(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": "c999b6ff1e026f63fe22d5333bdd3ba0",
+        "first_seen": "2026-10-28",
+        "last_checked": "2026-10-28",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "CN"
+        ]
+      },
       "PKR110_16.0.10.500(CN01)": {
         "arb": 0,
         "major": 3,
@@ -8114,7 +8153,7 @@
         "md5": "f08ebc8857b31c98d9565c3542c82b3f",
         "first_seen": "2026-08-22",
         "last_checked": "2026-08-22",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "CN"
