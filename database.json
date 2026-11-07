@@ -9365,8 +9365,8 @@
     "expect_barometer": false,
     "versions": {
       "PYB110_17.0.1.201(CN01)": {
-        "arb": 3,
-        "major": 37,
+        "arb": 0,
+        "major": 4,
         "minor": 0,
         "md5": "6aaf2ba845841892d2e447171630918b",
         "first_seen": "2026-11-07",
