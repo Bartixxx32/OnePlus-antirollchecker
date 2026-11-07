@@ -1,0 +1,18 @@
+{
+  "history": [
+    {
+      "version": "PYB110_17.0.1.201(CN01)",
+      "arb": 3,
+      "major": 37,
+      "minor": 0,
+      "first_seen": "2026-11-07",
+      "last_checked": "2026-11-07",
+      "status": "current",
+      "md5": "6aaf2ba845841892d2e447171630918b"
+    }
+  ],
+  "device": "OnePlus 16",
+  "device_id": "16",
+  "region": "CN",
+  "model": "PYB110"
+}
