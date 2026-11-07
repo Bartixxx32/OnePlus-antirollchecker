@@ -239,7 +239,7 @@ jobs:
         if: steps.cache-arb.outputs.cache-hit != 'true' && hashFiles('skip_check.txt') == ''
         run: |
           echo "Checking ARB on xbl_config.img..."
-          ARB_OUTPUT=$(tools/arbextract firmware_data/xbl_config.img)
+          ARB_OUTPUT=$(python3 arb_parser.py firmware_data/xbl_config.img)
           echo "$ARB_OUTPUT"
 
           ARB_INDEX=$(echo "$ARB_OUTPUT" | grep "ARB (Anti-Rollback)" | awk -F':' '{print $2}' | tr -d ' ')
@@ -317,8 +317,8 @@ jobs:
         run: |
           echo "Cache hit! Extracting ARB from cached xbl_config.img..."
           
-          # Run arbextract and capture output
-          ARB_OUTPUT=$(tools/arbextract firmware_data/xbl_config.img)
+          # Run local ARB parser and capture output
+          ARB_OUTPUT=$(python3 arb_parser.py firmware_data/xbl_config.img)
           echo "$ARB_OUTPUT"
           
           # Parse the output and create JSON

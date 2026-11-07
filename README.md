@@ -45,7 +45,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
-| China | PYB110 | PYB110_17.0.1.201(CN01)<br><details><summary>MD5</summary><code>6aaf2ba845841892d2e447171630918b</code></details> | **3** | Major: 37, Minor: 0 | 2026-11-07 | ❌ Protected |
+| China | PYB110 | PYB110_17.0.1.201(CN01)<br><details><summary>MD5</summary><code>6aaf2ba845841892d2e447171630918b</code></details> | **0** | Major: 4, Minor: 0 | 2026-11-07 | ✅ Safe |
 
 ---
 
@@ -1685,8 +1685,8 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | Asia Pacific | CPH2525 | CPH2525_15.0.0.1910(EX01)<br><details><summary>MD5</summary><code>c113501f1bbd9ad9e8099728aab000c0</code></details> | **0** | Major: 0, Minor: 120 | 2026-09-30 | ✅ Safe |
 | Oceania | CPH2525OCA | CPH2525_15.0.0.1910(EX01)<br><details><summary>MD5</summary><code>6032a687aed2e8eda721bb58f13ac626</code></details> | **0** | Major: 0, Minor: 120 | 2026-09-30 | ✅ Safe |
 | Saudi Arabia | CPH2525SA | CPH2525_15.0.0.1910(EX01)<br><details><summary>MD5</summary><code>ebac589ae3ea435b59eaf336293bc633</code></details> | **0** | Major: 0, Minor: 120 | 2026-09-30 | ✅ Safe |
-| India | CPH2525IN | CPH2525_13.1.1.147(EX01)<br><details><summary>MD5</summary><code>abb2a1ef3450621de3073f48d5215b19</code></details> | **0** | Major: 0, Minor: 120 | 2026-09-30 | ✅ Safe |
 | Middle East | CPH2525MEA | CPH2525_15.0.0.1910(EX01)<br><details><summary>MD5</summary><code>71c1c22334536ad3e63d20d7ffece5a8</code></details> | **0** | Major: 0, Minor: 120 | 2026-09-30 | ✅ Safe |
+| India | CPH2525IN | CPH2525_13.1.1.147(EX01)<br><details><summary>MD5</summary><code>abb2a1ef3450621de3073f48d5215b19</code></details> | **0** | Major: 0, Minor: 120 | 2026-09-30 | ✅ Safe |
 | Philippines | CPH2525PH | CPH2525_15.0.0.1910(EX01)<br><details><summary>MD5</summary><code>48649307f9012448b291dd003ed2b0b2</code></details> | **0** | Major: 0, Minor: 120 | 2026-09-30 | ✅ Safe |
 
 <details>
@@ -2184,4 +2184,4 @@ Prefer a native mobile experience? We have an official Android app on F-Droid! C
 > **Important:** The bot **only** works within this group to prevent spam and ensure availability. DM checks are disabled.
 
 ---
-*Last updated: 2026-11-07 22:04 UTC*
+*Last updated: 2026-11-07 22:16 UTC*

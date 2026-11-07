@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
 Analyze firmware zip to extract ARB index.
-Wraps payload-dumper-go and arbextract usage.
+Wraps payload-dumper-go/otaripper extraction and parses xbl_config with the
+local arb_parser (arbextract is kept only as a fallback).
 """
 
 import shlex
@@ -12,6 +13,8 @@ import subprocess
 import logging
 import hashlib
 from pathlib import Path
+
+from arb_parser import parse_xbl_config_file
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
@@ -226,30 +229,51 @@ def analyze_firmware(zip_path, tools_dir, output_dir, final_dir=None):
                 logger.error(f"Unsupported file format: {suffix}")
                 return None
     
-    # 3. Run arbextract on the FINAL file
-    cmd_arb = [str(arbextract), str(final_img)]
-    output = run_command(cmd_arb)
-    if not output:
-        return None
-        
-    # 4. Parse Output
-    # Expected output format from arbextract:
-    # ARB (Anti-Rollback): 1
-    # Major Version: 3
-    # Minor Version: 0
-    
-    result = {}
-    for line in output.splitlines():
-        if "ARB (Anti-Rollback)" in line:
-            result['arb_index'] = line.split(':')[-1].strip()
-        elif "Major Version" in line:
-            result['major'] = line.split(':')[-1].strip()
-        elif "Minor Version" in line:
-            result['minor'] = line.split(':')[-1].strip()
-            
-    if 'arb_index' not in result:
-        logger.error("Could not parse ARB index from arbextract output")
-        return None
+    # 3. Parse ARB metadata.  Prefer the in-repo parser, which understands
+    # both the legacy hash-table layout and the newer v8 layout (OnePlus 16)
+    # where arbextract 1.0 reads the OEM record 16 bytes too early.
+    parsed = None
+    try:
+        parsed = parse_xbl_config_file(final_img)
+        if parsed:
+            logger.info(
+                "Parsed locally: arb=%s major=%s minor=%s",
+                parsed["arb"], parsed["major"], parsed["minor"],
+            )
+    except Exception as e:
+        logger.warning(f"Local ARB parser failed: {e}")
+
+    if parsed:
+        result = {
+            'arb_index': str(parsed['arb']),
+            'major': str(parsed['major']),
+            'minor': str(parsed['minor']),
+        }
+    else:
+        logger.warning("Falling back to arbextract...")
+        cmd_arb = [str(arbextract), str(final_img)]
+        output = run_command(cmd_arb)
+        if not output:
+            return None
+
+        # 4. Parse Output
+        # Expected output format from arbextract:
+        # ARB (Anti-Rollback): 1
+        # Major Version: 3
+        # Minor Version: 0
+
+        result = {}
+        for line in output.splitlines():
+            if "ARB (Anti-Rollback)" in line:
+                result['arb_index'] = line.split(':')[-1].strip()
+            elif "Major Version" in line:
+                result['major'] = line.split(':')[-1].strip()
+            elif "Minor Version" in line:
+                result['minor'] = line.split(':')[-1].strip()
+
+        if 'arb_index' not in result:
+            logger.error("Could not parse ARB index from arbextract output")
+            return None
         
     # Append metadata
     if metadata:

@@ -16,6 +16,14 @@ def reload_sync_module():
 
 class TestSyncToSupabase:
     @pytest.fixture(autouse=True)
+    def isolated_cwd(self, tmp_path, monkeypatch):
+        # These tests read/write "data/database.json" via relative paths.
+        # Run them in a temporary directory so the real database is never
+        # overwritten or deleted.
+        monkeypatch.chdir(tmp_path)
+        (tmp_path / "data").mkdir()
+
+    @pytest.fixture(autouse=True)
     def setup_env(self):
         with patch.dict(os.environ, ENV, clear=True):
             mod = reload_sync_module()
