@@ -1,5 +1,11 @@
 {
   "DEVICE_METADATA": {
+    "16": {
+      "name": "OnePlus 16",
+      "models": {
+        "CN": "PYB110"
+      }
+    },
     "15": {
       "name": "OnePlus 15",
       "models": {
@@ -423,6 +429,7 @@
     }
   },
   "OOS_MAPPING": {
+    "16": "oneplus_16",
     "15": "oneplus_15",
     "15R": "oneplus_15r",
     "15T": "oneplus_15t",
@@ -479,6 +486,7 @@
     "Reno10 Pro": "oppo_reno10_pro"
   },
   "SPRING_MAPPING": {
+    "oneplus_16": "OP 16",
     "oneplus_15": "OP 15",
     "oneplus_15r": "OP 15R",
     "oneplus_15t": "OP 15T",

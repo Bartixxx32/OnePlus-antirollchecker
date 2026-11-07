@@ -1,7 +1,7 @@
 {
   "AC2001": {
     "device_name": "OnePlus Nord",
-    "device_order": 35,
+    "device_order": 36,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -35,7 +35,7 @@
   },
   "AC2003": {
     "device_name": "OnePlus Nord",
-    "device_order": 35,
+    "device_order": 36,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -56,7 +56,7 @@
   },
   "CPH2173": {
     "device_name": "Oppo Find X3 Pro",
-    "device_order": 53,
+    "device_order": 54,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -84,7 +84,7 @@
   },
   "CPH2305": {
     "device_name": "Oppo Find X5 Pro",
-    "device_order": 51,
+    "device_order": 52,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -215,7 +215,7 @@
   },
   "CPH2307": {
     "device_name": "Oppo Find X5",
-    "device_order": 52,
+    "device_order": 53,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -278,7 +278,7 @@
   },
   "CPH2381": {
     "device_name": "OnePlus Nord CE 2 Lite",
-    "device_order": 32,
+    "device_order": 33,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -325,7 +325,7 @@
   },
   "CPH2409": {
     "device_name": "OnePlus Nord CE 2 Lite",
-    "device_order": 32,
+    "device_order": 33,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -372,7 +372,7 @@
   },
   "CPH2409EEA": {
     "device_name": "OnePlus Nord CE 2 Lite",
-    "device_order": 32,
+    "device_order": 33,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -419,7 +419,7 @@
   },
   "CPH2413": {
     "device_name": "OnePlus 10T",
-    "device_order": 13,
+    "device_order": 14,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -505,7 +505,7 @@
   },
   "CPH2415": {
     "device_name": "OnePlus 10T",
-    "device_order": 13,
+    "device_order": 14,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -603,7 +603,7 @@
   },
   "CPH2447": {
     "device_name": "OnePlus 11",
-    "device_order": 10,
+    "device_order": 11,
     "expect_esim": true,
     "expect_barometer": false,
     "versions": {
@@ -754,7 +754,7 @@
   },
   "CPH2449": {
     "device_name": "OnePlus 11",
-    "device_order": 10,
+    "device_order": 11,
     "expect_esim": true,
     "expect_barometer": false,
     "versions": {
@@ -950,7 +950,7 @@
   },
   "CPH2459": {
     "device_name": "OnePlus Nord N20",
-    "device_order": 34,
+    "device_order": 35,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -971,7 +971,7 @@
   },
   "CPH2465": {
     "device_name": "OnePlus Nord CE 3 Lite",
-    "device_order": 31,
+    "device_order": 32,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -1044,7 +1044,7 @@
   },
   "CPH2465EEA": {
     "device_name": "OnePlus Nord CE 3 Lite",
-    "device_order": 31,
+    "device_order": 32,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -1117,7 +1117,7 @@
   },
   "CPH2467": {
     "device_name": "OnePlus Nord CE 3 Lite",
-    "device_order": 31,
+    "device_order": 32,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -1216,7 +1216,7 @@
   },
   "CPH2487": {
     "device_name": "OnePlus 11R",
-    "device_order": 11,
+    "device_order": 12,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -1354,7 +1354,7 @@
   },
   "CPH2499": {
     "device_name": "Oppo Find N3",
-    "device_order": 50,
+    "device_order": 51,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -1513,7 +1513,7 @@
   },
   "CPH2513": {
     "device_name": "OnePlus Nord N30",
-    "device_order": 33,
+    "device_order": 34,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -1534,7 +1534,7 @@
   },
   "CPH2525": {
     "device_name": "Oppo Reno10 Pro",
-    "device_order": 47,
+    "device_order": 48,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -1607,7 +1607,7 @@
   },
   "CPH2525ID": {
     "device_name": "Oppo Reno10 Pro",
-    "device_order": 47,
+    "device_order": 48,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -1680,7 +1680,7 @@
   },
   "CPH2525IN": {
     "device_name": "Oppo Reno10 Pro",
-    "device_order": 47,
+    "device_order": 48,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -1701,7 +1701,7 @@
   },
   "CPH2525MEA": {
     "device_name": "Oppo Reno10 Pro",
-    "device_order": 47,
+    "device_order": 48,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -1774,7 +1774,7 @@
   },
   "CPH2525MY": {
     "device_name": "Oppo Reno10 Pro",
-    "device_order": 47,
+    "device_order": 48,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -1847,7 +1847,7 @@
   },
   "CPH2525OCA": {
     "device_name": "Oppo Reno10 Pro",
-    "device_order": 47,
+    "device_order": 48,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -1894,7 +1894,7 @@
   },
   "CPH2525PH": {
     "device_name": "Oppo Reno10 Pro",
-    "device_order": 47,
+    "device_order": 48,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -1967,7 +1967,7 @@
   },
   "CPH2525SA": {
     "device_name": "Oppo Reno10 Pro",
-    "device_order": 47,
+    "device_order": 48,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -2040,7 +2040,7 @@
   },
   "CPH2525SG": {
     "device_name": "Oppo Reno10 Pro",
-    "device_order": 47,
+    "device_order": 48,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -2113,7 +2113,7 @@
   },
   "CPH2525TH": {
     "device_name": "Oppo Reno10 Pro",
-    "device_order": 47,
+    "device_order": 48,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -2186,7 +2186,7 @@
   },
   "CPH2525TW": {
     "device_name": "Oppo Reno10 Pro",
-    "device_order": 47,
+    "device_order": 48,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -2259,7 +2259,7 @@
   },
   "CPH2525VN": {
     "device_name": "Oppo Reno10 Pro",
-    "device_order": 47,
+    "device_order": 48,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -2332,7 +2332,7 @@
   },
   "CPH2551": {
     "device_name": "OnePlus Open",
-    "device_order": 7,
+    "device_order": 8,
     "expect_esim": true,
     "expect_barometer": true,
     "versions": {
@@ -2545,7 +2545,7 @@
   },
   "CPH2569": {
     "device_name": "OnePlus Nord CE 3",
-    "device_order": 30,
+    "device_order": 31,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -2631,7 +2631,7 @@
   },
   "CPH2573": {
     "device_name": "OnePlus 12",
-    "device_order": 8,
+    "device_order": 9,
     "expect_esim": true,
     "expect_barometer": false,
     "versions": {
@@ -2782,7 +2782,7 @@
   },
   "CPH2581": {
     "device_name": "OnePlus 12",
-    "device_order": 8,
+    "device_order": 9,
     "expect_esim": true,
     "expect_barometer": false,
     "versions": {
@@ -2988,7 +2988,7 @@
   },
   "CPH2585": {
     "device_name": "OnePlus 12R",
-    "device_order": 9,
+    "device_order": 10,
     "expect_esim": true,
     "expect_barometer": false,
     "versions": {
@@ -3074,7 +3074,7 @@
   },
   "CPH2609": {
     "device_name": "OnePlus 12R",
-    "device_order": 9,
+    "device_order": 10,
     "expect_esim": true,
     "expect_barometer": false,
     "versions": {
@@ -3198,7 +3198,7 @@
   },
   "CPH2613": {
     "device_name": "OnePlus Nord CE 4",
-    "device_order": 29,
+    "device_order": 30,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -3271,7 +3271,7 @@
   },
   "CPH2619": {
     "device_name": "OnePlus Nord CE 4 Lite",
-    "device_order": 28,
+    "device_order": 29,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -3434,7 +3434,7 @@
   },
   "CPH2645": {
     "device_name": "OnePlus 13R",
-    "device_order": 4,
+    "device_order": 5,
     "expect_esim": true,
     "expect_barometer": false,
     "versions": {
@@ -3640,7 +3640,7 @@
   },
   "CPH2649": {
     "device_name": "OnePlus 13",
-    "device_order": 3,
+    "device_order": 4,
     "expect_esim": true,
     "expect_barometer": true,
     "versions": {
@@ -3830,7 +3830,7 @@
   },
   "CPH2653": {
     "device_name": "OnePlus 13",
-    "device_order": 3,
+    "device_order": 4,
     "expect_esim": true,
     "expect_barometer": true,
     "versions": {
@@ -4088,7 +4088,7 @@
   },
   "CPH2661": {
     "device_name": "OnePlus Nord 4",
-    "device_order": 27,
+    "device_order": 28,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -4213,7 +4213,7 @@
   },
   "CPH2663": {
     "device_name": "OnePlus Nord 4",
-    "device_order": 27,
+    "device_order": 28,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -4378,7 +4378,7 @@
   },
   "CPH2671": {
     "device_name": "Oppo Find N5",
-    "device_order": 49,
+    "device_order": 50,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -4612,7 +4612,7 @@
   },
   "CPH2691": {
     "device_name": "OnePlus 13R",
-    "device_order": 4,
+    "device_order": 5,
     "expect_esim": true,
     "expect_barometer": false,
     "versions": {
@@ -4776,7 +4776,7 @@
   },
   "CPH2707": {
     "device_name": "OnePlus Nord 5",
-    "device_order": 26,
+    "device_order": 27,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -4862,7 +4862,7 @@
   },
   "CPH2709": {
     "device_name": "OnePlus Nord 5",
-    "device_order": 26,
+    "device_order": 27,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -5014,7 +5014,7 @@
   },
   "CPH2723": {
     "device_name": "OnePlus 13s",
-    "device_order": 6,
+    "device_order": 7,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -5191,7 +5191,7 @@
   },
   "CPH2745": {
     "device_name": "OnePlus 15",
-    "device_order": 0,
+    "device_order": 1,
     "expect_esim": true,
     "expect_barometer": false,
     "versions": {
@@ -5381,7 +5381,7 @@
   },
   "CPH2747": {
     "device_name": "OnePlus 15",
-    "device_order": 0,
+    "device_order": 1,
     "expect_esim": true,
     "expect_barometer": false,
     "versions": {
@@ -5605,7 +5605,7 @@
   },
   "CPH2767": {
     "device_name": "OnePlus 15R",
-    "device_order": 1,
+    "device_order": 2,
     "expect_esim": true,
     "expect_barometer": false,
     "versions": {
@@ -5756,7 +5756,7 @@
   },
   "CPH2769": {
     "device_name": "OnePlus 15R",
-    "device_order": 1,
+    "device_order": 2,
     "expect_esim": true,
     "expect_barometer": false,
     "versions": {
@@ -5947,7 +5947,7 @@
   },
   "CPH2793": {
     "device_name": "OnePlus Nord 6",
-    "device_order": 25,
+    "device_order": 26,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -6033,7 +6033,7 @@
   },
   "CPH2795": {
     "device_name": "OnePlus Nord 6",
-    "device_order": 25,
+    "device_order": 26,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -6119,7 +6119,7 @@
   },
   "DE2117": {
     "device_name": "OnePlus Nord N200 5G",
-    "device_order": 36,
+    "device_order": 37,
     "expect_esim": false,
     "expect_barometer": true,
     "versions": {
@@ -6140,7 +6140,7 @@
   },
   "GM1901": {
     "device_name": "OnePlus 7",
-    "device_order": 24,
+    "device_order": 25,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -6161,7 +6161,7 @@
   },
   "GM1903": {
     "device_name": "OnePlus 7",
-    "device_order": 24,
+    "device_order": 25,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -6182,7 +6182,7 @@
   },
   "GM1905": {
     "device_name": "OnePlus 7",
-    "device_order": 24,
+    "device_order": 25,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -6203,7 +6203,7 @@
   },
   "GM1911": {
     "device_name": "OnePlus 7 Pro",
-    "device_order": 23,
+    "device_order": 24,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -6224,7 +6224,7 @@
   },
   "GM1913": {
     "device_name": "OnePlus 7 Pro",
-    "device_order": 23,
+    "device_order": 24,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -6245,7 +6245,7 @@
   },
   "GM1917": {
     "device_name": "OnePlus 7 Pro",
-    "device_order": 23,
+    "device_order": 24,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -6266,7 +6266,7 @@
   },
   "HD1901": {
     "device_name": "OnePlus 7T",
-    "device_order": 22,
+    "device_order": 23,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -6287,7 +6287,7 @@
   },
   "HD1903": {
     "device_name": "OnePlus 7T",
-    "device_order": 22,
+    "device_order": 23,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -6321,7 +6321,7 @@
   },
   "HD1911": {
     "device_name": "OnePlus 7T Pro",
-    "device_order": 21,
+    "device_order": 22,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -6342,7 +6342,7 @@
   },
   "HD1913": {
     "device_name": "OnePlus 7T Pro",
-    "device_order": 21,
+    "device_order": 22,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -6376,7 +6376,7 @@
   },
   "IN2011": {
     "device_name": "OnePlus 8",
-    "device_order": 20,
+    "device_order": 21,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -6397,7 +6397,7 @@
   },
   "IN2013": {
     "device_name": "OnePlus 8",
-    "device_order": 20,
+    "device_order": 21,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -6418,7 +6418,7 @@
   },
   "IN2021": {
     "device_name": "OnePlus 8 Pro",
-    "device_order": 19,
+    "device_order": 20,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -6439,7 +6439,7 @@
   },
   "IN2023": {
     "device_name": "OnePlus 8 Pro",
-    "device_order": 19,
+    "device_order": 20,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -6473,7 +6473,7 @@
   },
   "KB2003": {
     "device_name": "OnePlus 8T",
-    "device_order": 18,
+    "device_order": 19,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -6494,7 +6494,7 @@
   },
   "KB2005": {
     "device_name": "OnePlus 8T",
-    "device_order": 18,
+    "device_order": 19,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -6515,7 +6515,7 @@
   },
   "LE2111": {
     "device_name": "OnePlus 9",
-    "device_order": 15,
+    "device_order": 16,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -6549,7 +6549,7 @@
   },
   "LE2113": {
     "device_name": "OnePlus 9",
-    "device_order": 15,
+    "device_order": 16,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -6583,7 +6583,7 @@
   },
   "LE2121": {
     "device_name": "OnePlus 9 Pro",
-    "device_order": 14,
+    "device_order": 15,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -6617,7 +6617,7 @@
   },
   "LE2123": {
     "device_name": "OnePlus 9 Pro",
-    "device_order": 14,
+    "device_order": 15,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -6651,7 +6651,7 @@
   },
   "LE2125": {
     "device_name": "OnePlus 9 Pro",
-    "device_order": 14,
+    "device_order": 15,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -6672,7 +6672,7 @@
   },
   "MT2111": {
     "device_name": "OnePlus 9RT",
-    "device_order": 16,
+    "device_order": 17,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -6693,7 +6693,7 @@
   },
   "NE2210": {
     "device_name": "OnePlus 10 Pro",
-    "device_order": 12,
+    "device_order": 13,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -6792,7 +6792,7 @@
   },
   "NE2211": {
     "device_name": "OnePlus 10 Pro",
-    "device_order": 12,
+    "device_order": 13,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -6930,7 +6930,7 @@
   },
   "NE2213": {
     "device_name": "OnePlus 10 Pro",
-    "device_order": 12,
+    "device_order": 13,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -7108,7 +7108,7 @@
   },
   "OPD2403": {
     "device_name": "OnePlus Pad 2",
-    "device_order": 46,
+    "device_order": 47,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -7247,7 +7247,7 @@
   },
   "OPD2413": {
     "device_name": "OnePlus Pad 2 Pro",
-    "device_order": 45,
+    "device_order": 46,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -7359,7 +7359,7 @@
   },
   "OPD2415": {
     "device_name": "OnePlus Pad 3",
-    "device_order": 44,
+    "device_order": 45,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -7522,7 +7522,7 @@
   },
   "PJD110": {
     "device_name": "OnePlus 12",
-    "device_order": 8,
+    "device_order": 9,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -7660,7 +7660,7 @@
   },
   "PJE110": {
     "device_name": "OnePlus Ace 3",
-    "device_order": 43,
+    "device_order": 44,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -7759,7 +7759,7 @@
   },
   "PJF110": {
     "device_name": "OnePlus Ace 3V",
-    "device_order": 42,
+    "device_order": 43,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -7845,7 +7845,7 @@
   },
   "PJX110": {
     "device_name": "OnePlus Ace 3 Pro",
-    "device_order": 41,
+    "device_order": 42,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -7944,7 +7944,7 @@
   },
   "PJZ110": {
     "device_name": "OnePlus 13",
-    "device_order": 3,
+    "device_order": 4,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -8134,10 +8134,23 @@
   },
   "PKG110": {
     "device_name": "OnePlus Ace 5",
-    "device_order": 40,
+    "device_order": 41,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "PKG110_17.0.0.105(CN01)": {
+        "arb": 1,
+        "major": 3,
+        "minor": 0,
+        "md5": "9dfea75816d747806f44e4cfefe708cb",
+        "first_seen": "2026-11-07",
+        "last_checked": "2026-11-07",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "CN"
+        ]
+      },
       "PKG110_16.0.10.500(CN01)": {
         "arb": 1,
         "major": 3,
@@ -8145,7 +8158,7 @@
         "md5": "91661e97ec24bbfa08f3198530abdb02",
         "first_seen": "2026-08-22",
         "last_checked": "2026-08-22",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "CN"
@@ -8285,7 +8298,7 @@
   },
   "PKR110": {
     "device_name": "OnePlus Ace 5 Pro",
-    "device_order": 39,
+    "device_order": 40,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -8475,7 +8488,7 @@
   },
   "PKX110": {
     "device_name": "OnePlus 13T",
-    "device_order": 5,
+    "device_order": 6,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -8626,7 +8639,7 @@
   },
   "PLK110": {
     "device_name": "OnePlus 15",
-    "device_order": 0,
+    "device_order": 1,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -8842,7 +8855,7 @@
   },
   "PLQ110": {
     "device_name": "OnePlus Ace 6",
-    "device_order": 38,
+    "device_order": 39,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -9045,7 +9058,7 @@
   },
   "PLR110": {
     "device_name": "OnePlus Ace 6T",
-    "device_order": 37,
+    "device_order": 38,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -9222,7 +9235,7 @@
   },
   "PLZ110": {
     "device_name": "OnePlus 15T",
-    "device_order": 2,
+    "device_order": 3,
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
@@ -9338,6 +9351,27 @@
         "first_seen": "2026-05-09",
         "last_checked": "2026-05-09",
         "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "CN"
+        ]
+      }
+    }
+  },
+  "PYB110": {
+    "device_name": "OnePlus 16",
+    "device_order": 0,
+    "expect_esim": false,
+    "expect_barometer": false,
+    "versions": {
+      "PYB110_17.0.1.201(CN01)": {
+        "arb": 3,
+        "major": 37,
+        "minor": 0,
+        "md5": "6aaf2ba845841892d2e447171630918b",
+        "first_seen": "2026-11-07",
+        "last_checked": "2026-11-07",
+        "status": "current",
         "is_hardcoded": false,
         "regions": [
           "CN"
