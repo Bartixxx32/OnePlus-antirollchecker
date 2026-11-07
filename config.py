@@ -51,6 +51,7 @@ class DeviceMeta(TypedDict):
 # Device order for README and Website (Flagships -> Open -> Nords -> Ace -> Pads -> Oppo)
 DEVICE_ORDER = [
     # Flagships (New)
+    "16",
     "15", "15R", "15T", 
     "13", "13R", "13T", "13s",
     "Open",
@@ -89,7 +90,13 @@ DEVICE_ORDER = [
 # Device Metadata
 # Used for display names, model numbers, and mapping internal IDs to names
 DEVICE_METADATA: Dict[str, DeviceMeta] = {
-    # ... existing 15-9 ...
+    # ... existing 16-9 ...
+    "16": {
+        "name": "OnePlus 16",
+        "models": {
+            "CN": "PYB110"
+        },
+    },
     "15": {
         "name": "OnePlus 15",
         "models": {
@@ -531,6 +538,7 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
 # Mapping for fetching firmware (roms.danielspringer.at expects these names)
 SPRING_MAPPING = {
     # Existing
+    "oneplus_16": "OP 16",
     "oneplus_15": "OP 15",
     "oneplus_15r": "OP 15R",
     "oneplus_15t": "OP 15T",
@@ -581,6 +589,7 @@ SPRING_MAPPING = {
 
 # Mapping for OOS Downloader API (oosdownloader-gui.fly.dev)
 OOS_MAPPING = {
+    "16": "oneplus_16",
     "15": "oneplus_15",
     "15R": "oneplus_15r",
     "15T": "oneplus_15t",

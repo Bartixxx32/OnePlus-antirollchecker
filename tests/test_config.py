@@ -26,6 +26,7 @@ class TestGetDisplayName:
         assert get_display_name("Pad 2") == "OnePlus Pad 2"
 
     def test_new_flagships(self):
+        assert get_display_name("16") == "OnePlus 16"
         assert get_display_name("15") == "OnePlus 15"
         assert get_display_name("15R") == "OnePlus 15R"
         assert get_display_name("15T") == "OnePlus 15T"
@@ -73,6 +74,7 @@ class TestGetModelNumber:
         assert get_model_number("Find N5", "CN") == "PKV110"
 
     def test_new_devices(self):
+        assert get_model_number("16", "CN") == "PYB110"
         assert get_model_number("15", "GLO") == "CPH2747"
         assert get_model_number("15", "CN") == "PLK110"
         assert get_model_number("15R", "IN") == "CPH2767"
@@ -192,6 +194,7 @@ class TestMappings:
         assert OOS_MAPPING["Open"] == "oneplus_open"
 
     def test_oos_mapping_new_devices(self):
+        assert OOS_MAPPING["16"] == "oneplus_16"
         assert OOS_MAPPING["15R"] == "oneplus_15r"
         assert OOS_MAPPING["15T"] == "oneplus_15t"
         assert OOS_MAPPING["13"] == "oneplus_13"
@@ -219,6 +222,7 @@ class TestMappings:
         assert OOS_MAPPING["Ace 5 Pro"] == "oneplus_ace_5_pro"
 
     def test_spring_mapping_common(self):
+        assert SPRING_MAPPING["oneplus_16"] == "OP 16"
         assert SPRING_MAPPING["oneplus_15"] == "OP 15"
         assert SPRING_MAPPING["oneplus_12"] == "OP 12"
         assert SPRING_MAPPING["oneplus_open"] == "OP OPEN"
