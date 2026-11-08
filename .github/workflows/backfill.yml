@@ -25,7 +25,10 @@ jobs:
   setup-matrix:
     runs-on: ubuntu-latest
     outputs:
-      matrix: ${{ steps.set-matrix.outputs.matrix }}
+      matrix_1: ${{ steps.set-matrix.outputs.matrix_1 }}
+      matrix_2: ${{ steps.set-matrix.outputs.matrix_2 }}
+      matrix_3: ${{ steps.set-matrix.outputs.matrix_3 }}
+      matrix_4: ${{ steps.set-matrix.outputs.matrix_4 }}
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v5
@@ -102,143 +105,45 @@ jobs:
       - name: Ensure Tools are Executable
         run: chmod +x tools/* || true
 
-  backfill-variant:
+  backfill-shard-1:
     needs: [setup-matrix, prepare-tools]
-    runs-on: ubuntu-latest
-    continue-on-error: true
-    strategy:
-      max-parallel: 20
-      fail-fast: false
-      matrix: ${{ fromJson(needs.setup-matrix.outputs.matrix) }}
-    
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v5
+    if: needs.setup-matrix.outputs.matrix_1 != ''
+    uses: ./.github/workflows/backfill-variant.yml
+    with:
+      matrix: ${{ needs.setup-matrix.outputs.matrix_1 }}
+      shard: '1'
+      force_recheck: ${{ inputs.force_recheck }}
 
-      - name: Cache APT Packages
-        uses: awalsh128/cache-apt-pkgs-action@latest
-        with:
-          packages: aria2 unzip curl
-          version: 1.0
+  backfill-shard-2:
+    needs: [setup-matrix, prepare-tools]
+    if: needs.setup-matrix.outputs.matrix_2 != ''
+    uses: ./.github/workflows/backfill-variant.yml
+    with:
+      matrix: ${{ needs.setup-matrix.outputs.matrix_2 }}
+      shard: '2'
+      force_recheck: ${{ inputs.force_recheck }}
 
-      - name: Set up Python
-        uses: actions/setup-python@v6
-        with:
-          python-version: '3.11'
-          cache: 'pip'
+  backfill-shard-3:
+    needs: [setup-matrix, prepare-tools]
+    if: needs.setup-matrix.outputs.matrix_3 != ''
+    uses: ./.github/workflows/backfill-variant.yml
+    with:
+      matrix: ${{ needs.setup-matrix.outputs.matrix_3 }}
+      shard: '3'
+      force_recheck: ${{ inputs.force_recheck }}
 
-      - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
-
-      - name: Restore Tools Cache
-        uses: actions/cache/restore@v5
-        with:
-          path: tools/
-          key: tools-v1
-          fail-on-cache-miss: true
-
-      - name: Ensure Tools are Executable
-        run: chmod +x tools/* || true
-      - name: Get Firmware URL
-        id: get_details
-        run: |
-          python3 fetch_firmware.py "${{ matrix.device }}" "${{ matrix.variant }}" "${{ matrix.version }}" --output fw_info.json
-          URL=$(python3 -c "import sys, json; print(json.load(open('fw_info.json'))['url'])")
-          VERSION=$(python3 -c "import sys, json; print(json.load(open('fw_info.json'))['version'])")
-          MD5=$(python3 -c "import sys, json; data=json.load(open('fw_info.json')); print(data.get('md5') or '')")
-          echo "url=$URL" >> $GITHUB_OUTPUT
-          echo "version=$VERSION" >> $GITHUB_OUTPUT
-          echo "md5=$MD5" >> $GITHUB_OUTPUT
-
-      - name: Cache ARB Data
-        id: cache-arb
-        if: github.event.inputs.force_recheck != 'true'
-        uses: actions/cache@v5
-        with:
-          path: firmware_data/
-          key: arb-v9-${{ matrix.device }}-${{ matrix.variant }}-${{ steps.get_details.outputs.version }}-${{ steps.get_details.outputs.md5 }}
-
-      - name: Download Firmware
-        if: steps.cache-arb.outputs.cache-hit != 'true'
-        run: |
-          URL="${{ steps.get_details.outputs.url }}"
-          VERSION="${{ steps.get_details.outputs.version }}"
-          MD5="${{ steps.get_details.outputs.md5 }}"
-          
-          MAX_RETRIES=5
-          RETRY_COUNT=0
-          SUCCESS=0
-          
-          while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
-            echo "Attempting download (Try $((RETRY_COUNT+1))/$MAX_RETRIES)..."
-            
-            # Construct aria2c command with optional checksum
-            ARIA_CMD="aria2c -c -x16 -s16 -k1M -o firmware.zip"
-            if [[ "$MD5" != "" && "$MD5" != "None" ]]; then
-                echo "Enforcing MD5 checksum: $MD5"
-                ARIA_CMD="$ARIA_CMD --checksum=md5=$MD5"
-            else
-                echo "No MD5 checksum available for verification."
-            fi
-            
-            if $ARIA_CMD "$URL"; then
-              echo "Download successful!"
-              SUCCESS=1
-              break
-            fi
-            
-            echo "Download failed. Refreshing URL..."
-            # Remove partial/failed file
-            rm -f firmware.zip
-            
-            RETRY_COUNT=$((RETRY_COUNT+1))
-            if [ $RETRY_COUNT -eq $MAX_RETRIES ]; then break; fi
-            
-            # Refresh URL
-            python3 fetch_firmware.py "${{ matrix.device }}" "${{ matrix.variant }}" "$VERSION" --output fw_refresh.json
-            if [ -f fw_refresh.json ]; then
-               NEW_URL=$(python3 -c "import sys, json; print(json.load(open('fw_refresh.json'))['url'])")
-               if [[ "$NEW_URL" != "" && "$NEW_URL" != "null" ]]; then
-                  URL="$NEW_URL"
-                  echo "Refreshed URL successfully."
-               fi
-            fi
-            sleep 5
-          done
-          
-          if [ $SUCCESS -eq 0 ]; then
-             echo "Download failed after all attempts."
-             exit 1 # In backfill we might want to fail the job
-          fi
-
-      - name: Analyze Firmware
-        if: hashFiles('firmware.zip') != '' || steps.cache-arb.outputs.cache-hit == 'true'
-        run: |
-          # Pass 'firmware.zip' even if missing, analyze_firmware will skip it if cache hit
-          python3 analyze_firmware.py firmware.zip --tools-dir tools --output-dir extracted --final-dir firmware_data --json > result.json
-          
-      - name: Update History (Historical)
-        if: hashFiles('result.json') != ''
-        run: |
-          python3 update_history.py \
-            "${{ matrix.device_short }}" \
-            "${{ matrix.variant }}" \
-            "${{ steps.get_details.outputs.version }}" \
-            --json-file result.json \
-            --historical \
-            --md5 "${{ steps.get_details.outputs.md5 }}"
-
-
-
-      - name: Upload History
-        uses: actions/upload-artifact@v5
-        with:
-          name: history-${{ matrix.device }}-${{ matrix.variant }}-${{ strategy.job-index }}
-          path: data/history/${{ matrix.device_short }}_${{ matrix.variant }}.json
+  backfill-shard-4:
+    needs: [setup-matrix, prepare-tools]
+    if: needs.setup-matrix.outputs.matrix_4 != ''
+    uses: ./.github/workflows/backfill-variant.yml
+    with:
+      matrix: ${{ needs.setup-matrix.outputs.matrix_4 }}
+      shard: '4'
+      force_recheck: ${{ inputs.force_recheck }}
 
   consolidate:
-    needs: backfill-variant
+    needs: [backfill-shard-1, backfill-shard-2, backfill-shard-3, backfill-shard-4]
+    if: always() && (needs.backfill-shard-1.result == 'success' || needs.backfill-shard-2.result == 'success' || needs.backfill-shard-3.result == 'success' || needs.backfill-shard-4.result == 'success')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo

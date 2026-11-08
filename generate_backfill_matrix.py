@@ -5,6 +5,11 @@ import requests
 from config import DEVICE_METADATA
 from fetch_firmware import get_springer_versions
 
+def split_into_shards(items, shard_count=4):
+    """Split items into balanced shards for GitHub Actions matrices."""
+    return [items[i::shard_count] for i in range(shard_count)]
+
+
 def generate_backfill_matrix():
     include_list = []
     
@@ -47,14 +52,23 @@ def generate_backfill_matrix():
                     "version": version
                 })
                 
-    # Output for GitHub Actions
-    matrix_json = json.dumps({"include": include_list})
+    # Split into shards so no single GitHub Actions matrix exceeds the
+    # hard limit of 256 jobs. Four shards support up to 1024 configurations.
+    SHARD_COUNT = 4
+    shards = split_into_shards(include_list, SHARD_COUNT)
     
     if "GITHUB_OUTPUT" in os.environ:
         with open(os.environ["GITHUB_OUTPUT"], "a") as f:
-            f.write(f"matrix={matrix_json}\n")
+            for i, shard in enumerate(shards, 1):
+                if shard:
+                    f.write(f"matrix_{i}={json.dumps({'include': shard})}\n")
+                else:
+                    f.write(f"matrix_{i}=\n")
+        print(f"Generated {len(include_list)} configurations in {sum(1 for s in shards if s)} shard(s).")
     else:
-        print(matrix_json)
+        for i, shard in enumerate(shards, 1):
+            print(f"Shard {i}: {len(shard)} configurations")
+            print(json.dumps({"include": shard}))
 
 if __name__ == "__main__":
     generate_backfill_matrix()
