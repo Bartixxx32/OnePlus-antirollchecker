@@ -1,0 +1,58 @@
+{
+  "history": [
+    {
+      "version": "PKU110_17.0.0.104(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-11-08",
+      "last_checked": "2026-11-08",
+      "status": "archived",
+      "md5": "1c2187afca7c8df58488aacffe8c6ee4"
+    },
+    {
+      "version": "PKU110_16.0.9.401(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-11-08",
+      "last_checked": "2026-11-08",
+      "status": "archived",
+      "md5": "0e9d216b4634a117eec5f0e66d889fef"
+    },
+    {
+      "version": "PKJ110_17.0.0.104(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-11-08",
+      "last_checked": "2026-11-08",
+      "status": "archived",
+      "md5": "6a420e780a6c7c3630da0b26c0dc5f37"
+    },
+    {
+      "version": "PKU110_16.0.10.501(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-11-08",
+      "last_checked": "2026-11-08",
+      "status": "archived",
+      "md5": "091269146c51db71da082907c39813ef"
+    },
+    {
+      "version": "PKJ110_16.0.10.501(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-11-08",
+      "last_checked": "2026-11-08",
+      "status": "archived",
+      "md5": "bf9eea5ec1c3bf78918d79dbc2735398"
+    }
+  ],
+  "device": "Oppo Find X8 Ultra",
+  "device_id": "Find X8 Ultra",
+  "region": "CN",
+  "model": "PKJ110"
+}
