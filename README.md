@@ -104,7 +104,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | CPH2747_16.0.3.503(EX01)<br><details><summary>MD5</summary><code>aead3e10aadb3ff506ae0673a110f8c6</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-18 | ✅ Safe |
 | CPH2747_16.0.3.501(EX01)<br><details><summary>MD5</summary><code>fbaeb7dc54da345cf94aeeced0af502c</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-08 | ✅ Safe |
 | CPH2747_16.0.2.401(EX01)<br><details><summary>MD5</summary><code>9e39c1366c03ff0f8f50a8d49a252ad7</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-10 | ✅ Safe |
-| CPH2747_16.0.1.303(EX01)<br><details><summary>MD5</summary><code>2ff1781d46561bf44a0eb40c128390a4</code></details> | 0 | Major: 3, Minor: 0 | 2026-04-20 | ✅ Safe |
+| CPH2747_16.0.1.303(EX01)<br><details><summary>MD5</summary><code>2ff1781d46561bf44a0eb40c128390a4</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
 
 </details>
 
@@ -119,7 +119,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | CPH2745_16.0.8.300(EX01)<br><details><summary>MD5</summary><code>650355d564fd488164ea9f86b0114496</code></details> | 0 | Major: 3, Minor: 0 | 2026-07-08 | ✅ Safe |
 | CPH2745_16.0.7.201(EX01)<br><details><summary>MD5</summary><code>5fb43a8766343df4f0a378535673a931</code></details> | 0 | Major: 3, Minor: 0 | 2026-06-09 | ✅ Safe |
 | CPH2745_16.0.5.703(EX01)<br><details><summary>MD5</summary><code>0318988062a72a31d0095e7cc9cff92a</code></details> | 0 | Major: 3, Minor: 0 | 2026-05-09 | ✅ Safe |
-| CPH2745_16.0.5.702(EX01)<br><details><summary>MD5</summary><code>d4bd922b0f7b55021795751e74bbf009</code></details> | 0 | Major: 3, Minor: 0 | 2026-04-20 | ✅ Safe |
+| CPH2745_16.0.5.702(EX01)<br><details><summary>MD5</summary><code>d4bd922b0f7b55021795751e74bbf009</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
 | CPH2745_16.0.5.700(EX01)<br><details><summary>MD5</summary><code>b01f22e57655584a93a7e6051752f4c4</code></details> | 0 | Major: 3, Minor: 0 | 2026-04-06 | ✅ Safe |
 | CPH2745_16.0.3.503(EX01)<br><details><summary>MD5</summary><code>e9e6a68cc908913ac7a03578dc41366d</code></details> | 0 | Major: 3, Minor: 0 | 2026-04-20 | ✅ Safe |
 | CPH2745_16.0.3.501(EX01)<br><details><summary>MD5</summary><code>3b72808a5cd0d8133fb7311e53f5f7e3</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-10 | ✅ Safe |
@@ -146,9 +146,12 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | PLK110_16.0.5.701(CN01)<br><details><summary>MD5</summary><code>9e9688532ff5ec1eb19b4ca9de363199</code></details> | 0 | Major: 3, Minor: 0 | 2026-04-20 | ✅ Safe |
 | PLK110_16.0.3.503(CN01)<br><details><summary>MD5</summary><code>0912b44f2bcc36beec783941e1016c47</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-10 | ✅ Safe |
 | PLK110_16.0.3.502(CN01)<br><details><summary>MD5</summary><code>2620712413a1f04dfae81b64ec32eb6e</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-10 | ✅ Safe |
-| PLK110_16.0.2.402(CN01)<br><details><summary>MD5</summary><code>6e5ecbdbd9f49e6e5d054340f52b9641</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-26 | ✅ Safe |
+| PLK110_16.0.2.402(CN01)<br><details><summary>MD5</summary><code>6e5ecbdbd9f49e6e5d054340f52b9641</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
 | PLK110_16.0.2.401(CN01)<br><details><summary>MD5</summary><code>6866e32183304023149907b7899c1963</code></details> | 0 | Major: 3, Minor: 0 | 2026-04-20 | ✅ Safe |
 | PLK110_16.0.1.301(CN01)<br><details><summary>MD5</summary><code>18f1654b5f21e2af8c19190042a3c612</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-13 | ✅ Safe |
+| PLK110_16.0.0.211(CN01)<br><details><summary>MD5</summary><code>f2a24e0321a88315e6a229a49a651544</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
+| PLK110_16.0.0.210(CN01)<br><details><summary>MD5</summary><code>93ea2f91961c0aef9b06d66f43da5fbb</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
+| PLK110_16.0.0.208(CN01)<br><details><summary>MD5</summary><code>972de7e37c1a7703874c61fb2ba8e0b6</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
 
 </details>
 
@@ -173,7 +176,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | CPH2769_16.0.9.401(EX01)<br><details><summary>MD5</summary><code>dec4a1753e117fb9fdff8a7cfd22eaa5</code></details> | 0 | Major: 3, Minor: 0 | 2026-07-28 | ✅ Safe |
 | CPH2769_16.0.8.300(EX01)<br><details><summary>MD5</summary><code>901ef01e7381013d7fce57dfebfa773e</code></details> | 0 | Major: 3, Minor: 0 | 2026-07-22 | ✅ Safe |
 | CPH2769_16.0.7.200(EX01)<br><details><summary>MD5</summary><code>a4834ee837a00623e3ea91584ddbe513</code></details> | 0 | Major: 3, Minor: 0 | 2026-06-29 | ✅ Safe |
-| CPH2769_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>ffb1c3aa990044f327a8171e6162af21</code></details> | 0 | Major: 3, Minor: 0 | 2026-05-18 | ✅ Safe |
+| CPH2769_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>ffb1c3aa990044f327a8171e6162af21</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
 | CPH2769_16.0.3.503(EX01)<br><details><summary>MD5</summary><code>bbf8456ba035fd52691af46cf4d87222</code></details> | 0 | Major: 3, Minor: 0 | 2026-04-20 | ✅ Safe |
 | CPH2769_16.0.3.501(EX01)<br><details><summary>MD5</summary><code>cb319baa6d71168d9743f4b0492859f5</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-10 | ✅ Safe |
 | CPH2769_16.0.2.401(EX01)<br><details><summary>MD5</summary><code>557df71dadd39f65968ad8bbc0ce2293</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-06 | ✅ Safe |
@@ -191,7 +194,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | CPH2769_16.0.7.200(EX01)<br><details><summary>MD5</summary><code>954065b5798bb138339848fd8249a71f</code></details> | 0 | Major: 3, Minor: 0 | 2026-06-26 | ✅ Safe |
 | CPH2769_16.0.5.703(EX01)<br><details><summary>MD5</summary><code>d2fe430aa902110c362112888bc3046e</code></details> | 0 | Major: 3, Minor: 0 | 2026-05-20 | ✅ Safe |
 | CPH2769_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>8ed18c461d884a4b5108147840644bb7</code></details> | 0 | Major: 3, Minor: 0 | 2026-04-20 | ✅ Safe |
-| CPH2769_16.0.3.501(EX01)<br><details><summary>MD5</summary><code>44828fb8b432f3c38dadef0d7cb7f400</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-29 | ✅ Safe |
+| CPH2769_16.0.3.501(EX01)<br><details><summary>MD5</summary><code>44828fb8b432f3c38dadef0d7cb7f400</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
 | CPH2769_16.0.2.401(EX01)<br><details><summary>MD5</summary><code>77e4748592f464726b8d72f6614d2875</code></details> | 0 | Major: 3, Minor: 0 | 2026-04-20 | ✅ Safe |
 
 </details>
@@ -210,7 +213,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | CPH2767_16.0.3.503(EX01)<br><details><summary>MD5</summary><code>2c9829fafdd4921812f293a4e3ed2d26</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-18 | ✅ Safe |
 | CPH2767_16.0.3.501(EX01)<br><details><summary>MD5</summary><code>b66486ede893305d3c4b297cef45d3f2</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-18 | ✅ Safe |
 | CPH2767_16.0.2.401(EX01)<br><details><summary>MD5</summary><code>310d2f5237de8789f0cb8f886b4c0bb4</code></details> | 0 | Major: 3, Minor: 0 | 2026-04-20 | ✅ Safe |
-| CPH2767_16.0.1.305(EX01)<br><details><summary>MD5</summary><code>40f81334dddadd8e1917148c57cbc713</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-25 | ✅ Safe |
+| CPH2767_16.0.1.305(EX01)<br><details><summary>MD5</summary><code>40f81334dddadd8e1917148c57cbc713</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
 
 </details>
 
@@ -232,10 +235,10 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | PLZ110_16.0.10.500(CN01)<br><details><summary>MD5</summary><code>c613b61ceaf628f331eefc5856f3d88f</code></details> | 0 | Major: 3, Minor: 0 | 2026-08-08 | ✅ Safe |
 | PLZ110_16.0.9.400(CN01)<br><details><summary>MD5</summary><code>b5b3730e9d5f92f6ba4ef5a6685ce384</code></details> | 0 | Major: 3, Minor: 0 | 2026-07-28 | ✅ Safe |
 | PLZ110_16.0.8.300(CN01)<br><details><summary>MD5</summary><code>cb6375da24d98d90048a13f9d6a67d5f</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
-| PLZ110_16.0.7.201(CN01)<br><details><summary>MD5</summary><code>55f12e234207b43bcfcd81ae36828d6c</code></details> | 0 | Major: 3, Minor: 0 | 2026-06-03 | ✅ Safe |
+| PLZ110_16.0.7.201(CN01)<br><details><summary>MD5</summary><code>55f12e234207b43bcfcd81ae36828d6c</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
 | PLZ110_16.0.7.200(CN01)<br><details><summary>MD5</summary><code>80ad2fbae8b1b4d167e9f70316753eca</code></details> | 0 | Major: 3, Minor: 0 | 2026-05-20 | ✅ Safe |
-| PLZ110_16.0.5.703(CN01) | 0 | Major: 3, Minor: 0 | 2026-05-09 | ✅ Safe |
-| PLZ110_16.0.5.701(CN01) | 0 | Major: 3, Minor: 0 | 2026-05-09 | ✅ Safe |
+| PLZ110_16.0.5.703(CN01)<br><details><summary>MD5</summary><code>48f9cceb8612a45706d33d9f7ae405ac</code></details> | 0 | Major: 3, Minor: 0 | 2026-05-09 | ✅ Safe |
+| PLZ110_16.0.5.701(CN01)<br><details><summary>MD5</summary><code>b347f3dd914bb44b809bb5297aea73ac</code></details> | 0 | Major: 3, Minor: 0 | 2026-05-09 | ✅ Safe |
 
 </details>
 
@@ -249,7 +252,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | Global | CPH2653 | CPH2653_17.0.0.102(EX01)<br><details><summary>MD5</summary><code>04bb82938d782824efb252891dc2b806</code></details> | **1** | Major: 3, Minor: 0 | 2026-11-03 | ❌ Protected |
 | Europe | CPH2653 | CPH2653_16.0.10.600(EX01)<br><details><summary>MD5</summary><code>d163fc51f9629c2f2ba6b6cc557a1f95</code></details> | **1** | Major: 3, Minor: 0 | 2026-10-13 | ❌ Protected |
 | India | CPH2649 | CPH2649_17.0.0.102(EX01)<br><details><summary>MD5</summary><code>c30c01967a0fef250a69608d7173592d</code></details> | **1** | Major: 3, Minor: 0 | 2026-10-28 | ❌ Protected |
-| North America | CPH2655 | CPH2655_15.0.0.405(EX01)<br><details><summary>MD5</summary><code>5b693110ced8964a707defcd198acfc4</code></details> | **0** | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
+| North America | CPH2655 | CPH2655_15.0.0.832(EX01)<br><details><summary>MD5</summary><code>7d0ce94be24263393454ae140889a523</code></details> | **0** | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
 | China | PJZ110 | PJZ110_17.0.0.103(CN01)<br><details><summary>MD5</summary><code>ef71905c53243c0f2c75c2b64ac6edde</code></details> | **1** | Major: 3, Minor: 0 | 2026-10-12 | ❌ Protected |
 
 <details>
@@ -266,7 +269,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | CPH2653_16.0.5.703(EX01)<br><details><summary>MD5</summary><code>bd7bffda1812ac8732704fb38a0fc1c8</code></details> | 1 | Major: 3, Minor: 0 | 2026-05-25 | ❌ Protected |
 | CPH2653_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>385877a9463d7b5de2f5a2ffea4a12d6</code></details> | 1 | Major: 3, Minor: 0 | 2026-04-20 | ❌ Protected |
 | CPH2653_16.0.3.501(EX01)<br><details><summary>MD5</summary><code>55382e1f872388d09a539d64ce09d65e</code></details> | 1 | Major: 3, Minor: 0 | 2026-03-24 | ❌ Protected |
-| CPH2653_16.0.2.402(EX01)<br><details><summary>MD5</summary><code>515f5110ca780fda710ef1ff1ad9f100</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-11 | ✅ Safe |
+| CPH2653_16.0.2.402(EX01)<br><details><summary>MD5</summary><code>515f5110ca780fda710ef1ff1ad9f100</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
 | CPH2653_16.0.1.304(EX01)<br><details><summary>MD5</summary><code>e854bde9b2f472d1cfb499c886b1cbe9</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-06 | ✅ Safe |
 | CPH2653_16.0.0.210(EX01)<br><details><summary>MD5</summary><code>2dfc7934f7610af104e094e1a8f43cb1</code></details> | 0 | Major: 3, Minor: 0 | 2026-04-20 | ✅ Safe |
 | CPH2653_15.0.0.864(EX01)<br><details><summary>MD5</summary><code>fdde59c8fb76a88491b44d44b8d2797d</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-18 | ✅ Safe |
@@ -282,7 +285,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | CPH2653_16.0.9.401(EX01)<br><details><summary>MD5</summary><code>4e82c1e89828c614b644a9ea908d972a</code></details> | 1 | Major: 3, Minor: 0 | 2026-08-22 | ❌ Protected |
 | CPH2653_16.0.8.301(EX01)<br><details><summary>MD5</summary><code>bf13e97fa069c2b690e3a9997593baef</code></details> | 1 | Major: 3, Minor: 0 | 2026-07-27 | ❌ Protected |
 | CPH2653_16.0.7.201(EX01)<br><details><summary>MD5</summary><code>bb0f615b0156ac9a9ab2df48d9530b3b</code></details> | 1 | Major: 3, Minor: 0 | 2026-11-08 | ❌ Protected |
-| CPH2653_16.0.5.703(EX01)<br><details><summary>MD5</summary><code>5eb404fefe6c48fd4996f25bda682034</code></details> | 1 | Major: 3, Minor: 0 | 2026-05-25 | ❌ Protected |
+| CPH2653_16.0.5.703(EX01)<br><details><summary>MD5</summary><code>5eb404fefe6c48fd4996f25bda682034</code></details> | 1 | Major: 3, Minor: 0 | 2026-11-08 | ❌ Protected |
 | CPH2653_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>23318bec5be6849803c95d47c0e7d8f8</code></details> | 1 | Major: 3, Minor: 0 | 2026-04-20 | ❌ Protected |
 | CPH2653_16.0.3.501(EX01)<br><details><summary>MD5</summary><code>4a5640ac2917ad8baeb334b286572b46</code></details> | 1 | Major: 3, Minor: 0 | 2026-03-24 | ❌ Protected |
 | CPH2653_16.0.2.402(EX01)<br><details><summary>MD5</summary><code>8a63e3f165b7ed13be5bb2bf6517e365</code></details> | 0 | Major: 3, Minor: 0 | 2026-04-20 | ✅ Safe |
@@ -302,7 +305,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | CPH2649_16.0.9.402(EX01)<br><details><summary>MD5</summary><code>5f1e9815a8171f76d276fe160b26c8b7</code></details> | 1 | Major: 3, Minor: 0 | 2026-07-28 | ❌ Protected |
 | CPH2649_16.0.9.401(EX01)<br><details><summary>MD5</summary><code>83949d825358fae6d52acdfa2c9bdaca</code></details> | 1 | Major: 3, Minor: 0 | 2026-07-23 | ❌ Protected |
 | CPH2649_16.0.8.301(EX01)<br><details><summary>MD5</summary><code>1a3a1364e8ed5bae71a0bab4008b0485</code></details> | 1 | Major: 3, Minor: 0 | 2026-07-13 | ❌ Protected |
-| CPH2649_16.0.7.201(EX01)<br><details><summary>MD5</summary><code>5d9c6f88d64fff22d6f6ca659e4dfc1f</code></details> | 1 | Major: 3, Minor: 0 | 2026-06-12 | ❌ Protected |
+| CPH2649_16.0.7.201(EX01)<br><details><summary>MD5</summary><code>5d9c6f88d64fff22d6f6ca659e4dfc1f</code></details> | 1 | Major: 3, Minor: 0 | 2026-11-08 | ❌ Protected |
 | CPH2649_16.0.5.703(EX01)<br><details><summary>MD5</summary><code>0efa2594bf5466c84bafd4e19073d95e</code></details> | 1 | Major: 3, Minor: 0 | 2026-05-14 | ❌ Protected |
 | CPH2649_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>6998133c921d754bf06e693455aabcdc</code></details> | 1 | Major: 3, Minor: 0 | 2026-04-13 | ❌ Protected |
 | CPH2649_16.0.3.501(EX01)<br><details><summary>MD5</summary><code>c5987fd6c9052e39b5dce573883b2f97</code></details> | 1 | Major: 3, Minor: 0 | 2026-03-16 | ❌ Protected |
@@ -332,7 +335,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | PJZ110_16.0.9.402(CN01)<br><details><summary>MD5</summary><code>3d1b183bf4edd4f785675c6e5f770a69</code></details> | 1 | Major: 3, Minor: 0 | 2026-07-29 | ❌ Protected |
 | PJZ110_16.0.9.401(CN01)<br><details><summary>MD5</summary><code>d5a4233c25e2890a70909fc5eff74d7b</code></details> | 1 | Major: 3, Minor: 0 | 2026-11-08 | ❌ Protected |
 | PJZ110_16.0.8.301(CN01)<br><details><summary>MD5</summary><code>498a7b0a15616fcfec77416681bda790</code></details> | 1 | Major: 3, Minor: 0 | 2026-07-09 | ❌ Protected |
-| PJZ110_16.0.7.201(CN01)<br><details><summary>MD5</summary><code>afc5eb1ec721995687d4f27833d0f8e0</code></details> | 1 | Major: 3, Minor: 0 | 2026-06-10 | ❌ Protected |
+| PJZ110_16.0.7.201(CN01)<br><details><summary>MD5</summary><code>afc5eb1ec721995687d4f27833d0f8e0</code></details> | 1 | Major: 3, Minor: 0 | 2026-11-08 | ❌ Protected |
 | PJZ110_16.0.5.703(CN01)<br><details><summary>MD5</summary><code>2cc8031b2589dd4e80bd3c93326c7c7e</code></details> | 1 | Major: 3, Minor: 0 | 2026-05-11 | ❌ Protected |
 | PJZ110_16.0.5.702(CN01)<br><details><summary>MD5</summary><code>e79027edfae91a2594e965cc21b14f99</code></details> | 1 | Major: 3, Minor: 0 | 2026-04-13 | ❌ Protected |
 | PJZ110_16.0.5.701(CN01)<br><details><summary>MD5</summary><code>552380013ed612435e17774068d3dc38</code></details> | 1 | Major: 3, Minor: 0 | 2026-04-08 | ❌ Protected |
@@ -351,7 +354,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
-| Global | CPH2645 | CPH2645_16.0.10.600(EX01)<br><details><summary>MD5</summary><code>4798301016a2e1bc344cda05afdfcedb</code></details> | **1** | Major: 3, Minor: 0 | 2026-10-09 | ❌ Protected |
+| Global | CPH2645 | CPH2645_16.0.10.600(EX01)<br><details><summary>MD5</summary><code>4798301016a2e1bc344cda05afdfcedb</code></details> | **1** | Major: 3, Minor: 0 | 2026-11-08 | ❌ Protected |
 | Europe | CPH2645 | CPH2645_16.0.10.600(EX01)<br><details><summary>MD5</summary><code>e14b0041b27009b22d236384ef0ddd81</code></details> | **1** | Major: 3, Minor: 0 | 2026-10-09 | ❌ Protected |
 | India | CPH2691 | CPH2691_17.0.0.105(EX01)<br><details><summary>MD5</summary><code>cdf9aad40830604d9df60100a1778ef7</code></details> | **1** | Major: 3, Minor: 0 | 2026-10-31 | ❌ Protected |
 
@@ -379,7 +382,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
 | CPH2645_16.0.10.500(EX01)<br><details><summary>MD5</summary><code>6712affef7e15d5a299f9495b705ebfc</code></details> | 1 | Major: 3, Minor: 0 | 2026-11-08 | ❌ Protected |
-| CPH2645_16.0.9.402(EX01)<br><details><summary>MD5</summary><code>62695bbacbf3641df51d90153dc54ca5</code></details> | 1 | Major: 3, Minor: 0 | 2026-08-25 | ❌ Protected |
+| CPH2645_16.0.9.402(EX01)<br><details><summary>MD5</summary><code>62695bbacbf3641df51d90153dc54ca5</code></details> | 1 | Major: 3, Minor: 0 | 2026-11-08 | ❌ Protected |
 | CPH2645_16.0.8.300(EX01)<br><details><summary>MD5</summary><code>a469b61ea31dfee26862bda588f080b9</code></details> | 1 | Major: 3, Minor: 0 | 2026-07-27 | ❌ Protected |
 | CPH2645_16.0.7.200(EX01)<br><details><summary>MD5</summary><code>d349dd131a05357bb753dd8dbb459144</code></details> | 1 | Major: 3, Minor: 0 | 2026-06-26 | ❌ Protected |
 | CPH2645_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>3ba2218f9e855815653d54839f50fa66</code></details> | 1 | Major: 3, Minor: 0 | 2026-05-28 | ❌ Protected |
@@ -388,6 +391,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | CPH2645_15.0.0.871(EX01)<br><details><summary>MD5</summary><code>72c84c0f77618a85dd483d7eb3561530</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-13 | ✅ Safe |
 | CPH2645_15.0.0.860(EX01)<br><details><summary>MD5</summary><code>901792cb15c4e43d6e5a1eeabe3ba91d</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-25 | ✅ Safe |
 | CPH2645_15.0.0.850(EX01)<br><details><summary>MD5</summary><code>c03cfe25321e8451076f4322708b5458</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-10 | ✅ Safe |
+| CPH2645_15.0.0.840(EX01)<br><details><summary>MD5</summary><code>c0a7c5363c15bb31d5bcca7553f7f4c9</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
 
 </details>
 
@@ -427,13 +431,15 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | PKX110_16.0.10.500(CN01)<br><details><summary>MD5</summary><code>918612b11b727fb05d9c6190ce1cd8d1</code></details> | 1 | Major: 3, Minor: 0 | 2026-11-08 | ❌ Protected |
 | PKX110_16.0.9.401(CN01)<br><details><summary>MD5</summary><code>782c1416f4fb1a3b7d52e98c483789e0</code></details> | 1 | Major: 3, Minor: 0 | 2026-07-31 | ❌ Protected |
 | PKX110_16.0.9.400(CN01)<br><details><summary>MD5</summary><code>7e9067d6127a8d33169b323d1ee4c83c</code></details> | 1 | Major: 3, Minor: 0 | 2026-08-06 | ❌ Protected |
-| PKX110_16.0.8.300(CN01)<br><details><summary>MD5</summary><code>d8b8d35fefb789920721e38a5edcea12</code></details> | 1 | Major: 3, Minor: 0 | 2026-07-08 | ❌ Protected |
+| PKX110_16.0.8.300(CN01)<br><details><summary>MD5</summary><code>d8b8d35fefb789920721e38a5edcea12</code></details> | 1 | Major: 3, Minor: 0 | 2026-11-08 | ❌ Protected |
 | PKX110_16.0.7.200(CN01)<br><details><summary>MD5</summary><code>3f0a11f9d7b23d4646a345921919a719</code></details> | 1 | Major: 3, Minor: 0 | 2026-06-09 | ❌ Protected |
 | PKX110_16.0.5.701(CN01)<br><details><summary>MD5</summary><code>77e2399108c694805d711231570bc2dc</code></details> | 1 | Major: 3, Minor: 0 | 2026-05-11 | ❌ Protected |
 | PKX110_16.0.3.502(CN01)<br><details><summary>MD5</summary><code>cd9a0b7b1b34f2402637f07ad93c9639</code></details> | 1 | Major: 3, Minor: 0 | 2026-03-11 | ❌ Protected |
 | PKX110_16.0.3.501(CN01)<br><details><summary>MD5</summary><code>4b08985d35a0fa74c5041ac96d5efb0b</code></details> | 1 | Major: 3, Minor: 0 | 2026-03-11 | ❌ Protected |
 | PKX110_16.0.2.400(CN01)<br><details><summary>MD5</summary><code>9e24382675ed8ca6fede1da4b69043f7</code></details> | 0 | Major: 3, Minor: 0 | 2026-04-20 | ✅ Safe |
 | PKX110_16.0.1.301(CN01)<br><details><summary>MD5</summary><code>77b376681c8ac0a7a4d1a65e0a6b12f5</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-11 | ✅ Safe |
+| PKX110_16.0.0.213(CN01)<br><details><summary>MD5</summary><code>e6d61fc87ad841d90922b0703ea79d14</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
+| PKX110_16.0.0.212(CN01)<br><details><summary>MD5</summary><code>7586a65e4c837f84e913e9de040c3ad0</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
 
 </details>
 
@@ -457,7 +463,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | CPH2723_16.0.9.400(EX01)<br><details><summary>MD5</summary><code>cfd062e1bdae9086d9f587c9e6c2b84c</code></details> | 1 | Major: 3, Minor: 0 | 2026-07-23 | ❌ Protected |
 | CPH2723_16.0.8.301(EX01)<br><details><summary>MD5</summary><code>d3207cb91375529ce63c57b0e8c8ac1c</code></details> | 1 | Major: 3, Minor: 0 | 2026-07-13 | ❌ Protected |
 | CPH2723_16.0.7.200(EX01)<br><details><summary>MD5</summary><code>464bf8a0901693b5540818d5f59ce50f</code></details> | 1 | Major: 3, Minor: 0 | 2026-06-12 | ❌ Protected |
-| CPH2723_16.0.5.700(EX01)<br><details><summary>MD5</summary><code>7352d39b42bef6e0bc79263925e4df51</code></details> | 1 | Major: 3, Minor: 0 | 2026-05-14 | ❌ Protected |
+| CPH2723_16.0.5.700(EX01)<br><details><summary>MD5</summary><code>7352d39b42bef6e0bc79263925e4df51</code></details> | 1 | Major: 3, Minor: 0 | 2026-11-08 | ❌ Protected |
 | CPH2723_16.0.3.501(EX01)<br><details><summary>MD5</summary><code>8d3c3d88720a2097c02e7de193a9d969</code></details> | 1 | Major: 3, Minor: 0 | 2026-03-13 | ❌ Protected |
 | CPH2723_16.0.2.400(EX01)<br><details><summary>MD5</summary><code>83966b4ce06e0839f885db0f1f32d674</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-18 | ✅ Safe |
 | CPH2723_16.0.1.303(EX01)<br><details><summary>MD5</summary><code>7f19055c5ac85499a884c510e6494423</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-12 | ✅ Safe |
@@ -520,7 +526,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 |:---|:---|:---|:---|:---|:---|:---|
 | Global | CPH2581 | CPH2581_16.0.10.601(EX01)<br><details><summary>MD5</summary><code>cb100dbc743a6dae1d69036352db7421</code></details> | **1** | Major: 3, Minor: 0 | 2026-10-27 | ❌ Protected |
 | Europe | CPH2581 | CPH2581_16.0.10.601(EX01)<br><details><summary>MD5</summary><code>54198f0ee0efc9b43851533bd8774349</code></details> | **1** | Major: 3, Minor: 0 | 2026-10-28 | ❌ Protected |
-| India | CPH2573 | CPH2573_16.0.10.601(EX01)<br><details><summary>MD5</summary><code>fbcae7dce301894b58311b1382ee70d4</code></details> | **1** | Major: 3, Minor: 0 | 2026-10-23 | ❌ Protected |
+| India | CPH2573 | CPH2573_16.0.10.601(EX01)<br><details><summary>MD5</summary><code>fbcae7dce301894b58311b1382ee70d4</code></details> | **1** | Major: 3, Minor: 0 | 2026-11-08 | ❌ Protected |
 | China | PJD110 | PJD110_16.0.10.501(CN01)<br><details><summary>MD5</summary><code>ec2001b7d8e6b945308f152aa773a26b</code></details> | **1** | Major: 3, Minor: 0 | 2026-08-25 | ❌ Protected |
 
 <details>
@@ -533,7 +539,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | CPH2581_16.0.8.300(EX01)<br><details><summary>MD5</summary><code>e8cb484c5244a14546ebee3470cf6ec6</code></details> | 1 | Major: 3, Minor: 0 | 2026-11-08 | ❌ Protected |
 | CPH2581_16.0.7.200(EX01)<br><details><summary>MD5</summary><code>abb18c3a33d3a1e9695e09c11cf8b2ba</code></details> | 1 | Major: 3, Minor: 0 | 2026-06-29 | ❌ Protected |
 | CPH2581_16.0.5.702(EX01)<br><details><summary>MD5</summary><code>7d46f0c9123feec1c4d06e9e61133c52</code></details> | 1 | Major: 3, Minor: 0 | 2026-05-26 | ❌ Protected |
-| CPH2581_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>3386a9f7548f18e9cda8558ca851a059</code></details> | 1 | Major: 3, Minor: 0 | 2026-03-25 | ❌ Protected |
+| CPH2581_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>3386a9f7548f18e9cda8558ca851a059</code></details> | 1 | Major: 3, Minor: 0 | 2026-11-08 | ❌ Protected |
 | CPH2581_16.0.0.201(EX01)<br><details><summary>MD5</summary><code>15ba498ef524eea6e173a53e390054ec</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-26 | ✅ Safe |
 | CPH2581_15.0.0.863(EX01)<br><details><summary>MD5</summary><code>e4e38d8a69fec1e73ee3b897027597f0</code></details> | 0 | Major: 3, Minor: 0 | 2026-04-20 | ✅ Safe |
 | CPH2581_15.0.0.204(EX01)<br><details><summary>MD5</summary><code>f9034c616e472c4e4e097da203fede90</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-18 | ✅ Safe |
@@ -582,7 +588,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
-| PJD110_16.0.9.400(CN01)<br><details><summary>MD5</summary><code>622d110ed6f4cf0da0e3fa851dd23e10</code></details> | 1 | Major: 3, Minor: 0 | 2026-08-13 | ❌ Protected |
+| PJD110_16.0.9.400(CN01)<br><details><summary>MD5</summary><code>622d110ed6f4cf0da0e3fa851dd23e10</code></details> | 1 | Major: 3, Minor: 0 | 2026-11-08 | ❌ Protected |
 | PJD110_16.0.8.300(CN01)<br><details><summary>MD5</summary><code>0297c653bff9a7c5089f96b01d7dab9b</code></details> | 1 | Major: 3, Minor: 0 | 2026-11-08 | ❌ Protected |
 | PJD110_16.0.7.200(CN01)<br><details><summary>MD5</summary><code>0c4bc856af72aa6f8c07523945b5d827</code></details> | 1 | Major: 3, Minor: 0 | 2026-06-26 | ❌ Protected |
 | PJD110_16.0.5.702(CN01)<br><details><summary>MD5</summary><code>f367c5627baa0880b3101814c5315da8</code></details> | 1 | Major: 3, Minor: 0 | 2026-05-25 | ❌ Protected |
@@ -680,7 +686,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | CPH2449_16.0.5.1002(EX01)<br><details><summary>MD5</summary><code>15e2d68a9e5324ee838a38b97052a105</code></details> | 0 | Major: 2, Minor: 0 | 2026-11-08 | ✅ Safe |
 | CPH2449_16.0.5.702(EX01)<br><details><summary>MD5</summary><code>c54333bf7dabad17649dbea39fb56fd6</code></details> | 0 | Major: 2, Minor: 0 | 2026-07-27 | ✅ Safe |
 | CPH2449_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>5d8b993a4940e0e315053b2c126c851e</code></details> | 0 | Major: 2, Minor: 0 | 2026-05-25 | ✅ Safe |
-| CPH2449_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>9db981106445969885335a2d35cfda5f</code></details> | 0 | Major: 2, Minor: 0 | 2026-04-28 | ✅ Safe |
+| CPH2449_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>9db981106445969885335a2d35cfda5f</code></details> | 0 | Major: 2, Minor: 0 | 2026-11-08 | ✅ Safe |
 | CPH2449_16.0.2.401(EX01)<br><details><summary>MD5</summary><code>7f3b8a402aaba42654f4b23aa3065120</code></details> | 0 | Major: 2, Minor: 0 | 2026-02-25 | ✅ Safe |
 | CPH2449_16.0.2.400(EX01)<br><details><summary>MD5</summary><code>3a0e1f9b1288270b6a9339d36e91012b</code></details> | 0 | Major: 2, Minor: 0 | 2026-02-04 | ✅ Safe |
 | CPH2449_15.0.0.862(EX01)<br><details><summary>MD5</summary><code>005720cd3a7ed022c504ea46aa08b108</code></details> | 0 | Major: 2, Minor: 0 | 2026-09-16 | ✅ Safe |
@@ -698,7 +704,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | CPH2447_16.0.5.1002(EX01)<br><details><summary>MD5</summary><code>abd92f7936e783edf34499cf52c77857</code></details> | 0 | Major: 2, Minor: 0 | 2026-11-08 | ✅ Safe |
 | CPH2447_16.0.5.702(EX01)<br><details><summary>MD5</summary><code>d2c6f81214c200eb98e29e6918ecd136</code></details> | 0 | Major: 2, Minor: 0 | 2026-07-22 | ✅ Safe |
 | CPH2447_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>d8c3b0ea8b41f132e45951a5a586e4dc</code></details> | 0 | Major: 2, Minor: 0 | 2026-05-13 | ✅ Safe |
-| CPH2447_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>f98c5382db9a4486355e5fa4e7979abd</code></details> | 0 | Major: 2, Minor: 0 | 2026-04-20 | ✅ Safe |
+| CPH2447_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>f98c5382db9a4486355e5fa4e7979abd</code></details> | 0 | Major: 2, Minor: 0 | 2026-11-08 | ✅ Safe |
 | CPH2447_16.0.2.400(EX01) | 0 | Major: 2, Minor: 0 | 2026-02-04 | ✅ Safe |
 | CPH2447_16.0.1.300(EX01)<br><details><summary>MD5</summary><code>642d05f8e9f90941d039053fb2ef9a20</code></details> | 0 | Major: 2, Minor: 0 | 2026-04-20 | ✅ Safe |
 | CPH2447_15.0.0.862(EX01)<br><details><summary>MD5</summary><code>c0debf3a37dea71b0155a97781de08b4</code></details> | 0 | Major: 2, Minor: 0 | 2026-07-28 | ✅ Safe |
@@ -715,7 +721,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
-| India | CPH2487 | CPH2487_16.0.5.1301(EX01)<br><details><summary>MD5</summary><code>e55860b7e3b8384f282736e778ae2022</code></details> | **0** | Major: 2, Minor: 0 | 2026-10-28 | ✅ Safe |
+| India | CPH2487 | CPH2487_16.0.5.1301(EX01)<br><details><summary>MD5</summary><code>e55860b7e3b8384f282736e778ae2022</code></details> | **0** | Major: 2, Minor: 0 | 2026-11-08 | ✅ Safe |
 
 <details>
 <summary>📜 <b>India History</b> (click to expand)</summary>
@@ -784,7 +790,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
 | NE2211_16.0.3.530(EX01)<br><details><summary>MD5</summary><code>88e0e6108203a30e4c5ad43319e67e37</code></details> | 0 | Major: 2, Minor: 0 | 2026-11-08 | ✅ Safe |
-| NE2211_16.0.3.520(EX01)<br><details><summary>MD5</summary><code>46f577fb0b2656d629b5993c3a7762e3</code></details> | 0 | Major: 2, Minor: 0 | 2026-06-24 | ✅ Safe |
+| NE2211_16.0.3.520(EX01)<br><details><summary>MD5</summary><code>46f577fb0b2656d629b5993c3a7762e3</code></details> | 0 | Major: 2, Minor: 0 | 2026-11-08 | ✅ Safe |
 | NE2211_16.0.3.510(EX01)<br><details><summary>MD5</summary><code>6789b9fa5b12cea96885ed118c29cf7b</code></details> | 0 | Major: 2, Minor: 0 | 2026-03-17 | ✅ Safe |
 | NE2211_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>c55ab503dde1551ecd950c06b01dae79</code></details> | 0 | Major: 2, Minor: 0 | 2026-04-20 | ✅ Safe |
 | NE2211_15.0.0.1302(EX01)<br><details><summary>MD5</summary><code>7ff5b88637be13d09bae0b4fa1c7cf99</code></details> | 0 | Major: 2, Minor: 0 | 2026-02-25 | ✅ Safe |
@@ -800,7 +806,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
-| NE2210_16.0.3.520(CN01)<br><details><summary>MD5</summary><code>15182e9d311e30866a5a5c0f526193cf</code></details> | 0 | Major: 2, Minor: 0 | 2026-06-15 | ✅ Safe |
+| NE2210_16.0.3.520(CN01)<br><details><summary>MD5</summary><code>15182e9d311e30866a5a5c0f526193cf</code></details> | 0 | Major: 2, Minor: 0 | 2026-11-08 | ✅ Safe |
 | NE2210_15.0.0.1301(CN01)<br><details><summary>MD5</summary><code>d1b71c63550e15270a3580cf7220e927</code></details> | 0 | Major: 2, Minor: 0 | 2026-05-25 | ✅ Safe |
 | NE2210_15.0.0.1202(CN01)<br><details><summary>MD5</summary><code>851094bc9f6829aae556cb124ae35a55</code></details> | 0 | Major: 2, Minor: 0 | 2026-04-20 | ✅ Safe |
 | NE2210_15.0.0.700(CN01)<br><details><summary>MD5</summary><code>83bfd50e3b49ebc8c73a3fa7f7ddae50</code></details> | 0 | Major: 2, Minor: 0 | 2026-02-25 | ✅ Safe |
@@ -1016,7 +1022,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 |:---|:---|:---|:---|:---|
 | CPH2795_16.0.5.1200(EX01)<br><details><summary>MD5</summary><code>f8c056c2b3a30078cb075d34a4a7d27b</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
 | CPH2795_16.0.5.1000(EX01)<br><details><summary>MD5</summary><code>f0e18b986114a272fe3997826793f0da</code></details> | 0 | Major: 3, Minor: 0 | 2026-07-28 | ✅ Safe |
-| CPH2795_16.0.5.901(EX01)<br><details><summary>MD5</summary><code>975298d2a1d4c43a8893b0909c9ff07d</code></details> | 0 | Major: 3, Minor: 0 | 2026-06-23 | ✅ Safe |
+| CPH2795_16.0.5.901(EX01)<br><details><summary>MD5</summary><code>975298d2a1d4c43a8893b0909c9ff07d</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
 | CPH2795_16.0.5.702(EX01)<br><details><summary>MD5</summary><code>216d050ba61dd08735ce101fe68f26f4</code></details> | 0 | Major: 3, Minor: 0 | 2026-05-27 | ✅ Safe |
 | CPH2795_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>5ba3f5cd1ed9d4208d038c7811ffb3a2</code></details> | 0 | Major: 3, Minor: 0 | 2026-04-28 | ✅ Safe |
 
@@ -1031,7 +1037,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | CPH2793_16.0.5.1000(EX01)<br><details><summary>MD5</summary><code>5b4905ed21df9b065f5a18a275d1fc83</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
 | CPH2793_16.0.5.901(EX01)<br><details><summary>MD5</summary><code>0a03056a6010d1bbfc876f8e0590e46d</code></details> | 0 | Major: 3, Minor: 0 | 2026-06-23 | ✅ Safe |
 | CPH2793_16.0.5.702(EX01)<br><details><summary>MD5</summary><code>c69e38c64e0a5cb3d6ebb81be977e068</code></details> | 0 | Major: 3, Minor: 0 | 2026-05-28 | ✅ Safe |
-| CPH2793_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>56285eae96225639455ced95c7228801</code></details> | 0 | Major: 3, Minor: 0 | 2026-04-27 | ✅ Safe |
+| CPH2793_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>56285eae96225639455ced95c7228801</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
 
 </details>
 
@@ -1053,7 +1059,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 |:---|:---|:---|:---|:---|
 | CPH2709_16.0.5.1201(EX01)<br><details><summary>MD5</summary><code>8704f6d3634aedb81bc88720a7f86e43</code></details> | 0 | Major: 3, Minor: 0 | 2026-08-24 | ✅ Safe |
 | CPH2709_16.0.5.1002(EX01)<br><details><summary>MD5</summary><code>16502d986f9e32425c10097d126e0936</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
-| CPH2709_16.0.5.710(EX01)<br><details><summary>MD5</summary><code>0007c6da68a5fe81f3328362517b1552</code></details> | 0 | Major: 3, Minor: 0 | 2026-06-10 | ✅ Safe |
+| CPH2709_16.0.5.710(EX01)<br><details><summary>MD5</summary><code>0007c6da68a5fe81f3328362517b1552</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
 | CPH2709_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>1fa0ad252c46d6ccdc9699a4f331bbd4</code></details> | 0 | Major: 3, Minor: 0 | 2026-04-20 | ✅ Safe |
 | CPH2709_16.0.2.400(EX01)<br><details><summary>MD5</summary><code>215ac417ec05bafcd5d2c8afe8fa140f</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-28 | ✅ Safe |
 | CPH2709_16.0.1.300(EX01)<br><details><summary>MD5</summary><code>e897c75b850e4acbb9a6556d541bc3b7</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-22 | ✅ Safe |
@@ -1068,7 +1074,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 |:---|:---|:---|:---|:---|
 | CPH2709_16.0.5.1201(EX01)<br><details><summary>MD5</summary><code>032bcf41fc536e2d733968f1c5f56e8e</code></details> | 0 | Major: 3, Minor: 0 | 2026-09-25 | ✅ Safe |
 | CPH2709_16.0.5.1002(EX01)<br><details><summary>MD5</summary><code>1197aaa3eaf341c7fcae6b251346d315</code></details> | 0 | Major: 3, Minor: 0 | 2026-10-08 | ✅ Safe |
-| CPH2709_16.0.5.710(EX01)<br><details><summary>MD5</summary><code>fe7c98015d682710d8934ebadd6f8a50</code></details> | 0 | Major: 3, Minor: 0 | 2026-06-10 | ✅ Safe |
+| CPH2709_16.0.5.710(EX01)<br><details><summary>MD5</summary><code>fe7c98015d682710d8934ebadd6f8a50</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
 | CPH2709_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>d462744e077d08fab080ee7c54bbe2da</code></details> | 0 | Major: 3, Minor: 0 | 2026-04-20 | ✅ Safe |
 | CPH2709_16.0.2.400(EX01)<br><details><summary>MD5</summary><code>7988a8ec49273c093ed02b906deb20a1</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-28 | ✅ Safe |
 | CPH2709_16.0.1.300(EX01)<br><details><summary>MD5</summary><code>1c641f0b3c40922ba9f736d54a957c8a</code></details> | 0 | Major: 3, Minor: 0 | 2026-04-20 | ✅ Safe |
@@ -1109,7 +1115,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | CPH2663_16.0.5.702(EX01)<br><details><summary>MD5</summary><code>719bf704a10e3894ce2a5f95a124ab0e</code></details> | 0 | Major: 3, Minor: 0 | 2026-07-11 | ✅ Safe |
 | CPH2663_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>e64b6607ccb5361937039a6e10f34483</code></details> | 0 | Major: 3, Minor: 0 | 2026-05-19 | ✅ Safe |
 | CPH2663_16.0.2.401(EX01)<br><details><summary>MD5</summary><code>94c3d509d75d2cf2ef7ff546a19d12d2</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-25 | ✅ Safe |
-| CPH2663_16.0.1.301(EX01)<br><details><summary>MD5</summary><code>48c0cb97cbfe448d50b8f730236c8019</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-18 | ✅ Safe |
+| CPH2663_16.0.1.301(EX01)<br><details><summary>MD5</summary><code>48c0cb97cbfe448d50b8f730236c8019</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
 | CPH2663_15.0.0.401(EX01)<br><details><summary>MD5</summary><code>f35c38d521127a1cfb5be683711fa5db</code></details> | 0 | Major: 3, Minor: 0 | 2026-04-20 | ✅ Safe |
 | CPH2663_14.1.0.605(EX01)<br><details><summary>MD5</summary><code>89d7e0f18fe0b145fc3ab2e3430a5fea</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-13 | ✅ Safe |
 
@@ -1126,7 +1132,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | CPH2663_16.0.2.401(EX01)<br><details><summary>MD5</summary><code>0fabc357b219c3f26b48c8a688f5f2eb</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-27 | ✅ Safe |
 | CPH2663_16.0.1.301(EX01)<br><details><summary>MD5</summary><code>57c99d530f04ff66f78acbfce67fb509</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
 | CPH2663_15.0.0.1301(EX01)<br><details><summary>MD5</summary><code>fac4c9f584f53d2e05315a980ee2eded</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-25 | ✅ Safe |
-| CPH2663_15.0.0.401(EX01)<br><details><summary>MD5</summary><code>a2a5e83b73bc395eac686d6c6516ace8</code></details> | 0 | Major: 3, Minor: 0 | 2026-04-20 | ✅ Safe |
+| CPH2663_15.0.0.401(EX01)<br><details><summary>MD5</summary><code>a2a5e83b73bc395eac686d6c6516ace8</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
 | CPH2663_14.1.0.605(EX01)<br><details><summary>MD5</summary><code>ec7efaa59e89c06a1e4f433f955235ac</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-10 | ✅ Safe |
 
 </details>
@@ -1141,7 +1147,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | CPH2661_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>6352d9d637f01ddfb574d13c412c3cae</code></details> | 0 | Major: 3, Minor: 0 | 2026-05-18 | ✅ Safe |
 | CPH2661_16.0.5.700(EX01)<br><details><summary>MD5</summary><code>f4d9b971fe52613b02edfe8225e86c95</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-23 | ✅ Safe |
 | CPH2661_16.0.2.401(EX01)<br><details><summary>MD5</summary><code>99f21627efd3fddd4b4ba184030f4319</code></details> | 0 | Major: 3, Minor: 0 | 2026-04-20 | ✅ Safe |
-| CPH2661_16.0.1.301(EX01)<br><details><summary>MD5</summary><code>187c8af4dc17c391be140f384b52044e</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-25 | ✅ Safe |
+| CPH2661_16.0.1.301(EX01)<br><details><summary>MD5</summary><code>187c8af4dc17c391be140f384b52044e</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
 | CPH2661_15.0.0.401(EX01)<br><details><summary>MD5</summary><code>5974618c636bad07afbaf4cbbabe3646</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-18 | ✅ Safe |
 | CPH2661_14.1.0.603(EX01)<br><details><summary>MD5</summary><code>c951f7927e020df08932ba8aaf1db309</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-26 | ✅ Safe |
 
@@ -1395,7 +1401,8 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | PLR110_16.0.3.501(CN01)<br><details><summary>MD5</summary><code>adc7d4b44fd3c7dcb0bea4a13c78e098</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-18 | ✅ Safe |
 | PLR110_16.0.2.403(CN01)<br><details><summary>MD5</summary><code>aced29f4184f9065781679b9008375f9</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-04 | ✅ Safe |
 | PLR110_16.0.2.402(CN01)<br><details><summary>MD5</summary><code>273266741cdbcad2217c4c3d256a1853</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-13 | ✅ Safe |
-| PLR110_16.0.1.308(CN01)<br><details><summary>MD5</summary><code>6849eca4f011cbfc58b340dff6f6a434</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-25 | ✅ Safe |
+| PLR110_16.0.1.308(CN01)<br><details><summary>MD5</summary><code>6849eca4f011cbfc58b340dff6f6a434</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
+| PLR110_16.0.1.306(CN01)<br><details><summary>MD5</summary><code>f84d18dcf66d28b52ad061d84e6f5f06</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
 
 </details>
 
@@ -1427,6 +1434,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | PLQ110_16.0.2.402(CN01)<br><details><summary>MD5</summary><code>0b170c8300f4f7f77e52c4853bcef5bc</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-18 | ✅ Safe |
 | PLQ110_16.0.1.302(CN01)<br><details><summary>MD5</summary><code>22b21e9abf8974ea27e0714b21cefefc</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-13 | ✅ Safe |
 | PLQ110_16.0.0.207(CN01)<br><details><summary>MD5</summary><code>8204d55061bfa575e58c18a0de3622aa</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-25 | ✅ Safe |
+| PLQ110_16.0.0.205(CN01)<br><details><summary>MD5</summary><code>071eb65c14254e8acc8fc3c6b292e315</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
 
 </details>
 
@@ -1457,6 +1465,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | PKR110_16.0.1.300(CN01)<br><details><summary>MD5</summary><code>b8eca2908e26cf004d9a45601e97bf30</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-26 | ✅ Safe |
 | PKR110_16.0.0.204(CN01)<br><details><summary>MD5</summary><code>b4585916847bf6d7076783d68bcaffe9</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-10 | ✅ Safe |
 | PKR110_15.0.0.871(CN01)<br><details><summary>MD5</summary><code>0f44432e4b1ff820e1cd2e36da6058f7</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-13 | ✅ Safe |
+| PKR110_15.0.0.870(CN01)<br><details><summary>MD5</summary><code>1dbfdeb21b8373f6451097aafe6f6cae</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
 
 </details>
 
@@ -1502,7 +1511,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
-| PJX110_16.0.5.1001(CN01)<br><details><summary>MD5</summary><code>12acd5d1b01dc3a03fec06a9a4f1a9c3</code></details> | 1 | Major: 3, Minor: 0 | 2026-07-30 | ❌ Protected |
+| PJX110_16.0.5.1001(CN01)<br><details><summary>MD5</summary><code>12acd5d1b01dc3a03fec06a9a4f1a9c3</code></details> | 1 | Major: 3, Minor: 0 | 2026-11-08 | ❌ Protected |
 | PJX110_16.0.5.701(CN01)<br><details><summary>MD5</summary><code>7730a2a0baf2376a6bb857d9e9767c93</code></details> | 1 | Major: 3, Minor: 0 | 2026-08-06 | ❌ Protected |
 | PJX110_16.0.1.301(CN01)<br><details><summary>MD5</summary><code>171c22c558cc25e3624419a11a80a420</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
 | PJX110_15.0.0.861(CN01)<br><details><summary>MD5</summary><code>8b9af5316e75bf1a3332a3dae65deacf</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-10 | ✅ Safe |
@@ -1588,7 +1597,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
 | OPD2415_16.0.9.400(EX01)<br><details><summary>MD5</summary><code>ff553091027315b3409c3e434cfad4bd</code></details> | 1 | Major: 3, Minor: 0 | 2026-11-08 | ❌ Protected |
-| OPD2415_16.0.7.200(EX01)<br><details><summary>MD5</summary><code>6cb0ddd39d3488f1cb35f0cda85bfdbf</code></details> | 1 | Major: 3, Minor: 0 | 2026-07-24 | ❌ Protected |
+| OPD2415_16.0.7.200(EX01)<br><details><summary>MD5</summary><code>6cb0ddd39d3488f1cb35f0cda85bfdbf</code></details> | 1 | Major: 3, Minor: 0 | 2026-11-08 | ❌ Protected |
 | OPD2415_16.0.5.700(EX01)<br><details><summary>MD5</summary><code>efad8cb2b8e9024919366bd0699c934f</code></details> | 1 | Major: 3, Minor: 0 | 2026-05-25 | ❌ Protected |
 | OPD2415_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>2a9096260fd856ede66700ddf207b49b</code></details> | 1 | Major: 3, Minor: 0 | 2026-03-26 | ❌ Protected |
 | OPD2415_16.0.1.302(EX01)<br><details><summary>MD5</summary><code>9dbeb1decd4e820a95dd6c8ecf68b87e</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-10 | ✅ Safe |
@@ -1604,7 +1613,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | OPD2415_16.0.9.400(EX01)<br><details><summary>MD5</summary><code>de27a12f3d0894175dbe17a417c292ad</code></details> | 1 | Major: 3, Minor: 0 | 2026-09-09 | ❌ Protected |
 | OPD2415_16.0.7.200(EX01)<br><details><summary>MD5</summary><code>c57a11ff5570b3f26687d9babc3193b7</code></details> | 1 | Major: 3, Minor: 0 | 2026-11-08 | ❌ Protected |
 | OPD2415_16.0.5.700(EX01)<br><details><summary>MD5</summary><code>8f4c4c2d5cc38455bf74e3f20c0884b2</code></details> | 1 | Major: 3, Minor: 0 | 2026-05-18 | ❌ Protected |
-| OPD2415_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>f04541e8fba46fe4b066b7f7deaa0334</code></details> | 1 | Major: 3, Minor: 0 | 2026-03-25 | ❌ Protected |
+| OPD2415_16.0.3.500(EX01)<br><details><summary>MD5</summary><code>f04541e8fba46fe4b066b7f7deaa0334</code></details> | 1 | Major: 3, Minor: 0 | 2026-11-08 | ❌ Protected |
 | OPD2415_16.0.1.302(EX01)<br><details><summary>MD5</summary><code>ed72adfd06e1f9684e051be6fc797d02</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-18 | ✅ Safe |
 | OPD2415_16.0.0.211(EX01)<br><details><summary>MD5</summary><code>31422d40cca779e619e20aec05910e61</code></details> | 0 | Major: 3, Minor: 0 | 2026-04-20 | ✅ Safe |
 
@@ -1637,7 +1646,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | OPD2413_16.0.8.300(CN01)<br><details><summary>MD5</summary><code>2681c6c59925c4cf41efeb658f765afe</code></details> | 1 | Major: 3, Minor: 0 | 2026-07-14 | ❌ Protected |
 | OPD2413_16.0.7.200(CN01)<br><details><summary>MD5</summary><code>f6a77eeb8ff0270c4f557d84999d4891</code></details> | 1 | Major: 3, Minor: 0 | 2026-06-15 | ❌ Protected |
 | OPD2413_16.0.3.501(CN01)<br><details><summary>MD5</summary><code>7af2eda10018ec1b4c0d66b1df258e55</code></details> | 0 | Major: 3, Minor: 0 | 2026-05-22 | ✅ Safe |
-| OPD2413_16.0.2.400(CN01)<br><details><summary>MD5</summary><code>d91040afb739f2b5b119cc9cc585a7c9</code></details> | 0 | Major: 3, Minor: 0 | 2026-04-20 | ✅ Safe |
+| OPD2413_16.0.2.400(CN01)<br><details><summary>MD5</summary><code>d91040afb739f2b5b119cc9cc585a7c9</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
 | OPD2413_16.0.1.301(CN01)<br><details><summary>MD5</summary><code>a29d0fc70c772358d489097213b8e2ad</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-26 | ✅ Safe |
 | OPD2413_15.0.1.801(CN01)<br><details><summary>MD5</summary><code>92b47da43846054c6906e8d5fb78c1a2</code></details> | 0 | Major: 3, Minor: 0 | 2026-02-25 | ✅ Safe |
 
@@ -1672,7 +1681,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
 | OPD2403_16.0.5.1002(EX01)<br><details><summary>MD5</summary><code>0a1df6596f371b7bbd675e7496058880</code></details> | 1 | Major: 3, Minor: 0 | 2026-09-09 | ❌ Protected |
-| OPD2403_16.0.5.702(EX01)<br><details><summary>MD5</summary><code>932d5fd69517e240ac78d907cb851051</code></details> | 1 | Major: 3, Minor: 0 | 2026-07-27 | ❌ Protected |
+| OPD2403_16.0.5.702(EX01)<br><details><summary>MD5</summary><code>932d5fd69517e240ac78d907cb851051</code></details> | 1 | Major: 3, Minor: 0 | 2026-11-08 | ❌ Protected |
 | OPD2403_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>995d3095adbd8be28edf59e85c3d29e0</code></details> | 1 | Major: 3, Minor: 0 | 2026-05-20 | ❌ Protected |
 | OPD2403_16.0.3.501(EX01)<br><details><summary>MD5</summary><code>8440c19505c47de99a60f66a9daa8d17</code></details> | 1 | Major: 3, Minor: 0 | 2026-04-20 | ❌ Protected |
 | OPD2403_16.0.0.202(EX01)<br><details><summary>MD5</summary><code>8e31a7ea8e1c47112de078f2e8b5644c</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-18 | ✅ Safe |
@@ -1688,7 +1697,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | OPD2403_16.0.5.702(EX01)<br><details><summary>MD5</summary><code>2656de07da8debe1664be8d63cca8492</code></details> | 1 | Major: 3, Minor: 0 | 2026-11-08 | ❌ Protected |
 | OPD2403_16.0.5.701(EX01)<br><details><summary>MD5</summary><code>81159aae331be32f00155760c8b14b14</code></details> | 1 | Major: 3, Minor: 0 | 2026-05-19 | ❌ Protected |
 | OPD2403_16.0.3.501(EX01)<br><details><summary>MD5</summary><code>b549aa2ee70831834ff52baada2f91f0</code></details> | 1 | Major: 3, Minor: 0 | 2026-04-20 | ❌ Protected |
-| OPD2403_16.0.1.301(EX01)<br><details><summary>MD5</summary><code>b45470fbeb6a785f32209d7711e37ffa</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-10 | ✅ Safe |
+| OPD2403_16.0.1.301(EX01)<br><details><summary>MD5</summary><code>b45470fbeb6a785f32209d7711e37ffa</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
 | OPD2403_16.0.0.202(EX01)<br><details><summary>MD5</summary><code>d3dd8401e908aa37be0d34921c04068e</code></details> | 0 | Major: 3, Minor: 0 | 2026-03-18 | ✅ Safe |
 
 </details>
@@ -1709,9 +1718,9 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | Asia Pacific | CPH2525 | CPH2525_15.0.0.1910(EX01)<br><details><summary>MD5</summary><code>c113501f1bbd9ad9e8099728aab000c0</code></details> | **0** | Major: 0, Minor: 120 | 2026-09-30 | ✅ Safe |
 | Oceania | CPH2525OCA | CPH2525_15.0.0.1910(EX01)<br><details><summary>MD5</summary><code>6032a687aed2e8eda721bb58f13ac626</code></details> | **0** | Major: 0, Minor: 120 | 2026-09-30 | ✅ Safe |
 | Saudi Arabia | CPH2525SA | CPH2525_15.0.0.1910(EX01)<br><details><summary>MD5</summary><code>ebac589ae3ea435b59eaf336293bc633</code></details> | **0** | Major: 0, Minor: 120 | 2026-09-30 | ✅ Safe |
+| Philippines | CPH2525PH | CPH2525_15.0.0.1910(EX01)<br><details><summary>MD5</summary><code>48649307f9012448b291dd003ed2b0b2</code></details> | **0** | Major: 0, Minor: 120 | 2026-09-30 | ✅ Safe |
 | India | CPH2525IN | CPH2525_13.1.1.147(EX01)<br><details><summary>MD5</summary><code>abb2a1ef3450621de3073f48d5215b19</code></details> | **0** | Major: 0, Minor: 120 | 2026-09-30 | ✅ Safe |
 | Middle East | CPH2525MEA | CPH2525_15.0.0.1910(EX01)<br><details><summary>MD5</summary><code>71c1c22334536ad3e63d20d7ffece5a8</code></details> | **0** | Major: 0, Minor: 120 | 2026-09-30 | ✅ Safe |
-| Philippines | CPH2525PH | CPH2525_15.0.0.1910(EX01)<br><details><summary>MD5</summary><code>48649307f9012448b291dd003ed2b0b2</code></details> | **0** | Major: 0, Minor: 120 | 2026-09-30 | ✅ Safe |
 
 <details>
 <summary>📜 <b>Singapore History</b> (click to expand)</summary>
@@ -1820,18 +1829,6 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 </details>
 
 <details>
-<summary>📜 <b>Middle East History</b> (click to expand)</summary>
-
-| Firmware Version | ARB | OEM Version | Last Seen | Safe |
-|:---|:---|:---|:---|:---|
-| CPH2525_15.0.0.1901(EX01)<br><details><summary>MD5</summary><code>666e479b07fe7e4443e58a5c1e61b1e5</code></details> | 0 | Major: 0, Minor: 120 | 2026-07-28 | ✅ Safe |
-| CPH2525_15.0.0.1801(EX01)<br><details><summary>MD5</summary><code>d6c541a6a7cbc905257da9f2c89370bf</code></details> | 0 | Major: 0, Minor: 120 | 2026-07-15 | ✅ Safe |
-| CPH2525_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>ae1e910b70f736368c2aec048b8f1d99</code></details> | 0 | Major: 0, Minor: 120 | 2026-05-28 | ✅ Safe |
-| CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>d75e6df459ee8ed050e99e143a9ffe1c</code></details> | 0 | Major: 0, Minor: 120 | 2026-03-27 | ✅ Safe |
-
-</details>
-
-<details>
 <summary>📜 <b>Philippines History</b> (click to expand)</summary>
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
@@ -1840,6 +1837,18 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | CPH2525_15.0.0.1801(EX01)<br><details><summary>MD5</summary><code>0ebdf90eae9d86caa8d112ba68565ed1</code></details> | 0 | Major: 0, Minor: 120 | 2026-07-01 | ✅ Safe |
 | CPH2525_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>8b682eb6bda3ae1adb3a75bbe4cea3ee</code></details> | 0 | Major: 0, Minor: 120 | 2026-05-25 | ✅ Safe |
 | CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>1f6e08b4926652d580b2fce0839b95f4</code></details> | 0 | Major: 0, Minor: 120 | 2026-03-25 | ✅ Safe |
+
+</details>
+
+<details>
+<summary>📜 <b>Middle East History</b> (click to expand)</summary>
+
+| Firmware Version | ARB | OEM Version | Last Seen | Safe |
+|:---|:---|:---|:---|:---|
+| CPH2525_15.0.0.1901(EX01)<br><details><summary>MD5</summary><code>666e479b07fe7e4443e58a5c1e61b1e5</code></details> | 0 | Major: 0, Minor: 120 | 2026-07-28 | ✅ Safe |
+| CPH2525_15.0.0.1801(EX01)<br><details><summary>MD5</summary><code>d6c541a6a7cbc905257da9f2c89370bf</code></details> | 0 | Major: 0, Minor: 120 | 2026-07-15 | ✅ Safe |
+| CPH2525_15.0.0.1603(EX01)<br><details><summary>MD5</summary><code>ae1e910b70f736368c2aec048b8f1d99</code></details> | 0 | Major: 0, Minor: 120 | 2026-05-28 | ✅ Safe |
+| CPH2525_15.0.0.1600(EX01)<br><details><summary>MD5</summary><code>d75e6df459ee8ed050e99e143a9ffe1c</code></details> | 0 | Major: 0, Minor: 120 | 2026-03-27 | ✅ Safe |
 
 </details>
 
@@ -1862,6 +1871,22 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | PKU110_16.0.10.501(CN01)<br><details><summary>MD5</summary><code>091269146c51db71da082907c39813ef</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
 | PKJ110_16.0.10.501(CN01)<br><details><summary>MD5</summary><code>bf9eea5ec1c3bf78918d79dbc2735398</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
 | PKU110_16.0.9.401(CN01)<br><details><summary>MD5</summary><code>0e9d216b4634a117eec5f0e66d889fef</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
+| PKJ110_16.0.9.401(CN01)<br><details><summary>MD5</summary><code>313ec4efe613405542a0f7ea407bd7c5</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
+| PKJ110_16.0.9.400(CN01)<br><details><summary>MD5</summary><code>49fc2db33b7d23f3ee367df05a079861</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
+| PKU110_16.0.9.400(CN01)<br><details><summary>MD5</summary><code>a03c8ef2d0f66b86674a0761d754da8b</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
+| PKU110_16.0.8.300(CN01)<br><details><summary>MD5</summary><code>5d178867bdd6a4d9a246ea5cf5ce810e</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
+| PKJ110_16.0.8.300(CN01)<br><details><summary>MD5</summary><code>7af0adb613466cb777a96c311e63f9c3</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
+| PKJ110_16.0.7.200(CN01)<br><details><summary>MD5</summary><code>2dfbaceba35ba1579c0e2abbc2529d19</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
+| PKU110_16.0.7.200(CN01)<br><details><summary>MD5</summary><code>882cdfa7d2d11d93ca1490f4534cef3e</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
+| PKJ110_16.0.3.500(CN01)<br><details><summary>MD5</summary><code>0f2a5043def5b99ae0903db69d932bff</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
+| PKU110_16.0.3.500(CN01)<br><details><summary>MD5</summary><code>6a3d1e81c66175fb5d96a5e8fb14b58a</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
+| PKU110_16.0.2.400(CN01)<br><details><summary>MD5</summary><code>e042339a7da51959fe282be90058b9ac</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
+| PKJ110_16.0.2.400(CN01)<br><details><summary>MD5</summary><code>d6133146502d44b3a9795d2686f0b06c</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
+| PKU110_16.0.1.301(CN01)<br><details><summary>MD5</summary><code>ed1c8881ce80db440b9e8c7f9e8930ad</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
+| PKJ110_16.0.1.301(CN01)<br><details><summary>MD5</summary><code>41e50bbe474aab4c7cfaf60eef6d218e</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
+| PKU110_16.0.0.212(CN01)<br><details><summary>MD5</summary><code>e7f05dde5b3680fc0cffd25ef26f557d</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
+| PKJ110_16.0.0.212(CN01)<br><details><summary>MD5</summary><code>3d758b4da350de2dca8a6825984d5486</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
+| PKU110_15.0.1.622(CN01)<br><details><summary>MD5</summary><code>3757532de82a0cb50256a0701438d868</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
 
 </details>
 
@@ -1878,7 +1903,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | Thailand | CPH2671 | CPH2671_17.0.0.100(EX01)<br><details><summary>MD5</summary><code>b617dfd534064d6ec663f01ae6682278</code></details> | **0** | Major: 3, Minor: 0 | 2026-10-28 | ✅ Safe |
 | Asia Pacific | CPH2671 | CPH2671_17.0.0.100(EX01)<br><details><summary>MD5</summary><code>54eb1a28e1f5cd228b03f9cff3eeaab7</code></details> | **0** | Major: 3, Minor: 0 | 2026-10-31 | ✅ Safe |
 | Mexico | CPH2671 | CPH2671_16.0.10.600(EX01)<br><details><summary>MD5</summary><code>58b39b2d7b872905736e81568e20b015</code></details> | **0** | Major: 3, Minor: 0 | 2026-09-30 | ✅ Safe |
-| China | PKV110 | PKH120_16.0.10.501(CN01)<br><details><summary>MD5</summary><code>b8b3645ad387e7bab961909a3e352518</code></details> | **0** | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
+| China | PKV110 | PKH120_17.0.0.103(CN01)<br><details><summary>MD5</summary><code>340001b159e7cd2df87ed2d2e0908bd2</code></details> | **0** | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
 
 <details>
 <summary>📜 <b>Singapore History</b> (click to expand)</summary>
@@ -1886,7 +1911,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
 | CPH2671_16.0.10.500(EX01)<br><details><summary>MD5</summary><code>d6bbf5b42e24ed89966a7f0fcf23f7e8</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
-| CPH2671_16.0.9.400(EX01)<br><details><summary>MD5</summary><code>98d7af91dde5fdab7fd4f257496abef4</code></details> | 0 | Major: 3, Minor: 0 | 2026-08-24 | ✅ Safe |
+| CPH2671_16.0.9.400(EX01)<br><details><summary>MD5</summary><code>98d7af91dde5fdab7fd4f257496abef4</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
 | CPH2671_16.0.8.300(EX01)<br><details><summary>MD5</summary><code>77b399cfe5dea020c6716b762e918e8d</code></details> | 0 | Major: 3, Minor: 0 | 2026-07-21 | ✅ Safe |
 | CPH2671_16.0.7.200(EX01)<br><details><summary>MD5</summary><code>34c72aaa251dc629a48c24620357c49d</code></details> | 0 | Major: 3, Minor: 0 | 2026-06-15 | ✅ Safe |
 | CPH2671_16.0.5.700(EX01)<br><details><summary>MD5</summary><code>84b434d3337990b381cb6de3898f7c8e</code></details> | 0 | Major: 3, Minor: 0 | 2026-05-20 | ✅ Safe |
@@ -1976,8 +2001,21 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | PKH120_17.0.0.103(CN01)<br><details><summary>MD5</summary><code>340001b159e7cd2df87ed2d2e0908bd2</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
 | PKH120_16.0.10.501(CN01)<br><details><summary>MD5</summary><code>b8b3645ad387e7bab961909a3e352518</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
 | PKH120_16.0.9.400(CN01)<br><details><summary>MD5</summary><code>df8780bbebf60275031e6133215792d0</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
+| PKH120_16.0.8.300(CN01)<br><details><summary>MD5</summary><code>09ed251bdc89e81dd27b542c46967544</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
+| PKH120_16.0.7.200(CN01)<br><details><summary>MD5</summary><code>85a1e88c2e223704109a0b43f8973402</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
+| PKH120_16.0.2.401(CN01)<br><details><summary>MD5</summary><code>631ce46effd485ca83ffc38d274df0f4</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
+| PKH120_16.0.1.302(CN01)<br><details><summary>MD5</summary><code>2f25e5db5a2d62973480e870ae8c35a6</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
+| PKH120_16.0.0.208(CN01)<br><details><summary>MD5</summary><code>c8c678ba8ba5fbc86d22843764b83e8c</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
 | PKH110_17.0.0.103(CN01)<br><details><summary>MD5</summary><code>6f1a6e626ab63e74d2491f7dc6865f97</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
 | PKH110_16.0.10.501(CN01)<br><details><summary>MD5</summary><code>d51c4e21408e351534edd4c0393d3e81</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
+| PKH110_16.0.9.400(CN01)<br><details><summary>MD5</summary><code>b1e1a2befbc899c7aced3c56f49aee99</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
+| PKH110_16.0.8.300(CN01)<br><details><summary>MD5</summary><code>5c65e5440765728b5f0f44c274e37354</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
+| PKH110_16.0.7.200(CN01)<br><details><summary>MD5</summary><code>7392cc41ca8683a2a75f0c6fafbde175</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
+| PKH110_16.0.3.500(CN01)<br><details><summary>MD5</summary><code>0f0d5e5ca45e64af32b99f7401d65a12</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
+| PKH110_16.0.2.401(CN01)<br><details><summary>MD5</summary><code>00b0dede5abeff5658076861f2ea8792</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
+| PKH110_16.0.1.302(CN01)<br><details><summary>MD5</summary><code>8fb8fbb2d3f009fe0e5ecc9e211736e0</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
+| PKH110_16.0.0.208(CN01)<br><details><summary>MD5</summary><code>b2c749968762898844999f838b9a658f</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
+| PKH110_15.0.1.860(CN01)<br><details><summary>MD5</summary><code>367e3b4be47bcea04f101d4c4aefe5d1</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-08 | ✅ Safe |
 
 </details>
 
@@ -2244,4 +2282,4 @@ Prefer a native mobile experience? We have an official Android app on F-Droid! C
 > **Important:** The bot **only** works within this group to prevent spam and ensure availability. DM checks are disabled.
 
 ---
-*Last updated: 2026-11-08 19:11 UTC*
+*Last updated: 2026-11-08 20:12 UTC*

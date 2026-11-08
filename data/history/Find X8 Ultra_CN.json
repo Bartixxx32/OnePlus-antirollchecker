@@ -21,16 +21,6 @@
       "md5": "0e9d216b4634a117eec5f0e66d889fef"
     },
     {
-      "version": "PKJ110_17.0.0.104(CN01)",
-      "arb": 0,
-      "major": 3,
-      "minor": 0,
-      "first_seen": "2026-11-08",
-      "last_checked": "2026-11-08",
-      "status": "archived",
-      "md5": "6a420e780a6c7c3630da0b26c0dc5f37"
-    },
-    {
       "version": "PKU110_16.0.10.501(CN01)",
       "arb": 0,
       "major": 3,
@@ -41,6 +31,26 @@
       "md5": "091269146c51db71da082907c39813ef"
     },
     {
+      "version": "PKJ110_17.0.0.104(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-11-08",
+      "last_checked": "2026-11-08",
+      "status": "archived",
+      "md5": "6a420e780a6c7c3630da0b26c0dc5f37"
+    },
+    {
+      "version": "PKJ110_16.0.9.401(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-11-08",
+      "last_checked": "2026-11-08",
+      "status": "archived",
+      "md5": "313ec4efe613405542a0f7ea407bd7c5"
+    },
+    {
       "version": "PKJ110_16.0.10.501(CN01)",
       "arb": 0,
       "major": 3,
@@ -49,6 +59,156 @@
       "last_checked": "2026-11-08",
       "status": "archived",
       "md5": "bf9eea5ec1c3bf78918d79dbc2735398"
+    },
+    {
+      "version": "PKU110_15.0.1.622(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-11-08",
+      "last_checked": "2026-11-08",
+      "status": "archived",
+      "md5": "3757532de82a0cb50256a0701438d868"
+    },
+    {
+      "version": "PKU110_16.0.1.301(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-11-08",
+      "last_checked": "2026-11-08",
+      "status": "archived",
+      "md5": "ed1c8881ce80db440b9e8c7f9e8930ad"
+    },
+    {
+      "version": "PKU110_16.0.2.400(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-11-08",
+      "last_checked": "2026-11-08",
+      "status": "archived",
+      "md5": "e042339a7da51959fe282be90058b9ac"
+    },
+    {
+      "version": "PKJ110_16.0.3.500(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-11-08",
+      "last_checked": "2026-11-08",
+      "status": "archived",
+      "md5": "0f2a5043def5b99ae0903db69d932bff"
+    },
+    {
+      "version": "PKJ110_16.0.2.400(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-11-08",
+      "last_checked": "2026-11-08",
+      "status": "archived",
+      "md5": "d6133146502d44b3a9795d2686f0b06c"
+    },
+    {
+      "version": "PKJ110_16.0.7.200(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-11-08",
+      "last_checked": "2026-11-08",
+      "status": "archived",
+      "md5": "2dfbaceba35ba1579c0e2abbc2529d19"
+    },
+    {
+      "version": "PKU110_16.0.3.500(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-11-08",
+      "last_checked": "2026-11-08",
+      "status": "archived",
+      "md5": "6a3d1e81c66175fb5d96a5e8fb14b58a"
+    },
+    {
+      "version": "PKU110_16.0.0.212(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-11-08",
+      "last_checked": "2026-11-08",
+      "status": "archived",
+      "md5": "e7f05dde5b3680fc0cffd25ef26f557d"
+    },
+    {
+      "version": "PKJ110_16.0.9.400(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-11-08",
+      "last_checked": "2026-11-08",
+      "status": "archived",
+      "md5": "49fc2db33b7d23f3ee367df05a079861"
+    },
+    {
+      "version": "PKU110_16.0.7.200(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-11-08",
+      "last_checked": "2026-11-08",
+      "status": "archived",
+      "md5": "882cdfa7d2d11d93ca1490f4534cef3e"
+    },
+    {
+      "version": "PKJ110_16.0.1.301(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-11-08",
+      "last_checked": "2026-11-08",
+      "status": "archived",
+      "md5": "41e50bbe474aab4c7cfaf60eef6d218e"
+    },
+    {
+      "version": "PKU110_16.0.8.300(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-11-08",
+      "last_checked": "2026-11-08",
+      "status": "archived",
+      "md5": "5d178867bdd6a4d9a246ea5cf5ce810e"
+    },
+    {
+      "version": "PKU110_16.0.9.400(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-11-08",
+      "last_checked": "2026-11-08",
+      "status": "archived",
+      "md5": "a03c8ef2d0f66b86674a0761d754da8b"
+    },
+    {
+      "version": "PKJ110_16.0.8.300(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-11-08",
+      "last_checked": "2026-11-08",
+      "status": "archived",
+      "md5": "7af0adb613466cb777a96c311e63f9c3"
+    },
+    {
+      "version": "PKJ110_16.0.0.212(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-11-08",
+      "last_checked": "2026-11-08",
+      "status": "archived",
+      "md5": "3d758b4da350de2dca8a6825984d5486"
     }
   ],
   "device": "Oppo Find X8 Ultra",
