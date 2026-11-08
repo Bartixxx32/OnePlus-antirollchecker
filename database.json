@@ -626,7 +626,7 @@
         "minor": 0,
         "md5": "abd92f7936e783edf34499cf52c77857",
         "first_seen": "2026-07-23",
-        "last_checked": "2026-09-10",
+        "last_checked": "2026-11-08",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
@@ -782,12 +782,17 @@
         "minor": 0,
         "md5": "15e2d68a9e5324ee838a38b97052a105",
         "first_seen": "2026-07-29",
-        "last_checked": "2026-09-09",
+        "last_checked": "2026-11-08",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
-          "EU"
-        ]
+          "EU",
+          "GLO"
+        ],
+        "md5_by_region": {
+          "EU": "15e2d68a9e5324ee838a38b97052a105",
+          "GLO": "2989f602832ec78246156589950fdf2d"
+        }
       },
       "CPH2449_16.0.5.702(EX01)": {
         "arb": 0,
@@ -1239,7 +1244,7 @@
         "minor": 0,
         "md5": "9a4718884cbf61a17791b0fb030e3b99",
         "first_seen": "2026-07-22",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-11-08",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
@@ -2446,7 +2451,7 @@
         "minor": 0,
         "md5": "37d145dd87e260c6833efcc2d65e6475",
         "first_seen": "2026-02-04",
-        "last_checked": "2026-02-26",
+        "last_checked": "2026-11-08",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
@@ -2680,7 +2685,7 @@
         "minor": 0,
         "md5": "7df0890276149e99d1d2e61cc1ad3597",
         "first_seen": "2026-06-24",
-        "last_checked": "2026-07-20",
+        "last_checked": "2026-11-08",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
@@ -2846,7 +2851,7 @@
         "minor": 0,
         "md5": "e8cb484c5244a14546ebee3470cf6ec6",
         "first_seen": "2026-06-30",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-11-08",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
@@ -3534,7 +3539,7 @@
         "minor": 0,
         "md5": "9d947f896823878e3a32a809ec76fd71",
         "first_seen": "2026-03-25",
-        "last_checked": "2026-05-30",
+        "last_checked": "2026-11-08",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
@@ -3676,7 +3681,7 @@
         "minor": 0,
         "md5": "32b8fa2cd3cc2d8e5ff1b7411211529a",
         "first_seen": "2026-08-18",
-        "last_checked": "2026-08-24",
+        "last_checked": "2026-11-08",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
@@ -3938,7 +3943,7 @@
         "minor": 0,
         "md5": "bb0f615b0156ac9a9ab2df48d9530b3b",
         "first_seen": "2026-05-26",
-        "last_checked": "2026-06-24",
+        "last_checked": "2026-11-08",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
@@ -4086,6 +4091,40 @@
       }
     }
   },
+  "CPH2655": {
+    "device_name": "OnePlus 13",
+    "device_order": 4,
+    "expect_esim": true,
+    "expect_barometer": true,
+    "versions": {
+      "CPH2655_15.0.0.832(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": "7d0ce94be24263393454ae140889a523",
+        "first_seen": "2026-11-08",
+        "last_checked": "2026-11-08",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      },
+      "CPH2655_15.0.0.405(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": "5b693110ced8964a707defcd198acfc4",
+        "first_seen": "2026-11-08",
+        "last_checked": "2026-11-08",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      }
+    }
+  },
   "CPH2661": {
     "device_name": "OnePlus Nord 4",
     "device_order": 28,
@@ -4111,7 +4150,7 @@
         "minor": 0,
         "md5": "0e1d8a680e0c7d1b9bac3e5aa427b85f",
         "first_seen": "2026-07-10",
-        "last_checked": "2026-09-09",
+        "last_checked": "2026-11-08",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
@@ -4313,7 +4352,7 @@
         "minor": 0,
         "md5": "57c99d530f04ff66f78acbfce67fb509",
         "first_seen": "2026-02-04",
-        "last_checked": "2026-03-18",
+        "last_checked": "2026-11-08",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
@@ -4635,7 +4674,7 @@
         "minor": 0,
         "md5": "28319e787c2f41eed002216bea3c3ef1",
         "first_seen": "2026-09-23",
-        "last_checked": "2026-09-23",
+        "last_checked": "2026-11-08",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
@@ -4812,7 +4851,7 @@
         "minor": 0,
         "md5": "feb0d9f702a59a262fbd288b1289db4b",
         "first_seen": "2026-06-06",
-        "last_checked": "2026-07-28",
+        "last_checked": "2026-11-08",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
@@ -4872,7 +4911,7 @@
         "minor": 0,
         "md5": "b009144669546e8e07fe1db606dbec3e",
         "first_seen": "2026-10-28",
-        "last_checked": "2026-10-28",
+        "last_checked": "2026-11-08",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -5063,7 +5102,7 @@
         "minor": 0,
         "md5": "7d7b89ad8e72342568a0dee0dc9764c1",
         "first_seen": "2026-07-24",
-        "last_checked": "2026-07-28",
+        "last_checked": "2026-11-08",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
@@ -5201,7 +5240,7 @@
         "minor": 0,
         "md5": "fedc90595e398e735acf66b9c37a7f56",
         "first_seen": "2026-10-23",
-        "last_checked": "2026-10-23",
+        "last_checked": "2026-11-08",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -5463,7 +5502,7 @@
         "minor": 0,
         "md5": "d296b389cccf2c3cde2d5394a73ff360",
         "first_seen": "2026-06-16",
-        "last_checked": "2026-07-16",
+        "last_checked": "2026-11-08",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
@@ -5667,7 +5706,7 @@
         "minor": 0,
         "md5": "e868d2b554b76d0c520dc513e0d1d361",
         "first_seen": "2026-06-16",
-        "last_checked": "2026-07-16",
+        "last_checked": "2026-11-08",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
@@ -5833,7 +5872,7 @@
         "minor": 0,
         "md5": "8a6301512fb52435b326267dbcda4b1d",
         "first_seen": "2026-06-27",
-        "last_checked": "2026-07-22",
+        "last_checked": "2026-11-08",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
@@ -5983,7 +6022,7 @@
         "minor": 0,
         "md5": "5b4905ed21df9b065f5a18a275d1fc83",
         "first_seen": "2026-06-24",
-        "last_checked": "2026-07-28",
+        "last_checked": "2026-11-08",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
@@ -6056,7 +6095,7 @@
         "minor": 0,
         "md5": "f8c056c2b3a30078cb075d34a4a7d27b",
         "first_seen": "2026-08-21",
-        "last_checked": "2026-08-21",
+        "last_checked": "2026-11-08",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
@@ -6703,7 +6742,7 @@
         "minor": 0,
         "md5": "53e8751e9ce8ad0f1a1fafa289ee53ac",
         "first_seen": "2026-06-16",
-        "last_checked": "2026-07-27",
+        "last_checked": "2026-11-08",
         "status": "current",
         "is_hardcoded": false,
         "regions": [
@@ -6802,7 +6841,7 @@
         "minor": 0,
         "md5": "88e0e6108203a30e4c5ad43319e67e37",
         "first_seen": "2026-06-25",
-        "last_checked": "2026-10-28",
+        "last_checked": "2026-11-08",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
@@ -6940,7 +6979,7 @@
         "minor": 0,
         "md5": "99740e725992488be490b2686c0bddc6",
         "first_seen": "2026-07-04",
-        "last_checked": "2026-10-28",
+        "last_checked": "2026-11-08",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
@@ -7270,7 +7309,7 @@
         "minor": 0,
         "md5": "c7d36364f94daa509c19f71b1e100982",
         "first_seen": "2026-07-14",
-        "last_checked": "2026-07-28",
+        "last_checked": "2026-11-08",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
@@ -7389,7 +7428,7 @@
         "minor": 0,
         "md5": "ff553091027315b3409c3e434cfad4bd",
         "first_seen": "2026-07-25",
-        "last_checked": "2026-09-09",
+        "last_checked": "2026-11-08",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
@@ -7558,7 +7597,7 @@
         "minor": 0,
         "md5": "0297c653bff9a7c5089f96b01d7dab9b",
         "first_seen": "2026-06-27",
-        "last_checked": "2026-08-06",
+        "last_checked": "2026-11-08",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
@@ -7696,7 +7735,7 @@
         "minor": 0,
         "md5": "20e0b3d0af30642118e358cb3cbf6bc8",
         "first_seen": "2026-05-23",
-        "last_checked": "2026-08-06",
+        "last_checked": "2026-11-08",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
@@ -7795,7 +7834,7 @@
         "minor": 0,
         "md5": "da7644a47989fb00e21c13015af886a8",
         "first_seen": "2026-05-23",
-        "last_checked": "2026-07-28",
+        "last_checked": "2026-11-08",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
@@ -7894,7 +7933,7 @@
         "minor": 0,
         "md5": "171c22c558cc25e3624419a11a80a420",
         "first_seen": "2026-02-04",
-        "last_checked": "2026-05-22",
+        "last_checked": "2026-11-08",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
@@ -7993,7 +8032,7 @@
         "minor": 0,
         "md5": "d5a4233c25e2890a70909fc5eff74d7b",
         "first_seen": "2026-07-10",
-        "last_checked": "2026-08-06",
+        "last_checked": "2026-11-08",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
@@ -8170,7 +8209,7 @@
         "minor": 0,
         "md5": "6fb0095cc9c07dbdb74074c87cbb643f",
         "first_seen": "2026-07-16",
-        "last_checked": "2026-08-13",
+        "last_checked": "2026-11-08",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
@@ -8296,6 +8335,79 @@
       }
     }
   },
+  "PKJ110": {
+    "device_name": "Oppo Find X8 Ultra",
+    "device_order": 49,
+    "expect_esim": false,
+    "expect_barometer": false,
+    "versions": {
+      "PKU110_17.0.0.104(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": "1c2187afca7c8df58488aacffe8c6ee4",
+        "first_seen": "2026-11-08",
+        "last_checked": "2026-11-08",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "CN"
+        ]
+      },
+      "PKJ110_17.0.0.104(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": "6a420e780a6c7c3630da0b26c0dc5f37",
+        "first_seen": "2026-11-08",
+        "last_checked": "2026-11-08",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "CN"
+        ]
+      },
+      "PKU110_16.0.10.501(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": "091269146c51db71da082907c39813ef",
+        "first_seen": "2026-11-08",
+        "last_checked": "2026-11-08",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "CN"
+        ]
+      },
+      "PKJ110_16.0.10.501(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": "bf9eea5ec1c3bf78918d79dbc2735398",
+        "first_seen": "2026-11-08",
+        "last_checked": "2026-11-08",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "CN"
+        ]
+      },
+      "PKU110_16.0.9.401(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": "0e9d216b4634a117eec5f0e66d889fef",
+        "first_seen": "2026-11-08",
+        "last_checked": "2026-11-08",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "CN"
+        ]
+      }
+    }
+  },
   "PKR110": {
     "device_name": "OnePlus Ace 5 Pro",
     "device_order": 40,
@@ -8334,7 +8446,7 @@
         "minor": 0,
         "md5": "f08ebc8857b31c98d9565c3542c82b3f",
         "first_seen": "2026-08-22",
-        "last_checked": "2026-08-22",
+        "last_checked": "2026-11-08",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
@@ -8486,6 +8598,79 @@
       }
     }
   },
+  "PKV110": {
+    "device_name": "Oppo Find N5",
+    "device_order": 50,
+    "expect_esim": false,
+    "expect_barometer": false,
+    "versions": {
+      "PKH120_17.0.0.103(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": "340001b159e7cd2df87ed2d2e0908bd2",
+        "first_seen": "2026-11-08",
+        "last_checked": "2026-11-08",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "CN"
+        ]
+      },
+      "PKH120_16.0.10.501(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": "b8b3645ad387e7bab961909a3e352518",
+        "first_seen": "2026-11-08",
+        "last_checked": "2026-11-08",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "CN"
+        ]
+      },
+      "PKH120_16.0.9.400(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": "df8780bbebf60275031e6133215792d0",
+        "first_seen": "2026-11-08",
+        "last_checked": "2026-11-08",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "CN"
+        ]
+      },
+      "PKH110_17.0.0.103(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": "6f1a6e626ab63e74d2491f7dc6865f97",
+        "first_seen": "2026-11-08",
+        "last_checked": "2026-11-08",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "CN"
+        ]
+      },
+      "PKH110_16.0.10.501(CN01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": "d51c4e21408e351534edd4c0393d3e81",
+        "first_seen": "2026-11-08",
+        "last_checked": "2026-11-08",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "CN"
+        ]
+      }
+    }
+  },
   "PKX110": {
     "device_name": "OnePlus 13T",
     "device_order": 6,
@@ -8511,7 +8696,7 @@
         "minor": 0,
         "md5": "918612b11b727fb05d9c6190ce1cd8d1",
         "first_seen": "2026-08-13",
-        "last_checked": "2026-08-13",
+        "last_checked": "2026-11-08",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
@@ -8662,7 +8847,7 @@
         "minor": 0,
         "md5": "56745dd76b1f4872583cf224d2e9d2f6",
         "first_seen": "2026-09-28",
-        "last_checked": "2026-09-28",
+        "last_checked": "2026-11-08",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
@@ -8917,7 +9102,7 @@
         "minor": 0,
         "md5": "9e314a544de8f6eee2a5f70ebbd07214",
         "first_seen": "2026-06-16",
-        "last_checked": "2026-07-13",
+        "last_checked": "2026-11-08",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
@@ -9094,7 +9279,7 @@
         "minor": 0,
         "md5": "9405af9464898ad1e50e14ab7d64baf9",
         "first_seen": "2026-07-14",
-        "last_checked": "2026-08-13",
+        "last_checked": "2026-11-08",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
@@ -9297,7 +9482,7 @@
         "minor": 0,
         "md5": "cb6375da24d98d90048a13f9d6a67d5f",
         "first_seen": "2026-06-03",
-        "last_checked": "2026-07-02",
+        "last_checked": "2026-11-08",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
