@@ -5,6 +5,7 @@ import time
 import asyncio
 import aiohttp
 import html as html_mod
+from urllib.parse import urljoin
 from bs4 import BeautifulSoup
 from datetime import datetime, timezone
 from telegram import Update, InlineKeyboardMarkup, InlineKeyboardButton
@@ -655,9 +656,43 @@ async def fetch_firmware_springer(device_id: str, region: str, oos_mapping: dict
                 
                 soup = BeautifulSoup(result_html, 'html.parser')
                 result_div = soup.find('div', {'id': 'resultBox'})
-                
+
+                download_url = None
                 if result_div and result_div.get('data-url'):
                     download_url = html_mod.unescape(result_div.get('data-url'))
+                else:
+                    # Springer resolves uncached links through a lazy package form.
+                    package_form = soup.find('form', {'id': 'otaPackageForm'})
+                    if package_form:
+                        action = urljoin(
+                            SPRINGER_API_URL,
+                            html_mod.unescape(package_form.get('action') or SPRINGER_API_URL),
+                        )
+                        payload = {}
+                        for input_tag in package_form.find_all('input'):
+                            name = input_tag.get('name')
+                            if name:
+                                payload[name] = input_tag.get('value', '')
+
+                        async with session.post(
+                            action,
+                            data=payload,
+                            headers=post_headers,
+                            timeout=aiohttp.ClientTimeout(total=30),
+                            allow_redirects=False,
+                        ) as pkg_resp:
+                            if pkg_resp.status in (301, 302, 303, 307, 308):
+                                location = pkg_resp.headers.get('Location')
+                                if location:
+                                    download_url = html_mod.unescape(location)
+                            else:
+                                pkg_html = await pkg_resp.text()
+                                pkg_soup = BeautifulSoup(pkg_html, 'html.parser')
+                                pkg_box = pkg_soup.find('div', {'id': 'resultBox'})
+                                if pkg_box and pkg_box.get('data-url'):
+                                    download_url = html_mod.unescape(pkg_box.get('data-url'))
+
+                if download_url:
                     return {
                         "url": download_url,
                         "version": found_version_name,

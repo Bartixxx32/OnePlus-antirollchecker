@@ -6,6 +6,7 @@ import sys
 import argparse
 import logging
 import time
+from urllib.parse import urljoin
 from bs4 import BeautifulSoup
 from config import SPRINGER_API_URL, OOS_API_URL, USER_AGENT, SPRING_MAPPING, OOS_MAPPING
 
@@ -139,6 +140,63 @@ def get_springer_versions(device_id: str, region: str, session=None) -> list:
         
     return devices_data[device_name][region], device_name
 
+def resolve_springer_package_url(soup, session, headers):
+    """
+    Resolve the signed download URL from Springer's lazy package form.
+
+    Springer no longer always puts the URL in the resultBox's data-url
+    attribute. When the link has not been cached yet, the page contains a
+    form that must be submitted to obtain a 303 redirect to the CDN URL.
+    """
+    form = soup.find('form', {'id': 'otaPackageForm'})
+    if not form:
+        return None
+
+    action = urljoin(SPRINGER_API_URL, html.unescape(form.get('action') or SPRINGER_API_URL))
+    payload = {}
+    for input_tag in form.find_all('input'):
+        name = input_tag.get('name')
+        if name:
+            payload[name] = input_tag.get('value', '')
+
+    last_ex = None
+    for attempt in range(10):
+        try:
+            response = session.post(
+                action,
+                data=payload,
+                headers=headers,
+                timeout=15,
+                allow_redirects=False,
+            )
+            response.raise_for_status()
+
+            if response.is_redirect:
+                location = response.headers.get('Location')
+                if location:
+                    return html.unescape(location)
+
+            # Fallback for responses that contain the result page directly.
+            result_soup = BeautifulSoup(response.text, 'html.parser')
+            result_div = result_soup.find('div', {'id': 'resultBox'})
+            if result_div and result_div.get('data-url'):
+                return html.unescape(result_div.get('data-url'))
+
+            logger.error("Package form returned no redirect or download URL")
+            return None
+        except Exception as e:
+            last_ex = e
+            if attempt < 9:
+                logger.warning(
+                    f"Package form submission failed (attempt {attempt+1}/10): {e}. "
+                    "Retrying in 10s..."
+                )
+                time.sleep(10)
+
+    logger.error(f"Package form submission failed after 10 attempts: {last_ex}")
+    return None
+
+
 def get_signed_url_springer(device_id: str, region: str, target_version: str = None) -> dict:
     """
     Fetches a signed download URL from roms.danielspringer.at
@@ -203,8 +261,13 @@ def get_signed_url_springer(device_id: str, region: str, target_version: str = N
     soup = BeautifulSoup(response.text, 'html.parser')
     result_div = soup.find('div', {'id': 'resultBox'})
     
+    download_url = None
     if result_div and result_div.get('data-url'):
         download_url = html.unescape(result_div.get('data-url'))
+    else:
+        download_url = resolve_springer_package_url(soup, session, post_headers)
+
+    if download_url:
         return {
             "url": download_url,
             "version": found_version_name,
