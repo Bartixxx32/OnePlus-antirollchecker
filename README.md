@@ -47,6 +47,18 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 |:---|:---|:---|:---|:---|:---|:---|
 | China | PYB110 | PYB110_17.0.1.201(CN01)<br><details><summary>MD5</summary><code>6aaf2ba845841892d2e447171630918b</code></details> | **0** | Major: 4, Minor: 0 | 2026-11-07 | ✅ Safe |
 
+<details>
+<summary>📜 <b>China History</b> (click to expand)</summary>
+
+| Firmware Version | ARB | OEM Version | Last Seen | Safe |
+|:---|:---|:---|:---|:---|
+| PYB110_17.0.0.157(CN01) | 0 | Major: 4, Minor: 0 | 2026-11-08 | ✅ Safe |
+| PYB110_17.0.0.155(CN01) | 0 | Major: 4, Minor: 0 | 2026-11-08 | ✅ Safe |
+| PYB110_17.0.0.152(CN01) | 0 | Major: 4, Minor: 0 | 2026-11-08 | ✅ Safe |
+
+</details>
+
+
 ---
 
 ### OnePlus 15
@@ -2184,4 +2196,4 @@ Prefer a native mobile experience? We have an official Android app on F-Droid! C
 > **Important:** The bot **only** works within this group to prevent spam and ensure availability. DM checks are disabled.
 
 ---
-*Last updated: 2026-11-08 14:22 UTC*
+*Last updated: 2026-11-08 14:52 UTC*
