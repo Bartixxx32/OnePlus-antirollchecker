@@ -1,6 +1,6 @@
 name: Historical Backfill
 
-run-name: Backfill for ${{ inputs.device || 'All' }} ${{ inputs.variant || '' }}
+run-name: Backfill for ${{ inputs.device || 'All' }} ${{ inputs.variant || '' }} (versions = ${{ inputs.max_versions == '0' && 'all' || inputs.max_versions || '10' }})
 
 on:
   workflow_dispatch:
@@ -16,6 +16,11 @@ on:
         required: false
         default: false
         type: boolean
+      max_versions:
+        description: 'Number of newest versions per device/region to backfill (0 = all)'
+        required: false
+        default: '10'
+        type: string
 
 concurrency:
   group: ${{ github.workflow }}
@@ -54,6 +59,7 @@ jobs:
         env:
           TARGET_DEVICE: ${{ inputs.device }}
           TARGET_VARIANT: ${{ inputs.variant }}
+          MAX_VERSIONS: ${{ inputs.max_versions }}
         run: |
           # Filter logic can be added to generate_backfill_matrix.py based on inputs if needed
           python3 generate_backfill_matrix.py

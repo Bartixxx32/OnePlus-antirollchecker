@@ -1,9 +1,33 @@
 #!/usr/bin/env python3
 import json
 import os
+import sys
 import requests
 from config import DEVICE_METADATA
 from fetch_firmware import get_springer_versions
+
+DEFAULT_MAX_VERSIONS = 10
+MAX_CONFIGS_PER_SHARD = 256
+
+
+def parse_max_versions(value):
+    """Parse the max-versions input. 0/empty/all means every available version."""
+    value = (value or "").strip().lower()
+    if value in ("", "all", "wszystko"):
+        return None
+    try:
+        parsed = int(value)
+    except ValueError:
+        return DEFAULT_MAX_VERSIONS
+    return None if parsed <= 0 else parsed
+
+
+def select_versions(versions, max_versions):
+    """Return the newest N versions, or all versions when max_versions is None/0."""
+    if max_versions is None or max_versions <= 0:
+        return list(versions)
+    return list(versions[:max_versions])
+
 
 def split_into_shards(items, shard_count=4):
     """Split items into balanced shards for GitHub Actions matrices."""
@@ -15,6 +39,9 @@ def generate_backfill_matrix():
     
     target_device = os.environ.get("TARGET_DEVICE", "").strip().lower()
     target_variant = os.environ.get("TARGET_VARIANT", "").strip().lower()
+    max_versions = parse_max_versions(os.environ.get("MAX_VERSIONS", str(DEFAULT_MAX_VERSIONS)))
+
+    print(f"Max versions per region: {'all' if max_versions is None else max_versions}")
     
     session = requests.Session()
     
@@ -36,8 +63,8 @@ def generate_backfill_matrix():
             
             versions, _ = res
             
-            # Take top 5 versions (Springer usually lists newest first)
-            target_versions = versions[:5]
+            # Springer lists newest first. MAX_VERSIONS controls how many we take.
+            target_versions = select_versions(versions, max_versions)
             
             for version in target_versions:
                 # We need to extract the version string carefully 
@@ -56,6 +83,15 @@ def generate_backfill_matrix():
     # hard limit of 256 jobs. Four shards support up to 1024 configurations.
     SHARD_COUNT = 4
     shards = split_into_shards(include_list, SHARD_COUNT)
+
+    if any(len(shard) > MAX_CONFIGS_PER_SHARD for shard in shards):
+        print(
+            f"ERROR: {len(include_list)} configurations exceed "
+            f"{SHARD_COUNT * MAX_CONFIGS_PER_SHARD} slots "
+            f"({MAX_CONFIGS_PER_SHARD} per shard). Increase SHARD_COUNT.",
+            file=sys.stderr,
+        )
+        sys.exit(1)
     
     if "GITHUB_OUTPUT" in os.environ:
         with open(os.environ["GITHUB_OUTPUT"], "a") as f:
