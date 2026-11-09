@@ -5798,6 +5798,79 @@
       }
     }
   },
+  "CPH2749": {
+    "device_name": "OnePlus 15",
+    "device_order": 1,
+    "expect_esim": true,
+    "expect_barometer": false,
+    "versions": {
+      "CPH2749_17.0.0.102(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": null,
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      },
+      "CPH2749_16.0.9.400(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": null,
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      },
+      "CPH2749_16.0.7.202(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": null,
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      },
+      "CPH2749_16.0.3.503(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": null,
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      },
+      "CPH2749_16.0.2.401(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": null,
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      }
+    }
+  },
   "CPH2767": {
     "device_name": "OnePlus 15R",
     "device_order": 2,
