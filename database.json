@@ -1178,6 +1178,22 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "CPH2459_11_C.37": {
+        "arb": -1,
+        "arb_detected": false,
+        "major": 0,
+        "minor": 0,
+        "md5": "9f446f11cb67a6b06f901f9f26f78ebe",
+        "package_type": "incremental",
+        "is_incremental": true,
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      },
       "CPH2459_11_C.24": {
         "arb": 0,
         "arb_detected": true,
@@ -3790,8 +3806,8 @@
         "major": 3,
         "minor": 0,
         "md5": "f9bc288a7c04b9257687d22d649155d2",
-        "package_type": null,
-        "is_incremental": false,
+        "package_type": "incremental",
+        "is_incremental": true,
         "first_seen": "2026-11-09",
         "last_checked": "2026-11-09",
         "status": "archived",
@@ -7964,6 +7980,22 @@
     "expect_esim": false,
     "expect_barometer": true,
     "versions": {
+      "DE2117_11_C.37": {
+        "arb": -1,
+        "arb_detected": false,
+        "major": 0,
+        "minor": 0,
+        "md5": "a45075fea5890b88a4e47cb0bc73600b",
+        "package_type": "incremental",
+        "is_incremental": true,
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      },
       "DE2117_11_C.34": {
         "arb": 0,
         "arb_detected": true,
@@ -8396,6 +8428,22 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "IN2025_11_F.73": {
+        "arb": -1,
+        "arb_detected": false,
+        "major": 0,
+        "minor": 0,
+        "md5": "b09f406cd9375319e36908e7d43e3c3b",
+        "package_type": "incremental",
+        "is_incremental": true,
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      },
       "IN2025_11_F.67": {
         "arb": -1,
         "arb_detected": false,
@@ -8455,6 +8503,22 @@
         "first_seen": "2026-02-04",
         "last_checked": "2026-09-30",
         "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      },
+      "KB2005_11_H.26": {
+        "arb": -1,
+        "arb_detected": false,
+        "major": 0,
+        "minor": 0,
+        "md5": "87d85da1c6f67561034d2f712350a774",
+        "package_type": "incremental",
+        "is_incremental": true,
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "NA"
