@@ -329,6 +329,7 @@ def build_ou_matrix_entries(
                 "version": package["version"],
                 "source": "ou_url",
                 "url": package["url"],
+                "md5": package.get("md5"),
                 "ou_device_id": OU_NA_DEVICE_IDS.get(device_id),
                 "ota_version": package.get("ota_version"),
             }

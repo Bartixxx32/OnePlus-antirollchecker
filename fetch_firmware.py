@@ -316,6 +316,10 @@ def main():
         "--direct-url",
         help="Use this package URL directly (with --source ou_url)",
     )
+    parser.add_argument(
+        "--md5",
+        help="Known package MD5 (used with --direct-url)",
+    )
     
     args = parser.parse_args()
     
@@ -328,7 +332,7 @@ def main():
         result = {
             "url": args.direct_url,
             "version": args.target_version or "Unknown",
-            "md5": None,
+            "md5": args.md5 or None,
         }
     elif args.source == "ou_latest":
         result = get_from_ou_latest(clean_device_id, args.region)

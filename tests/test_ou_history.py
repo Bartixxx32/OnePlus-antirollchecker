@@ -147,7 +147,11 @@ class TestGetHistoryPackages:
 class TestNaMatrixEntries:
     def test_builds_ou_entries_with_direct_urls(self):
         packages = [
-            {"version": "CPH2655_16.0.10.600(EX01)", "url": "https://example.test/new.zip"},
+            {
+                "version": "CPH2655_16.0.10.600(EX01)",
+                "url": "https://example.test/new.zip",
+                "md5": "abc123",
+            },
             {"version": "CPH2655_15.0.0.405(EX01)", "url": "https://example.test/old.zip"},
         ]
 
@@ -164,6 +168,7 @@ class TestNaMatrixEntries:
                 "version": "CPH2655_16.0.10.600(EX01)",
                 "source": "ou_url",
                 "url": "https://example.test/new.zip",
+                "md5": "abc123",
                 "ou_device_id": 154,
                 "ota_version": None,
             }

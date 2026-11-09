@@ -62,7 +62,7 @@ jobs:
       - name: Get Firmware URL
         id: get_details
         run: |
-          python3 fetch_firmware.py "${{ matrix.device }}" "${{ matrix.variant }}" "${{ matrix.version }}" --source "$BACKFILL_SOURCE" --direct-url "${{ matrix.url }}" --output fw_info.json
+          python3 fetch_firmware.py "${{ matrix.device }}" "${{ matrix.variant }}" "${{ matrix.version }}" --source "$BACKFILL_SOURCE" --direct-url "${{ matrix.url }}" --md5 "${{ matrix.md5 }}" --output fw_info.json
           URL=$(python3 -c "import sys, json; print(json.load(open('fw_info.json'))['url'])")
           VERSION=$(python3 -c "import sys, json; print(json.load(open('fw_info.json'))['version'])")
           MD5=$(python3 -c "import sys, json; data=json.load(open('fw_info.json')); print(data.get('md5') or '')")
