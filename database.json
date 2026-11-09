@@ -953,6 +953,27 @@
       }
     }
   },
+  "CPH2451": {
+    "device_name": "OnePlus 11",
+    "device_order": 11,
+    "expect_esim": true,
+    "expect_barometer": false,
+    "versions": {
+      "CPH2451_16.0.5.1301(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "minor": 0,
+        "md5": "a1a50104b53bcf788c5dab00ecf17343",
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      }
+    }
+  },
   "CPH2459": {
     "device_name": "OnePlus Nord N20",
     "device_order": 35,
@@ -2352,11 +2373,13 @@
         "is_hardcoded": false,
         "regions": [
           "EU",
-          "IN"
+          "IN",
+          "NA"
         ],
         "md5_by_region": {
           "EU": "80718e6930fb290629f63dd3866c5d08",
-          "IN": "1cb275faf8b87bc4ef8448ad7cc99435"
+          "IN": "1cb275faf8b87bc4ef8448ad7cc99435",
+          "NA": "f2c448beb5c71d4c0f7397bc56cae288"
         }
       },
       "CPH2551_16.0.5.1002(EX01)": {
@@ -2514,7 +2537,7 @@
         "md5": "9ee66cf78b25acaee3681d138f04c04f",
         "first_seen": "2026-02-04",
         "last_checked": "2026-09-30",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "NA"
@@ -2991,6 +3014,196 @@
       }
     }
   },
+  "CPH2583": {
+    "device_name": "OnePlus 12",
+    "device_order": 9,
+    "expect_esim": true,
+    "expect_barometer": false,
+    "versions": {
+      "CPH2583_16.0.10.601(EX01)": {
+        "arb": 1,
+        "major": 3,
+        "minor": 0,
+        "md5": "8c422427ca613c06ea1a5675893a6fa7",
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      },
+      "CPH2583_16.0.10.501(EX01)": {
+        "arb": 1,
+        "major": 3,
+        "minor": 0,
+        "md5": null,
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      },
+      "CPH2583_16.0.9.400(EX01)": {
+        "arb": 1,
+        "major": 3,
+        "minor": 0,
+        "md5": null,
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      },
+      "CPH2583_16.0.3.500(EX01)": {
+        "arb": 1,
+        "major": 3,
+        "minor": 0,
+        "md5": null,
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      },
+      "CPH2583_16.0.0.202(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": null,
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      },
+      "CPH2583_15.0.0.863(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": null,
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      },
+      "CPH2583_15.0.0.861(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": null,
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      },
+      "CPH2583_15.0.0.850(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": null,
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      },
+      "CPH2583_15.0.0.832(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": null,
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      },
+      "CPH2583_15.0.0.801(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": null,
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      },
+      "CPH2583_15.0.0.702(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": null,
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      },
+      "CPH2583_15.0.0.510(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": null,
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      },
+      "CPH2583_15.0.0.503(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": null,
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      },
+      "CPH2583_15.0.0.305(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": null,
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      }
+    }
+  },
   "CPH2585": {
     "device_name": "OnePlus 12R",
     "device_order": 10,
@@ -3197,6 +3410,27 @@
         "is_hardcoded": false,
         "regions": [
           "GLO"
+        ]
+      }
+    }
+  },
+  "CPH2611": {
+    "device_name": "OnePlus 12R",
+    "device_order": 10,
+    "expect_esim": true,
+    "expect_barometer": false,
+    "versions": {
+      "CPH2611_16.0.5.1301(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "minor": 0,
+        "md5": "f9a87d4ba34687bfdf8c66274a81edfc",
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
         ]
       }
     }
@@ -3656,6 +3890,27 @@
       }
     }
   },
+  "CPH2647": {
+    "device_name": "OnePlus 13R",
+    "device_order": 5,
+    "expect_esim": false,
+    "expect_barometer": false,
+    "versions": {
+      "CPH2647_16.0.10.600(EX01)": {
+        "arb": 1,
+        "major": 3,
+        "minor": 0,
+        "md5": "aefed95ff8c4cd09f1cf80e17ac1f9eb",
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      }
+    }
+  },
   "CPH2649": {
     "device_name": "OnePlus 13",
     "device_order": 4,
@@ -4110,6 +4365,123 @@
     "expect_esim": true,
     "expect_barometer": true,
     "versions": {
+      "CPH2655_16.0.10.600(EX01)": {
+        "arb": 1,
+        "major": 3,
+        "minor": 0,
+        "md5": "e76723574959581e5546f125e0dfac98",
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      },
+      "CPH2655_16.0.8.301(EX01)": {
+        "arb": 1,
+        "major": 3,
+        "minor": 0,
+        "md5": null,
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      },
+      "CPH2655_16.0.3.501(EX01)": {
+        "arb": 1,
+        "major": 3,
+        "minor": 0,
+        "md5": null,
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      },
+      "CPH2655_16.0.2.403(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": null,
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      },
+      "CPH2655_16.0.1.304(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": null,
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      },
+      "CPH2655_16.0.0.213(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": null,
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      },
+      "CPH2655_15.0.0.864(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": null,
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      },
+      "CPH2655_15.0.0.862(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": null,
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      },
+      "CPH2655_15.0.0.850(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": null,
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      },
       "CPH2655_15.0.0.832(EX01)": {
         "arb": 0,
         "major": 3,
@@ -4123,13 +4495,39 @@
           "NA"
         ]
       },
+      "CPH2655_15.0.0.822(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": null,
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      },
+      "CPH2655_15.0.0.703(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": null,
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      },
       "CPH2655_15.0.0.405(EX01)": {
         "arb": 0,
         "major": 3,
         "minor": 0,
         "md5": "5b693110ced8964a707defcd198acfc4",
         "first_seen": "2026-11-08",
-        "last_checked": "2026-11-08",
+        "last_checked": "2026-11-09",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [
@@ -5655,6 +6053,79 @@
       }
     }
   },
+  "CPH2749": {
+    "device_name": "OnePlus 15",
+    "device_order": 1,
+    "expect_esim": true,
+    "expect_barometer": false,
+    "versions": {
+      "CPH2749_17.0.0.102(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": "3bbab46414e5c6e4711cce5e83e0d691",
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      },
+      "CPH2749_16.0.9.400(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": null,
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      },
+      "CPH2749_16.0.7.202(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": null,
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      },
+      "CPH2749_16.0.3.503(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": null,
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      },
+      "CPH2749_16.0.2.401(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": null,
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      }
+    }
+  },
   "CPH2767": {
     "device_name": "OnePlus 15R",
     "device_order": 2,
@@ -5994,6 +6465,27 @@
           "EU": "77e4748592f464726b8d72f6614d2875",
           "GLO": "557df71dadd39f65968ad8bbc0ce2293"
         }
+      }
+    }
+  },
+  "CPH2771": {
+    "device_name": "OnePlus 15R",
+    "device_order": 2,
+    "expect_esim": false,
+    "expect_barometer": false,
+    "versions": {
+      "CPH2771_16.0.10.600(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": "7258cef4df4cdf2a03bd055be6311e94",
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
       }
     }
   },
@@ -7427,11 +7919,13 @@
         "regions": [
           "EU",
           "GLO",
+          "NA",
           "IN"
         ],
         "md5_by_region": {
           "EU": "b4c760ac5af28253d8bf5e46eee61ae7",
           "GLO": "15ec42387ec4224a61abe2af8cf832fb",
+          "NA": "994f7ce06597aad6910d41794abda1a1",
           "IN": "c57b6e0e0476998f4f35775297c48bb4"
         }
       },
