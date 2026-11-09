@@ -953,6 +953,27 @@
       }
     }
   },
+  "CPH2451": {
+    "device_name": "OnePlus 11",
+    "device_order": 11,
+    "expect_esim": true,
+    "expect_barometer": false,
+    "versions": {
+      "CPH2451_16.0.5.1301(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "minor": 0,
+        "md5": null,
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      }
+    }
+  },
   "CPH2459": {
     "device_name": "OnePlus Nord N20",
     "device_order": 35,
@@ -3391,6 +3412,27 @@
       }
     }
   },
+  "CPH2611": {
+    "device_name": "OnePlus 12R",
+    "device_order": 10,
+    "expect_esim": true,
+    "expect_barometer": false,
+    "versions": {
+      "CPH2611_16.0.5.1301(EX01)": {
+        "arb": 0,
+        "major": 2,
+        "minor": 0,
+        "md5": null,
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
+      }
+    }
+  },
   "CPH2613": {
     "device_name": "OnePlus Nord CE 4",
     "device_order": 30,
@@ -3842,6 +3884,27 @@
         "is_hardcoded": false,
         "regions": [
           "EU"
+        ]
+      }
+    }
+  },
+  "CPH2647": {
+    "device_name": "OnePlus 13R",
+    "device_order": 5,
+    "expect_esim": false,
+    "expect_barometer": false,
+    "versions": {
+      "CPH2647_16.0.10.600(EX01)": {
+        "arb": 1,
+        "major": 3,
+        "minor": 0,
+        "md5": null,
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
         ]
       }
     }
@@ -6400,6 +6463,27 @@
           "EU": "77e4748592f464726b8d72f6614d2875",
           "GLO": "557df71dadd39f65968ad8bbc0ce2293"
         }
+      }
+    }
+  },
+  "CPH2771": {
+    "device_name": "OnePlus 15R",
+    "device_order": 2,
+    "expect_esim": false,
+    "expect_barometer": false,
+    "versions": {
+      "CPH2771_16.0.10.600(EX01)": {
+        "arb": 0,
+        "major": 3,
+        "minor": 0,
+        "md5": null,
+        "first_seen": "2026-11-09",
+        "last_checked": "2026-11-09",
+        "status": "archived",
+        "is_hardcoded": false,
+        "regions": [
+          "NA"
+        ]
       }
     }
   },
