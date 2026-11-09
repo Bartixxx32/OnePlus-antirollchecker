@@ -1,6 +1,18 @@
 {
   "history": [
     {
+      "version": "KB2005_11_H.26",
+      "arb": -1,
+      "major": 0,
+      "minor": 0,
+      "arb_detected": false,
+      "first_seen": "2026-11-09",
+      "last_checked": "2026-11-09",
+      "status": "archived",
+      "package_type": "incremental",
+      "md5": "87d85da1c6f67561034d2f712350a774"
+    },
+    {
       "version": "KB2005_11_F.67",
       "arb": 0,
       "major": 0,

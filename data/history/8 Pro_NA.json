@@ -11,6 +11,18 @@
       "status": "current",
       "package_type": "full",
       "md5": "9262c4d8d4591ac891d13bf2e3bc9c04"
+    },
+    {
+      "version": "IN2025_11_F.73",
+      "arb": -1,
+      "major": 0,
+      "minor": 0,
+      "arb_detected": false,
+      "first_seen": "2026-11-09",
+      "last_checked": "2026-11-09",
+      "status": "archived",
+      "package_type": "incremental",
+      "md5": "b09f406cd9375319e36908e7d43e3c3b"
     }
   ],
   "device": "OnePlus 8 Pro",

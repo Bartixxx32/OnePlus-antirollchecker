@@ -113,7 +113,8 @@
       "first_seen": "2026-11-09",
       "last_checked": "2026-11-09",
       "status": "archived",
-      "md5": "f9bc288a7c04b9257687d22d649155d2"
+      "md5": "f9bc288a7c04b9257687d22d649155d2",
+      "package_type": "incremental"
     },
     {
       "version": "CPH2583_15.0.0.510(EX01)",

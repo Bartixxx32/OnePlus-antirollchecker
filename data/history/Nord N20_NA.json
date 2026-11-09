@@ -1,6 +1,18 @@
 {
   "history": [
     {
+      "version": "CPH2459_11_C.37",
+      "arb": -1,
+      "major": 0,
+      "minor": 0,
+      "arb_detected": false,
+      "first_seen": "2026-11-09",
+      "last_checked": "2026-11-09",
+      "status": "archived",
+      "package_type": "incremental",
+      "md5": "9f446f11cb67a6b06f901f9f26f78ebe"
+    },
+    {
       "version": "CPH2459_11_C.24",
       "arb": 0,
       "major": 0,

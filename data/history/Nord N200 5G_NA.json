@@ -1,6 +1,18 @@
 {
   "history": [
     {
+      "version": "DE2117_11_C.37",
+      "arb": -1,
+      "major": 0,
+      "minor": 0,
+      "arb_detected": false,
+      "first_seen": "2026-11-09",
+      "last_checked": "2026-11-09",
+      "status": "archived",
+      "package_type": "incremental",
+      "md5": "a45075fea5890b88a4e47cb0bc73600b"
+    },
+    {
       "version": "DE2117_11_C.34",
       "arb": 0,
       "major": 0,

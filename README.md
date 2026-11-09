@@ -657,7 +657,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | CPH2583_15.0.0.850(EX01) ⚠️ **Incremental**<br><details><summary>MD5</summary><code>28d41276d7c63ac7d416b584eec88c8a</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-09 | ✅ Safe |
 | CPH2583_15.0.0.832(EX01) ⚠️ **Incremental**<br><details><summary>MD5</summary><code>40f3abba9cdfebd3da84bd574fb19f47</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-09 | ✅ Safe |
 | CPH2583_15.0.0.801(EX01)<br><details><summary>MD5</summary><code>36e67c136075345a06d286ba6a678018</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-09 | ✅ Safe |
-| CPH2583_15.0.0.702(EX01)<br><details><summary>MD5</summary><code>f9bc288a7c04b9257687d22d649155d2</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-09 | ✅ Safe |
+| CPH2583_15.0.0.702(EX01) ⚠️ **Incremental**<br><details><summary>MD5</summary><code>f9bc288a7c04b9257687d22d649155d2</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-09 | ✅ Safe |
 | CPH2583_15.0.0.510(EX01) ⚠️ **Incremental**<br><details><summary>MD5</summary><code>ce24628a4131aead8c22251b48d0ef33</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-09 | ✅ Safe |
 | CPH2583_15.0.0.503(EX01) ⚠️ **Incremental**<br><details><summary>MD5</summary><code>f2f6a3caab54f1bf2ce75801c5bfb9df</code></details> | 0 | Major: 3, Minor: 0 | 2026-11-09 | ✅ Safe |
 | CPH2583_15.0.0.305(EX01) | 0 | Major: 3, Minor: 0 | 2026-11-09 | ✅ Safe |
@@ -1051,6 +1051,16 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | Europe | KB2003 | KB2003_14.0.0.1311(EX01)<br><details><summary>MD5</summary><code>1c53e270fe049b1cdbd361f6a29900d0</code></details> | **0** | Major: 0, Minor: 120 | 2026-09-30 | ✅ Safe |
 | North America | KB2005 | KB2005_11_F.67<br><details><summary>MD5</summary><code>68134307caa39d9f0f07cbb107619dee</code></details> | **0** | Major: 0, Minor: 120 | 2026-09-30 | ✅ Safe |
 
+<details>
+<summary>📜 <b>North America History</b> (click to expand)</summary>
+
+| Firmware Version | ARB | OEM Version | Last Seen | Safe |
+|:---|:---|:---|:---|:---|
+| KB2005_11_H.26 ⚠️ **Incremental**<br><details><summary>MD5</summary><code>87d85da1c6f67561034d2f712350a774</code></details> | ? | Major: 0, Minor: 0 | 2026-11-09 | ⚠️ Undetectable ARB |
+
+</details>
+
+
 ---
 
 ### OnePlus 8 Pro
@@ -1067,6 +1077,15 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
 | IN2023_13.1.0.590(EX01)<br><details><summary>MD5</summary><code>2c929877e9643a9f37d548ad7debe4b3</code></details> | 0 | Major: 0, Minor: 120 | 2026-03-27 | ✅ Safe |
+
+</details>
+
+<details>
+<summary>📜 <b>North America History</b> (click to expand)</summary>
+
+| Firmware Version | ARB | OEM Version | Last Seen | Safe |
+|:---|:---|:---|:---|:---|
+| IN2025_11_F.73 ⚠️ **Incremental**<br><details><summary>MD5</summary><code>b09f406cd9375319e36908e7d43e3c3b</code></details> | ? | Major: 0, Minor: 0 | 2026-11-09 | ⚠️ Undetectable ARB |
 
 </details>
 
@@ -1475,6 +1494,16 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 |:---|:---|:---|:---|:---|:---|:---|
 | North America | CPH2459 | CPH2459_11_C.24<br><details><summary>MD5</summary><code>b2dac2cc86b0f5315ce9f5ff861ac6cb</code></details> | **0** | Major: 0, Minor: 120 | 2026-09-30 | ✅ Safe |
 
+<details>
+<summary>📜 <b>North America History</b> (click to expand)</summary>
+
+| Firmware Version | ARB | OEM Version | Last Seen | Safe |
+|:---|:---|:---|:---|:---|
+| CPH2459_11_C.37 ⚠️ **Incremental**<br><details><summary>MD5</summary><code>9f446f11cb67a6b06f901f9f26f78ebe</code></details> | ? | Major: 0, Minor: 0 | 2026-11-09 | ⚠️ Undetectable ARB |
+
+</details>
+
+
 ---
 
 ### OnePlus Nord
@@ -1501,6 +1530,16 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
 | North America | DE2117 | DE2117_11_C.34<br><details><summary>MD5</summary><code>29ba37ef58d043e6f1d6088946844fae</code></details> | **0** | Major: 0, Minor: 120 | 2026-09-30 | ✅ Safe |
+
+<details>
+<summary>📜 <b>North America History</b> (click to expand)</summary>
+
+| Firmware Version | ARB | OEM Version | Last Seen | Safe |
+|:---|:---|:---|:---|:---|
+| DE2117_11_C.37 ⚠️ **Incremental**<br><details><summary>MD5</summary><code>a45075fea5890b88a4e47cb0bc73600b</code></details> | ? | Major: 0, Minor: 0 | 2026-11-09 | ⚠️ Undetectable ARB |
+
+</details>
+
 
 ---
 
@@ -2409,4 +2448,4 @@ Prefer a native mobile experience? We have an official Android app on F-Droid! C
 > **Important:** The bot **only** works within this group to prevent spam and ensure availability. DM checks are disabled.
 
 ---
-*Last updated: 2026-11-09 12:48 UTC*
+*Last updated: 2026-11-09 12:51 UTC*
