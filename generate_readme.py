@@ -20,9 +20,9 @@ def get_region_name(variant: str) -> str:
 
 
 def package_type_marker(entry: Dict) -> str:
-    """Return a visible warning marker for incremental OTA packages."""
+    """Mark ARB values that were read from an incremental OTA package."""
     if entry.get("package_type") == "incremental":
-        return " ⚠️ **Incremental**"
+        return " 🧩 **ARB from incremental**"
     return ""
 
 def generate_device_section(device_id: str, device_name: str, history_data: Dict) -> List[str]:
@@ -201,8 +201,6 @@ def generate_readme(history_data: Dict) -> str:
         '',
         'Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository monitors firmware updates and tracks ARB changes over time.',
         '',
-        '> ⚠️ **Incremental OTA warning:** firmware marked **Incremental** is a delta/differential package. It only applies on top of a matching installed build and **must not be flashed standalone** (for example through fastboot or a clean flash tool). Use the normal system updater or flash the matching full OTA package instead.',
-        '>',
         '> A `?` / **Undetectable ARB** result means the package is valid but no ARB record could be parsed from it. Treat it as unknown, not as safe.',
         '',
         '**🌐 ARB Info Website:** [https://oparb.pages.dev/](https://oparb.pages.dev/)',

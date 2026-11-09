@@ -282,7 +282,6 @@ async def help_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "1. Bot resolves device name → fetches firmware URL from OS Updater API\n"
         "2. Triggers ARB analysis via GitHub Actions\n"
         "3. Posts download link + ARB results as replies\n\n"
-        "⚠️ *Incremental OTA packages are delta updates.* They require the matching build already installed and must **not** be flashed standalone. Always check the package type in the result before flashing.\n\n"
         "📋 _Rate limit: 2 checks per minute_"
     )
     await update.message.reply_text(msg, parse_mode="Markdown", reply_markup=get_main_keyboard())
@@ -451,7 +450,7 @@ async def status_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 regions = ", ".join(regions_list)
                 text += f"  • `{v}` ({regions}) - ARB: {arb_display} {status_icon}{arb_note}\n    MD5: `{md5}`\n"
                 if v_det.get('is_incremental') or v_det.get('package_type') == 'incremental':
-                    text += "    ⚠️ Incremental OTA — do not flash standalone!\n"
+                    text += "    🧩 ARB from incremental OTA\n"
         text += "\n"
         
     if len(found_models) > 10:
@@ -508,7 +507,7 @@ async def latest(update: Update, context: ContextTypes.DEFAULT_TYPE, is_callback
 
         incremental_note = ""
         if v_det.get('is_incremental') or v_det.get('package_type') == 'incremental':
-            incremental_note = "\n  ⚠️ Incremental OTA — do not flash standalone!"
+            incremental_note = "\n  🧩 ARB from incremental OTA"
             
         text += f"📱 *{dev_name}*\n  • `{v_name}` ({regions}) - ARB: {arb_display} {status_icon}{arb_note}{date_str}{incremental_note}\n\n"
         
@@ -859,7 +858,7 @@ async def download_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE, is_ca
         message_thread_id = update.effective_message.message_thread_id
         await context.bot.send_message(
             chat_id=chat_id,
-            text=f"📥 **Direct firmware download link:**\n[{device_name} ({region}) - {fw_version}]({fw_url})\n\n⚠️ **Do not flash until the ARB result below confirms the package type.** Incremental/delta OTA packages must not be flashed standalone.",
+            text=f"📥 **Direct firmware download link:**\n[{device_name} ({region}) - {fw_version}]({fw_url})",
             parse_mode="Markdown",
             disable_web_page_preview=True,
             message_thread_id=message_thread_id
@@ -874,7 +873,7 @@ async def download_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE, is_ca
         message_thread_id = update.effective_message.message_thread_id
         await context.bot.send_message(
             chat_id=chat_id,
-            text=f"📥 **Direct firmware download link:**\n[{device_name} ({region}) - {fw_version}]({fw_url})\n\n⚠️ **Do not flash until the ARB result below confirms the package type.** Incremental/delta OTA packages must not be flashed standalone.",
+            text=f"📥 **Direct firmware download link:**\n[{device_name} ({region}) - {fw_version}]({fw_url})",
             parse_mode="Markdown",
             disable_web_page_preview=True,
             message_thread_id=message_thread_id

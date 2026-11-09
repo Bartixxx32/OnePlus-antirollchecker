@@ -66,7 +66,7 @@ def main():
         "--package-type",
         choices=["incremental", "full", "unknown"],
         default="unknown",
-        help="OTA package type; incremental packages must not be flashed standalone",
+        help="OTA package type (incremental/full/unknown)",
     )
     
     # New arguments for interactive bot
@@ -163,12 +163,7 @@ def main():
 
         package_type = (args.package_type or "unknown").lower()
         if package_type == "incremental":
-            message += "📦 *Package:* ⚠️ Incremental OTA\n"
-            message += (
-                "🚫 *Do not flash standalone!* This is a delta update that requires "
-                "the matching build already installed. Use the normal system updater "
-                "or the matching full OTA package.\n"
-            )
+            message += "📦 *Package:* 🧩 ARB from incremental OTA\n"
         elif package_type == "full":
             message += "📦 *Package:* Full OTA\n"
         else:

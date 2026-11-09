@@ -155,7 +155,7 @@ def main():
         "--package-type",
         choices=["incremental", "full", "unknown"],
         default=None,
-        help="OTA package type (incremental packages must not be flashed standalone)",
+        help="OTA package type (incremental/full/unknown)",
     )
     
     # Mode 2: JSON Input
