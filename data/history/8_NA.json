@@ -1,0 +1,20 @@
+{
+  "history": [
+    {
+      "version": "IN2015_13.1.0.593(EX01)",
+      "arb": -1,
+      "major": -1,
+      "minor": -1,
+      "arb_detected": false,
+      "first_seen": "2026-11-09",
+      "last_checked": "2026-11-09",
+      "status": "current",
+      "package_type": "incremental",
+      "md5": "490322d1aabe9feea3d68b88433ae61b"
+    }
+  ],
+  "device": "OnePlus 8",
+  "device_id": "8",
+  "region": "NA",
+  "model": "IN2015"
+}

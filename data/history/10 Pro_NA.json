@@ -1,0 +1,20 @@
+{
+  "history": [
+    {
+      "version": "NE2215_15.0.0.1302(EX01)",
+      "arb": 0,
+      "major": 2,
+      "minor": 0,
+      "arb_detected": true,
+      "first_seen": "2026-11-09",
+      "last_checked": "2026-11-09",
+      "status": "current",
+      "package_type": "incremental",
+      "md5": "d6c7913b2ae5dc9e4d7d9d619c0d5217"
+    }
+  ],
+  "device": "OnePlus 10 Pro",
+  "device_id": "10 Pro",
+  "region": "NA",
+  "model": "NE2215"
+}
