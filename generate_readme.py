@@ -22,7 +22,7 @@ def get_region_name(variant: str) -> str:
 def package_type_marker(entry: Dict) -> str:
     """Mark ARB values that were read from an incremental OTA package."""
     if entry.get("package_type") == "incremental":
-        return " 🧩 **ARB from incremental**"
+        return " 🧩 **ARB checked from incremental**"
     return ""
 
 def generate_device_section(device_id: str, device_name: str, history_data: Dict) -> List[str]:

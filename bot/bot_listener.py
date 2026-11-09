@@ -450,7 +450,7 @@ async def status_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 regions = ", ".join(regions_list)
                 text += f"  • `{v}` ({regions}) - ARB: {arb_display} {status_icon}{arb_note}\n    MD5: `{md5}`\n"
                 if v_det.get('is_incremental') or v_det.get('package_type') == 'incremental':
-                    text += "    🧩 ARB from incremental OTA\n"
+                    text += "    🧩 ARB checked from incremental OTA\n"
         text += "\n"
         
     if len(found_models) > 10:
@@ -507,7 +507,7 @@ async def latest(update: Update, context: ContextTypes.DEFAULT_TYPE, is_callback
 
         incremental_note = ""
         if v_det.get('is_incremental') or v_det.get('package_type') == 'incremental':
-            incremental_note = "\n  🧩 ARB from incremental OTA"
+            incremental_note = "\n  🧩 ARB checked from incremental OTA"
             
         text += f"📱 *{dev_name}*\n  • `{v_name}` ({regions}) - ARB: {arb_display} {status_icon}{arb_note}{date_str}{incremental_note}\n\n"
         

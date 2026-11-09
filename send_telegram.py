@@ -163,7 +163,7 @@ def main():
 
         package_type = (args.package_type or "unknown").lower()
         if package_type == "incremental":
-            message += "📦 *Package:* 🧩 ARB from incremental OTA\n"
+            message += "📦 *Package:* 🧩 ARB checked from incremental OTA\n"
         elif package_type == "full":
             message += "📦 *Package:* Full OTA\n"
         else:

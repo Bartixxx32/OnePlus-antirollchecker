@@ -151,11 +151,11 @@ const renderBadge = (v) => {
 };
 
 /**
- * Render a badge when the ARB value was read from an incremental OTA package.
+ * Render a badge when the ARB value was checked from an incremental OTA package.
  */
 const renderPackageType = (v) => {
     if (!(v.package_type === 'incremental' || v.is_incremental === true)) return '';
-    return `<span class="badge badge-incremental" title="ARB value was read from an incremental OTA package"><span class="badge-dot"></span>ARB from incremental</span>`;
+    return `<span class="badge badge-incremental" title="ARB value was checked from an incremental OTA package"><span class="badge-dot"></span>ARB checked from incremental</span>`;
 };
 
 /**
