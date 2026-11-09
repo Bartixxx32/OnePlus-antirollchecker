@@ -35,6 +35,11 @@ def main():
             build = meta.get('post-build', 'Unknown')
         
         arb = data.get('arb_index', 'Unknown')
+
+        package_type = data.get('package_type')
+        if not package_type and meta.get('pre-build'):
+            package_type = 'incremental'
+        package_type = package_type or 'unknown'
         
         # Output to file for shell sourcing
         print(f"Parsing successful. Device: {device}, Version: {version}")
@@ -45,6 +50,7 @@ def main():
             f.write(f'DETECTED_PATCH="{patch}"\n')
             f.write(f'DETECTED_BUILD="{build}"\n')
             f.write(f'DETECTED_ARB="{arb}"\n')
+            f.write(f'DETECTED_PACKAGE_TYPE="{package_type}"\n')
             f.write(f'IMAGE_CHECK="{str(is_img_check).lower()}"\n')
             
     except Exception as e:

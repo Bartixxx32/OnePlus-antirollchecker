@@ -15,6 +15,7 @@ import hashlib
 from pathlib import Path
 
 from arb_parser import parse_xbl_config_file
+from package_type import classify_package, manifest_from_zip
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
@@ -89,7 +90,7 @@ def extract_ota_metadata(zip_path):
         logger.warning(f"Failed to extract metadata from zip: {e}")
     return metadata
 
-def analyze_firmware(zip_path, tools_dir, output_dir, final_dir=None):
+def analyze_firmware(zip_path, tools_dir, output_dir, final_dir=None, allow_unknown=False):
     zip_path = Path(zip_path).resolve()
     tools_dir = Path(tools_dir).resolve()
     output_dir = Path(output_dir).resolve()
@@ -97,6 +98,7 @@ def analyze_firmware(zip_path, tools_dir, output_dir, final_dir=None):
     
     otaripper = tools_dir / "otaripper"
     arbextract = tools_dir / "arbextract"
+    package_type = None
     
     final_img = final_dir / "xbl_config.img"
     
@@ -115,6 +117,14 @@ def analyze_firmware(zip_path, tools_dir, output_dir, final_dir=None):
         metadata = {}
         if zip_path and Path(zip_path).exists():
             md5_sum = calculate_md5(zip_path)
+            if detect_file_type(zip_path) == '.zip':
+                metadata = extract_ota_metadata(zip_path)
+                try:
+                    package_type = classify_package(
+                        metadata, manifest_from_zip(zip_path)
+                    )
+                except Exception as e:
+                    logger.warning(f"Could not classify package type: {e}")
         
         # 1. Skip extraction if image already exists (cache hit optimization)
         if final_img.exists():
@@ -175,8 +185,8 @@ def analyze_firmware(zip_path, tools_dir, output_dir, final_dir=None):
                 
             # --- Handle .zip archives (OTA payload packages) ---
             elif suffix == '.zip':
-                metadata = extract_ota_metadata(zip_path)
-                
+                if not metadata:
+                    metadata = extract_ota_metadata(zip_path)
                 extracted_direct = None
                 try:
                     with zipfile.ZipFile(zip_path, 'r') as z:
@@ -254,30 +264,52 @@ def analyze_firmware(zip_path, tools_dir, output_dir, final_dir=None):
         cmd_arb = [str(arbextract), str(final_img)]
         output = run_command(cmd_arb)
         if not output:
-            return None
+            if not allow_unknown:
+                return None
+            logger.warning("ARB is undetectable; recording an unknown result.")
+            result = {
+                'arb_index': '-1',
+                'major': '-1',
+                'minor': '-1',
+            }
+        else:
+            # 4. Parse Output
+            # Expected output format from arbextract:
+            # ARB (Anti-Rollback): 1
+            # Major Version: 3
+            # Minor Version: 0
 
-        # 4. Parse Output
-        # Expected output format from arbextract:
-        # ARB (Anti-Rollback): 1
-        # Major Version: 3
-        # Minor Version: 0
+            result = {}
+            for line in output.splitlines():
+                if "ARB (Anti-Rollback)" in line:
+                    result['arb_index'] = line.split(':')[-1].strip()
+                elif "Major Version" in line:
+                    result['major'] = line.split(':')[-1].strip()
+                elif "Minor Version" in line:
+                    result['minor'] = line.split(':')[-1].strip()
 
-        result = {}
-        for line in output.splitlines():
-            if "ARB (Anti-Rollback)" in line:
-                result['arb_index'] = line.split(':')[-1].strip()
-            elif "Major Version" in line:
-                result['major'] = line.split(':')[-1].strip()
-            elif "Minor Version" in line:
-                result['minor'] = line.split(':')[-1].strip()
-
-        if 'arb_index' not in result:
-            logger.error("Could not parse ARB index from arbextract output")
-            return None
+            if 'arb_index' not in result:
+                if not allow_unknown:
+                    logger.error("Could not parse ARB index from arbextract output")
+                    return None
+                logger.warning("ARB is undetectable; recording an unknown result.")
+                result = {
+                    'arb_index': '-1',
+                    'major': '-1',
+                    'minor': '-1',
+                }
         
-    # Append metadata
+    # Append metadata and package classification
     if metadata:
         result['ota_metadata'] = metadata
+
+    if package_type:
+        result['package_type'] = package_type
+
+    try:
+        result['arb_detected'] = int(result.get('arb_index', -1)) >= 0
+    except (TypeError, ValueError):
+        result['arb_detected'] = False
         
     if 'md5_sum' in locals():
         result['md5'] = md5_sum
@@ -291,10 +323,21 @@ def main():
     parser.add_argument("--output-dir", default="extracted", help="Directory for extraction")
     parser.add_argument("--final-dir", default="firmware_data", help="Directory for final xbl_config.img")
     parser.add_argument("--json", action="store_true", help="Output result as JSON")
+    parser.add_argument(
+        "--allow-unknown",
+        action="store_true",
+        help="Return an unknown ARB result instead of failing when ARB cannot be parsed",
+    )
     
     args = parser.parse_args()
     
-    result = analyze_firmware(args.zip_path, args.tools_dir, args.output_dir, args.final_dir)
+    result = analyze_firmware(
+        args.zip_path,
+        args.tools_dir,
+        args.output_dir,
+        args.final_dir,
+        allow_unknown=args.allow_unknown,
+    )
     
     if result:
         if args.json:

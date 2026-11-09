@@ -97,6 +97,9 @@ class TestGetModelNumber:
     def test_pad_3(self):
         assert get_model_number("Pad 3", "GLO") == "OPD2415"
 
+    def test_pad_2_na(self):
+        assert get_model_number("Pad 2", "NA") == "OPD2403"
+
     def test_reno10_pro_multi_region(self):
         assert get_model_number("Reno10 Pro", "ID") == "CPH2525ID"
         assert get_model_number("Reno10 Pro", "IN") == "CPH2525IN"

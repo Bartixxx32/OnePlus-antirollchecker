@@ -18,7 +18,8 @@
       "first_seen": "2026-11-09",
       "last_checked": "2026-11-09",
       "status": "archived",
-      "md5": "c4bf38e7b691b79f32605967303b77e0"
+      "md5": "c4bf38e7b691b79f32605967303b77e0",
+      "package_type": "full"
     },
     {
       "version": "CPH2583_16.0.10.601(EX01)",
@@ -28,7 +29,8 @@
       "first_seen": "2026-11-09",
       "last_checked": "2026-11-09",
       "status": "archived",
-      "md5": "8c422427ca613c06ea1a5675893a6fa7"
+      "md5": "8c422427ca613c06ea1a5675893a6fa7",
+      "package_type": "incremental"
     },
     {
       "version": "CPH2583_16.0.10.501(EX01)",
@@ -47,7 +49,8 @@
       "minor": 0,
       "first_seen": "2026-11-09",
       "last_checked": "2026-11-09",
-      "status": "archived"
+      "status": "archived",
+      "package_type": "incremental"
     },
     {
       "version": "CPH2583_15.0.0.863(EX01)",
@@ -56,7 +59,8 @@
       "minor": 0,
       "first_seen": "2026-11-09",
       "last_checked": "2026-11-09",
-      "status": "archived"
+      "status": "archived",
+      "package_type": "incremental"
     },
     {
       "version": "CPH2583_15.0.0.861(EX01)",
@@ -66,7 +70,8 @@
       "first_seen": "2026-11-09",
       "last_checked": "2026-11-09",
       "status": "archived",
-      "md5": "b199f0be89d68e76a211e5c72ce4c406"
+      "md5": "b199f0be89d68e76a211e5c72ce4c406",
+      "package_type": "incremental"
     },
     {
       "version": "CPH2583_15.0.0.850(EX01)",
@@ -76,7 +81,8 @@
       "first_seen": "2026-11-09",
       "last_checked": "2026-11-09",
       "status": "archived",
-      "md5": "28d41276d7c63ac7d416b584eec88c8a"
+      "md5": "28d41276d7c63ac7d416b584eec88c8a",
+      "package_type": "incremental"
     },
     {
       "version": "CPH2583_15.0.0.832(EX01)",
@@ -86,7 +92,8 @@
       "first_seen": "2026-11-09",
       "last_checked": "2026-11-09",
       "status": "archived",
-      "md5": "40f3abba9cdfebd3da84bd574fb19f47"
+      "md5": "40f3abba9cdfebd3da84bd574fb19f47",
+      "package_type": "incremental"
     },
     {
       "version": "CPH2583_15.0.0.801(EX01)",
@@ -116,7 +123,8 @@
       "first_seen": "2026-11-09",
       "last_checked": "2026-11-09",
       "status": "archived",
-      "md5": "ce24628a4131aead8c22251b48d0ef33"
+      "md5": "ce24628a4131aead8c22251b48d0ef33",
+      "package_type": "incremental"
     },
     {
       "version": "CPH2583_15.0.0.503(EX01)",
@@ -126,7 +134,8 @@
       "first_seen": "2026-11-09",
       "last_checked": "2026-11-09",
       "status": "archived",
-      "md5": "f2f6a3caab54f1bf2ce75801c5bfb9df"
+      "md5": "f2f6a3caab54f1bf2ce75801c5bfb9df",
+      "package_type": "incremental"
     },
     {
       "version": "CPH2583_15.0.0.305(EX01)",
@@ -135,7 +144,8 @@
       "minor": 0,
       "first_seen": "2026-11-09",
       "last_checked": "2026-11-09",
-      "status": "archived"
+      "status": "archived",
+      "package_type": "full"
     }
   ],
   "device": "OnePlus 12",

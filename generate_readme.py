@@ -18,6 +18,13 @@ def get_region_name(variant: str) -> str:
     """Map compact region codes to human-readable labels."""
     return REGION_MAPPING.get(variant, variant)
 
+
+def package_type_marker(entry: Dict) -> str:
+    """Return a visible warning marker for incremental OTA packages."""
+    if entry.get("package_type") == "incremental":
+        return " ⚠️ **Incremental**"
+    return ""
+
 def generate_device_section(device_id: str, device_name: str, history_data: Dict) -> List[str]:
     """Generate Markdown section for a specific device."""
     lines = []
@@ -84,6 +91,8 @@ def generate_device_section(device_id: str, device_name: str, history_data: Dict
             # Status icon and text (matching website badges)
             if is_hardcoded:
                 safe_icon = "⚠️ Undetectable ARB"
+            elif current_entry.get("arb_detected") is False:
+                safe_icon = "⚠️ Undetectable ARB"
             elif arb == 0:
                 safe_icon = "✅ Safe"
             elif isinstance(arb, int) and arb > 0:
@@ -99,7 +108,7 @@ def generate_device_section(device_id: str, device_name: str, history_data: Dict
             if md5:
                 md5_str = f"<br><details><summary>MD5</summary><code>{md5}</code></details>"
 
-            rows.append(f"| {region_name} | {model} | {version}{md5_str} | **{display_arb}** | Major: {major}, Minor: {minor} | {date} | {safe_icon} |")
+            rows.append(f"| {region_name} | {model} | {version}{package_type_marker(current_entry)}{md5_str} | **{display_arb}** | Major: {major}, Minor: {minor} | {date} | {safe_icon} |")
 
     if has_data:
         lines.append(f"### {device_name}")
@@ -144,6 +153,8 @@ def generate_device_section(device_id: str, device_name: str, history_data: Dict
                     
                     if hist_is_hardcoded:
                         s_icon = "⚠️ Undetectable ARB"
+                    elif entry.get("arb_detected") is False:
+                        s_icon = "⚠️ Undetectable ARB"
                     elif a == 0:
                         s_icon = "✅ Safe"
                     elif isinstance(a, int) and a > 0:
@@ -158,7 +169,7 @@ def generate_device_section(device_id: str, device_name: str, history_data: Dict
                     if md5_hist:
                         md5_hist_str = f"<br><details><summary>MD5</summary><code>{md5_hist}</code></details>"
                         
-                    history_lines.append(f"| {v}{md5_hist_str} | {display_a} | Major: {maj}, Minor: {min_} | {ls} | {s_icon} |")
+                    history_lines.append(f"| {v}{package_type_marker(entry)}{md5_hist_str} | {display_a} | Major: {maj}, Minor: {min_} | {ls} | {s_icon} |")
                 history_lines.append("")
                 history_lines.append("</details>")
                 history_lines.append("")
@@ -189,6 +200,10 @@ def generate_readme(history_data: Dict) -> str:
         '---',
         '',
         'Automated ARB (Anti-Rollback) index tracker for OnePlus devices. This repository monitors firmware updates and tracks ARB changes over time.',
+        '',
+        '> ⚠️ **Incremental OTA warning:** firmware marked **Incremental** is a delta/differential package. It only applies on top of a matching installed build and **must not be flashed standalone** (for example through fastboot or a clean flash tool). Use the normal system updater or flash the matching full OTA package instead.',
+        '>',
+        '> A `?` / **Undetectable ARB** result means the package is valid but no ARB record could be parsed from it. Treat it as unknown, not as safe.',
         '',
         '**🌐 ARB Info Website:** [https://oparb.pages.dev/](https://oparb.pages.dev/)',
         '',

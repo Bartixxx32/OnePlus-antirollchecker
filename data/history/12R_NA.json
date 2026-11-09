@@ -8,7 +8,8 @@
       "first_seen": "2026-11-09",
       "last_checked": "2026-11-09",
       "status": "archived",
-      "md5": "f9a87d4ba34687bfdf8c66274a81edfc"
+      "md5": "f9a87d4ba34687bfdf8c66274a81edfc",
+      "package_type": "incremental"
     }
   ],
   "device": "OnePlus 12R",

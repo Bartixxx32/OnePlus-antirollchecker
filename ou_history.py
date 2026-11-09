@@ -27,6 +27,8 @@ OU_HEADERS = {
 }
 
 # ARB device id / region -> Oxygen Updater numeric device id.
+# Every tracked device that Oxygen Updater exposes with a North America
+# variant must be listed here, otherwise the NA check silently disappears.
 OU_NA_DEVICE_IDS = {
     "15": 814,
     "15R": 903,
@@ -35,6 +37,19 @@ OU_NA_DEVICE_IDS = {
     "12": 130,
     "11": 93,
     "12R": 136,
+    "10 Pro": 75,
+    "10T": 87,
+    "9 Pro": 57,
+    "9": 56,
+    "8T": 42,
+    "8 Pro": 30,
+    "8": 27,
+    "Nord N30": 103,
+    "Nord N20": 102,
+    "Nord N200 5G": 67,
+    "Pad 3": 625,
+    "Pad 2": 150,
+    "Open": 123,
 }
 
 # Internal OTA versions that start a walkable chain.  Each value is the
@@ -148,9 +163,14 @@ KNOWN_GAPS = {
     "13R": [],
 }
 
-# Some devices have never had an archived full package, so only the latest
-# package can be checked.  These are listed explicitly for visibility.
-LATEST_ONLY = {"15R", "13R", "11", "12R"}
+# Devices without a walkable OU chain or archived packages, so only the
+# latest package can be checked.  Listed explicitly for visibility.
+LATEST_ONLY = {
+    "15R", "13R", "11", "12R",
+    "10 Pro", "10T", "9 Pro", "9", "8T", "8 Pro", "8",
+    "Nord N30", "Nord N20", "Nord N200 5G",
+    "Pad 3", "Pad 2", "Open",
+}
 
 _UPDATE_PARAMS = {
     "osType": "Stable",

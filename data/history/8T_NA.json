@@ -8,7 +8,8 @@
       "first_seen": "2026-02-04",
       "last_checked": "2026-09-30",
       "status": "current",
-      "md5": "68134307caa39d9f0f07cbb107619dee"
+      "md5": "68134307caa39d9f0f07cbb107619dee",
+      "package_type": "full"
     }
   ],
   "device": "OnePlus 8T",

@@ -13,16 +13,22 @@ import lzma
 import re
 import struct
 import time
+import zlib
 
 import requests
 
 from arb_parser import parse_elf64_arb
 from ota_proto import update_metadata_pb2
+from package_type import classify_package
 
 logger = logging.getLogger(__name__)
 
 PARTITION_CANDIDATES = ["xbl_config", "xbl", "abl", "xbl_ramdump"]
 MAX_PARTITION_SIZE = 10 * 1024 * 1024
+
+
+class ArbUndetectableError(RuntimeError):
+    """The package is valid but contains no parseable ARB metadata."""
 
 
 def _ota_headers():
@@ -190,6 +196,43 @@ def _parse_zip_find_entry(url, size, name):
     }
 
 
+def _read_zip_entry(url, size, name):
+    """Read one entry from a remote ZIP archive via range requests."""
+    entry = _parse_zip_find_entry(url, size, name)
+    if entry["compressedSize"] == 0:
+        return b""
+    raw = _read_range(
+        url,
+        entry["dataOffset"],
+        entry["dataOffset"] + entry["compressedSize"] - 1,
+    )
+    if entry["compression"] == 0:  # stored
+        return raw
+    if entry["compression"] == 8:  # deflate
+        try:
+            return zlib.decompress(raw, -15)
+        except zlib.error:
+            return None
+    return None
+
+
+def _read_ota_metadata(url, size):
+    """Return ``META-INF/com/android/metadata`` as a dict, or ``{}``."""
+    try:
+        raw = _read_zip_entry(url, size, "META-INF/com/android/metadata")
+    except Exception as exc:  # noqa: BLE001 - metadata is optional
+        logger.debug("Could not read OTA metadata: %s", exc)
+        return {}
+    if not raw:
+        return {}
+    metadata = {}
+    for line in raw.decode("utf-8", errors="replace").splitlines():
+        if "=" in line:
+            key, value = line.split("=", 1)
+            metadata[key.strip()] = value.strip()
+    return metadata
+
+
 def _parse_payload_manifest(url, payload_offset):
     """Parse the payload header (big endian) and return manifest + blob start."""
     header = _read_range(url, payload_offset, payload_offset + 23)
@@ -262,16 +305,42 @@ def _extract_partition(url, partition, blob_data_start):
     return b"".join(chunks)
 
 
-def check_arb(download_url):
-    """Return ``{arb, major, minor, partition}`` for a firmware URL."""
-    logger.info("ARB range check: %s", download_url)
+def _inspect_package(download_url):
+    """Resolve a package and read its metadata and payload manifest."""
+    logger.info("Inspecting OTA package: %s", download_url)
     url = _resolve_if_needed(download_url)
     file_size = _get_file_size(url)
-
+    metadata = _read_ota_metadata(url, file_size)
     payload_entry = _parse_zip_find_entry(url, file_size, "payload.bin")
     manifest, blob_data_start = _parse_payload_manifest(
         url, payload_entry["dataOffset"]
     )
+    return {
+        "url": url,
+        "size": file_size,
+        "metadata": metadata,
+        "manifest": manifest,
+        "blob_data_start": blob_data_start,
+        "package_type": classify_package(metadata, manifest),
+    }
+
+
+def classify_remote_package(download_url):
+    """Return ``incremental``/``full``/``None`` without downloading the ZIP."""
+    try:
+        return _inspect_package(download_url)["package_type"]
+    except Exception as exc:  # noqa: BLE001 - classification is best effort
+        logger.warning("Could not classify OTA package: %s", exc)
+        return None
+
+
+def check_arb(download_url):
+    """Return ``{arb, major, minor, partition, package_type}`` for a URL."""
+    logger.info("ARB range check: %s", download_url)
+    package = _inspect_package(download_url)
+    url = package["url"]
+    manifest = package["manifest"]
+    blob_data_start = package["blob_data_start"]
 
     partitions = {}
     for partition in manifest.partitions:
@@ -292,6 +361,7 @@ def check_arb(download_url):
         result = parse_elf64_arb(data)
         if result:
             result["partition"] = name
+            result["package_type"] = package["package_type"]
             return result
 
-    raise RuntimeError("Could not determine ARB from any partition")
+    raise ArbUndetectableError("Could not determine ARB from any partition")

@@ -8,7 +8,8 @@
       "first_seen": "2026-11-09",
       "last_checked": "2026-11-09",
       "status": "current",
-      "md5": "f2c448beb5c71d4c0f7397bc56cae288"
+      "md5": "f2c448beb5c71d4c0f7397bc56cae288",
+      "package_type": "incremental"
     },
     {
       "version": "CPH2551_15.0.0.822(EX01)",

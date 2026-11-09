@@ -4,7 +4,12 @@ import pytest
 import tempfile
 from pathlib import Path
 from unittest.mock import patch, MagicMock
-from update_history import load_history, save_history, update_history_entry
+from update_history import (
+    load_history,
+    normalize_package_type,
+    save_history,
+    update_history_entry,
+)
 
 
 class TestLoadHistory:
@@ -134,3 +139,62 @@ class TestUpdateHistoryEntry:
         ]}
         update_history_entry(history, "13.0.0.500", 1, 2, 0, is_historical=True)
         assert history["history"][-1]["version"] == "13.0.0.500"
+
+    def test_new_entry_stores_incremental_package_type(self):
+        history = {"history": []}
+        update_history_entry(
+            history, "16.0.2.401", 0, 3, 0,
+            package_type="incremental",
+        )
+
+        entry = history["history"][0]
+        assert entry["package_type"] == "incremental"
+        assert entry["arb_detected"] is True
+
+    def test_unknown_arb_is_stored_as_undetected(self):
+        history = {"history": []}
+        update_history_entry(history, "14.0.0.1902(EX01)", -1, -1, -1)
+
+        entry = history["history"][0]
+        assert entry["arb"] == -1
+        assert entry["arb_detected"] is False
+
+    def test_existing_unknown_arb_can_be_recovered(self):
+        history = {"history": [{
+            "version": "14.0.0.1902(EX01)",
+            "arb": -1,
+            "major": -1,
+            "minor": -1,
+            "arb_detected": False,
+            "first_seen": "2024-01-01",
+            "last_checked": "2024-01-01",
+            "status": "current",
+        }]}
+        update_history_entry(history, "14.0.0.1902(EX01)", 0, 3, 0)
+
+        entry = history["history"][0]
+        assert entry["arb"] == 0
+        assert entry["arb_detected"] is True
+
+    def test_existing_entry_learns_package_type(self):
+        history = {"history": [{
+            "version": "16.0.2.401",
+            "arb": 0,
+            "major": 3,
+            "minor": 0,
+            "first_seen": "2024-01-01",
+            "last_checked": "2024-01-01",
+            "status": "current",
+        }]}
+        update_history_entry(
+            history, "16.0.2.401", 0, 3, 0,
+            package_type="incremental",
+        )
+
+        assert history["history"][0]["package_type"] == "incremental"
+
+    def test_package_type_normalization(self):
+        assert normalize_package_type("incremental") == "incremental"
+        assert normalize_package_type("FULL") == "full"
+        assert normalize_package_type("unknown") is None
+        assert normalize_package_type(None) is None

@@ -62,11 +62,18 @@ def generate_database():
                 continue
 
             if version_str not in database[model]["versions"]:
+                arb_value = entry.get("arb", -1)
+                arb_detected = entry.get("arb_detected")
+                if arb_detected is None:
+                    arb_detected = isinstance(arb_value, int) and arb_value >= 0
                 database[model]["versions"][version_str] = {
-                    "arb": entry.get("arb", -1),
+                    "arb": arb_value,
+                    "arb_detected": arb_detected,
                     "major": entry.get("major", -1),
                     "minor": entry.get("minor", -1),
                     "md5": entry.get("md5"),
+                    "package_type": entry.get("package_type"),
+                    "is_incremental": entry.get("package_type") == "incremental",
                     "first_seen": entry.get("first_seen"),
                     "last_checked": entry.get("last_checked"),
                     "status": entry.get("status"),
@@ -75,6 +82,10 @@ def generate_database():
                 }
             else:
                 existing = database[model]["versions"][version_str]
+                new_package_type = entry.get("package_type")
+                if new_package_type and not existing.get("package_type"):
+                    existing["package_type"] = new_package_type
+                    existing["is_incremental"] = new_package_type == "incremental"
                 if region not in existing["regions"]:
                     existing["regions"].append(region)
                     existing_md5 = existing.get("md5")

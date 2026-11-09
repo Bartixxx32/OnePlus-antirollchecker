@@ -1,7 +1,9 @@
 import pytest
 
 import ou_history
+from config import DEVICE_METADATA
 from generate_backfill_matrix import build_backfill_entries, select_versions
+from generate_matrix import build_matrix
 
 
 class FakeResponse:
@@ -26,6 +28,40 @@ class FakeSession:
         self.calls.append(url)
         seed = url.rsplit("/", 1)[-1]
         return FakeResponse(self.responses[seed])
+
+
+class TestNaCoverage:
+    def test_tracked_ou_na_devices_are_mapped(self):
+        expected = {
+            "15": 814, "15R": 903, "13": 154, "13R": 158,
+            "12": 130, "11": 93, "12R": 136,
+            "10 Pro": 75, "10T": 87, "9 Pro": 57, "9": 56,
+            "8T": 42, "8 Pro": 30, "8": 27,
+            "Nord N30": 103, "Nord N20": 102, "Nord N200 5G": 67,
+            "Pad 3": 625, "Pad 2": 150, "Open": 123,
+        }
+        assert ou_history.OU_NA_DEVICE_IDS == expected
+
+    def test_every_mapped_device_has_an_na_model(self):
+        missing = [
+            device_id
+            for device_id in ou_history.OU_NA_DEVICE_IDS
+            if device_id not in DEVICE_METADATA
+            or "NA" not in DEVICE_METADATA[device_id].get("models", {})
+        ]
+        assert not missing, f"NA mappings without an NA model: {missing}"
+
+    def test_every_tracked_na_device_is_checked_daily(self):
+        matrix = build_matrix()
+        checked = {
+            (entry["device"], entry["variant"]) for entry in matrix
+        }
+        missing = [
+            device_id
+            for device_id, meta in DEVICE_METADATA.items()
+            if "NA" in meta.get("models", {}) and (device_id, "NA") not in checked
+        ]
+        assert not missing, f"Tracked NA devices missing from daily matrix: {missing}"
 
 
 class TestVersionSortKey:

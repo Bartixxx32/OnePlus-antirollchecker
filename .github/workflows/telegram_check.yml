@@ -149,6 +149,7 @@ jobs:
             --tools-dir tools \
             --output-dir extracted \
             --final-dir firmware_data \
+            --allow-unknown \
             --json > result.json
           
           cat result.json
@@ -221,6 +222,7 @@ jobs:
         if: always()
         run: |
           ERROR_MSG=""
+          DETECTED_PACKAGE_TYPE="unknown"
           
           if [ "${{ steps.download.outcome }}" == "failure" ]; then
              ERROR_MSG="❌ Download Failed. Please check the URL or try again later."
@@ -244,12 +246,14 @@ jobs:
                      DETECTED_PATCH="Unknown"
                      DETECTED_BUILD="Unknown"
                      DETECTED_ARB="Error"
+                     DETECTED_PACKAGE_TYPE="unknown"
                  fi
                  
                  # Override ARB display if device is hardcoded
                  if [ "${{ steps.check_hardcode.outputs.is_hardcoded }}" = "true" ]; then
                      DETECTED_ARB="?"
                  fi
+                 DETECTED_PACKAGE_TYPE="${DETECTED_PACKAGE_TYPE:-unknown}"
               fi
               
                IMG_FLAG=""
@@ -264,6 +268,7 @@ jobs:
                  --security-patch "$DETECTED_PATCH" \
                  --build-id "$DETECTED_BUILD" \
                  --arb "$DETECTED_ARB" \
+                 --package-type "$DETECTED_PACKAGE_TYPE" \
                  --url "${{ github.event.inputs.firmware_url }}" \
                  --user-mention "${{ github.event.inputs.request_user_name }}" \
                  --delete-message-id "${{ github.event.inputs.request_status_message_id }}" \

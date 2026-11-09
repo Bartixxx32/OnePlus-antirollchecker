@@ -135,7 +135,7 @@ jobs:
         if: (matrix.source || 'springer') == 'springer' && (hashFiles('firmware.zip') != '' || steps.cache-arb.outputs.cache-hit == 'true')
         run: |
           # Pass 'firmware.zip' even if missing, analyze_firmware will skip it if cache hit
-          python3 analyze_firmware.py firmware.zip --tools-dir tools --output-dir extracted --final-dir firmware_data --json > result.json
+          python3 analyze_firmware.py firmware.zip --tools-dir tools --output-dir extracted --final-dir firmware_data --allow-unknown --json > result.json
 
       - name: Check ARB via HTTP Range (OU)
         if: startsWith(matrix.source || 'springer', 'ou_')

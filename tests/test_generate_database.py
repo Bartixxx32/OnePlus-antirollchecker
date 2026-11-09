@@ -212,6 +212,31 @@ class TestGenerateDatabase:
             db = json.load(f)
         assert len(db["CPH2581"]["versions"]) == 0
 
+    def test_package_type_and_unknown_arb_in_output(self, history_dir):
+        self.write_history("15_NA.json", {
+            "device": "OnePlus 15", "device_id": "15", "model": "CPH2749",
+            "region": "NA",
+            "history": [
+                {"version": "CPH2749_16.0.2.401(EX01)", "arb": 0, "major": 3,
+                 "minor": 0, "arb_detected": True,
+                 "package_type": "incremental",
+                 "first_seen": "2024-01-01", "last_checked": "2024-01-15",
+                 "status": "current"},
+                {"version": "CPH2749_14.0.0.100(EX01)", "arb": -1, "major": -1,
+                 "minor": -1, "arb_detected": False,
+                 "first_seen": "2024-01-01", "last_checked": "2024-01-15",
+                 "status": "archived"},
+            ]
+        })
+        generate_database()
+        with open("data/database.json") as f:
+            db = json.load(f)
+        versions = db["CPH2749"]["versions"]
+        assert versions["CPH2749_16.0.2.401(EX01)"]["package_type"] == "incremental"
+        assert versions["CPH2749_16.0.2.401(EX01)"]["is_incremental"] is True
+        assert versions["CPH2749_14.0.0.100(EX01)"]["arb_detected"] is False
+        assert versions["CPH2749_14.0.0.100(EX01)"]["is_incremental"] is False
+
     def test_is_hardcoded_flag_in_output(self, history_dir):
         self.write_history("Nord_CE_3_Lite_GLO.json", {
             "device": "OnePlus Nord CE 3 Lite",

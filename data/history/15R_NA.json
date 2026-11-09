@@ -8,7 +8,8 @@
       "first_seen": "2026-11-09",
       "last_checked": "2026-11-09",
       "status": "archived",
-      "md5": "7258cef4df4cdf2a03bd055be6311e94"
+      "md5": "7258cef4df4cdf2a03bd055be6311e94",
+      "package_type": "incremental"
     }
   ],
   "device": "OnePlus 15R",

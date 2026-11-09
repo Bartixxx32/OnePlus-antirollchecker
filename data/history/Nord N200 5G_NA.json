@@ -8,7 +8,8 @@
       "first_seen": "2026-03-18",
       "last_checked": "2026-09-30",
       "status": "current",
-      "md5": "29ba37ef58d043e6f1d6088946844fae"
+      "md5": "29ba37ef58d043e6f1d6088946844fae",
+      "package_type": "full"
     }
   ],
   "device": "OnePlus Nord N200 5G",

@@ -62,6 +62,12 @@ def main():
     parser.add_argument("--arb", required=True, help="ARB Index")
     parser.add_argument("--md5", help="MD5 Checksum")
     parser.add_argument("--url", help="Download URL")
+    parser.add_argument(
+        "--package-type",
+        choices=["incremental", "full", "unknown"],
+        default="unknown",
+        help="OTA package type; incremental packages must not be flashed standalone",
+    )
     
     # New arguments for interactive bot
     parser.add_argument("--reply-to", help="Message ID to reply to")
@@ -155,24 +161,42 @@ def main():
         if safe_build:
             message += f"🏗️ *Build ID:* `{safe_build}`\n"
 
+        package_type = (args.package_type or "unknown").lower()
+        if package_type == "incremental":
+            message += "📦 *Package:* ⚠️ Incremental OTA\n"
+            message += (
+                "🚫 *Do not flash standalone!* This is a delta update that requires "
+                "the matching build already installed. Use the normal system updater "
+                "or the matching full OTA package.\n"
+            )
+        elif package_type == "full":
+            message += "📦 *Package:* Full OTA\n"
+        else:
+            message += "📦 *Package:* Unknown\n"
+
     arb_emoji = ""
     arb_suffix = ""
+    arb_display = safe_arb
     try:
         # standard ARB is typically integer string "0" or "1"
         arb_val = int(args.arb.strip())
-        if arb_val > 0:
+        if arb_val < 0:
+            arb_display = "?"
+            arb_emoji = "⚠️"
+            arb_suffix = "Undetectable ARB"
+        elif arb_val > 0:
             arb_emoji = "❌" # Should probably be warning/error
         else:
             arb_emoji = "✅"
     except:
         # If it's "Error" or "Unknown" or "?", show warning
-        if "error" in args.arb.lower() or args.arb.strip() == "?":
+        if "error" in args.arb.lower() or args.arb.strip() in ("?", "unknown"):
             arb_emoji = "⚠️"
-            if args.arb.strip() == "?":
-                arb_suffix = "Undetectable ARB"
+            arb_display = "?"
+            arb_suffix = "Undetectable ARB"
         pass
 
-    message += f"🛡️ *ARB Index:* {safe_arb} {arb_emoji}"
+    message += f"🛡️ *ARB Index:* {arb_display} {arb_emoji}"
     if arb_suffix:
         message += f" - {arb_suffix}"
     message += "\n"

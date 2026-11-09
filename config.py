@@ -441,7 +441,8 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
         "models": {
             "GLO": "OPD2403",
             "EU": "OPD2403",
-            "IN": "OPD2403"
+            "IN": "OPD2403",
+            "NA": "OPD2403"
         },
     },
     "Pad 2 Pro": {

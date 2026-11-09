@@ -28,7 +28,8 @@
       "first_seen": "2026-11-09",
       "last_checked": "2026-11-09",
       "status": "archived",
-      "md5": "84c72e90073d6fd26b3d0a9e58fdaa3a"
+      "md5": "84c72e90073d6fd26b3d0a9e58fdaa3a",
+      "package_type": "incremental"
     },
     {
       "version": "CPH2655_16.0.10.600(EX01)",
@@ -38,7 +39,8 @@
       "first_seen": "2026-11-09",
       "last_checked": "2026-11-09",
       "status": "archived",
-      "md5": "e76723574959581e5546f125e0dfac98"
+      "md5": "e76723574959581e5546f125e0dfac98",
+      "package_type": "incremental"
     },
     {
       "version": "CPH2655_16.0.1.304(EX01)",
@@ -47,7 +49,8 @@
       "minor": 0,
       "first_seen": "2026-11-09",
       "last_checked": "2026-11-09",
-      "status": "archived"
+      "status": "archived",
+      "package_type": "incremental"
     },
     {
       "version": "CPH2655_16.0.0.213(EX01)",
@@ -56,7 +59,8 @@
       "minor": 0,
       "first_seen": "2026-11-09",
       "last_checked": "2026-11-09",
-      "status": "archived"
+      "status": "archived",
+      "package_type": "incremental"
     },
     {
       "version": "CPH2655_15.0.0.864(EX01)",
@@ -65,7 +69,8 @@
       "minor": 0,
       "first_seen": "2026-11-09",
       "last_checked": "2026-11-09",
-      "status": "archived"
+      "status": "archived",
+      "package_type": "incremental"
     },
     {
       "version": "CPH2655_15.0.0.862(EX01)",
@@ -75,7 +80,8 @@
       "first_seen": "2026-11-09",
       "last_checked": "2026-11-09",
       "status": "archived",
-      "md5": "5ca5b24adee8b70272042cd04d95f041"
+      "md5": "5ca5b24adee8b70272042cd04d95f041",
+      "package_type": "incremental"
     },
     {
       "version": "CPH2655_15.0.0.850(EX01)",
@@ -85,7 +91,8 @@
       "first_seen": "2026-11-09",
       "last_checked": "2026-11-09",
       "status": "archived",
-      "md5": "122d718fe6b08ea6dc656d656c074e34"
+      "md5": "122d718fe6b08ea6dc656d656c074e34",
+      "package_type": "incremental"
     },
     {
       "version": "CPH2655_15.0.0.822(EX01)",
@@ -115,7 +122,8 @@
       "first_seen": "2026-11-08",
       "last_checked": "2026-11-08",
       "status": "archived",
-      "md5": "7d0ce94be24263393454ae140889a523"
+      "md5": "7d0ce94be24263393454ae140889a523",
+      "package_type": "full"
     },
     {
       "version": "CPH2655_15.0.0.405(EX01)",
@@ -125,7 +133,8 @@
       "first_seen": "2026-11-08",
       "last_checked": "2026-11-09",
       "status": "archived",
-      "md5": "5b693110ced8964a707defcd198acfc4"
+      "md5": "5b693110ced8964a707defcd198acfc4",
+      "package_type": "full"
     }
   ],
   "device": "OnePlus 13",

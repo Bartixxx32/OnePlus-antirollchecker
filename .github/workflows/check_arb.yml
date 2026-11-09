@@ -166,6 +166,14 @@ jobs:
           echo "device_name=${{ matrix.device_name }}" >> $GITHUB_OUTPUT
           echo "variant=${{ matrix.variant }}" >> $GITHUB_OUTPUT
 
+      - name: Classify Package Type
+        id: classify
+        if: steps.get_details.outputs.url != '' && steps.get_details.outputs.url != 'null'
+        run: |
+          python3 classify_package.py "${{ steps.get_details.outputs.url }}" --json > package_type.json \
+            || echo '{"package_type": null}' > package_type.json
+          cat package_type.json
+
       - name: Cache ARB Data
         id: cache-arb
         if: github.event.inputs.force_recheck != 'true'
@@ -239,16 +247,29 @@ jobs:
         if: steps.cache-arb.outputs.cache-hit != 'true' && hashFiles('skip_check.txt') == ''
         run: |
           echo "Checking ARB on xbl_config.img..."
-          ARB_OUTPUT=$(python3 arb_parser.py firmware_data/xbl_config.img)
+          set +e
+          ARB_OUTPUT=$(python3 arb_parser.py firmware_data/xbl_config.img 2>&1)
+          PARSE_STATUS=$?
+          set -e
           echo "$ARB_OUTPUT"
 
           ARB_INDEX=$(echo "$ARB_OUTPUT" | grep "ARB (Anti-Rollback)" | awk -F':' '{print $2}' | tr -d ' ')
           MAJOR=$(echo "$ARB_OUTPUT" | grep "Major Version" | awk -F':' '{print $2}' | tr -d ' ')
           MINOR=$(echo "$ARB_OUTPUT" | grep "Minor Version" | awk -F':' '{print $2}' | tr -d ' ')
+          ARB_DETECTED=true
+
+          if [ "$PARSE_STATUS" -ne 0 ] || [ -z "$ARB_INDEX" ]; then
+            echo "ARB metadata cannot be parsed for this package; recording it as undetectable."
+            ARB_INDEX="-1"
+            MAJOR="-1"
+            MINOR="-1"
+            ARB_DETECTED=false
+          fi
 
           cat > result.json << EOF
           {
             "arb_index": "$ARB_INDEX",
+            "arb_detected": $ARB_DETECTED,
             "major": "$MAJOR",
             "minor": "$MINOR",
             "md5": "${{ steps.get_details.outputs.md5 }}"
@@ -308,6 +329,7 @@ jobs:
             --tools-dir tools \
             --output-dir extracted \
             --final-dir firmware_data \
+            --allow-unknown \
             --json > result.json
 
           rm -f skip_check.txt
@@ -318,18 +340,31 @@ jobs:
           echo "Cache hit! Extracting ARB from cached xbl_config.img..."
           
           # Run local ARB parser and capture output
-          ARB_OUTPUT=$(python3 arb_parser.py firmware_data/xbl_config.img)
+          set +e
+          ARB_OUTPUT=$(python3 arb_parser.py firmware_data/xbl_config.img 2>&1)
+          PARSE_STATUS=$?
+          set -e
           echo "$ARB_OUTPUT"
           
           # Parse the output and create JSON
           ARB_INDEX=$(echo "$ARB_OUTPUT" | grep "ARB (Anti-Rollback)" | awk -F':' '{print $2}' | tr -d ' ')
           MAJOR=$(echo "$ARB_OUTPUT" | grep "Major Version" | awk -F':' '{print $2}' | tr -d ' ')
           MINOR=$(echo "$ARB_OUTPUT" | grep "Minor Version" | awk -F':' '{print $2}' | tr -d ' ')
+          ARB_DETECTED=true
+
+          if [ "$PARSE_STATUS" -ne 0 ] || [ -z "$ARB_INDEX" ]; then
+            echo "ARB metadata cannot be parsed for this package; recording it as undetectable."
+            ARB_INDEX="-1"
+            MAJOR="-1"
+            MINOR="-1"
+            ARB_DETECTED=false
+          fi
           
           # Create result.json
           cat > result.json << EOF
           {
             "arb_index": "$ARB_INDEX",
+            "arb_detected": $ARB_DETECTED,
             "major": "$MAJOR",
             "minor": "$MINOR",
             "md5": "${{ steps.get_details.outputs.md5 }}"
@@ -337,6 +372,32 @@ jobs:
           EOF
           
           cat result.json
+
+      - name: Merge Package Type
+        if: hashFiles('result.json') != '' && hashFiles('package_type.json') != ''
+        run: |
+          python3 - <<'PY'
+          import json
+          import sys
+
+          try:
+              with open('result.json', 'r') as f:
+                  result = json.load(f)
+              with open('package_type.json', 'r') as f:
+                  package = json.load(f)
+          except (OSError, json.JSONDecodeError) as exc:
+              print(f"Skipping package-type merge: {exc}")
+              sys.exit(0)
+
+          package_type = package.get('package_type')
+          if package_type and not result.get('package_type'):
+              result['package_type'] = package_type
+
+          with open('result.json', 'w') as f:
+              json.dump(result, f)
+
+          print(f"Package type: {result.get('package_type') or 'unknown'}")
+          PY
 
       - name: Update JSON History (Current Version)
         id: update_history
@@ -362,6 +423,7 @@ jobs:
           ARB=$(python3 -c "import sys, json; print(json.load(open('result.json')).get('arb_index', 'Unknown'))")
           # Extract MD5 from result.json (it might be calculated or passed through)
           CALC_MD5=$(python3 -c "import sys, json; print(json.load(open('result.json')).get('md5', ''))")
+          PACKAGE_TYPE=$(python3 -c "import sys, json; print(json.load(open('result.json')).get('package_type') or 'unknown')")
           
           # Check if device+version is hardcode protected (shows ARB=0 but is actually protected)
           IS_HARDCODED=$(python3 -c "
@@ -392,6 +454,7 @@ jobs:
             --version "${{ steps.get_details.outputs.version }}" \
             --arb "$ARB" \
             --md5 "$FINAL_MD5" \
+            --package-type "$PACKAGE_TYPE" \
             --url "${{ steps.get_details.outputs.url }}"
 
 
