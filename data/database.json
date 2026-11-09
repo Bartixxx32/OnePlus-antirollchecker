@@ -963,7 +963,7 @@
         "arb": 0,
         "major": 2,
         "minor": 0,
-        "md5": null,
+        "md5": "a1a50104b53bcf788c5dab00ecf17343",
         "first_seen": "2026-11-09",
         "last_checked": "2026-11-09",
         "status": "archived",
@@ -2373,11 +2373,13 @@
         "is_hardcoded": false,
         "regions": [
           "EU",
-          "IN"
+          "IN",
+          "NA"
         ],
         "md5_by_region": {
           "EU": "80718e6930fb290629f63dd3866c5d08",
-          "IN": "1cb275faf8b87bc4ef8448ad7cc99435"
+          "IN": "1cb275faf8b87bc4ef8448ad7cc99435",
+          "NA": "f2c448beb5c71d4c0f7397bc56cae288"
         }
       },
       "CPH2551_16.0.5.1002(EX01)": {
@@ -2535,7 +2537,7 @@
         "md5": "9ee66cf78b25acaee3681d138f04c04f",
         "first_seen": "2026-02-04",
         "last_checked": "2026-09-30",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "NA"
@@ -3022,7 +3024,7 @@
         "arb": 1,
         "major": 3,
         "minor": 0,
-        "md5": null,
+        "md5": "8c422427ca613c06ea1a5675893a6fa7",
         "first_seen": "2026-11-09",
         "last_checked": "2026-11-09",
         "status": "archived",
@@ -3422,7 +3424,7 @@
         "arb": 0,
         "major": 2,
         "minor": 0,
-        "md5": null,
+        "md5": "f9a87d4ba34687bfdf8c66274a81edfc",
         "first_seen": "2026-11-09",
         "last_checked": "2026-11-09",
         "status": "archived",
@@ -3898,7 +3900,7 @@
         "arb": 1,
         "major": 3,
         "minor": 0,
-        "md5": null,
+        "md5": "aefed95ff8c4cd09f1cf80e17ac1f9eb",
         "first_seen": "2026-11-09",
         "last_checked": "2026-11-09",
         "status": "archived",
@@ -4367,7 +4369,7 @@
         "arb": 1,
         "major": 3,
         "minor": 0,
-        "md5": null,
+        "md5": "e76723574959581e5546f125e0dfac98",
         "first_seen": "2026-11-09",
         "last_checked": "2026-11-09",
         "status": "archived",
@@ -6061,7 +6063,7 @@
         "arb": 0,
         "major": 3,
         "minor": 0,
-        "md5": null,
+        "md5": "3bbab46414e5c6e4711cce5e83e0d691",
         "first_seen": "2026-11-09",
         "last_checked": "2026-11-09",
         "status": "archived",
@@ -6476,7 +6478,7 @@
         "arb": 0,
         "major": 3,
         "minor": 0,
-        "md5": null,
+        "md5": "7258cef4df4cdf2a03bd055be6311e94",
         "first_seen": "2026-11-09",
         "last_checked": "2026-11-09",
         "status": "archived",
@@ -7917,11 +7919,13 @@
         "regions": [
           "EU",
           "GLO",
+          "NA",
           "IN"
         ],
         "md5_by_region": {
           "EU": "b4c760ac5af28253d8bf5e46eee61ae7",
           "GLO": "15ec42387ec4224a61abe2af8cf832fb",
+          "NA": "994f7ce06597aad6910d41794abda1a1",
           "IN": "c57b6e0e0476998f4f35775297c48bb4"
         }
       },
