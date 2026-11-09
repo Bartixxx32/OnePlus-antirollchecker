@@ -7,7 +7,8 @@
       "minor": 0,
       "first_seen": "2026-11-09",
       "last_checked": "2026-11-09",
-      "status": "archived"
+      "status": "archived",
+      "md5": "844b584e270d88cfe99ab058037b2f24"
     },
     {
       "version": "CPH2583_16.0.3.500(EX01)",
@@ -16,7 +17,8 @@
       "minor": 0,
       "first_seen": "2026-11-09",
       "last_checked": "2026-11-09",
-      "status": "archived"
+      "status": "archived",
+      "md5": "c4bf38e7b691b79f32605967303b77e0"
     },
     {
       "version": "CPH2583_16.0.10.601(EX01)",
@@ -35,7 +37,8 @@
       "minor": 0,
       "first_seen": "2026-11-09",
       "last_checked": "2026-11-09",
-      "status": "archived"
+      "status": "archived",
+      "md5": "5e8eaf72921f202b36f58e48e5613631"
     },
     {
       "version": "CPH2583_16.0.0.202(EX01)",
@@ -62,7 +65,8 @@
       "minor": 0,
       "first_seen": "2026-11-09",
       "last_checked": "2026-11-09",
-      "status": "archived"
+      "status": "archived",
+      "md5": "b199f0be89d68e76a211e5c72ce4c406"
     },
     {
       "version": "CPH2583_15.0.0.850(EX01)",
@@ -71,7 +75,8 @@
       "minor": 0,
       "first_seen": "2026-11-09",
       "last_checked": "2026-11-09",
-      "status": "archived"
+      "status": "archived",
+      "md5": "28d41276d7c63ac7d416b584eec88c8a"
     },
     {
       "version": "CPH2583_15.0.0.832(EX01)",
@@ -80,7 +85,8 @@
       "minor": 0,
       "first_seen": "2026-11-09",
       "last_checked": "2026-11-09",
-      "status": "archived"
+      "status": "archived",
+      "md5": "40f3abba9cdfebd3da84bd574fb19f47"
     },
     {
       "version": "CPH2583_15.0.0.801(EX01)",
@@ -89,7 +95,8 @@
       "minor": 0,
       "first_seen": "2026-11-09",
       "last_checked": "2026-11-09",
-      "status": "archived"
+      "status": "archived",
+      "md5": "36e67c136075345a06d286ba6a678018"
     },
     {
       "version": "CPH2583_15.0.0.702(EX01)",
@@ -98,7 +105,8 @@
       "minor": 0,
       "first_seen": "2026-11-09",
       "last_checked": "2026-11-09",
-      "status": "archived"
+      "status": "archived",
+      "md5": "f9bc288a7c04b9257687d22d649155d2"
     },
     {
       "version": "CPH2583_15.0.0.510(EX01)",
@@ -107,7 +115,8 @@
       "minor": 0,
       "first_seen": "2026-11-09",
       "last_checked": "2026-11-09",
-      "status": "archived"
+      "status": "archived",
+      "md5": "ce24628a4131aead8c22251b48d0ef33"
     },
     {
       "version": "CPH2583_15.0.0.503(EX01)",
@@ -116,7 +125,8 @@
       "minor": 0,
       "first_seen": "2026-11-09",
       "last_checked": "2026-11-09",
-      "status": "archived"
+      "status": "archived",
+      "md5": "f2f6a3caab54f1bf2ce75801c5bfb9df"
     },
     {
       "version": "CPH2583_15.0.0.305(EX01)",
