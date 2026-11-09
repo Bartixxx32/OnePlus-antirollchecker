@@ -144,9 +144,20 @@ const getRegionName = (code) => {
  */
 const renderBadge = (v) => {
     if (v.is_hardcoded) return `<span class="badge badge-hardcode" title="Anti-rollback is present but undetectable by standard tools"><span class="badge-dot"></span>Undetectable ARB</span>`;
+    if (v.arb_detected === false) return `<span class="badge badge-hardcode" title="The package is valid, but no ARB record could be parsed"><span class="badge-dot"></span>Undetectable ARB</span>`;
     if (v.arb === 0) return `<span class="badge badge-safe"><span class="badge-dot"></span>Safe</span>`;
     if (typeof v.arb === 'number' && v.arb > 0) return `<span class="badge badge-danger"><span class="badge-dot"></span>Protected</span>`;
     return `<span class="badge badge-warning"><span class="badge-dot"></span>Unknown</span>`;
+};
+
+/**
+ * Render the incremental-OTA warning for delta packages.
+ * Incremental packages must never be flashed standalone.
+ */
+const renderPackageType = (v) => {
+    if (!(v.package_type === 'incremental' || v.is_incremental === true)) return '';
+    return `<span class="badge badge-incremental" title="Delta OTA package: it requires the matching installed build and must not be flashed standalone"><span class="badge-dot"></span>Incremental OTA</span>
+        <div class="incremental-warning">⚠️ Do not flash standalone — use the normal OTA update.</div>`;
 };
 
 /**
@@ -176,6 +187,7 @@ const renderHTML = (devices) => {
                         <div class="firmware-title-wrap">
                             <div class="firmware-title">${variant.version || 'Unknown'}</div>
                         </div>
+                        ${renderPackageType(variant)}
                         <div class="firmware-oem">Major: ${variant.major != null ? variant.major : '?'}, Minor: ${variant.minor != null ? variant.minor : '?'}</div>
                         ${variant.md5 ? `<details class="md5-details"><summary>Show MD5</summary><code>${variant.md5}</code></details>` : ''}
                     </td>
@@ -197,6 +209,7 @@ const renderHTML = (devices) => {
                                 <div class="firmware-title-wrap">
                                     <div class="firmware-title" style="font-size:0.75rem;">${entry.version}</div>
                                 </div>
+                                ${renderPackageType(entry)}
                                 <div class="firmware-oem">Major: ${entry.major != null ? entry.major : '?'}, Minor: ${entry.minor != null ? entry.minor : '?'}</div>
                                 ${entry.md5 ? `<details class="md5-details"><summary>Show MD5</summary><code>${entry.md5}</code></details>` : ''}
                             </td>
@@ -350,6 +363,9 @@ async function loadData() {
                     vr.major = vWithKey.major;
                     vr.minor = vWithKey.minor;
                     vr.is_hardcoded = vWithKey.is_hardcoded;
+                    vr.arb_detected = vWithKey.arb_detected;
+                    vr.package_type = vWithKey.package_type;
+                    vr.is_incremental = vWithKey.is_incremental;
                     vr.last_checked = vWithKey.last_checked;
                     vr.first_seen = vWithKey.first_seen;
                     if (vWithKey.status !== 'current') {
