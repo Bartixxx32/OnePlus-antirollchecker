@@ -77,10 +77,13 @@ class TestGetModelNumber:
         assert get_model_number("16", "CN") == "PYB110"
         assert get_model_number("15", "GLO") == "CPH2747"
         assert get_model_number("15", "CN") == "PLK110"
+        assert get_model_number("15", "NA") == "CPH2749"
         assert get_model_number("15R", "IN") == "CPH2767"
+        assert get_model_number("15R", "NA") == "CPH2771"
         assert get_model_number("15T", "CN") == "PLZ110"
         assert get_model_number("13", "NA") == "CPH2655"
         assert get_model_number("13R", "IN") == "CPH2691"
+        assert get_model_number("13R", "NA") == "CPH2647"
         assert get_model_number("13T", "CN") == "PKX110"
         assert get_model_number("13s", "IN") == "CPH2723"
 

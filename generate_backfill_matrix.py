@@ -5,6 +5,11 @@ import sys
 import requests
 from config import DEVICE_METADATA
 from fetch_firmware import get_springer_versions
+from ou_history import (
+    OU_NA_DEVICE_IDS,
+    build_ou_matrix_entries,
+    get_na_packages,
+)
 
 DEFAULT_MAX_VERSIONS = 10
 MAX_CONFIGS_PER_SHARD = 256
@@ -34,51 +39,85 @@ def split_into_shards(items, shard_count=4):
     return [items[i::shard_count] for i in range(shard_count)]
 
 
-def generate_backfill_matrix():
+def build_backfill_entries(
+    target_device="", target_variant="", max_versions=DEFAULT_MAX_VERSIONS,
+    session=None,
+):
+    """Build the list of backfill jobs without touching GitHub Actions."""
     include_list = []
-    
-    target_device = os.environ.get("TARGET_DEVICE", "").strip().lower()
-    target_variant = os.environ.get("TARGET_VARIANT", "").strip().lower()
-    max_versions = parse_max_versions(os.environ.get("MAX_VERSIONS", str(DEFAULT_MAX_VERSIONS)))
+    target_device = (target_device or "").strip().lower()
+    target_variant = (target_variant or "").strip().lower()
+    session = session or requests.Session()
 
-    print(f"Max versions per region: {'all' if max_versions is None else max_versions}")
-    
-    session = requests.Session()
-    
     for device_id, meta in DEVICE_METADATA.items():
-        if target_device and target_device != device_id.lower() and target_device != meta['name'].lower():
+        if target_device and target_device != device_id.lower() and target_device != meta["name"].lower():
             continue
-            
-        valid_regions = meta.get('models', {}).keys()
-        
+
+        valid_regions = meta.get("models", {}).keys()
+
         for region in valid_regions:
             if target_variant and target_variant != region.lower():
                 continue
-                
+
+            if region == "NA" and device_id in OU_NA_DEVICE_IDS:
+                print(f"Checking Oxygen Updater NA history for {device_id}...")
+                packages = get_na_packages(device_id, session=session)
+                print(f"  found {len(packages)} version(s)")
+                include_list.extend(
+                    build_ou_matrix_entries(
+                        device_id,
+                        meta["name"],
+                        region,
+                        packages,
+                        max_versions,
+                        select_versions,
+                    )
+                )
+                continue
+
             print(f"Checking versions for {device_id} {region}...")
             res = get_springer_versions(device_id, region, session)
-            
+
             if not res:
                 continue
-            
+
             versions, _ = res
-            
+
             # Springer lists newest first. MAX_VERSIONS controls how many we take.
             target_versions = select_versions(versions, max_versions)
-            
+
             for version in target_versions:
-                # We need to extract the version string carefully 
+                # We need to extract the version string carefully
                 # as Springer might return "Version (Date)"
                 # But fetch_firmware.py handles substrings so it's fine
-                
+
                 include_list.append({
                     "device": device_id,
                     "variant": region,
                     "device_short": device_id,
-                    "device_name": meta['name'],
-                    "version": version
+                    "device_name": meta["name"],
+                    "version": version,
+                    "source": "springer",
                 })
-                
+
+    return include_list
+
+
+def generate_backfill_matrix():
+    target_device = os.environ.get("TARGET_DEVICE", "").strip().lower()
+    target_variant = os.environ.get("TARGET_VARIANT", "").strip().lower()
+    max_versions = parse_max_versions(
+        os.environ.get("MAX_VERSIONS", str(DEFAULT_MAX_VERSIONS))
+    )
+
+    print(f"Max versions per region: {'all' if max_versions is None else max_versions}")
+
+    include_list = build_backfill_entries(
+        target_device=target_device,
+        target_variant=target_variant,
+        max_versions=max_versions,
+    )
+
     # Split into shards so no single GitHub Actions matrix exceeds the
     # hard limit of 256 jobs. Four shards support up to 1024 configurations.
     SHARD_COUNT = 4
@@ -92,7 +131,7 @@ def generate_backfill_matrix():
             file=sys.stderr,
         )
         sys.exit(1)
-    
+
     if "GITHUB_OUTPUT" in os.environ:
         with open(os.environ["GITHUB_OUTPUT"], "a") as f:
             for i, shard in enumerate(shards, 1):
@@ -105,6 +144,7 @@ def generate_backfill_matrix():
         for i, shard in enumerate(shards, 1):
             print(f"Shard {i}: {len(shard)} configurations")
             print(json.dumps({"include": shard}))
+
 
 if __name__ == "__main__":
     generate_backfill_matrix()

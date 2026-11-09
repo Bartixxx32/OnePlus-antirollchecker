@@ -22,6 +22,8 @@ jobs:
   backfill-variant:
     runs-on: ubuntu-latest
     continue-on-error: true
+    env:
+      BACKFILL_SOURCE: ${{ matrix.source || 'springer' }}
     strategy:
       max-parallel: 20
       fail-fast: false
@@ -60,7 +62,7 @@ jobs:
       - name: Get Firmware URL
         id: get_details
         run: |
-          python3 fetch_firmware.py "${{ matrix.device }}" "${{ matrix.variant }}" "${{ matrix.version }}" --output fw_info.json
+          python3 fetch_firmware.py "${{ matrix.device }}" "${{ matrix.variant }}" "${{ matrix.version }}" --source "$BACKFILL_SOURCE" --direct-url "${{ matrix.url }}" --output fw_info.json
           URL=$(python3 -c "import sys, json; print(json.load(open('fw_info.json'))['url'])")
           VERSION=$(python3 -c "import sys, json; print(json.load(open('fw_info.json'))['version'])")
           MD5=$(python3 -c "import sys, json; data=json.load(open('fw_info.json')); print(data.get('md5') or '')")
@@ -70,14 +72,14 @@ jobs:
 
       - name: Cache ARB Data
         id: cache-arb
-        if: ${{ !inputs.force_recheck }}
+        if: ${{ !inputs.force_recheck && (matrix.source || 'springer') == 'springer' }}
         uses: actions/cache@v5
         with:
           path: firmware_data/
           key: arb-v9-${{ matrix.device }}-${{ matrix.variant }}-${{ steps.get_details.outputs.version }}-${{ steps.get_details.outputs.md5 }}
 
       - name: Download Firmware
-        if: steps.cache-arb.outputs.cache-hit != 'true'
+        if: steps.cache-arb.outputs.cache-hit != 'true' && (matrix.source || 'springer') == 'springer'
         run: |
           URL="${{ steps.get_details.outputs.url }}"
           VERSION="${{ steps.get_details.outputs.version }}"
@@ -130,10 +132,31 @@ jobs:
           fi
 
       - name: Analyze Firmware
-        if: hashFiles('firmware.zip') != '' || steps.cache-arb.outputs.cache-hit == 'true'
+        if: (matrix.source || 'springer') == 'springer' && (hashFiles('firmware.zip') != '' || steps.cache-arb.outputs.cache-hit == 'true')
         run: |
           # Pass 'firmware.zip' even if missing, analyze_firmware will skip it if cache hit
           python3 analyze_firmware.py firmware.zip --tools-dir tools --output-dir extracted --final-dir firmware_data --json > result.json
+
+      - name: Check ARB via HTTP Range (OU)
+        if: startsWith(matrix.source || 'springer', 'ou_')
+        run: |
+          URL="${{ steps.get_details.outputs.url }}"
+          VERSION="${{ steps.get_details.outputs.version }}"
+          MD5="${{ steps.get_details.outputs.md5 }}"
+
+          if [[ "$URL" == "" || "$URL" == "null" ]]; then
+            echo "No download URL found."
+            exit 1
+          fi
+
+          python3 fetch_ou_arb.py \
+            --device-short "${{ matrix.device_short }}" \
+            --variant "${{ matrix.variant }}" \
+            --version "$VERSION" \
+            --url "$URL" \
+            --md5 "$MD5" \
+            --json > result.json
+          cat result.json
 
       - name: Update History (Historical)
         if: hashFiles('result.json') != ''

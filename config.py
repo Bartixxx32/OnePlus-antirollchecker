@@ -103,6 +103,7 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
             "GLO": "CPH2747",
             "EU": "CPH2747",
             "IN": "CPH2745",
+            "NA": "CPH2749",
             "CN": "PLK110"
         },
     },
@@ -117,7 +118,8 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
         "models": {
             "GLO": "CPH2769",
             "EU": "CPH2769",
-            "IN": "CPH2767"
+            "IN": "CPH2767",
+            "NA": "CPH2771"
         },
     },
     "13": {
@@ -135,7 +137,8 @@ DEVICE_METADATA: Dict[str, DeviceMeta] = {
         "models": {
             "GLO": "CPH2645",
             "EU": "CPH2645",
-            "IN": "CPH2691"
+            "IN": "CPH2691",
+            "NA": "CPH2647"
         },
     },
     "13T": {

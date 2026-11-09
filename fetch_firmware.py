@@ -9,6 +9,7 @@ import time
 from urllib.parse import urljoin
 from bs4 import BeautifulSoup
 from config import SPRINGER_API_URL, OOS_API_URL, USER_AGENT, SPRING_MAPPING, OOS_MAPPING
+from ou_history import OU_NA_DEVICE_IDS, get_latest_package
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
@@ -68,6 +69,25 @@ def get_from_oos_api(device_id: str, region: str) -> dict:
     except Exception as e:
         logger.warning(f"OOS API failed or not found: {e}")
         return None
+
+
+def get_from_ou_latest(device_id: str, region: str) -> dict:
+    """Fetch the newest North America package from the OU incremental channel."""
+    if region.upper() != "NA":
+        return None
+    ou_device_id = OU_NA_DEVICE_IDS.get(device_id)
+    if not ou_device_id:
+        return None
+
+    logger.info(f"Checking OU latest package for {device_id} NA (id {ou_device_id})...")
+    package = get_latest_package(ou_device_id)
+    if not package:
+        return None
+    return {
+        "url": package["url"],
+        "version": package["version"],
+        "md5": package.get("md5"),
+    }
 
 
 def get_springer_versions(device_id: str, region: str, session=None) -> list:
@@ -286,6 +306,16 @@ def main():
     parser.add_argument("--version-only", action="store_true", help="Output only the version string")
     parser.add_argument("--url-only", action="store_true", help="Output only the URL (default behavior otherwise)")
     parser.add_argument("--output", help="Write result JSON to file instead of stdout")
+    parser.add_argument(
+        "--source",
+        default="auto",
+        choices=["auto", "springer", "ou_url", "ou_latest"],
+        help="Force a package source (used by historical NA backfills)",
+    )
+    parser.add_argument(
+        "--direct-url",
+        help="Use this package URL directly (with --source ou_url)",
+    )
     
     args = parser.parse_args()
     
@@ -293,8 +323,21 @@ def main():
     clean_device_id = args.device_id.replace("oneplus_", "")
     
     result = None
-    
-    if not args.target_version:
+
+    if args.direct_url:
+        result = {
+            "url": args.direct_url,
+            "version": args.target_version or "Unknown",
+            "md5": None,
+        }
+    elif args.source == "ou_latest":
+        result = get_from_ou_latest(clean_device_id, args.region)
+    elif args.source == "ou_url" and not args.direct_url:
+        logger.error("--source ou_url requires --direct-url")
+        sys.exit(1)
+    elif args.source == "springer":
+        pass
+    elif not args.target_version:
         result = get_from_oos_api(clean_device_id, args.region)
         if result:
             logger.info("Found via OOS API")
