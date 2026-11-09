@@ -151,13 +151,11 @@ const renderBadge = (v) => {
 };
 
 /**
- * Render the incremental-OTA warning for delta packages.
- * Incremental packages must never be flashed standalone.
+ * Render a badge when the ARB value was read from an incremental OTA package.
  */
 const renderPackageType = (v) => {
     if (!(v.package_type === 'incremental' || v.is_incremental === true)) return '';
-    return `<span class="badge badge-incremental" title="Delta OTA package: it requires the matching installed build and must not be flashed standalone"><span class="badge-dot"></span>Incremental OTA</span>
-        <div class="incremental-warning">⚠️ Do not flash standalone — use the normal OTA update.</div>`;
+    return `<span class="badge badge-incremental" title="ARB value was read from an incremental OTA package"><span class="badge-dot"></span>ARB from incremental</span>`;
 };
 
 /**

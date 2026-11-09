@@ -210,21 +210,6 @@ body {
     padding: 22px 16px;
 }
 
-.site-notice {
-    background: var(--danger-bg);
-    border: 1px solid var(--danger-border);
-    color: var(--text);
-    border-radius: var(--radius);
-    padding: 10px 14px;
-    margin-bottom: 16px;
-    font-size: 0.82rem;
-    line-height: 1.45;
-}
-
-.site-notice strong {
-    color: var(--danger);
-}
-
 .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -483,21 +468,13 @@ tbody tr:hover {
 }
 
 .badge-incremental {
-    background: var(--danger-bg);
-    border: 1px solid var(--danger-border);
-    color: var(--danger);
+    background: rgba(88, 166, 255, 0.1);
+    border: 1px solid rgba(88, 166, 255, 0.3);
+    color: var(--accent);
 }
 
 .badge-incremental .badge-dot {
-    background: var(--danger);
-}
-
-.incremental-warning {
-    margin-top: 4px;
-    color: var(--danger);
-    font-size: 0.68rem;
-    font-weight: 600;
-    white-space: normal;
+    background: var(--accent);
 }
 
 .badge-warning {
