@@ -4338,6 +4338,22 @@
           "EU": "7f747226ec77f81583f012f71a24a974"
         }
       },
+      "CPH2619_16.0.5.1301(EX01)": {
+        "arb": -1,
+        "arb_detected": false,
+        "major": -1,
+        "minor": -1,
+        "md5": "931229efec9803f519cd30981566e5cb",
+        "package_type": "full",
+        "is_incremental": false,
+        "first_seen": "2026-11-10",
+        "last_checked": "2026-11-10",
+        "status": "current",
+        "is_hardcoded": true,
+        "regions": [
+          "IN"
+        ]
+      },
       "CPH2619_16.0.5.1300(EX01)": {
         "arb": 0,
         "arb_detected": true,
@@ -4348,7 +4364,7 @@
         "is_incremental": false,
         "first_seen": "2026-10-20",
         "last_checked": "2026-10-20",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": true,
         "regions": [
           "IN"
