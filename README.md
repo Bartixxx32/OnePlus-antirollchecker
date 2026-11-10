@@ -1294,7 +1294,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 |:---|:---|:---|:---|:---|:---|:---|
 | Global | CPH2619 | CPH2621_16.0.5.1300(EX01)<br><details><summary>MD5</summary><code>977f6ab4a21eb1e76153c4a8cc473015</code></details> | **?** | Major: 0, Minor: 120 | 2026-10-23 | ⚠️ Undetectable ARB |
 | Europe | CPH2619 | CPH2621_16.0.5.1300(EX01)<br><details><summary>MD5</summary><code>edf6f63dede74e347048471e990570f3</code></details> | **?** | Major: 0, Minor: 120 | 2026-10-28 | ⚠️ Undetectable ARB |
-| India | CPH2619 | CPH2619_16.0.5.1300(EX01)<br><details><summary>MD5</summary><code>2d826a3c381b71d4dc335338280cf2e2</code></details> | **?** | Major: 0, Minor: 120 | 2026-10-20 | ⚠️ Undetectable ARB |
+| India | CPH2619 | CPH2619_16.0.5.1301(EX01)<br><details><summary>MD5</summary><code>931229efec9803f519cd30981566e5cb</code></details> | **?** | Major: -1, Minor: -1 | 2026-11-10 | ⚠️ Undetectable ARB |
 
 <details>
 <summary>📜 <b>Global History</b> (click to expand)</summary>
@@ -1325,6 +1325,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Firmware Version | ARB | OEM Version | Last Seen | Safe |
 |:---|:---|:---|:---|:---|
+| CPH2619_16.0.5.1300(EX01)<br><details><summary>MD5</summary><code>2d826a3c381b71d4dc335338280cf2e2</code></details> | ? | Major: 0, Minor: 120 | 2026-10-20 | ⚠️ Undetectable ARB |
 | CPH2619_16.0.5.1200(EX01)<br><details><summary>MD5</summary><code>048602721a31aeff811c2cb7ac138c00</code></details> | ? | Major: 0, Minor: 120 | 2026-09-09 | ⚠️ Undetectable ARB |
 | CPH2619_16.0.5.1000(EX01)<br><details><summary>MD5</summary><code>0766f7c291155cfad42a3b4d08f1cc61</code></details> | ? | Major: 0, Minor: 120 | 2026-07-28 | ⚠️ Undetectable ARB |
 | CPH2619_16.0.5.700(EX01)<br><details><summary>MD5</summary><code>0dffbff8aa99af0be4b4a250f878b191</code></details> | ? | Major: 0, Minor: 120 | 2026-06-17 | ⚠️ Undetectable ARB |
@@ -2446,4 +2447,4 @@ Prefer a native mobile experience? We have an official Android app on F-Droid! C
 > **Important:** The bot **only** works within this group to prevent spam and ensure availability. DM checks are disabled.
 
 ---
-*Last updated: 2026-11-09 13:54 UTC*
+*Last updated: 2026-11-10 06:51 UTC*
