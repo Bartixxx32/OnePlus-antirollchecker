@@ -1514,6 +1514,22 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "CPH2487_16.0.5.1302(EX01)": {
+        "arb": 0,
+        "arb_detected": true,
+        "major": 2,
+        "minor": 0,
+        "md5": "97b1d04b1aa5c7270e75a7a8b39ff893",
+        "package_type": "full",
+        "is_incremental": false,
+        "first_seen": "2026-11-11",
+        "last_checked": "2026-11-11",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "IN"
+        ]
+      },
       "CPH2487_16.0.5.1301(EX01)": {
         "arb": 0,
         "arb_detected": true,
@@ -1524,7 +1540,7 @@
         "is_incremental": false,
         "first_seen": "2026-10-28",
         "last_checked": "2026-11-08",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "IN"
@@ -3217,6 +3233,22 @@
     "expect_esim": true,
     "expect_barometer": false,
     "versions": {
+      "CPH2573_17.0.0.100(EX01)": {
+        "arb": 1,
+        "arb_detected": true,
+        "major": 3,
+        "minor": 0,
+        "md5": "ebd7b67af83b58bb785870896c1b2036",
+        "package_type": "full",
+        "is_incremental": false,
+        "first_seen": "2026-11-11",
+        "last_checked": "2026-11-11",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "IN"
+        ]
+      },
       "CPH2573_16.0.10.601(EX01)": {
         "arb": 1,
         "arb_detected": true,
@@ -3227,7 +3259,7 @@
         "is_incremental": false,
         "first_seen": "2026-10-23",
         "last_checked": "2026-11-08",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "IN"
@@ -11851,6 +11883,22 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "PLK110_17.0.1.201(CN01)": {
+        "arb": 0,
+        "arb_detected": true,
+        "major": 3,
+        "minor": 0,
+        "md5": "24e9049cd27d03a2e5d5dd2d2d466d41",
+        "package_type": "full",
+        "is_incremental": false,
+        "first_seen": "2026-11-11",
+        "last_checked": "2026-11-11",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "CN"
+        ]
+      },
       "PLK110_17.0.0.105(CN01)": {
         "arb": 0,
         "arb_detected": true,
@@ -11861,7 +11909,7 @@
         "is_incremental": false,
         "first_seen": "2026-10-09",
         "last_checked": "2026-10-09",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "CN"

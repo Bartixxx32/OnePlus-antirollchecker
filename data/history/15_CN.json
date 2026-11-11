@@ -1,14 +1,16 @@
 {
   "history": [
     {
-      "version": "PLK110_16.0.0.208(CN01)",
+      "version": "PLK110_17.0.1.201(CN01)",
       "arb": 0,
       "major": 3,
       "minor": 0,
-      "first_seen": "2026-11-08",
-      "last_checked": "2026-11-08",
-      "status": "archived",
-      "md5": "972de7e37c1a7703874c61fb2ba8e0b6"
+      "arb_detected": true,
+      "first_seen": "2026-11-11",
+      "last_checked": "2026-11-11",
+      "status": "current",
+      "package_type": "full",
+      "md5": "24e9049cd27d03a2e5d5dd2d2d466d41"
     },
     {
       "version": "PLK110_16.0.0.211(CN01)",
@@ -31,13 +33,23 @@
       "md5": "93ea2f91961c0aef9b06d66f43da5fbb"
     },
     {
+      "version": "PLK110_16.0.0.208(CN01)",
+      "arb": 0,
+      "major": 3,
+      "minor": 0,
+      "first_seen": "2026-11-08",
+      "last_checked": "2026-11-08",
+      "status": "archived",
+      "md5": "972de7e37c1a7703874c61fb2ba8e0b6"
+    },
+    {
       "version": "PLK110_17.0.0.105(CN01)",
       "arb": 0,
       "major": 3,
       "minor": 0,
       "first_seen": "2026-10-09",
       "last_checked": "2026-10-09",
-      "status": "current",
+      "status": "archived",
       "md5": "23541cc2dacaa0af4020c8aff60b3d96"
     },
     {
