@@ -6,9 +6,10 @@
       "major": 3,
       "minor": 0,
       "first_seen": "2026-09-30",
-      "last_checked": "2026-09-30",
+      "last_checked": "2026-11-12",
       "status": "current",
-      "md5": "bde467205fde43f7df5ac1a025184d7a"
+      "md5": "bde467205fde43f7df5ac1a025184d7a",
+      "package_type": "full"
     },
     {
       "version": "CPH2671_16.0.10.500(EX01)",

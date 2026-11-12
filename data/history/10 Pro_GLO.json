@@ -6,9 +6,10 @@
       "major": 2,
       "minor": 0,
       "first_seen": "2026-07-29",
-      "last_checked": "2026-07-29",
+      "last_checked": "2026-11-12",
       "status": "current",
-      "md5": "0a219c952c05649ac12dc46934bfc697"
+      "md5": "0a219c952c05649ac12dc46934bfc697",
+      "package_type": "full"
     },
     {
       "version": "NE2213_16.0.3.530(EX01)",

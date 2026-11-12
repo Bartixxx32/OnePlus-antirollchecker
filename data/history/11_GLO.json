@@ -1,16 +1,6 @@
 {
   "history": [
     {
-      "version": "CPH2449_16.0.5.1002(EX01)",
-      "arb": 0,
-      "major": 2,
-      "minor": 0,
-      "first_seen": "2026-11-08",
-      "last_checked": "2026-11-08",
-      "status": "archived",
-      "md5": "2989f602832ec78246156589950fdf2d"
-    },
-    {
       "version": "CPH2449_16.0.5.1301(EX01)",
       "arb": 0,
       "major": 2,
@@ -19,6 +9,16 @@
       "last_checked": "2026-10-28",
       "status": "current",
       "md5": "324b3fb14f3969f38978739bae48fb57"
+    },
+    {
+      "version": "CPH2449_16.0.5.1002(EX01)",
+      "arb": 0,
+      "major": 2,
+      "minor": 0,
+      "first_seen": "2026-11-08",
+      "last_checked": "2026-11-08",
+      "status": "archived",
+      "md5": "2989f602832ec78246156589950fdf2d"
     },
     {
       "version": "CPH2449_16.0.5.702(EX01)",
@@ -86,9 +86,10 @@
       "major": 2,
       "minor": 0,
       "first_seen": "2026-02-04",
-      "last_checked": "2026-07-28",
+      "last_checked": "2026-11-12",
       "status": "archived",
-      "md5": "54cc417e44e221c6960e4a6446c56cd0"
+      "md5": "54cc417e44e221c6960e4a6446c56cd0",
+      "package_type": "full"
     },
     {
       "version": "CPH2449_15.0.0.600(EX01)",

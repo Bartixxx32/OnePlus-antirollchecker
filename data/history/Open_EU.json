@@ -105,9 +105,10 @@
       "major": 2,
       "minor": 0,
       "first_seen": "2026-02-04",
-      "last_checked": "2026-09-16",
+      "last_checked": "2026-11-12",
       "status": "archived",
-      "md5": "4f1b8c4f45cfb394c05e1ef5728b13a2"
+      "md5": "4f1b8c4f45cfb394c05e1ef5728b13a2",
+      "package_type": "full"
     }
   ],
   "device": "OnePlus Open",

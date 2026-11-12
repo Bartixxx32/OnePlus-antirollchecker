@@ -6,9 +6,10 @@
       "major": 2,
       "minor": 0,
       "first_seen": "2026-07-29",
-      "last_checked": "2026-07-29",
+      "last_checked": "2026-11-12",
       "status": "current",
-      "md5": "a64fed2576347ece7c224a39eb675509"
+      "md5": "a64fed2576347ece7c224a39eb675509",
+      "package_type": "full"
     },
     {
       "version": "CPH2415_15.0.0.1901(EX01)",

@@ -16,9 +16,10 @@
       "major": 3,
       "minor": 0,
       "first_seen": "2026-10-09",
-      "last_checked": "2026-11-08",
+      "last_checked": "2026-11-12",
       "status": "archived",
-      "md5": "cada613891a83ed763b2ab6c873446b0"
+      "md5": "cada613891a83ed763b2ab6c873446b0",
+      "package_type": "full"
     },
     {
       "version": "CPH2769_16.0.10.500(EX01)",
