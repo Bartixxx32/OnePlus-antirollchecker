@@ -9526,6 +9526,22 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "OPD2413_17.0.0.103(CN01)": {
+        "arb": 1,
+        "arb_detected": true,
+        "major": 3,
+        "minor": 0,
+        "md5": "e08a8f50a437f32f57a027c8d87969d3",
+        "package_type": "full",
+        "is_incremental": false,
+        "first_seen": "2026-11-13",
+        "last_checked": "2026-11-13",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "CN"
+        ]
+      },
       "OPD2413_16.0.10.600(CN01)": {
         "arb": 1,
         "arb_detected": true,
@@ -9536,7 +9552,7 @@
         "is_incremental": false,
         "first_seen": "2026-09-30",
         "last_checked": "2026-09-30",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "CN"
@@ -12227,6 +12243,22 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "PLQ110_17.0.1.200(CN01)": {
+        "arb": 1,
+        "arb_detected": true,
+        "major": 3,
+        "minor": 0,
+        "md5": "fb2483582de5a67d44598b85adc498b4",
+        "package_type": "full",
+        "is_incremental": false,
+        "first_seen": "2026-11-13",
+        "last_checked": "2026-11-13",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "CN"
+        ]
+      },
       "PLQ110_17.0.0.104(CN01)": {
         "arb": 1,
         "arb_detected": true,
@@ -12237,7 +12269,7 @@
         "is_incremental": false,
         "first_seen": "2026-10-15",
         "last_checked": "2026-10-15",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "CN"
@@ -12491,6 +12523,22 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "PLR110_17.0.1.200(CN01)": {
+        "arb": 0,
+        "arb_detected": true,
+        "major": 3,
+        "minor": 0,
+        "md5": "be313bb05f016ba67e93d0cc2e05bbb9",
+        "package_type": "full",
+        "is_incremental": false,
+        "first_seen": "2026-11-13",
+        "last_checked": "2026-11-13",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "CN"
+        ]
+      },
       "PLR110_17.0.0.101(CN01)": {
         "arb": 0,
         "arb_detected": true,
@@ -12501,7 +12549,7 @@
         "is_incremental": false,
         "first_seen": "2026-10-15",
         "last_checked": "2026-10-15",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "CN"
