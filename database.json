@@ -4265,6 +4265,27 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "CPH2621_16.0.5.1301(EX01)": {
+        "arb": -1,
+        "arb_detected": false,
+        "major": -1,
+        "minor": -1,
+        "md5": "caa73ec88e1426af2023e93fa258af5c",
+        "package_type": "full",
+        "is_incremental": false,
+        "first_seen": "2026-11-14",
+        "last_checked": "2026-11-14",
+        "status": "current",
+        "is_hardcoded": true,
+        "regions": [
+          "GLO",
+          "EU"
+        ],
+        "md5_by_region": {
+          "GLO": "caa73ec88e1426af2023e93fa258af5c",
+          "EU": "c57e6cf9f53efd7dd32b6cd2b93b4a39"
+        }
+      },
       "CPH2621_16.0.5.1300(EX01)": {
         "arb": 0,
         "arb_detected": true,
@@ -4275,7 +4296,7 @@
         "is_incremental": false,
         "first_seen": "2026-10-23",
         "last_checked": "2026-10-23",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": true,
         "regions": [
           "GLO",
