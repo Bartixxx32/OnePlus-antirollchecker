@@ -4193,6 +4193,22 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "CPH2613_16.0.5.1302(EX01)": {
+        "arb": 0,
+        "arb_detected": true,
+        "major": 2,
+        "minor": 0,
+        "md5": "525d9f03a8d02938f06fb61d9cd3fe0c",
+        "package_type": "full",
+        "is_incremental": false,
+        "first_seen": "2026-11-16",
+        "last_checked": "2026-11-16",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "IN"
+        ]
+      },
       "CPH2613_16.0.5.1301(EX01)": {
         "arb": 0,
         "arb_detected": true,
@@ -4203,7 +4219,7 @@
         "is_incremental": false,
         "first_seen": "2026-10-10",
         "last_checked": "2026-10-10",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "IN"
@@ -7093,6 +7109,22 @@
     "expect_esim": true,
     "expect_barometer": false,
     "versions": {
+      "CPH2747_17.0.1.201(EX01)": {
+        "arb": 0,
+        "arb_detected": true,
+        "major": 3,
+        "minor": 0,
+        "md5": "02763003c271de5d526ad43af9bfe868",
+        "package_type": "full",
+        "is_incremental": false,
+        "first_seen": "2026-11-16",
+        "last_checked": "2026-11-16",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "GLO"
+        ]
+      },
       "CPH2747_17.0.0.102(EX01)": {
         "arb": 0,
         "arb_detected": true,
@@ -7103,7 +7135,7 @@
         "is_incremental": false,
         "first_seen": "2026-10-28",
         "last_checked": "2026-10-28",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "GLO",
@@ -7441,6 +7473,22 @@
     "expect_esim": true,
     "expect_barometer": false,
     "versions": {
+      "CPH2767_17.0.1.200(EX01)": {
+        "arb": 0,
+        "arb_detected": true,
+        "major": 3,
+        "minor": 0,
+        "md5": "e632730641900aa4f8e4239d90d0e403",
+        "package_type": "full",
+        "is_incremental": false,
+        "first_seen": "2026-11-16",
+        "last_checked": "2026-11-16",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "IN"
+        ]
+      },
       "CPH2767_17.0.0.106(EX01)": {
         "arb": 0,
         "arb_detected": true,
@@ -7451,7 +7499,7 @@
         "is_incremental": false,
         "first_seen": "2026-10-27",
         "last_checked": "2026-10-27",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "IN"
