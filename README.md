@@ -1590,7 +1590,7 @@ If you find this tool helpful, consider buying me a beer! Your support keeps the
 
 | Region | Model | Firmware Version | ARB Index | OEM Version | Last Checked | Safe |
 |:---|:---|:---|:---|:---|:---|:---|
-| China | PLQ110 | PLQ110_17.0.1.200(CN01)<br><details><summary>MD5</summary><code>fb2483582de5a67d44598b85adc498b4</code></details> | **1** | Major: 3, Minor: 0 | 2026-11-13 | ❌ Protected |
+| China | PLQ110 | PLQ110_17.0.1.200(CN01)<br><details><summary>MD5</summary><code>fb2483582de5a67d44598b85adc498b4</code></details> | **1** | Major: 3, Minor: 0 | 2026-11-20 | ❌ Protected |
 
 <details>
 <summary>📜 <b>China History</b> (click to expand)</summary>
@@ -2463,4 +2463,4 @@ Prefer a native mobile experience? We have an official Android app on F-Droid! C
 > **Important:** The bot **only** works within this group to prevent spam and ensure availability. DM checks are disabled.
 
 ---
-*Last updated: 2026-11-19 06:54 UTC*
+*Last updated: 2026-11-20 06:43 UTC*
