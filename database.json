@@ -5573,6 +5573,22 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "CPH2661_16.0.5.1302(EX01)": {
+        "arb": 0,
+        "arb_detected": true,
+        "major": 3,
+        "minor": 0,
+        "md5": "5e9ad416931b2a16b0fb193a51ca2e5d",
+        "package_type": "full",
+        "is_incremental": false,
+        "first_seen": "2026-11-24",
+        "last_checked": "2026-11-24",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "IN"
+        ]
+      },
       "CPH2661_16.0.5.1301(EX01)": {
         "arb": 0,
         "arb_detected": true,
@@ -5583,7 +5599,7 @@
         "is_incremental": false,
         "first_seen": "2026-09-19",
         "last_checked": "2026-09-19",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "IN"
@@ -5923,7 +5939,7 @@
         "major": 3,
         "minor": 0,
         "md5": "54eb1a28e1f5cd228b03f9cff3eeaab7",
-        "package_type": null,
+        "package_type": "full",
         "is_incremental": false,
         "first_seen": "2026-10-31",
         "last_checked": "2026-10-31",
@@ -5933,7 +5949,8 @@
           "APC",
           "TH",
           "MY",
-          "ID"
+          "ID",
+          "SG"
         ],
         "md5_by_region": {
           "APC": "54eb1a28e1f5cd228b03f9cff3eeaab7",
