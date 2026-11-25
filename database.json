@@ -7158,6 +7158,22 @@
     "expect_esim": true,
     "expect_barometer": false,
     "versions": {
+      "CPH2747_17.0.1.203(EX01)": {
+        "arb": 0,
+        "arb_detected": true,
+        "major": 3,
+        "minor": 0,
+        "md5": "a961d71af8960865d29b2c8e1000c98e",
+        "package_type": "full",
+        "is_incremental": false,
+        "first_seen": "2026-11-25",
+        "last_checked": "2026-11-25",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "EU"
+        ]
+      },
       "CPH2747_17.0.1.201(EX01)": {
         "arb": 0,
         "arb_detected": true,
@@ -9498,6 +9514,22 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "OPD2403_16.0.5.1302(EX01)": {
+        "arb": 1,
+        "arb_detected": true,
+        "major": 3,
+        "minor": 0,
+        "md5": "7d01c195e08f4650ce0c635a39978d97",
+        "package_type": "full",
+        "is_incremental": false,
+        "first_seen": "2026-11-25",
+        "last_checked": "2026-11-25",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "IN"
+        ]
+      },
       "OPD2403_16.0.5.1301(EX01)": {
         "arb": 1,
         "arb_detected": true,
@@ -9508,7 +9540,7 @@
         "is_incremental": true,
         "first_seen": "2026-09-22",
         "last_checked": "2026-09-22",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "IN",
