@@ -6419,6 +6419,22 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "CPH2707_16.0.5.1302(EX01)": {
+        "arb": 0,
+        "arb_detected": true,
+        "major": 3,
+        "minor": 0,
+        "md5": "0a08fd5834434729c9fab6143d585947",
+        "package_type": "full",
+        "is_incremental": false,
+        "first_seen": "2026-11-27",
+        "last_checked": "2026-11-27",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "IN"
+        ]
+      },
       "CPH2707_16.0.5.1301(EX01)": {
         "arb": 0,
         "arb_detected": true,
@@ -6429,7 +6445,7 @@
         "is_incremental": false,
         "first_seen": "2026-10-24",
         "last_checked": "2026-10-24",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "IN"
@@ -6523,6 +6539,27 @@
     "expect_esim": false,
     "expect_barometer": false,
     "versions": {
+      "CPH2709_16.0.5.1302(EX01)": {
+        "arb": 0,
+        "arb_detected": true,
+        "major": 3,
+        "minor": 0,
+        "md5": "d8a3f5dc538dc2c26e144a731e6f676b",
+        "package_type": "full",
+        "is_incremental": false,
+        "first_seen": "2026-11-27",
+        "last_checked": "2026-11-27",
+        "status": "current",
+        "is_hardcoded": false,
+        "regions": [
+          "EU",
+          "GLO"
+        ],
+        "md5_by_region": {
+          "EU": "d8a3f5dc538dc2c26e144a731e6f676b",
+          "GLO": "694c78803d8f73a2047f0255924fef82"
+        }
+      },
       "CPH2709_16.0.5.1301(EX01)": {
         "arb": 0,
         "arb_detected": true,
@@ -6533,7 +6570,7 @@
         "is_incremental": false,
         "first_seen": "2026-10-28",
         "last_checked": "2026-11-08",
-        "status": "current",
+        "status": "archived",
         "is_hardcoded": false,
         "regions": [
           "EU",
@@ -12507,10 +12544,10 @@
         "major": 3,
         "minor": 0,
         "md5": "529b2115db3b3dc306769314bf2a3115",
-        "package_type": null,
+        "package_type": "full",
         "is_incremental": false,
         "first_seen": "2026-10-15",
-        "last_checked": "2026-10-15",
+        "last_checked": "2026-11-27",
         "status": "archived",
         "is_hardcoded": false,
         "regions": [

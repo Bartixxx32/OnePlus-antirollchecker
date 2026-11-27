@@ -28,9 +28,10 @@
       "major": 3,
       "minor": 0,
       "first_seen": "2026-10-15",
-      "last_checked": "2026-10-15",
+      "last_checked": "2026-11-27",
       "status": "archived",
-      "md5": "529b2115db3b3dc306769314bf2a3115"
+      "md5": "529b2115db3b3dc306769314bf2a3115",
+      "package_type": "full"
     },
     {
       "version": "PLQ110_16.0.10.500(CN01)",
