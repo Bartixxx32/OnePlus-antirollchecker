@@ -194,7 +194,7 @@ def generate_readme(history_data: Dict) -> str:
         '![Views](https://visitor-badge.laobi.icu/badge?page_id=Bartixxx32.OnePlus-antirollchecker)',
         '---',
         '',
-        '### 🎉 Thank You for 100 Stars! 🎉',
+        '### 🎉 Thank You for 260 Stars! 🎉',
         'A huge thank you to everyone who starred this repository! Your support, feedback, and contributions keep this project alive and growing. Stay awesome! 🚀',
         '',
         '---',
